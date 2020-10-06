@@ -17,11 +17,11 @@
 #define BG_LED_8 13
 /////////////////////////////
 
-////////// buttons //////////
-#define BUTTON_1 4
-#define BUTTON_2 2
-#define BUTTON_3 17
-#define BUTTON_4 16
+////////// switches //////////
+#define SWITCH_1 4
+#define SWITCH_2 2
+#define SWITCH_3 17
+#define SWITCH_4 16
 /////////////////////////////
 
 /////////// lsa /////////////

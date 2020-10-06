@@ -1,13 +1,13 @@
-#include "buttons.h"
+#include "switches.h"
 
-static const char* TAG_BUTTONS = "buttons";
-static int enabled_buttons_flag = 0;
+static const char* TAG_SWITCHES = "switches";
+static int enabled_switches_flag = 0;
 
-esp_err_t enable_buttons()
+esp_err_t enable_switches()
 {
     gpio_config_t io_conf;
     // bit mask for the pins, each bit maps to a GPIO 
-    io_conf.pin_bit_mask = ((1ULL<<BUTTON_1) | (1ULL<<BUTTON_2) | (1ULL<<BUTTON_3) | (1ULL<<BUTTON_4));
+    io_conf.pin_bit_mask = ((1ULL<<SWITCH_1) | (1ULL<<SWITCH_2) | (1ULL<<SWITCH_3) | (1ULL<<SWITCH_4));
     // set gpio mode to input
     io_conf.mode = GPIO_MODE_INPUT;
     // enable pull up resistors
@@ -21,27 +21,27 @@ esp_err_t enable_buttons()
     esp_err_t err = gpio_config(&io_conf);
     if (err == ESP_OK)
     {
-        ESP_LOGI(TAG_BUTTONS, "enabled buttons");
-        enabled_buttons_flag = 1;
+        ESP_LOGI(TAG_SWITCHES, "enabled switches");
+        enabled_switches_flag = 1;
     }
     else
     {
-        ESP_LOGE(TAG_BUTTONS, "error: %s", esp_err_to_name(err));
-        enabled_buttons_flag = 0;
+        ESP_LOGE(TAG_SWITCHES, "error: %s", esp_err_to_name(err));
+        enabled_switches_flag = 0;
     }
 
     return err;
 }
 
-int read_button(int buttons_id)
+int read_switch(int switch_id)
 {
-    if (enabled_buttons_flag)
+    if (enabled_switches_flag)
     {
-        return !gpio_get_level((gpio_num_t)buttons_id);
+        return !gpio_get_level((gpio_num_t)switch_id);
     }
     else
     {
-        ESP_LOGE(TAG_BUTTONS, "error: buttons not enabled, call enable_buttons() before reading buttons");
+        ESP_LOGE(TAG_SWITCHES, "error: switches not enabled, call enable_switches() before reading switches");
         return 0;
     }
 }

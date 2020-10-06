@@ -4,7 +4,7 @@
 #include "accelerometer.h"
 #include "adc.h"
 #include "bar_graph.h"
-#include "buttons.h"
+#include "switches.h"
 #include "lsa.h"
 #include "motor_driver.h"
 #include "servo.h"
