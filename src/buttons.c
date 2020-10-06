@@ -27,11 +27,11 @@ esp_err_t enable_buttons()
     return err;
 }
 
-int read_button(int pin_number)
+int read_button(int buttons_id)
 {
     if (enabled_buttons_flag)
     {
-        return !gpio_get_level((gpio_num_t)pin_number);
+        return !gpio_get_level((gpio_num_t)buttons_id);
     }
     else
     {
