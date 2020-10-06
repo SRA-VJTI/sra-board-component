@@ -7,5 +7,7 @@
 #include "buttons.h"
 #include "lsa.h"
 #include "motor_driver.h"
+#include "servo.h"
+#include "pin_defs.h"
 
 #endif
