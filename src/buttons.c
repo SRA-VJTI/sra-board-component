@@ -6,11 +6,17 @@ static int enabled_buttons_flag = 0;
 esp_err_t enable_buttons()
 {
     gpio_config_t io_conf;
+    // bit mask for the pins, each bit maps to a GPIO 
     io_conf.pin_bit_mask = ((1ULL<<BUTTON_1) | (1ULL<<BUTTON_2) | (1ULL<<BUTTON_3) | (1ULL<<BUTTON_4));
+    // set gpio mode to input
     io_conf.mode = GPIO_MODE_INPUT;
+    // enable pull up resistors
     io_conf.pull_up_en = 1;
+    // disable pull down resistors
     io_conf.pull_down_en = 0;
+    // disable gpio interrupts
     io_conf.intr_type = GPIO_INTR_DISABLE;
+    // detailed description can be found at https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t
 
     esp_err_t err = gpio_config(&io_conf);
     if (err == ESP_OK)
