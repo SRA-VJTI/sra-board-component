@@ -1,0 +1,69 @@
+menu "Servo motor configuration"
+
+menu "Servo A"
+
+config SERVO_A_MIN_PULSEWIDTH
+    int "servo-A minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-A minimum pulsewidth
+
+config SERVO_A_MAX_PULSEWIDTH
+    int "servo-A maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-A maximum pulsewidth
+
+config SERVO_A_MAX_DEGREE
+    int "servo-A max degree"
+    default 180
+    help 
+        sets the servo-A max degree
+
+endmenu
+
+menu "Servo B"
+
+config SERVO_B_MIN_PULSEWIDTH
+    int "servo-B minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-B minimum pulsewidth
+
+config SERVO_B_MAX_PULSEWIDTH
+    int "servo-B maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-B maximum pulsewidth
+
+config SERVO_B_MAX_DEGREE
+    int "servo-B max degree"
+    default 180
+    help 
+        sets the servo-B max degree
+
+endmenu
+
+menu "Servo C"
+
+config SERVO_C_MIN_PULSEWIDTH
+    int "servo-C minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-C minimum pulsewidth
+
+config SERVO_C_MAX_PULSEWIDTH
+    int "servo-C maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-C maximum pulsewidth
+
+config SERVO_C_MAX_DEGREE
+    int "servo-C max degree"
+    default 180
+    help 
+        sets the servo-C max degree
+
+endmenu
+
+endmenu
