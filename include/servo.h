@@ -24,8 +24,8 @@
 #define SERVO_C_MAX_PULSEWIDTH CONFIG_SERVO_C_MAX_PULSEWIDTH
 #define SERVO_C_MAX_DEGREE     CONFIG_SERVO_C_MAX_DEGREE
 
-esp_err_t enabled_servo();
+esp_err_t enable_servo();
 
-int set_angle_servo(int servo_id);
+esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation);
 
 #endif
