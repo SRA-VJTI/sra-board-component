@@ -50,9 +50,9 @@
 /////////////////////////////
 
 /////////// servos //////////
-#define SERVO_1 5
-#define SERVO_2 18
-#define SERVO_3 19
+#define SERVO_A 5
+#define SERVO_B 18
+#define SERVO_C 19
 /////////////////////////////
 
 #endif
