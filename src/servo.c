@@ -39,12 +39,18 @@ esp_err_t enable_servo()
     }
 
     mcpwm_config_t pwm_config;
-    pwm_config.frequency = 50;    
+    // sets the pwm frequency = 50
+    pwm_config.frequency = 50;
+    // sets the initial duty cycle of PWMxA = 0    
     pwm_config.cmpr_a = 0;
+    // sets the initial duty cycle of PWMxB = 0
     pwm_config.cmpr_b = 0;
+    // sets the pwm counter mode
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
+    // sets the pwm duty mode
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
+    // init pwm 0a, 1a, 2a with the above settings
     esp_err_t err__A = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
     esp_err_t err__B = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
     esp_err_t err__C = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
