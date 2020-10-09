@@ -46,37 +46,8 @@ esp_err_t enable_servo()
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
     esp_err_t err__A = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
-    if (err__A == ESP_OK)
-    {
-        ESP_LOGI(TAG_SERVO, "initialised servo A");
-    }
-    else
-    {
-        ESP_LOGE(TAG_SERVO, "error: servo A: %s", esp_err_to_name(err__A));
-        return err__A;
-    }
-    
     esp_err_t err__B = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
-    if (err__B == ESP_OK)
-    {
-        ESP_LOGI(TAG_SERVO, "initialised servo B");
-    }
-    else
-    {
-        ESP_LOGE(TAG_SERVO, "error: servo B: %s", esp_err_to_name(err__B));
-        return err__B;
-    }
-
     esp_err_t err__C = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
-    if (err__C == ESP_OK)
-    {
-        ESP_LOGI(TAG_SERVO, "initialised servo C");
-    }
-    else
-    {
-        ESP_LOGE(TAG_SERVO, "error: servo C: %s", esp_err_to_name(err__C));
-        return err__C;
-    }
 
     if (err_A == ESP_OK && err__B == ESP_OK && err_C == ESP_OK && err__A == ESP_OK && err__B == ESP_OK && err__C == ESP_OK)
     {
