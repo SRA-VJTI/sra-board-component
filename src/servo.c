@@ -67,6 +67,8 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
     {
         if (servo_id == SERVO_A)
         {
+            degree_of_rotation = degree_of_rotation > SERVO_A_MAX_DEGREE ? SERVO_A_MAX_DEGREE : degree_of_rotation;
+
             uint32_t cal_pulsewidth = 0;
             cal_pulsewidth = (SERVO_A_MIN_PULSEWIDTH + (((SERVO_A_MAX_PULSEWIDTH - SERVO_A_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_A_MAX_DEGREE)));
 
@@ -84,6 +86,8 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
         }
         else if (servo_id == SERVO_B)
         {
+            degree_of_rotation = degree_of_rotation > SERVO_B_MAX_DEGREE ? SERVO_B_MAX_DEGREE : degree_of_rotation;
+
             uint32_t cal_pulsewidth = 0;
             cal_pulsewidth = (SERVO_B_MIN_PULSEWIDTH + (((SERVO_B_MAX_PULSEWIDTH - SERVO_B_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_B_MAX_DEGREE)));
 
@@ -101,6 +105,8 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
         }    
         else if (servo_id == SERVO_C)
         {
+            degree_of_rotation = degree_of_rotation > SERVO_C_MAX_DEGREE ? SERVO_C_MAX_DEGREE : degree_of_rotation;
+
             uint32_t cal_pulsewidth = 0;
             cal_pulsewidth = (SERVO_C_MIN_PULSEWIDTH + (((SERVO_C_MAX_PULSEWIDTH - SERVO_C_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_C_MAX_DEGREE)));
 
