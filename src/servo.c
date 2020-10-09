@@ -51,11 +51,11 @@ esp_err_t enable_servo()
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
     // init pwm 0a, 1a, 2a with the above settings
-    esp_err_t err__A = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
-    esp_err_t err__B = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
-    esp_err_t err__C = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
+    esp_err_t err_D = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
+    esp_err_t err_E = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
+    esp_err_t err_F = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
 
-    if (err_A == ESP_OK && err__B == ESP_OK && err_C == ESP_OK && err__A == ESP_OK && err__B == ESP_OK && err__C == ESP_OK)
+    if (err_D == ESP_OK && err_E == ESP_OK && err_F == ESP_OK)
     {
         enabled_servo_flag = 1;
         return ESP_OK;
