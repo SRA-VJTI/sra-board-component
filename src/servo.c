@@ -5,25 +5,27 @@ static int enabled_servo_flag = 0;
 
 esp_err_t enable_servo()
 {
-    esp_err_t err_A = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, SERVO_A);
-    if (err_A != ESP_OK)
+    esp_err_t err;
+
+    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, SERVO_A);
+    if (err != ESP_OK)
     {
-        ESP_LOGE(TAG_SERVO, "error: servo A: %s", esp_err_to_name(err_A));
-        return err_A;    
+        ESP_LOGE(TAG_SERVO, "error: servo A: %s", esp_err_to_name(err));
+        return err;    
     }
     
-    esp_err_t err_B = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, SERVO_B);
-    if (err_B != ESP_OK)
+    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, SERVO_B);
+    if (err != ESP_OK)
     {
-        ESP_LOGE(TAG_SERVO, "error: servo B: %s", esp_err_to_name(err_B));
-        return err_B;    
+        ESP_LOGE(TAG_SERVO, "error: servo B: %s", esp_err_to_name(err));
+        return err;    
     }
 
-    esp_err_t err_C = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, SERVO_C);
-    if (err_C != ESP_OK)
+    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, SERVO_C);
+    if (err != ESP_OK)
     {
-        ESP_LOGE(TAG_SERVO, "error: servo C: %s", esp_err_to_name(err_C));
-        return err_C;    
+        ESP_LOGE(TAG_SERVO, "error: servo C: %s", esp_err_to_name(err));
+        return err;    
     }
 
     mcpwm_config_t pwm_config;
@@ -39,11 +41,11 @@ esp_err_t enable_servo()
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
     // init pwm 0a, 1a, 2a with the above settings
-    esp_err_t err_D = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
-    esp_err_t err_E = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
-    esp_err_t err_F = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
+    esp_err_t err_A = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
+    esp_err_t err_B = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
+    esp_err_t err_C = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
 
-    if (err_D == ESP_OK && err_E == ESP_OK && err_F == ESP_OK)
+    if (err_A == ESP_OK && err_B == ESP_OK && err_C == ESP_OK)
     {
         enabled_servo_flag = 1;
         ESP_LOGI(TAG_SERVO, "enabled servos");
