@@ -12,10 +12,10 @@
 
 /** 
  * @brief Sets motor driver working mode
- * 1 - Parallel mode
- * 2 - Normal mode
+ * @param mode  1 for Parallel mode
+ * @param mode  2 for Normal mode
 **/
-esp_err_t set_motor_driver_mode(int mode);
+void set_motor_driver_mode(int mode);
 
 //Initialise GPIOs for MCPWM
 void mcpwm_gpio_initialize();
