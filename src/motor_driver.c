@@ -1,13 +1,14 @@
 #include "motor_driver.h"
 
 static const char* TAG_MOTOR_DRIVER = "motor_driver";
-static int MODE = 0; 
+static int mode_motor_driver_a = 0; 
+static int mode_motor_driver_b = 0;
 
-esp_err_t enable_motor_driver_a(int MODE)
+esp_err_t enable_motor_driver_a(int mode)
 {
     esp_err_t err;
 
-    if(MODE == 1)  
+    if(mode == PARALLEL_MODE)  
     {
         err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_PARALLEL_IN_1_2);
         if (err != ESP_OK)
@@ -22,7 +23,7 @@ esp_err_t enable_motor_driver_a(int MODE)
             return err;    
         }
     }
-    else if(MODE == 2)   
+    else if(mode == NORMAL_MODE)   
     {
         err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_NORMAL_IN_1);
         if (err != ESP_OK)
@@ -67,7 +68,7 @@ esp_err_t enable_motor_driver_a(int MODE)
     // sets the pwm duty mode
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
-    if (MODE == 1)
+    if (mode == PARALLEL_MODE)
     {
         esp_err_t err1_0 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config);
 
@@ -75,16 +76,16 @@ esp_err_t enable_motor_driver_a(int MODE)
         {
             ESP_LOGI(TAG_MOTOR_DRIVER, "enabled motor driver A in parallel mode");
             
-            MODE = 1;
+            mode_motor_driver_a = 1;
             return ESP_OK;
         }
         else
         {
-            MODE = 0;
+            mode_motor_driver_a = 0;
             return ESP_FAIL;
         }
     }
-    else if(MODE == 2)
+    else if(mode == NORMAL_MODE)
     {
         esp_err_t err1_0 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config);    
         esp_err_t err1_1 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_1, &pwm_config);    
@@ -92,23 +93,23 @@ esp_err_t enable_motor_driver_a(int MODE)
         if (err1_0 == ESP_OK && err1_1 == ESP_OK)
         {
             ESP_LOGI(TAG_MOTOR_DRIVER, "enabled motor driver A in normal mode");
-            MODE = 2;
+            mode_motor_driver_a = 2;
 
             return ESP_OK;
         }
         else
         {
-            MODE = 0;
+            mode_motor_driver_a = 0;
             return ESP_FAIL;
         }   
     }
 }
 
-esp_err_t enable_motor_driver_b(int MODE)
+esp_err_t enable_motor_driver_b(int mode)
 {
     esp_err_t err;
 
-    if(MODE == 1)  
+    if(mode == PARALLEL_MODE)  
     {
         err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MDB_PARALLEL_IN_5_7);
         if (err != ESP_OK)
@@ -123,7 +124,7 @@ esp_err_t enable_motor_driver_b(int MODE)
             return err;    
         }
     }
-    else if(MODE == 2)   
+    else if(mode == NORMAL_MODE)   
     {
         err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM2A, MDB_NORMAL_IN_5);
         if (err != ESP_OK)
@@ -150,7 +151,12 @@ esp_err_t enable_motor_driver_b(int MODE)
             return err;    
         }
     }
- 
+    else
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "invalid motor driver mode selected");
+        return ESP_FAIL;
+    }
+    
     mcpwm_config_t pwm_config;
     // sets the pwm frequency = 20000
     pwm_config.frequency = 20000;
@@ -163,7 +169,7 @@ esp_err_t enable_motor_driver_b(int MODE)
     // sets the pwm duty mode
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
-    if (MODE == 1)
+    if (mode == PARALLEL_MODE)
     {
         esp_err_t err1_1 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_1, &pwm_config);
 
@@ -171,16 +177,16 @@ esp_err_t enable_motor_driver_b(int MODE)
         {
             ESP_LOGI(TAG_MOTOR_DRIVER, "enabled motor driver B in parallel mode");
 
-            MODE = 1;
+            mode_motor_driver_b = 1;
             return ESP_OK;
         }
         else
         {
-            MODE = 0;
+            mode_motor_driver_b = 0;
             return ESP_FAIL;
         }
     }
-    else if(MODE == 2)
+    else if(mode == NORMAL_MODE)
     {
         esp_err_t err0_2 = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);    
         esp_err_t err1_2 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_2, &pwm_config);
@@ -189,12 +195,12 @@ esp_err_t enable_motor_driver_b(int MODE)
         {
             ESP_LOGI(TAG_MOTOR_DRIVER, "enabled motor driver B in normal mode");
             
-            MODE = 2;
+            mode_motor_driver_b = 2;
             return ESP_OK;
         }
         else
         {
-            MODE = 0;
+            mode_motor_driver_b = 0;
             return ESP_FAIL;
         }   
     }
@@ -224,7 +230,13 @@ void motor_stop(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num)
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
 }
 
-int read_motor_driver_mode() 
+int read_motor_driver_mode_a() 
 {
-    return MODE;
+    return mode_motor_driver_a;
 } 
+
+int read_motor_driver_mode_b()
+{
+    return mode_motor_driver_b;
+}
+
