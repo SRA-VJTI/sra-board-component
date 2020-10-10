@@ -1,25 +1,35 @@
 #ifndef MOTOR_DRIVER_H
 #define MOTOR_DRIVER_H
 
-#include "pin_defs.h"
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "driver/mcpwm.h"
+#include "soc/mcpwm_periph.h"
+#include "esp_attr.h"
+
 #include "esp_log.h"
 #include "esp_err.h"
-#include <stdlib.h>
-#include "freertos/FreeRTOS.h"
+#include "pin_defs.h"
 
-// https://github.com/espressif/esp-idf/tree/master/examples/peripherals/mcpwm/mcpwm_brushed_dc_control
-// look this link for mcpwm example code
+#define PARALLEL_MODE 1
+#define NORMAL_MODE 2
 
 /**
- * @brief Enables Motor driver in Parallel or Normal Mode
+ * @brief Enables Motor driver A in Parallel or Normal Mode
  * 
- * @param MODE  if MODE = 1 (Parallel Mode) & MODE = 2 (Normal Mode)
- * @return esp_err_t returns ESP_OK if MCPWM initialised, else it returns ESP_ERR_INVALID_ARG 
+ * @param MODE if MODE = 1 is passed, motor driver is operated in parallel mode, if MODE = 2 is passed, motor driver is operated in normal mode
+ * @return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
  */
-esp_err_t enable_motor_driver(int MODE);
+esp_err_t enable_motor_driver_a(int MODE);
 
+/**
+ * @brief Enables Motor driver B in Parallel or Normal Mode
+ * 
+ * @param MODE if MODE = 1 is passed, motor driver is operated in parallel mode, if MODE = 2 is passed, motor driver is operated in normal mode
+ * @return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
+ */
+esp_err_t enable_motor_driver_b(int MODE);
 
-//Functions to control motor motion
 /**
  * @brief Sets motors in forward direction
  * 
@@ -29,7 +39,6 @@ esp_err_t enable_motor_driver(int MODE);
  */
 void motor_forward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle);
 
-
 /**
  * @brief Sets motors in reverse direction
  * 
@@ -38,7 +47,6 @@ void motor_forward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_
  * @param duty_cycle set duty_cycle
  */
 void motor_backward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle);
-
 
 /**
  * @brief Stops Motors
