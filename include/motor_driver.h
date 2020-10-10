@@ -49,7 +49,7 @@ void motor_backward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty
 void motor_stop(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num);
 
 /**
- * @brief Read motor driver mdoe
+ * @brief Read motor driver mode
  * 
  * @return int returns mode of motor driver  1 = Parallel mode , 2 = Normal mode
  */
