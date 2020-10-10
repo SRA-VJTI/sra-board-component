@@ -1,11 +1,25 @@
 #include "motor_driver.h"
 
-int MODE = 0 ;  //motor driver is disabled
+static const char* TAG_MOTOR_DRIVER = "motor_driver";
+static int MODE = 0; //motor driver is disabled by default
 
-void set_motor_driver_mode(int mode)
+esp_err_t set_motor_driver_mode(int mode)
 {
-    MODE = mode ;  //set motor driver mode 
-
+    if (mode == 1)
+    {
+        ESP_LOGI(TAG_MOTOR_DRIVER, "enabling in PARALLEL mode");
+        MODE = mode;
+    }
+    else if (mode == 2)
+    {
+        ESP_LOGI(TAG_MOTOR_DRIVER, "enabling in NORMAL mode");
+        MODE = mode;
+    }
+    else if (mode == 0)
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "motor driver is disabled");
+        MODE = mode;
+    } 
 }
 
 
@@ -31,30 +45,65 @@ void mcpwm_gpio_initialize(int MODE)
     }
 }
 
-
-//Intialise MCPWM 
  void mcpwm_initialize()
  {
-    printf("Configuring Initial Parameters of mcpwm...\n");
+    ESP_LOGI(TAG_MOTOR_DRIVER, "Configuring Initial Parameters of mcpwm...\n");
     mcpwm_config_t pwm_config;
     pwm_config.frequency = 20000;    //frequency = 500Hz,
     pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
-    printf("Configuring pwm_config...\n");
+    ESP_LOGI(TAG_MOTOR_DRIVER, "Configuring pwm_config...\n");
     if(MODE == 1)
     {
-        mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);    //Configure UNIT0 PWM1A & PWM1B with above settings
-        mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config);    //Configure UNIT1 PWM0A & PWM0B with above settings
+        err0_1 = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);    
+        if (err0_1 == ESP_OK)
+        {
+            ESP_LOGI(TAG_MOTOR_DRIVER, "Configured UNIT0 PWM1A & PWM1B with above settings");
+        }
+        else 
+        {
+            ESP_LOGE(TAG_MOTOR_DRIVER, "Failed to configure UNIT0 PWM1A & PWM1B with above settings");
+            MODE = -1 
+        }
+        err1_0 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config);    
+        if (err1_0 == ESP_OK)
+        {
+            ESP_LOGI(TAG_MOTOR_DRIVER, "Configured UNIT1 PWM0A & PWM0B with above settings");
+        }
+        else 
+        {
+            ESP_LOGE(TAG_MOTOR_DRIVER, "Failed to configure UNIT1 PWM0A & PWM0B with above settings");
+            MODE = -1 
+        }         
     }
-    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);    //Configure UNIT0 PWM0A & PWM0B with above settings
-    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);    //Configure UNIT0 PWM2A & PWM2B with above settings
-    printf("Initialize pwm_init...\n");
+    err0_0 = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);    
+    if (err0_0 == ESP_OK)
+    {
+        ESP_LOGI(TAG_MOTOR_DRIVER, "Configured UNIT0 PWM0A & PWM0B with above settings");
+    }
+    else 
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "Failed to configure UNIT0 PWM0A & PWM0B with above settings");
+        MODE = -1 
+    }
+    err0_2 = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);  
+    if (err0_2 == ESP_OK)
+    {
+        ESP_LOGI(TAG_MOTOR_DRIVER, "Configured UNIT0 PWM2A & PWM2B with above settings");
+    }
+    else 
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "Failed to configure UNIT0 PWM2A & PWM2B with above settings");
+        MODE = -1;
+    }
+    if (MODE != -1)
+    {
+        ESP_LOGI(TAG_MOTOR_DRIVER, "Initialize pwm_init...\n");
+    }
 }
 
-
-// Functions to control motors
 void motor_forward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, 0);
@@ -77,18 +126,19 @@ void motor_stop(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num)
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
 }
 
-// Read motor driver mode
 void read_motor_driver_mode() 
 {
         switch (MODE)
         {
-        case 0: printf("Motor driver is DISABLED");
+        case 0: ESP_LOGE(TAG_MOTOR_DRIVER, "motor driver is disabled, call set_motor_driver_mode() before reading motor driver mode");
             break;
-        case 1: printf("Motor driver is enabled in PARALLEL Mode");
+        case 1: ESP_LOGI(TAG_MOTOR_DRIVER, "Motor driver is enabled in PARALLEL Mode");
             break;
-        case 2: printf("Motor driver is enabled in NORMAL Mode");
+        case 2: ESP_LOGI(TAG_MOTOR_DRIVER, "Motor driver is enabled in NORMAL Mode");
             break;
-        default: printf("wrong mode is selected")
+        case -1: ESP_LOGE(TAG_MOTOR_DRIVER, "Error initializing/configuring mcpwm");
+            break;
+        default: ESP_LOGE(TAG_MOTOR_DRIVER, "Invalid mode selected");
             break;
         }
 } 
