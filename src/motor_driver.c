@@ -3,7 +3,7 @@
 static const char* TAG_MOTOR_DRIVER = "motor_driver";
 static int MODE = 0; //motor driver is disabled by default
 
-esp_err_t set_motor_driver_mode(int mode)
+void set_motor_driver_mode(int mode)
 {
     if (mode == 1)
     {
