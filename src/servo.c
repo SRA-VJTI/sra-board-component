@@ -14,14 +14,14 @@ esp_err_t enable_servo()
         return err;    
     }
     
-    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, SERVO_B);
+    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, SERVO_B);
     if (err != ESP_OK)
     {
         ESP_LOGE(TAG_SERVO, "error: servo B: %s", esp_err_to_name(err));
         return err;    
     }
 
-    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, SERVO_C);
+    err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, SERVO_C);
     if (err != ESP_OK)
     {
         ESP_LOGE(TAG_SERVO, "error: servo C: %s", esp_err_to_name(err));
@@ -43,9 +43,8 @@ esp_err_t enable_servo()
     // init pwm 0a, 1a, 2a with the above settings
     esp_err_t err_A = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
     esp_err_t err_B = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
-    esp_err_t err_C = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);
 
-    if (err_A == ESP_OK && err_B == ESP_OK && err_C == ESP_OK)
+    if (err_A == ESP_OK && err_B == ESP_OK)
     {
         enabled_servo_flag = 1;
         ESP_LOGI(TAG_SERVO, "enabled servos");
@@ -89,7 +88,7 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
             uint32_t cal_pulsewidth = 0;
             cal_pulsewidth = (SERVO_B_MIN_PULSEWIDTH + (((SERVO_B_MAX_PULSEWIDTH - SERVO_B_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_B_MAX_DEGREE)));
 
-            esp_err_t err_B = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, cal_pulsewidth);
+            esp_err_t err_B = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, cal_pulsewidth);
             if (err_B == ESP_OK)
             {
                 ESP_LOGI(TAG_SERVO, "set servo B: %ud", degree_of_rotation);
@@ -108,7 +107,7 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
             uint32_t cal_pulsewidth = 0;
             cal_pulsewidth = (SERVO_C_MIN_PULSEWIDTH + (((SERVO_C_MAX_PULSEWIDTH - SERVO_C_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_C_MAX_DEGREE)));
 
-            esp_err_t err_C = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_2, MCPWM_OPR_A, cal_pulsewidth);
+            esp_err_t err_C = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, cal_pulsewidth);
             if (err_C == ESP_OK)
             {
                 ESP_LOGI(TAG_SERVO, "set servo C: %ud", degree_of_rotation);
