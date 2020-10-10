@@ -33,20 +33,20 @@
 
 /////// motor driver ////////
 //****** normal mode ******//
-#define MDA_NORMAL_IN_1 32
-#define MDA_NORMAL_IN_2 33 
-#define MDA_NORMAL_IN_3 25 
-#define MDA_NORMAL_IN_4 26 
-#define MDB_NORMAL_IN_5 27 
-#define MDB_NORMAL_IN_6 14 
-#define MDB_NORMAL_IN_7 12 
-#define MDB_NORMAL_IN_8 13
+#define MDA_NORMAL_IN_1 32  //MCPWM_UNIT_0 MCPWM0A
+#define MDA_NORMAL_IN_2 33  //MCPWM_UNIT_0 MCPWM0B
+#define MDA_NORMAL_IN_3 25  //MCPWM_UNIT_0 MCPWM1A
+#define MDA_NORMAL_IN_4 26  //MCPWM_UNIT_0 MCPWM1B
+#define MDB_NORMAL_IN_5 27  //MCPWM_UNIT_0 MCPWM2A
+#define MDB_NORMAL_IN_6 14  //MCPWM_UNIT_0 MCPWM2B
+#define MDB_NORMAL_IN_7 12  //MCPWM_UNIT_1 MCPWM0A
+#define MDB_NORMAL_IN_8 13  //MCPWM_UNIT_1 MCPWM0B
 
 //***** parallel mode *****//
-#define MDA_PARALLEL_IN_1_2 25
-#define MDA_PARALLEL_IN_3_4 26
-#define MDB_PARALLEL_IN_5_7 12
-#define MDB_PARALLEL_IN_6_8 13
+#define MDA_PARALLEL_IN_1_2 25  //MCPWM_UNIT_0 MCPWM1A
+#define MDA_PARALLEL_IN_3_4 26  //MCPWM_UNIT_0 MCPWM1B
+#define MDB_PARALLEL_IN_5_7 12  //MCPWM_UNIT_1 MCPWM0A
+#define MDB_PARALLEL_IN_6_8 13  //MCPWM_UNIT_1 MCPWM0B
 /////////////////////////////
 
 /////////// servos //////////
