@@ -1,15 +1,17 @@
 #include "adc.h"
 
 static const char* TAG_ADC= "adc";
+static esp_adc_cal_characteristics_t *adc_chars;
 
 esp_err_t config_adc1(int channel[])
 {   
     esp_err_t err_A; 
     esp_err_t err_B;
-    err_A = adc1_config_width(ADC_WIDTH_BIT_12); //Configure ADC to 12 bit width
-
-    //Configure ADC to 11dB attenuation
-	for (int i = 0; i<4; i++)
+    // Configure ADC to 12 bit width
+    err_A = adc1_config_width(ADC_WIDTH_BIT_12); 
+    
+    // Configure ADC to 11dB attenuation
+	for (int i = 0; i < 4; i++)
 	{   
         if (channel[i] == LSA_A0)
         {
@@ -43,7 +45,6 @@ esp_err_t config_adc1(int channel[])
     }
 }
 
-//Characterize ADC 1 using either Vref or Two Point
 esp_err_t char_adc1()
 {
 	adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
@@ -66,7 +67,6 @@ esp_err_t char_adc1()
     return ESP_OK;
 }
 
-
 esp_err_t enable_adc1(int channel[])
 {
     esp_err_t err_C = config_adc1(channel);
@@ -82,7 +82,6 @@ esp_err_t enable_adc1(int channel[])
     }
 }
 
-//Returns raw adc value of lsa pin:
 esp_err_t read_adc(int adc_pin)
 {
     if (adc_pin == LSA_A0)

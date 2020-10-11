@@ -13,11 +13,10 @@
 
 #include "esp_log.h"
 #include "esp_err.h"
+#include "pin_defs.h"
 
 #define DEFAULT_VREF    1100        
 #define NO_OF_SAMPLES   64 
-
-esp_adc_cal_characteristics_t *adc_chars;
 
 /**
  * @brief Configure width and attenuation of ADC 1
