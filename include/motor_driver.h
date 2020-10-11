@@ -14,6 +14,26 @@
 #define PARALLEL_MODE 1
 #define NORMAL_MODE 2
 
+#define MOTOR_FORWARD 200
+#define MOTOR_BACKWARD 201
+#define MOTOR_STOP 202
+
+/**
+ * @brief Enables Motor driver in Parallel or Normal Mode
+ * 
+ * @param id for id=a, enables motor driver a and for id=b, enables motor driver b
+ * @param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
+ */
+#define enable_motor_driver(id, mode) enable_motor_driver_##id(mode) 
+
+/**
+ * @brief Reads mode of motor driver 
+ * 
+ * @param id for id=a, returns mode of motor driver a, for id=b, returns mode of motor driver b
+ * @return int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode
+ */
+#define read_motor_driver_mode(id) read_motor_driver_mode_##id()
+
 /**
  * @brief Enables Motor driver A in Parallel or Normal Mode
  * 
@@ -31,30 +51,14 @@ esp_err_t enable_motor_driver_a(int mode);
 esp_err_t enable_motor_driver_b(int mode);
 
 /**
- * @brief Sets motors in forward direction
+ * @brief Set the speed of motors
  * 
- * @param mcpwm_num set MCPWM unit(0-1)
- * @param timer_num set timer number(0-2) of MCPWM, each MCPWM unit has 3 timers
- * @param duty_cycle set duty_cycle
+ * @param motor_id set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction
+ * @param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor
+ * @param duty_cycle set the duty cycle of the motor driver PWM
+ * @return esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs
  */
-void motor_forward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle);
-
-/**
- * @brief Sets motors in reverse direction
- * 
- * @param mcpwm_num set MCPWM unit(0-1)
- * @param timer_num set timer number(0-2) of MCPWM, each MCPWM unit has 3 timers
- * @param duty_cycle set duty_cycle
- */
-void motor_backward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle);
-
-/**
- * @brief Stops Motors
- * 
- * @param mcpwm_num set MCPWM unit(0-1)
- * @param timer_num set timer number(0-2) of MCPWM, each MCPWM unit has 3 timers
- */
-void motor_stop(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num);
+esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle);
 
 /**
  * @brief Reads mode of motor driver A
