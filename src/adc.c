@@ -2,30 +2,6 @@
 
 static const char* TAG_ADC= "adc";
 
-//Check Whether Vref or Two point is burned into efuse
-void check_efuse(void)
-{
-    //Check TP is burned into eFuse
-    if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) 
-    {
-        ESP_LOGI(TAG_ADC, "eFuse Two Point: Supported");
-    } 
-    else 
-    {
-        ESP_LOGI(TAG_ADC, "eFuse Two Point: NOT supported");
-    }
-
-    //Check Vref is burned into eFuse
-    if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_VREF) == ESP_OK)
-    {
-        ESP_LOGI(TAG_ADC, "eFuse Vref: Supported");
-    } 
-    else 
-    {
-        ESP_LOGI(TAG_ADC, "eFuse Vref: NOT supported");
-    }
-}
-
 esp_err_t config_adc1(adc1_channel_t channel[])
 {   
     esp_err_t err_A; 
@@ -55,12 +31,14 @@ esp_err_t char_adc1()
 	adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
        
-    if (val_type == ESP_ADC_CAL_VAL_EFUSE_TP)              
+    if (val_type == ESP_ADC_CAL_VAL_EFUSE_TP) 
 	{   
+        ESP_LOGI(TAG_ADC, "eFuse Two Point: Supported");
         ESP_LOGI(TAG_ADC, "Characterized using Two Point Value");
     } 
     else if (val_type == ESP_ADC_CAL_VAL_EFUSE_VREF) 
-    {
+    {   
+        ESP_LOGI(TAG_ADC, "eFuse Vref: Supported");
         ESP_LOGI(TAG_ADC, "Characterized using eFuse Vref");
     } 
     else 

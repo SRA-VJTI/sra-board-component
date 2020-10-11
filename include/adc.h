@@ -1,5 +1,5 @@
-#ifndef ADC_H
-#define ADC_H
+#ifndef _ADC_H
+#define _ADC_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,8 +11,6 @@
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 
-#include "sdkconfig.h"
-#include "logger.h"
 #include "esp_err.h"
 #include "pin_defs.h"
 
@@ -20,12 +18,6 @@
 #define NO_OF_SAMPLES   64 
 
 esp_adc_cal_characteristics_t *adc_chars;
-
-/**
- * @brief Check Vref or Two Point burned into efuse
- * 
- **/
-void check_efuse(void);
 
 /**
  * @brief Configure width and attenuation of ADC 1
