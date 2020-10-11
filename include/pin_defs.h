@@ -48,6 +48,10 @@
 #define MDB_PARALLEL_IN_5_7 12  //MCPWM_UNIT_1 MCPWM1A
 #define MDB_PARALLEL_IN_6_8 13  //MCPWM_UNIT_1 MCPWM1B
 
+#define MOTOR_A_0 100
+#define MOTOR_A_1 101
+#define MOTOR_B_0 102
+#define MOTOR_B_1 103
 /////////////////////////////
 
 /////////// servos //////////
