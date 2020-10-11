@@ -1,5 +1,5 @@
 #ifndef ADC_H
-#define 
+#define ADC_H
 
 #include <stdio.h>
 #include <stdlib.h>
