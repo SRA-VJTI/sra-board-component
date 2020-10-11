@@ -2,18 +2,36 @@
 
 static const char* TAG_ADC= "adc";
 
-esp_err_t config_adc1(adc1_channel_t channel[])
+esp_err_t config_adc1(int channel[])
 {   
     esp_err_t err_A; 
     esp_err_t err_B;
-
     err_A = adc1_config_width(ADC_WIDTH_BIT_12); //Configure ADC to 12 bit width
-
+    
+    //Configure ADC to 11dB attenuation
 	for (int i = 0; i<4; i++)
-	{
-		err_B = adc1_config_channel_atten(channel[i], ADC_ATTEN_DB_11); //Configure ADC to 11dB attenuation
+	{   
+        if (channel[i] == LSA_A0)
+        {
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_7, ADC_ATTEN_DB_11);
+        }
+        else if (channel[i] == LSA_A1)
+        {
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11);
+        }
+        else if(channel[i] == LSA_A2)
+        {
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11);
+        }
+        else if (channel[i] == LSA_A3)
+        {
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11);
+        }
+        else
+        {
+            return ESP_FAIL;
+        }
 	}
-
     if (err_A == ESP_OK && err_B == ESP_OK)
     {
         ESP_LOGI(TAG_ADC, "Configured ADC_1 to 12 Bit and 11dB attenuation");
@@ -26,6 +44,7 @@ esp_err_t config_adc1(adc1_channel_t channel[])
 
 }
 
+//Characterize ADC 1 using either Vref or Two Point
 esp_err_t char_adc1()
 {
 	adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
@@ -46,4 +65,29 @@ esp_err_t char_adc1()
         ESP_LOGI(TAG_ADC, "Characterized using Default Vref");
     }
     return ESP_OK;
+}
+
+//Returns raw adc value of lsa pin:
+esp_err_t read_adc(int adc_pin)
+{
+    if (adc_pin == LSA_A0)
+    {
+        return adc1_get_raw(ADC_CHANNEL_7);
+    }
+    else if (adc_pin == LSA_A1)
+    {
+        return adc1_get_raw(ADC_CHANNEL_6);
+    }
+    else if(adc_pin == LSA_A2)
+    {
+        return adc1_get_raw(ADC_CHANNEL_0);
+    }
+    else if (adc_pin == LSA_A3)
+    {
+        return adc1_get_raw(ADC_CHANNEL_3);
+    }
+    else
+    {
+        return ESP_FAIL;
+    }
 }
