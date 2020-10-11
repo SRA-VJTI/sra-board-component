@@ -7,7 +7,7 @@ esp_err_t config_adc1(int channel[])
     esp_err_t err_A; 
     esp_err_t err_B;
     err_A = adc1_config_width(ADC_WIDTH_BIT_12); //Configure ADC to 12 bit width
-    
+
     //Configure ADC to 11dB attenuation
 	for (int i = 0; i<4; i++)
 	{   
@@ -41,7 +41,6 @@ esp_err_t config_adc1(int channel[])
     {
         return ESP_FAIL;
     }
-
 }
 
 //Characterize ADC 1 using either Vref or Two Point
@@ -65,6 +64,22 @@ esp_err_t char_adc1()
         ESP_LOGI(TAG_ADC, "Characterized using Default Vref");
     }
     return ESP_OK;
+}
+
+
+esp_err_t enable_adc1(int channel[])
+{
+    esp_err_t err_C = config_adc1(channel);
+    esp_err_t err_D = char_adc1();
+    if (err_C == ESP_OK && err_D == ESP_OK)
+    {
+        ESP_LOGI(TAG_ADC, "Configured and Characterized adc 1");
+        return ESP_OK;
+    }
+    else
+    {
+        return ESP_FAIL;
+    }
 }
 
 //Returns raw adc value of lsa pin:
