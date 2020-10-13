@@ -13,25 +13,23 @@ esp_err_t config_adc1(int channel[])
         // Configure ADC to 11dB attenuation
         for (int i = 0; i < 4; i++)
         {   
-            if (channel[i] == LSA_A0)
+            switch(channel[i])
             {
-                err = adc1_config_channel_atten(ADC_CHANNEL_7, ADC_ATTEN_DB_11);
-            }
-            else if (channel[i] == LSA_A1)
-            {
-                err = adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11);
-            }
-            else if(channel[i] == LSA_A2)
-            {
-                err = adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11);
-            }
-            else if (channel[i] == LSA_A3)
-            {
-                err = adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11);
-            }
-            else
-            {
-                return ESP_FAIL;
+                case LSA_A0:
+                    err = adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11);
+                    break;
+                case LSA_A1:
+                    err = adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11);
+                    break;
+                case LSA_A2:
+                    err = adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11);
+                    break;
+                case LSA_A3:
+                    err = adc1_config_channel_atten(ADC_CHANNEL_7, ADC_ATTEN_DB_11);
+                    break;
+                default:
+                    ESP_LOGE(TAG_ADC, "LSA GPIO pins not passed to the function");
+                    return ESP_FAIL;
             }
         }
     }
@@ -99,24 +97,18 @@ esp_err_t enable_adc1(int channel[])
 
 esp_err_t read_adc(int adc_pin)
 {
-    if (adc_pin == LSA_A0)
+    switch(adc_pin)
     {
-        return adc1_get_raw(ADC_CHANNEL_7);
-    }
-    else if (adc_pin == LSA_A1)
-    {
-        return adc1_get_raw(ADC_CHANNEL_6);
-    }
-    else if(adc_pin == LSA_A2)
-    {
-        return adc1_get_raw(ADC_CHANNEL_0);
-    }
-    else if (adc_pin == LSA_A3)
-    {
-        return adc1_get_raw(ADC_CHANNEL_3);
-    }
-    else
-    {
-        return ESP_FAIL;
+        case LSA_A0:
+            return adc1_get_raw(ADC_CHANNEL_0);
+        case LSA_A1:
+            return adc1_get_raw(ADC_CHANNEL_3);
+        case LSA_A2:
+            return adc1_get_raw(ADC_CHANNEL_6);
+        case LSA_A3:
+            return adc1_get_raw(ADC_CHANNEL_7);
+        default:
+            ESP_LOGE(TAG_ADC, "LSA GPIO pins not passed to function");
+            return ESP_FAIL;
     }
 }
