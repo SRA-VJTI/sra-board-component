@@ -7,11 +7,11 @@ static int enabled_bar_graph_flag = 0;
 // pins IN1 - IN4 are usable in the bar graph, as pins IN5 - IN8 are connected to pins of motor driver B and these cannot be used.
 // So, bit mask sets bits of IN5 - IN8 as 0 and that of IN1 - IN4 as 1, because if we set pins used by mcpwm, esp32 will crash or behave oddly. 
 // IN1 is the leftmost bit and IN8 is the rightmost bit
-static uint8_t bitmask[9] = {0x00, 0xFF, 0xFC, 0xF0, 0xCF, 0xCC, 0xC0, 0x0F, 0x0C};
+static const uint8_t bitmask[9] = {0x00, 0xFF, 0xFC, 0xF0, 0xCF, 0xCC, 0xC0, 0x0F, 0x0C};
 //                   state    0     1     2     3     4     5     6     7     8
 
 // Just an array of pins used by bar graph led
-static int pin_out[8] = {BG_LED_1, BG_LED_2, BG_LED_3, BG_LED_4, BG_LED_5, BG_LED_6, BG_LED_7, BG_LED_8};
+static const int pin_out[8] = {BG_LED_1, BG_LED_2, BG_LED_3, BG_LED_4, BG_LED_5, BG_LED_6, BG_LED_7, BG_LED_8};
 
 esp_err_t enable_bar_graph()
 {
