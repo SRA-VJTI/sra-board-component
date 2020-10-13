@@ -51,6 +51,6 @@ esp_err_t enable_adc1(int channel[]);
  * 
  * @return esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG.
  **/
-esp_err_t read_adc(int adc_pin);
+int read_adc(int adc_pin);
 
 #endif

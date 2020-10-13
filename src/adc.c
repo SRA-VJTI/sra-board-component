@@ -71,6 +71,7 @@ esp_err_t enable_adc1(int channel[])
 {
     esp_err_t err_C = config_adc1(channel);
     esp_err_t err_D = characterize_adc1();
+    
     if (err_C == ESP_OK && err_D == ESP_OK)
     {
         ESP_LOGI(TAG_ADC, "Configured and Characterized adc 1");
@@ -82,7 +83,7 @@ esp_err_t enable_adc1(int channel[])
     }
 }
 
-esp_err_t read_adc(int adc_pin)
+int read_adc(int adc_pin)
 {
     if (adc_pin == LSA_A0)
     {
