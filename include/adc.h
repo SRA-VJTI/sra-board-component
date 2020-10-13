@@ -15,8 +15,7 @@
 #include "esp_err.h"
 #include "pin_defs.h"
 
-#define DEFAULT_VREF    1100        
-#define NO_OF_SAMPLES   64 
+#define DEFAULT_VREF    1100 
 
 /**
  * @brief Configure width and attenuation of ADC 1
@@ -33,10 +32,10 @@ esp_err_t config_adc1(int channel[]);
  * 
  * @return esp_err_t 
  **/
-esp_err_t char_adc1();
+esp_err_t characterize_adc1();
 
 /**
- * @brief call function config_adc1() and char_adc1().
+ * @brief call function config_adc1() and characterize_adc1().
  * 
  * @param channel[] Array of ESP32 pins to which LSA is connected:(36,39,35,34)
  * 

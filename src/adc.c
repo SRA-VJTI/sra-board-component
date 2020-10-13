@@ -45,7 +45,7 @@ esp_err_t config_adc1(int channel[])
     }
 }
 
-esp_err_t char_adc1()
+esp_err_t characterize_adc1()
 {
 	adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
@@ -70,7 +70,7 @@ esp_err_t char_adc1()
 esp_err_t enable_adc1(int channel[])
 {
     esp_err_t err_C = config_adc1(channel);
-    esp_err_t err_D = char_adc1();
+    esp_err_t err_D = characterize_adc1();
     if (err_C == ESP_OK && err_D == ESP_OK)
     {
         ESP_LOGI(TAG_ADC, "Configured and Characterized adc 1");
