@@ -4,19 +4,19 @@
 #include "pin_defs.h"
 #include "adc.h"
 
-#define NO_OF_SAMPLES   64 
+#define NUMBER_OF_SAMPLES CONFIG_NUMBER_OF_SAMPLES
 
 typedef union line_sensor_array
 {
     struct line_sensor
     {
-        int A0 = 0;
-        int A1 = 0;
-        int A2 = 0;
-        int A3 = 0;
+        int A0;
+        int A1;
+        int A2;
+        int A3;
     }lsa;
 
-    int adc_reading[4]={0};
+    int adc_reading[4];
 }line_sensor_array;
 
 
