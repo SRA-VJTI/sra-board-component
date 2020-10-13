@@ -1,26 +1,29 @@
 #include "lsa.h"
 
-//int lsa_pins = {LSA_A0, LSA_A1, LSA_A2, LSA_A3};
 
-int multisampling(int lsa_pin)
+esp_err_t init_line_sensor(int* line_sensor_pins)
 {
-    int adc_reading = 0;
-    for( int j = 0 ; j < NO_OF_SAMPLES; j++)
-    {
-        adc_reading += read_adc(lsa_pin);
-    }
-    adc_reading /= NO_OF_SAMPLES;
-    return adc_reading;
+    esp_err_t err = enable_adc1(line_sensor_pins);
+    return err
 }
 
 
-int get_lsa_readings(int lsa_pins[])
+line_sensor_array* get_line_sensor_array_readings(int* line_sensor_pins)
 {
-    int adc_readings[4] = {0};
+    line_sensor_array* line_sensor_readings;
 
-    for( int i = 0 ; i < 4 ; i++)
+    for( int i = 0; i < NO_OF_SAMPLES; i++)
     {
-        adc_readings[i] = multisampling(lsa_pins[i]);
+        for(int j = 0; j < 4; j++)
+        {
+            line_sensor_readings->adc_readings[i] = line_sensor_readings->adc_readings[i] + read_adc(line_sensor_pins[i]);
+        }
     }
-    return adc_readings;
-}
+
+    for( int i = 0; i < 4; i++)
+    {
+        line_sensor_readings->adc_readings[i] = line_sensor_readings->adc_readings[i]/NO_OF_SAMPLES;
+    }
+
+    return line_sensor_readings;
+}x

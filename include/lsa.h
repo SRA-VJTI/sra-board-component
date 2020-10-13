@@ -6,23 +6,31 @@
 
 #define NO_OF_SAMPLES   64 
 
+
+typedef struct line_sensor_array
+{
+    int adc_readings[4]={0};
+}line_sensor_array;
+
+
 /**
- * @brief apply multisampling( Average over NO_OF SAMPLE readings ) to get stable readings 
+ * @brief enables and configures adc
  
- * @param lsa_pin The adc pin on which multisampling is to be applied
+ * @param lsa_pins[] array that contains all lsa pins that are to be initialised
  
- * @return adc_reading- The multisampled reading of given lsa_pin
+ * @return esp_err_t i.e it shows if adc is initialised successfully or not
  **/
-int multisampling(int lsa_pin);
+esp_err_t init_line_sensor(int* line_sensor_pins);
 
 
 /**
- * @brief Get multisampled lsa readings
+ * @brief Get multisampled line sensor array readings
  
  * @param lsa_pins[] array that contains all lsa pins
  
- * @return Returns an int array of lsa readings for the given pins.
+ * @return Returns a pointer to a struct that contains multisampled adc readings 
+           for all the pins specified in lsa_pins array
 **/
-int get_lsa_readings(int lsa_pins[]);
+line_sensor_array* get_line_sensor_array_readings(int* line_sensor_pins);
 
 #endif
