@@ -6,13 +6,17 @@
 
 #define NO_OF_SAMPLES   64 
 
-
-typedef struct line_sensor_array
+typedef union line_sensor_array
 {
-    int A0 = 0;
-    int A1 = 0;
-    int A2 = 0;
-    int A3 = 0;
+    struct line_sensor
+    {
+        int A0 = 0;
+        int A1 = 0;
+        int A2 = 0;
+        int A3 = 0;
+    }lsa;
+
+    int adc_reading[4]={0};
 }line_sensor_array;
 
 
