@@ -38,6 +38,6 @@ esp_err_t init_line_sensor();
  * @return Returns a pointer to a struct that contains multisampled adc readings 
            for all the pins specified in lsa_pins array
 **/
-line_sensor_array* read_line_sensor();
+line_sensor_array read_line_sensor();
 
 #endif
