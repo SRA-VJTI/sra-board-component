@@ -9,28 +9,31 @@
 
 typedef struct line_sensor_array
 {
-    int adc_readings[4]={0};
+    int A0 = 0;
+    int A1 = 0;
+    int A2 = 0;
+    int A3 = 0;
 }line_sensor_array;
 
 
 /**
  * @brief enables and configures adc
  
- * @param lsa_pins[] array that contains all lsa pins that are to be initialised
- 
+ * @param none
+
  * @return esp_err_t i.e it shows if adc is initialised successfully or not
  **/
-esp_err_t init_line_sensor(int* line_sensor_pins);
+esp_err_t init_line_sensor();
 
 
 /**
  * @brief Get multisampled line sensor array readings
  
- * @param lsa_pins[] array that contains all lsa pins
+ * @param none
  
  * @return Returns a pointer to a struct that contains multisampled adc readings 
            for all the pins specified in lsa_pins array
 **/
-line_sensor_array* get_line_sensor_array_readings(int* line_sensor_pins);
+line_sensor_array* read_line_sensor();
 
 #endif
