@@ -122,7 +122,7 @@ void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro
 }
 
 // Fuse the gyroscope and accelerometer angle in a complementary fashion
-esp_err_t complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float initial_acce_angle[])
+void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float initial_acce_angle[])
 {
     static bool is_initial_reading = true;
     static uint32_t timer;
@@ -141,7 +141,7 @@ esp_err_t complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value,
             complementary_angle[i] = acce_angle[i] - initial_acce_angle[i];
 
         timer = esp_timer_get_time();
-        return ESP_OK;
+        return;
     }
 
     dt = (float)(esp_timer_get_time() - timer) / 1000000;
@@ -155,11 +155,11 @@ esp_err_t complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value,
         acce_angle[i] = acce_angle[i] - initial_acce_angle[i];
         fusion_angle[i] = ALPHA * gyro_angle[i] + (1 - ALPHA) * acce_angle[i];
 
-        // Lag filter - More on this here: https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues
+        // Lag filter
         complementary_angle[i] = ALPHA * fusion_angle[i] + (1 - ALPHA) * complementary_angle[i];
     }
 
-    return ESP_OK;
+    return;
 }
 
 // Calculate roll and pitch angles of the MPU after applying the complementary filter
