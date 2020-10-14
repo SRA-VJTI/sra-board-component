@@ -1,9 +1,9 @@
 #ifndef PIN_DEFS_H
 #define PIN_DEFS_H
 
-//////// accelerometer //////
-#define ACCL_SDA 22
-#define ACCL_SCL 23
+//////// mpu //////
+#define MPU6050_SDA 22
+#define MPU6050_SCL 23
 /////////////////////////////
 
 //////// bar graph //////////
