@@ -23,43 +23,43 @@ esp_err_t enable_bar_graph()
         enabled_bar_graph_flag = 1;
     }
     // motor driver a is off and motor driver b is in parallel mode, so we can use IN1 - IN6 pins
-    else if (read_motor_driver_mode(a) == 0 & read_motor_driver_mode(b) == 1)
+    else if (read_motor_driver_mode(a) == 0 && read_motor_driver_mode(b) == 1)
     {
         bit_mask = (1ULL<<BG_LED_1) | (1ULL<<BG_LED_2) | (1ULL<<BG_LED_3) | (1ULL<<BG_LED_4) | (1ULL<<BG_LED_5) | (1ULL<<BG_LED_6); 
         enabled_bar_graph_flag = 2;
     }
     // motor driver a is off and motor driver b is in normal mode, so we can use IN1 - IN4 pins
-    else if (read_motor_driver_mode(a) == 0 & read_motor_driver_mode(b) == 2)
+    else if (read_motor_driver_mode(a) == 0 && read_motor_driver_mode(b) == 2)
     {
         bit_mask = (1ULL<<BG_LED_1) | (1ULL<<BG_LED_2) | (1ULL<<BG_LED_3) | (1ULL<<BG_LED_4); 
         enabled_bar_graph_flag = 3;
     }
     // motor driver a is in parallel mode and motor driver b is off, so we can use IN1, IN2, IN5 - IN8 pins
-    else if (read_motor_driver_mode(a) == 1 & read_motor_driver_mode(b) == 0)
+    else if (read_motor_driver_mode(a) == 1 && read_motor_driver_mode(b) == 0)
     {
         bit_mask = (1ULL<<BG_LED_1) | (1ULL<<BG_LED_2) | (1ULL<<BG_LED_5) | (1ULL<<BG_LED_6) | (1ULL<<BG_LED_7) | (1ULL<<BG_LED_8); 
         enabled_bar_graph_flag = 4;
     }
     // motor driver a is in parallel mode and motor driver b is in parallel mode, so we can use IN1, IN2, IN5, IN6 pins
-    else if (read_motor_driver_mode(a) == 1 & read_motor_driver_mode(b) == 1)
+    else if (read_motor_driver_mode(a) == 1 && read_motor_driver_mode(b) == 1)
     {
         bit_mask = (1ULL<<BG_LED_1) | (1ULL<<BG_LED_2) | (1ULL<<BG_LED_5) | (1ULL<<BG_LED_6); 
         enabled_bar_graph_flag = 5;
     }
     // motor driver a is parallel mode and motor driver b is in normal mode, so we can use IN1, IN2 pins
-    else if (read_motor_driver_mode(a) == 1 & read_motor_driver_mode(b) == 2)
+    else if (read_motor_driver_mode(a) == 1 && read_motor_driver_mode(b) == 2)
     {
         bit_mask = (1ULL<<BG_LED_1) | (1ULL<<BG_LED_2); 
         enabled_bar_graph_flag = 6;
     }
     // motor driver a is in normal mode and motor driver b is off, so we can use IN5 - IN8 pins
-    else if (read_motor_driver_mode(a) == 2 & read_motor_driver_mode(b) == 0)
+    else if (read_motor_driver_mode(a) == 2 && read_motor_driver_mode(b) == 0)
     {
         bit_mask = (1ULL<<BG_LED_5) | (1ULL<<BG_LED_6) | (1ULL<<BG_LED_7) | (1ULL<<BG_LED_8); 
         enabled_bar_graph_flag = 7;
     }
     // motor driver a is in normal mode and motor driver b is in parallel mode, so we can use IN5, IN6 pins
-    else if (read_motor_driver_mode(a) == 2 & read_motor_driver_mode(b) == 1)
+    else if (read_motor_driver_mode(a) == 2 && read_motor_driver_mode(b) == 1)
     {
         bit_mask = (1ULL<<BG_LED_5) | (1ULL<<BG_LED_6); 
         enabled_bar_graph_flag = 8;
