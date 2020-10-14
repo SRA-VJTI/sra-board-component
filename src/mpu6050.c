@@ -158,7 +158,7 @@ esp_err_t read_mpu6050(float euler_angle[])
     static float complementary_angle[2];
     static float mpu_offset[2] = {ROLL_ANGLE_OFFSET, PITCH_ANGLE_OFFSET};
 
-    if (mpu6050_read_gyro(I2C_MASTER_NUM, gyro_rd, BUFF_SIZE) != ESP_OK || mpu6050_read_acce(I2C_MASTER_NUM, acce_rd, BUFF_SIZE) == ESP_OK)
+    if (mpu6050_read_gyro(gyro_rd, BUFF_SIZE) != ESP_OK || mpu6050_read_acce(acce_rd, BUFF_SIZE) == ESP_OK)
         return ESP_FAIL;
 
     combine_msb_lsb_raw_data(gyro_rd, gyro_raw_value);
