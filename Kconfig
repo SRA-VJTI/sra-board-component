@@ -65,5 +65,3 @@ config SERVO_C_MAX_DEGREE
         sets the servo-C max degree
 
 endmenu
-
-endmenu

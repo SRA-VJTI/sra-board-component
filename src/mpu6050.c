@@ -3,7 +3,7 @@
 static const char *TAG_MPU = "mpu_6050";
 
 // Initialise the I2C bus and install driver to specified pins
-esp_err_t i2c_master_init()
+esp_err_t i2c_master_init(void)
 {
     int i2c_master_port = I2C_MASTER_NUM;
     i2c_config_t conf;
@@ -22,7 +22,7 @@ esp_err_t i2c_master_init()
 }
 
 // Initialise and power ON, MPU6050
-esp_err_t mpu6050_init(i2c_port_t i2c_num)
+esp_err_t enable_mpu6050(void)
 {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
@@ -30,24 +30,13 @@ esp_err_t mpu6050_init(i2c_port_t i2c_num)
     i2c_master_write_byte(cmd, 0x6B, ACK_CHECK_EN);
     i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
     i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
     i2c_cmd_link_delete(cmd);
     return ret;
 }
 
-// Wait till the MPU is initialized
-void start_mpu()
-{
-    while (mpu6050_init(I2C_MASTER_NUM) != ESP_OK)
-    {
-        ESP_LOGE(TAG_MPU, "MPU-6050 Initialisation Failed!");
-        vTaskDelay(250 / portTICK_RATE_MS);
-    }
-    ESP_LOGI(TAG_MPU, "MPU-6050 Initialised!");
-}
-
 // Read accelerometer values
-esp_err_t mpu6050_read_acce(i2c_port_t i2c_num, uint8_t *data_rd, size_t size)
+esp_err_t mpu6050_read_acce(uint8_t *data_rd, size_t size)
 {
     if (size == 0)
         return ESP_OK;
@@ -62,13 +51,13 @@ esp_err_t mpu6050_read_acce(i2c_port_t i2c_num, uint8_t *data_rd, size_t size)
 
     i2c_master_read_byte(cmd, data_rd + size - 1, NACK_VAL);
     i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
     i2c_cmd_link_delete(cmd);
     return ret;
 }
 
 // Read gyroscope values
-esp_err_t mpu6050_read_gyro(i2c_port_t i2c_num, uint8_t *data_rd, size_t size)
+esp_err_t mpu6050_read_gyro(uint8_t *data_rd, size_t size)
 {
     if (size == 0)
         return ESP_OK;
@@ -84,7 +73,7 @@ esp_err_t mpu6050_read_gyro(i2c_port_t i2c_num, uint8_t *data_rd, size_t size)
 
     i2c_master_read_byte(cmd, data_rd + size - 1, NACK_VAL);
     i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(i2c_num, cmd, 1000 / portTICK_RATE_MS);
+    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
     i2c_cmd_link_delete(cmd);
     return ret;
 }
@@ -115,14 +104,14 @@ void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro
     gx = gx / 131;
     gy = gy / 131;
     gz = gz / 131;
-    
+
     // More information on this transformation: https://philsal.co.uk/projects/imu-attitude-estimation
     gyro_angle[0] = prev_gyro_roll + dt * (gx + gy * sin(prev_gyro_roll) * tan(prev_gyro_pitch) + gz * cos(prev_gyro_roll) * tan(prev_gyro_pitch));
     gyro_angle[1] = prev_gyro_pitch + dt * (gy * cos(prev_gyro_roll) - gz * sin(prev_gyro_roll));
 }
 
 // Fuse the gyroscope and accelerometer angle in a complementary fashion
-void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float initial_acce_angle[])
+void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float mpu_offset[])
 {
     static bool is_initial_reading = true;
     static uint32_t timer;
@@ -138,7 +127,7 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
         compute_acce_angle(acce_raw_value[0], acce_raw_value[1], acce_raw_value[2]), acce_angle);
 
         for (i = 0; i < 2; i++)
-            complementary_angle[i] = acce_angle[i] - initial_acce_angle[i];
+            complementary_angle[i] = acce_angle[i] - mpu_offset[i];
 
         timer = esp_timer_get_time();
         return;
@@ -152,20 +141,22 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
 
     for (i = 0; i < 2; i++)
     {
-        acce_angle[i] = acce_angle[i] - initial_acce_angle[i];
+        acce_angle[i] = acce_angle[i] - mpu_offset[i];
         fusion_angle[i] = ALPHA * gyro_angle[i] + (1 - ALPHA) * acce_angle[i];
 
         // Lag filter
         complementary_angle[i] = ALPHA * fusion_angle[i] + (1 - ALPHA) * complementary_angle[i];
     }
-
-    return;
 }
 
 // Calculate roll and pitch angles of the MPU after applying the complementary filter
-esp_err_t compute_angle(uint8_t *acce_rd, uint8_t *gyro_rd, int16_t *acce_raw_value, int16_t *gyro_raw_value, float initial_acce_angle[], float *roll_angle, float *pitch_angle)
+esp_err_t read_mpu6050(float euler_angle[])
 {
+    static uint8_t acce_rd[BUFF_SIZE], gyro_rd[BUFF_SIZE];
+    static int16_t acce_raw_value[BUFF_SIZE / 2], gyro_raw_value[BUFF_SIZE / 2];
+
     static float complementary_angle[2];
+    static float mpu_offset[2] = {ROLL_ANGLE_OFFSET, PITCH_ANGLE_OFFSET};
 
     if (mpu6050_read_gyro(I2C_MASTER_NUM, gyro_rd, BUFF_SIZE) != ESP_OK || mpu6050_read_acce(I2C_MASTER_NUM, acce_rd, BUFF_SIZE) == ESP_OK)
         return ESP_FAIL;
@@ -173,10 +164,8 @@ esp_err_t compute_angle(uint8_t *acce_rd, uint8_t *gyro_rd, int16_t *acce_raw_va
     combine_msb_lsb_raw_data(gyro_rd, gyro_raw_value);
     combine_msb_lsb_raw_data(acce_rd, acce_raw_value);
 
-    complementary_filter(acce_raw_value, gyro_raw_value, complementary_angle, initial_acce_angle);
-
-    *roll_angle = complementary_angle[0];
-    *pitch_angle = complementary_angle[1];
+    complementary_filter(acce_raw_value, gyro_raw_value, complementary_angle, mpu_offset);
+    memcpy(euler_angle, complementary_angle, 2);
 
     return ESP_OK;
 }

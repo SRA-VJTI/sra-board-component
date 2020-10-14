@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 
+#include "sdkconfig.h"
 #include "esp_attr.h"
 #include "esp_log.h"
 #include "esp_err.h"
@@ -36,6 +37,8 @@
 #define ALPHA 0.9834
 #define RAD_TO_DEG 57.2957795
 #define BUFF_SIZE 6
+#define ROLL_ANGLE_OFFSET 0.0
+#define PITCH_ANGLE_OFFSET 0.0
 
 /**
  * @brief Initialise the ESP32 I2C Driver in Master Mode
@@ -47,43 +50,33 @@ esp_err_t i2c_master_init();
 /**
  * @brief Initialise MPU-6050 (by sending the appropriate queued commands); 
  * Refer this for more information: https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf
- * @param i2c_num I2C port number
+ * 
  * @return esp_err_t returns ESP_OK if MPU-6050 initialised successfully, else the appropriate error code
  * Refer this for more info on ESP32 I2C Error codes: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
  */
-esp_err_t mpu6050_init(i2c_port_t i2c_num);
-
-/**
- * @brief Wait for the MPU-6050 to initialise (Might be removed in future iterations)
- * 
- */
-void start_mpu();
+esp_err_t enable_mpu6050(void);
 
 /**
  * @brief Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array
  * Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other
- * 
- * @param i2c_num I2C port number
  * @param data_rd Buffer array for storing raw values
  * @param size Size of the buffer array (6 in our case)
  * @return esp_err_t returns ESP_OK if acceleromter read successfully, else the appropriate error code 
  */
-esp_err_t mpu6050_read_acce(i2c_port_t i2c_num, uint8_t *data_rd, size_t size);
+esp_err_t mpu6050_read_acce(uint8_t *data_rd, size_t size);
 
 /**
  * @brief Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array
  * Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other
- * 
- * @param i2c_num I2C port number
  * @param data_rd Buffer array for storing raw values
  * @param size Size of the buffer array (6 in our case)
  * @return esp_err_t returns ESP_OK if gyroscope read successfully, else the appropriate error code
  */
-esp_err_t mpu6050_read_gyro(i2c_port_t i2c_num, uint8_t *data_rd, size_t size);
+esp_err_t mpu6050_read_gyro(uint8_t *data_rd, size_t size);
 
 /**
  * @brief Combine two 8-bit values to a 16-bit one
- * Note that even indices in the input buffer represent the MSB (Byte)
+ * Note that EVEN indices in the input buffer represent the MSB (Byte)
  * 
  * @param buf_1 8-bit Input array of size 6
  * @param buf_2 16-bit Output array of size 3
@@ -108,7 +101,7 @@ void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float acce_angle[]);
  * @param gx Raw gyroscope value (X-axis)
  * @param gy Raw gyroscope value (Y-axis)
  * @param gz Raw gyroscope value (Z-axis)
- * @param dt Sampling time for gyroscope readings
+ * @param dt Sampling time for gyroscope readings (interval between 2 readings)
  * @param gyro_angle Resultant angle array
  */
 void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro_angle[]);
@@ -120,22 +113,15 @@ void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro
  * @param acce_raw_value Raw values from the accelerometer
  * @param gyro_raw_value Raw values from the gyroscope
  * @param complementary_angle Resultant fused and filtered angle
- * @param initial_acce_angle Offset of the accelerometer at rest position
+ * @param mpu_offset Offset of the MPU (accelerometer) at rest position
  */
-void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float initial_acce_angle);
+void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float mpu_offset[]);
 
 /**
  * @brief The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles
- * (This function will get more compact in future iterations)
- * @param acce_rd 8-bit Input array of size 6 (for accelerometer)
- * @param gyro_rd 8-bit Input array of size 6 (for gyroscope)
- * @param acce_raw_value 16-bit accelerometer raw values
- * @param gyro_raw_value 16-bit gyroscope raw values
- * @param initial_acce_angle Offset of the accelerometer at rest position
- * @param roll_angle Final Roll angle (about the X-axis)
- * @param pitch_angle Final Pitch angle (about the Y-axis)
+ * @param euler_angle Input array of angles to store the results in (passed by reference)
  * @return esp_err_t returns ESP_OK if angle is computed successfully, else ESP_FAIL
  */
-esp_err_t compute_angle(uint8_t *acce_rd, uint8_t *gyro_rd, int16_t *acce_raw_value, int16_t *gyro_raw_value, float initial_acce_angle, float *roll_angle, float *pitch_angle);
+esp_err_t read_mpu6050(float euler_angle[]);
 
 #endif
