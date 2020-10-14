@@ -1,3 +1,5 @@
+menu "SRA Board Component Config"
+
 menu "Servo motor configuration"
 
 menu "Servo A"
@@ -66,4 +68,12 @@ config SERVO_C_MAX_DEGREE
 
 endmenu
 
+endmenu
+
+config NUMBER_OF_SAMPLES
+    int "Number of samples for multisampling ADC values to use with LSA"
+    default 64
+    help
+        sets the number of ADC samples to average to use with LSA
+        
 endmenu

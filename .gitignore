@@ -1,4 +1,7 @@
 ### C ###
+# Build folder
+build/
+
 # Prerequisites
 *.d
 

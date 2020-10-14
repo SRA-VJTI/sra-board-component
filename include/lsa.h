@@ -1,6 +1,7 @@
 #ifndef LSA_H
 #define LSA_H
 
+#include "sdkconfig.h"
 #include "pin_defs.h"
 #include "adc.h"
 
