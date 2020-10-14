@@ -18,6 +18,11 @@
 #define MOTOR_BACKWARD 201
 #define MOTOR_STOP 202
 
+#define MOTOR_A_0 100
+#define MOTOR_A_1 101
+#define MOTOR_B_0 102
+#define MOTOR_B_1 103
+
 /**
  * @brief Enables Motor driver in Parallel or Normal Mode
  * 
