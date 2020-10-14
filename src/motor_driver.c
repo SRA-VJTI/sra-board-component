@@ -103,6 +103,11 @@ esp_err_t enable_motor_driver_a(int mode)
             return ESP_FAIL;
         }   
     }
+    else
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "invalid motor driver mode selected");
+        return ESP_FAIL;
+    }
 }
 
 esp_err_t enable_motor_driver_b(int mode)
@@ -204,6 +209,11 @@ esp_err_t enable_motor_driver_b(int mode)
             return ESP_FAIL;
         }   
     }
+    else
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "invalid motor driver mode selected");
+        return ESP_FAIL;
+    }
 }
 
 esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
@@ -282,6 +292,11 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
                 return ESP_FAIL;
             }
         }
+        else
+        {
+            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "motor driver A is disabled, call enable_motor_driver(a)");
+            return ESP_FAIL;
+        }        
     }
     else if ((motor_id == MOTOR_B_0 || motor_id == MOTOR_B_1) && read_motor_driver_mode(b) != 0)
     {
@@ -357,6 +372,11 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
                 ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
                 return ESP_FAIL;
             }
+        }
+        else
+        {
+            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "motor driver A is disabled, call enable_motor_driver(a)");
+            return ESP_FAIL;
         }
     }
     else
