@@ -124,7 +124,7 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
     if (is_initial_reading)
     {
         is_initial_reading = false;
-        compute_acce_angle(acce_raw_value[0], acce_raw_value[1], acce_raw_value[2]), acce_angle);
+        compute_acce_angle(acce_raw_value[0], acce_raw_value[1], acce_raw_value[2], acce_angle);
 
         for (i = 0; i < 2; i++)
             complementary_angle[i] = acce_angle[i] - mpu_offset[i];
@@ -158,7 +158,7 @@ esp_err_t read_mpu6050(float euler_angle[])
     static float complementary_angle[2];
     static float mpu_offset[2] = {ROLL_ANGLE_OFFSET, PITCH_ANGLE_OFFSET};
 
-    if (mpu6050_read_gyro(I2C_MASTER_NUM, gyro_rd, BUFF_SIZE) != ESP_OK || mpu6050_read_acce(I2C_MASTER_NUM, acce_rd, BUFF_SIZE) == ESP_OK)
+    if (mpu6050_read_gyro(gyro_rd, BUFF_SIZE) != ESP_OK || mpu6050_read_acce(acce_rd, BUFF_SIZE) == ESP_OK)
         return ESP_FAIL;
 
     combine_msb_lsb_raw_data(gyro_rd, gyro_raw_value);

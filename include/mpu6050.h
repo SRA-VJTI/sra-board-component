@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 
 #include "sdkconfig.h"
 #include "esp_attr.h"
