@@ -9,7 +9,7 @@ esp_err_t init_line_sensor(int* line_sensor_pins)
 }
 
 
-line_sensor_array read_line_sensor(int* line_sensor_pins)
+line_sensor_array read_line_sensor()
 {
     line_sensor_array line_sensor_readings;
     
