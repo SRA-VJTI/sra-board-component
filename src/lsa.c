@@ -13,7 +13,7 @@ line_sensor_array read_line_sensor()
 {
     line_sensor_array line_sensor_readings;
     
-    for (int i = 0; i < NUMBER_OF_SAMPLES; i++)
+    for (int i = 0; i < 4; i++)
     {
         line_sensor_readings.adc_reading[i] = 0;
     }
