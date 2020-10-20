@@ -28,7 +28,7 @@ typedef union line_sensor_array
 
  * @return esp_err_t i.e it shows if adc is initialised successfully or not
  **/
-esp_err_t init_line_sensor();
+esp_err_t enable_line_sensor();
 
 
 /**
