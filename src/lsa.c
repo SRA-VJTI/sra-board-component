@@ -2,7 +2,7 @@
 
 static const int line_sensor_pins[4] = {LSA_A0, LSA_A1, LSA_A2, LSA_A3};
 
-esp_err_t init_line_sensor(int* line_sensor_pins)
+esp_err_t enable_line_sensor()
 {
     esp_err_t err = enable_adc1(line_sensor_pins);
     return err;
