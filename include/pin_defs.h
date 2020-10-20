@@ -2,8 +2,10 @@
 #define PIN_DEFS_H
 
 //////// mpu //////
+#define MPU6050_INT 23
 #define MPU6050_SDA 22
-#define MPU6050_SCL 23
+#define MPU6050_SCL 21
+
 /////////////////////////////
 
 //////// bar graph //////////

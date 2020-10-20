@@ -15,19 +15,19 @@ esp_err_t config_adc1(int channel[])
 	{   
         if (channel[i] == LSA_A0)
         {
-            err_B = adc1_config_channel_atten(ADC_CHANNEL_7, ADC_ATTEN_DB_11);
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11);
         }
         else if (channel[i] == LSA_A1)
         {
-            err_B = adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11);
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11);
         }
         else if(channel[i] == LSA_A2)
         {
-            err_B = adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11);
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11);
         }
         else if (channel[i] == LSA_A3)
         {
-            err_B = adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11);
+            err_B = adc1_config_channel_atten(ADC_CHANNEL_7, ADC_ATTEN_DB_11);
         }
         else
         {
@@ -87,19 +87,19 @@ int read_adc(int adc_pin)
 {
     if (adc_pin == LSA_A0)
     {
-        return adc1_get_raw(ADC_CHANNEL_7);
+        return adc1_get_raw(ADC_CHANNEL_0);
     }
     else if (adc_pin == LSA_A1)
     {
-        return adc1_get_raw(ADC_CHANNEL_6);
+        return adc1_get_raw(ADC_CHANNEL_3);
     }
     else if(adc_pin == LSA_A2)
     {
-        return adc1_get_raw(ADC_CHANNEL_0);
+        return adc1_get_raw(ADC_CHANNEL_6);
     }
     else if (adc_pin == LSA_A3)
     {
-        return adc1_get_raw(ADC_CHANNEL_3);
+        return adc1_get_raw(ADC_CHANNEL_7);
     }
     else
     {
