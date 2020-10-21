@@ -224,18 +224,18 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
         {
             if (direction == MOTOR_FORWARD)
             {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, 0);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, duty_cycle);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, duty_cycle);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, 0);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
 
                 return ESP_OK; 
             }
             else if (direction == MOTOR_BACKWARD)
             {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, duty_cycle);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, 0);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, 0);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, duty_cycle);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
 
                 return ESP_OK; 
@@ -261,18 +261,18 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
 
             if (direction == MOTOR_FORWARD)
             {
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, 0);
+                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, duty_cycle);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, duty_cycle);
+                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, 0);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
              
                 return ESP_OK; 
             }
             else if (direction == MOTOR_BACKWARD)
             {
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, duty_cycle);
+                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, 0);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, 0);
+                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, duty_cycle);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
              
                 return ESP_OK; 
@@ -304,18 +304,18 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
         {
             if (direction == MOTOR_FORWARD)
             {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, 0);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, duty_cycle);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, duty_cycle);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, 0);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
              
                 return ESP_OK; 
             }
             else if (direction == MOTOR_BACKWARD)
             {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, duty_cycle);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, 0);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, 0);
+                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, duty_cycle);
                 mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
 
                 return ESP_OK; 
@@ -342,18 +342,18 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
 
             if (direction == MOTOR_FORWARD)
             {
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, 0);
+                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, duty_cycle);
                 mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, duty_cycle);
+                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, 0);
                 mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
              
                 return ESP_OK; 
             }
             else if (direction == MOTOR_BACKWARD)
             {
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, duty_cycle);
+                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, 0);
                 mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, 0);
+                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, duty_cycle);
                 mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
              
                 return ESP_OK; 
