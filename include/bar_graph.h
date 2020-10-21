@@ -2,6 +2,7 @@
 #define BAR_GRAPH_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 #include "freertos/FreeRTOS.h"
 #include "driver/gpio.h"
 
@@ -70,5 +71,13 @@ esp_err_t enable_bar_graph();
  * @return esp_err_t returns ESP_OK
  */
 esp_err_t set_bar_graph(uint8_t data);
+
+/**
+ * @brief converts a boolean array of size 8 into 8-bit unsigned integer
+ * 
+ * @param input_array boolean input array of size 8
+ * @return uint8_t returns a 8 bit number formed after combining the boolean array
+ */
+uint8_t bool_to_uint8(bool *input_array);
 
 #endif

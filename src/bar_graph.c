@@ -135,3 +135,10 @@ esp_err_t set_bar_graph(uint8_t data)
 
     return ESP_OK;
 }
+
+uint8_t bool_to_uint8(bool *input_array)
+{
+    uint8_t temp = (input_array[0] << 7) | (input_array[1] << 6) | (input_array[2] << 5) | (input_array[3] << 4) | (input_array[4] << 3) | (input_array[5] << 2) | (input_array[6] << 1) | input_array[7];
+
+    return temp;
+}
