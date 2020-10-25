@@ -9,5 +9,6 @@
 #include "mpu6050.h"
 #include "servo.h"
 #include "pin_defs.h"
+#include "helper_functions.h"
 
 #endif
