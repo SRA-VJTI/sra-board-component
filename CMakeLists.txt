@@ -1,4 +1,4 @@
-set(srcs "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c")
+set(srcs "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c" "src/helper_functions.c")
 
 idf_component_register(SRCS "${srcs}"
                        INCLUDE_DIRS "include"
