@@ -25,7 +25,7 @@
  * @return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  
  * 
  **/
-esp_err_t config_adc1(int channel[]);
+esp_err_t config_adc1(const int channel[]);
 
 /**
  * @brief Characterize ADC 1 using either Vref or Two Point
@@ -42,7 +42,7 @@ esp_err_t characterize_adc1();
  * @return esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG.  
  * 
  **/
-esp_err_t enable_adc1(int channel[]);
+esp_err_t enable_adc1(const int channel[]);
 
 /**
  * @brief Read raw adc value of given adc pin.

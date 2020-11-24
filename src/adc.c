@@ -3,7 +3,7 @@
 static const char* TAG_ADC= "adc";
 static esp_adc_cal_characteristics_t *adc_chars;
 
-esp_err_t config_adc1(int channel[])
+esp_err_t config_adc1(const int channel[])
 {   
     esp_err_t err_A; 
     esp_err_t err_B;
@@ -67,7 +67,7 @@ esp_err_t characterize_adc1()
     return ESP_OK;
 }
 
-esp_err_t enable_adc1(int channel[])
+esp_err_t enable_adc1(const int channel[])
 {
     esp_err_t err_C = config_adc1(channel);
     esp_err_t err_D = characterize_adc1();
