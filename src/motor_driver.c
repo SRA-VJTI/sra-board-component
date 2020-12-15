@@ -216,81 +216,55 @@ esp_err_t enable_motor_driver_b(int mode)
     }
 }
 
+esp_err_t set_motor_speed_helper(int direction, float duty_cycle, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num)
+{
+    if (direction == MOTOR_FORWARD)
+    {
+        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
+        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
+        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, 0);
+        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
+
+        return ESP_OK; 
+    }
+    else if (direction == MOTOR_BACKWARD)
+    {
+        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, 0);
+        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
+        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, duty_cycle);
+        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
+
+        return ESP_OK; 
+    }
+    else if (direction == MOTOR_STOP)
+    {
+        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, 0);
+        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
+        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, 0);
+        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
+        
+        return ESP_OK; 
+    }
+    else
+    {
+        ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
+        return ESP_FAIL;
+    }
+}
+
 esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
 {
     if((motor_id == MOTOR_A_0 || motor_id == MOTOR_A_1) && read_motor_driver_mode(a) != 0)
     {
         if (read_motor_driver_mode(a) == PARALLEL_MODE)
         {
-            if (direction == MOTOR_FORWARD)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, duty_cycle);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_BACKWARD)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, duty_cycle);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_STOP)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-             
-                return ESP_OK; 
-            }
-            else
-            {
-                ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
-                return ESP_FAIL;
-            }
+            return set_motor_speed_helper(direction, duty_cycle, MCPWM_UNIT_1, MCPWM_TIMER_0);
         }
         else if (read_motor_driver_mode(a) == NORMAL_MODE)
         {
             mcpwm_timer_t timer_val = motor_id == MOTOR_A_0 ? MCPWM_TIMER_0 : MCPWM_TIMER_1;
-
-            if (direction == MOTOR_FORWARD)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, duty_cycle);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-             
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_BACKWARD)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, duty_cycle);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-             
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_STOP)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, timer_val, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-             
-                return ESP_OK; 
-            }
-            else
-            {
-                ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
-                return ESP_FAIL;
-            }
+            
+            return set_motor_speed_helper(direction, duty_cycle, MCPWM_UNIT_1, timer_val);
         }
         else
         {
@@ -302,76 +276,13 @@ esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
     {
         if (read_motor_driver_mode(b) == PARALLEL_MODE)
         {
-            if (direction == MOTOR_FORWARD)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, duty_cycle);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-             
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_BACKWARD)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, duty_cycle);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_STOP)
-            {
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(MCPWM_UNIT_1, MCPWM_TIMER_1, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-             
-                return ESP_OK; 
-            }
-            else
-            {
-                ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
-                return ESP_FAIL;
-            }
-            
+            return set_motor_speed_helper(direction, duty_cycle, MCPWM_UNIT_1, MCPWM_TIMER_1);
         }
         else if (read_motor_driver_mode(b) == NORMAL_MODE)
         {
             mcpwm_unit_t unit_val = motor_id == MOTOR_B_0 ? MCPWM_UNIT_1 : MCPWM_UNIT_0;
 
-            if (direction == MOTOR_FORWARD)
-            {
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, duty_cycle);
-                mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, MCPWM_DUTY_MODE_0); 
-             
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_BACKWARD)
-            {
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, duty_cycle);
-                mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-             
-                return ESP_OK; 
-            }
-            else if (direction == MOTOR_STOP)
-            {
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, 0);
-                mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_A, MCPWM_DUTY_MODE_0); 
-                mcpwm_set_duty(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, 0);
-                mcpwm_set_duty_type(unit_val, MCPWM_TIMER_2, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-             
-                return ESP_OK; 
-            }
-            else
-            {
-                ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
-                return ESP_FAIL;
-            }
+            return set_motor_speed_helper(direction, duty_cycle, unit_val, MCPWM_TIMER_2);
         }
         else
         {
