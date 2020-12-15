@@ -29,7 +29,7 @@
  * @param id for id=a, enables motor driver a and for id=b, enables motor driver b
  * @param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
  */
-#define enable_motor_driver(id, mode) enable_motor_driver_##id(mode) 
+#define enable_motor_driver(id, mode) enable_motor_driver_##id(mode)
 
 /**
  * @brief Reads mode of motor driver 
@@ -54,6 +54,17 @@ esp_err_t enable_motor_driver_a(int mode);
  * @return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
  */
 esp_err_t enable_motor_driver_b(int mode);
+
+/**
+ * @brief Helper function for set_motor_speed function
+ * 
+ * @param direction direction of motor
+ * @param duty_cycle sets the duty cycle
+ * @param mcpwm_num MCPWM unit number
+ * @param timer_num timer unit number
+ * @return esp_err_t return ESP_OK if everything ok, else ESP_FAIL
+ */
+esp_err_t set_motor_speed_helper(int direction, float duty_cycle, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num);
 
 /**
  * @brief Set the speed of motors
