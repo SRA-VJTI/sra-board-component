@@ -1,0 +1,31 @@
+name: Test SRA Board component
+on: [push, pull_request]
+
+jobs:
+  build-test:
+    name: Test Build of component
+    runs-on: ubuntu-latest
+    container:
+      image: espressif/idf:release-v4.1
+    steps:  
+      - uses: actions/checkout@v2
+        with:
+          repository: SRA-VJTI/sra-board-examples
+          submodules: true
+      - name: Update submodules
+        run: |
+          cd components/sra-board-component
+          git pull
+          git status
+      - name: Test Bar Graph
+        run: ls
+      - name: Test LSA
+        run: ls
+      - name: Test Motor Driver
+        run: ls
+      - name: Test MPU6050
+        run: ls
+      - name: Test Servos
+        run: ls
+      - name: Test Switches
+        run: ls
