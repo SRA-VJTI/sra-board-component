@@ -16,28 +16,31 @@ jobs:
           path: components/
       - name: Test Bar Graph
         run: |
-          uname -a
-          echo $IDF_PATH
           . $IDF_PATH/export.sh
           cd bar_graph
           idf.py build
       - name: Test LSA
         run: |
+          . $IDF_PATH/export.sh
           cd lsa
           idf.py build
       - name: Test Motor Driver
         run: |
+          . $IDF_PATH/export.sh
           cd motor_driver
           idf.py build
       - name: Test MPU6050
         run: |
+          . $IDF_PATH/export.sh
           cd mpu6050
           idf.py build
       - name: Test Servos
         run: |
+          . $IDF_PATH/export.sh
           cd servos
           idf.py build
       - name: Test Switches
         run: |
+          . $IDF_PATH/export.sh
           cd switches
           idf.py build
