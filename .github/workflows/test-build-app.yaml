@@ -1,4 +1,4 @@
-name: Test SRA Board component
+name: SRA Board component
 on: [push, pull_request]
 
 jobs:
