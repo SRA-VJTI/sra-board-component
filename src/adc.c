@@ -51,7 +51,7 @@ esp_err_t characterize_adc1()
 esp_err_t enable_adc1()
 {
     CHECK(config_adc1());
-    CHECK((characterize_adc1());
+    CHECK(characterize_adc1());
     
     ESP_LOGI(TAG_ADC, "Configured and Characterized adc 1");
     

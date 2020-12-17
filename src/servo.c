@@ -14,9 +14,9 @@ static int enabled_servo_flag = 0;
 esp_err_t enable_servo()
 {
     esp_err_t err;
-    CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, SERVO_A), "error: servo A: %s", esp_err_to_name(err));
-    CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, SERVO_B), "error: servo B: %s", esp_err_to_name(err));
-    CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, SERVO_C), "error: servo C: %s", esp_err_to_name(err));
+    CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, SERVO_A), TAG_SERVO, "error: servo A: %s", esp_err_to_name(err));
+    CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, SERVO_B), TAG_SERVO, "error: servo B: %s", esp_err_to_name(err));
+    CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, SERVO_C), TAG_SERVO, "error: servo C: %s", esp_err_to_name(err));
 
     mcpwm_config_t pwm_config;
     // sets the pwm frequency = 50
