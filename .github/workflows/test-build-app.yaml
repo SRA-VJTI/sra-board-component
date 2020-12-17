@@ -8,24 +8,36 @@ jobs:
     container:
       image: espressif/idf:release-v4.1
     steps:  
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 
         with:
           repository: SRA-VJTI/sra-board-examples
-          submodules: true
-      - name: Update submodules
-        run: |
-          cd components/sra-board-component
-          git pull
-          git status
+      - uses: actions/checkout@v2
+        with:
+          path: components/
       - name: Test Bar Graph
-        run: ls
+        run: |
+          uname -a
+          echo $IDF_PATH
+          . $IDF_PATH/export.sh
+          cd bar_graph
+          idf.py build
       - name: Test LSA
-        run: ls
+        run: |
+          cd lsa
+          idf.py build
       - name: Test Motor Driver
-        run: ls
+        run: |
+          cd motor_driver
+          idf.py build
       - name: Test MPU6050
-        run: ls
+        run: |
+          cd mpu6050
+          idf.py build
       - name: Test Servos
-        run: ls
+        run: |
+          cd servos
+          idf.py build
       - name: Test Switches
-        run: ls
+        run: |
+          cd switches
+          idf.py build
