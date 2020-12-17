@@ -1,5 +1,13 @@
 #include "motor_driver.h"
 
+#define CHECK(x) do { esp_err_t __; if ((__ = x) != ESP_OK) return __; } while (0)
+#define CHECK_LOGE(err, x, tag, msg, ...) do { \
+        if ((err = x) != ESP_OK) { \
+            ESP_LOGE(tag, msg, ## __VA_ARGS__); \
+            return err; \
+        } \
+    } while (0)
+
 static const char* TAG_MOTOR_DRIVER = "motor_driver";
 static int mode_motor_driver_a = 0; 
 static int mode_motor_driver_b = 0;
@@ -10,45 +18,15 @@ esp_err_t enable_motor_driver_a(int mode)
 
     if(mode == PARALLEL_MODE)  
     {
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_PARALLEL_IN_1_2);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, MDA_PARALLEL_IN_3_4);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_PARALLEL_IN_1_2), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, MDA_PARALLEL_IN_3_4), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
     }
     else if(mode == NORMAL_MODE)   
     {
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_NORMAL_IN_1);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, MDA_NORMAL_IN_2);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MDA_NORMAL_IN_3);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        } 
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, MDA_NORMAL_IN_4);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_NORMAL_IN_1), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, MDA_NORMAL_IN_2), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MDA_NORMAL_IN_3), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, MDA_NORMAL_IN_4), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
     }
     else
     {
@@ -116,45 +94,15 @@ esp_err_t enable_motor_driver_b(int mode)
 
     if(mode == PARALLEL_MODE)  
     {
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MDB_PARALLEL_IN_5_7);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, MDB_PARALLEL_IN_6_8);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MDB_PARALLEL_IN_5_7), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, MDB_PARALLEL_IN_6_8), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
     }
     else if(mode == NORMAL_MODE)   
     {
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM2A, MDB_NORMAL_IN_5);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM2B, MDB_NORMAL_IN_6);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, MDB_NORMAL_IN_7);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
-        err = mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2B, MDB_NORMAL_IN_8);
-        if (err != ESP_OK)
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-            return err;    
-        }
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM2A, MDB_NORMAL_IN_5), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM2B, MDB_NORMAL_IN_6), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, MDB_NORMAL_IN_7), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
+        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2B, MDB_NORMAL_IN_8), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
     }
     else
     {
