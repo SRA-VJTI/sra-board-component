@@ -9,7 +9,6 @@
     } while (0)
 
 static const char* TAG_ADC= "adc";
-static esp_adc_cal_characteristics_t adc_chars;
 
 esp_err_t config_adc1()
 {   
@@ -29,6 +28,7 @@ esp_err_t config_adc1()
 
 esp_err_t characterize_adc1()
 {
+    esp_adc_cal_characteristics_t adc_chars;
     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, DEFAULT_VREF, &adc_chars);
        
     if (val_type == ESP_ADC_CAL_VAL_EFUSE_TP) 
