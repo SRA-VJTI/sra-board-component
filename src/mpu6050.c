@@ -24,6 +24,8 @@ esp_err_t i2c_master_init(void)
 // Initialise and power ON, MPU6050
 esp_err_t enable_mpu6050(void)
 {
+    CHECK(i2c_master_init());
+    
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
     i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -89,14 +91,14 @@ void combine_msb_lsb_raw_data(uint8_t *buf_1, int16_t *buf_2)
 // Notations in the following functions: Index 0 - Roll angle; Index 1 - Pitch angle
 
 // Compute the accelerometer angle using the raw data
-void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float acce_angle[])
+void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float *acce_angle)
 {
     acce_angle[0] = atan2(ay, sqrt(pow(ax, 2) + pow(az, 2))) * RAD_TO_DEG;
     acce_angle[1] = atan2(-ax, sqrt(pow(ay, 2) + pow(az, 2))) * RAD_TO_DEG;
 }
 
 // Compute the gyroscope angle using the raw data
-void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro_angle[])
+void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float *gyro_angle)
 {
     // (1 / 131) sensitivity factor of Gyroscope: 1 degree rotation gives a reading of 131 units
     gx = gx / 131;
@@ -107,21 +109,36 @@ void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro
     gyro_angle[1] = gy * dt;
 
     /*
-        In cases the roll angle varies widely when only the pitch angle changes, activate the following equations.
+        In case the roll angle varies widely when only the pitch angle changes, activate the following equations.
         gyro_angle[0] = dt * (gx + gy * sin(gyro_angle[0]) * tan(gyro_angle[1]) + gz * cos(gyro_angle[0]) * tan(gyro_angle[1]));
         gyro_angle[1] = dt * (gy * cos(gyro_angle[0]) - gz * sin(gyro_angle[0]));
     */
 }
 
+
+esp_err_t read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value)
+{
+    esp_err_t err = ESP_FAIL;
+    uint8_t acce_rd[BUFF_SIZE], gyro_rd[BUFF_SIZE];
+
+    if (mpu6050_read_acce(acce_rd, BUFF_SIZE) == ESP_OK && mpu6050_read_gyro(gyro_rd, BUFF_SIZE) == ESP_OK)
+        err = ESP_OK;
+
+    combine_msb_lsb_raw_data(acce_rd, acce_raw_value);
+    combine_msb_lsb_raw_data(gyro_rd, gyro_raw_value);
+
+    return err;
+}
+
 // Fuse the gyroscope and accelerometer angle in a complementary fashion
-void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float mpu_offset[])
+void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float *complementary_angle, float *mpu_offset)
 {
     static bool is_initial_reading = true;
     static uint32_t timer;
-    static float dt;
 
-    static float acce_angle[2], gyro_angle[2];
-    static float fusion_angle[2];
+    float acce_angle[2], gyro_angle[2];
+    float dt;
+    
     int i = 0;
 
     if (is_initial_reading)
@@ -150,27 +167,20 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
 }
 
 // Calculate roll and pitch angles of the MPU after applying the complementary filter
-esp_err_t read_mpu6050(float euler_angle[])
+esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
 {
-    static uint8_t acce_rd[BUFF_SIZE], gyro_rd[BUFF_SIZE];
-    static int16_t acce_raw_value[BUFF_SIZE / 2], gyro_raw_value[BUFF_SIZE / 2];
-
+    esp_err_t err = ESP_OK;
+    int16_t acce_raw_value[BUFF_SIZE / 2], gyro_raw_value[BUFF_SIZE / 2];
     static float complementary_angle[2];
-    static float mpu_offset[2] = {ROLL_ANGLE_OFFSET, PITCH_ANGLE_OFFSET};
 
-    if (mpu6050_read_acce(acce_rd, BUFF_SIZE) != ESP_OK || mpu6050_read_gyro(gyro_rd, BUFF_SIZE) != ESP_OK)
+    if (read_mpu6050_raw(acce_raw_value, gyro_raw_value) != ESP_OK)
     {
-        ESP_LOGE(TAG_MPU, "Failed to read MPU!");
-        return ESP_FAIL;
+        ESP_LOGE(TAG_MPU, "%s", "Failed to read MPU!");
+        err = ESP_FAIL;
     }
-
-    combine_msb_lsb_raw_data(gyro_rd, gyro_raw_value);
-    combine_msb_lsb_raw_data(acce_rd, acce_raw_value);
-
-    // ESP_LOGD(TAG_MPU, "%d, %d, %d, %d, %d, %d", acce_raw_value[0], acce_raw_value[1], acce_raw_value[2], gyro_raw_value[0], gyro_raw_value[1], gyro_raw_value[2]);
 
     complementary_filter(acce_raw_value, gyro_raw_value, complementary_angle, mpu_offset);
     memcpy(euler_angle, complementary_angle, 2 * sizeof(float));
 
-    return ESP_OK;
+    return err;
 }

@@ -20,7 +20,7 @@
 
 #define I2C_MASTER_SCL_IO MPU6050_SCL /*!< gpio number for I2C master clock */
 #define I2C_MASTER_SDA_IO MPU6050_SDA /*!< gpio number for I2C master data  */
-#define I2C_MASTER_NUM I2C_NUM_1      /*!< I2C port number for master dev */
+#define I2C_MASTER_NUM I2C_NUM_1     /*!< I2C port number for master dev */
 #define I2C_MASTER_TX_BUF_DISABLE 0   /*!< I2C master do not need buffer */
 #define I2C_MASTER_RX_BUF_DISABLE 0   /*!< I2C master do not need buffer */
 #define I2C_MASTER_FREQ_HZ 100000     /*!< I2C master clock frequency */
@@ -39,8 +39,7 @@
 #define ALPHA 0.9834
 #define RAD_TO_DEG 57.2957795
 #define BUFF_SIZE 6
-#define ROLL_ANGLE_OFFSET 0.0
-#define PITCH_ANGLE_OFFSET 0.0
+
 
 /**
  * @brief Initialise the ESP32 I2C Driver in Master Mode
@@ -94,7 +93,7 @@ void combine_msb_lsb_raw_data(uint8_t *buf_1, int16_t *buf_2);
  * @param az Raw accelerometer value (Z-axis)
  * @param acce_angle Resultant angle array 
  */
-void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float acce_angle[]);
+void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float *acce_angle);
 
 /**
  * @brief Compute the Euler angle (Pitch and Roll) from the gyroscope raw values
@@ -106,24 +105,35 @@ void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float acce_angle[]);
  * @param dt Sampling time for gyroscope readings (interval between 2 readings)
  * @param gyro_angle Resultant angle array
  */
-void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float gyro_angle[]);
+void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float *gyro_angle);
+
+/**
+ * @brief A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form 
+ * i.e. 16-bit
+ * 
+ * @param acce_raw_value 16-bit array for storing the accelerometer raw values
+ * @param gyro_raw_value 16-bit array for storing the gyroscope raw values
+ * @return esp_err_t returns ESP_OK if successful, else the appropriate error code
+ */
+esp_err_t read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value);
 
 /**
  * @brief Fuse the gyroscope and accelerometer angle in a complementary fashion
- * This also includes a lag filter, for further filtering the fused angle.
  * More on this here: https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues
  * @param acce_raw_value Raw values from the accelerometer
  * @param gyro_raw_value Raw values from the gyroscope
  * @param complementary_angle Resultant fused and filtered angle
  * @param mpu_offset Offset of the MPU (accelerometer) at rest position
  */
-void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float complementary_angle[], float mpu_offset[]);
+void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float *complementary_angle, float *mpu_offset);
 
 /**
  * @brief The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles
+ * 
  * @param euler_angle Input array of angles to store the results in (passed by reference)
- * @return esp_err_t returns ESP_OK if angle is computed successfully, else ESP_FAIL
+ * @param mpu_offset Initial conditions for the accelerometer and gyroscope (Angle at rest position)
+ * @return esp_err_t returns ESP_OK if successful, else the appropriate error code
  */
-esp_err_t read_mpu6050(float euler_angle[]);
+esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset);
 
 #endif

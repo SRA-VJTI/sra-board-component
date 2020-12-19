@@ -1,5 +1,5 @@
-#ifndef HELPER_FUNCTIONS_H
-#define HELPER_FUNCTIONS_H
+#ifndef _UTILS_H
+#define _UTILS_H
 
 /**
  * @brief Bound a value in a range [min, max]
