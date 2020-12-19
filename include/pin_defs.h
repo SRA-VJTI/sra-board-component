@@ -1,6 +1,14 @@
 #ifndef PIN_DEFS_H
 #define PIN_DEFS_H
 
+#define CHECK(x) do { esp_err_t __; if ((__ = x) != ESP_OK) return __; } while (0)
+#define CHECK_LOGE(err, x, tag, msg, ...) do { \
+        if ((err = x) != ESP_OK) { \
+            ESP_LOGE(tag, msg, ## __VA_ARGS__); \
+            return err; \
+        } \
+    } while (0)
+
 //////// mpu //////
 #define MPU6050_INT 23
 #define MPU6050_SDA 22
