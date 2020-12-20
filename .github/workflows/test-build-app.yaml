@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: espressif/idf:release-v4.1
+    strategy:
+      matrix:
+        test-apps: [bar_graph, lsa, motor_driver, mpu6050, servos, switches]
     steps:  
       - uses: actions/checkout@v2 
         with:
@@ -14,33 +17,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: components/
-      - name: Test Bar Graph
+      - name: Test ${{ matrix.test-apps }}
         run: |
           . $IDF_PATH/export.sh
-          cd bar_graph
-          idf.py build
-      - name: Test LSA
-        run: |
-          . $IDF_PATH/export.sh
-          cd lsa
-          idf.py build
-      - name: Test Motor Driver
-        run: |
-          . $IDF_PATH/export.sh
-          cd motor_driver
-          idf.py build
-      - name: Test MPU6050
-        run: |
-          . $IDF_PATH/export.sh
-          cd mpu6050
-          idf.py build
-      - name: Test Servos
-        run: |
-          . $IDF_PATH/export.sh
-          cd servos
-          idf.py build
-      - name: Test Switches
-        run: |
-          . $IDF_PATH/export.sh
-          cd switches
+          cd ${{ matrix.test-apps }}
           idf.py build
