@@ -49,7 +49,7 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
             degree_of_rotation = degree_of_rotation > SERVO_A_MAX_DEGREE ? SERVO_A_MAX_DEGREE : degree_of_rotation;
 
             uint32_t cal_pulsewidth = 0;
-            cal_pulsewidth = (SERVO_A_MIN_PULSEWIDTH + (((SERVO_A_MAX_PULSEWIDTH - SERVO_A_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_A_MAX_DEGREE)));
+            cal_pulsewidth = (SERVO_A_MIN_PULSEWIDTH + 2 * (((SERVO_A_MAX_PULSEWIDTH - SERVO_A_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_A_MAX_DEGREE)));
 
             esp_err_t err_A = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, cal_pulsewidth);
             if (err_A == ESP_OK)
@@ -68,7 +68,7 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
             degree_of_rotation = degree_of_rotation > SERVO_B_MAX_DEGREE ? SERVO_B_MAX_DEGREE : degree_of_rotation;
 
             uint32_t cal_pulsewidth = 0;
-            cal_pulsewidth = (SERVO_B_MIN_PULSEWIDTH + (((SERVO_B_MAX_PULSEWIDTH - SERVO_B_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_B_MAX_DEGREE)));
+            cal_pulsewidth = (SERVO_B_MIN_PULSEWIDTH + 2 * (((SERVO_B_MAX_PULSEWIDTH - SERVO_B_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_B_MAX_DEGREE)));
 
             esp_err_t err_B = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, cal_pulsewidth);
             if (err_B == ESP_OK)
@@ -87,7 +87,7 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
             degree_of_rotation = degree_of_rotation > SERVO_C_MAX_DEGREE ? SERVO_C_MAX_DEGREE : degree_of_rotation;
 
             uint32_t cal_pulsewidth = 0;
-            cal_pulsewidth = (SERVO_C_MIN_PULSEWIDTH + (((SERVO_C_MAX_PULSEWIDTH - SERVO_C_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_C_MAX_DEGREE)));
+            cal_pulsewidth = (SERVO_C_MIN_PULSEWIDTH + 2 * (((SERVO_C_MAX_PULSEWIDTH - SERVO_C_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_C_MAX_DEGREE)));
 
             esp_err_t err_C = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, cal_pulsewidth);
             if (err_C == ESP_OK)
