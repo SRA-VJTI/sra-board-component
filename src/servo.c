@@ -1,7 +1,8 @@
 #include "servo.h"
 
-static const char* TAG_SERVO = "servo";
+static const char *TAG_SERVO = "servo";
 static int enabled_servo_flag = 0;
+#define STR(A) #A
 
 esp_err_t enable_servo()
 {
@@ -13,7 +14,7 @@ esp_err_t enable_servo()
     mcpwm_config_t pwm_config;
     // sets the pwm frequency = 50
     pwm_config.frequency = 50;
-    // sets the initial duty cycle of PWMxA = 0    
+    // sets the initial duty cycle of PWMxA = 0
     pwm_config.cmpr_a = 0;
     // sets the initial duty cycle of PWMxB = 0
     pwm_config.cmpr_b = 0;
@@ -40,67 +41,42 @@ esp_err_t enable_servo()
     }
 }
 
+static esp_err_t set_angle_servo_helper(char *servo_name, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, unsigned int degree_of_rotation, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num, mcpwm_generator_t gen)
+{
+    degree_of_rotation = degree_of_rotation > servo_max ? servo_max : degree_of_rotation;
+
+    uint32_t cal_pulsewidth = 0;
+    cal_pulsewidth = (servo_min_pulsewidth + 2 * (((servo_max_pulsewidth - servo_min_pulsewidth) * (degree_of_rotation)) / (servo_max)));
+
+    esp_err_t err = mcpwm_set_duty_in_us(mcpwm_num, timer_num, gen, cal_pulsewidth);
+    if (err == ESP_OK)
+    {
+        ESP_LOGI(TAG_SERVO, "set %s: %ud", servo_name, degree_of_rotation);
+    }
+    else
+    {
+        ESP_LOGE(TAG_SERVO, "error: %s: %s", servo_name, esp_err_to_name(err));
+    }
+
+    return err;
+}
+
 esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
 {
     if (enabled_servo_flag)
     {
         if (servo_id == SERVO_A)
         {
-            degree_of_rotation = degree_of_rotation > SERVO_A_MAX_DEGREE ? SERVO_A_MAX_DEGREE : degree_of_rotation;
-
-            uint32_t cal_pulsewidth = 0;
-            cal_pulsewidth = (SERVO_A_MIN_PULSEWIDTH + 2 * (((SERVO_A_MAX_PULSEWIDTH - SERVO_A_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_A_MAX_DEGREE)));
-
-            esp_err_t err_A = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, cal_pulsewidth);
-            if (err_A == ESP_OK)
-            {
-                ESP_LOGI(TAG_SERVO, "set servo A: %ud", degree_of_rotation);
-            }
-            else
-            {
-                ESP_LOGE(TAG_SERVO, "error: servo A: %s", esp_err_to_name(err_A));
-            }           
-
-            return err_A;
+            return set_angle_servo_helper(STR(SERVO_A), SERVO_A_MAX_DEGREE, SERVO_A_MIN_PULSEWIDTH, SERVO_A_MAX_PULSEWIDTH, degree_of_rotation, MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A);
         }
         else if (servo_id == SERVO_B)
         {
-            degree_of_rotation = degree_of_rotation > SERVO_B_MAX_DEGREE ? SERVO_B_MAX_DEGREE : degree_of_rotation;
-
-            uint32_t cal_pulsewidth = 0;
-            cal_pulsewidth = (SERVO_B_MIN_PULSEWIDTH + 2 * (((SERVO_B_MAX_PULSEWIDTH - SERVO_B_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_B_MAX_DEGREE)));
-
-            esp_err_t err_B = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, cal_pulsewidth);
-            if (err_B == ESP_OK)
-            {
-                ESP_LOGI(TAG_SERVO, "set servo B: %ud", degree_of_rotation);
-            }
-            else
-            {
-                ESP_LOGE(TAG_SERVO, "error: servo B: %s", esp_err_to_name(err_B));
-            }           
-
-            return err_B;
-        }    
+            return set_angle_servo_helper(STR(SERVO_B), SERVO_B_MAX_DEGREE, SERVO_B_MIN_PULSEWIDTH, SERVO_B_MAX_PULSEWIDTH, degree_of_rotation, MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B);
+        }
         else if (servo_id == SERVO_C)
         {
-            degree_of_rotation = degree_of_rotation > SERVO_C_MAX_DEGREE ? SERVO_C_MAX_DEGREE : degree_of_rotation;
-
-            uint32_t cal_pulsewidth = 0;
-            cal_pulsewidth = (SERVO_C_MIN_PULSEWIDTH + 2 * (((SERVO_C_MAX_PULSEWIDTH - SERVO_C_MIN_PULSEWIDTH) * (degree_of_rotation)) / (SERVO_C_MAX_DEGREE)));
-
-            esp_err_t err_C = mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A, cal_pulsewidth);
-            if (err_C == ESP_OK)
-            {
-                ESP_LOGI(TAG_SERVO, "set servo C: %ud", degree_of_rotation);
-            }
-            else
-            {
-                ESP_LOGE(TAG_SERVO, "error: servo C: %s", esp_err_to_name(err_C));
-            }           
-
-            return err_C;
-        }    
+            return set_angle_servo_helper(STR(SERVO_C), SERVO_C_MAX_DEGREE, SERVO_C_MIN_PULSEWIDTH, SERVO_C_MAX_PULSEWIDTH, degree_of_rotation, MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A);
+        }
         else
         {
             ESP_LOGE(TAG_SERVO, "error: incorrect servo pin passed to function");
@@ -111,5 +87,5 @@ esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
     {
         ESP_LOGE(TAG_SERVO, "error: servos not enabled, call enable_servo() before using servos");
         return ESP_FAIL;
-    }   
+    }
 }

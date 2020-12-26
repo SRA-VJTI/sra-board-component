@@ -156,7 +156,7 @@ esp_err_t enable_motor_driver_b(int mode)
     }
 }
 
-esp_err_t set_motor_speed_helper(int direction, float duty_cycle, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num)
+static esp_err_t set_motor_speed_helper(int direction, float duty_cycle, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num)
 {
     if (direction == MOTOR_FORWARD)
     {
