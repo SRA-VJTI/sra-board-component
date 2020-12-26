@@ -56,17 +56,6 @@ esp_err_t enable_motor_driver_a(int mode);
 esp_err_t enable_motor_driver_b(int mode);
 
 /**
- * @brief Helper function for set_motor_speed function
- * 
- * @param direction direction of motor
- * @param duty_cycle sets the duty cycle
- * @param mcpwm_num MCPWM unit number
- * @param timer_num timer unit number
- * @return esp_err_t return ESP_OK if everything ok, else ESP_FAIL
- */
-esp_err_t set_motor_speed_helper(int direction, float duty_cycle, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num);
-
-/**
  * @brief Set the speed of motors
  * 
  * @param motor_id set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction
