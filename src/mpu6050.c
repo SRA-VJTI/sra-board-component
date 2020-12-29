@@ -25,7 +25,7 @@ esp_err_t i2c_master_init(void)
 esp_err_t enable_mpu6050(void)
 {
     CHECK(i2c_master_init());
-    
+
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
     i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
@@ -115,7 +115,6 @@ void compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float *gyr
     */
 }
 
-
 esp_err_t read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value)
 {
     esp_err_t err = ESP_FAIL;
@@ -138,7 +137,7 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
 
     float acce_angle[2], gyro_angle[2];
     float dt;
-    
+
     int i = 0;
 
     if (is_initial_reading)

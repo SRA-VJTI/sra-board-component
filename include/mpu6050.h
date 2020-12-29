@@ -20,7 +20,7 @@
 
 #define I2C_MASTER_SCL_IO MPU6050_SCL /*!< gpio number for I2C master clock */
 #define I2C_MASTER_SDA_IO MPU6050_SDA /*!< gpio number for I2C master data  */
-#define I2C_MASTER_NUM I2C_NUM_1     /*!< I2C port number for master dev */
+#define I2C_MASTER_NUM I2C_NUM_1      /*!< I2C port number for master dev */
 #define I2C_MASTER_TX_BUF_DISABLE 0   /*!< I2C master do not need buffer */
 #define I2C_MASTER_RX_BUF_DISABLE 0   /*!< I2C master do not need buffer */
 #define I2C_MASTER_FREQ_HZ 100000     /*!< I2C master clock frequency */
@@ -39,7 +39,6 @@
 #define ALPHA 0.9834
 #define RAD_TO_DEG 57.2957795
 #define BUFF_SIZE 6
-
 
 /**
  * @brief Initialise the ESP32 I2C Driver in Master Mode

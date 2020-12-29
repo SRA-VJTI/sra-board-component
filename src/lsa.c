@@ -8,28 +8,27 @@ esp_err_t enable_line_sensor()
     return err;
 }
 
-
 line_sensor_array read_line_sensor()
 {
     line_sensor_array line_sensor_readings;
-    
+
     for (int i = 0; i < 4; i++)
     {
         line_sensor_readings.adc_reading[i] = 0;
     }
-    
-    for(int i = 0; i < NUMBER_OF_SAMPLES; i++)
+
+    for (int i = 0; i < NUMBER_OF_SAMPLES; i++)
     {
-        for(int j = 0; j < 4; j++)
+        for (int j = 0; j < 4; j++)
         {
             line_sensor_readings.adc_reading[j] = line_sensor_readings.adc_reading[j] + read_adc(line_sensor_pins[j]);
         }
     }
 
-    for(int i = 0; i < 4; i++)
+    for (int i = 0; i < 4; i++)
     {
         line_sensor_readings.adc_reading[i] = line_sensor_readings.adc_reading[i] / NUMBER_OF_SAMPLES;
     }
-    
+
     return line_sensor_readings;
 }

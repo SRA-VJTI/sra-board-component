@@ -15,11 +15,10 @@ typedef union line_sensor_array
         int A1;
         int A2;
         int A3;
-    }lsa;
+    } lsa;
 
     int adc_reading[4];
-}line_sensor_array;
-
+} line_sensor_array;
 
 /**
  * @brief enables and configures adc
@@ -29,7 +28,6 @@ typedef union line_sensor_array
  * @return esp_err_t i.e it shows if adc is initialised successfully or not
  **/
 esp_err_t enable_line_sensor();
-
 
 /**
  * @brief Get multisampled line sensor array readings

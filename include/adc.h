@@ -15,7 +15,7 @@
 #include "esp_err.h"
 #include "pin_defs.h"
 
-#define DEFAULT_VREF    1100 
+#define DEFAULT_VREF 1100
 
 /**
  * @brief Configure width and attenuation of ADC 1
