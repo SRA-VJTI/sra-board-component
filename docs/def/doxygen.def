@@ -13,7 +13,7 @@ struct = {
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'A0';
-      sec-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      sec-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       sec-mem-desc-line = '14';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -31,7 +31,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'A1';
-      sec-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      sec-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       sec-mem-desc-line = '15';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -49,7 +49,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'A2';
-      sec-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      sec-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       sec-mem-desc-line = '16';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -67,7 +67,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'A3';
-      sec-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      sec-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       sec-mem-desc-line = '17';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -77,8 +77,8 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
-  cp-fileline  = '12';
+  cp-filename  = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
+  cp-fileline  = '13';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -100,7 +100,7 @@ union = {
 struct line_sensor_array::line_sensor
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'lsa';
-      sec-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      sec-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       sec-mem-desc-line = '18';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -118,7 +118,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'adc_reading';
-      sec-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      sec-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       sec-mem-desc-line = '20';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -128,8 +128,8 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
-  cp-fileline  = '10';
+  cp-filename  = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
+  cp-fileline  = '11';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -174,7 +174,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 1100
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/adc.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/adc.h';
       define-mem-desc-line = '18';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -194,13 +194,14 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'config_adc1';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/adc.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/adc.h';
       func-mem-desc-line = '25';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Configure width and attenuation of ADC 1.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  <br>
+@return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  
+<br>
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -212,7 +213,7 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'characterize_adc1';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/adc.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/adc.h';
       func-mem-desc-line = '32';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Characterize ADC 1 using either Vref or Two Point.
@@ -230,13 +231,14 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_adc1';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/adc.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/adc.h';
       func-mem-desc-line = '39';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 call function config_adc1() and characterize_adc1().
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG.  <br>
+@return esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG.  
+<br>
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -254,7 +256,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'adc_pin';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/adc.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/adc.h';
       func-mem-desc-line = '48';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read raw adc value of given adc pin.
@@ -266,7 +268,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/adc.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/adc.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -288,30 +290,28 @@ file = {
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_bar_graph';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/bar_graph.h';
-      func-mem-desc-line = '36';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/bar_graph.h';
+      func-mem-desc-line = '35';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables the bar graph led's gpio pins
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 It will check for state of motor driver A and B, and accordingly init the free gpios.
+
 <hr>
-<table class="markdownTable">
-  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A \ilinebr </th>    <th class="markdownTableHeadNone"> Motor Driver B \ilinebr </th>    <th class="markdownTableHeadNone"> Mode \ilinebr </th>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 1 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 2 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 3 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 4 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 5 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 6 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 7 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 8 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 0 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> -------------&mdash; \ilinebr </td>    <td class="markdownTableBodyNone"> -------------&mdash; \ilinebr </td>    <td class="markdownTableBodyNone"> ---&mdash; \ilinebr </td>  </tr></table>
+<table class="markdownTable">  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A</th>    <th class="markdownTableHeadNone"> Motor Driver B</th>    <th class="markdownTableHeadNone"> Mode</th>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> 1</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> 2</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> 3</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> 4</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> 5</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> 6</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> 7</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> 8</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> 0</td>  </tr>
+</table>
 
 enabled_bar_graph_flag is set to the value of Mode accordingly.
-
-
 
 @return esp_err_t returns ESP_OK if enabled correctly, and ESP_FAIL if it failed to initialise
 _EnD_oF_dEf_TeXt_;
@@ -331,8 +331,8 @@ uint8_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'data';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/bar_graph.h';
-      func-mem-desc-line = '73';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/bar_graph.h';
+      func-mem-desc-line = '74';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the value of bar graph LED.
 _EnD_oF_dEf_TeXt_;
@@ -347,14 +347,17 @@ data = 0xAA = 10101010
 
 Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED
 
-LED1 <--&mdash;> Motor Driver A (IN1) --&mdash; 0 
-LED2 <--&mdash;> Motor Driver A (IN2) --&mdash; 0
-LED3 <--&mdash;> Motor Driver A (IN3) --&mdash; 0
-LED4 <--&mdash;> Motor Driver A (IN4) --&mdash; 0
-LED5 <&ndash;X--> Motor Driver B (IN5) --&mdash; 1
-LED6 <&ndash;X--> Motor Driver B (IN6) --&mdash; 1
-LED7 <&ndash;X--> Motor Driver B (IN7) --&mdash; 1
-LED8 <&ndash;X--> Motor Driver B (IN8) --&mdash; 1
+@code 
+LED1 <-----> Motor Driver A (IN1) ----- 0    
+LED2 <-----> Motor Driver A (IN2) ----- 0    
+LED3 <-----> Motor Driver A (IN3) ----- 0    
+LED4 <-----> Motor Driver A (IN4) ----- 0    
+LED5 <--X--> Motor Driver B (IN5) ----- 1    
+LED6 <--X--> Motor Driver B (IN6) ----- 1    
+LED7 <--X--> Motor Driver B (IN7) ----- 1    
+LED8 <--X--> Motor Driver B (IN8) ----- 1    
+@endcode
+
 
 Mask ==> 00001111 => 0x0F
 
@@ -365,8 +368,6 @@ it can't be used.
 So, to achieve this we bitwise-and the mask with 0x80(10000000), if result is 0x80, then leftmost bit is 1, else it is 0.
 If leftmost bit is 1, means we can use this pin of bar graph, then we do the same thing with data, bitwise-and it with 0x80,
 to find the leftmost bit, if it is 1, the pin is set to 1, else 0. Now we left shift the data and mask variable.
-
-
 
 @param data 8bit binary in hexadecimal form, i.e, the pattern that is needed to be shown on the bar graph LED
 @return esp_err_t returns ESP_OK
@@ -387,8 +388,8 @@ bool *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'input_array';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/bar_graph.h';
-      func-mem-desc-line = '81';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/bar_graph.h';
+      func-mem-desc-line = '82';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 converts a boolean array of size 8 into 8-bit unsigned integer
 _EnD_oF_dEf_TeXt_;
@@ -398,7 +399,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/bar_graph.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/bar_graph.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -420,7 +421,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_NUMBER_OF_SAMPLES
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       define-mem-desc-line = '8';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -440,7 +441,7 @@ _EnD_oF_dEf_TeXt_;
 union line_sensor_array
 _EnD_oF_dEf_TeXt_;
       typedef-mem-name = 'line_sensor_array';
-      typedef-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      typedef-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       typedef-mem-desc-line = '21';
       typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -460,7 +461,7 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_line_sensor';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       func-mem-desc-line = '30';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables and configures adc
@@ -480,7 +481,7 @@ _EnD_oF_dEf_TeXt_;
 line_sensor_array
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_line_sensor';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
       func-mem-desc-line = '40';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get multisampled line sensor array readings.
@@ -493,7 +494,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/lsa.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/lsa.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -515,7 +516,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 1
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '14';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -533,7 +534,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 2
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '15';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -551,7 +552,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 200
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '17';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -569,7 +570,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 201
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '18';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -587,7 +588,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 202
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '19';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -605,7 +606,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 100
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '21';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -623,7 +624,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 101
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '22';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -641,7 +642,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 102
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '23';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -659,7 +660,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 103
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '24';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -683,7 +684,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 enable_motor_driver_##id(mode)
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '32';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver in Parallel or Normal Mode.
@@ -705,7 +706,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 read_motor_driver_mode_##id()
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       define-mem-desc-line = '40';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver.
@@ -732,7 +733,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mode';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       func-mem-desc-line = '48';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver A in Parallel or Normal Mode.
@@ -757,7 +758,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mode';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       func-mem-desc-line = '56';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver B in Parallel or Normal Mode.
@@ -794,7 +795,7 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'duty_cycle';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       func-mem-desc-line = '66';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the speed of motors.
@@ -815,7 +816,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_motor_driver_mode_a';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       func-mem-desc-line = '73';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver A.
@@ -833,7 +834,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_motor_driver_mode_b';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
       func-mem-desc-line = '80';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver B.
@@ -843,7 +844,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/motor_driver.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/motor_driver.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -865,7 +866,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 MPU6050_SCL
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '21';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -883,13 +884,14 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 MPU6050_SDA
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '22';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-gpio number for I2C master data  <br>
+gpio number for I2C master data  
+<br>
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
@@ -901,7 +903,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 I2C_NUM_1
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '23';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -919,7 +921,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '24';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -937,7 +939,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '25';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -955,7 +957,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 100000
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '26';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -973,7 +975,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x68
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '28';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -991,7 +993,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x3B
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '29';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1009,7 +1011,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x43
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '30';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1027,7 +1029,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 I2C_MASTER_WRITE
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '32';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1045,7 +1047,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 I2C_MASTER_READ
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '33';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1063,7 +1065,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x1
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '34';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1081,7 +1083,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x0
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '35';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1099,7 +1101,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x0
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '36';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1117,7 +1119,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0x1
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '37';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1135,7 +1137,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 0.9834
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '39';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1153,7 +1155,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 57.2957795
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '40';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1171,7 +1173,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 6
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       define-mem-desc-line = '41';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1191,7 +1193,7 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'i2c_master_init';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '48';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise the ESP32 I2C Driver in Master Mode.
@@ -1214,7 +1216,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '57';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise MPU-6050 (by sending the appropriate queued commands); 
@@ -1246,7 +1248,7 @@ size_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '66';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array
@@ -1279,7 +1281,7 @@ size_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '75';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array
@@ -1312,7 +1314,7 @@ int16_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buf_2';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '84';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Combine two 8-bit values to a 16-bit one
@@ -1356,7 +1358,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'acce_angle';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '95';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the accelerometer raw values
@@ -1408,7 +1410,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_angle';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '107';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the gyroscope raw values
@@ -1444,7 +1446,7 @@ int16_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_raw_value';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '117';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form 
@@ -1489,7 +1491,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '127';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Fuse the gyroscope and accelerometer angle in a complementary fashion
@@ -1523,7 +1525,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
       func-mem-desc-line = '136';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles.
@@ -1535,7 +1537,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/mpu6050.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/mpu6050.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -1565,7 +1567,7 @@ file = {
             return __;          \
     } while (0)
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '4';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1605,7 +1607,7 @@ _EnD_oF_dEf_TeXt_;
         }                                      \
     } while (0)
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '11';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1623,7 +1625,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 23
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '22';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1641,7 +1643,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 22
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '23';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1659,7 +1661,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 21
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '24';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1677,7 +1679,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 32
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '29';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1695,7 +1697,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 33
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '30';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1713,7 +1715,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 25
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '31';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1731,7 +1733,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 26
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '32';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1749,7 +1751,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 27
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '33';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1767,7 +1769,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 14
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '34';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1785,7 +1787,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 12
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '35';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1803,7 +1805,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 13
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '36';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1821,7 +1823,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 4
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '40';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1839,7 +1841,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 2
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '41';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1857,7 +1859,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 17
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '42';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1875,7 +1877,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 16
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '43';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1893,7 +1895,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 36
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '47';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1911,7 +1913,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 39
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '48';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1929,7 +1931,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 34
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '49';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1947,7 +1949,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 35
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '50';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1965,7 +1967,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 32
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '55';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1983,7 +1985,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 33
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '56';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2001,7 +2003,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 25
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '57';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2019,7 +2021,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 26
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '58';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2037,7 +2039,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 27
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '59';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2055,7 +2057,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 14
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '60';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2073,7 +2075,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 12
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '61';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2091,7 +2093,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 13
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '62';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2109,7 +2111,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 25
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '65';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2127,7 +2129,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 26
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '66';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2145,7 +2147,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 12
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '67';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2163,7 +2165,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 13
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '68';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2181,7 +2183,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 5
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '72';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2199,7 +2201,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 18
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '73';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2217,7 +2219,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 19
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
       define-mem-desc-line = '74';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2227,7 +2229,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/pin_defs.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/pin_defs.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2249,7 +2251,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_A_MIN_PULSEWIDTH
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '15';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2267,7 +2269,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_A_MAX_PULSEWIDTH
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '16';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2285,7 +2287,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_A_MAX_DEGREE
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '17';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2303,7 +2305,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_B_MIN_PULSEWIDTH
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '19';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2321,7 +2323,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_B_MAX_PULSEWIDTH
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '20';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2339,7 +2341,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_B_MAX_DEGREE
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '21';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2357,7 +2359,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_C_MIN_PULSEWIDTH
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '23';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2375,7 +2377,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_C_MAX_PULSEWIDTH
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '24';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2393,7 +2395,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 CONFIG_SERVO_C_MAX_DEGREE
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       define-mem-desc-line = '25';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2413,7 +2415,7 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_servo';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       func-mem-desc-line = '32';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
@@ -2443,7 +2445,7 @@ unsigned int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'degree_of_rotation';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
       func-mem-desc-line = '41';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the angle of the servos attached to the servo port of SRA Board.
@@ -2455,7 +2457,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/servo.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/servo.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2467,7 +2469,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = 'sra__board_8h';
   file-name = 'sra_board.h';
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/sra_board.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/sra_board.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2489,7 +2491,7 @@ file = {
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_switches';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/switches.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/switches.h';
       func-mem-desc-line = '17';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables tactile switches on the sra board, sets up required gpio's in input pull-up mode.
@@ -2513,7 +2515,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'switch_id';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/switches.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/switches.h';
       func-mem-desc-line = '25';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads the state of one of the four switches on sra board.
@@ -2524,7 +2526,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/switches.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/switches.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2564,7 +2566,7 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'max';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/utils.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/utils.h';
       func-mem-desc-line = '11';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Bound a value in a range [min, max].
@@ -2614,7 +2616,7 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'output_higher_limit';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/utils.h';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/include/utils.h';
       func-mem-desc-line = '22';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Maps a value in range [input_lower_limit, input_higher_limit] to [output_lower_limit, output_higher_limit].
@@ -2628,7 +2630,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/include/utils.h';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/include/utils.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2640,7 +2642,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_r_e_a_d_m_e_8md';
   file-name = 'README.md';
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/README.md';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/README.md';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2662,13 +2664,14 @@ file = {
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'config_adc1';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/adc.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/adc.c';
       func-mem-desc-line = '5';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Configure width and attenuation of ADC 1.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  <br>
+@return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  
+<br>
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -2680,7 +2683,7 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'characterize_adc1';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/adc.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/adc.c';
       func-mem-desc-line = '21';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Characterize ADC 1 using either Vref or Two Point.
@@ -2698,13 +2701,14 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_adc1';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/adc.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/adc.c';
       func-mem-desc-line = '43';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 call function config_adc1() and characterize_adc1().
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG.  <br>
+@return esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG.  
+<br>
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -2722,7 +2726,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'adc_pin';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/adc.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/adc.c';
       func-mem-desc-line = '53';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read raw adc value of given adc pin.
@@ -2747,7 +2751,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "adc"
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/adc.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/adc.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2757,7 +2761,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/adc.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/adc.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2779,30 +2783,28 @@ file = {
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_bar_graph';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       func-mem-desc-line = '16';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables the bar graph led's gpio pins
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 It will check for state of motor driver A and B, and accordingly init the free gpios.
+
 <hr>
-<table class="markdownTable">
-  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A \ilinebr </th>    <th class="markdownTableHeadNone"> Motor Driver B \ilinebr </th>    <th class="markdownTableHeadNone"> Mode \ilinebr </th>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 1 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 2 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 3 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 4 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 5 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 6 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 7 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 8 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 0 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> -------------&mdash; \ilinebr </td>    <td class="markdownTableBodyNone"> -------------&mdash; \ilinebr </td>    <td class="markdownTableBodyNone"> ---&mdash; \ilinebr </td>  </tr></table>
+<table class="markdownTable">  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A</th>    <th class="markdownTableHeadNone"> Motor Driver B</th>    <th class="markdownTableHeadNone"> Mode</th>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> 1</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> 2</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> 3</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> 4</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> 5</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> 6</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> off</td>    <td class="markdownTableBodyNone"> 7</td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> parallel</td>    <td class="markdownTableBodyNone"> 8</td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> normal</td>    <td class="markdownTableBodyNone"> 0</td>  </tr>
+</table>
 
 enabled_bar_graph_flag is set to the value of Mode accordingly.
-
-
 
 @return esp_err_t returns ESP_OK if enabled correctly, and ESP_FAIL if it failed to initialise
 _EnD_oF_dEf_TeXt_;
@@ -2822,7 +2824,7 @@ uint8_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'data';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       func-mem-desc-line = '103';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the value of bar graph LED.
@@ -2838,14 +2840,17 @@ data = 0xAA = 10101010
 
 Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED
 
-LED1 <--&mdash;> Motor Driver A (IN1) --&mdash; 0 
-LED2 <--&mdash;> Motor Driver A (IN2) --&mdash; 0
-LED3 <--&mdash;> Motor Driver A (IN3) --&mdash; 0
-LED4 <--&mdash;> Motor Driver A (IN4) --&mdash; 0
-LED5 <&ndash;X--> Motor Driver B (IN5) --&mdash; 1
-LED6 <&ndash;X--> Motor Driver B (IN6) --&mdash; 1
-LED7 <&ndash;X--> Motor Driver B (IN7) --&mdash; 1
-LED8 <&ndash;X--> Motor Driver B (IN8) --&mdash; 1
+@code 
+LED1 <-----> Motor Driver A (IN1) ----- 0    
+LED2 <-----> Motor Driver A (IN2) ----- 0    
+LED3 <-----> Motor Driver A (IN3) ----- 0    
+LED4 <-----> Motor Driver A (IN4) ----- 0    
+LED5 <--X--> Motor Driver B (IN5) ----- 1    
+LED6 <--X--> Motor Driver B (IN6) ----- 1    
+LED7 <--X--> Motor Driver B (IN7) ----- 1    
+LED8 <--X--> Motor Driver B (IN8) ----- 1    
+@endcode
+
 
 Mask ==> 00001111 => 0x0F
 
@@ -2856,8 +2861,6 @@ it can't be used.
 So, to achieve this we bitwise-and the mask with 0x80(10000000), if result is 0x80, then leftmost bit is 1, else it is 0.
 If leftmost bit is 1, means we can use this pin of bar graph, then we do the same thing with data, bitwise-and it with 0x80,
 to find the leftmost bit, if it is 1, the pin is set to 1, else 0. Now we left shift the data and mask variable.
-
-
 
 @param data 8bit binary in hexadecimal form, i.e, the pattern that is needed to be shown on the bar graph LED
 @return esp_err_t returns ESP_OK
@@ -2878,7 +2881,7 @@ bool *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'input_array';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       func-mem-desc-line = '138';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 converts a boolean array of size 8 into 8-bit unsigned integer
@@ -2902,7 +2905,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "bar_graph"
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2923,7 +2926,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       var-mem-desc-line = '4';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2944,7 +2947,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {0x00, 0xFF, 0xFC, 0xF0, 0xCF, 0xCC, 0xC0, 0x0F, 0x0C}
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       var-mem-desc-line = '10';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2965,7 +2968,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {BG_LED_1, BG_LED_2, BG_LED_3, BG_LED_4, BG_LED_5, BG_LED_6, BG_LED_7, BG_LED_8}
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
       var-mem-desc-line = '14';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2975,7 +2978,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/bar_graph.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/bar_graph.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -2997,7 +3000,7 @@ file = {
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_line_sensor';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/lsa.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/lsa.c';
       func-mem-desc-line = '5';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables and configures adc
@@ -3017,7 +3020,7 @@ _EnD_oF_dEf_TeXt_;
 line_sensor_array
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_line_sensor';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/lsa.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/lsa.c';
       func-mem-desc-line = '11';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get multisampled line sensor array readings.
@@ -3043,7 +3046,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {LSA_A0, LSA_A1, LSA_A2, LSA_A3}
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/lsa.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/lsa.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3053,7 +3056,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/lsa.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/lsa.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -3081,7 +3084,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mode';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       func-mem-desc-line = '7';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver A in Parallel or Normal Mode.
@@ -3106,7 +3109,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mode';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       func-mem-desc-line = '83';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver B in Parallel or Normal Mode.
@@ -3149,7 +3152,7 @@ mcpwm_timer_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'timer_num';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       func-mem-desc-line = '159';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3185,7 +3188,7 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'duty_cycle';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       func-mem-desc-line = '195';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the speed of motors.
@@ -3206,7 +3209,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_motor_driver_mode_a';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       func-mem-desc-line = '240';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver A.
@@ -3224,7 +3227,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_motor_driver_mode_b';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       func-mem-desc-line = '245';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver B.
@@ -3247,7 +3250,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "motor_driver"
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3268,7 +3271,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       var-mem-desc-line = '4';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3289,7 +3292,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
       var-mem-desc-line = '5';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3299,7 +3302,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/motor_driver.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/motor_driver.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -3326,7 +3329,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '6';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise the ESP32 I2C Driver in Master Mode.
@@ -3349,7 +3352,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '25';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise MPU-6050 (by sending the appropriate queued commands); 
@@ -3381,7 +3384,7 @@ size_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '41';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array
@@ -3414,7 +3417,7 @@ size_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '62';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array
@@ -3447,7 +3450,7 @@ int16_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buf_2';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '84';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Combine two 8-bit values to a 16-bit one
@@ -3491,7 +3494,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'acce_angle';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '94';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the accelerometer raw values
@@ -3543,7 +3546,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_angle';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '101';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the gyroscope raw values
@@ -3579,7 +3582,7 @@ int16_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_raw_value';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '118';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form 
@@ -3624,7 +3627,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '133';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Fuse the gyroscope and accelerometer angle in a complementary fashion
@@ -3658,7 +3661,7 @@ float *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       func-mem-desc-line = '169';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles.
@@ -3683,7 +3686,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "mpu_6050"
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3693,7 +3696,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/mpu6050.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/mpu6050.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -3718,7 +3721,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 #A
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+      define-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
       define-mem-desc-line = '5';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3738,7 +3741,7 @@ _EnD_oF_dEf_TeXt_;
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_servo';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
       func-mem-desc-line = '7';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
@@ -3804,7 +3807,7 @@ mcpwm_generator_t
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gen';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
       func-mem-desc-line = '44';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3834,7 +3837,7 @@ unsigned int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'degree_of_rotation';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
       func-mem-desc-line = '64';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the angle of the servos attached to the servo port of SRA Board.
@@ -3859,7 +3862,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "servo"
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3880,7 +3883,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
       var-mem-desc-line = '4';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3890,7 +3893,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/servo.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/servo.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -3912,7 +3915,7 @@ file = {
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_switches';
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/switches.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/switches.c';
       func-mem-desc-line = '6';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables tactile switches on the sra board, sets up required gpio's in input pull-up mode.
@@ -3936,7 +3939,7 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'switch_id';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/switches.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/switches.c';
       func-mem-desc-line = '36';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads the state of one of the four switches on sra board.
@@ -3960,7 +3963,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "switches"
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/switches.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/switches.c';
       var-mem-desc-line = '3';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3981,7 +3984,7 @@ _EnD_oF_dEf_TeXt_;
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/switches.c';
+      var-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/switches.c';
       var-mem-desc-line = '4';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3991,7 +3994,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/switches.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/switches.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -4031,7 +4034,7 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'max';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/utils.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/utils.c';
       func-mem-desc-line = '3';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Bound a value in a range [min, max].
@@ -4081,7 +4084,7 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'output_higher_limit';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/utils.c';
+      func-mem-desc-file = '/home/vedant/Programming/projects/sra-board-component/src/utils.c';
       func-mem-desc-line = '12';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Maps a value in range [input_lower_limit, input_higher_limit] to [output_lower_limit, output_higher_limit].
@@ -4095,7 +4098,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = '/home/sravanchittupalli/konnoha/clones/sra-board-component/src/utils.c';
+  file-full-name  = '/home/vedant/Programming/projects/sra-board-component/src/utils.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 

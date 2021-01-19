@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
     <title>sra-board-component</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><anchor id="index_1md_README"/> <image type="html" name="https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg" alt="SRA Board component" inline="yes"></image>
- <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE"><image type="html" name="https://img.shields.io/github/license/SRA-VJTI/sra-board-component" alt="License" inline="yes"></image>
+<para><image type="html" name="badge.svg" inline="yes"></image>
+ <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE"><image type="html" name="sra-board-component" inline="yes"></image>
 </ulink></para>
 <para>ESP-IDF Component for <ulink url="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Board</ulink></para>
 <para><heading level="1">Installation</heading>
@@ -24,6 +24,5 @@
 </listitem></itemizedlist>
 </para>
     </detaileddescription>
-    <location file="README.md"/>
   </compounddef>
 </doxygen>

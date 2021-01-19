@@ -1,22 +1,110 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="pin__defs_8h" kind="file" language="C++">
     <compoundname>pin_defs.h</compoundname>
     <includedby refid="adc_8h" local="yes">include/adc.h</includedby>
     <includedby refid="bar__graph_8h" local="yes">include/bar_graph.h</includedby>
-    <includedby refid="lsa_8h" local="yes">include/lsa.h</includedby>
     <includedby refid="motor__driver_8h" local="yes">include/motor_driver.h</includedby>
+    <includedby refid="lsa_8h" local="yes">include/lsa.h</includedby>
     <includedby refid="mpu6050_8h" local="yes">include/mpu6050.h</includedby>
     <includedby refid="servo_8h" local="yes">include/servo.h</includedby>
-    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="switches_8h" local="yes">include/switches.h</includedby>
+    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <invincdepgraph>
+      <node id="13">
+        <label>include/servo.h</label>
+        <link refid="servo_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>src/servo.c</label>
+        <link refid="servo_8c"/>
+      </node>
+      <node id="12">
+        <label>src/mpu6050.c</label>
+        <link refid="mpu6050_8c"/>
+      </node>
+      <node id="6">
+        <label>src/adc.c</label>
+        <link refid="adc_8c"/>
+      </node>
+      <node id="11">
+        <label>include/mpu6050.h</label>
+        <link refid="mpu6050_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/adc.h</label>
+        <link refid="adc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/motor_driver.c</label>
+        <link refid="motor__driver_8c"/>
+      </node>
+      <node id="5">
+        <label>src/lsa.c</label>
+        <link refid="lsa_8c"/>
+      </node>
+      <node id="4">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
+      </node>
+      <node id="1">
+        <label>include/pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/switches.c</label>
+        <link refid="switches_8c"/>
+      </node>
       <node id="15">
         <label>include/switches.h</label>
         <link refid="switches_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/bar_graph.c</label>
+        <link refid="bar__graph_8c"/>
+      </node>
+      <node id="9">
+        <label>include/motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -34,94 +122,6 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-      </node>
-      <node id="13">
-        <label>include/servo.h</label>
-        <link refid="servo_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>include/mpu6050.h</label>
-        <link refid="mpu6050_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>src/bar_graph.c</label>
-        <link refid="bar__graph_8c"/>
-      </node>
-      <node id="5">
-        <label>src/lsa.c</label>
-        <link refid="lsa_8c"/>
-      </node>
-      <node id="1">
-        <label>include/pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>src/switches.c</label>
-        <link refid="switches_8c"/>
-      </node>
-      <node id="2">
-        <label>include/adc.h</label>
-        <link refid="adc_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>src/servo.c</label>
-        <link refid="servo_8c"/>
-      </node>
-      <node id="6">
-        <label>src/adc.c</label>
-        <link refid="adc_8c"/>
-      </node>
-      <node id="10">
-        <label>src/motor_driver.c</label>
-        <link refid="motor__driver_8c"/>
-      </node>
-      <node id="12">
-        <label>src/mpu6050.c</label>
-        <link refid="mpu6050_8c"/>
-      </node>
-      <node id="9">
-        <label>include/motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>include/sra_board.h</label>
-        <link refid="sra__board_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -577,38 +577,38 @@
 <codeline lineno="33" refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_5<sp/>27</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34" refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_6<sp/>14</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_7<sp/>12</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_8<sp/>13</highlight></codeline>
-<codeline lineno="38"></codeline>
+<codeline lineno="36" refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_8<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40" refid="pin__defs_8h_1afc718c1fcfcf5d762545260289674333" refkind="member"><highlight class="preprocessor">#define<sp/>SWITCH_1<sp/>4</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41" refid="pin__defs_8h_1a62b9d54211060aac86c0ca9b02f7331e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_2<sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42" refid="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_3<sp/>17</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_4<sp/>16</highlight></codeline>
-<codeline lineno="45"></codeline>
+<codeline lineno="43" refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_4<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47" refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" refkind="member"><highlight class="preprocessor">#define<sp/>LSA_A0<sp/>36</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48" refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A1<sp/>39</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49" refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A2<sp/>34</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A3<sp/>35</highlight></codeline>
-<codeline lineno="52"></codeline>
+<codeline lineno="50" refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A3<sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="comment">//******<sp/>normal<sp/>mode<sp/>******//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>32<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>33<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="pin__defs_8h_1a074f338976294deee773f86c149766af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_5<sp/>27<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM2A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60" refid="pin__defs_8h_1a5186251144aeb6708634d2e53eb37fa6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_6<sp/>14<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM2B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="pin__defs_8h_1a45d361c8ed90ddb9c56d418eda0ad7a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_7<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_0<sp/>MCPWM2A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="pin__defs_8h_1ae5c32c4e625ae38744483f26fbb809ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_8<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_0<sp/>MCPWM2B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>32<sp/>//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>33<sp/>//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>25<sp/>//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>26<sp/>//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="pin__defs_8h_1a074f338976294deee773f86c149766af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_5<sp/>27<sp/>//MCPWM_UNIT_1<sp/>MCPWM2A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="pin__defs_8h_1a5186251144aeb6708634d2e53eb37fa6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_6<sp/>14<sp/>//MCPWM_UNIT_1<sp/>MCPWM2B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="pin__defs_8h_1a45d361c8ed90ddb9c56d418eda0ad7a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_7<sp/>12<sp/>//MCPWM_UNIT_0<sp/>MCPWM2A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="pin__defs_8h_1ae5c32c4e625ae38744483f26fbb809ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_NORMAL_IN_8<sp/>13<sp/>//MCPWM_UNIT_0<sp/>MCPWM2B</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//*****<sp/>parallel<sp/>mode<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="pin__defs_8h_1aa7eeb54d670ea6ca908825e393b75d33" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_PARALLEL_IN_5_7<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="pin__defs_8h_1a311349d98da80e0ea71b910031fd0f60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_PARALLEL_IN_6_8<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight></codeline>
-<codeline lineno="70"><highlight class="comment"></highlight></codeline>
+<codeline lineno="65" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/>//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/>//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="pin__defs_8h_1aa7eeb54d670ea6ca908825e393b75d33" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_PARALLEL_IN_5_7<sp/>12<sp/>//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="pin__defs_8h_1a311349d98da80e0ea71b910031fd0f60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDB_PARALLEL_IN_6_8<sp/>13<sp/>//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="72" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="73" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>18</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/pin_defs.h"/>

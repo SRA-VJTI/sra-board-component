@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="unionline__sensor__array" kind="union" language="C++" prot="public">
     <compoundname>line_sensor_array</compoundname>
     <includes refid="lsa_8h" local="no">lsa.h</includes>
@@ -49,7 +49,7 @@
         <link refid="structline__sensor__array_1_1line__sensor"/>
       </node>
     </collaborationgraph>
-    <location file="include/lsa.h" line="10" column="1" bodyfile="include/lsa.h" bodystart="11" bodyend="21"/>
+    <location file="include/lsa.h" line="11" column="1" bodyfile="include/lsa.h" bodystart="10" bodyend="21"/>
     <listofallmembers>
       <member refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>adc_reading</name></member>
       <member refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>lsa</name></member>

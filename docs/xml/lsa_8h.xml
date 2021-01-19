@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="lsa_8h" kind="file" language="C++">
     <compoundname>lsa.h</compoundname>
     <includes local="yes">sdkconfig.h</includes>
@@ -11,37 +11,11 @@
       <node id="9">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="1">
-        <label>include/lsa.h</label>
-        <link refid="lsa_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>stdlib.h</label>
       </node>
       <node id="8">
         <label>esp_adc_cal.h</label>
-      </node>
-      <node id="13">
-        <label>esp_err.h</label>
-      </node>
-      <node id="3">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-      </node>
-      <node id="7">
-        <label>driver/adc.h</label>
-      </node>
-      <node id="12">
-        <label>esp_log.h</label>
-      </node>
-      <node id="2">
-        <label>sdkconfig.h</label>
       </node>
       <node id="4">
         <label>adc.h</label>
@@ -67,6 +41,32 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="13">
+        <label>esp_err.h</label>
+      </node>
+      <node id="7">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="12">
+        <label>esp_log.h</label>
+      </node>
+      <node id="3">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="2">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="1">
+        <label>include/lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="10">
         <label>freertos/task.h</label>
       </node>
@@ -78,14 +78,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1">
-        <label>include/lsa.h</label>
-        <link refid="lsa_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>src/lsa.c</label>
         <link refid="lsa_8c"/>
@@ -93,6 +85,14 @@
       <node id="2">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
+      </node>
+      <node id="1">
+        <label>include/lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="unionline__sensor__array" prot="public">line_sensor_array</innerclass>
@@ -201,10 +201,10 @@
 <codeline lineno="15" refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kindref="member">A1</ref>;</highlight></codeline>
 <codeline lineno="16" refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" kindref="member">A2</ref>;</highlight></codeline>
 <codeline lineno="17" refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" kindref="member">A3</ref>;</highlight></codeline>
-<codeline lineno="18" refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kindref="member">lsa</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kindref="member">lsa</ref>;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20" refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[4];</highlight></codeline>
-<codeline lineno="21" refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" refkind="member"><highlight class="normal">}<sp/><ref refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" kindref="member">line_sensor_array</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}<sp/><ref refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" kindref="member">line_sensor_array</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd" kindref="member">enable_line_sensor</ref>();</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>

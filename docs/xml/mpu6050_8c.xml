@@ -1,17 +1,20 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="mpu6050_8c" kind="file" language="C++">
     <compoundname>mpu6050.c</compoundname>
     <includes refid="mpu6050_8h" local="yes">mpu6050.h</includes>
     <incdepgraph>
+      <node id="1">
+        <label>src/mpu6050.c</label>
+        <link refid="mpu6050_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="12">
         <label>driver/gpio.h</label>
       </node>
       <node id="10">
         <label>freertos/FreeRTOS.h</label>
-      </node>
-      <node id="7">
-        <label>esp_attr.h</label>
       </node>
       <node id="2">
         <label>mpu6050.h</label>
@@ -41,21 +44,24 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>esp_attr.h</label>
+      </node>
       <node id="13">
         <label>esp_timer.h</label>
       </node>
       <node id="9">
         <label>esp_err.h</label>
       </node>
-      <node id="14">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-      </node>
       <node id="5">
         <label>string.h</label>
       </node>
       <node id="8">
         <label>esp_log.h</label>
+      </node>
+      <node id="14">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
       </node>
       <node id="6">
         <label>sdkconfig.h</label>
@@ -65,12 +71,6 @@
       </node>
       <node id="11">
         <label>driver/i2c.h</label>
-      </node>
-      <node id="1">
-        <label>src/mpu6050.c</label>
-        <link refid="mpu6050_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
       <node id="3">
         <label>stdio.h</label>

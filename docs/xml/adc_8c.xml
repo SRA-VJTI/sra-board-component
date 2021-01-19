@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="adc_8c" kind="file" language="C++">
     <compoundname>adc.c</compoundname>
     <includes refid="adc_8h" local="yes">adc.h</includes>
@@ -10,21 +10,14 @@
       <node id="4">
         <label>stdlib.h</label>
       </node>
+      <node id="1">
+        <label>src/adc.c</label>
+        <link refid="adc_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="6">
         <label>esp_adc_cal.h</label>
-      </node>
-      <node id="11">
-        <label>esp_err.h</label>
-      </node>
-      <node id="12">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-      </node>
-      <node id="5">
-        <label>driver/adc.h</label>
-      </node>
-      <node id="10">
-        <label>esp_log.h</label>
       </node>
       <node id="2">
         <label>adc.h</label>
@@ -50,11 +43,18 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>src/adc.c</label>
-        <link refid="adc_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
+      <node id="11">
+        <label>esp_err.h</label>
+      </node>
+      <node id="5">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="10">
+        <label>esp_log.h</label>
+      </node>
+      <node id="12">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
       </node>
       <node id="8">
         <label>freertos/task.h</label>

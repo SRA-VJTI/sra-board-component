@@ -1,9 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="switches_8c" kind="file" language="C++">
     <compoundname>switches.c</compoundname>
     <includes refid="switches_8h" local="yes">switches.h</includes>
     <incdepgraph>
+      <node id="5">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="4">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>esp_err.h</label>
+      </node>
+      <node id="6">
+        <label>esp_log.h</label>
+      </node>
+      <node id="8">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="1">
+        <label>src/switches.c</label>
+        <link refid="switches_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>switches.h</label>
         <link refid="switches_8h"/>
@@ -19,31 +44,6 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>driver/gpio.h</label>
-      </node>
-      <node id="4">
-        <label>freertos/FreeRTOS.h</label>
-      </node>
-      <node id="3">
-        <label>stdlib.h</label>
-      </node>
-      <node id="7">
-        <label>esp_err.h</label>
-      </node>
-      <node id="8">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-      </node>
-      <node id="1">
-        <label>src/switches.c</label>
-        <link refid="switches_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>esp_log.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="var">

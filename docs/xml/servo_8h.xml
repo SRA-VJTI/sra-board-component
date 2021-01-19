@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="servo_8h" kind="file" language="C++">
     <compoundname>servo.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -14,12 +14,6 @@
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="servo_8c" local="yes">src/servo.c</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>freertos/FreeRTOS.h</label>
-      </node>
-      <node id="6">
-        <label>esp_attr.h</label>
-      </node>
       <node id="1">
         <label>include/servo.h</label>
         <link refid="servo_8h"/>
@@ -42,18 +36,24 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="6">
+        <label>esp_attr.h</label>
+      </node>
       <node id="9">
         <label>esp_err.h</label>
-      </node>
-      <node id="10">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
       </node>
       <node id="5">
         <label>soc/mcpwm_periph.h</label>
       </node>
       <node id="8">
         <label>esp_log.h</label>
+      </node>
+      <node id="10">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
       </node>
       <node id="7">
         <label>sdkconfig.h</label>

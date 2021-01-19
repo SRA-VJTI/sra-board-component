@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="structline__sensor__array_1_1line__sensor" kind="struct" language="C++" prot="public">
     <compoundname>line_sensor_array::line_sensor</compoundname>
     <includes refid="lsa_8h" local="no">lsa.h</includes>
@@ -61,7 +61,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/lsa.h" line="12" column="5" bodyfile="include/lsa.h" bodystart="13" bodyend="18"/>
+    <location file="include/lsa.h" line="13" column="1" bodyfile="include/lsa.h" bodystart="12" bodyend="18"/>
     <listofallmembers>
       <member refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" prot="public" virt="non-virtual"><scope>line_sensor_array::line_sensor</scope><name>A0</name></member>
       <member refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" prot="public" virt="non-virtual"><scope>line_sensor_array::line_sensor</scope><name>A1</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
   <compound refid="structline__sensor__array_1_1line__sensor" kind="struct"><name>line_sensor_array::line_sensor</name>
     <member refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" kind="variable"><name>A0</name></member>
     <member refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kind="variable"><name>A1</name></member>

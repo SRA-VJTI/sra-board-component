@@ -25,7 +25,6 @@
  * |     normal     |      off       |   7  |
  * |     normal     |      parallel  |   8  |
  * |     normal     |      normal    |   0  |
- * |----------------|----------------|------|
  * 
  * enabled_bar_graph_flag is set to the value of Mode accordingly.
  * 
@@ -46,15 +45,17 @@ esp_err_t enable_bar_graph();
  * 
  * Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED
  * 
- * LED1 <-----> Motor Driver A (IN1) ----- 0 
- * LED2 <-----> Motor Driver A (IN2) ----- 0
- * LED3 <-----> Motor Driver A (IN3) ----- 0
- * LED4 <-----> Motor Driver A (IN4) ----- 0
- * LED5 <--X--> Motor Driver B (IN5) ----- 1
- * LED6 <--X--> Motor Driver B (IN6) ----- 1
- * LED7 <--X--> Motor Driver B (IN7) ----- 1
- * LED8 <--X--> Motor Driver B (IN8) ----- 1
- * 
+ * ```
+ * LED1 <-----> Motor Driver A (IN1) ----- 0    
+ * LED2 <-----> Motor Driver A (IN2) ----- 0    
+ * LED3 <-----> Motor Driver A (IN3) ----- 0    
+ * LED4 <-----> Motor Driver A (IN4) ----- 0    
+ * LED5 <--X--> Motor Driver B (IN5) ----- 1    
+ * LED6 <--X--> Motor Driver B (IN6) ----- 1    
+ * LED7 <--X--> Motor Driver B (IN7) ----- 1    
+ * LED8 <--X--> Motor Driver B (IN8) ----- 1    
+ * ```
+ *   
  * Mask ==> 00001111 => 0x0F
  * 
  * Now, if data is 10101010, then even though pins IN1-IN4 are being used by motor driver, it will be set by gpio_set_level, which will
