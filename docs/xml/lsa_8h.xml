@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="lsa_8h" kind="file" language="C++">
+    <compoundname>lsa.h</compoundname>
+    <includes local="yes">sdkconfig.h</includes>
+    <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
+    <includes refid="adc_8h" local="yes">adc.h</includes>
+    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
+    <includedby refid="lsa_8c" local="yes">src/lsa.c</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="1">
+        <label>include/lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>esp_adc_cal.h</label>
+      </node>
+      <node id="13">
+        <label>esp_err.h</label>
+      </node>
+      <node id="3">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="7">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="12">
+        <label>esp_log.h</label>
+      </node>
+      <node id="2">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="4">
+        <label>adc.h</label>
+        <link refid="adc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>freertos/task.h</label>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="11">
+        <label>freertos/event_groups.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/lsa.c</label>
+        <link refid="lsa_8c"/>
+      </node>
+      <node id="2">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="unionline__sensor__array" prot="public">line_sensor_array</innerclass>
+    <innerclass refid="structline__sensor__array_1_1line__sensor" prot="public">line_sensor_array::line_sensor</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lsa_8h_1a3992a43fac1d452edf605ff497a25030" prot="public" static="no">
+        <name>NUMBER_OF_SAMPLES</name>
+        <initializer>CONFIG_NUMBER_OF_SAMPLES</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lsa.h" line="8" column="9" bodyfile="include/lsa.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" prot="public" static="no">
+        <type>union <ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref></type>
+        <definition>typedef union line_sensor_array line_sensor_array</definition>
+        <argsstring></argsstring>
+        <name>line_sensor_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lsa.h" line="21" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t enable_line_sensor</definition>
+        <argsstring>()</argsstring>
+        <name>enable_line_sensor</name>
+        <briefdescription>
+<para>enables and configures adc </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if adc is initialised successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lsa.h" line="30" column="11" bodyfile="src/lsa.c" bodystart="5" bodyend="9" declfile="include/lsa.h" declline="30" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref></type>
+        <definition>line_sensor_array read_line_sensor</definition>
+        <argsstring>()</argsstring>
+        <name>read_line_sensor</name>
+        <briefdescription>
+<para>Get multisampled line sensor array readings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to a struct that contains multisampled adc readings for all the pins specified in lsa_pins array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lsa.h" line="40" column="19" bodyfile="src/lsa.c" bodystart="11" bodyend="34" declfile="include/lsa.h" declline="40" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LSA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sdkconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="adc_8h" kindref="compound">adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUMBER_OF_SAMPLES<sp/>CONFIG_NUMBER_OF_SAMPLES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="unionline__sensor__array" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="structline__sensor__array_1_1line__sensor" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structline__sensor__array_1_1line__sensor" kindref="compound">line_sensor</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" kindref="member">A0</ref>;</highlight></codeline>
+<codeline lineno="15" refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kindref="member">A1</ref>;</highlight></codeline>
+<codeline lineno="16" refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" kindref="member">A2</ref>;</highlight></codeline>
+<codeline lineno="17" refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" kindref="member">A3</ref>;</highlight></codeline>
+<codeline lineno="18" refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kindref="member">lsa</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[4];</highlight></codeline>
+<codeline lineno="21" refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" refkind="member"><highlight class="normal">}<sp/><ref refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" kindref="member">line_sensor_array</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd" kindref="member">enable_line_sensor</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/><ref refid="lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2" kindref="member">read_line_sensor</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/lsa.h"/>
+  </compounddef>
+</doxygen>

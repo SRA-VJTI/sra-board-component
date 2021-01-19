@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="mpu6050_8h" kind="file" language="C++">
+    <compoundname>mpu6050.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">sdkconfig.h</includes>
+    <includes local="yes">esp_attr.h</includes>
+    <includes local="yes">esp_log.h</includes>
+    <includes local="yes">esp_err.h</includes>
+    <includes local="yes">freertos/FreeRTOS.h</includes>
+    <includes local="yes">driver/i2c.h</includes>
+    <includes local="yes">driver/gpio.h</includes>
+    <includes local="yes">esp_timer.h</includes>
+    <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
+    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
+    <includedby refid="mpu6050_8c" local="yes">src/mpu6050.c</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="9">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="6">
+        <label>esp_attr.h</label>
+      </node>
+      <node id="1">
+        <label>include/mpu6050.h</label>
+        <link refid="mpu6050_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>esp_timer.h</label>
+      </node>
+      <node id="8">
+        <label>esp_err.h</label>
+      </node>
+      <node id="13">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>esp_log.h</label>
+      </node>
+      <node id="5">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="10">
+        <label>driver/i2c.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/mpu6050.h</label>
+        <link refid="mpu6050_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/mpu6050.c</label>
+        <link refid="mpu6050_8c"/>
+      </node>
+      <node id="2">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mpu6050_8h_1a033b5e8a30541fe4ff939a62fdb7a43d" prot="public" static="no">
+        <name>I2C_MASTER_SCL_IO</name>
+        <initializer><ref refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" kindref="member">MPU6050_SCL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>gpio number for I2C master clock </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="21" column="9" bodyfile="include/mpu6050.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1af47631d568bba17edf9d1ea042602bb6" prot="public" static="no">
+        <name>I2C_MASTER_SDA_IO</name>
+        <initializer><ref refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" kindref="member">MPU6050_SDA</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>gpio number for I2C master data <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="22" column="9" bodyfile="include/mpu6050.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1aab9e642b6200f95fcbd2ad7466aaa2d3" prot="public" static="no">
+        <name>I2C_MASTER_NUM</name>
+        <initializer>I2C_NUM_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C port number for master dev </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="23" column="9" bodyfile="include/mpu6050.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1aaa0e84f340ef5ea9db2d7624fdadaa26" prot="public" static="no">
+        <name>I2C_MASTER_TX_BUF_DISABLE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master do not need buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="24" column="9" bodyfile="include/mpu6050.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a37a0707200e50e3b3e9ab28b1b8d6777" prot="public" static="no">
+        <name>I2C_MASTER_RX_BUF_DISABLE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master do not need buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="25" column="9" bodyfile="include/mpu6050.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a5c22ca4de37a83a59014e48b0a0b043d" prot="public" static="no">
+        <name>I2C_MASTER_FREQ_HZ</name>
+        <initializer>100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master clock frequency </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="26" column="9" bodyfile="include/mpu6050.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1ad4d6255d8f7e5dc770e773b787977508" prot="public" static="no">
+        <name>MPU6050_ADDR</name>
+        <initializer>0x68</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>slave address for mpu6050 sensor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="28" column="9" bodyfile="include/mpu6050.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a2eb5149764936d5cdb6f4eda6b13c39b" prot="public" static="no">
+        <name>ACCE_START_ADD</name>
+        <initializer>0x3B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accelerometer start address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="29" column="9" bodyfile="include/mpu6050.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a4ffea4a04253edb1260157e9b711b42a" prot="public" static="no">
+        <name>GYRO_START_ADD</name>
+        <initializer>0x43</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>gyroscope start address </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="30" column="9" bodyfile="include/mpu6050.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a7fc57d5be9f588839a00c75ef2946e17" prot="public" static="no">
+        <name>WRITE_BIT</name>
+        <initializer>I2C_MASTER_WRITE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master write </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="32" column="9" bodyfile="include/mpu6050.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a2f493ed233e66342493f155ebda5c183" prot="public" static="no">
+        <name>READ_BIT</name>
+        <initializer>I2C_MASTER_READ</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master read </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="33" column="9" bodyfile="include/mpu6050.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a7dd22b838d2b1f22d367e6cdef04ccc3" prot="public" static="no">
+        <name>ACK_CHECK_EN</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master will check ack from slave </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="34" column="9" bodyfile="include/mpu6050.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a8ad7ceb373ce664b1c2482a66537e7c0" prot="public" static="no">
+        <name>ACK_CHECK_DIS</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C master will not check ack from slave </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="35" column="9" bodyfile="include/mpu6050.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a1d64a546dacc15052a6c4887f9d0020f" prot="public" static="no">
+        <name>ACK_VAL</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C ack value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="36" column="9" bodyfile="include/mpu6050.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1ae20bf16f65c41237e2d620ef49890781" prot="public" static="no">
+        <name>NACK_VAL</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C nack value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="37" column="9" bodyfile="include/mpu6050.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" prot="public" static="no">
+        <name>ALPHA</name>
+        <initializer>0.9834</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="39" column="9" bodyfile="include/mpu6050.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" prot="public" static="no">
+        <name>RAD_TO_DEG</name>
+        <initializer>57.2957795</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="40" column="9" bodyfile="include/mpu6050.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" prot="public" static="no">
+        <name>BUFF_SIZE</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="41" column="9" bodyfile="include/mpu6050.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mpu6050_8h_1aff189f3f860a58ec5ad054d15d8db470" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_master_init</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_master_init</name>
+        <briefdescription>
+<para>Initialise the ESP32 I2C Driver in Master Mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t returns ESP_OK if I2C driver initialised properly, ESP_ERR_INVALID_ARG for Parameter error, ESP_FAIL Driver for install error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="48" column="11" bodyfile="src/mpu6050.c" bodystart="6" bodyend="22" declfile="include/mpu6050.h" declline="48" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t enable_mpu6050</definition>
+        <argsstring>(void)</argsstring>
+        <name>enable_mpu6050</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialise MPU-6050 (by sending the appropriate queued commands); Refer this for more information: <ulink url="https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf">https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t returns ESP_OK if MPU-6050 initialised successfully, else the appropriate error code Refer this for more info on ESP32 I2C Error codes: <ulink url="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html">https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="57" column="11" bodyfile="src/mpu6050.c" bodystart="25" bodyend="38" declfile="include/mpu6050.h" declline="57" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t mpu6050_read_acce</definition>
+        <argsstring>(uint8_t *data_rd, size_t size)</argsstring>
+        <name>mpu6050_read_acce</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_rd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_rd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer array for storing raw values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer array (6 in our case) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if acceleromter read successfully, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="66" column="11" bodyfile="src/mpu6050.c" bodystart="41" bodyend="59" declfile="include/mpu6050.h" declline="66" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t mpu6050_read_gyro</definition>
+        <argsstring>(uint8_t *data_rd, size_t size)</argsstring>
+        <name>mpu6050_read_gyro</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data_rd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_rd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer array for storing raw values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer array (6 in our case) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if gyroscope read successfully, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="75" column="11" bodyfile="src/mpu6050.c" bodystart="62" bodyend="81" declfile="include/mpu6050.h" declline="75" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void combine_msb_lsb_raw_data</definition>
+        <argsstring>(uint8_t *buf_1, int16_t *buf_2)</argsstring>
+        <name>combine_msb_lsb_raw_data</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf_1</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>buf_2</declname>
+        </param>
+        <briefdescription>
+<para>Combine two 8-bit values to a 16-bit one Note that EVEN indices in the input buffer represent the MSB (Byte) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit Input array of size 6 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit Output array of size 3 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="84" column="6" bodyfile="src/mpu6050.c" bodystart="84" bodyend="89" declfile="include/mpu6050.h" declline="84" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void compute_acce_angle</definition>
+        <argsstring>(int16_t ax, int16_t ay, int16_t az, float *acce_angle)</argsstring>
+        <name>compute_acce_angle</name>
+        <param>
+          <type>int16_t</type>
+          <declname>ax</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>ay</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>az</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>acce_angle</declname>
+        </param>
+        <briefdescription>
+<para>Compute the Euler angle (Pitch and Roll) from the accelerometer raw values Axes and Angles - X: Roll, Y: Pitch, Z: Yaw. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw accelerometer value (X-axis) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw accelerometer value (Y-axis) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>az</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw accelerometer value (Z-axis) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acce_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resultant angle array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="95" column="6" bodyfile="src/mpu6050.c" bodystart="94" bodyend="98" declfile="include/mpu6050.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a4b805f4cb3c30a323969abe87414ea90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void compute_gyro_angle</definition>
+        <argsstring>(int16_t gx, int16_t gy, int16_t gz, float dt, float *gyro_angle)</argsstring>
+        <name>compute_gyro_angle</name>
+        <param>
+          <type>int16_t</type>
+          <declname>gx</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>gy</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>gz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>gyro_angle</declname>
+        </param>
+        <briefdescription>
+<para>Compute the Euler angle (Pitch and Roll) from the gyroscope raw values Axes and Angles - X: Roll, Y: Pitch, Z: Yaw More on this here: <ulink url="https://philsal.co.uk/projects/imu-attitude-estimation">https://philsal.co.uk/projects/imu-attitude-estimation</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw gyroscope value (X-axis) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw gyroscope value (Y-axis) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw gyroscope value (Z-axis) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sampling time for gyroscope readings (interval between 2 readings) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gyro_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resultant angle array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="107" column="6" bodyfile="src/mpu6050.c" bodystart="101" bodyend="116" declfile="include/mpu6050.h" declline="107" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t read_mpu6050_raw</definition>
+        <argsstring>(int16_t *acce_raw_value, int16_t *gyro_raw_value)</argsstring>
+        <name>read_mpu6050_raw</name>
+        <param>
+          <type>int16_t *</type>
+          <declname>acce_raw_value</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>gyro_raw_value</declname>
+        </param>
+        <briefdescription>
+<para>A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form i.e. 16-bit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>acce_raw_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit array for storing the accelerometer raw values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gyro_raw_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit array for storing the gyroscope raw values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if successful, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="117" column="11" bodyfile="src/mpu6050.c" bodystart="118" bodyend="130" declfile="include/mpu6050.h" declline="117" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a43b01d95c708717047b47d408a606323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void complementary_filter</definition>
+        <argsstring>(int16_t *acce_raw_value, int16_t *gyro_raw_value, float *complementary_angle, float *mpu_offset)</argsstring>
+        <name>complementary_filter</name>
+        <param>
+          <type>int16_t *</type>
+          <declname>acce_raw_value</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>gyro_raw_value</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>complementary_angle</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>mpu_offset</declname>
+        </param>
+        <briefdescription>
+<para>Fuse the gyroscope and accelerometer angle in a complementary fashion More on this here: <ulink url="https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues">https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>acce_raw_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw values from the accelerometer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gyro_raw_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Raw values from the gyroscope </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>complementary_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resultant fused and filtered angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpu_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset of the MPU (accelerometer) at rest position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="127" column="6" bodyfile="src/mpu6050.c" bodystart="133" bodyend="166" declfile="include/mpu6050.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t read_mpu6050</definition>
+        <argsstring>(float *euler_angle, float *mpu_offset)</argsstring>
+        <name>read_mpu6050</name>
+        <param>
+          <type>float *</type>
+          <declname>euler_angle</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>mpu_offset</declname>
+        </param>
+        <briefdescription>
+<para>The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>euler_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input array of angles to store the results in (passed by reference) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpu_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial conditions for the accelerometer and gyroscope (Angle at rest position) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if successful, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="136" column="11" bodyfile="src/mpu6050.c" bodystart="169" bodyend="185" declfile="include/mpu6050.h" declline="136" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_MPU6050_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MPU6050_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sdkconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_attr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/i2c.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_timer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="mpu6050_8h_1a033b5e8a30541fe4ff939a62fdb7a43d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_SCL_IO<sp/>MPU6050_SCL<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="mpu6050_8h_1af47631d568bba17edf9d1ea042602bb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_SDA_IO<sp/>MPU6050_SDA<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="mpu6050_8h_1aab9e642b6200f95fcbd2ad7466aaa2d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_NUM<sp/>I2C_NUM_1<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="mpu6050_8h_1aaa0e84f340ef5ea9db2d7624fdadaa26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_TX_BUF_DISABLE<sp/>0<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="mpu6050_8h_1a37a0707200e50e3b3e9ab28b1b8d6777" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_RX_BUF_DISABLE<sp/>0<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="mpu6050_8h_1a5c22ca4de37a83a59014e48b0a0b043d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_MASTER_FREQ_HZ<sp/>100000<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="mpu6050_8h_1ad4d6255d8f7e5dc770e773b787977508" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_ADDR<sp/>0x68<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="mpu6050_8h_1a2eb5149764936d5cdb6f4eda6b13c39b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACCE_START_ADD<sp/>0x3B<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="mpu6050_8h_1a4ffea4a04253edb1260157e9b711b42a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GYRO_START_ADD<sp/>0x43<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="mpu6050_8h_1a7fc57d5be9f588839a00c75ef2946e17" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WRITE_BIT<sp/>I2C_MASTER_WRITE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="mpu6050_8h_1a2f493ed233e66342493f155ebda5c183" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>READ_BIT<sp/>I2C_MASTER_READ<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="mpu6050_8h_1a7dd22b838d2b1f22d367e6cdef04ccc3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACK_CHECK_EN<sp/>0x1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="mpu6050_8h_1a8ad7ceb373ce664b1c2482a66537e7c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACK_CHECK_DIS<sp/>0x0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="mpu6050_8h_1a1d64a546dacc15052a6c4887f9d0020f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACK_VAL<sp/>0x0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="mpu6050_8h_1ae20bf16f65c41237e2d620ef49890781" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NACK_VAL<sp/>0x1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALPHA<sp/>0.9834</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAD_TO_DEG<sp/>57.2957795</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFF_SIZE<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1aff189f3f860a58ec5ad054d15d8db470" kindref="member">i2c_master_init</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kindref="member">enable_mpu6050</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*buf_1,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(int16_t<sp/>gx,<sp/>int16_t<sp/>gy,<sp/>int16_t<sp/>gz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*gyro_angle);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*complementary_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" kindref="member">read_mpu6050</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*euler_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/mpu6050.h"/>
+  </compounddef>
+</doxygen>

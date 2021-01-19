@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>sra-board-component</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/> <image type="html" name="https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg" alt="SRA Board component" inline="yes"></image>
+ <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE"><image type="html" name="https://img.shields.io/github/license/SRA-VJTI/sra-board-component" alt="License" inline="yes"></image>
+</ulink></para>
+<para>ESP-IDF Component for <ulink url="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Board</ulink></para>
+<para><heading level="1">Installation</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>&lt;your_esp_idf_project&gt;</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>components</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>components</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/SRA-VJTI/sra-board-component.git</highlight></codeline>
+</programlisting></para>
+<para><heading level="1">License</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Distributed under the <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE">MIT License</ulink>. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
