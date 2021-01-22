@@ -69,7 +69,7 @@ Docs
 <!-- GETTING STARTED -->
 ## Getting Started
 
-- Visit [Examples](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples) 
+- TODO
 
 ### Prerequisites
 
