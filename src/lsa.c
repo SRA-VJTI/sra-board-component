@@ -21,6 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
 #include "lsa.h"
 
 static const int line_sensor_pins[4] = {LSA_A0, LSA_A1, LSA_A2, LSA_A3};

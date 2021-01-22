@@ -21,6 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
 #include "motor_driver.h"
 
 static const char *TAG_MOTOR_DRIVER = "motor_driver";
