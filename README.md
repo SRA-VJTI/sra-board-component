@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/roshanlam/ReadMeTemplate/">
+  <a href="https://github.com/SRA-VJTI/sra-board-component/">
     <img src="./logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -17,16 +17,16 @@
   <p align="center">
     A Read Me template for your projects!
     <br />
-    <a href="https://github.com/roshanlam/ReadMeTemplate/"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/SRA-VJTI/sra-board-component/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/roshanlam/ReadMeTemplate/">View Demo</a>
+    <a href="https://github.com/SRA-VJTI/sra-board-component/">View Demo</a>
     ·
-    <a href="https://github.com/roshanlam/ReadMeTemplate/issues">Report Bug</a>
+    <a href="https://github.com/SRA-VJTI/sra-board-component/issues">Report Bug</a>
     ·
-    <a href="https://github.com/roshanlam/ReadMeTemplate/issues">Request Feature</a>
+    <a href="https://github.com/SRA-VJTI/sra-board-component/issues">Request Feature</a>
     ·
-    <a href="https://github.com/roshanlam/ReadMeTemplate/pulls">Send a Pull Request</a>
+    <a href="https://github.com/SRA-VJTI/sra-board-component/pulls">Send a Pull Request</a>
   </p>
 </p>
 
@@ -50,8 +50,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 There are many great README templates available on GitHub, however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
 
@@ -116,7 +114,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/roshanlam/ReadMeTemplate/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/SRA-VJTI/sra-board-component/issues) for a list of proposed features (and known issues).
 
 
 
@@ -164,10 +162,10 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [forks-shield]: https://img.shields.io/github/forks/roshanlam/ReadMeTemplate?style=for-the-badge
-[forks-url]: https://github.com/roshanlam/ReadMeTemplate/network/members
+[forks-url]: https://github.com/SRA-VJTI/sra-board-component/network/members
 [stars-shield]: https://img.shields.io/github/stars/roshanlam/ReadMeTemplate?style=for-the-badge
-[stars-url]: https://github.com/roshanlam/ReadMeTemplate/stargazers
+[stars-url]: https://github.com/SRA-VJTI/sra-board-component/stargazers
 [issues-shield]: https://img.shields.io/github/issues/roshanlam/ReadMeTemplate?style=for-the-badge
-[issues-url]: https://github.com/roshanlam/ReadMeTemplate/issues
+[issues-url]: https://github.com/SRA-VJTI/sra-board-component/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/roshan-lamichhane
