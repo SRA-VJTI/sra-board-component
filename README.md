@@ -56,15 +56,15 @@ SRA ESP-IDF component provides an abstraction
 
 ### Built With
 
-* [C](https://en.wikipedia.org/wiki/C_(programming_language))
+- [C](https://en.wikipedia.org/wiki/C_(programming_language))
 
 Toolchain & Supported SDK
 
-* [ESP-IDF](https://github.com/espressif/esp-idf)
+- [ESP-IDF](https://github.com/espressif/esp-idf)
 
 Docs
 
-*[Doxygen](https://www.doxygen.nl/index.html)
+- [Doxygen](https://www.doxygen.nl/index.html)
 
 <!-- GETTING STARTED -->
 ## Getting Started
