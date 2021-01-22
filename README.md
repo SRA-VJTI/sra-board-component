@@ -12,10 +12,10 @@
     <img src="./logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Read Me Template</h3>
+  <h3 align="center">sra-board-component</h3>
 
   <p align="center">
-    A Read Me template for your projects!
+    An ESP-IDF Component for <a href="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Board</a>
     <br />
     <a href="https://github.com/SRA-VJTI/sra-board-component/"><strong>Explore the docs »</strong></a>
     <br />
