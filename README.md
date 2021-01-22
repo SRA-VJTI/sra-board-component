@@ -56,26 +56,25 @@ SRA ESP-IDF component provides an abstraction
 
 ### Built With
 
-- [C](https://en.wikipedia.org/wiki/C_(programming_language))
+* [C](https://en.wikipedia.org/wiki/C_(programming_language))
 
 Toolchain & Supported SDK
 
-- [ESP-IDF](https://github.com/espressif/esp-idf)
+* [ESP-IDF](https://github.com/espressif/esp-idf)
 
 Docs
 
-- [Doxygen](https://www.doxygen.nl/index.html)
+* [Doxygen](https://www.doxygen.nl/index.html)
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-- Hardware Required : [SRA Development Board](https://github.com/SRA-VJTI/sra-board-hardware-design)
+* Hardware Required : [SRA Development Board](https://github.com/SRA-VJTI/sra-board-hardware-design)
 
 ### Prerequisites
 
-- A stable release of [ESP-IDF](https://github.com/espressif/esp-idf)
-
-- Project Tree containing `components` dir
+* A stable release of [ESP-IDF](https://github.com/espressif/esp-idf)
+* Project Tree containing `components` dir
 
 ```
 - myProject/
