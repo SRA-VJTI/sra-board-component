@@ -130,15 +130,6 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-- [Readme Template](https://github.com/roshanlam/ReadMeTemplate)
-
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [forks-shield]: https://img.shields.io/github/forks/SRA-VJTI/sra-board-component?style=for-the-badge
