@@ -18,7 +18,7 @@
   <p align="center">
     An ESP-IDF Component for <a href="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Board</a>
     <br />
-    <a href="https://github.com/SRA-VJTI/sra-board-component/"><strong>Explore the docs »</strong></a>
+    <a href="https://sravjti.tech/sra-board-component/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples">View Demo</a>
@@ -77,6 +77,17 @@ Docs
 
 - Project Tree containing `components` dir
 
+```
+- myProject/
+             - CMakeLists.txt
+             - sdkconfig
+             - components/ - component1/ 
+                           - component2/ 
+             - main/       - CMakeLists.txt
+                           - src.c
+             - build/
+```
+
 ### Installation
 
 ```sh
@@ -92,7 +103,7 @@ git clone https://github.com/SRA-VJTI/sra-board-component.git
 
 - Visit [examples](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://sravjti.tech/sra-board-component/)_
 
 
 
@@ -124,9 +135,8 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-[@SRAVJTI](https://twitter.com/SRAVJTI) - https://www.sravjti.in/
-
-[SRA-VJTI Website](https://www.sravjti.in/contact-us)
+* [@SRAVJTI](https://twitter.com/SRAVJTI) - https://www.sravjti.in/
+* [SRA-VJTI Website](https://www.sravjti.in/contact-us)
 
 
 
