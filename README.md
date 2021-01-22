@@ -1,4 +1,4 @@
-[SRA Board component](https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg)
+![SRA Board component](https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -142,13 +142,13 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/SRA-VJTI/sra-board-component?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/SRA-VJTI/sra-board-component
 [forks-url]: https://github.com/SRA-VJTI/sra-board-component/network/members
-[stars-shield]: https://img.shields.io/github/stars/SRA-VJTI/sra-board-component?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/SRA-VJTI/sra-board-component
 [stars-url]: https://github.com/SRA-VJTI/sra-board-component/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SRA-VJTI/sra-board-component?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/SRA-VJTI/sra-board-component
 [issues-url]: https://github.com/SRA-VJTI/sra-board-component/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/sra-vjti
-[license-shield]: https://img.shields.io/github/license/SRA-VJTI/sra-board-component?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/SRA-VJTI/sra-board-component
 [license-url]: https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE
