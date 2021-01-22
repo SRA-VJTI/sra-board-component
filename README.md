@@ -69,7 +69,7 @@ Docs
 <!-- GETTING STARTED -->
 ## Getting Started
 
-- TODO
+- Hardware Required : [SRA Development Board](https://github.com/SRA-VJTI/sra-board-hardware-design)
 
 ### Prerequisites
 
