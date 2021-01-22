@@ -149,5 +149,5 @@ Contributions are what make the open source community such an amazing place to b
 [issues-url]: https://github.com/SRA-VJTI/sra-board-component/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/sra-vjti
-[license-shield]: https://img.shields.io/github/license/SRA-VJTI/sra-board-component
+[license-shield]: https://img.shields.io/github/license/SRA-VJTI/sra-board-component?style=for-the-badge
 [license-url]: https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE
