@@ -1,8 +1,9 @@
+[SRA Board component](https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg)
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -133,11 +134,8 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- LICENSE -->
 ## License
-Describe your License for your project. 
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
+- Distributed under the [MIT License](https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE).
 
 <!-- CONTACT -->
 ## Contact
@@ -169,3 +167,5 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [issues-url]: https://github.com/SRA-VJTI/sra-board-component/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/sra-vjti
+[license-shield]: https://img.shields.io/github/license/SRA-VJTI/sra-board-component
+[license-url]: https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE
