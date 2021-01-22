@@ -124,7 +124,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-[@SRAVJTI](https://twitter.com/SRAVJTI) - email@example.com
+[@SRAVJTI](https://twitter.com/SRAVJTI) - https://www.sravjti.in/
 
 [SRA-VJTI Website](https://www.sravjti.in/contact-us)
 
