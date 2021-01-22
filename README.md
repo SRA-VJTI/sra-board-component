@@ -21,7 +21,7 @@
     <a href="https://github.com/SRA-VJTI/sra-board-component/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/SRA-VJTI/sra-board-component/">View Demo</a>
+    <a href="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples">View Demo</a>
     ·
     <a href="https://github.com/SRA-VJTI/sra-board-component/issues">Report Bug</a>
     ·
