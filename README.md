@@ -161,11 +161,11 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/roshanlam/ReadMeTemplate?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/SRA-VJTI/sra-board-component?style=for-the-badge
 [forks-url]: https://github.com/SRA-VJTI/sra-board-component/network/members
-[stars-shield]: https://img.shields.io/github/stars/roshanlam/ReadMeTemplate?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/SRA-VJTI/sra-board-component?style=for-the-badge
 [stars-url]: https://github.com/SRA-VJTI/sra-board-component/stargazers
-[issues-shield]: https://img.shields.io/github/issues/roshanlam/ReadMeTemplate?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/SRA-VJTI/sra-board-component?style=for-the-badge
 [issues-url]: https://github.com/SRA-VJTI/sra-board-component/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/roshan-lamichhane
+[linkedin-url]: https://linkedin.com/in/sra-vjti
