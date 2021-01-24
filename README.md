@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/SRA-VJTI/sra-board-component">
   </a>
   <a href="https://linkedin.com/in/sra-vjti">
-    <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555">
+    <img src="https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=555">
   </a>
 </p>
 
