@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/SRA-VJTI/sra-board-component/">
-    <img src="./assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="./assets/logo.png" alt="Logo" >
   </a>
 
   <h3 align="center">sra-board-component</h3>
