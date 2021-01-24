@@ -1,9 +1,22 @@
-![SRA Board component](https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg)
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<p align="center">
+  <img src="https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg">
+  <a href="https://github.com/SRA-VJTI/sra-board-component/network/members">
+    <img src="https://img.shields.io/github/forks/SRA-VJTI/sra-board-component">
+  </a>
+  <a href="https://github.com/SRA-VJTI/sra-board-component/stargazers">
+    <img src="https://img.shields.io/github/stars/SRA-VJTI/sra-board-component">
+  </a>
+  <a href="https://github.com/SRA-VJTI/sra-board-component/issues">
+    <img src="https://img.shields.io/github/issues/SRA-VJTI/sra-board-component">
+  </a>
+  <a href="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/SRA-VJTI/sra-board-component">
+  </a>
+  <a href="https://linkedin.com/in/sra-vjti">
+    <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555">
+  </a>
+</p>
+
 
 
 <!-- PROJECT LOGO -->
@@ -129,7 +142,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-- Distributed under the [MIT License](https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE).
+* Distributed under the [MIT License](https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE).
 
 <!-- CONTACT -->
 ## Contact
@@ -139,15 +152,3 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[forks-shield]: https://img.shields.io/github/forks/SRA-VJTI/sra-board-component
-[forks-url]: https://github.com/SRA-VJTI/sra-board-component/network/members
-[stars-shield]: https://img.shields.io/github/stars/SRA-VJTI/sra-board-component
-[stars-url]: https://github.com/SRA-VJTI/sra-board-component/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SRA-VJTI/sra-board-component
-[issues-url]: https://github.com/SRA-VJTI/sra-board-component/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/sra-vjti
-[license-shield]: https://img.shields.io/github/license/SRA-VJTI/sra-board-component
-[license-url]: https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE
