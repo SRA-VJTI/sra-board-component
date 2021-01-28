@@ -82,6 +82,9 @@ Docs
 ## Getting Started
 
 * Hardware Required : [SRA Development Board](https://github.com/SRA-VJTI/sra-board-hardware-design)
+* Recommended ESP-IDF [v4.2-release](https://github.com/espressif/esp-idf/tree/release/v4.2) .
+
+_Refer [espressif-docs](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/) for intallation guide_
 
 ### Prerequisites
 
