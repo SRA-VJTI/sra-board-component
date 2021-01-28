@@ -72,7 +72,7 @@ SRA ESP-IDF component provides an abstraction
 
 Toolchain & Supported SDK
 
-* [ESP-IDF](https://github.com/espressif/esp-idf)
+* [ESP-IDF v4.2-release](https://github.com/espressif/esp-idf/tree/release/v4.2)
 
 Docs
 
