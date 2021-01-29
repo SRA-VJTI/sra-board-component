@@ -53,6 +53,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
+  * [Examples](#examples)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -119,7 +120,16 @@ git clone https://github.com/SRA-VJTI/sra-board-component.git
 
 _For more examples, please refer to the [Documentation](https://sravjti.tech/sra-board-component/)_
 
+### Examples
 
+| Example Link  	|   Description	|
+|:-:	            |---	          |
+|[Bar Graph](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/bar_graph)       |  Bar graph led can be used for testing purposes 	|
+|  [ Light sensing array](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/lsa) 	|  LSA aka Light Sensing Array is used mainly in line following bot 	|
+|  Motor driver - [normal](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/motor_driver_normal)- [parallel](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/motor_driver_parallel) 	|  Example for using two motor drivers present on SRA Board in both parallel and normal mode 	|
+|  [MPU6050](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/mpu6050) 	|  MPU6050 combines 3-axis Gyroscope, 3-axis Accelerometer and Motion Processor all in small package. This example is for reading values from mpu6050 accelerometer	|
+|  [Servos](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/servos) 	|  Servos are used in the locomotion of bots like [Wall-E](https://github.com/SRA-VJTI/Wall-E_v2.1) . This example is for using the servo port on SRA Board to run servos 	|
+| [Switches](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches) | Manual Switches provide the traditional comfort to toggle the input variables. This example is for using four user switches present on SRA Board |
 
 <!-- ROADMAP -->
 ## Roadmap
