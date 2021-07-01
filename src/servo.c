@@ -85,27 +85,20 @@ static esp_err_t set_angle_servo_helper(char *servo_name, int servo_max, int ser
     return err;
 }
 
-esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation)
+esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
 {
     if (enabled_servo_flag)
     {
-        if (servo_id == SERVO_A)
+        if (config->servo_id == SERVO_A || config->servo_id == SERVO_B || config->servo_id == SERVO_C)
         {
-            return set_angle_servo_helper(STR(SERVO_A), SERVO_A_MAX_DEGREE, SERVO_A_MIN_PULSEWIDTH, SERVO_A_MAX_PULSEWIDTH, degree_of_rotation, MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A);
-        }
-        else if (servo_id == SERVO_B)
-        {
-            return set_angle_servo_helper(STR(SERVO_B), SERVO_B_MAX_DEGREE, SERVO_B_MIN_PULSEWIDTH, SERVO_B_MAX_PULSEWIDTH, degree_of_rotation, MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B);
-        }
-        else if (servo_id == SERVO_C)
-        {
-            return set_angle_servo_helper(STR(SERVO_C), SERVO_C_MAX_DEGREE, SERVO_C_MIN_PULSEWIDTH, SERVO_C_MAX_PULSEWIDTH, degree_of_rotation, MCPWM_UNIT_0, MCPWM_TIMER_1, MCPWM_OPR_A);
+            return set_angle_servo_helper(STR(config->servo_id),config->max_degree,config->min_pulse_width,config->max_pulse_width,degree_of_rotation,config->mcpwm_num,config->timer_num,config->gen);
         }
         else
         {
             ESP_LOGE(TAG_SERVO, "error: incorrect servo pin passed to function");
             return ESP_FAIL;
         }
+
     }
     else
     {

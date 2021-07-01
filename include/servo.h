@@ -36,17 +36,15 @@
 #include "esp_err.h"
 #include "pin_defs.h"
 
-#define SERVO_A_MIN_PULSEWIDTH CONFIG_SERVO_A_MIN_PULSEWIDTH
-#define SERVO_A_MAX_PULSEWIDTH CONFIG_SERVO_A_MAX_PULSEWIDTH
-#define SERVO_A_MAX_DEGREE CONFIG_SERVO_A_MAX_DEGREE
-
-#define SERVO_B_MIN_PULSEWIDTH CONFIG_SERVO_B_MIN_PULSEWIDTH
-#define SERVO_B_MAX_PULSEWIDTH CONFIG_SERVO_B_MAX_PULSEWIDTH
-#define SERVO_B_MAX_DEGREE CONFIG_SERVO_B_MAX_DEGREE
-
-#define SERVO_C_MIN_PULSEWIDTH CONFIG_SERVO_C_MIN_PULSEWIDTH
-#define SERVO_C_MAX_PULSEWIDTH CONFIG_SERVO_C_MAX_PULSEWIDTH
-#define SERVO_C_MAX_DEGREE CONFIG_SERVO_C_MAX_DEGREE
+typedef struct {
+    int servo_id;
+    int min_pulse_width;
+    int max_pulse_width;
+    int max_degree;
+    mcpwm_unit_t mcpwm_num;
+    mcpwm_timer_t timer_num;
+    mcpwm_generator_t gen;    
+} servo_config;
 
 /**
  * @brief Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
@@ -58,10 +56,10 @@ esp_err_t enable_servo();
 /**
  * @brief Set the angle of the servos attached to the servo port of SRA Board
  * 
- * @param servo_id pin number of the servo whose angle needs to be set
+ * @param config pointer to the servo_config struct
  * @param degree_of_rotation angle to which the servo must be set, depends on value of MAX_DEGREE macro
  * @return esp_err_t 
  */
-esp_err_t set_angle_servo(int servo_id, unsigned int degree_of_rotation);
+esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation);
 
 #endif
