@@ -65,7 +65,7 @@ esp_err_t enable_servo()
     }
 }
 
-static esp_err_t set_angle_servo_helper(char *servo_name, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, unsigned int degree_of_rotation, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num, mcpwm_generator_t gen)
+static esp_err_t set_angle_servo_helper(int servo_pin, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, unsigned int degree_of_rotation, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num, mcpwm_generator_t gen)
 {
     degree_of_rotation = degree_of_rotation > servo_max ? servo_max : degree_of_rotation;
 
@@ -75,11 +75,11 @@ static esp_err_t set_angle_servo_helper(char *servo_name, int servo_max, int ser
     esp_err_t err = mcpwm_set_duty_in_us(mcpwm_num, timer_num, gen, cal_pulsewidth);
     if (err == ESP_OK)
     {
-        ESP_LOGI(TAG_SERVO, "set %s: %ud", servo_name, degree_of_rotation);
+        ESP_LOGI(TAG_SERVO, "set servo at pin %d: %ud", servo_pin, degree_of_rotation);
     }
     else
     {
-        ESP_LOGE(TAG_SERVO, "error: %s: %s", servo_name, esp_err_to_name(err));
+        ESP_LOGE(TAG_SERVO, "error: servo at pin %d: %s", servo_pin, esp_err_to_name(err));
     }
 
     return err;
@@ -89,9 +89,9 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
 {
     if (enabled_servo_flag)
     {
-        if (config->servo_id == SERVO_A || config->servo_id == SERVO_B || config->servo_id == SERVO_C)
+        if (config->servo_pin)
         {
-            return set_angle_servo_helper(STR(config->servo_id),config->max_degree,config->min_pulse_width,config->max_pulse_width,degree_of_rotation,config->mcpwm_num,config->timer_num,config->gen);
+            return set_angle_servo_helper(config->servo_pin,config->max_degree,config->min_pulse_width,config->max_pulse_width,degree_of_rotation,config->mcpwm_num,config->timer_num,config->gen);
         }
         else
         {

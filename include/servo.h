@@ -37,7 +37,7 @@
 #include "pin_defs.h"
 
 typedef struct {
-    int servo_id;
+    int servo_pin;
     int min_pulse_width;
     int max_pulse_width;
     int max_degree;
