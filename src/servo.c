@@ -70,7 +70,7 @@ static esp_err_t set_angle_servo_helper(int servo_pin, int servo_max, int servo_
     degree_of_rotation = degree_of_rotation > servo_max ? servo_max : degree_of_rotation;
 
     uint32_t cal_pulsewidth = 0;
-    cal_pulsewidth = (servo_min_pulsewidth + 2 * (((servo_max_pulsewidth - servo_min_pulsewidth) * (degree_of_rotation)) / (servo_max)));
+    cal_pulsewidth = (servo_min_pulsewidth + ((servo_max_pulsewidth - servo_min_pulsewidth) * (degree_of_rotation)) / (servo_max));
 
     esp_err_t err = mcpwm_set_duty_in_us(mcpwm_num, timer_num, gen, cal_pulsewidth);
     if (err == ESP_OK)
