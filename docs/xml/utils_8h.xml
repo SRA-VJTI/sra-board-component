@@ -1,25 +1,25 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="utils_8h" kind="file" language="C++">
     <compoundname>utils.h</compoundname>
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="utils_8c" local="yes">src/utils.c</includedby>
     <invincdepgraph>
-      <node id="2">
-        <label>include/sra_board.h</label>
-        <link refid="sra__board_8h"/>
-      </node>
-      <node id="3">
+      <node id="151">
         <label>src/utils.c</label>
         <link refid="utils_8c"/>
       </node>
-      <node id="1">
+      <node id="149">
         <label>include/utils.h</label>
         <link refid="utils_8h"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="150" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="151" relation="include">
         </childnode>
+      </node>
+      <node id="150">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -41,39 +41,34 @@
           <declname>max</declname>
         </param>
         <briefdescription>
-<para>Bound a value in a range [min, max]. </para>
-        </briefdescription>
+<para>Bound a value in a range [min, max]. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>value to be bound </para>
-</parameterdescription>
+<para>value to be bound </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>min</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>min value which the variable can take </para>
-</parameterdescription>
+<para>min value which the variable can take </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>max</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>max value which the variable can take </para>
-</parameterdescription>
+<para>max value which the variable can take </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/utils.h" line="11" column="7" bodyfile="src/utils.c" bodystart="3" bodyend="10" declfile="include/utils.h" declline="11" declcolumn="7"/>
+        <location file="include/utils.h" line="35" column="1" bodyfile="src/utils.c" bodystart="27" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="utils_8h_1a5dd929afde45581ef0588e30db9650f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -101,55 +96,48 @@
           <declname>output_higher_limit</declname>
         </param>
         <briefdescription>
-<para>Maps a value in range [input_lower_limit, input_higher_limit] to [output_lower_limit, output_higher_limit]. </para>
-        </briefdescription>
+<para>Maps a value in range [input_lower_limit, input_higher_limit] to [output_lower_limit, output_higher_limit]. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>val</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>value to be mapped </para>
-</parameterdescription>
+<para>value to be mapped </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>input_lower_limit</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>min value of val </para>
-</parameterdescription>
+<para>min value of val </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>input_higher_limit</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>max value of val </para>
-</parameterdescription>
+<para>max value of val </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>output_lower_limit</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>input_lower_limit is mapped to output_lower_limit </para>
-</parameterdescription>
+<para>input_lower_limit is mapped to output_lower_limit </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>output_higher_limit</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>input_higher_limit is mapped to output_higher_limit </para>
-</parameterdescription>
+<para>input_higher_limit is mapped to output_higher_limit </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/utils.h" line="22" column="7" bodyfile="src/utils.c" bodystart="12" bodyend="15" declfile="include/utils.h" declline="22" declcolumn="7"/>
+        <location file="include/utils.h" line="46" column="1" bodyfile="src/utils.c" bodystart="36" bodyend="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -157,14 +145,38 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a22fd7311bf5f09376f4c561febd38899" kindref="member">bound</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a5dd929afde45581ef0588e30db9650f8" kindref="member">map</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_higher_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_higher_limit);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a22fd7311bf5f09376f4c561febd38899" kindref="member">bound</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a5dd929afde45581ef0588e30db9650f8" kindref="member">map</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_higher_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_higher_limit);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/utils.h"/>
   </compounddef>

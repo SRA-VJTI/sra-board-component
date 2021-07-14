@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="adc_8h" kind="file" language="C++">
     <compoundname>adc.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -16,18 +16,20 @@
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="adc_8c" local="yes">src/adc.c</includedby>
     <incdepgraph>
-      <node id="6">
+      <node id="5">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="3">
+      <node id="2">
         <label>stdlib.h</label>
       </node>
-      <node id="5">
+      <node id="4">
         <label>esp_adc_cal.h</label>
       </node>
-      <node id="1">
+      <node id="0">
         <label>include/adc.h</label>
         <link refid="adc_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -46,62 +48,60 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>esp_err.h</label>
-      </node>
-      <node id="4">
-        <label>driver/adc.h</label>
       </node>
       <node id="9">
+        <label>esp_err.h</label>
+      </node>
+      <node id="3">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="8">
         <label>esp_log.h</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
-      <node id="7">
+      <node id="6">
         <label>freertos/task.h</label>
       </node>
-      <node id="2">
+      <node id="1">
         <label>stdio.h</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>freertos/event_groups.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="5">
+      <node id="12">
+        <label>include/lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/adc.h</label>
+        <link refid="adc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
         <label>src/adc.c</label>
         <link refid="adc_8c"/>
       </node>
-      <node id="1">
-        <label>include/adc.h</label>
-        <link refid="adc_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
+      <node id="14">
         <label>src/lsa.c</label>
         <link refid="lsa_8c"/>
       </node>
-      <node id="3">
+      <node id="13">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
-      </node>
-      <node id="2">
-        <label>include/lsa.h</label>
-        <link refid="lsa_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="18" column="9" bodyfile="include/adc.h" bodystart="18" bodyend="-1"/>
+        <location file="include/adc.h" line="42" column="9" bodyfile="include/adc.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -124,17 +124,13 @@
         <argsstring>()</argsstring>
         <name>config_adc1</name>
         <briefdescription>
-<para>Configure width and attenuation of ADC 1. </para>
-        </briefdescription>
+<para>Configure width and attenuation of ADC 1. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG. <linebreak/>
- </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="25" column="11" bodyfile="src/adc.c" bodystart="5" bodyend="19" declfile="include/adc.h" declline="25" declcolumn="11"/>
+        <location file="include/adc.h" line="49" column="1" bodyfile="src/adc.c" bodystart="29" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -142,16 +138,13 @@
         <argsstring>()</argsstring>
         <name>characterize_adc1</name>
         <briefdescription>
-<para>Characterize ADC 1 using either Vref or Two Point. </para>
-        </briefdescription>
+<para>Characterize ADC 1 using either Vref or Two Point. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="32" column="11" bodyfile="src/adc.c" bodystart="21" bodyend="41" declfile="include/adc.h" declline="32" declcolumn="11"/>
+        <location file="include/adc.h" line="56" column="1" bodyfile="src/adc.c" bodystart="45" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1ab564ea72fa47c36b9d06977ea586cb1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -159,17 +152,13 @@
         <argsstring>()</argsstring>
         <name>enable_adc1</name>
         <briefdescription>
-<para>call function <ref refid="adc_8h_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1()</ref> and <ref refid="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1()</ref>. </para>
-        </briefdescription>
+<para>call function <ref refid="adc_8h_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1()</ref> and <ref refid="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG. <linebreak/>
- </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="39" column="11" bodyfile="src/adc.c" bodystart="43" bodyend="51" declfile="include/adc.h" declline="39" declcolumn="11"/>
+        <location file="include/adc.h" line="63" column="1" bodyfile="src/adc.c" bodystart="67" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -181,25 +170,21 @@
           <declname>adc_pin</declname>
         </param>
         <briefdescription>
-<para>Read raw adc value of given adc pin. </para>
-        </briefdescription>
+<para>Read raw adc value of given adc pin. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>adc_pin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>One of the GPIO pin to which LSA is connected (36/39/35/34)</para>
-</parameterdescription>
+<para>One of the GPIO pin to which LSA is connected (36/39/35/34)</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG. </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="48" column="5" bodyfile="src/adc.c" bodystart="53" bodyend="76" declfile="include/adc.h" declline="48" declcolumn="5"/>
+        <location file="include/adc.h" line="72" column="1" bodyfile="src/adc.c" bodystart="77" bodyend="100"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -207,34 +192,58 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_ADC_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ADC_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/adc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_adc_cal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/task.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/event_groups.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="adc_8h_1a63baed8df076ce9dddaea1ae8694c1d8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_VREF<sp/>1100</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8h_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1</ref>();</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1</ref>();</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ADC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ADC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/adc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_adc_cal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8h_1ab564ea72fa47c36b9d06977ea586cb1a" kindref="member">enable_adc1</ref>();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" kindref="member">read_adc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_pin);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/task.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/event_groups.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="adc_8h_1a63baed8df076ce9dddaea1ae8694c1d8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_VREF<sp/>1100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8h_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8h_1ab564ea72fa47c36b9d06977ea586cb1a" kindref="member">enable_adc1</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" kindref="member">read_adc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_pin);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/adc.h"/>
   </compounddef>

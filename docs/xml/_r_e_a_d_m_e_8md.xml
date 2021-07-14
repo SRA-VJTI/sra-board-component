@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
     <compoundname>README.md</compoundname>
     <briefdescription>
@@ -7,28 +7,172 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">#<sp/>sra-board-component</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PROJECT<sp/>LOGO<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;./assets/logo.png&quot;<sp/>alt=&quot;Logo&quot;<sp/>&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">![SRA<sp/>Board<sp/>component](https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg)</highlight></codeline>
-<codeline><highlight class="normal">[![License][license-shield]][license-url]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;h3<sp/>align=&quot;center&quot;&gt;sra-board-component&lt;/h3&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">ESP-IDF<sp/>Component<sp/>for<sp/>[SRA<sp/>Board](https://github.com/SRA-VJTI/sra-board-hardware-design)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>An<sp/>ESP-IDF<sp/>Component<sp/>for<sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-hardware-design&quot;&gt;SRA<sp/>Board&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://sravjti.tech/sra-board-component/&quot;&gt;&lt;strong&gt;Explore<sp/>the<sp/>docs<sp/>»&lt;/strong&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/tree/main/examples&quot;&gt;View<sp/>Demo&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>·</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/issues&quot;&gt;Report<sp/>Bug&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>·</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/issues&quot;&gt;Request<sp/>Feature&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>·</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/pulls&quot;&gt;Send<sp/>a<sp/>Pull<sp/>Request&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;img<sp/>src=&quot;https://github.com/SRA-VJTI/sra-board-component/workflows/SRA%20Board%20component/badge.svg&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/network/members&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;https://img.shields.io/github/forks/SRA-VJTI/sra-board-component&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/stargazers&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;https://img.shields.io/github/stars/SRA-VJTI/sra-board-component&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/issues&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;https://img.shields.io/github/issues/SRA-VJTI/sra-board-component&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;https://img.shields.io/github/license/SRA-VJTI/sra-board-component&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://linkedin.com/in/sra-vjti&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&amp;colorB=555&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>TABLE<sp/>OF<sp/>CONTENTS<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>Contents</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[About<sp/>the<sp/>Project](#about-the-project)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Built<sp/>With](#built-with)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Getting<sp/>Started](#getting-started)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Prerequisites](#prerequisites)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Installation](#installation)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Usage](#usage)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>[Examples](#examples)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Roadmap](#roadmap)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Contributing](#contributing)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[License](#license)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Contact](#contact)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Acknowledgements](#acknowledgements)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ABOUT<sp/>THE<sp/>PROJECT<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>The<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">SRA<sp/>ESP-IDF<sp/>component<sp/>provides<sp/>an<sp/>abstraction<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Built<sp/>With</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[C](https://en.wikipedia.org/wiki/C_(programming_language))</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Toolchain<sp/>&amp;<sp/>Supported<sp/>SDK</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[ESP-IDF<sp/>v4.2-release](https://github.com/espressif/esp-idf/tree/release/v4.2)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Docs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[Doxygen](https://www.doxygen.nl/index.html)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>GETTING<sp/>STARTED<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Hardware<sp/>Required<sp/>:<sp/>[SRA<sp/>Development<sp/>Board](https://github.com/SRA-VJTI/sra-board-hardware-design)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Recommended<sp/>ESP-IDF<sp/>[v4.2-release](https://github.com/espressif/esp-idf/tree/release/v4.2)<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_Refer<sp/>[espressif-docs](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/)<sp/>for<sp/>intallation<sp/>guide_</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Prerequisites</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>A<sp/>stable<sp/>release<sp/>of<sp/>[ESP-IDF](https://github.com/espressif/esp-idf)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Project<sp/>Tree<sp/>containing<sp/>`components`<sp/>dir</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>myProject/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>CMakeLists.txt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>sdkconfig</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>components/<sp/>-<sp/>component1/<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>component2/<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>main/<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>CMakeLists.txt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>src.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>build/</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
 <codeline><highlight class="normal">cd<sp/>&lt;your_esp_idf_project&gt;</highlight></codeline>
 <codeline><highlight class="normal">mkdir<sp/>components</highlight></codeline>
 <codeline><highlight class="normal">cd<sp/>components</highlight></codeline>
 <codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/SRA-VJTI/sra-board-component.git</highlight></codeline>
-<codeline><highlight class="normal">```<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>USAGE<sp/>EXAMPLES<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Visit<sp/>[examples](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">_For<sp/>more<sp/>examples,<sp/>please<sp/>refer<sp/>to<sp/>the<sp/>[Documentation](https://sravjti.tech/sra-board-component/)_</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Examples</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Example<sp/>Link<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/>Description<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|:-:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|---<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|[Bar<sp/>Graph](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/bar_graph)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>Bar<sp/>graph<sp/>led<sp/>can<sp/>be<sp/>used<sp/>for<sp/>testing<sp/>purposes<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[<sp/>Light<sp/>sensing<sp/>array](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/lsa)<sp/><sp/><sp/>|<sp/><sp/>LSA<sp/>aka<sp/>Light<sp/>Sensing<sp/>Array<sp/>is<sp/>used<sp/>mainly<sp/>in<sp/>line<sp/>following<sp/>bot<sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>Motor<sp/>driver<sp/>-<sp/>[normal](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/motor_driver_normal)-<sp/>[parallel](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/motor_driver_parallel)<sp/><sp/><sp/><sp/>|<sp/><sp/>Example<sp/>for<sp/>using<sp/>two<sp/>motor<sp/>drivers<sp/>present<sp/>on<sp/>SRA<sp/>Board<sp/>in<sp/>both<sp/>parallel<sp/>and<sp/>normal<sp/>mode<sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[MPU6050](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/mpu6050)<sp/><sp/><sp/><sp/>|<sp/><sp/>MPU6050<sp/>combines<sp/>3-axis<sp/>Gyroscope,<sp/>3-axis<sp/>Accelerometer<sp/>and<sp/>Motion<sp/>Processor<sp/>all<sp/>in<sp/>small<sp/>package.<sp/>This<sp/>example<sp/>is<sp/>for<sp/>reading<sp/>values<sp/>from<sp/>mpu6050<sp/>accelerometer<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>[Servos](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/servos)<sp/><sp/>|<sp/><sp/>Servos<sp/>are<sp/>used<sp/>in<sp/>the<sp/>locomotion<sp/>of<sp/>bots<sp/>like<sp/>[Wall-E](https://github.com/SRA-VJTI/Wall-E_v2.1)<sp/>.<sp/>This<sp/>example<sp/>is<sp/>for<sp/>using<sp/>the<sp/>servo<sp/>port<sp/>on<sp/>SRA<sp/>Board<sp/>to<sp/>run<sp/>servos<sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>[Switches](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches)<sp/>|<sp/>Manual<sp/>Switches<sp/>provide<sp/>the<sp/>traditional<sp/>comfort<sp/>to<sp/>toggle<sp/>the<sp/>input<sp/>variables.<sp/>This<sp/>example<sp/>is<sp/>for<sp/>using<sp/>four<sp/>user<sp/>switches<sp/>present<sp/>on<sp/>SRA<sp/>Board<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ROADMAP<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Roadmap</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[open<sp/>issues](https://github.com/SRA-VJTI/sra-board-component/issues)<sp/>for<sp/>a<sp/>list<sp/>of<sp/>proposed<sp/>features<sp/>(and<sp/>known<sp/>issues).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>CONTRIBUTING<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contributing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Contributions<sp/>are<sp/>what<sp/>make<sp/>the<sp/>open<sp/>source<sp/>community<sp/>such<sp/>an<sp/>amazing<sp/>place<sp/>to<sp/>be<sp/>learn,<sp/>inspire,<sp/>and<sp/>create.<sp/>Any<sp/>contributions<sp/>you<sp/>make<sp/>are<sp/>**extremely<sp/>appreciated**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Fork<sp/>the<sp/>Project</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Create<sp/>your<sp/>Feature<sp/>Branch<sp/>(`git<sp/>checkout<sp/>-b<sp/>feature/AmazingFeature`)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Commit<sp/>your<sp/>Changes<sp/>(`git<sp/>commit<sp/>-m<sp/>&apos;Add<sp/>some<sp/>AmazingFeature&apos;`)</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Push<sp/>to<sp/>the<sp/>Branch<sp/>(`git<sp/>push<sp/>origin<sp/>feature/AmazingFeature`)</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Open<sp/>a<sp/>Pull<sp/>Request</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>LICENSE<sp/>--&gt;</highlight></codeline>
 <codeline><highlight class="normal">##<sp/>License</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>Distributed<sp/>under<sp/>the<sp/>[MIT<sp/>License](https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Distributed<sp/>under<sp/>the<sp/>[MIT<sp/>License](https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>CONTACT<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contact</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[@SRAVJTI](https://twitter.com/SRAVJTI)<sp/>-<sp/>https://www.sravjti.in/</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[SRA-VJTI<sp/>Website](https://www.sravjti.in/contact-us)</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">[license-shield]:<sp/>https://img.shields.io/github/license/SRA-VJTI/sra-board-component</highlight></codeline>
-<codeline><highlight class="normal">[license-url]:<sp/>https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE</highlight></codeline>
+<codeline></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

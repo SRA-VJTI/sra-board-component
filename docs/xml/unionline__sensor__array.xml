@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="unionline__sensor__array" kind="union" language="C++" prot="public">
     <compoundname>line_sensor_array</compoundname>
     <includes refid="lsa_8h" local="no">lsa.h</includes>
     <innerclass refid="structline__sensor__array_1_1line__sensor" prot="public">line_sensor_array::line_sensor</innerclass>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="unionline__sensor__array_1ac6cc49739fd7d034aeb9db1647a2b1e9" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structline__sensor__array_1_1line__sensor" kindref="compound">line_sensor_array::line_sensor</ref></type>
-        <definition>struct line_sensor_array::line_sensor line_sensor_array::lsa</definition>
+        <definition>struct line_sensor_array::line_sensor  line_sensor_array::lsa</definition>
         <argsstring></argsstring>
         <name>lsa</name>
         <briefdescription>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="18" column="9"/>
+        <location file="include/lsa.h" line="42" column="1"/>
       </memberdef>
       <memberdef kind="variable" id="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="20" column="9" bodyfile="include/lsa.h" bodystart="20" bodyend="-1"/>
+        <location file="include/lsa.h" line="44" column="1" bodyfile="include/lsa.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -37,22 +37,22 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="1">
+      <node id="3">
         <label>line_sensor_array</label>
         <link refid="unionline__sensor__array"/>
-        <childnode refid="2" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>lsa</edgelabel>
         </childnode>
       </node>
-      <node id="2">
+      <node id="4">
         <label>line_sensor_array::line_sensor</label>
         <link refid="structline__sensor__array_1_1line__sensor"/>
       </node>
     </collaborationgraph>
-    <location file="include/lsa.h" line="11" column="1" bodyfile="include/lsa.h" bodystart="10" bodyend="21"/>
+    <location file="include/lsa.h" line="35" column="1" bodyfile="include/lsa.h" bodystart="34" bodyend="45"/>
     <listofallmembers>
       <member refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>adc_reading</name></member>
-      <member refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>lsa</name></member>
+      <member refid="unionline__sensor__array_1ac6cc49739fd7d034aeb9db1647a2b1e9" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>lsa</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
