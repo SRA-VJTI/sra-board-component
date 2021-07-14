@@ -1,63 +1,63 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="servo_8c" kind="file" language="C++">
     <compoundname>servo.c</compoundname>
     <includes refid="servo_8h" local="yes">servo.h</includes>
     <incdepgraph>
-      <node id="2">
-        <label>servo.h</label>
-        <link refid="servo_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
+      <node id="223">
         <label>src/servo.c</label>
         <link refid="servo_8c"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="224" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="226">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="7">
+      <node id="229">
         <label>esp_attr.h</label>
       </node>
-      <node id="10">
+      <node id="232">
         <label>esp_err.h</label>
       </node>
-      <node id="6">
+      <node id="228">
         <label>soc/mcpwm_periph.h</label>
       </node>
-      <node id="9">
+      <node id="231">
         <label>esp_log.h</label>
       </node>
-      <node id="11">
+      <node id="230">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="233">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
-      <node id="8">
-        <label>sdkconfig.h</label>
+      <node id="224">
+        <label>servo.h</label>
+        <link refid="servo_8h"/>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
       </node>
-      <node id="5">
+      <node id="227">
         <label>driver/mcpwm.h</label>
       </node>
-      <node id="3">
+      <node id="225">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="5" column="9" bodyfile="src/servo.c" bodystart="5" bodyend="-1"/>
+        <location file="src/servo.c" line="29" column="9" bodyfile="src/servo.c" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="3" column="19" bodyfile="src/servo.c" bodystart="3" bodyend="-1"/>
+        <location file="src/servo.c" line="27" column="1" bodyfile="src/servo.c" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="servo_8c_1a23cd83a8e8989910cf696b9226d0a495" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="4" column="12" bodyfile="src/servo.c" bodystart="4" bodyend="-1"/>
+        <location file="src/servo.c" line="28" column="1" bodyfile="src/servo.c" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -112,25 +112,22 @@
         <argsstring>()</argsstring>
         <name>enable_servo</name>
         <briefdescription>
-<para>Enables Servo port on the sra board, sets up PWM for the three pins in servo port. </para>
-        </briefdescription>
+<para>Enables Servo port on the sra board, sets up PWM for the three pins in servo port. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="7" column="11" bodyfile="src/servo.c" bodystart="7" bodyend="42"/>
+        <location file="src/servo.c" line="31" column="1" bodyfile="src/servo.c" bodystart="31" bodyend="66"/>
       </memberdef>
-      <memberdef kind="function" id="servo_8c_1a7df1fd536e3aeeba366ae8a542878cd5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="servo_8c_1a5b22e5ca5be55df86b36cea8f542291b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
         <definition>static esp_err_t set_angle_servo_helper</definition>
-        <argsstring>(char *servo_name, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, unsigned int degree_of_rotation, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num, mcpwm_generator_t gen)</argsstring>
+        <argsstring>(int servo_pin, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, unsigned int degree_of_rotation, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num, mcpwm_generator_t gen)</argsstring>
         <name>set_angle_servo_helper</name>
         <param>
-          <type>char *</type>
-          <declname>servo_name</declname>
+          <type>int</type>
+          <declname>servo_pin</declname>
         </param>
         <param>
           <type>int</type>
@@ -166,49 +163,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="44" column="18" bodyfile="src/servo.c" bodystart="44" bodyend="62"/>
+        <location file="src/servo.c" line="68" column="1" bodyfile="src/servo.c" bodystart="68" bodyend="86"/>
       </memberdef>
-      <memberdef kind="function" id="servo_8c_1a424f7770de8a5b81a1a1b8361ac4bf0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="servo_8c_1a203e9c05f59cfc6420e735d86f763301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
         <definition>esp_err_t set_angle_servo</definition>
-        <argsstring>(int servo_id, unsigned int degree_of_rotation)</argsstring>
+        <argsstring>(servo_config *config, unsigned int degree_of_rotation)</argsstring>
         <name>set_angle_servo</name>
         <param>
-          <type>int</type>
-          <declname>servo_id</declname>
+          <type><ref refid="structservo__config" kindref="compound">servo_config</ref> *</type>
+          <declname>config</declname>
         </param>
         <param>
           <type>unsigned int</type>
           <declname>degree_of_rotation</declname>
         </param>
         <briefdescription>
-<para>Set the angle of the servos attached to the servo port of SRA Board. </para>
-        </briefdescription>
+<para>Set the angle of the servos attached to the servo port of SRA Board. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>servo_id</parametername>
+<parametername>config</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pin number of the servo whose angle needs to be set </para>
-</parameterdescription>
+<para>pointer to the <ref refid="structservo__config" kindref="compound">servo_config</ref> struct </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>degree_of_rotation</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>angle to which the servo must be set, depends on value of MAX_DEGREE macro </para>
-</parameterdescription>
+<para>angle to which the servo must be set, depends on value of MAX_DEGREE macro </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="64" column="11" bodyfile="src/servo.c" bodystart="64" bodyend="91"/>
+        <location file="src/servo.c" line="88" column="1" bodyfile="src/servo.c" bodystart="88" bodyend="108"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,97 +208,114 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="servo_8h" kindref="compound">servo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_SERVO<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;servo&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enabled_servo_flag<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STR(A)<sp/>#A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kindref="member">enable_servo</ref>()</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM0A,<sp/><ref refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" kindref="member">SERVO_A</ref>),<sp/>TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>A:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM0B,<sp/><ref refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kindref="member">SERVO_B</ref>),<sp/>TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>B:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM1A,<sp/><ref refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kindref="member">SERVO_C</ref>),<sp/>TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>C:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_config_t<sp/>pwm_config;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>frequency<sp/>=<sp/>50</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.frequency<sp/>=<sp/>50;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxA<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_a<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxB<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_b<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>counter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.counter_mode<sp/>=<sp/>MCPWM_UP_COUNTER;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>duty<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.duty_mode<sp/>=<sp/>MCPWM_DUTY_MODE_0;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>init<sp/>pwm<sp/>0a,<sp/>1a,<sp/>2a<sp/>with<sp/>the<sp/>above<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err_A<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_0,<sp/>MCPWM_TIMER_0,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err_B<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_0,<sp/>MCPWM_TIMER_1,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err_A<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err_B<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_servo_flag<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>servos&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_servo_flag<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>set_angle_servo_helper(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*servo_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_min_pulsewidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_max_pulsewidth,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation,<sp/>mcpwm_unit_t<sp/>mcpwm_num,<sp/>mcpwm_timer_t<sp/>timer_num,<sp/>mcpwm_generator_t<sp/>gen)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>degree_of_rotation<sp/>=<sp/>degree_of_rotation<sp/>&gt;<sp/>servo_max<sp/>?<sp/>servo_max<sp/>:<sp/>degree_of_rotation;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cal_pulsewidth<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>cal_pulsewidth<sp/>=<sp/>(servo_min_pulsewidth<sp/>+<sp/>2<sp/>*<sp/>(((servo_max_pulsewidth<sp/>-<sp/>servo_min_pulsewidth)<sp/>*<sp/>(degree_of_rotation))<sp/>/<sp/>(servo_max)));</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>mcpwm_set_duty_in_us(mcpwm_num,<sp/>timer_num,<sp/>gen,<sp/>cal_pulsewidth);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>%s:<sp/>%ud&quot;</highlight><highlight class="normal">,<sp/>servo_name,<sp/>degree_of_rotation);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>servo_name,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8c_1a424f7770de8a5b81a1a1b8361ac4bf0f" kindref="member">set_angle_servo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_id,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation)</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enabled_servo_flag)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(servo_id<sp/>==<sp/><ref refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" kindref="member">SERVO_A</ref>)</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_angle_servo_helper(<ref refid="servo_8c_1a70fb9b3e7d410312baf880c1292f43ba" kindref="member">STR</ref>(<ref refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" kindref="member">SERVO_A</ref>),<sp/><ref refid="servo_8h_1a845ca14dbdd498c04c84aeb9434b70fc" kindref="member">SERVO_A_MAX_DEGREE</ref>,<sp/><ref refid="servo_8h_1a6376a54e0fe15082b196f563b9a98091" kindref="member">SERVO_A_MIN_PULSEWIDTH</ref>,<sp/><ref refid="servo_8h_1abb7a7b9bbb4de8afc75eb2bd72b8465a" kindref="member">SERVO_A_MAX_PULSEWIDTH</ref>,<sp/>degree_of_rotation,<sp/>MCPWM_UNIT_0,<sp/>MCPWM_TIMER_0,<sp/>MCPWM_OPR_A);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(servo_id<sp/>==<sp/><ref refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kindref="member">SERVO_B</ref>)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_angle_servo_helper(<ref refid="servo_8c_1a70fb9b3e7d410312baf880c1292f43ba" kindref="member">STR</ref>(<ref refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kindref="member">SERVO_B</ref>),<sp/><ref refid="servo_8h_1a697bd747318e73efc970ba631c997cd0" kindref="member">SERVO_B_MAX_DEGREE</ref>,<sp/><ref refid="servo_8h_1a025ef086774f035f0849f38e524c7594" kindref="member">SERVO_B_MIN_PULSEWIDTH</ref>,<sp/><ref refid="servo_8h_1acc261afdcf7e85f571ed5d0b8f02936f" kindref="member">SERVO_B_MAX_PULSEWIDTH</ref>,<sp/>degree_of_rotation,<sp/>MCPWM_UNIT_0,<sp/>MCPWM_TIMER_0,<sp/>MCPWM_OPR_B);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(servo_id<sp/>==<sp/><ref refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kindref="member">SERVO_C</ref>)</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_angle_servo_helper(<ref refid="servo_8c_1a70fb9b3e7d410312baf880c1292f43ba" kindref="member">STR</ref>(<ref refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kindref="member">SERVO_C</ref>),<sp/><ref refid="servo_8h_1ae6f9c9f2ad3e851ba3f98e8c944a7484" kindref="member">SERVO_C_MAX_DEGREE</ref>,<sp/><ref refid="servo_8h_1af48899034203fbf9878d439c6286a7e2" kindref="member">SERVO_C_MIN_PULSEWIDTH</ref>,<sp/><ref refid="servo_8h_1a9bd897b2d6eb3f01fcda8c8230b02107" kindref="member">SERVO_C_MAX_PULSEWIDTH</ref>,<sp/>degree_of_rotation,<sp/>MCPWM_UNIT_0,<sp/>MCPWM_TIMER_1,<sp/>MCPWM_OPR_A);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>incorrect<sp/>servo<sp/>pin<sp/>passed<sp/>to<sp/>function&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servos<sp/>not<sp/>enabled,<sp/>call<sp/>enable_servo()<sp/>before<sp/>using<sp/>servos&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="servo_8h" kindref="compound">servo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_SERVO<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;servo&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enabled_servo_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STR(A)<sp/>#A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kindref="member">enable_servo</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM0A,<sp/><ref refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" kindref="member">SERVO_A</ref>),<sp/>TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>A:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM0B,<sp/><ref refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kindref="member">SERVO_B</ref>),<sp/>TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>B:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM1A,<sp/><ref refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kindref="member">SERVO_C</ref>),<sp/>TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>C:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_config_t<sp/>pwm_config;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>frequency<sp/>=<sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.frequency<sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxA<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_a<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxB<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>counter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.counter_mode<sp/>=<sp/>MCPWM_UP_COUNTER;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>duty<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.duty_mode<sp/>=<sp/>MCPWM_DUTY_MODE_0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>init<sp/>pwm<sp/>0a,<sp/>1a,<sp/>2a<sp/>with<sp/>the<sp/>above<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err_A<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_0,<sp/>MCPWM_TIMER_0,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err_B<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_0,<sp/>MCPWM_TIMER_1,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err_A<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err_B<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_servo_flag<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>servos&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_servo_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>set_angle_servo_helper(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_min_pulsewidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>servo_max_pulsewidth,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation,<sp/>mcpwm_unit_t<sp/>mcpwm_num,<sp/>mcpwm_timer_t<sp/>timer_num,<sp/>mcpwm_generator_t<sp/>gen)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>degree_of_rotation<sp/>=<sp/>degree_of_rotation<sp/>&gt;<sp/>servo_max<sp/>?<sp/>servo_max<sp/>:<sp/>degree_of_rotation;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cal_pulsewidth<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>cal_pulsewidth<sp/>=<sp/>(servo_min_pulsewidth<sp/>+<sp/>((servo_max_pulsewidth<sp/>-<sp/>servo_min_pulsewidth)<sp/>*<sp/>(degree_of_rotation))<sp/>/<sp/>(servo_max));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>mcpwm_set_duty_in_us(mcpwm_num,<sp/>timer_num,<sp/>gen,<sp/>cal_pulsewidth);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>servo<sp/>at<sp/>pin<sp/>%d:<sp/>%ud&quot;</highlight><highlight class="normal">,<sp/>servo_pin,<sp/>degree_of_rotation);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servo<sp/>at<sp/>pin<sp/>%d:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>servo_pin,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kindref="member">set_angle_servo</ref>(<ref refid="structservo__config" kindref="compound">servo_config</ref><sp/>*config,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enabled_servo_flag)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_angle_servo_helper(config-&gt;<ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>,config-&gt;<ref refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kindref="member">max_degree</ref>,config-&gt;<ref refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kindref="member">min_pulse_width</ref>,config-&gt;<ref refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kindref="member">max_pulse_width</ref>,degree_of_rotation,config-&gt;<ref refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kindref="member">mcpwm_num</ref>,config-&gt;<ref refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kindref="member">timer_num</ref>,config-&gt;<ref refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kindref="member">gen</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>incorrect<sp/>servo<sp/>pin<sp/>passed<sp/>to<sp/>function&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servos<sp/>not<sp/>enabled,<sp/>call<sp/>enable_servo()<sp/>before<sp/>using<sp/>servos&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/servo.c"/>
   </compounddef>

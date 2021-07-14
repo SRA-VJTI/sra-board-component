@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="motor__driver_8h" kind="file" language="C++">
     <compoundname>motor_driver.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -14,82 +14,82 @@
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="motor__driver_8c" local="yes">src/motor_driver.c</includedby>
     <incdepgraph>
-      <node id="3">
+      <node id="50">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="6">
+      <node id="53">
         <label>esp_attr.h</label>
       </node>
-      <node id="8">
+      <node id="55">
         <label>esp_err.h</label>
       </node>
-      <node id="5">
+      <node id="52">
         <label>soc/mcpwm_periph.h</label>
       </node>
-      <node id="7">
+      <node id="54">
         <label>esp_log.h</label>
       </node>
-      <node id="9">
+      <node id="56">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
-      <node id="1">
-        <label>include/motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
+      <node id="51">
         <label>driver/mcpwm.h</label>
       </node>
-      <node id="2">
+      <node id="48">
+        <label>include/motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="5">
-        <label>src/motor_driver.c</label>
-        <link refid="motor__driver_8c"/>
-      </node>
-      <node id="3">
-        <label>include/sra_board.h</label>
-        <link refid="sra__board_8h"/>
-      </node>
-      <node id="4">
+      <node id="60">
         <label>src/bar_graph.c</label>
         <link refid="bar__graph_8c"/>
       </node>
-      <node id="1">
-        <label>include/motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
+      <node id="61">
+        <label>src/motor_driver.c</label>
+        <link refid="motor__driver_8c"/>
       </node>
-      <node id="2">
+      <node id="58">
         <label>include/bar_graph.h</label>
         <link refid="bar__graph_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="60" relation="include">
         </childnode>
+      </node>
+      <node id="57">
+        <label>include/motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="14" column="9" bodyfile="include/motor_driver.h" bodystart="14" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="38" column="9" bodyfile="include/motor_driver.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" prot="public" static="no">
         <name>NORMAL_MODE</name>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="15" column="9" bodyfile="include/motor_driver.h" bodystart="15" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="39" column="9" bodyfile="include/motor_driver.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d" prot="public" static="no">
         <name>MOTOR_FORWARD</name>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="17" column="9" bodyfile="include/motor_driver.h" bodystart="17" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="41" column="9" bodyfile="include/motor_driver.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763" prot="public" static="no">
         <name>MOTOR_BACKWARD</name>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="18" column="9" bodyfile="include/motor_driver.h" bodystart="18" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="42" column="9" bodyfile="include/motor_driver.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" prot="public" static="no">
         <name>MOTOR_STOP</name>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="19" column="9" bodyfile="include/motor_driver.h" bodystart="19" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="43" column="9" bodyfile="include/motor_driver.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" prot="public" static="no">
         <name>MOTOR_A_0</name>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="21" column="9" bodyfile="include/motor_driver.h" bodystart="21" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="45" column="9" bodyfile="include/motor_driver.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" prot="public" static="no">
         <name>MOTOR_A_1</name>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="22" column="9" bodyfile="include/motor_driver.h" bodystart="22" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="46" column="9" bodyfile="include/motor_driver.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" prot="public" static="no">
         <name>MOTOR_B_0</name>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="23" column="9" bodyfile="include/motor_driver.h" bodystart="23" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="47" column="9" bodyfile="include/motor_driver.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719" prot="public" static="no">
         <name>MOTOR_B_1</name>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="24" column="9" bodyfile="include/motor_driver.h" bodystart="24" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="48" column="9" bodyfile="include/motor_driver.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85" prot="public" static="no">
         <name>enable_motor_driver</name>
@@ -198,56 +198,48 @@
         <param><defname>mode</defname></param>
         <initializer>enable_motor_driver_##id(mode)</initializer>
         <briefdescription>
-<para>Enables Motor driver in Parallel or Normal Mode. </para>
-        </briefdescription>
+<para>Enables Motor driver in Parallel or Normal Mode. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>for id=a, enables motor driver a and for id=b, enables motor driver b </para>
-</parameterdescription>
+<para>for id=a, enables motor driver a and for id=b, enables motor driver b </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para>
-</parameterdescription>
+<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="32" column="9" bodyfile="include/motor_driver.h" bodystart="32" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="56" column="9" bodyfile="include/motor_driver.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" prot="public" static="no">
         <name>read_motor_driver_mode</name>
         <param><defname>id</defname></param>
         <initializer>read_motor_driver_mode_##id()</initializer>
         <briefdescription>
-<para>Reads mode of motor driver. </para>
-        </briefdescription>
+<para>Reads mode of motor driver. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>for id=a, returns mode of motor driver a, for id=b, returns mode of motor driver b </para>
-</parameterdescription>
+<para>for id=a, returns mode of motor driver a, for id=b, returns mode of motor driver b </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="40" column="9" bodyfile="include/motor_driver.h" bodystart="40" bodyend="-1"/>
+        <location file="include/motor_driver.h" line="64" column="9" bodyfile="include/motor_driver.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -261,25 +253,21 @@
           <declname>mode</declname>
         </param>
         <briefdescription>
-<para>Enables Motor driver A in Parallel or Normal Mode. </para>
-        </briefdescription>
+<para>Enables Motor driver A in Parallel or Normal Mode. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para>
-</parameterdescription>
+<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="48" column="11" bodyfile="src/motor_driver.c" bodystart="7" bodyend="81" declfile="include/motor_driver.h" declline="48" declcolumn="11"/>
+        <location file="include/motor_driver.h" line="72" column="1" bodyfile="src/motor_driver.c" bodystart="31" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8h_1a11c7858cdd467a4bbcff436e43a585e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -291,25 +279,21 @@
           <declname>mode</declname>
         </param>
         <briefdescription>
-<para>Enables Motor driver B in Parallel or Normal Mode. </para>
-        </briefdescription>
+<para>Enables Motor driver B in Parallel or Normal Mode. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para>
-</parameterdescription>
+<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="56" column="11" bodyfile="src/motor_driver.c" bodystart="83" bodyend="157" declfile="include/motor_driver.h" declline="56" declcolumn="11"/>
+        <location file="include/motor_driver.h" line="80" column="1" bodyfile="src/motor_driver.c" bodystart="107" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8h_1a027943094f99f52b1ea067ab85384686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -329,41 +313,35 @@
           <declname>duty_cycle</declname>
         </param>
         <briefdescription>
-<para>Set the speed of motors. </para>
-        </briefdescription>
+<para>Set the speed of motors. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>motor_id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction </para>
-</parameterdescription>
+<para>set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>direction</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor </para>
-</parameterdescription>
+<para>set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>duty_cycle</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set the duty cycle of the motor driver PWM </para>
-</parameterdescription>
+<para>set the duty cycle of the motor driver PWM </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="66" column="11" bodyfile="src/motor_driver.c" bodystart="195" bodyend="238" declfile="include/motor_driver.h" declline="66" declcolumn="11"/>
+        <location file="include/motor_driver.h" line="90" column="1" bodyfile="src/motor_driver.c" bodystart="219" bodyend="262"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8h_1ae7ed1b0e385fe871d79ac02fc5177768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -371,16 +349,13 @@
         <argsstring>()</argsstring>
         <name>read_motor_driver_mode_a</name>
         <briefdescription>
-<para>Reads mode of motor driver A. </para>
-        </briefdescription>
+<para>Reads mode of motor driver A. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="73" column="5" bodyfile="src/motor_driver.c" bodystart="240" bodyend="243" declfile="include/motor_driver.h" declline="73" declcolumn="5"/>
+        <location file="include/motor_driver.h" line="97" column="1" bodyfile="src/motor_driver.c" bodystart="264" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8h_1a61b75cb1eb76f0a02144746799c6b3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -388,16 +363,13 @@
         <argsstring>()</argsstring>
         <name>read_motor_driver_mode_b</name>
         <briefdescription>
-<para>Reads mode of motor driver B. </para>
-        </briefdescription>
+<para>Reads mode of motor driver B. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/motor_driver.h" line="80" column="5" bodyfile="src/motor_driver.c" bodystart="245" bodyend="248" declfile="include/motor_driver.h" declline="80" declcolumn="5"/>
+        <location file="include/motor_driver.h" line="104" column="1" bodyfile="src/motor_driver.c" bodystart="269" bodyend="272"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -405,46 +377,70 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MOTOR_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/mcpwm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;soc/mcpwm_periph.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_attr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARALLEL_MODE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NORMAL_MODE<sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_FORWARD<sp/>200</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_BACKWARD<sp/>201</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_STOP<sp/>202</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_A_0<sp/>100</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_A_1<sp/>101</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_B_0<sp/>102</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_B_1<sp/>103</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85" refkind="member"><highlight class="preprocessor">#define<sp/>enable_motor_driver(id,<sp/>mode)<sp/>enable_motor_driver_##id(mode)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MOTOR_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_DRIVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/mcpwm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;soc/mcpwm_periph.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_attr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" refkind="member"><highlight class="preprocessor">#define<sp/>read_motor_driver_mode(id)<sp/>read_motor_driver_mode_##id()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8h_1a9fc3907d0ee8196eca819e1e5e1c6977" kindref="member">enable_motor_driver_a</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARALLEL_MODE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NORMAL_MODE<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_FORWARD<sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_BACKWARD<sp/>201</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_STOP<sp/>202</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_A_0<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_A_1<sp/>101</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_B_0<sp/>102</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOTOR_B_1<sp/>103</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8h_1a11c7858cdd467a4bbcff436e43a585e1" kindref="member">enable_motor_driver_b</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="56" refid="motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85" refkind="member"><highlight class="preprocessor">#define<sp/>enable_motor_driver(id,<sp/>mode)<sp/>enable_motor_driver_##id(mode)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8h_1a027943094f99f52b1ea067ab85384686" kindref="member">set_motor_speed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>motor_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8h_1ae7ed1b0e385fe871d79ac02fc5177768" kindref="member">read_motor_driver_mode_a</ref>();</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8h_1a61b75cb1eb76f0a02144746799c6b3e1" kindref="member">read_motor_driver_mode_b</ref>();</highlight></codeline>
+<codeline lineno="64" refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" refkind="member"><highlight class="preprocessor">#define<sp/>read_motor_driver_mode(id)<sp/>read_motor_driver_mode_##id()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8h_1a9fc3907d0ee8196eca819e1e5e1c6977" kindref="member">enable_motor_driver_a</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8h_1a11c7858cdd467a4bbcff436e43a585e1" kindref="member">enable_motor_driver_b</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8h_1a027943094f99f52b1ea067ab85384686" kindref="member">set_motor_speed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>motor_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty_cycle);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8h_1ae7ed1b0e385fe871d79ac02fc5177768" kindref="member">read_motor_driver_mode_a</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8h_1a61b75cb1eb76f0a02144746799c6b3e1" kindref="member">read_motor_driver_mode_b</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/motor_driver.h"/>
   </compounddef>

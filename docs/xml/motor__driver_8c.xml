@@ -1,58 +1,58 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="motor__driver_8c" kind="file" language="C++">
     <compoundname>motor_driver.c</compoundname>
     <includes refid="motor__driver_8h" local="yes">motor_driver.h</includes>
     <incdepgraph>
-      <node id="4">
-        <label>freertos/FreeRTOS.h</label>
-      </node>
-      <node id="7">
-        <label>esp_attr.h</label>
-      </node>
-      <node id="1">
+      <node id="197">
         <label>src/motor_driver.c</label>
         <link refid="motor__driver_8c"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="200">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="203">
+        <label>esp_attr.h</label>
+      </node>
+      <node id="205">
         <label>esp_err.h</label>
       </node>
-      <node id="6">
+      <node id="202">
         <label>soc/mcpwm_periph.h</label>
       </node>
-      <node id="8">
+      <node id="204">
         <label>esp_log.h</label>
       </node>
-      <node id="10">
+      <node id="206">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
-      <node id="2">
-        <label>motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
+      <node id="201">
         <label>driver/mcpwm.h</label>
       </node>
-      <node id="3">
+      <node id="198">
+        <label>motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="3" column="19" bodyfile="src/motor_driver.c" bodystart="3" bodyend="-1"/>
+        <location file="src/motor_driver.c" line="27" column="1" bodyfile="src/motor_driver.c" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="motor__driver_8c_1aa7773c94ae40290aa934c7fb3b243e0a" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="4" column="12" bodyfile="src/motor_driver.c" bodystart="4" bodyend="-1"/>
+        <location file="src/motor_driver.c" line="28" column="1" bodyfile="src/motor_driver.c" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="motor__driver_8c_1a214718d6a8178ee9f2a66f4689080507" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="5" column="12" bodyfile="src/motor_driver.c" bodystart="5" bodyend="-1"/>
+        <location file="src/motor_driver.c" line="29" column="1" bodyfile="src/motor_driver.c" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -111,25 +111,21 @@
           <declname>mode</declname>
         </param>
         <briefdescription>
-<para>Enables Motor driver A in Parallel or Normal Mode. </para>
-        </briefdescription>
+<para>Enables Motor driver A in Parallel or Normal Mode. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para>
-</parameterdescription>
+<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="7" column="11" bodyfile="src/motor_driver.c" bodystart="7" bodyend="81"/>
+        <location file="src/motor_driver.c" line="31" column="1" bodyfile="src/motor_driver.c" bodystart="31" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8c_1a11c7858cdd467a4bbcff436e43a585e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -141,25 +137,21 @@
           <declname>mode</declname>
         </param>
         <briefdescription>
-<para>Enables Motor driver B in Parallel or Normal Mode. </para>
-        </briefdescription>
+<para>Enables Motor driver B in Parallel or Normal Mode. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para>
-</parameterdescription>
+<para>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="83" column="11" bodyfile="src/motor_driver.c" bodystart="83" bodyend="157"/>
+        <location file="src/motor_driver.c" line="107" column="1" bodyfile="src/motor_driver.c" bodystart="107" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8c_1a7f29277a8306338a778cd11d99433eb1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -188,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="159" column="18" bodyfile="src/motor_driver.c" bodystart="159" bodyend="193"/>
+        <location file="src/motor_driver.c" line="183" column="1" bodyfile="src/motor_driver.c" bodystart="183" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8c_1a027943094f99f52b1ea067ab85384686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -208,41 +200,35 @@
           <declname>duty_cycle</declname>
         </param>
         <briefdescription>
-<para>Set the speed of motors. </para>
-        </briefdescription>
+<para>Set the speed of motors. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>motor_id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction </para>
-</parameterdescription>
+<para>set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>direction</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor </para>
-</parameterdescription>
+<para>set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>duty_cycle</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>set the duty cycle of the motor driver PWM </para>
-</parameterdescription>
+<para>set the duty cycle of the motor driver PWM </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="195" column="11" bodyfile="src/motor_driver.c" bodystart="195" bodyend="238"/>
+        <location file="src/motor_driver.c" line="219" column="1" bodyfile="src/motor_driver.c" bodystart="219" bodyend="262"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -250,16 +236,13 @@
         <argsstring>()</argsstring>
         <name>read_motor_driver_mode_a</name>
         <briefdescription>
-<para>Reads mode of motor driver A. </para>
-        </briefdescription>
+<para>Reads mode of motor driver A. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="240" column="5" bodyfile="src/motor_driver.c" bodystart="240" bodyend="243"/>
+        <location file="src/motor_driver.c" line="264" column="1" bodyfile="src/motor_driver.c" bodystart="264" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="motor__driver_8c_1a61b75cb1eb76f0a02144746799c6b3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -267,16 +250,13 @@
         <argsstring>()</argsstring>
         <name>read_motor_driver_mode_b</name>
         <briefdescription>
-<para>Reads mode of motor driver B. </para>
-        </briefdescription>
+<para>Reads mode of motor driver B. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/motor_driver.c" line="245" column="5" bodyfile="src/motor_driver.c" bodystart="245" bodyend="248"/>
+        <location file="src/motor_driver.c" line="269" column="1" bodyfile="src/motor_driver.c" bodystart="269" bodyend="272"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -284,254 +264,278 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="motor__driver_8h" kindref="compound">motor_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_MOTOR_DRIVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;motor_driver&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode_motor_driver_a<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode_motor_driver_b<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8c_1a9fc3907d0ee8196eca819e1e5e1c6977" kindref="member">enable_motor_driver_a</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode)</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0A,<sp/><ref refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" kindref="member">MDA_PARALLEL_IN_1_2</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0B,<sp/><ref refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" kindref="member">MDA_PARALLEL_IN_3_4</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0A,<sp/><ref refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" kindref="member">MDA_NORMAL_IN_1</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0B,<sp/><ref refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" kindref="member">MDA_NORMAL_IN_2</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1A,<sp/><ref refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" kindref="member">MDA_NORMAL_IN_3</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1B,<sp/><ref refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" kindref="member">MDA_NORMAL_IN_4</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_config_t<sp/>pwm_config;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>frequency<sp/>=<sp/>20000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.frequency<sp/>=<sp/>20000;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxA<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_a<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxB<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_b<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>counter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.counter_mode<sp/>=<sp/>MCPWM_UP_COUNTER;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>duty<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.duty_mode<sp/>=<sp/>MCPWM_DUTY_MODE_0;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_0<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_0,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err1_0<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>A<sp/>in<sp/>parallel<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_0<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_0,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_1<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_1,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err1_0<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err1_1<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>A<sp/>in<sp/>normal<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>2;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8c_1a11c7858cdd467a4bbcff436e43a585e1" kindref="member">enable_motor_driver_b</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode)</highlight></codeline>
-<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err;</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="motor__driver_8h" kindref="compound">motor_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_MOTOR_DRIVER<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;motor_driver&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode_motor_driver_a<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode_motor_driver_b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8c_1a9fc3907d0ee8196eca819e1e5e1c6977" kindref="member">enable_motor_driver_a</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0A,<sp/><ref refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" kindref="member">MDA_PARALLEL_IN_1_2</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0B,<sp/><ref refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" kindref="member">MDA_PARALLEL_IN_3_4</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0A,<sp/><ref refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" kindref="member">MDA_NORMAL_IN_1</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM0B,<sp/><ref refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" kindref="member">MDA_NORMAL_IN_2</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1A,<sp/><ref refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" kindref="member">MDA_NORMAL_IN_3</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1B,<sp/><ref refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" kindref="member">MDA_NORMAL_IN_4</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_config_t<sp/>pwm_config;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>frequency<sp/>=<sp/>20000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.frequency<sp/>=<sp/>20000;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxA<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_a<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxB<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>counter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.counter_mode<sp/>=<sp/>MCPWM_UP_COUNTER;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>duty<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.duty_mode<sp/>=<sp/>MCPWM_DUTY_MODE_0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_0<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_0,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err1_0<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>A<sp/>in<sp/>parallel<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_0<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_0,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_1<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_1,<sp/>&amp;pwm_config);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1A,<sp/><ref refid="pin__defs_8h_1aa7eeb54d670ea6ca908825e393b75d33" kindref="member">MDB_PARALLEL_IN_5_7</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1B,<sp/><ref refid="pin__defs_8h_1a311349d98da80e0ea71b910031fd0f60" kindref="member">MDB_PARALLEL_IN_6_8</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM2A,<sp/><ref refid="pin__defs_8h_1a074f338976294deee773f86c149766af" kindref="member">MDB_NORMAL_IN_5</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM2B,<sp/><ref refid="pin__defs_8h_1a5186251144aeb6708634d2e53eb37fa6" kindref="member">MDB_NORMAL_IN_6</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM2A,<sp/><ref refid="pin__defs_8h_1a45d361c8ed90ddb9c56d418eda0ad7a7" kindref="member">MDB_NORMAL_IN_7</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM2B,<sp/><ref refid="pin__defs_8h_1ae5c32c4e625ae38744483f26fbb809ad" kindref="member">MDB_NORMAL_IN_8</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_config_t<sp/>pwm_config;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>frequency<sp/>=<sp/>20000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.frequency<sp/>=<sp/>20000;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxA<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_a<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxB<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_b<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>counter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.counter_mode<sp/>=<sp/>MCPWM_UP_COUNTER;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>duty<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.duty_mode<sp/>=<sp/>MCPWM_DUTY_MODE_0;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_1<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_1,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err1_1<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>B<sp/>in<sp/>parallel<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err0_2<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_0,<sp/>MCPWM_TIMER_2,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_2<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_2,<sp/>&amp;pwm_config);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err0_2<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err1_2<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>B<sp/>in<sp/>normal<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>2;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>set_motor_speed_helper(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty_cycle,<sp/>mcpwm_unit_t<sp/>mcpwm_num,<sp/>mcpwm_timer_t<sp/>timer_num)</highlight></codeline>
-<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>==<sp/><ref refid="motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d" kindref="member">MOTOR_FORWARD</ref>)</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>0);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>==<sp/><ref refid="motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763" kindref="member">MOTOR_BACKWARD</ref>)</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>0);</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>duty_cycle);</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>==<sp/><ref refid="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" kindref="member">MOTOR_STOP</ref>)</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>0);</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>0);</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>direction<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8c_1a027943094f99f52b1ea067ab85384686" kindref="member">set_motor_speed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>motor_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty_cycle)</highlight></codeline>
-<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kindref="member">MOTOR_A_0</ref><sp/>||<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" kindref="member">MOTOR_A_1</ref>)<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>MCPWM_UNIT_1,<sp/>MCPWM_TIMER_0);</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_timer_t<sp/>timer_val<sp/>=<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kindref="member">MOTOR_A_0</ref><sp/>?<sp/>MCPWM_TIMER_0<sp/>:<sp/>MCPWM_TIMER_1;</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>MCPWM_UNIT_1,<sp/>timer_val);</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>driver<sp/>A<sp/>is<sp/>disabled,<sp/>call<sp/>enable_motor_driver(a)&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" kindref="member">MOTOR_B_0</ref><sp/>||<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719" kindref="member">MOTOR_B_1</ref>)<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>MCPWM_UNIT_1,<sp/>MCPWM_TIMER_1);</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_unit_t<sp/>unit_val<sp/>=<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" kindref="member">MOTOR_B_0</ref><sp/>?<sp/>MCPWM_UNIT_1<sp/>:<sp/>MCPWM_UNIT_0;</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>unit_val,<sp/>MCPWM_TIMER_2);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err1_0<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err1_1<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>A<sp/>in<sp/>normal<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_a<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8c_1a11c7858cdd467a4bbcff436e43a585e1" kindref="member">enable_motor_driver_b</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1A,<sp/><ref refid="pin__defs_8h_1aa7eeb54d670ea6ca908825e393b75d33" kindref="member">MDB_PARALLEL_IN_5_7</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM1B,<sp/><ref refid="pin__defs_8h_1a311349d98da80e0ea71b910031fd0f60" kindref="member">MDB_PARALLEL_IN_6_8</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM2A,<sp/><ref refid="pin__defs_8h_1a074f338976294deee773f86c149766af" kindref="member">MDB_NORMAL_IN_5</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_1,<sp/>MCPWM2B,<sp/><ref refid="pin__defs_8h_1a5186251144aeb6708634d2e53eb37fa6" kindref="member">MDB_NORMAL_IN_6</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM2A,<sp/><ref refid="pin__defs_8h_1a45d361c8ed90ddb9c56d418eda0ad7a7" kindref="member">MDB_NORMAL_IN_7</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kindref="member">CHECK_LOGE</ref>(err,<sp/>mcpwm_gpio_init(MCPWM_UNIT_0,<sp/>MCPWM2B,<sp/><ref refid="pin__defs_8h_1ae5c32c4e625ae38744483f26fbb809ad" kindref="member">MDB_NORMAL_IN_8</ref>),<sp/>TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_config_t<sp/>pwm_config;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>frequency<sp/>=<sp/>20000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.frequency<sp/>=<sp/>20000;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxA<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_a<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>initial<sp/>duty<sp/>cycle<sp/>of<sp/>PWMxB<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.cmpr_b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>counter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.counter_mode<sp/>=<sp/>MCPWM_UP_COUNTER;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sets<sp/>the<sp/>pwm<sp/>duty<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>pwm_config.duty_mode<sp/>=<sp/>MCPWM_DUTY_MODE_0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_1<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_1,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err1_1<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>B<sp/>in<sp/>parallel<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err0_2<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_0,<sp/>MCPWM_TIMER_2,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err1_2<sp/>=<sp/>mcpwm_init(MCPWM_UNIT_1,<sp/>MCPWM_TIMER_2,<sp/>&amp;pwm_config);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err0_2<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err1_2<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>motor<sp/>driver<sp/>B<sp/>in<sp/>normal<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_motor_driver_b<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>driver<sp/>mode<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>set_motor_speed_helper(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty_cycle,<sp/>mcpwm_unit_t<sp/>mcpwm_num,<sp/>mcpwm_timer_t<sp/>timer_num)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>==<sp/><ref refid="motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d" kindref="member">MOTOR_FORWARD</ref>)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>duty_cycle);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>0);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>==<sp/><ref refid="motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763" kindref="member">MOTOR_BACKWARD</ref>)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>0);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>duty_cycle);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>==<sp/><ref refid="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" kindref="member">MOTOR_STOP</ref>)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>0);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_A,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>0);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_set_duty_type(mcpwm_num,<sp/>timer_num,<sp/>MCPWM_OPR_B,<sp/>MCPWM_DUTY_MODE_0);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor<sp/>direction<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">esp_err_t<sp/><ref refid="motor__driver_8c_1a027943094f99f52b1ea067ab85384686" kindref="member">set_motor_speed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>motor_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty_cycle)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kindref="member">MOTOR_A_0</ref><sp/>||<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" kindref="member">MOTOR_A_1</ref>)<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>MCPWM_UNIT_1,<sp/>MCPWM_TIMER_0);</highlight></codeline>
 <codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
 <codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>driver<sp/>A<sp/>is<sp/>disabled,<sp/>call<sp/>enable_motor_driver(a)&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor_id<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768" kindref="member">read_motor_driver_mode_a</ref>()</highlight></codeline>
-<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mode_motor_driver_a;</highlight></codeline>
-<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8c_1a61b75cb1eb76f0a02144746799c6b3e1" kindref="member">read_motor_driver_mode_b</ref>()</highlight></codeline>
-<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mode_motor_driver_b;</highlight></codeline>
-<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_timer_t<sp/>timer_val<sp/>=<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kindref="member">MOTOR_A_0</ref><sp/>?<sp/>MCPWM_TIMER_0<sp/>:<sp/>MCPWM_TIMER_1;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>MCPWM_UNIT_1,<sp/>timer_val);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>driver<sp/>A<sp/>is<sp/>disabled,<sp/>call<sp/>enable_motor_driver(a)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" kindref="member">MOTOR_B_0</ref><sp/>||<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719" kindref="member">MOTOR_B_1</ref>)<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/><ref refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kindref="member">PARALLEL_MODE</ref>)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>MCPWM_UNIT_1,<sp/>MCPWM_TIMER_1);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/><ref refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kindref="member">NORMAL_MODE</ref>)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_unit_t<sp/>unit_val<sp/>=<sp/>motor_id<sp/>==<sp/><ref refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" kindref="member">MOTOR_B_0</ref><sp/>?<sp/>MCPWM_UNIT_1<sp/>:<sp/>MCPWM_UNIT_0;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_motor_speed_helper(direction,<sp/>duty_cycle,<sp/>unit_val,<sp/>MCPWM_TIMER_2);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>driver<sp/>A<sp/>is<sp/>disabled,<sp/>call<sp/>enable_motor_driver(a)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MOTOR_DRIVER,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>motor_id<sp/>selected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768" kindref="member">read_motor_driver_mode_a</ref>()</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mode_motor_driver_a;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="motor__driver_8c_1a61b75cb1eb76f0a02144746799c6b3e1" kindref="member">read_motor_driver_mode_b</ref>()</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mode_motor_driver_b;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/motor_driver.c"/>
   </compounddef>

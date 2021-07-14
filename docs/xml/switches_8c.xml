@@ -1,49 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="switches_8c" kind="file" language="C++">
     <compoundname>switches.c</compoundname>
     <includes refid="switches_8h" local="yes">switches.h</includes>
     <incdepgraph>
-      <node id="5">
+      <node id="239">
         <label>driver/gpio.h</label>
       </node>
-      <node id="4">
+      <node id="238">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="3">
+      <node id="237">
         <label>stdlib.h</label>
       </node>
-      <node id="7">
-        <label>esp_err.h</label>
-      </node>
-      <node id="6">
-        <label>esp_log.h</label>
-      </node>
-      <node id="8">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-      </node>
-      <node id="1">
+      <node id="235">
         <label>src/switches.c</label>
         <link refid="switches_8c"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="236" relation="include">
         </childnode>
       </node>
-      <node id="2">
+      <node id="236">
         <label>switches.h</label>
         <link refid="switches_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="237" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="238" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="239" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="240" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="241" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="242" relation="include">
         </childnode>
+      </node>
+      <node id="241">
+        <label>esp_err.h</label>
+      </node>
+      <node id="240">
+        <label>esp_log.h</label>
+      </node>
+      <node id="242">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
       </node>
     </incdepgraph>
       <sectiondef kind="var">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/switches.c" line="3" column="19" bodyfile="src/switches.c" bodystart="3" bodyend="-1"/>
+        <location file="src/switches.c" line="27" column="1" bodyfile="src/switches.c" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="switches_8c_1afaf2bf69f5d546816dbfe97da4b74e48" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/switches.c" line="4" column="12" bodyfile="src/switches.c" bodystart="4" bodyend="-1"/>
+        <location file="src/switches.c" line="28" column="1" bodyfile="src/switches.c" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -83,16 +83,13 @@
         <argsstring>()</argsstring>
         <name>enable_switches</name>
         <briefdescription>
-<para>Enables tactile switches on the sra board, sets up required gpio&apos;s in input pull-up mode. </para>
-        </briefdescription>
+<para>Enables tactile switches on the sra board, sets up required gpio&apos;s in input pull-up mode. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if gpio&apos;s initialised, else it returns ESP_ERR_INVALID_ARG </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if gpio&apos;s initialised, else it returns ESP_ERR_INVALID_ARG </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/switches.c" line="6" column="11" bodyfile="src/switches.c" bodystart="6" bodyend="34"/>
+        <location file="src/switches.c" line="30" column="1" bodyfile="src/switches.c" bodystart="30" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="switches_8c_1aa394f2692a1f424f79d5c3dcfa0d7bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -104,25 +101,21 @@
           <declname>switch_id</declname>
         </param>
         <briefdescription>
-<para>Reads the state of one of the four switches on sra board. </para>
-        </briefdescription>
+<para>Reads the state of one of the four switches on sra board. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>switch_id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>id of the switch which needs to be read, we can pass the following macros: SWITCH_1, SWITCH_2, SWITCH_3, SWITCH_4. </para>
-</parameterdescription>
+<para>id of the switch which needs to be read, we can pass the following macros: SWITCH_1, SWITCH_2, SWITCH_3, SWITCH_4. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>int - returns state of the switch, 1 if it is pressed and 0 if it is not pressed. </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>int - returns state of the switch, 1 if it is pressed and 0 if it is not pressed. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/switches.c" line="36" column="5" bodyfile="src/switches.c" bodystart="36" bodyend="47"/>
+        <location file="src/switches.c" line="60" column="1" bodyfile="src/switches.c" bodystart="60" bodyend="71"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -130,53 +123,77 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="switches_8h" kindref="compound">switches.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_SWITCHES<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;switches&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enabled_switches_flag<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">esp_err_t<sp/><ref refid="switches_8c_1a70de1897315528e8b85d34aa23341f39" kindref="member">enable_switches</ref>()</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bit<sp/>mask<sp/>for<sp/>the<sp/>pins,<sp/>each<sp/>bit<sp/>maps<sp/>to<sp/>a<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>((1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1afc718c1fcfcf5d762545260289674333" kindref="member">SWITCH_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a62b9d54211060aac86c0ca9b02f7331e" kindref="member">SWITCH_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" kindref="member">SWITCH_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" kindref="member">SWITCH_4</ref>));</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>mode<sp/>to<sp/>input</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_INPUT;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>pull<sp/>up<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>pull<sp/>down<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>gpio<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>detailed<sp/>description<sp/>can<sp/>be<sp/>found<sp/>at<sp/>https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>gpio_config(&amp;io_conf);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_SWITCHES,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>switches&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_switches_flag<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SWITCHES,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_switches_flag<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="switches_8c_1aa394f2692a1f424f79d5c3dcfa0d7bc6" kindref="member">read_switch</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>switch_id)</highlight></codeline>
-<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enabled_switches_flag)</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!gpio_get_level((gpio_num_t)switch_id);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SWITCHES,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>switches<sp/>not<sp/>enabled,<sp/>call<sp/>enable_switches()<sp/>before<sp/>reading<sp/>switches&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="switches_8h" kindref="compound">switches.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_SWITCHES<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;switches&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enabled_switches_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">esp_err_t<sp/><ref refid="switches_8c_1a70de1897315528e8b85d34aa23341f39" kindref="member">enable_switches</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bit<sp/>mask<sp/>for<sp/>the<sp/>pins,<sp/>each<sp/>bit<sp/>maps<sp/>to<sp/>a<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>((1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1afc718c1fcfcf5d762545260289674333" kindref="member">SWITCH_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a62b9d54211060aac86c0ca9b02f7331e" kindref="member">SWITCH_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" kindref="member">SWITCH_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" kindref="member">SWITCH_4</ref>));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>mode<sp/>to<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_INPUT;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>pull<sp/>up<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>pull<sp/>down<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>gpio<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>detailed<sp/>description<sp/>can<sp/>be<sp/>found<sp/>at<sp/>https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>gpio_config(&amp;io_conf);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_SWITCHES,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>switches&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_switches_flag<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SWITCHES,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_switches_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="switches_8c_1aa394f2692a1f424f79d5c3dcfa0d7bc6" kindref="member">read_switch</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>switch_id)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enabled_switches_flag)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!gpio_get_level((gpio_num_t)switch_id);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SWITCHES,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>switches<sp/>not<sp/>enabled,<sp/>call<sp/>enable_switches()<sp/>before<sp/>reading<sp/>switches&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/switches.c"/>
   </compounddef>
