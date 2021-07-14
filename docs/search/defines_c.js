@@ -1,20 +1,11 @@
 var searchData=
 [
-  ['servo_5fa_252',['SERVO_A',['../pin__defs_8h.html#ad02b2d3f0a65ea90c450ced08da9a4d9',1,'pin_defs.h']]],
-  ['servo_5fa_5fmax_5fdegree_253',['SERVO_A_MAX_DEGREE',['../servo_8h.html#a845ca14dbdd498c04c84aeb9434b70fc',1,'servo.h']]],
-  ['servo_5fa_5fmax_5fpulsewidth_254',['SERVO_A_MAX_PULSEWIDTH',['../servo_8h.html#abb7a7b9bbb4de8afc75eb2bd72b8465a',1,'servo.h']]],
-  ['servo_5fa_5fmin_5fpulsewidth_255',['SERVO_A_MIN_PULSEWIDTH',['../servo_8h.html#a6376a54e0fe15082b196f563b9a98091',1,'servo.h']]],
-  ['servo_5fb_256',['SERVO_B',['../pin__defs_8h.html#a30b46add9f5cd7b5abf873dc9f1009e8',1,'pin_defs.h']]],
-  ['servo_5fb_5fmax_5fdegree_257',['SERVO_B_MAX_DEGREE',['../servo_8h.html#a697bd747318e73efc970ba631c997cd0',1,'servo.h']]],
-  ['servo_5fb_5fmax_5fpulsewidth_258',['SERVO_B_MAX_PULSEWIDTH',['../servo_8h.html#acc261afdcf7e85f571ed5d0b8f02936f',1,'servo.h']]],
-  ['servo_5fb_5fmin_5fpulsewidth_259',['SERVO_B_MIN_PULSEWIDTH',['../servo_8h.html#a025ef086774f035f0849f38e524c7594',1,'servo.h']]],
-  ['servo_5fc_260',['SERVO_C',['../pin__defs_8h.html#a20be66e38dbb25b3000081eecb9b4cb3',1,'pin_defs.h']]],
-  ['servo_5fc_5fmax_5fdegree_261',['SERVO_C_MAX_DEGREE',['../servo_8h.html#ae6f9c9f2ad3e851ba3f98e8c944a7484',1,'servo.h']]],
-  ['servo_5fc_5fmax_5fpulsewidth_262',['SERVO_C_MAX_PULSEWIDTH',['../servo_8h.html#a9bd897b2d6eb3f01fcda8c8230b02107',1,'servo.h']]],
-  ['servo_5fc_5fmin_5fpulsewidth_263',['SERVO_C_MIN_PULSEWIDTH',['../servo_8h.html#af48899034203fbf9878d439c6286a7e2',1,'servo.h']]],
-  ['str_264',['STR',['../servo_8c.html#a70fb9b3e7d410312baf880c1292f43ba',1,'servo.c']]],
-  ['switch_5f1_265',['SWITCH_1',['../pin__defs_8h.html#afc718c1fcfcf5d762545260289674333',1,'pin_defs.h']]],
-  ['switch_5f2_266',['SWITCH_2',['../pin__defs_8h.html#a62b9d54211060aac86c0ca9b02f7331e',1,'pin_defs.h']]],
-  ['switch_5f3_267',['SWITCH_3',['../pin__defs_8h.html#a760f4fa2340ec8b807fea30119915efa',1,'pin_defs.h']]],
-  ['switch_5f4_268',['SWITCH_4',['../pin__defs_8h.html#a083e2bd040ccdbc6514e13b876ff20f7',1,'pin_defs.h']]]
+  ['servo_5fa',['SERVO_A',['../pin__defs_8h.html#ad02b2d3f0a65ea90c450ced08da9a4d9',1,'pin_defs.h']]],
+  ['servo_5fb',['SERVO_B',['../pin__defs_8h.html#a30b46add9f5cd7b5abf873dc9f1009e8',1,'pin_defs.h']]],
+  ['servo_5fc',['SERVO_C',['../pin__defs_8h.html#a20be66e38dbb25b3000081eecb9b4cb3',1,'pin_defs.h']]],
+  ['str',['STR',['../servo_8c.html#a70fb9b3e7d410312baf880c1292f43ba',1,'servo.c']]],
+  ['switch_5f1',['SWITCH_1',['../pin__defs_8h.html#afc718c1fcfcf5d762545260289674333',1,'pin_defs.h']]],
+  ['switch_5f2',['SWITCH_2',['../pin__defs_8h.html#a62b9d54211060aac86c0ca9b02f7331e',1,'pin_defs.h']]],
+  ['switch_5f3',['SWITCH_3',['../pin__defs_8h.html#a760f4fa2340ec8b807fea30119915efa',1,'pin_defs.h']]],
+  ['switch_5f4',['SWITCH_4',['../pin__defs_8h.html#a083e2bd040ccdbc6514e13b876ff20f7',1,'pin_defs.h']]]
 ];

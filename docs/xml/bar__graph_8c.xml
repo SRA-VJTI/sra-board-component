@@ -1,87 +1,87 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="bar__graph_8c" kind="file" language="C++">
     <compoundname>bar_graph.c</compoundname>
     <includes refid="bar__graph_8h" local="yes">bar_graph.h</includes>
     <incdepgraph>
-      <node id="4">
+      <node id="170">
         <label>stdbool.h</label>
       </node>
-      <node id="6">
+      <node id="167">
+        <label>src/bar_graph.c</label>
+        <link refid="bar__graph_8c"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
         <label>driver/gpio.h</label>
       </node>
-      <node id="5">
+      <node id="171">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="3">
+      <node id="169">
         <label>stdlib.h</label>
       </node>
-      <node id="14">
+      <node id="180">
         <label>esp_attr.h</label>
       </node>
-      <node id="8">
+      <node id="174">
         <label>esp_err.h</label>
       </node>
-      <node id="13">
+      <node id="179">
         <label>soc/mcpwm_periph.h</label>
       </node>
-      <node id="7">
+      <node id="173">
         <label>esp_log.h</label>
       </node>
-      <node id="9">
+      <node id="175">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
-      <node id="1">
-        <label>src/bar_graph.c</label>
-        <link refid="bar__graph_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
+      <node id="168">
         <label>bar_graph.h</label>
         <link refid="bar__graph_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="169" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="170" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="171" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="172" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="173" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="174" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="176" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="178">
         <label>driver/mcpwm.h</label>
       </node>
-      <node id="11">
+      <node id="176">
+        <label>motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+      </node>
+      <node id="177">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="3" column="19" bodyfile="src/bar_graph.c" bodystart="3" bodyend="-1"/>
+        <location file="src/bar_graph.c" line="27" column="1" bodyfile="src/bar_graph.c" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="bar__graph_8c_1a425348a406dd9fcdf5baed9fad5c4edc" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="4" column="12" bodyfile="src/bar_graph.c" bodystart="4" bodyend="-1"/>
+        <location file="src/bar_graph.c" line="28" column="1" bodyfile="src/bar_graph.c" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="bar__graph_8c_1addb2cb3522d4b0bb9f4e6dcbef9ff958" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="10" column="22" bodyfile="src/bar_graph.c" bodystart="10" bodyend="-1"/>
+        <location file="src/bar_graph.c" line="34" column="1" bodyfile="src/bar_graph.c" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="bar__graph_8c_1a9941740159d6edc34ca8c4c17d3c45e4" prot="public" static="yes" mutable="no">
         <type>const int</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="14" column="18" bodyfile="src/bar_graph.c" bodystart="14" bodyend="-1"/>
+        <location file="src/bar_graph.c" line="38" column="1" bodyfile="src/bar_graph.c" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -150,71 +150,35 @@
         <argsstring>()</argsstring>
         <name>enable_bar_graph</name>
         <briefdescription>
-<para>enables the bar graph led&apos;s gpio pins </para>
-        </briefdescription>
+<para>enables the bar graph led&apos;s gpio pins </para>        </briefdescription>
         <detaileddescription>
-<para>It will check for state of motor driver A and B, and accordingly init the free gpios.</para>
-<para><hruler/>
+<para>It will check for state of motor driver A and B, and accordingly init the free gpios. <hruler/>
  <table rows="10" cols="3"><row>
-<entry thead="yes"><para>Motor Driver A </para>
-</entry><entry thead="yes"><para>Motor Driver B </para>
-</entry><entry thead="yes"><para>Mode  </para>
-</entry></row>
+<entry thead="yes"><para>Motor Driver A </para></entry><entry thead="yes"><para>Motor Driver B </para></entry><entry thead="yes"><para>Mode  </para></entry></row>
 <row>
-<entry thead="no"><para>off </para>
-</entry><entry thead="no"><para>off </para>
-</entry><entry thead="no"><para>1  </para>
-</entry></row>
+<entry thead="no"><para>off </para></entry><entry thead="no"><para>off </para></entry><entry thead="no"><para>1 </para></entry></row>
 <row>
-<entry thead="no"><para>off </para>
-</entry><entry thead="no"><para>parallel </para>
-</entry><entry thead="no"><para>2  </para>
-</entry></row>
+<entry thead="no"><para>off </para></entry><entry thead="no"><para>parallel </para></entry><entry thead="no"><para>2 </para></entry></row>
 <row>
-<entry thead="no"><para>off </para>
-</entry><entry thead="no"><para>normal </para>
-</entry><entry thead="no"><para>3  </para>
-</entry></row>
+<entry thead="no"><para>off </para></entry><entry thead="no"><para>normal </para></entry><entry thead="no"><para>3 </para></entry></row>
 <row>
-<entry thead="no"><para>parallel </para>
-</entry><entry thead="no"><para>off </para>
-</entry><entry thead="no"><para>4  </para>
-</entry></row>
+<entry thead="no"><para>parallel </para></entry><entry thead="no"><para>off </para></entry><entry thead="no"><para>4 </para></entry></row>
 <row>
-<entry thead="no"><para>parallel </para>
-</entry><entry thead="no"><para>parallel </para>
-</entry><entry thead="no"><para>5  </para>
-</entry></row>
+<entry thead="no"><para>parallel </para></entry><entry thead="no"><para>parallel </para></entry><entry thead="no"><para>5 </para></entry></row>
 <row>
-<entry thead="no"><para>parallel </para>
-</entry><entry thead="no"><para>normal </para>
-</entry><entry thead="no"><para>6  </para>
-</entry></row>
+<entry thead="no"><para>parallel </para></entry><entry thead="no"><para>normal </para></entry><entry thead="no"><para>6 </para></entry></row>
 <row>
-<entry thead="no"><para>normal </para>
-</entry><entry thead="no"><para>off </para>
-</entry><entry thead="no"><para>7  </para>
-</entry></row>
+<entry thead="no"><para>normal </para></entry><entry thead="no"><para>off </para></entry><entry thead="no"><para>7 </para></entry></row>
 <row>
-<entry thead="no"><para>normal </para>
-</entry><entry thead="no"><para>parallel </para>
-</entry><entry thead="no"><para>8  </para>
-</entry></row>
+<entry thead="no"><para>normal </para></entry><entry thead="no"><para>parallel </para></entry><entry thead="no"><para>8 </para></entry></row>
 <row>
-<entry thead="no"><para>normal </para>
-</entry><entry thead="no"><para>normal </para>
-</entry><entry thead="no"><para>0  </para>
-</entry></row>
+<entry thead="no"><para>normal </para></entry><entry thead="no"><para>normal </para></entry><entry thead="no"><para>0 </para></entry></row>
 </table>
-</para>
-<para>enabled_bar_graph_flag is set to the value of Mode accordingly.</para>
-<para><simplesect kind="return"><para>esp_err_t returns ESP_OK if enabled correctly, and ESP_FAIL if it failed to initialise </para>
-</simplesect>
-</para>
-        </detaileddescription>
+enabled_bar_graph_flag is set to the value of Mode accordingly.</para><para><simplesect kind="return"><para>esp_err_t returns ESP_OK if enabled correctly, and ESP_FAIL if it failed to initialise </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="16" column="11" bodyfile="src/bar_graph.c" bodystart="16" bodyend="101"/>
+        <location file="src/bar_graph.c" line="40" column="1" bodyfile="src/bar_graph.c" bodystart="40" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="bar__graph_8c_1ae3c6552600f6d84335edd8bb6095fe3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -226,13 +190,9 @@
           <declname>data</declname>
         </param>
         <briefdescription>
-<para>Set the value of bar graph LED. </para>
-        </briefdescription>
+<para>Set the value of bar graph LED. </para>        </briefdescription>
         <detaileddescription>
-<para>The exact working of this is a bit hard to understand, so this is example. Below are the given states of motor drivers</para>
-<para>Motor Driver A: Normal Motor Driver B: Off Mode = 7, so for mode = 7, mask = bitmask[7] = 0x0F = 00001111 data = 0xAA = 10101010</para>
-<para>Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED</para>
-<para><programlisting><codeline><highlight class="normal">LED1<sp/>&lt;-----&gt;<sp/>Motor<sp/>Driver<sp/>A<sp/>(IN1)<sp/>-----<sp/>0<sp/><sp/><sp/><sp/></highlight></codeline>
+<para>The exact working of this is a bit hard to understand, so this is example. Below are the given states of motor drivers</para><para>Motor Driver A: Normal Motor Driver B: Off Mode = 7, so for mode = 7, mask = bitmask[7] = 0x0F = 00001111 data = 0xAA = 10101010</para><para>Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED</para><para><programlisting><codeline><highlight class="normal">LED1<sp/>&lt;-----&gt;<sp/>Motor<sp/>Driver<sp/>A<sp/>(IN1)<sp/>-----<sp/>0<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">LED2<sp/>&lt;-----&gt;<sp/>Motor<sp/>Driver<sp/>A<sp/>(IN2)<sp/>-----<sp/>0<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">LED3<sp/>&lt;-----&gt;<sp/>Motor<sp/>Driver<sp/>A<sp/>(IN3)<sp/>-----<sp/>0<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">LED4<sp/>&lt;-----&gt;<sp/>Motor<sp/>Driver<sp/>A<sp/>(IN4)<sp/>-----<sp/>0<sp/><sp/><sp/><sp/></highlight></codeline>
@@ -240,26 +200,19 @@
 <codeline><highlight class="normal">LED6<sp/>&lt;--X--&gt;<sp/>Motor<sp/>Driver<sp/>B<sp/>(IN6)<sp/>-----<sp/>1<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">LED7<sp/>&lt;--X--&gt;<sp/>Motor<sp/>Driver<sp/>B<sp/>(IN7)<sp/>-----<sp/>1<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">LED8<sp/>&lt;--X--&gt;<sp/>Motor<sp/>Driver<sp/>B<sp/>(IN8)<sp/>-----<sp/>1<sp/><sp/><sp/><sp/></highlight></codeline>
-</programlisting></para>
-<para>Mask ==&gt; 00001111 =&gt; 0x0F</para>
-<para>Now, if data is 10101010, then even though pins IN1-IN4 are being used by motor driver, it will be set by gpio_set_level, which will crash the esp32 device. So, we check in the bitmask if the following pin is free or not, if bit is 1, it can be used, if it is 0, then it can&apos;t be used.</para>
-<para>So, to achieve this we bitwise-and the mask with 0x80(10000000), if result is 0x80, then leftmost bit is 1, else it is 0. If leftmost bit is 1, means we can use this pin of bar graph, then we do the same thing with data, bitwise-and it with 0x80, to find the leftmost bit, if it is 1, the pin is set to 1, else 0. Now we left shift the data and mask variable.</para>
-<para><parameterlist kind="param"><parameteritem>
+</programlisting></para><para>Mask ==&gt; 00001111 =&gt; 0x0F</para><para>Now, if data is 10101010, then even though pins IN1-IN4 are being used by motor driver, it will be set by gpio_set_level, which will crash the esp32 device. So, we check in the bitmask if the following pin is free or not, if bit is 1, it can be used, if it is 0, then it can&apos;t be used.</para><para>So, to achieve this we bitwise-and the mask with 0x80(10000000), if result is 0x80, then leftmost bit is 1, else it is 0. If leftmost bit is 1, means we can use this pin of bar graph, then we do the same thing with data, bitwise-and it with 0x80, to find the leftmost bit, if it is 1, the pin is set to 1, else 0. Now we left shift the data and mask variable.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>8bit binary in hexadecimal form, i.e, the pattern that is needed to be shown on the bar graph LED </para>
-</parameterdescription>
+<para>8bit binary in hexadecimal form, i.e, the pattern that is needed to be shown on the bar graph LED </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t returns ESP_OK </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="103" column="11" bodyfile="src/bar_graph.c" bodystart="103" bodyend="136"/>
+        <location file="src/bar_graph.c" line="127" column="1" bodyfile="src/bar_graph.c" bodystart="127" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="bar__graph_8c_1aedf9bcb0b39fed044eb70e63fc74c496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -271,25 +224,21 @@
           <declname>input_array</declname>
         </param>
         <briefdescription>
-<para>converts a boolean array of size 8 into 8-bit unsigned integer </para>
-        </briefdescription>
+<para>converts a boolean array of size 8 into 8-bit unsigned integer </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input_array</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>boolean input array of size 8 </para>
-</parameterdescription>
+<para>boolean input array of size 8 </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>uint8_t returns a 8 bit number formed after combining the boolean array </para>
-</simplesect>
-</para>
-        </detaileddescription>
+<simplesect kind="return"><para>uint8_t returns a 8 bit number formed after combining the boolean array </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/bar_graph.c" line="138" column="9" bodyfile="src/bar_graph.c" bodystart="138" bodyend="141"/>
+        <location file="src/bar_graph.c" line="162" column="1" bodyfile="src/bar_graph.c" bodystart="162" bodyend="165"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -297,147 +246,171 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bar__graph_8h" kindref="compound">bar_graph.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_BAR_GRAPH<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;bar_graph&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enabled_bar_graph_flag<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bitmask<sp/>is<sp/>a<sp/>safety<sp/>mechanism,<sp/>say<sp/>if<sp/>motor<sp/>driver<sp/>A<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>B<sp/>is<sp/>in<sp/>Normal<sp/>mode,<sp/>then<sp/>only</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>pins<sp/>IN1<sp/>-<sp/>IN4<sp/>are<sp/>usable<sp/>in<sp/>the<sp/>bar<sp/>graph,<sp/>as<sp/>pins<sp/>IN5<sp/>-<sp/>IN8<sp/>are<sp/>connected<sp/>to<sp/>pins<sp/>of<sp/>motor<sp/>driver<sp/>B<sp/>and<sp/>these<sp/>cannot<sp/>be<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>So,<sp/>bit<sp/>mask<sp/>sets<sp/>bits<sp/>of<sp/>IN5<sp/>-<sp/>IN8<sp/>as<sp/>0<sp/>and<sp/>that<sp/>of<sp/>IN1<sp/>-<sp/>IN4<sp/>as<sp/>1,<sp/>because<sp/>if<sp/>we<sp/>set<sp/>pins<sp/>used<sp/>by<sp/>mcpwm,<sp/>esp32<sp/>will<sp/>crash<sp/>or<sp/>behave<sp/>oddly.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IN1<sp/>is<sp/>the<sp/>leftmost<sp/>bit<sp/>and<sp/>IN8<sp/>is<sp/>the<sp/>rightmost<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>bitmask[9]<sp/>=<sp/>{0x00,<sp/>0xFF,<sp/>0xFC,<sp/>0xF0,<sp/>0xCF,<sp/>0xCC,<sp/>0xC0,<sp/>0x0F,<sp/>0x0C};</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Just<sp/>an<sp/>array<sp/>of<sp/>pins<sp/>used<sp/>by<sp/>bar<sp/>graph<sp/>led</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin_out[8]<sp/>=<sp/>{<ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>,<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>,<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>,<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>,<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>,<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>,<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>,<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>};</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">esp_err_t<sp/><ref refid="bar__graph_8c_1ab10cdc6b54d4e647335eebb25dabd2f7" kindref="member">enable_bar_graph</ref>()</highlight></codeline>
-<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>bit_mask<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>off,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1<sp/>-<sp/>IN8<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>parallel<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1<sp/>-<sp/>IN6<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>1)</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>2;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>normal<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1<sp/>-<sp/>IN4<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>2)</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>3;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>parallel<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>off,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1,<sp/>IN2,<sp/>IN5<sp/>-<sp/>IN8<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>4;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>parallel<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>parallel<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1,<sp/>IN2,<sp/>IN5,<sp/>IN6<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bar__graph_8h" kindref="compound">bar_graph.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_BAR_GRAPH<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;bar_graph&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enabled_bar_graph_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bitmask<sp/>is<sp/>a<sp/>safety<sp/>mechanism,<sp/>say<sp/>if<sp/>motor<sp/>driver<sp/>A<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>B<sp/>is<sp/>in<sp/>Normal<sp/>mode,<sp/>then<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>pins<sp/>IN1<sp/>-<sp/>IN4<sp/>are<sp/>usable<sp/>in<sp/>the<sp/>bar<sp/>graph,<sp/>as<sp/>pins<sp/>IN5<sp/>-<sp/>IN8<sp/>are<sp/>connected<sp/>to<sp/>pins<sp/>of<sp/>motor<sp/>driver<sp/>B<sp/>and<sp/>these<sp/>cannot<sp/>be<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>So,<sp/>bit<sp/>mask<sp/>sets<sp/>bits<sp/>of<sp/>IN5<sp/>-<sp/>IN8<sp/>as<sp/>0<sp/>and<sp/>that<sp/>of<sp/>IN1<sp/>-<sp/>IN4<sp/>as<sp/>1,<sp/>because<sp/>if<sp/>we<sp/>set<sp/>pins<sp/>used<sp/>by<sp/>mcpwm,<sp/>esp32<sp/>will<sp/>crash<sp/>or<sp/>behave<sp/>oddly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IN1<sp/>is<sp/>the<sp/>leftmost<sp/>bit<sp/>and<sp/>IN8<sp/>is<sp/>the<sp/>rightmost<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>bitmask[9]<sp/>=<sp/>{0x00,<sp/>0xFF,<sp/>0xFC,<sp/>0xF0,<sp/>0xCF,<sp/>0xCC,<sp/>0xC0,<sp/>0x0F,<sp/>0x0C};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Just<sp/>an<sp/>array<sp/>of<sp/>pins<sp/>used<sp/>by<sp/>bar<sp/>graph<sp/>led</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin_out[8]<sp/>=<sp/>{<ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>,<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>,<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>,<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>,<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>,<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>,<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>,<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">esp_err_t<sp/><ref refid="bar__graph_8c_1ab10cdc6b54d4e647335eebb25dabd2f7" kindref="member">enable_bar_graph</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>bit_mask<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>off,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1<sp/>-<sp/>IN8<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>parallel<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>normal<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1,<sp/>IN2<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>parallel<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1<sp/>-<sp/>IN6<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>2;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>normal<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>off,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN5<sp/>-<sp/>IN8<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>2<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>off<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>normal<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1<sp/>-<sp/>IN4<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>2)</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kindref="member">BG_LED_3</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kindref="member">BG_LED_4</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>3;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>normal<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>parallel<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN5,<sp/>IN6<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>2<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>parallel<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>off,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1,<sp/>IN2,<sp/>IN5<sp/>-<sp/>IN8<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>4;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>normal<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>normal<sp/>mode,<sp/>so<sp/>we<sp/>cannot<sp/>use<sp/>any<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>parallel<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>parallel<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1,<sp/>IN2,<sp/>IN5,<sp/>IN6<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_BAR_GRAPH,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>both<sp/>motor<sp/>drivers<sp/>enabled,<sp/>not<sp/>able<sp/>to<sp/>use<sp/>the<sp/>bar<sp/>graph<sp/>in<sp/>this<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bit<sp/>mask<sp/>for<sp/>the<sp/>pins,<sp/>each<sp/>bit<sp/>maps<sp/>to<sp/>a<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>bit_mask;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>mode<sp/>to<sp/>input</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_OUTPUT;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>pull<sp/>up<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>pull<sp/>down<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>gpio<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>detailed<sp/>description<sp/>can<sp/>be<sp/>found<sp/>at<sp/>https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>gpio_config(&amp;io_conf);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_BAR_GRAPH,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>bar<sp/>graph<sp/>leds<sp/>in<sp/>mode:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>enabled_bar_graph_flag);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_BAR_GRAPH,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>parallel<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>normal<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN1,<sp/>IN2<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kindref="member">BG_LED_1</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kindref="member">BG_LED_2</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>normal<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>off,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN5<sp/>-<sp/>IN8<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>2<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kindref="member">BG_LED_7</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kindref="member">BG_LED_8</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>normal<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>parallel<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>use<sp/>IN5,<sp/>IN6<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(a)<sp/>==<sp/>2<sp/>&amp;&amp;<sp/><ref refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kindref="member">read_motor_driver_mode</ref>(b)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kindref="member">BG_LED_5</ref>)<sp/>|<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kindref="member">BG_LED_6</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>motor<sp/>driver<sp/>a<sp/>is<sp/>in<sp/>normal<sp/>mode<sp/>and<sp/>motor<sp/>driver<sp/>b<sp/>is<sp/>in<sp/>normal<sp/>mode,<sp/>so<sp/>we<sp/>cannot<sp/>use<sp/>any<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_BAR_GRAPH,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>both<sp/>motor<sp/>drivers<sp/>enabled,<sp/>not<sp/>able<sp/>to<sp/>use<sp/>the<sp/>bar<sp/>graph<sp/>in<sp/>this<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal">esp_err_t<sp/><ref refid="bar__graph_8c_1ae3c6552600f6d84335edd8bb6095fe3a" kindref="member">set_bar_graph</ref>(uint8_t<sp/>data)</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>store<sp/>the<sp/>bitmask<sp/>according<sp/>to<sp/>the<sp/>mode<sp/>of<sp/>bar<sp/>graph<sp/>led&apos;s</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>mode_bitmask<sp/>=<sp/>bitmask[enabled_bar_graph_flag];</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>since<sp/>we<sp/>want<sp/>to<sp/>read<sp/>the<sp/>8<sp/>bits,<sp/>we<sp/>can<sp/>use<sp/>a<sp/>loop<sp/>8<sp/>times,<sp/>and<sp/>left<sp/>shift<sp/>8<sp/>times<sp/>to<sp/>extract<sp/>the<sp/>8<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bitwise-and<sp/>bitmask<sp/>with<sp/>0x80,<sp/>so<sp/>with<sp/>this<sp/>we<sp/>can<sp/>extract<sp/>the<sp/>value<sp/>of<sp/>leftmost<sp/>bit.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Yxxxxxxx<sp/>&amp;<sp/>10000000<sp/>==<sp/>10000000,<sp/>if<sp/>Y<sp/>=<sp/>1<sp/>and<sp/>Yxxxxxxx<sp/>&amp;<sp/>10000000<sp/>==<sp/>00000000,<sp/>if<sp/>Y<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>it<sp/>is<sp/>1,<sp/>means<sp/>the<sp/>pin<sp/>is<sp/>usable,<sp/>so<sp/>we<sp/>get<sp/>into<sp/>the<sp/>if<sp/>loop.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mode_bitmask<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>do<sp/>the<sp/>same<sp/>process<sp/>to<sp/>extract<sp/>the<sp/>leftmost<sp/>bit<sp/>of<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>is<sp/>1,<sp/>then<sp/>set<sp/>the<sp/>pin<sp/>to<sp/>1,<sp/>else<sp/>set<sp/>it<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((data<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>value<sp/>to<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level((gpio_num_t)pin_out[i],<sp/>1);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>value<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level((gpio_num_t)pin_out[i],<sp/>0);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>left-shift<sp/>bitmask<sp/>and<sp/>data<sp/>once,<sp/>we<sp/>do<sp/>this<sp/>8<sp/>times<sp/>to<sp/>read<sp/>all<sp/>the<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00110011<sp/>&lt;&lt;<sp/>1<sp/>=<sp/>01100110</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_bitmask<sp/>=<sp/>mode_bitmask<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>data<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal">uint8_t<sp/><ref refid="bar__graph_8c_1aedf9bcb0b39fed044eb70e63fc74c496" kindref="member">bool_to_uint8</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*input_array)</highlight></codeline>
-<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((input_array[0]<sp/>&lt;&lt;<sp/>7)<sp/>|<sp/>(input_array[1]<sp/>&lt;&lt;<sp/>6)<sp/>|<sp/>(input_array[2]<sp/>&lt;&lt;<sp/>5)<sp/>|<sp/>(input_array[3]<sp/>&lt;&lt;<sp/>4)<sp/>|<sp/>(input_array[4]<sp/>&lt;&lt;<sp/>3)<sp/>|<sp/>(input_array[5]<sp/>&lt;&lt;<sp/>2)<sp/>|<sp/>(input_array[6]<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>input_array[7]);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>io_conf;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bit<sp/>mask<sp/>for<sp/>the<sp/>pins,<sp/>each<sp/>bit<sp/>maps<sp/>to<sp/>a<sp/>GPIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pin_bit_mask<sp/>=<sp/>bit_mask;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>mode<sp/>to<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.mode<sp/>=<sp/>GPIO_MODE_OUTPUT;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>pull<sp/>up<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_up_en<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>pull<sp/>down<sp/>resistors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.pull_down_en<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>gpio<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>io_conf.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>detailed<sp/>description<sp/>can<sp/>be<sp/>found<sp/>at<sp/>https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>gpio_config(&amp;io_conf);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_BAR_GRAPH,<sp/></highlight><highlight class="stringliteral">&quot;enabled<sp/>bar<sp/>graph<sp/>leds<sp/>in<sp/>mode:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>enabled_bar_graph_flag);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_BAR_GRAPH,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_err_to_name(err));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_bar_graph_flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">esp_err_t<sp/><ref refid="bar__graph_8c_1ae3c6552600f6d84335edd8bb6095fe3a" kindref="member">set_bar_graph</ref>(uint8_t<sp/>data)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>store<sp/>the<sp/>bitmask<sp/>according<sp/>to<sp/>the<sp/>mode<sp/>of<sp/>bar<sp/>graph<sp/>led&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>mode_bitmask<sp/>=<sp/>bitmask[enabled_bar_graph_flag];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>since<sp/>we<sp/>want<sp/>to<sp/>read<sp/>the<sp/>8<sp/>bits,<sp/>we<sp/>can<sp/>use<sp/>a<sp/>loop<sp/>8<sp/>times,<sp/>and<sp/>left<sp/>shift<sp/>8<sp/>times<sp/>to<sp/>extract<sp/>the<sp/>8<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bitwise-and<sp/>bitmask<sp/>with<sp/>0x80,<sp/>so<sp/>with<sp/>this<sp/>we<sp/>can<sp/>extract<sp/>the<sp/>value<sp/>of<sp/>leftmost<sp/>bit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Yxxxxxxx<sp/>&amp;<sp/>10000000<sp/>==<sp/>10000000,<sp/>if<sp/>Y<sp/>=<sp/>1<sp/>and<sp/>Yxxxxxxx<sp/>&amp;<sp/>10000000<sp/>==<sp/>00000000,<sp/>if<sp/>Y<sp/>=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>it<sp/>is<sp/>1,<sp/>means<sp/>the<sp/>pin<sp/>is<sp/>usable,<sp/>so<sp/>we<sp/>get<sp/>into<sp/>the<sp/>if<sp/>loop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mode_bitmask<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>do<sp/>the<sp/>same<sp/>process<sp/>to<sp/>extract<sp/>the<sp/>leftmost<sp/>bit<sp/>of<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>is<sp/>1,<sp/>then<sp/>set<sp/>the<sp/>pin<sp/>to<sp/>1,<sp/>else<sp/>set<sp/>it<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((data<sp/>&amp;<sp/>0x80)<sp/>==<sp/>0x80)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>value<sp/>to<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level((gpio_num_t)pin_out[i],<sp/>1);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>gpio<sp/>value<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_set_level((gpio_num_t)pin_out[i],<sp/>0);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>left-shift<sp/>bitmask<sp/>and<sp/>data<sp/>once,<sp/>we<sp/>do<sp/>this<sp/>8<sp/>times<sp/>to<sp/>read<sp/>all<sp/>the<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00110011<sp/>&lt;&lt;<sp/>1<sp/>=<sp/>01100110</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode_bitmask<sp/>=<sp/>mode_bitmask<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>data<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">uint8_t<sp/><ref refid="bar__graph_8c_1aedf9bcb0b39fed044eb70e63fc74c496" kindref="member">bool_to_uint8</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*input_array)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((input_array[0]<sp/>&lt;&lt;<sp/>7)<sp/>|<sp/>(input_array[1]<sp/>&lt;&lt;<sp/>6)<sp/>|<sp/>(input_array[2]<sp/>&lt;&lt;<sp/>5)<sp/>|<sp/>(input_array[3]<sp/>&lt;&lt;<sp/>4)<sp/>|<sp/>(input_array[4]<sp/>&lt;&lt;<sp/>3)<sp/>|<sp/>(input_array[5]<sp/>&lt;&lt;<sp/>2)<sp/>|<sp/>(input_array[6]<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>input_array[7]);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/bar_graph.c"/>
   </compounddef>

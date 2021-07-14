@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="sra__board_8h" kind="file" language="C++">
     <compoundname>sra_board.h</compoundname>
     <includes refid="adc_8h" local="yes">adc.h</includes>
@@ -12,231 +12,231 @@
     <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
     <includes refid="utils_8h" local="yes">utils.h</includes>
     <incdepgraph>
-      <node id="28">
-        <label>servo.h</label>
-        <link refid="servo_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
+      <node id="121">
         <label>stdbool.h</label>
       </node>
-      <node id="15">
+      <node id="122">
         <label>driver/gpio.h</label>
       </node>
-      <node id="7">
+      <node id="114">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="4">
+      <node id="111">
         <label>stdlib.h</label>
       </node>
-      <node id="23">
-        <label>mpu6050.h</label>
-        <link refid="mpu6050_8h"/>
-        <childnode refid="3" relation="include">
+      <node id="128">
+        <label>lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="129" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="119" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="109" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="113">
         <label>esp_adc_cal.h</label>
       </node>
-      <node id="19">
+      <node id="127">
+        <label>switches.h</label>
+        <link refid="switches_8h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
         <label>esp_attr.h</label>
       </node>
-      <node id="2">
+      <node id="109">
         <label>adc.h</label>
         <link refid="adc_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="111" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="112" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="113" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="114" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="115" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="116" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="117" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="118" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="119" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="134">
         <label>esp_timer.h</label>
       </node>
-      <node id="11">
+      <node id="118">
         <label>esp_err.h</label>
       </node>
-      <node id="5">
+      <node id="112">
         <label>driver/adc.h</label>
       </node>
-      <node id="1">
-        <label>include/sra_board.h</label>
-        <link refid="sra__board_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
+      <node id="125">
         <label>soc/mcpwm_periph.h</label>
       </node>
-      <node id="25">
+      <node id="132">
         <label>string.h</label>
       </node>
-      <node id="10">
+      <node id="117">
         <label>esp_log.h</label>
       </node>
-      <node id="12">
+      <node id="129">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="119">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
-      <node id="22">
-        <label>sdkconfig.h</label>
+      <node id="131">
+        <label>math.h</label>
       </node>
-      <node id="29">
+      <node id="133">
+        <label>driver/i2c.h</label>
+      </node>
+      <node id="120">
+        <label>bar_graph.h</label>
+        <link refid="bar__graph_8h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="136">
         <label>utils.h</label>
         <link refid="utils_8h"/>
       </node>
-      <node id="20">
-        <label>switches.h</label>
-        <link refid="switches_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="135">
+        <label>servo.h</label>
+        <link refid="servo_8h"/>
+        <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="114" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="124" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="125" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="129" relation="include">
         </childnode>
-      </node>
-      <node id="24">
-        <label>math.h</label>
-      </node>
-      <node id="26">
-        <label>driver/i2c.h</label>
-      </node>
-      <node id="16">
-        <label>motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="117" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="118" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="119" relation="include">
         </childnode>
       </node>
-      <node id="21">
-        <label>lsa.h</label>
-        <link refid="lsa_8h"/>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
+      <node id="115">
         <label>freertos/task.h</label>
       </node>
-      <node id="13">
-        <label>bar_graph.h</label>
-        <link refid="bar__graph_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="130">
+        <label>mpu6050.h</label>
+        <link refid="mpu6050_8h"/>
+        <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="131" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="132" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="129" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="126" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="117" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="118" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="124">
         <label>driver/mcpwm.h</label>
       </node>
-      <node id="3">
+      <node id="123">
+        <label>motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
         <label>stdio.h</label>
       </node>
-      <node id="9">
+      <node id="116">
         <label>freertos/event_groups.h</label>
       </node>
     </incdepgraph>
@@ -245,20 +245,44 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SRA_BOARD_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRA_BOARD_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="adc_8h" kindref="compound">adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bar__graph_8h" kindref="compound">bar_graph.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="switches_8h" kindref="compound">switches.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lsa_8h" kindref="compound">lsa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="motor__driver_8h" kindref="compound">motor_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpu6050_8h" kindref="compound">mpu6050.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="servo_8h" kindref="compound">servo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRA_BOARD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRA_BOARD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="adc_8h" kindref="compound">adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bar__graph_8h" kindref="compound">bar_graph.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="switches_8h" kindref="compound">switches.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lsa_8h" kindref="compound">lsa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="motor__driver_8h" kindref="compound">motor_driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpu6050_8h" kindref="compound">mpu6050.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="servo_8h" kindref="compound">servo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/sra_board.h"/>
   </compounddef>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="structline__sensor__array_1_1line__sensor" kind="struct" language="C++" prot="public">
     <compoundname>line_sensor_array::line_sensor</compoundname>
     <includes refid="lsa_8h" local="no">lsa.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="14" column="13" bodyfile="include/lsa.h" bodystart="14" bodyend="-1"/>
+        <location file="include/lsa.h" line="38" column="1" bodyfile="include/lsa.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="15" column="13" bodyfile="include/lsa.h" bodystart="15" bodyend="-1"/>
+        <location file="include/lsa.h" line="39" column="1" bodyfile="include/lsa.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="16" column="13" bodyfile="include/lsa.h" bodystart="16" bodyend="-1"/>
+        <location file="include/lsa.h" line="40" column="1" bodyfile="include/lsa.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -54,14 +54,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="17" column="13" bodyfile="include/lsa.h" bodystart="17" bodyend="-1"/>
+        <location file="include/lsa.h" line="41" column="1" bodyfile="include/lsa.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/lsa.h" line="13" column="1" bodyfile="include/lsa.h" bodystart="12" bodyend="18"/>
+    <location file="include/lsa.h" line="37" column="1" bodyfile="include/lsa.h" bodystart="36" bodyend="42"/>
     <listofallmembers>
       <member refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" prot="public" virt="non-virtual"><scope>line_sensor_array::line_sensor</scope><name>A0</name></member>
       <member refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" prot="public" virt="non-virtual"><scope>line_sensor_array::line_sensor</scope><name>A1</name></member>

@@ -1,28 +1,80 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
-    <title>sra-board-component</title>
-    <briefdescription>
-    </briefdescription>
+    <title>SRA Board Components</title>
     <detaileddescription>
-<para><image type="html" name="badge.svg" inline="yes"></image>
- <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE"><image type="html" name="sra-board-component" inline="yes"></image>
-</ulink></para>
-<para>ESP-IDF Component for <ulink url="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Board</ulink></para>
-<para><heading level="1">Installation</heading>
-</para>
-<para><programlisting><codeline><highlight class="normal">cd<sp/>&lt;your_esp_idf_project&gt;</highlight></codeline>
+<para><linebreak/>
+ </para><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/"></ulink></para><para><heading level="3">sra-board-component</heading>
+</para><para>An ESP-IDF Component for <ulink url="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Board</ulink> <linebreak/>
+ <ulink url="https://sravjti.tech/sra-board-component/"><bold>Explore the docs »</bold></ulink> <linebreak/>
+ <linebreak/>
+ <ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples">View Demo</ulink> · <ulink url="https://github.com/SRA-VJTI/sra-board-component/issues">Report Bug</ulink> · <ulink url="https://github.com/SRA-VJTI/sra-board-component/issues">Request Feature</ulink> · <ulink url="https://github.com/SRA-VJTI/sra-board-component/pulls">Send a Pull Request</ulink> </para><para><image type="html" name="badge.svg"></image>
+ <ulink url="https://github.com/SRA-VJTI/sra-board-component/network/members"></ulink> <ulink url="https://github.com/SRA-VJTI/sra-board-component/stargazers"></ulink> <ulink url="https://github.com/SRA-VJTI/sra-board-component/issues"></ulink> <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE"></ulink> <ulink url="https://linkedin.com/in/sra-vjti"></ulink> </para><para><heading level="2">Table of Contents</heading>
+</para><para><itemizedlist>
+<listitem><para><ulink url="#about-the-project">About the Project</ulink><itemizedlist>
+<listitem><para><ulink url="#built-with">Built With</ulink></para></listitem></itemizedlist>
+</para></listitem><listitem><para><ulink url="#getting-started">Getting Started</ulink><itemizedlist>
+<listitem><para><ulink url="#prerequisites">Prerequisites</ulink></para></listitem><listitem><para><ulink url="#installation">Installation</ulink></para></listitem></itemizedlist>
+</para></listitem><listitem><para><ulink url="#usage">Usage</ulink><itemizedlist>
+<listitem><para><ulink url="#examples">Examples</ulink></para></listitem></itemizedlist>
+</para></listitem><listitem><para><ulink url="#roadmap">Roadmap</ulink></para></listitem><listitem><para><ulink url="#contributing">Contributing</ulink></para></listitem><listitem><para><ulink url="#license">License</ulink></para></listitem><listitem><para><ulink url="#contact">Contact</ulink></para></listitem><listitem><para><ulink url="#acknowledgements">Acknowledgements</ulink></para></listitem></itemizedlist>
+</para><para><heading level="2">About The Project</heading>
+</para><para>SRA ESP-IDF component provides an abstraction</para><para><heading level="3">Built With</heading>
+</para><para><itemizedlist>
+<listitem><para><ulink url="https://en.wikipedia.org/wiki/C_(programming_language)">C</ulink></para></listitem></itemizedlist>
+</para><para>Toolchain &amp; Supported SDK</para><para><itemizedlist>
+<listitem><para><ulink url="https://github.com/espressif/esp-idf/tree/release/v4.2">ESP-IDF v4.2-release</ulink></para></listitem></itemizedlist>
+</para><para>Docs</para><para><itemizedlist>
+<listitem><para><ulink url="https://www.doxygen.nl/index.html">Doxygen</ulink></para></listitem></itemizedlist>
+</para><para><heading level="2">Getting Started</heading>
+</para><para><itemizedlist>
+<listitem><para>Hardware Required : <ulink url="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Development Board</ulink></para></listitem><listitem><para>Recommended ESP-IDF <ulink url="https://github.com/espressif/esp-idf/tree/release/v4.2">v4.2-release</ulink> .</para></listitem></itemizedlist>
+</para><para><emphasis>Refer <ulink url="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/">espressif-docs</ulink> for intallation guide</emphasis></para><para><heading level="3">Prerequisites</heading>
+</para><para><itemizedlist>
+<listitem><para>A stable release of <ulink url="https://github.com/espressif/esp-idf">ESP-IDF</ulink></para></listitem><listitem><para>Project Tree containing <computeroutput>components</computeroutput> dir</para></listitem></itemizedlist>
+</para><para><programlisting><codeline><highlight class="normal">-<sp/>myProject/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>CMakeLists.txt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>sdkconfig</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>components/<sp/>-<sp/>component1/<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>component2/<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>main/<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>CMakeLists.txt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>src.c</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>build/</highlight></codeline>
+</programlisting></para><para><heading level="3">Installation</heading>
+</para><para><programlisting><codeline><highlight class="normal">cd<sp/>&lt;your_esp_idf_project&gt;</highlight></codeline>
 <codeline><highlight class="normal">mkdir<sp/>components</highlight></codeline>
 <codeline><highlight class="normal">cd<sp/>components</highlight></codeline>
 <codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/SRA-VJTI/sra-board-component.git</highlight></codeline>
-</programlisting></para>
-<para><heading level="1">License</heading>
-</para>
-<para><itemizedlist>
-<listitem><para>Distributed under the <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE">MIT License</ulink>. </para>
-</listitem></itemizedlist>
-</para>
-    </detaileddescription>
+</programlisting></para><para><heading level="2">Usage</heading>
+</para><para><itemizedlist>
+<listitem><para>Visit <ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples">examples</ulink></para></listitem></itemizedlist>
+</para><para><emphasis>For more examples, please refer to the <ulink url="https://sravjti.tech/sra-board-component/">Documentation</ulink></emphasis></para><para><heading level="3">Examples</heading>
+</para><para><table rows="7" cols="2"><row>
+<entry thead="yes"><para>Example Link </para></entry><entry thead="yes"><para>Description  </para></entry></row>
+<row>
+<entry thead="no"><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/bar_graph">Bar Graph</ulink> </para></entry><entry thead="no"><para>Bar graph led can be used for testing purposes </para></entry></row>
+<row>
+<entry thead="no"><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/lsa">Light sensing array</ulink> </para></entry><entry thead="no"><para>LSA aka Light Sensing Array is used mainly in line following bot </para></entry></row>
+<row>
+<entry thead="no"><para>Motor driver - <ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/motor_driver_normal">normal</ulink>- <ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/motor_driver_parallel">parallel</ulink> </para></entry><entry thead="no"><para>Example for using two motor drivers present on SRA Board in both parallel and normal mode </para></entry></row>
+<row>
+<entry thead="no"><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/mpu6050">MPU6050</ulink> </para></entry><entry thead="no"><para>MPU6050 combines 3-axis Gyroscope, 3-axis Accelerometer and Motion Processor all in small package. This example is for reading values from mpu6050 accelerometer </para></entry></row>
+<row>
+<entry thead="no"><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/servos">Servos</ulink> </para></entry><entry thead="no"><para>Servos are used in the locomotion of bots like <ulink url="https://github.com/SRA-VJTI/Wall-E_v2.1">Wall-E</ulink> . This example is for using the servo port on SRA Board to run servos </para></entry></row>
+<row>
+<entry thead="no"><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches">Switches</ulink> </para></entry><entry thead="no"><para>Manual Switches provide the traditional comfort to toggle the input variables. This example is for using four user switches present on SRA Board </para></entry></row>
+</table>
+</para><para><heading level="2">Roadmap</heading>
+</para><para>See the <ulink url="https://github.com/SRA-VJTI/sra-board-component/issues">open issues</ulink> for a list of proposed features (and known issues).</para><para><heading level="2">Contributing</heading>
+</para><para>Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are <bold>extremely appreciated</bold>.</para><para><orderedlist>
+<listitem><para>Fork the Project</para></listitem><listitem><para>Create your Feature Branch (<computeroutput>git checkout -b feature/AmazingFeature</computeroutput>)</para></listitem><listitem><para>Commit your Changes (<computeroutput>git commit -m &apos;Add some AmazingFeature&apos;</computeroutput>)</para></listitem><listitem><para>Push to the Branch (<computeroutput>git push origin feature/AmazingFeature</computeroutput>)</para></listitem><listitem><para>Open a Pull Request</para></listitem></orderedlist>
+</para><para><heading level="2">License</heading>
+</para><para><itemizedlist>
+<listitem><para>Distributed under the <ulink url="https://github.com/SRA-VJTI/sra-board-component/blob/main/LICENSE">MIT License</ulink>.</para></listitem></itemizedlist>
+</para><para><heading level="2">Contact</heading>
+</para><para><itemizedlist>
+<listitem><para><ulink url="https://twitter.com/SRAVJTI"></ulink> - <ulink url="https://www.sravjti.in/">https://www.sravjti.in/</ulink></para></listitem><listitem><para><ulink url="https://www.sravjti.in/contact-us">SRA-VJTI Website</ulink> </para></listitem></itemizedlist>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

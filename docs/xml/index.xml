@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
   <compound refid="structline__sensor__array_1_1line__sensor" kind="struct"><name>line_sensor_array::line_sensor</name>
     <member refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" kind="variable"><name>A0</name></member>
     <member refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kind="variable"><name>A1</name></member>
@@ -7,8 +7,17 @@
     <member refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" kind="variable"><name>A3</name></member>
   </compound>
   <compound refid="unionline__sensor__array" kind="union"><name>line_sensor_array</name>
-    <member refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kind="variable"><name>lsa</name></member>
+    <member refid="unionline__sensor__array_1ac6cc49739fd7d034aeb9db1647a2b1e9" kind="variable"><name>lsa</name></member>
     <member refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kind="variable"><name>adc_reading</name></member>
+  </compound>
+  <compound refid="structservo__config" kind="struct"><name>servo_config</name>
+    <member refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kind="variable"><name>servo_pin</name></member>
+    <member refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kind="variable"><name>min_pulse_width</name></member>
+    <member refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kind="variable"><name>max_pulse_width</name></member>
+    <member refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kind="variable"><name>max_degree</name></member>
+    <member refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kind="variable"><name>mcpwm_num</name></member>
+    <member refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kind="variable"><name>timer_num</name></member>
+    <member refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kind="variable"><name>gen</name></member>
   </compound>
   <compound refid="adc_8h" kind="file"><name>adc.h</name>
     <member refid="adc_8h_1a63baed8df076ce9dddaea1ae8694c1d8" kind="define"><name>DEFAULT_VREF</name></member>
@@ -24,7 +33,7 @@
   </compound>
   <compound refid="lsa_8h" kind="file"><name>lsa.h</name>
     <member refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" kind="define"><name>NUMBER_OF_SAMPLES</name></member>
-    <member refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" kind="typedef"><name>line_sensor_array</name></member>
+    <member refid="lsa_8h_1ac8b2db6041eed361da1e104816cc23eb" kind="typedef"><name>line_sensor_array</name></member>
     <member refid="lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd" kind="function"><name>enable_line_sensor</name></member>
     <member refid="lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2" kind="function"><name>read_line_sensor</name></member>
   </compound>
@@ -115,17 +124,8 @@
     <member refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kind="define"><name>SERVO_C</name></member>
   </compound>
   <compound refid="servo_8h" kind="file"><name>servo.h</name>
-    <member refid="servo_8h_1a6376a54e0fe15082b196f563b9a98091" kind="define"><name>SERVO_A_MIN_PULSEWIDTH</name></member>
-    <member refid="servo_8h_1abb7a7b9bbb4de8afc75eb2bd72b8465a" kind="define"><name>SERVO_A_MAX_PULSEWIDTH</name></member>
-    <member refid="servo_8h_1a845ca14dbdd498c04c84aeb9434b70fc" kind="define"><name>SERVO_A_MAX_DEGREE</name></member>
-    <member refid="servo_8h_1a025ef086774f035f0849f38e524c7594" kind="define"><name>SERVO_B_MIN_PULSEWIDTH</name></member>
-    <member refid="servo_8h_1acc261afdcf7e85f571ed5d0b8f02936f" kind="define"><name>SERVO_B_MAX_PULSEWIDTH</name></member>
-    <member refid="servo_8h_1a697bd747318e73efc970ba631c997cd0" kind="define"><name>SERVO_B_MAX_DEGREE</name></member>
-    <member refid="servo_8h_1af48899034203fbf9878d439c6286a7e2" kind="define"><name>SERVO_C_MIN_PULSEWIDTH</name></member>
-    <member refid="servo_8h_1a9bd897b2d6eb3f01fcda8c8230b02107" kind="define"><name>SERVO_C_MAX_PULSEWIDTH</name></member>
-    <member refid="servo_8h_1ae6f9c9f2ad3e851ba3f98e8c944a7484" kind="define"><name>SERVO_C_MAX_DEGREE</name></member>
     <member refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
-    <member refid="servo_8h_1a424f7770de8a5b81a1a1b8361ac4bf0f" kind="function"><name>set_angle_servo</name></member>
+    <member refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
   </compound>
   <compound refid="sra__board_8h" kind="file"><name>sra_board.h</name>
   </compound>
@@ -189,8 +189,8 @@
     <member refid="servo_8c_1a782ddd6cf38e2f841ac4daaf9604319c" kind="variable"><name>TAG_SERVO</name></member>
     <member refid="servo_8c_1a23cd83a8e8989910cf696b9226d0a495" kind="variable"><name>enabled_servo_flag</name></member>
     <member refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
-    <member refid="servo_8c_1a7df1fd536e3aeeba366ae8a542878cd5" kind="function"><name>set_angle_servo_helper</name></member>
-    <member refid="servo_8c_1a424f7770de8a5b81a1a1b8361ac4bf0f" kind="function"><name>set_angle_servo</name></member>
+    <member refid="servo_8c_1a5b22e5ca5be55df86b36cea8f542291b" kind="function"><name>set_angle_servo_helper</name></member>
+    <member refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
   </compound>
   <compound refid="switches_8c" kind="file"><name>switches.c</name>
     <member refid="switches_8c_1ac00d65aab541451923cc2fc80893786e" kind="variable"><name>TAG_SWITCHES</name></member>
