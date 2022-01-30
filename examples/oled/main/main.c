@@ -22,18 +22,28 @@
  * SOFTWARE.
  */
 
-#ifndef SRA_BOARD_H
-#define SRA_BOARD_H
-
-#include "adc.h"
-#include "bar_graph.h"
-#include "switches.h"
-#include "lsa.h"
-#include "motor_driver.h"
-#include "mpu6050.h"
-#include "servo.h"
-#include "pin_defs.h"
-#include "utils.h"
 #include "oled.h"
 
-#endif
+static const char *TAG = "oled_example";
+
+void app_main()
+{
+	// Declaring an empty u8g2_t struct to configure the oled
+	u8g2_t oled_config;
+
+	// Initialising the OLED
+	CHECK(init_oled(&oled_config));
+	vTaskDelay(100);
+
+	// Clearing the screen 
+	u8g2_ClearBuffer(&oled_config);
+
+	// Setting the font and printing the string on screen
+	u8g2_SetFont(&oled_config, u8g2_font_ncenB14_tr);
+	u8g2_DrawStr(&oled_config, 2,17,"Hello World!");
+
+	// Sending the buffer to the screen
+	u8g2_SendBuffer(&oled_config);
+
+	ESP_LOGI(TAG, "Successfully displayed Hello World on the OLED Screen");
+}

@@ -22,18 +22,37 @@
  * SOFTWARE.
  */
 
-#ifndef SRA_BOARD_H
-#define SRA_BOARD_H
+#ifndef OLED_H
+#define OLED_H
 
-#include "adc.h"
-#include "bar_graph.h"
-#include "switches.h"
-#include "lsa.h"
-#include "motor_driver.h"
-#include "mpu6050.h"
-#include "servo.h"
+#include <stdio.h>
+#include <string.h>
+
+#include <driver/gpio.h>
+#include <esp_log.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
+
+#include "u8g2.h"
+#include "u8g2_esp32_hal.h"
 #include "pin_defs.h"
-#include "utils.h"
-#include "oled.h"
+
+/**
+ * @brief enables and configures OLED display
+ 
+ * @param pointer to empty u8g2_t struct
+
+ * @return esp_err_t i.e it shows if OLED is initialised successfully or not
+ **/
+esp_err_t init_oled(u8g2_t* u8g2);
+
+/**
+ * @brief displays SRA logo on OLED screen
+ 
+ * @param pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
+ **/
+esp_err_t display_logo(u8g2_t* u8g2);
 
 #endif
