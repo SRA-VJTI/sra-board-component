@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "u8g2_esp32_hal.h": "c",
-        "u8g2.h": "c",
-        "adc.h": "c",
-        "oled.h": "c",
-        "lsa.h": "c"
-    }
-}
