@@ -32,7 +32,7 @@ void app_main()
 	u8g2_t oled_config;
 
 	// Initialising the OLED
-	CHECK(init_oled(&oled_config));
+	ESP_ERROR_CHECK(init_oled(&oled_config));
 	vTaskDelay(100);
 
 	// Clearing the screen 
