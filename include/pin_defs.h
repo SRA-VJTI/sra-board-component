@@ -50,8 +50,8 @@
 /////////////////////////////
 
 //////// oled ////////
-#define OLED_SDA 21
-#define OLED_SCL 22
+#define OLED_SDA 22
+#define OLED_SCL 21
 
 //////// bar graph //////////
 #define BG_LED_1 32
