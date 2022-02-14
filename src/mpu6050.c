@@ -23,85 +23,88 @@
  */
 
 #include "mpu6050.h"
+#include "i2cdev.h"
 
 static const char *TAG_MPU = "mpu_6050";
+static i2c_dev_t mpu6050_dev_t;
 
 // Initialise the I2C bus and install driver to specified pins
 esp_err_t i2c_master_init(void)
 {
-    int i2c_master_port = I2C_MASTER_NUM;
-    i2c_config_t conf;
-    conf.mode = I2C_MODE_MASTER;
-    conf.sda_io_num = I2C_MASTER_SDA_IO;
-    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
-    conf.scl_io_num = I2C_MASTER_SCL_IO;
-    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
-    conf.master.clk_speed = I2C_MASTER_FREQ_HZ;
-    i2c_param_config(i2c_master_port, &conf);
-    esp_err_t ret = i2c_driver_install(i2c_master_port, conf.mode, I2C_MASTER_RX_BUF_DISABLE, I2C_MASTER_TX_BUF_DISABLE, 0);
-    if (ret != ESP_OK)
-        ESP_LOGE(TAG_MPU, "I2C Master Initialisation Failed!");
+    CHECK(i2cdev_init());
 
-    return ret;
+    mpu6050_dev_t.port = I2C_MASTER_NUM;
+    mpu6050_dev_t.addr = MPU6050_ADDR;
+    mpu6050_dev_t.cfg.mode = I2C_MODE_MASTER;
+    mpu6050_dev_t.cfg.sda_io_num = I2C_MASTER_SDA_IO;
+    mpu6050_dev_t.cfg.scl_io_num = I2C_MASTER_SCL_IO;
+    mpu6050_dev_t.cfg.master.clk_speed = I2C_MASTER_FREQ_HZ;
+
+    return i2c_dev_create_mutex(&mpu6050_dev_t);
 }
 
 // Initialise and power ON, MPU6050
 esp_err_t enable_mpu6050(void)
 {
     CHECK(i2c_master_init());
+    I2C_DEV_TAKE_MUTEX(&mpu6050_dev_t);
 
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, 0x6B, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, 0x00, ACK_CHECK_EN);
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
-    i2c_cmd_link_delete(cmd);
-    return ret;
+    // Set Clock Source
+    uint8_t value;
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_read_reg(&mpu6050_dev_t, MPU6050_RA_PWR_MGMT_1, &value, 1));
+    value = value & 0xf8;
+    value = value | MPU6050_CLOCK_PLL_XGYRO;
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_write_reg(&mpu6050_dev_t, MPU6050_RA_PWR_MGMT_1, &value, 1));
+
+    // Set fullscale gyro range
+    value = MPU6050_GYRO_FS_250;
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_write_reg(&mpu6050_dev_t, MPU6050_RA_GYRO_CONFIG, &value, 1));
+
+    // Set fullscale accel range
+    value = MPU6050_ACCEL_FS_2;
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_write_reg(&mpu6050_dev_t, MPU6050_RA_ACCEL_CONFIG, &value, 1));
+    
+    // Set Sleep Mode to false
+    value = 0x00;
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_read_reg(&mpu6050_dev_t, MPU6050_RA_PWR_MGMT_1, &value, 1));
+    value = value & 0x9f; // also check 0xbf
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_write_reg(&mpu6050_dev_t, MPU6050_RA_PWR_MGMT_1, &value, 1));
+
+    // Add MPU6050_RA_WHO_AM_I
+    
+    I2C_DEV_GIVE_MUTEX(&mpu6050_dev_t);
+
+    return ESP_OK;
 }
 
 // Read accelerometer values
 esp_err_t mpu6050_read_acce(uint8_t *data_rd, size_t size)
 {
     if (size == 0)
+    {
         return ESP_OK;
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, ACCE_START_ADD, ACK_CHECK_EN);
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | READ_BIT, ACK_CHECK_EN);
-    if (size > 1)
-        i2c_master_read(cmd, data_rd, size - 1, ACK_VAL);
+    }
 
-    i2c_master_read_byte(cmd, data_rd + size - 1, NACK_VAL);
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
-    i2c_cmd_link_delete(cmd);
-    return ret;
+    I2C_DEV_TAKE_MUTEX(&mpu6050_dev_t);
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_read_reg(&mpu6050_dev_t, ACCE_START_ADDR, data_rd, size));
+    I2C_DEV_GIVE_MUTEX(&mpu6050_dev_t);
+
+    return ESP_OK;
 }
 
 // Read gyroscope values
 esp_err_t mpu6050_read_gyro(uint8_t *data_rd, size_t size)
 {
     if (size == 0)
+    {
         return ESP_OK;
+    }
 
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
-    i2c_master_write_byte(cmd, GYRO_START_ADD, ACK_CHECK_EN);
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | READ_BIT, ACK_CHECK_EN);
-    if (size > 1)
-        i2c_master_read(cmd, data_rd, size - 1, ACK_VAL);
+    I2C_DEV_TAKE_MUTEX(&mpu6050_dev_t);
+    I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_read_reg(&mpu6050_dev_t, GYRO_START_ADDR, data_rd, size));
+    I2C_DEV_GIVE_MUTEX(&mpu6050_dev_t);
 
-    i2c_master_read_byte(cmd, data_rd + size - 1, NACK_VAL);
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
-    i2c_cmd_link_delete(cmd);
-    return ret;
+    return ESP_OK;
 }
 
 // Combine the MSB and LSB values (8-bit) to a single value (16-bit)
