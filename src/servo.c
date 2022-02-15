@@ -89,9 +89,9 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
 {
     if (enabled_servo_flag)
     {
-        if (config->servo_pin)
+        if (config->servo_id == SERVO_A || config->servo_id == SERVO_B || config->servo_id == SERVO_C)
         {
-            return set_angle_servo_helper(config->servo_pin,config->max_degree,config->min_pulse_width,config->max_pulse_width,degree_of_rotation,config->mcpwm_num,config->timer_num,config->gen);
+            return set_angle_servo_helper(STR(config->servo_id),config->max_degree,config->min_pulse_width,config->max_pulse_width,degree_of_rotation,config->mcpwm_num,config->timer_num,config->gen);
         }
         else
         {

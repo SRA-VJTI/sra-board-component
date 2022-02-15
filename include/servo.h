@@ -37,7 +37,7 @@
 #include "pin_defs.h"
 
 typedef struct {
-    int servo_pin;
+    int servo_id;
     int min_pulse_width;
     int max_pulse_width;
     int max_degree;
@@ -45,24 +45,6 @@ typedef struct {
     mcpwm_timer_t timer_num;
     mcpwm_generator_t gen;    
 } servo_config;
-
-/** @struct servo_config
- *  @brief This structure contains the configuration of servos
- *  @var servo_config::servo_pin
- *  Member 'servo_pin' contains the gpio pin number to which servo is connected
- *  @var servo_config::min_pulse_width
- *  Member 'min_pulse_width' contains the minimum pulse width of servo motor
- *  @var servo_config::max_pulse_width
- *  Member 'max_pulse_width' contains the maximum pulse width of servo motor
- *  @var servo_config::max_degree
- *  Member 'max_degree' contains the maximum degree servo motor can rotate
- *  @var servo_config::mcpwm_num
- *  Member 'mcpwm_num' contains MCPWM unit to use
- *  @var servo_config::timer_num
- *  Member 'timer_num' contains MCPWM timer to use
- *  @var servo_config::gen
- *  Member 'gen' contains MCPWM operator to use
- */
 
 /**
  * @brief Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
