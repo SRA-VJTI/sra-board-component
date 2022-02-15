@@ -1,4 +1,4 @@
-set(srcs "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c" "src/utils.c" "src/oled.c" "src/u8g2_esp32_hal.c")
+set(srcs "src/i2cdev.c" "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c" "src/utils.c")
 
 set(COMPONENT_ADD_INCLUDEDIRS u8g2/csrc)
 
