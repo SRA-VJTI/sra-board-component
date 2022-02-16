@@ -18,6 +18,12 @@ config I2CDEV_NOLOCK
 
 endmenu
 
+config ENABLE_OLED
+    bool "Enable OLED"
+    default y
+    help
+        Enables OLED support on SRA Board
+
 menu "Servo motor configuration"
 
 menu "Servo A"

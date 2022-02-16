@@ -1,11 +1,13 @@
-set(srcs "src/i2cdev.c" "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c" "src/utils.c" "src/oled.c" "src/u8g2_esp32_hal.c")
+set(srcs "src/i2cdev.c" "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c" "src/utils.c")
+set(include_dirs include)
 
-set(COMPONENT_ADD_INCLUDEDIRS u8g2/csrc)
-
-set(u8g2_srcs "u8g2/csrc/u8x8_setup.c"
-                    "u8g2/csrc/u8x8_u8toa.c"
-                    "u8g2/csrc/u8x8_d_ssd1306_96x16.c"
-                    "u8g2/csrc/u8g2_d_memory.c"
+if(CONFIG_ENABLE_OLED)
+    list(APPEND include_dirs u8g2/csrc)
+    list(APPEND srcs "src/oled.c" "src/u8g2_esp32_hal.c")
+    list(APPEND srcs "u8g2/csrc/u8x8_setup.c"
+                     "u8g2/csrc/u8x8_u8toa.c"
+                     "u8g2/csrc/u8x8_d_ssd1306_96x16.c"
+                     "u8g2/csrc/u8g2_d_memory.c"
                     "u8g2/csrc/u8g2_selection_list.c"
                     "u8g2/csrc/u8g2_hvline.c"
                     "u8g2/csrc/u8x8_d_ssd1306_128x64_noname.c"
@@ -90,8 +92,9 @@ set(u8g2_srcs "u8g2/csrc/u8x8_setup.c"
                     "u8g2/csrc/u8x8_u16toa.c"
                     "u8g2/csrc/u8x8_d_a2printer.c"
                     "u8g2/csrc/u8x8_d_st7565.c")
+endif()
 
-idf_component_register(SRCS "${srcs}" "${u8g2_srcs}"
-                       INCLUDE_DIRS "include" "u8g2/csrc"
+idf_component_register(SRCS "${srcs}"
+                       INCLUDE_DIRS "${include_dirs}"
                        REQUIRES driver efuse esp32 esp_adc_cal esp_common esp_event 
                                 esp_rom freertos heap log soc spiffs)

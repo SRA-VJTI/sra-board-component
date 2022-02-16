@@ -32,10 +32,12 @@
 #include <esp_log.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
+#include "pin_defs.h"
 
+#ifdef CONFIG_ENABLE_OLED
 #include "u8g2.h"
 #include "u8g2_esp32_hal.h"
-#include "pin_defs.h"
+#endif
 
 /**
  * @brief enables and configures OLED display
