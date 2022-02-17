@@ -9,9 +9,17 @@ jobs:
       image: espressif/idf:release-v4.1
     strategy:
       matrix:
-        test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches]
-    steps:  
-      - uses: actions/checkout@v2
+        test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled]
+    steps:
+      - name: Setup Github Actions
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 0
+          path: CI-test
+      - name: Setup submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote 
       - name: Test ${{ matrix.test-apps }}
         run: |
           . $IDF_PATH/export.sh
