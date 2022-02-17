@@ -12,14 +12,13 @@ jobs:
         test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled]
     steps:  
       - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GH_PAT }}
-          submodules: recursive
+      - name: Setup submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote 
       - name: Test ${{ matrix.test-apps }}
         run: |
           . $IDF_PATH/export.sh
-          git submodule init
-          git submodule update
           cd examples/
           cd ${{ matrix.test-apps }}
           idf.py build
