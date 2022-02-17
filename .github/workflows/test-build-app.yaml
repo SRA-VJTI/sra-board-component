@@ -15,6 +15,7 @@ jobs:
       - name: Test ${{ matrix.test-apps }}
         run: |
           . $IDF_PATH/export.sh
+          ls -a
           git submodule init
           git submodule update
           cd examples/
