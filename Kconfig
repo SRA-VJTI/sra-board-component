@@ -20,7 +20,7 @@ endmenu
 
 config ENABLE_OLED
     bool "Enable OLED"
-    default y
+    default n
     help
         Enables OLED support on SRA Board
 
