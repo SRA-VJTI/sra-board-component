@@ -12,7 +12,7 @@ jobs:
         test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled]
     steps:
       - name: Setup Github Actions
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           fetch-depth: 0
           path: CI-test
