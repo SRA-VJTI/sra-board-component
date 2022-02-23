@@ -49,6 +49,12 @@
 
 /////////////////////////////
 
+#ifdef CONFIG_ENABLE_OLED
+//////// oled ////////
+#define OLED_SDA 22
+#define OLED_SCL 21
+#endif
+
 //////// bar graph //////////
 #define BG_LED_1 32
 #define BG_LED_2 33
