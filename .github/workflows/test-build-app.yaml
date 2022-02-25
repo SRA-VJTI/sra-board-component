@@ -9,7 +9,7 @@ jobs:
       image: espressif/idf:release-v4.1
     strategy:
       matrix:
-        test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches]
+        test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled]
     steps:  
       - uses: actions/checkout@v2
       - name: Test ${{ matrix.test-apps }}
