@@ -153,7 +153,7 @@ esp_err_t display_walle_logo(u8g2_t* u8g2)
 	u8g2_SetFont(u8g2, u8g2_font_lucasfont_alternate_tf);
 
 	// print "Wall-e" text on the screen
-	u8g2_DrawStr(u8g2, 37, 30, "W a l l - e");
+	u8g2_DrawStr(u8g2, 17, 30, "W a l l - E  2 0 2 2");
 
 	// Sends the buffer to the OLED Display
 	u8g2_SendBuffer(u8g2);
