@@ -169,19 +169,19 @@ esp_err_t display_lsa(line_sensor_array readings,u8g2_t *u8g2)
 
     // plot the bar of LSA 0
     u8g2_DrawFrame(u8g2, 27,0,10,30);
-    u8g2_DrawBox(u8g2, 27,0,10,readings.adc_reading[0]*0.03);
+    u8g2_DrawBox(u8g2, 27,0,10,readings.adc_reading[3]*0.03);
 
     // plot the bar of LSA 1
     u8g2_DrawFrame(u8g2, 47,0,10,30);
-    u8g2_DrawBox(u8g2, 47,0,10,readings.adc_reading[1]*0.03);
+    u8g2_DrawBox(u8g2, 47,0,10,readings.adc_reading[2]*0.03);
 
     // plot the bar of LSA 2
     u8g2_DrawFrame(u8g2,67,0,10,30);
-    u8g2_DrawBox(u8g2,67,0,10,readings.adc_reading[2]*0.03);
+    u8g2_DrawBox(u8g2,67,0,10,readings.adc_reading[1]*0.03);
 
     // plot the bar of LSA 3
     u8g2_DrawFrame(u8g2, 87,0,10,30);
-    u8g2_DrawBox(u8g2, 87,0,10,readings.adc_reading[3]*0.03);
+    u8g2_DrawBox(u8g2, 87,0,10,readings.adc_reading[0]*0.03);
 
     // Sends the buffer to the OLED Display
 	u8g2_SendBuffer(u8g2);
