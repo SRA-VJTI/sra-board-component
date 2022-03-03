@@ -40,6 +40,10 @@ esp_err_t i2c_master_init(void)
     mpu6050_dev_t.cfg.scl_io_num = I2C_MASTER_SCL_IO;
     mpu6050_dev_t.cfg.master.clk_speed = I2C_MASTER_FREQ_HZ;
 
+#ifdef CONFIG_ENABLE_OLED
+    i2c_initialised = true;
+#endif
+
     return i2c_dev_create_mutex(&mpu6050_dev_t);
 }
 
@@ -63,7 +67,7 @@ esp_err_t enable_mpu6050(void)
     // Set fullscale accel range
     value = MPU6050_ACCEL_FS_2;
     I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_write_reg(&mpu6050_dev_t, MPU6050_RA_ACCEL_CONFIG, &value, 1));
-    
+
     // Set Sleep Mode to false
     value = 0x00;
     I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_read_reg(&mpu6050_dev_t, MPU6050_RA_PWR_MGMT_1, &value, 1));
@@ -71,7 +75,7 @@ esp_err_t enable_mpu6050(void)
     I2C_DEV_CHECK(&mpu6050_dev_t, i2c_dev_write_reg(&mpu6050_dev_t, MPU6050_RA_PWR_MGMT_1, &value, 1));
 
     // Add MPU6050_RA_WHO_AM_I
-    
+
     I2C_DEV_GIVE_MUTEX(&mpu6050_dev_t);
 
     return ESP_OK;

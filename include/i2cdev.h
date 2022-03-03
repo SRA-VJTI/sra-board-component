@@ -56,6 +56,10 @@ extern "C" {
 #endif
 #endif
 
+#ifdef CONFIG_ENABLE_OLED
+extern bool i2c_initialised;
+#endif
+
 /**
  * I2C device descriptor
  */
