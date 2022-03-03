@@ -74,10 +74,10 @@
 /////////////////////////////
 
 /////////// lsa /////////////
-#define LSA_A0 36
-#define LSA_A1 39
-#define LSA_A2 34
-#define LSA_A3 35
+#define LSA_A0 34
+#define LSA_A1 35
+#define LSA_A2 36
+#define LSA_A3 39
 /////////////////////////////
 
 /////// motor driver ////////
