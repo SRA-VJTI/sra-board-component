@@ -33,6 +33,7 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include "pin_defs.h"
+#include "lsa.h"
 
 #ifdef CONFIG_ENABLE_OLED
 #include "u8g2.h"
@@ -55,6 +56,33 @@ esp_err_t init_oled(u8g2_t* u8g2);
 
  * @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
  **/
-esp_err_t display_logo(u8g2_t* u8g2);
+esp_err_t display_sra_logo(u8g2_t* u8g2);
+
+/**
+ * @brief displays Wall-E Bitmap logo on OLED screen
+ 
+ * @param pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
+ **/
+esp_err_t display_walle_logo(u8g2_t* u8g2);
+
+/**
+ * @brief displays LSA bar on OLED screen
+ 
+ * @param pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if LSA bar is displayed successfully or not
+ **/
+esp_err_t display_lsa(line_sensor_array readings,u8g2_t *u8g2);
+
+/**
+ * @brief displays pitch and roll readings on OLED screen
+ 
+ * @param pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+ **/
+esp_err_t display_mpu(float pitch,float roll,u8g2_t *u8g2);
 
 #endif
