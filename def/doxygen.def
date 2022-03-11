@@ -2695,7 +2695,7 @@ _EnD_oF_dEf_TeXt_;
 enables and configures OLED display
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to empty u8g2_t struct
+@param u8g2 pointer to empty u8g2_t struct
 
 @return esp_err_t i.e it shows if OLED is initialised successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -2721,7 +2721,7 @@ _EnD_oF_dEf_TeXt_;
 displays SRA logo on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -2747,7 +2747,7 @@ _EnD_oF_dEf_TeXt_;
 displays Wall-E Bitmap logo on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -2774,12 +2774,13 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '77';
+      func-mem-desc-line = '78';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays LSA bar on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param readings line_sensor_array struct
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if LSA bar is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -2812,12 +2813,61 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '86';
+      func-mem-desc-line = '89';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays pitch and roll readings on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param pitch Value of pitch in float
+@param roll Value of Roll in float
+@param u8g2 pointer to u8g2_t struct
+
+@return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'oled_8h_1afb16632d6f605ccb07d1f21347e86377';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'display_pid_values';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kp';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'ki';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8g2_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'u8g2';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/oled.h';
+      func-mem-desc-line = '101';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+displays kp, ki and kd reading on the OLED screen
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param kp value of kp in float
+@param ki value of ki in float
+@param kd value of kd in float
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -5709,7 +5759,7 @@ _EnD_oF_dEf_TeXt_;
 enables and configures OLED display
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to empty u8g2_t struct
+@param u8g2 pointer to empty u8g2_t struct
 
 @return esp_err_t i.e it shows if OLED is initialised successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -5735,7 +5785,7 @@ _EnD_oF_dEf_TeXt_;
 displays SRA logo on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -5761,7 +5811,7 @@ _EnD_oF_dEf_TeXt_;
 displays Wall-E Bitmap logo on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -5793,7 +5843,8 @@ _EnD_oF_dEf_TeXt_;
 displays LSA bar on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param readings line_sensor_array struct
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if LSA bar is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
@@ -5831,7 +5882,56 @@ _EnD_oF_dEf_TeXt_;
 displays pitch and roll readings on OLED screen
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param pointer to u8g2_t struct
+@param pitch Value of pitch in float
+@param roll Value of Roll in float
+@param u8g2 pointer to u8g2_t struct
+
+@return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'oled_8c_1afb16632d6f605ccb07d1f21347e86377';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'display_pid_values';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kp';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'ki';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'kd';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8g2_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'u8g2';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/oled.c';
+      func-mem-desc-line = '217';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+displays kp, ki and kd reading on the OLED screen
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param kp value of kp in float
+@param ki value of ki in float
+@param kd value of kd in float
+@param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
 _EnD_oF_dEf_TeXt_;

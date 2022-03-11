@@ -46,7 +46,6 @@
 </listitem><listitem><para><ulink url="#contributing">Contributing</ulink></para>
 </listitem><listitem><para><ulink url="#license">License</ulink></para>
 </listitem><listitem><para><ulink url="#contact">Contact</ulink></para>
-</listitem><listitem><para><ulink url="#acknowledgements">Acknowledgements</ulink></para>
 </listitem></itemizedlist>
 </para>
 <para><heading level="2">About The Project</heading>
@@ -108,7 +107,7 @@
 <para><emphasis>For more examples, please refer to the <ulink url="https://sravjti.tech/sra-board-component/">Documentation</ulink></emphasis></para>
 <para><heading level="3">Examples</heading>
 </para>
-<para><table rows="7" cols="2"><row>
+<para><table rows="8" cols="2"><row>
 <entry thead="yes" align='center'><para>Example Link   </para>
 </entry><entry thead="yes"><para>Description    </para>
 </entry></row>
@@ -134,7 +133,11 @@
 </entry></row>
 <row>
 <entry thead="no" align='center'><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches">Switches</ulink>   </para>
-</entry><entry thead="no"><para>Manual Switches provide the traditional comfort to toggle the input variables. This example is for using four user switches present on SRA Board   </para>
+</entry><entry thead="no"><para>Manual Switches provide the traditional comfort to toggle the input variables. This example is for using four user switches present on SRA Board    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/oled">OLED</ulink>   </para>
+</entry><entry thead="no"><para>Example for initialising the OLED and diplaying the &quot;Hello World&quot; on the screen   </para>
 </entry></row>
 </table>
 </para>

@@ -67,7 +67,6 @@
 <codeline><highlight class="normal">*<sp/>[Contributing](#contributing)</highlight></codeline>
 <codeline><highlight class="normal">*<sp/>[License](#license)</highlight></codeline>
 <codeline><highlight class="normal">*<sp/>[Contact](#contact)</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>[Acknowledgements](#acknowledgements)</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -139,6 +138,7 @@
 <codeline><highlight class="normal">|<sp/><sp/>[MPU6050](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/mpu6050)<sp/><sp/><sp/><sp/>|<sp/><sp/>MPU6050<sp/>combines<sp/>3-axis<sp/>Gyroscope,<sp/>3-axis<sp/>Accelerometer<sp/>and<sp/>Motion<sp/>Processor<sp/>all<sp/>in<sp/>small<sp/>package.<sp/>This<sp/>example<sp/>is<sp/>for<sp/>reading<sp/>values<sp/>from<sp/>mpu6050<sp/>accelerometer<sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/><sp/>[Servos](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/servos)<sp/><sp/>|<sp/><sp/>Servos<sp/>are<sp/>used<sp/>in<sp/>the<sp/>locomotion<sp/>of<sp/>bots<sp/>like<sp/>[Wall-E](https://github.com/SRA-VJTI/Wall-E_v2.1)<sp/>.<sp/>This<sp/>example<sp/>is<sp/>for<sp/>using<sp/>the<sp/>servo<sp/>port<sp/>on<sp/>SRA<sp/>Board<sp/>to<sp/>run<sp/>servos<sp/><sp/><sp/>|</highlight></codeline>
 <codeline><highlight class="normal">|<sp/>[Switches](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches)<sp/>|<sp/>Manual<sp/>Switches<sp/>provide<sp/>the<sp/>traditional<sp/>comfort<sp/>to<sp/>toggle<sp/>the<sp/>input<sp/>variables.<sp/>This<sp/>example<sp/>is<sp/>for<sp/>using<sp/>four<sp/>user<sp/>switches<sp/>present<sp/>on<sp/>SRA<sp/>Board<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>[OLED](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/oled)<sp/>|<sp/>Example<sp/>for<sp/>initialising<sp/>the<sp/>OLED<sp/>and<sp/>diplaying<sp/>the<sp/>&quot;Hello<sp/>World&quot;<sp/>on<sp/>the<sp/>screen<sp/>|</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&lt;!--<sp/>ROADMAP<sp/>--&gt;</highlight></codeline>
 <codeline><highlight class="normal">##<sp/>Roadmap</highlight></codeline>

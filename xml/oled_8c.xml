@@ -193,10 +193,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pointer</parametername>
+<parametername>u8g2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>to empty u8g2_t struct</para>
+<para>pointer to empty u8g2_t struct</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -223,10 +223,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pointer</parametername>
+<parametername>u8g2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>to u8g2_t struct</para>
+<para>pointer to u8g2_t struct</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -253,10 +253,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pointer</parametername>
+<parametername>u8g2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>to u8g2_t struct</para>
+<para>pointer to u8g2_t struct</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -287,10 +287,18 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pointer</parametername>
+<parametername>readings</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>to u8g2_t struct</para>
+<para><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref> struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u8g2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to u8g2_t struct</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -325,10 +333,26 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pointer</parametername>
+<parametername>pitch</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>to u8g2_t struct</para>
+<para>Value of pitch in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>roll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of Roll in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u8g2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to u8g2_t struct</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -339,6 +363,72 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/oled.c" line="192" column="11" bodyfile="src/oled.c" bodystart="192" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8c_1afb16632d6f605ccb07d1f21347e86377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_pid_values</definition>
+        <argsstring>(float kp, float ki, float kd, u8g2_t *u8g2)</argsstring>
+        <name>display_pid_values</name>
+        <param>
+          <type>float</type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ki</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>kd</declname>
+        </param>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays kp, ki and kd reading on the OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of kp in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ki</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of ki in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of kd in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u8g2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="217" column="11" bodyfile="src/oled.c" bodystart="217" bodyend="243"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -561,6 +651,34 @@
 <codeline lineno="213"><highlight class="normal"></highlight></codeline>
 <codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
 <codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8c_1afb16632d6f605ccb07d1f21347e86377" kindref="member">display_pid_values</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ki,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kd,<sp/>u8g2_t<sp/>*u8g2)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clearing<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_ClearBuffer(u8g2);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setting<sp/>the<sp/>font<sp/>and<sp/>printing<sp/>the<sp/>string<sp/>on<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SetFont(u8g2,<sp/>u8g_font_profont11);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>kp_str[10],ki_str[10],kd_str[10];</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Printing<sp/>kp<sp/>value<sp/>on<sp/>oled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(kp_str,<sp/></highlight><highlight class="stringliteral">&quot;Kp:<sp/>%0.2f&quot;</highlight><highlight class="normal">,<sp/>kp);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawStr(u8g2,<sp/>0,<sp/>10,<sp/>kp_str);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Printing<sp/>ki<sp/>value<sp/>on<sp/>oled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(ki_str,<sp/></highlight><highlight class="stringliteral">&quot;Ki:<sp/>%0.2f&quot;</highlight><highlight class="normal">,<sp/>ki);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawStr(u8g2,<sp/>30,<sp/>20,<sp/>ki_str);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Printing<sp/>kd<sp/>value<sp/>on<sp/>oled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(kd_str,<sp/></highlight><highlight class="stringliteral">&quot;Kd:<sp/>%0.2f&quot;</highlight><highlight class="normal">,<sp/>kd);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawStr(u8g2,<sp/>60,<sp/>30,<sp/>kd_str);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sending<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SendBuffer(u8g2);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/oled.c"/>
   </compounddef>

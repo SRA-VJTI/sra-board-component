@@ -116,6 +116,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5ff3f1819dfe0d92468bb32a80335e0e"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a5ff3f1819dfe0d92468bb32a80335e0e">display_mpu</a> (float pitch, float roll, u8g2_t *u8g2)</td></tr>
 <tr class="memdesc:a5ff3f1819dfe0d92468bb32a80335e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays pitch and roll readings on OLED screen  <a href="oled_8c.html#a5ff3f1819dfe0d92468bb32a80335e0e">More...</a><br /></td></tr>
 <tr class="separator:a5ff3f1819dfe0d92468bb32a80335e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb16632d6f605ccb07d1f21347e86377"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#afb16632d6f605ccb07d1f21347e86377">display_pid_values</a> (float kp, float ki, float kd, u8g2_t *u8g2)</td></tr>
+<tr class="memdesc:afb16632d6f605ccb07d1f21347e86377"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays kp, ki and kd reading on the OLED screen  <a href="oled_8c.html#afb16632d6f605ccb07d1f21347e86377">More...</a><br /></td></tr>
+<tr class="separator:afb16632d6f605ccb07d1f21347e86377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -154,7 +157,8 @@ Variables</h2></td></tr>
 <p>displays LSA bar on OLED screen </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>to u8g2_t struct</td></tr>
+    <tr><td class="paramname">readings</td><td><a class="el" href="unionline__sensor__array.html">line_sensor_array</a> struct </td></tr>
+    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
   </table>
   </dd>
 </dl>
@@ -197,7 +201,61 @@ Variables</h2></td></tr>
 <p>displays pitch and roll readings on OLED screen </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>to u8g2_t struct</td></tr>
+    <tr><td class="paramname">pitch</td><td>Value of pitch in float </td></tr>
+    <tr><td class="paramname">roll</td><td>Value of Roll in float </td></tr>
+    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not </dd></dl>
+
+</div>
+</div>
+<a id="afb16632d6f605ccb07d1f21347e86377" name="afb16632d6f605ccb07d1f21347e86377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb16632d6f605ccb07d1f21347e86377">&#9670;&nbsp;</a></span>display_pid_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t display_pid_values </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ki</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u8g2_t *&#160;</td>
+          <td class="paramname"><em>u8g2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>displays kp, ki and kd reading on the OLED screen </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kp</td><td>value of kp in float </td></tr>
+    <tr><td class="paramname">ki</td><td>value of ki in float </td></tr>
+    <tr><td class="paramname">kd</td><td>value of kd in float </td></tr>
+    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
   </table>
   </dd>
 </dl>
@@ -224,7 +282,7 @@ Variables</h2></td></tr>
 <p>displays SRA logo on OLED screen </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>to u8g2_t struct</td></tr>
+    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
   </table>
   </dd>
 </dl>
@@ -251,7 +309,7 @@ Variables</h2></td></tr>
 <p>displays Wall-E Bitmap logo on OLED screen </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>to u8g2_t struct</td></tr>
+    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
   </table>
   </dd>
 </dl>
@@ -278,7 +336,7 @@ Variables</h2></td></tr>
 <p>enables and configures OLED display </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>to empty u8g2_t struct</td></tr>
+    <tr><td class="paramname">u8g2</td><td>pointer to empty u8g2_t struct</td></tr>
   </table>
   </dd>
 </dl>
