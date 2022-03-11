@@ -1,0 +1,751 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="i2cdev_8h" kind="file" language="C++">
+    <compoundname>i2cdev.h</compoundname>
+    <includes local="no">driver/i2c.h</includes>
+    <includes local="no">freertos/FreeRTOS.h</includes>
+    <includes local="no">freertos/semphr.h</includes>
+    <includes local="no">esp_err.h</includes>
+    <includes refid="esp__idf__lib__helpers_8h" local="no">esp_idf_lib_helpers.h</includes>
+    <includes local="no">soc/i2c_reg.h</includes>
+    <includedby refid="u8g2__esp32__hal_8h" local="yes">include/u8g2_esp32_hal.h</includedby>
+    <includedby refid="i2cdev_8c" local="yes">src/i2cdev.c</includedby>
+    <includedby refid="mpu6050_8c" local="yes">src/mpu6050.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>esp_idf_lib_helpers.h</label>
+        <link refid="esp__idf__lib__helpers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/i2cdev.h</label>
+        <link refid="i2cdev_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>driver/i2c.h</label>
+      </node>
+      <node id="5">
+        <label>esp_err.h</label>
+      </node>
+      <node id="7">
+        <label>esp_idf_version.h</label>
+      </node>
+      <node id="3">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="4">
+        <label>freertos/semphr.h</label>
+      </node>
+      <node id="8">
+        <label>soc/i2c_reg.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/i2cdev.h</label>
+        <link refid="i2cdev_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/u8g2_esp32_hal.h</label>
+        <link refid="u8g2__esp32__hal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/i2cdev.c</label>
+        <link refid="i2cdev_8c"/>
+      </node>
+      <node id="5">
+        <label>src/mpu6050.c</label>
+        <link refid="mpu6050_8c"/>
+      </node>
+      <node id="3">
+        <label>src/u8g2_esp32_hal.c</label>
+        <link refid="u8g2__esp32__hal_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structi2c__dev__t" prot="public">i2c_dev_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__i2cdev_1gae91711762e6cea5ce9f67a93b3dd3e59" prot="public" static="no">
+        <name>I2CDEV_MAX_STRETCH_TIME</name>
+        <initializer>0x00ffffff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="55" column="12" bodyfile="include/i2cdev.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2cdev_1ga097ee23eb474674923704d81d376e646" prot="public" static="no">
+        <name>I2C_DEV_TAKE_MUTEX</name>
+        <param><defname>dev</defname></param>
+        <initializer>        do { \
+        esp_err_t __ = <ref refid="group__i2cdev_1gab0a314a2a3c6a8c7f9e59cf3b69466da" kindref="member">i2c_dev_take_mutex</ref>(dev); \
+        if (__ != ESP_OK) return __;\
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="197" column="9" bodyfile="include/i2cdev.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" prot="public" static="no">
+        <name>I2C_DEV_GIVE_MUTEX</name>
+        <param><defname>dev</defname></param>
+        <initializer>        do { \
+        esp_err_t __ = <ref refid="group__i2cdev_1ga51961c290ebed5993c50e30009c40e75" kindref="member">i2c_dev_give_mutex</ref>(dev); \
+        if (__ != ESP_OK) return __;\
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="202" column="9" bodyfile="include/i2cdev.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" prot="public" static="no">
+        <name>I2C_DEV_CHECK</name>
+        <param><defname>dev</defname></param>
+        <param><defname>X</defname></param>
+        <initializer>        do { \
+        esp_err_t ___ = X; \
+        if (___ != ESP_OK) { \
+            <ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(dev); \
+            return ___; \
+        } \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="207" column="9" bodyfile="include/i2cdev.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__i2cdev_1ga3522d16d02065700aaa099fc1b5aa9cd" prot="public" static="no">
+        <name>I2C_DEV_CHECK_LOGE</name>
+        <param><defname>dev</defname></param>
+        <param><defname>X</defname></param>
+        <param><defname>msg</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>        do { \
+        esp_err_t ___ = X; \
+        if (___ != ESP_OK) { \
+            <ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(dev); \
+            ESP_LOGE(TAG, msg, ## __VA_ARGS__); \
+            return ___; \
+        } \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="215" column="9" bodyfile="include/i2cdev.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__i2cdev_1ga8a96ea2cf13f4b50a9f5d5e17f40e01b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2cdev_init</definition>
+        <argsstring>()</argsstring>
+        <name>i2cdev_init</name>
+        <briefdescription>
+<para>Init library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function must be called before any other functions of this library.</para>
+<para><simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="85" column="11" bodyfile="src/i2cdev.c" bodystart="73" bodyend="90" declfile="include/i2cdev.h" declline="85" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1ga320d9f51aab144397f75448801aa85e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2cdev_done</definition>
+        <argsstring>()</argsstring>
+        <name>i2cdev_done</name>
+        <briefdescription>
+<para>Finish work with library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uninstall i2c drivers.</para>
+<para><simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="94" column="11" bodyfile="src/i2cdev.c" bodystart="92" bodyend="111" declfile="include/i2cdev.h" declline="94" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_create_mutex</definition>
+        <argsstring>(i2c_dev_t *dev)</argsstring>
+        <name>i2c_dev_create_mutex</name>
+        <param>
+          <type><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>Create mutex for device descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function does nothing if option CONFIG_I2CDEV_NOLOCK is enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="104" column="11" bodyfile="src/i2cdev.c" bodystart="113" bodyend="129" declfile="include/i2cdev.h" declline="104" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1ga1e9101fef8e50349d63157e0e01ced0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_delete_mutex</definition>
+        <argsstring>(i2c_dev_t *dev)</argsstring>
+        <name>i2c_dev_delete_mutex</name>
+        <param>
+          <type><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>Delete mutex for device descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function does nothing if option CONFIG_I2CDEV_NOLOCK is enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="114" column="11" bodyfile="src/i2cdev.c" bodystart="131" bodyend="141" declfile="include/i2cdev.h" declline="114" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1gab0a314a2a3c6a8c7f9e59cf3b69466da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_take_mutex</definition>
+        <argsstring>(i2c_dev_t *dev)</argsstring>
+        <name>i2c_dev_take_mutex</name>
+        <param>
+          <type><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>Take device mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function does nothing if option CONFIG_I2CDEV_NOLOCK is enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="124" column="11" bodyfile="src/i2cdev.c" bodystart="143" bodyend="157" declfile="include/i2cdev.h" declline="124" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1ga51961c290ebed5993c50e30009c40e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_give_mutex</definition>
+        <argsstring>(i2c_dev_t *dev)</argsstring>
+        <name>i2c_dev_give_mutex</name>
+        <param>
+          <type><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>Give device mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function does nothing if option CONFIG_I2CDEV_NOLOCK is enabled.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="134" column="11" bodyfile="src/i2cdev.c" bodystart="159" bodyend="173" declfile="include/i2cdev.h" declline="134" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1ga9785ee992dab84bea0d7be83bb6e17fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_read</definition>
+        <argsstring>(const i2c_dev_t *dev, const void *out_data, size_t out_size, void *in_data, size_t in_size)</argsstring>
+        <name>i2c_dev_read</name>
+        <param>
+          <type>const <ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>out_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_size</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>in_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>in_size</declname>
+        </param>
+        <briefdescription>
+<para>Read from slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Issue a send operation of <computeroutput>out_data</computeroutput> register address, followed by reading <computeroutput>in_size</computeroutput> bytes from slave into <computeroutput>in_data</computeroutput> . Function is thread-safe.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to send if non-null </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of data to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">in_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to input data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of byte to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="150" column="11" bodyfile="src/i2cdev.c" bodystart="236" bodyend="266" declfile="include/i2cdev.h" declline="150" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_write</definition>
+        <argsstring>(const i2c_dev_t *dev, const void *out_reg, size_t out_reg_size, const void *out_data, size_t out_size)</argsstring>
+        <name>i2c_dev_write</name>
+        <param>
+          <type>const <ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>out_reg</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_reg_size</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>out_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_size</declname>
+        </param>
+        <briefdescription>
+<para>Write to slave device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Write <computeroutput>out_size</computeroutput> bytes from <computeroutput>out_data</computeroutput> to slave into <computeroutput>out_reg</computeroutput> register address. Function is thread-safe.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to register address to send if non-null </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_reg_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of register address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of data to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="166" column="11" bodyfile="src/i2cdev.c" bodystart="268" bodyend="292" declfile="include/i2cdev.h" declline="166" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_read_reg</definition>
+        <argsstring>(const i2c_dev_t *dev, uint8_t reg, void *in_data, size_t in_size)</argsstring>
+        <name>i2c_dev_read_reg</name>
+        <param>
+          <type>const <ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>in_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>in_size</declname>
+        </param>
+        <briefdescription>
+<para>Read from register with an 8-bit address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shortcut to <ref refid="group__i2cdev_1ga9785ee992dab84bea0d7be83bb6e17fc" kindref="member">i2c_dev_read()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">in_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to input data buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of byte to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="180" column="11" bodyfile="src/i2cdev.c" bodystart="294" bodyend="298" declfile="include/i2cdev.h" declline="180" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__i2cdev_1gad9827abf64603201a084148c0de097ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t i2c_dev_write_reg</definition>
+        <argsstring>(const i2c_dev_t *dev, uint8_t reg, const void *out_data, size_t out_size)</argsstring>
+        <name>i2c_dev_write_reg</name>
+        <param>
+          <type>const <ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>out_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_size</declname>
+        </param>
+        <briefdescription>
+<para>Write to register with an 8-bit address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shortcut to <ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device descriptor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of data to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/i2cdev.h" line="194" column="11" bodyfile="src/i2cdev.c" bodystart="300" bodyend="304" declfile="include/i2cdev.h" declline="194" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>The<sp/>MIT<sp/>License<sp/>(MIT)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>Ruslan<sp/>V.<sp/>Uss<sp/>&lt;unclerus@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__I2CDEV_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__I2CDEV_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;driver/i2c.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;freertos/FreeRTOS.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;freertos/semphr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="esp__idf__lib__helpers_8h" kindref="compound">esp_idf_lib_helpers.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HELPER_TARGET_IS_ESP8266</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2CDEV_MAX_STRETCH_TIME<sp/>0xffffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;soc/i2c_reg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>I2C_TIME_OUT_REG_V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2CDEV_MAX_STRETCH_TIME<sp/>I2C_TIME_OUT_REG_V</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="group__i2cdev_1gae91711762e6cea5ce9f67a93b3dd3e59" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2CDEV_MAX_STRETCH_TIME<sp/>0x00ffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_ENABLE_OLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="u8g2__esp32__hal_8c_1ac1ab3a177117fc701db300be817034e4" kindref="member">i2c_initialised</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structi2c__dev__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68" refid="structi2c__dev__t_1a4b469f10acfaf5675d77fbe218c2ebe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_port_t<sp/><ref refid="structi2c__dev__t_1a4b469f10acfaf5675d77fbe218c2ebe2" kindref="member">port</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_config_t<sp/><ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structi2c__dev__t_1a84ad7180602cb8e36b38c29e5b1c86c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structi2c__dev__t_1a84ad7180602cb8e36b38c29e5b1c86c6" kindref="member">addr</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SemaphoreHandle_t<sp/><ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref>;<sp/></highlight></codeline>
+<codeline lineno="72" refid="structi2c__dev__t_1ad177c30687f89873cc6a6437f08f7fe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structi2c__dev__t_1ad177c30687f89873cc6a6437f08f7fe0" kindref="member">timeout_ticks</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga8a96ea2cf13f4b50a9f5d5e17f40e01b" kindref="member">i2cdev_init</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga320d9f51aab144397f75448801aa85e4" kindref="member">i2cdev_done</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" kindref="member">i2c_dev_create_mutex</ref>(<ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga1e9101fef8e50349d63157e0e01ced0f" kindref="member">i2c_dev_delete_mutex</ref>(<ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1gab0a314a2a3c6a8c7f9e59cf3b69466da" kindref="member">i2c_dev_take_mutex</ref>(<ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga51961c290ebed5993c50e30009c40e75" kindref="member">i2c_dev_give_mutex</ref>(<ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga9785ee992dab84bea0d7be83bb6e17fc" kindref="member">i2c_dev_read</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out_data,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in_data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>in_size);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out_reg,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_reg_size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out_data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_size);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev,<sp/>uint8_t<sp/>reg,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in_data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>in_size);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">esp_err_t<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>*dev,<sp/>uint8_t<sp/>reg,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out_data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_size);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_DEV_TAKE_MUTEX(dev)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>__<sp/>=<sp/>i2c_dev_take_mutex(dev);<sp/>\</highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(__<sp/>!=<sp/>ESP_OK)<sp/>return<sp/>__;\</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_DEV_GIVE_MUTEX(dev)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>__<sp/>=<sp/>i2c_dev_give_mutex(dev);<sp/>\</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(__<sp/>!=<sp/>ESP_OK)<sp/>return<sp/>__;\</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_DEV_CHECK(dev,<sp/>X)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>___<sp/>=<sp/>X;<sp/>\</highlight></codeline>
+<codeline lineno="209"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(___<sp/>!=<sp/>ESP_OK)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="210"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I2C_DEV_GIVE_MUTEX(dev);<sp/>\</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>___;<sp/>\</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="213"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="group__i2cdev_1ga3522d16d02065700aaa099fc1b5aa9cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>I2C_DEV_CHECK_LOGE(dev,<sp/>X,<sp/>msg,<sp/>...)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>___<sp/>=<sp/>X;<sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(___<sp/>!=<sp/>ESP_OK)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I2C_DEV_GIVE_MUTEX(dev);<sp/>\</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG,<sp/>msg,<sp/>##<sp/>__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>___;<sp/>\</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__I2CDEV_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/i2cdev.h"/>
+  </compounddef>
+</doxygen>

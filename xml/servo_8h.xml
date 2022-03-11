@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="servo_8h" kind="file" language="C++">
+    <compoundname>servo.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">freertos/FreeRTOS.h</includes>
+    <includes local="yes">driver/mcpwm.h</includes>
+    <includes local="yes">soc/mcpwm_periph.h</includes>
+    <includes local="yes">esp_attr.h</includes>
+    <includes local="yes">sdkconfig.h</includes>
+    <includes local="yes">esp_log.h</includes>
+    <includes local="yes">esp_err.h</includes>
+    <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
+    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
+    <includedby refid="servo_8c" local="yes">src/servo.c</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="1">
+        <label>include/servo.h</label>
+        <link refid="servo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>driver/mcpwm.h</label>
+      </node>
+      <node id="6">
+        <label>esp_attr.h</label>
+      </node>
+      <node id="9">
+        <label>esp_err.h</label>
+      </node>
+      <node id="8">
+        <label>esp_log.h</label>
+      </node>
+      <node id="3">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="7">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="5">
+        <label>soc/mcpwm_periph.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/servo.h</label>
+        <link refid="servo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
+      </node>
+      <node id="3">
+        <label>src/servo.c</label>
+        <link refid="servo_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structservo__config" prot="public">servo_config</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t enable_servo</definition>
+        <argsstring>()</argsstring>
+        <name>enable_servo</name>
+        <briefdescription>
+<para>Enables Servo port on the sra board, sets up PWM for the three pins in servo port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/servo.h" line="72" column="11" bodyfile="src/servo.c" bodystart="31" bodyend="66" declfile="include/servo.h" declline="72" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="servo_8h_1a203e9c05f59cfc6420e735d86f763301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t set_angle_servo</definition>
+        <argsstring>(servo_config *config, unsigned int degree_of_rotation)</argsstring>
+        <name>set_angle_servo</name>
+        <param>
+          <type><ref refid="structservo__config" kindref="compound">servo_config</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>degree_of_rotation</declname>
+        </param>
+        <briefdescription>
+<para>Set the angle of the servos attached to the servo port of SRA Board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the <ref refid="structservo__config" kindref="compound">servo_config</ref> struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>degree_of_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle to which the servo must be set, depends on value of MAX_DEGREE macro </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/servo.h" line="81" column="11" bodyfile="src/servo.c" bodystart="88" bodyend="108" declfile="include/servo.h" declline="81" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;freertos/FreeRTOS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/mcpwm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;soc/mcpwm_periph.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_attr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sdkconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structservo__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kindref="member">min_pulse_width</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kindref="member">max_pulse_width</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kindref="member">max_degree</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_unit_t<sp/><ref refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kindref="member">mcpwm_num</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_timer_t<sp/><ref refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kindref="member">timer_num</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_t<sp/><ref refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kindref="member">gen</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="structservo__config" kindref="compound">servo_config</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kindref="member">enable_servo</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kindref="member">set_angle_servo</ref>(<ref refid="structservo__config" kindref="compound">servo_config</ref><sp/>*config,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/servo.h"/>
+  </compounddef>
+</doxygen>

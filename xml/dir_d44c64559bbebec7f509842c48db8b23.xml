@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="adc_8h">adc.h</innerfile>
+    <innerfile refid="bar__graph_8h">bar_graph.h</innerfile>
+    <innerfile refid="esp__idf__lib__helpers_8h">esp_idf_lib_helpers.h</innerfile>
+    <innerfile refid="i2cdev_8h">i2cdev.h</innerfile>
+    <innerfile refid="lsa_8h">lsa.h</innerfile>
+    <innerfile refid="motor__driver_8h">motor_driver.h</innerfile>
+    <innerfile refid="mpu6050_8h">mpu6050.h</innerfile>
+    <innerfile refid="oled_8h">oled.h</innerfile>
+    <innerfile refid="pin__defs_8h">pin_defs.h</innerfile>
+    <innerfile refid="servo_8h">servo.h</innerfile>
+    <innerfile refid="sra__board_8h">sra_board.h</innerfile>
+    <innerfile refid="switches_8h">switches.h</innerfile>
+    <innerfile refid="u8g2__esp32__hal_8h">u8g2_esp32_hal.h</innerfile>
+    <innerfile refid="utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

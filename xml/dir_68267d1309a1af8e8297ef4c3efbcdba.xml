@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="adc_8c">adc.c</innerfile>
+    <innerfile refid="bar__graph_8c">bar_graph.c</innerfile>
+    <innerfile refid="i2cdev_8c">i2cdev.c</innerfile>
+    <innerfile refid="lsa_8c">lsa.c</innerfile>
+    <innerfile refid="motor__driver_8c">motor_driver.c</innerfile>
+    <innerfile refid="mpu6050_8c">mpu6050.c</innerfile>
+    <innerfile refid="oled_8c">oled.c</innerfile>
+    <innerfile refid="servo_8c">servo.c</innerfile>
+    <innerfile refid="switches_8c">switches.c</innerfile>
+    <innerfile refid="u8g2__esp32__hal_8c">u8g2_esp32_hal.c</innerfile>
+    <innerfile refid="utils_8c">utils.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

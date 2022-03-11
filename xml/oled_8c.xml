@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="oled_8c" kind="file" language="C++">
+    <compoundname>oled.c</compoundname>
+    <includes refid="oled_8h" local="yes">oled.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>adc.h</label>
+        <link refid="adc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>lsa.h</label>
+        <link refid="lsa_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>oled.h</label>
+        <link refid="oled_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="1">
+        <label>src/oled.c</label>
+        <link refid="oled_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>driver/adc.h</label>
+      </node>
+      <node id="5">
+        <label>driver/gpio.h</label>
+      </node>
+      <node id="15">
+        <label>esp_adc_cal.h</label>
+      </node>
+      <node id="17">
+        <label>esp_err.h</label>
+      </node>
+      <node id="6">
+        <label>esp_log.h</label>
+      </node>
+      <node id="7">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="16">
+        <label>freertos/event_groups.h</label>
+      </node>
+      <node id="8">
+        <label>freertos/task.h</label>
+      </node>
+      <node id="11">
+        <label>sdkconfig.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="13">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="oled_8c_1a994d7023617abc4e17322f9287bfb5af" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* TAG_OLED</definition>
+        <argsstring></argsstring>
+        <name>TAG_OLED</name>
+        <initializer>= &quot;oled&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="27" column="19" bodyfile="src/oled.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="oled_8c_1a82909a23095b9c349d3f4acc4d3a631b" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char sra_logo[]</definition>
+        <argsstring>[]</argsstring>
+        <name>sra_logo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="29" column="15" bodyfile="src/oled.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="oled_8c_1a097fd02aca20eddc85dbffce1528950b" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char walle_logo[]</definition>
+        <argsstring>[]</argsstring>
+        <name>walle_logo</name>
+        <initializer>= {
+0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00011111,0b11111110,0b01100111,0b00111111,0b11111100,0b00000000,0b00000000,
+0b00000000,0b00000000,0b01110011,0b00000110,0b01110110,0b01110000,0b01100110,0b00000000,0b00000000,
+0b00000000,0b00000000,0b01100011,0b00001111,0b11110111,0b11110000,0b11100110,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00111001,0b11111111,0b01110110,0b11111111,0b10011100,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00000010,0b00000000,0b11110111,0b10000000,0b01000000,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b00000000,0b00000000,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00000000,0b00000000,0b11000011,0b10000000,0b00000000,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00001101,0b11111111,0b11111111,0b11111111,0b11111000,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00011001,0b11110011,0b00000000,0b01000111,0b10001100,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00111110,0b00110011,0b00000000,0b01000110,0b00111110,0b00000000,0b00000000,
+0b00000000,0b00000000,0b01100000,0b11100011,0b00000000,0b11000111,0b10000111,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00111111,0b11000011,0b11111111,0b11000011,0b11111110,0b00000000,0b00000000,
+0b00000000,0b00000000,0b00000001,0b10000000,0b00000000,0b00000001,0b11000000,0b00000000,0b00000000,
+0b00000000,0b00011111,0b11111111,0b10000000,0b00000000,0b00000001,0b11111111,0b11111100,0b00000000,
+0b00000000,0b00111000,0b01111001,0b10000000,0b00000000,0b00000001,0b10011110,0b00001100,0b00000000,
+0b00000000,0b00111000,0b00000001,0b11111111,0b11111111,0b11111111,0b10000000,0b00001100,0b00000000,
+0b00000000,0b00111000,0b11111001,0b10000011,0b00000000,0b11100001,0b10001111,0b10001100,0b00000000,
+0b00000000,0b00111000,0b11111001,0b10000011,0b00000000,0b01000001,0b10011111,0b10001100,0b00000000,
+0b00000000,0b00111000,0b00000001,0b11111110,0b00000000,0b01111111,0b10000000,0b00001100,0b00000000,
+0b00000000,0b00111000,0b00000001,0b10000000,0b00000000,0b00000001,0b10000000,0b00001100,0b00000000,
+0b00000000,0b00011111,0b11111111,0b10000000,0b00000000,0b00000000,0b11111111,0b11111100,0b00000000,
+0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11000000,
+0b00011000,0b11000110,0b00011111,0b11000001,0b10000000,0b00110000,0b00000000,0b00111111,0b11111000,
+0b00011001,0b11001110,0b00111000,0b01110001,0b10000000,0b00111000,0b00000100,0b01000111,0b11111100,
+0b00011101,0b11101110,0b00111111,0b11110001,0b11000000,0b00111000,0b00000000,0b01100001,0b11111100,
+0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00111111,0b11111000,
+0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11000000
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="61" column="21" bodyfile="src/oled.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="oled_8c_1a7e3ddc2d27dcdf2b5537aafea494d803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t init_oled</definition>
+        <argsstring>(u8g2_t *u8g2)</argsstring>
+        <name>init_oled</name>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>enables and configures OLED display </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to empty u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if OLED is initialised successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="92" column="11" bodyfile="src/oled.c" bodystart="92" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8c_1a3fd9e14359b2890f6a79d6f568916ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_sra_logo</definition>
+        <argsstring>(u8g2_t *u8g2)</argsstring>
+        <name>display_sra_logo</name>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays SRA logo on OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if SRA logo is displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="128" column="11" bodyfile="src/oled.c" bodystart="128" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8c_1a8de1b63bbf5b8d095394a084ff48504b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_walle_logo</definition>
+        <argsstring>(u8g2_t *u8g2)</argsstring>
+        <name>display_walle_logo</name>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays Wall-E Bitmap logo on OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if Wall-E logo is displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="146" column="11" bodyfile="src/oled.c" bodystart="146" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8c_1af1bd87b3c18b14b83abaa7a13e87b6f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_lsa</definition>
+        <argsstring>(line_sensor_array readings, u8g2_t *u8g2)</argsstring>
+        <name>display_lsa</name>
+        <param>
+          <type><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref></type>
+          <declname>readings</declname>
+        </param>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays LSA bar on OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if LSA bar is displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="165" column="11" bodyfile="src/oled.c" bodystart="165" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8c_1a5ff3f1819dfe0d92468bb32a80335e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_mpu</definition>
+        <argsstring>(float pitch, float roll, u8g2_t *u8g2)</argsstring>
+        <name>display_mpu</name>
+        <param>
+          <type>float</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>roll</declname>
+        </param>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays pitch and roll readings on OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/oled.c" line="192" column="11" bodyfile="src/oled.c" bodystart="192" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="oled_8h" kindref="compound">oled.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_OLED<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;oled&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="oled_8c_1a82909a23095b9c349d3f4acc4d3a631b" kindref="member">sra_logo</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">0b11111111,0b11111000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b11111111,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">0b11111111,0b11100000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00011111,0b11111111,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">0b11111111,0b11000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11111111,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000110,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000011,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">0b11111111,0b10000111,0b11111110,0b00011111,0b11110000,0b00111111,0b11111111,0b11111111,0b10000000,0b00000000,0b01111111,0b10000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">0b11111111,0b10001111,0b11111100,0b00011111,0b11111000,0b00111111,0b11111111,0b11111111,0b11000000,0b00000000,0b11111111,0b11000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">0b11111111,0b10001111,0b11000000,0b00000000,0b10010000,0b00000000,0b00000000,0b11101111,0b11000000,0b00000001,0b11111111,0b11100000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">0b11111111,0b10001111,0b11111100,0b00011111,0b10000000,0b00000000,0b00000000,0b01101111,0b11000000,0b00000111,0b11110011,0b11110000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">0b11111111,0b10000111,0b11111110,0b00011111,0b11110000,0b00111111,0b11111111,0b11111111,0b10000000,0b00001111,0b11100001,0b11111100,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">0b11111111,0b11000000,0b00000000,0b00000011,0b11111000,0b00111111,0b11111111,0b11111111,0b10000000,0b00011111,0b10000000,0b11111110,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">0b11111111,0b11000111,0b10000000,0b00000001,0b11111000,0b00111111,0b00000000,0b11101111,0b11000000,0b00111111,0b00000000,0b00111111,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">0b11111111,0b11101111,0b11111100,0b00011111,0b11111000,0b00111111,0b00000001,0b11100111,0b11000000,0b11111110,0b00000000,0b00011111,0b10000111,0b11111111,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">0b11111111,0b11110111,0b11111110,0b00011111,0b11110000,0b00111111,0b00000011,0b11000111,0b11000001,0b11111100,0b00000000,0b00001111,0b11100111,0b11111111,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">0b11111111,0b11111000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">0b11111111,0b11111110,0b00000000,0b00000000,0b00000000,0b00000000,0b00011111,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">0b11111111,0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b01111110,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">0b11111111,0b11111111,0b11110000,0b00000000,0b00000000,0b00000011,0b11111000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b00000000,0b00000000,0b00111111,0b11100000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11111111,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00011111,0b11111111,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11110000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b11111111,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="oled_8c_1a097fd02aca20eddc85dbffce1528950b" kindref="member">walle_logo</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">0b00000000,0b00000000,0b00011111,0b11111110,0b01100111,0b00111111,0b11111100,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">0b00000000,0b00000000,0b01110011,0b00000110,0b01110110,0b01110000,0b01100110,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">0b00000000,0b00000000,0b01100011,0b00001111,0b11110111,0b11110000,0b11100110,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">0b00000000,0b00000000,0b00111001,0b11111111,0b01110110,0b11111111,0b10011100,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">0b00000000,0b00000000,0b00000010,0b00000000,0b11110111,0b10000000,0b01000000,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b00000000,0b00000000,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">0b00000000,0b00000000,0b00000000,0b00000000,0b11000011,0b10000000,0b00000000,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">0b00000000,0b00000000,0b00001101,0b11111111,0b11111111,0b11111111,0b11111000,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">0b00000000,0b00000000,0b00011001,0b11110011,0b00000000,0b01000111,0b10001100,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">0b00000000,0b00000000,0b00111110,0b00110011,0b00000000,0b01000110,0b00111110,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">0b00000000,0b00000000,0b01100000,0b11100011,0b00000000,0b11000111,0b10000111,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">0b00000000,0b00000000,0b00111111,0b11000011,0b11111111,0b11000011,0b11111110,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">0b00000000,0b00000000,0b00000001,0b10000000,0b00000000,0b00000001,0b11000000,0b00000000,0b00000000,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">0b00000000,0b00011111,0b11111111,0b10000000,0b00000000,0b00000001,0b11111111,0b11111100,0b00000000,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">0b00000000,0b00111000,0b01111001,0b10000000,0b00000000,0b00000001,0b10011110,0b00001100,0b00000000,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">0b00000000,0b00111000,0b00000001,0b11111111,0b11111111,0b11111111,0b10000000,0b00001100,0b00000000,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">0b00000000,0b00111000,0b11111001,0b10000011,0b00000000,0b11100001,0b10001111,0b10001100,0b00000000,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">0b00000000,0b00111000,0b11111001,0b10000011,0b00000000,0b01000001,0b10011111,0b10001100,0b00000000,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">0b00000000,0b00111000,0b00000001,0b11111110,0b00000000,0b01111111,0b10000000,0b00001100,0b00000000,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">0b00000000,0b00111000,0b00000001,0b10000000,0b00000000,0b00000001,0b10000000,0b00001100,0b00000000,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">0b00000000,0b00011111,0b11111111,0b10000000,0b00000000,0b00000000,0b11111111,0b11111100,0b00000000,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11000000,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">0b00011000,0b11000110,0b00011111,0b11000001,0b10000000,0b00110000,0b00000000,0b00111111,0b11111000,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">0b00011001,0b11001110,0b00111000,0b01110001,0b10000000,0b00111000,0b00000100,0b01000111,0b11111100,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">0b00011101,0b11101110,0b00111111,0b11110001,0b11000000,0b00111000,0b00000000,0b01100001,0b11111100,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00111111,0b11111000,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11000000</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8c_1a7e3ddc2d27dcdf2b5537aafea494d803" kindref="member">init_oled</ref>(u8g2_t<sp/>*u8g2)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structu8g2__esp32__hal__t" kindref="compound">u8g2_esp32_hal_t</ref><sp/>u8g2_esp32_hal<sp/>=<sp/><ref refid="u8g2__esp32__hal_8h_1aa6a69c5b35259623addf68445e77d0c3" kindref="member">U8G2_ESP32_HAL_DEFAULT</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_esp32_hal.<ref refid="structu8g2__esp32__hal__t_1a8cbd19506bbbea5b9ccea80a664c085a" kindref="member">sda</ref><sp/>=<sp/>OLED_SDA;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_esp32_hal.<ref refid="structu8g2__esp32__hal__t_1ab143cfdeeafebf36f69ac0e04ecd209d" kindref="member">scl</ref><sp/>=<sp/>OLED_SCL;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="u8g2__esp32__hal_8h_1a157783a76c13eddc1e7e39f1ce85818e" kindref="member">u8g2_esp32_hal_init</ref>(u8g2_esp32_hal);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_Setup_ssd1306_i2c_128x32_univision_f(</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8g2,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>U8G2_R0,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="u8g2__esp32__hal_8h_1ad8f6e2dc6ae486d4c19cb3a2ca2b676a" kindref="member">u8g2_esp32_i2c_byte_cb</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="u8g2__esp32__hal_8h_1adcb4b0ea7dcf9c4ab9994dadb740694f" kindref="member">u8g2_esp32_gpio_and_delay_cb</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>u8x8_SetI2CAddress(&amp;u8g2-&gt;u8x8,<sp/>0x78);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_InitDisplay(u8g2);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SetPowerSave(u8g2,<sp/>0);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>SRA<sp/>Logo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="oled_8c_1a3fd9e14359b2890f6a79d6f568916ce3" kindref="member">display_sra_logo</ref>(u8g2);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>vTaskDelay(100);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>Wall-E<sp/>logo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="oled_8c_1a8de1b63bbf5b8d095394a084ff48504b" kindref="member">display_walle_logo</ref>(u8g2);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>vTaskDelay(100);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_ClearBuffer(u8g2);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SendBuffer(u8g2);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_OLED,<sp/></highlight><highlight class="stringliteral">&quot;Configured<sp/>OLED<sp/>Display&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8c_1a3fd9e14359b2890f6a79d6f568916ce3" kindref="member">display_sra_logo</ref>(u8g2_t<sp/>*u8g2)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_ClearBuffer(u8g2);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBox(u8g2,<sp/>0,<sp/>0,<sp/>128,<sp/>64);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>Wall-E<sp/>logo<sp/>on<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBitmap(u8g2,<sp/>8,<sp/>2,<sp/>14,<sp/>29,<sp/><ref refid="oled_8c_1a82909a23095b9c349d3f4acc4d3a631b" kindref="member">sra_logo</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_OLED,<sp/></highlight><highlight class="stringliteral">&quot;Displayed<sp/>SRA<sp/>logo<sp/>on<sp/>OLED<sp/>Screen&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sends<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>OLED<sp/>Display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SendBuffer(u8g2);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8c_1a8de1b63bbf5b8d095394a084ff48504b" kindref="member">display_walle_logo</ref>(u8g2_t<sp/>*u8g2)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_ClearBuffer(u8g2);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>Wall-E<sp/>logo<sp/>on<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBitmap(u8g2,<sp/>27,<sp/>0,<sp/>9,<sp/>22,<sp/><ref refid="oled_8c_1a097fd02aca20eddc85dbffce1528950b" kindref="member">walle_logo</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SetFont(u8g2,<sp/>u8g2_font_lucasfont_alternate_tf);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>&quot;Wall-e&quot;<sp/>text<sp/>on<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawStr(u8g2,<sp/>17,<sp/>30,<sp/></highlight><highlight class="stringliteral">&quot;W<sp/>a<sp/>l<sp/>l<sp/>-<sp/>E<sp/><sp/>2<sp/>0<sp/>2<sp/>2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sends<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>OLED<sp/>Display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SendBuffer(u8g2);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_OLED,<sp/></highlight><highlight class="stringliteral">&quot;Displayed<sp/>Wall-E<sp/>logo<sp/>on<sp/>OLED<sp/>Screen&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8c_1af1bd87b3c18b14b83abaa7a13e87b6f0" kindref="member">display_lsa</ref>(<ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/>readings,<sp/>u8g2_t<sp/>*u8g2)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_ClearBuffer(u8g2);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>plot<sp/>the<sp/>bar<sp/>of<sp/>LSA<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawFrame(u8g2,<sp/>27,<sp/>0,<sp/>10,<sp/>30);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBox(u8g2,<sp/>27,<sp/>0,<sp/>10,<sp/>readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[3]<sp/>*<sp/>0.03);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>plot<sp/>the<sp/>bar<sp/>of<sp/>LSA<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawFrame(u8g2,<sp/>47,<sp/>0,<sp/>10,<sp/>30);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBox(u8g2,<sp/>47,<sp/>0,<sp/>10,<sp/>readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[2]<sp/>*<sp/>0.03);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>plot<sp/>the<sp/>bar<sp/>of<sp/>LSA<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawFrame(u8g2,<sp/>67,<sp/>0,<sp/>10,<sp/>30);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBox(u8g2,<sp/>67,<sp/>0,<sp/>10,<sp/>readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[1]<sp/>*<sp/>0.03);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>plot<sp/>the<sp/>bar<sp/>of<sp/>LSA<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawFrame(u8g2,<sp/>87,<sp/>0,<sp/>10,<sp/>30);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawBox(u8g2,<sp/>87,<sp/>0,<sp/>10,<sp/>readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[0]<sp/>*<sp/>0.03);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sends<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>OLED<sp/>Display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SendBuffer(u8g2);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8c_1a5ff3f1819dfe0d92468bb32a80335e0e" kindref="member">display_mpu</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>roll,<sp/>u8g2_t<sp/>*u8g2)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clearing<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_ClearBuffer(u8g2);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setting<sp/>the<sp/>font<sp/>and<sp/>printing<sp/>the<sp/>string<sp/>on<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SetFont(u8g2,<sp/>u8g2_font_ncenB10_tr);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Printing<sp/>pitch<sp/>on<sp/>oled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>pitch_str[20];</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(pitch_str,<sp/></highlight><highlight class="stringliteral">&quot;Pitch<sp/>:<sp/>%0.2f&quot;</highlight><highlight class="normal">,<sp/>pitch);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawStr(u8g2,<sp/>2,<sp/>15,<sp/>pitch_str);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Printing<sp/>roll<sp/>on<sp/>oled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>roll_str[20];</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(roll_str,<sp/></highlight><highlight class="stringliteral">&quot;Roll<sp/>:<sp/>%0.2f&quot;</highlight><highlight class="normal">,<sp/>roll);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_DrawStr(u8g2,<sp/>2,<sp/>30,<sp/>roll_str);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sending<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>u8g2_SendBuffer(u8g2);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/oled.c"/>
+  </compounddef>
+</doxygen>

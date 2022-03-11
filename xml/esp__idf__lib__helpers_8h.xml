@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="esp__idf__lib__helpers_8h" kind="file" language="C++">
+    <compoundname>esp_idf_lib_helpers.h</compoundname>
+    <includes local="no">freertos/FreeRTOS.h</includes>
+    <includes local="no">esp_idf_version.h</includes>
+    <includedby refid="i2cdev_8h" local="no">include/i2cdev.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/esp_idf_lib_helpers.h</label>
+        <link refid="esp__idf__lib__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>esp_idf_version.h</label>
+      </node>
+      <node id="2">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/esp_idf_lib_helpers.h</label>
+        <link refid="esp__idf__lib__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/i2cdev.h</label>
+        <link refid="i2cdev_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/u8g2_esp32_hal.h</label>
+        <link refid="u8g2__esp32__hal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/i2cdev.c</label>
+        <link refid="i2cdev_8c"/>
+      </node>
+      <node id="6">
+        <label>src/mpu6050.c</label>
+        <link refid="mpu6050_8c"/>
+      </node>
+      <node id="4">
+        <label>src/u8g2_esp32_hal.c</label>
+        <link refid="u8g2__esp32__hal_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="esp__idf__lib__helpers_8h_1a8b1e5b2dda0bd16c89c0ecc7cb2b5352" prot="public" static="no">
+        <name>HELPER_ESP32_MIN_VER</name>
+        <initializer>ESP_IDF_VERSION_VAL(3, 3, 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/esp_idf_lib_helpers.h" line="36" column="9" bodyfile="include/esp_idf_lib_helpers.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__idf__lib__helpers_8h_1a92c3c8a6e1995378c5be5990fe6b3f1b" prot="public" static="no">
+        <name>HELPER_ESP8266_MIN_VER</name>
+        <initializer>ESP_IDF_VERSION_VAL(3, 3, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/esp_idf_lib_helpers.h" line="38" column="9" bodyfile="include/esp_idf_lib_helpers.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2019<sp/>Tomoyuki<sp/>Sakurai<sp/>&lt;y@trombik.org&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>and<sp/>distribute<sp/>this<sp/>software<sp/>for<sp/>any</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>purpose<sp/>with<sp/>or<sp/>without<sp/>fee<sp/>is<sp/>hereby<sp/>granted,<sp/>provided<sp/>that<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>appear<sp/>in<sp/>all<sp/>copies.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>THE<sp/>AUTHOR<sp/>DISCLAIMS<sp/>ALL<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>WITH<sp/>REGARD<sp/>TO<sp/>THIS<sp/>SOFTWARE<sp/>INCLUDING<sp/>ALL<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>ANY<sp/>SPECIAL,<sp/>DIRECT,<sp/>INDIRECT,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>OR<sp/>ANY<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WHATSOEVER<sp/>RESULTING<sp/>FROM<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA<sp/>OR<sp/>PROFITS,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>NEGLIGENCE<sp/>OR<sp/>OTHER<sp/>TORTIOUS<sp/>ACTION,<sp/>ARISING<sp/>OUT<sp/>OF</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>USE<sp/>OR<sp/>PERFORMANCE<sp/>OF<sp/>THIS<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__ESP_IDF_LIB_HELPERS__H__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ESP_IDF_LIB_HELPERS__H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>XXX<sp/>this<sp/>header<sp/>file<sp/>does<sp/>not<sp/>need<sp/>to<sp/>include<sp/>freertos/FreeRTOS.h.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>but<sp/>without<sp/>it,<sp/>ESP8266<sp/>RTOS<sp/>SDK<sp/>does<sp/>not<sp/>include<sp/>`sdkconfig.h`<sp/>in<sp/>correct</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>order.<sp/>as<sp/>this<sp/>header<sp/>depends<sp/>on<sp/>sdkconfig.h,<sp/>sdkconfig.h<sp/>must<sp/>be<sp/>included</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>first.<sp/>however,<sp/>the<sp/>SDK<sp/>includes<sp/>this<sp/>header<sp/>first,<sp/>then<sp/>includes</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>`sdkconfig.h`<sp/>when<sp/>freertos/FreeRTOS.h<sp/>is<sp/>not<sp/>explicitly<sp/>included.<sp/>an</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>evidence<sp/>can<sp/>be<sp/>found<sp/>in<sp/>`build/${COMPONENT}/${COMPONENT}.d`<sp/>in<sp/>a<sp/>failed</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>build.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;freertos/FreeRTOS.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_idf_version.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(ESP_IDF_VERSION)<sp/>||<sp/>!defined(ESP_IDF_VERSION_VAL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Unknown<sp/>ESP-IDF/ESP8266<sp/>RTOS<sp/>SDK<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Minimal<sp/>supported<sp/>version<sp/>for<sp/>ESP32,<sp/>ESP32S2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="esp__idf__lib__helpers_8h_1a8b1e5b2dda0bd16c89c0ecc7cb2b5352" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPER_ESP32_MIN_VER<sp/><sp/><sp/><sp/>ESP_IDF_VERSION_VAL(3,<sp/>3,<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Minimal<sp/>supported<sp/>version<sp/>for<sp/>ESP8266<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="esp__idf__lib__helpers_8h_1a92c3c8a6e1995378c5be5990fe6b3f1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPER_ESP8266_MIN_VER<sp/><sp/>ESP_IDF_VERSION_VAL(3,<sp/>3,<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>HELPER_TARGET_IS_ESP32</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>1<sp/>when<sp/>the<sp/>target<sp/>is<sp/>esp32</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(CONFIG_IDF_TARGET_ESP32)<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>defined(CONFIG_IDF_TARGET_ESP32S2)<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>defined(CONFIG_IDF_TARGET_ESP32S3)<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>defined(CONFIG_IDF_TARGET_ESP32C3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPER_TARGET_IS_ESP32<sp/><sp/><sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPER_TARGET_IS_ESP8266<sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>HELPER_TARGET_IS_ESP8266</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>1<sp/>when<sp/>the<sp/>target<sp/>is<sp/>esp8266</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(CONFIG_IDF_TARGET_ESP8266)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPER_TARGET_IS_ESP32<sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HELPER_TARGET_IS_ESP8266<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>BUG:<sp/>cannot<sp/>determine<sp/>the<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HELPER_TARGET_IS_ESP32<sp/>&amp;&amp;<sp/>ESP_IDF_VERSION<sp/>&lt;<sp/>HELPER_ESP32_MIN_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Unsupported<sp/>ESP-IDF<sp/>version.<sp/>Please<sp/>update!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HELPER_TARGET_IS_ESP8266<sp/>&amp;&amp;<sp/>ESP_IDF_VERSION<sp/>&lt;<sp/>HELPER_ESP8266_MIN_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Unsupported<sp/>ESP8266<sp/>RTOS<sp/>SDK<sp/>version.<sp/>Please<sp/>update!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>show<sp/>the<sp/>actual<sp/>values<sp/>for<sp/>debugging<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALUE_TO_STRING(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALUE(x)<sp/>VALUE_TO_STRING(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VAR_NAME_VALUE(var)<sp/>#var<sp/>&quot;=&quot;</highlight><highlight class="normal"><sp/><sp/>VALUE(var)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(VAR_NAME_VALUE(CONFIG_IDF_TARGET_ESP32C3))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(VAR_NAME_VALUE(CONFIG_IDF_TARGET_ESP32S2))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(VAR_NAME_VALUE(CONFIG_IDF_TARGET_ESP32))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(VAR_NAME_VALUE(CONFIG_IDF_TARGET_ESP8266))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(VAR_NAME_VALUE(ESP_IDF_VERSION_MAJOR))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/esp_idf_lib_helpers.h"/>
+  </compounddef>
+</doxygen>

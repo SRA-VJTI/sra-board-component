@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structi2c__port__state__t" kind="struct" language="C++" prot="public">
+    <compoundname>i2c_port_state_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structi2c__port__state__t_1a582e30d333c6600a22bde03dd83405ab" prot="public" static="no" mutable="no">
+        <type>SemaphoreHandle_t</type>
+        <definition>SemaphoreHandle_t i2c_port_state_t::lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/i2cdev.c" line="42" column="23" bodyfile="src/i2cdev.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structi2c__port__state__t_1a6fe22e2744e1a2bdaa4961e6a2e9f636" prot="public" static="no" mutable="no">
+        <type>i2c_config_t</type>
+        <definition>i2c_config_t i2c_port_state_t::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/i2cdev.c" line="43" column="18" bodyfile="src/i2cdev.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structi2c__port__state__t_1a0dd2940bf6483b8a20a1e3841bfcacaa" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool i2c_port_state_t::installed</definition>
+        <argsstring></argsstring>
+        <name>installed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/i2cdev.c" line="44" column="10" bodyfile="src/i2cdev.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/i2cdev.c" line="41" column="1" bodyfile="src/i2cdev.c" bodystart="41" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structi2c__port__state__t_1a6fe22e2744e1a2bdaa4961e6a2e9f636" prot="public" virt="non-virtual"><scope>i2c_port_state_t</scope><name>config</name></member>
+      <member refid="structi2c__port__state__t_1a0dd2940bf6483b8a20a1e3841bfcacaa" prot="public" virt="non-virtual"><scope>i2c_port_state_t</scope><name>installed</name></member>
+      <member refid="structi2c__port__state__t_1a582e30d333c6600a22bde03dd83405ab" prot="public" virt="non-virtual"><scope>i2c_port_state_t</scope><name>lock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

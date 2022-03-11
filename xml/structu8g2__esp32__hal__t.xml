@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structu8g2__esp32__hal__t" kind="struct" language="C++" prot="public">
+    <compoundname>u8g2_esp32_hal_t</compoundname>
+    <includes refid="u8g2__esp32__hal_8h" local="no">u8g2_esp32_hal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1ae4f5671c6a816e8db3c1d006590e775c" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::clk</definition>
+        <argsstring></argsstring>
+        <name>clk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="27" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1a5edf576e57924fd1615d44ca0fc075ee" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::mosi</definition>
+        <argsstring></argsstring>
+        <name>mosi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="28" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1a8cbd19506bbbea5b9ccea80a664c085a" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::sda</definition>
+        <argsstring></argsstring>
+        <name>sda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="29" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1ab143cfdeeafebf36f69ac0e04ecd209d" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::scl</definition>
+        <argsstring></argsstring>
+        <name>scl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="30" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1a4400af60d1b169b28cf1a8d44ba7a2ce" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::cs</definition>
+        <argsstring></argsstring>
+        <name>cs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="31" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1aac01d1a76cc59cc79789efa85d2b8a9e" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::reset</definition>
+        <argsstring></argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="32" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structu8g2__esp32__hal__t_1acfe3146abd18c8fd91d335e3f8f3c708" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t u8g2_esp32_hal_t::dc</definition>
+        <argsstring></argsstring>
+        <name>dc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/u8g2_esp32_hal.h" line="33" column="12" bodyfile="include/u8g2_esp32_hal.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/u8g2_esp32_hal.h" line="25" column="1" bodyfile="include/u8g2_esp32_hal.h" bodystart="26" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structu8g2__esp32__hal__t_1ae4f5671c6a816e8db3c1d006590e775c" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>clk</name></member>
+      <member refid="structu8g2__esp32__hal__t_1a4400af60d1b169b28cf1a8d44ba7a2ce" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>cs</name></member>
+      <member refid="structu8g2__esp32__hal__t_1acfe3146abd18c8fd91d335e3f8f3c708" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>dc</name></member>
+      <member refid="structu8g2__esp32__hal__t_1a5edf576e57924fd1615d44ca0fc075ee" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>mosi</name></member>
+      <member refid="structu8g2__esp32__hal__t_1aac01d1a76cc59cc79789efa85d2b8a9e" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>reset</name></member>
+      <member refid="structu8g2__esp32__hal__t_1ab143cfdeeafebf36f69ac0e04ecd209d" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>scl</name></member>
+      <member refid="structu8g2__esp32__hal__t_1a8cbd19506bbbea5b9ccea80a664c085a" prot="public" virt="non-virtual"><scope>u8g2_esp32_hal_t</scope><name>sda</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

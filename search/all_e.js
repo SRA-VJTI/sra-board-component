@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['scl_0',['scl',['../structu8g2__esp32__hal__t.html#ab143cfdeeafebf36f69ac0e04ecd209d',1,'u8g2_esp32_hal_t']]],
+  ['sda_1',['sda',['../structu8g2__esp32__hal__t.html#a8cbd19506bbbea5b9ccea80a664c085a',1,'u8g2_esp32_hal_t']]],
+  ['semaphore_5fgive_2',['SEMAPHORE_GIVE',['../i2cdev_8c.html#a28a94ff9b7ccdbfec8e18e66ba103c16',1,'i2cdev.c']]],
+  ['semaphore_5ftake_3',['SEMAPHORE_TAKE',['../i2cdev_8c.html#a423c4afe004688f73eebf7426cbfb9eb',1,'i2cdev.c']]],
+  ['servo_2ec_4',['servo.c',['../servo_8c.html',1,'']]],
+  ['servo_2eh_5',['servo.h',['../servo_8h.html',1,'']]],
+  ['servo_5fa_6',['SERVO_A',['../pin__defs_8h.html#ad02b2d3f0a65ea90c450ced08da9a4d9',1,'pin_defs.h']]],
+  ['servo_5fb_7',['SERVO_B',['../pin__defs_8h.html#a30b46add9f5cd7b5abf873dc9f1009e8',1,'pin_defs.h']]],
+  ['servo_5fc_8',['SERVO_C',['../pin__defs_8h.html#a20be66e38dbb25b3000081eecb9b4cb3',1,'pin_defs.h']]],
+  ['servo_5fconfig_9',['servo_config',['../structservo__config.html',1,'']]],
+  ['servo_5fpin_10',['servo_pin',['../structservo__config.html#ae18a1d7cfaeb5c16cf4717d54b264954',1,'servo_config']]],
+  ['set_5fangle_5fservo_11',['set_angle_servo',['../servo_8h.html#a203e9c05f59cfc6420e735d86f763301',1,'set_angle_servo(servo_config *config, unsigned int degree_of_rotation):&#160;servo.c'],['../servo_8c.html#a203e9c05f59cfc6420e735d86f763301',1,'set_angle_servo(servo_config *config, unsigned int degree_of_rotation):&#160;servo.c']]],
+  ['set_5fbar_5fgraph_12',['set_bar_graph',['../bar__graph_8h.html#ae3c6552600f6d84335edd8bb6095fe3a',1,'set_bar_graph(uint8_t data):&#160;bar_graph.c'],['../bar__graph_8c.html#ae3c6552600f6d84335edd8bb6095fe3a',1,'set_bar_graph(uint8_t data):&#160;bar_graph.c']]],
+  ['set_5fmotor_5fspeed_13',['set_motor_speed',['../motor__driver_8c.html#a027943094f99f52b1ea067ab85384686',1,'set_motor_speed(int motor_id, int direction, float duty_cycle):&#160;motor_driver.c'],['../motor__driver_8h.html#a027943094f99f52b1ea067ab85384686',1,'set_motor_speed(int motor_id, int direction, float duty_cycle):&#160;motor_driver.c']]],
+  ['sra_20board_20components_14',['SRA Board Components',['../index.html',1,'']]],
+  ['sra_5fboard_2eh_15',['sra_board.h',['../sra__board_8h.html',1,'']]],
+  ['sra_5flogo_16',['sra_logo',['../oled_8c.html#a82909a23095b9c349d3f4acc4d3a631b',1,'oled.c']]],
+  ['str_17',['STR',['../servo_8c.html#a70fb9b3e7d410312baf880c1292f43ba',1,'servo.c']]],
+  ['switch_5f1_18',['SWITCH_1',['../pin__defs_8h.html#afc718c1fcfcf5d762545260289674333',1,'pin_defs.h']]],
+  ['switch_5f2_19',['SWITCH_2',['../pin__defs_8h.html#a62b9d54211060aac86c0ca9b02f7331e',1,'pin_defs.h']]],
+  ['switch_5f3_20',['SWITCH_3',['../pin__defs_8h.html#a760f4fa2340ec8b807fea30119915efa',1,'pin_defs.h']]],
+  ['switch_5f4_21',['SWITCH_4',['../pin__defs_8h.html#a083e2bd040ccdbc6514e13b876ff20f7',1,'pin_defs.h']]],
+  ['switches_2ec_22',['switches.c',['../switches_8c.html',1,'']]],
+  ['switches_2eh_23',['switches.h',['../switches_8h.html',1,'']]]
+];
