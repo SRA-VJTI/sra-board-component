@@ -213,3 +213,31 @@ esp_err_t display_mpu(float pitch, float roll, u8g2_t *u8g2)
 
 	return ESP_OK;
 }
+
+esp_err_t display_pid_values(float kp, float ki, float kd, u8g2_t *u8g2)
+{
+	// Clearing the screen
+	u8g2_ClearBuffer(u8g2);
+
+	// Setting the font and printing the string on screen
+	u8g2_SetFont(u8g2, u8g_font_profont11);
+
+	char kp_str[10],ki_str[10],kd_str[10];
+	
+	// Printing kp value on oled
+	sprintf(kp_str, "Kp: %0.2f", kp);
+	u8g2_DrawStr(u8g2, 0, 10, kp_str);
+
+	// Printing ki value on oled
+	sprintf(ki_str, "Ki: %0.2f", ki);
+	u8g2_DrawStr(u8g2, 30, 20, ki_str);
+
+	// Printing kd value on oled
+	sprintf(kd_str, "Kd: %0.2f", kd);
+	u8g2_DrawStr(u8g2, 60, 30, kd_str);
+
+	// Sending the buffer to the screen
+	u8g2_SendBuffer(u8g2);
+
+	return ESP_OK;
+}
