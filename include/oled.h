@@ -42,47 +42,62 @@
 
 /**
  * @brief enables and configures OLED display
- 
- * @param pointer to empty u8g2_t struct
+
+ * @param u8g2 pointer to empty u8g2_t struct
 
  * @return esp_err_t i.e it shows if OLED is initialised successfully or not
  **/
-esp_err_t init_oled(u8g2_t* u8g2);
+esp_err_t init_oled(u8g2_t *u8g2);
 
 /**
  * @brief displays SRA logo on OLED screen
- 
- * @param pointer to u8g2_t struct
+
+ * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
  **/
-esp_err_t display_sra_logo(u8g2_t* u8g2);
+esp_err_t display_sra_logo(u8g2_t *u8g2);
 
 /**
  * @brief displays Wall-E Bitmap logo on OLED screen
- 
- * @param pointer to u8g2_t struct
+
+ * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
  **/
-esp_err_t display_walle_logo(u8g2_t* u8g2);
+esp_err_t display_walle_logo(u8g2_t *u8g2);
 
 /**
  * @brief displays LSA bar on OLED screen
- 
- * @param pointer to u8g2_t struct
+
+ * @param readings line_sensor_array struct
+ * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if LSA bar is displayed successfully or not
  **/
-esp_err_t display_lsa(line_sensor_array readings,u8g2_t *u8g2);
+esp_err_t display_lsa(line_sensor_array readings, u8g2_t *u8g2);
 
 /**
  * @brief displays pitch and roll readings on OLED screen
- 
- * @param pointer to u8g2_t struct
+
+ * @param pitch Value of pitch in float
+ * @param roll Value of Roll in float
+ * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
-esp_err_t display_mpu(float pitch,float roll,u8g2_t *u8g2);
+esp_err_t display_mpu(float pitch, float roll, u8g2_t *u8g2);
+
+/**
+ * @brief displays kp, ki and kd reading on the OLED screen
+
+ * @param kp value of kp in float
+ * @param ki value of ki in float
+ * @param kd value of kd in float
+ * @param u8g2 pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+ **/
+esp_err_t display_pid_values(float kp, float ki, float kd, u8g2_t *u8g2);
 
 #endif
