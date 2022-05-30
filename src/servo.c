@@ -49,6 +49,7 @@ esp_err_t enable_servo()
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
 
     // init pwm 0a, 1a, 2a with the above settings
+
     esp_err_t err_A = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);
     esp_err_t err_B = mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);
 
@@ -92,14 +93,13 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
     {
         if (config->servo_pin)
         {
-            return set_angle_servo_helper(config->servo_pin,config->max_degree,config->min_pulse_width,config->max_pulse_width,degree_of_rotation,config->mcpwm_num,config->timer_num,config->gen);
+            return set_angle_servo_helper(config->servo_pin, config->max_degree, config->min_pulse_width, config->max_pulse_width, degree_of_rotation, config->mcpwm_num, config->timer_num, config->gen);
         }
         else
         {
             ESP_LOGE(TAG_SERVO, "error: incorrect servo pin passed to function");
             return ESP_FAIL;
         }
-
     }
     else
     {
