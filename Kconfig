@@ -92,6 +92,28 @@ config SERVO_C_MAX_DEGREE
 
 endmenu
 
+menu "Servo D"
+
+    config SERVO_D_MIN_PULSEWIDTH
+    int "servo-D minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-D minimum pulsewidth
+    
+    config SERVO_D_MAX_PULSEWIDTH
+    int "servo-D maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-D maximum pulsewidth
+    
+    config SERVO_D_MAX_DEGREE
+    int "servo-D max degree"
+    default 180
+    help 
+        sets the servo-D max degree
+    
+    endmenu
+
 endmenu
 
 config NUMBER_OF_SAMPLES

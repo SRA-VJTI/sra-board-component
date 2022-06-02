@@ -60,34 +60,45 @@ static servo_config servo_c = {
 	.gen = MCPWM_OPR_A,
 };
 
+static servo_config servo_d = {
+	.servo_pin = SERVO_D,
+	.min_pulse_width = CONFIG_SERVO_D_MIN_PULSEWIDTH,
+	.max_pulse_width = CONFIG_SERVO_D_MAX_PULSEWIDTH,
+	.max_degree = CONFIG_SERVO_D_MAX_DEGREE,
+	.mcpwm_num = MCPWM_UNIT_0,
+	.timer_num = MCPWM_TIMER_1,
+	.gen = MCPWM_OPR_B,
+};
+
 void app_main(void)
 {
-    // enable servo modules
-    ESP_ERROR_CHECK(enable_servo());
+	// enable servo modules
+	ESP_ERROR_CHECK(enable_servo());
 
-    while(1){
-        //For loop to sweep all servos from 0 degree to 180 degree
-        for(int i = 0 ; i < 180 ; i++)
-        {   
-
-            //Passing servo configuration and angle to set_angle_servo function 
-            set_angle_servo(&servo_a, i);
+	while (1)
+	{
+		// For loop to sweep all servos from 0 degree to 180 degree
+		for (int i = 0; i < 180; i++)
+		{
+			// Passing servo configuration and angle to set_angle_servo function
+			set_angle_servo(&servo_a, i);
 			set_angle_servo(&servo_b, i);
 			set_angle_servo(&servo_c, i);
-            vTaskDelay(3/portTICK_PERIOD_MS);   
-        }
-            
-        //For loop to sweep all servos from 180 degree to 0 degree
-        for(int i = 180 ; i > 0; i--)
-        {   
-            //Passing servo configuration and angle to set_angle_servo function
-            set_angle_servo(&servo_a, i);
+			set_angle_servo(&servo_d, i);
+			vTaskDelay(3 / portTICK_PERIOD_MS);
+		}
+
+		// For loop to sweep all servos from 180 degree to 0 degree
+		for (int i = 180; i > 0; i--)
+		{
+			// Passing servo configuration and angle to set_angle_servo function
+			set_angle_servo(&servo_a, i);
 			set_angle_servo(&servo_b, i);
 			set_angle_servo(&servo_c, i);
-            vTaskDelay(3/portTICK_PERIOD_MS);   
-        }
-        //Delay of one second
-        vTaskDelay(1000/portTICK_PERIOD_MS);  
-    }
+			set_angle_servo(&servo_d, i);
+			vTaskDelay(3 / portTICK_PERIOD_MS);
+		}
+		// Delay of one second
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+	}
 }
-
