@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="72" column="11" bodyfile="src/servo.c" bodystart="31" bodyend="66" declfile="include/servo.h" declline="72" declcolumn="11"/>
+        <location file="include/servo.h" line="72" column="11" bodyfile="src/servo.c" bodystart="31" bodyend="68" declfile="include/servo.h" declline="72" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="servo_8h_1a203e9c05f59cfc6420e735d86f763301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="81" column="11" bodyfile="src/servo.c" bodystart="88" bodyend="108" declfile="include/servo.h" declline="81" declcolumn="11"/>
+        <location file="include/servo.h" line="81" column="11" bodyfile="src/servo.c" bodystart="90" bodyend="109" declfile="include/servo.h" declline="81" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -3564,6 +3564,24 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'pin__defs_8h_1abed942b161f2db9f855f196e22459066';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SERVO_D';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+15
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
+      define-mem-desc-line = '105';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
     };
   file-full-name  = '/github/workspace/include/pin_defs.h';
   file-first-line = '1';
@@ -6173,7 +6191,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gen';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/servo.c';
-      func-mem-desc-line = '68';
+      func-mem-desc-line = '70';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -6203,7 +6221,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'degree_of_rotation';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/servo.c';
-      func-mem-desc-line = '88';
+      func-mem-desc-line = '90';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the angle of the servos attached to the servo port of SRA Board.
 _EnD_oF_dEf_TeXt_;

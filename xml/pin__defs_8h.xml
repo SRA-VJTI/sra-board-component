@@ -554,6 +554,17 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="104" column="9" bodyfile="include/pin_defs.h" bodystart="104" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="pin__defs_8h_1abed942b161f2db9f855f196e22459066" prot="public" static="no">
+        <name>SERVO_D</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/pin_defs.h" line="105" column="9" bodyfile="include/pin_defs.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -651,9 +662,10 @@
 <codeline lineno="100"><highlight class="comment"></highlight></codeline>
 <codeline lineno="102" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>18</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="104" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>15</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/pin_defs.h"/>
   </compounddef>

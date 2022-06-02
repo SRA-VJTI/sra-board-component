@@ -178,6 +178,7 @@
     <member refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" kind="define"><name>SERVO_A</name></member>
     <member refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kind="define"><name>SERVO_B</name></member>
     <member refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kind="define"><name>SERVO_C</name></member>
+    <member refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" kind="define"><name>SERVO_D</name></member>
   </compound>
   <compound refid="servo_8h" kind="file"><name>servo.h</name>
     <member refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
