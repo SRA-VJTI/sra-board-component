@@ -99,10 +99,14 @@
 /////////////////////////////
 
 /////////// servos //////////
-#define SERVO_A 5
-#define SERVO_B 18
+#define SERVO_A 15
+#define SERVO_B 5
 #define SERVO_C 19
+<<<<<<< HEAD
 #define SERVO_D 15
+=======
+#define SERVO_D 18
+>>>>>>> 119fb9eb0b00907ba32edd13883b1033212fca2d
 /////////////////////////////
 
 #endif
