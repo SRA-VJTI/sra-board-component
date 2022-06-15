@@ -85,7 +85,7 @@ void app_main(void)
 			set_angle_servo(&servo_b, i);
 			set_angle_servo(&servo_c, i);
 			set_angle_servo(&servo_d, i);
-			vTaskDelay(3 / portTICK_PERIOD_MS);
+			vTaskDelay(30/ portTICK_PERIOD_MS);
 		}
 
 		// For loop to sweep all servos from 180 degree to 0 degree
@@ -96,7 +96,7 @@ void app_main(void)
 			set_angle_servo(&servo_b, i);
 			set_angle_servo(&servo_c, i);
 			set_angle_servo(&servo_d, i);
-			vTaskDelay(3 / portTICK_PERIOD_MS);
+			vTaskDelay(30/ portTICK_PERIOD_MS);
 		}
 		// Delay of one second
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
