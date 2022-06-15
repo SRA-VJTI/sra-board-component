@@ -47,7 +47,16 @@
 
  * @return esp_err_t i.e it shows if OLED is initialised successfully or not
  **/
-esp_err_t init_oled(u8g2_t *u8g2);
+esp_err_t init_oled_walle(u8g2_t *u8g2);
+
+/**
+ * @brief enables and configures OLED display
+
+ * @param u8g2 pointer to empty u8g2_t struct
+
+ * @return esp_err_t i.e it shows if OLED is initialised successfully or not
+ **/
+esp_err_t init_oled_mario(u8g2_t *u8g2);
 
 /**
  * @brief displays SRA logo on OLED screen
@@ -66,6 +75,15 @@ esp_err_t display_sra_logo(u8g2_t *u8g2);
  * @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
  **/
 esp_err_t display_walle_logo(u8g2_t *u8g2);
+
+/**
+ * @brief displays MARIO Bitmap logo on OLED screen
+
+ * @param u8g2 pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if MARIO logo is displayed successfully or not
+ **/
+esp_err_t display_mario_logo(u8g2_t *u8g2);
 
 /**
  * @brief displays LSA bar on OLED screen
@@ -99,5 +117,18 @@ esp_err_t display_mpu(float pitch, float roll, u8g2_t *u8g2);
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
 esp_err_t display_pid_values(float kp, float ki, float kd, u8g2_t *u8g2);
+
+/**
+ * @brief displays Servo angles on the OLED screen
+
+ * @param s1 value of Servo_A in float
+ * @param s2 value of Servo_B in float
+ * @param s3 value of Servo_C in float
+ * @param s4 value of Servo_D in float
+ * @param u8g2 pointer to u8g2_t struct
+
+ * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+ **/
+esp_err_t display_servo_values(int s1, int s2, int s3, int s4, u8g2_t *u8g2);
 
 #endif
