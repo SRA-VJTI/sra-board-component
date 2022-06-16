@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="40" column="9" bodyfile="include/servo.h" bodystart="40" bodyend="-1"/>
+        <location file="include/servo.h" line="41" column="9" bodyfile="include/servo.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structservo__config_1a0814099ee19c534c5562d80c2a538c48" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="41" column="9" bodyfile="include/servo.h" bodystart="41" bodyend="-1"/>
+        <location file="include/servo.h" line="42" column="9" bodyfile="include/servo.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="42" column="9" bodyfile="include/servo.h" bodystart="42" bodyend="-1"/>
+        <location file="include/servo.h" line="43" column="9" bodyfile="include/servo.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -58,7 +58,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="43" column="9" bodyfile="include/servo.h" bodystart="43" bodyend="-1"/>
+        <location file="include/servo.h" line="44" column="9" bodyfile="include/servo.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structservo__config_1a0404b532c9903812101610fb245540e8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int servo_config::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/servo.h" line="45" column="9" bodyfile="include/servo.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structservo__config_1ac007a1ae7772ebc90684c111b404e720" prot="public" static="no" mutable="no">
         <type>mcpwm_unit_t</type>
@@ -72,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="44" column="18" bodyfile="include/servo.h" bodystart="44" bodyend="-1"/>
+        <location file="include/servo.h" line="46" column="18" bodyfile="include/servo.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" prot="public" static="no" mutable="no">
         <type>mcpwm_timer_t</type>
@@ -86,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="45" column="19" bodyfile="include/servo.h" bodystart="45" bodyend="-1"/>
+        <location file="include/servo.h" line="47" column="19" bodyfile="include/servo.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" prot="public" static="no" mutable="no">
         <type>mcpwm_generator_t</type>
@@ -100,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="46" column="23" bodyfile="include/servo.h" bodystart="46" bodyend="-1"/>
+        <location file="include/servo.h" line="48" column="23" bodyfile="include/servo.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -108,8 +121,9 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/servo.h" line="39" column="1" bodyfile="include/servo.h" bodystart="39" bodyend="47"/>
+    <location file="include/servo.h" line="39" column="1" bodyfile="include/servo.h" bodystart="40" bodyend="49"/>
     <listofallmembers>
+      <member refid="structservo__config_1a0404b532c9903812101610fb245540e8" prot="public" virt="non-virtual"><scope>servo_config</scope><name>angle</name></member>
       <member refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" prot="public" virt="non-virtual"><scope>servo_config</scope><name>gen</name></member>
       <member refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" prot="public" virt="non-virtual"><scope>servo_config</scope><name>max_degree</name></member>
       <member refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" prot="public" virt="non-virtual"><scope>servo_config</scope><name>max_pulse_width</name></member>

@@ -208,7 +208,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/servo.c" line="90" column="11" bodyfile="src/servo.c" bodystart="90" bodyend="109"/>
+        <location file="src/servo.c" line="90" column="11" bodyfile="src/servo.c" bodystart="90" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_servo</definition>
+        <argsstring>(servo_config *config)</argsstring>
+        <name>read_servo</name>
+        <param>
+          <type><ref refid="structservo__config" kindref="compound">servo_config</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Get the angle of the servos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/servo.c" line="112" column="5" bodyfile="src/servo.c" bodystart="112" bodyend="115"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -311,20 +332,26 @@
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>)</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_angle_servo_helper(config-&gt;<ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kindref="member">max_degree</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kindref="member">min_pulse_width</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kindref="member">max_pulse_width</ref>,<sp/>degree_of_rotation,<sp/>config-&gt;<ref refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kindref="member">mcpwm_num</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kindref="member">timer_num</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kindref="member">gen</ref>);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>incorrect<sp/>servo<sp/>pin<sp/>passed<sp/>to<sp/>function&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servos<sp/>not<sp/>enabled,<sp/>call<sp/>enable_servo()<sp/>before<sp/>using<sp/>servos&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;<ref refid="structservo__config_1a0404b532c9903812101610fb245540e8" kindref="member">angle</ref><sp/>=<sp/>degree_of_rotation;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_angle_servo_helper(config-&gt;<ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kindref="member">max_degree</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kindref="member">min_pulse_width</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kindref="member">max_pulse_width</ref>,<sp/>degree_of_rotation,<sp/>config-&gt;<ref refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kindref="member">mcpwm_num</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kindref="member">timer_num</ref>,<sp/>config-&gt;<ref refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kindref="member">gen</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>incorrect<sp/>servo<sp/>pin<sp/>passed<sp/>to<sp/>function&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_SERVO,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>servos<sp/>not<sp/>enabled,<sp/>call<sp/>enable_servo()<sp/>before<sp/>using<sp/>servos&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" kindref="member">read_servo</ref>(<ref refid="structservo__config" kindref="compound">servo_config</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>config-&gt;<ref refid="structservo__config_1a0404b532c9903812101610fb245540e8" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/servo.c"/>
   </compounddef>

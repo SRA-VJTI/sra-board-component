@@ -352,7 +352,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'servo_pin';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '40';
+      sec-mem-desc-line = '41';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -370,7 +370,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'min_pulse_width';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '41';
+      sec-mem-desc-line = '42';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -388,7 +388,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'max_pulse_width';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '42';
+      sec-mem-desc-line = '43';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -406,12 +406,30 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'max_degree';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '43';
+      sec-mem-desc-line = '44';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 Member 'max_degree' contains the maximum degree servo motor can rotate
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structservo__config_1a0404b532c9903812101610fb245540e8';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'angle';
+      sec-mem-desc-file = '/github/workspace/include/servo.h';
+      sec-mem-desc-line = '45';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -424,7 +442,7 @@ mcpwm_unit_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mcpwm_num';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '44';
+      sec-mem-desc-line = '46';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -442,7 +460,7 @@ mcpwm_timer_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'timer_num';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '45';
+      sec-mem-desc-line = '47';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -460,7 +478,7 @@ mcpwm_generator_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'gen';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '46';
+      sec-mem-desc-line = '48';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2754,6 +2772,32 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
+      func-mem-id   = 'oled_8h_1aec24e1dbbb1cf99cfec4d177ee7ffd80';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'display_mario_logo';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8g2_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'u8g2';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/oled.h';
+      func-mem-desc-line = '77';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+displays MARIO Bitmap logo on OLED screen
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param u8g2 pointer to u8g2_t struct
+
+@return esp_err_t i.e it shows if MARIO logo is displayed successfully or not
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
       func-mem-id   = 'oled_8h_1af1bd87b3c18b14b83abaa7a13e87b6f0';
       func-mem-virt = normal;
       func-mem-prot = public;
@@ -2774,7 +2818,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '78';
+      func-mem-desc-line = '87';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays LSA bar on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -2813,7 +2857,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '89';
+      func-mem-desc-line = '98';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays pitch and roll readings on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -2859,7 +2903,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '101';
+      func-mem-desc-line = '110';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays kp, ki and kd reading on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -2867,6 +2911,60 @@ _EnD_oF_dEf_TeXt_;
 @param kp value of kp in float
 @param ki value of ki in float
 @param kd value of kd in float
+@param u8g2 pointer to u8g2_t struct
+
+@return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'oled_8h_1ab9cb87a5d0d1713f640be36d426e0e85';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'display_servo_values';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's1';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's2';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's3';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's4';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8g2_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'u8g2';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/oled.h';
+      func-mem-desc-line = '123';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+displays Servo angles on the OLED screen
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param s1 value of Servo_A in float
+@param s2 value of Servo_B in float
+@param s3 value of Servo_C in float
+@param s4 value of Servo_D in float
 @param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
@@ -3606,12 +3704,12 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_servo';
       func-mem-desc-file = '/github/workspace/include/servo.h';
-      func-mem-desc-line = '72';
+      func-mem-desc-line = '74';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG 
+@return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -3636,14 +3734,38 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'degree_of_rotation';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/servo.h';
-      func-mem-desc-line = '81';
+      func-mem-desc-line = '83';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the angle of the servos attached to the servo port of SRA Board.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @param config pointer to the servo_config struct
 @param degree_of_rotation angle to which the servo must be set, depends on value of MAX_DEGREE macro
-@return esp_err_t 
+@return esp_err_t
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'servo_8h_1a1089a49dd3762a303cd3d9572249d48d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'read_servo';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+servo_config *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'config';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/servo.h';
+      func-mem-desc-line = '89';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Get the angle of the servos.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return esp_err_t
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
@@ -5772,7 +5894,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '92';
+      func-mem-desc-line = '120';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables and configures OLED display
 _EnD_oF_dEf_TeXt_;
@@ -5798,7 +5920,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '128';
+      func-mem-desc-line = '151';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays SRA logo on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -5824,7 +5946,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '146';
+      func-mem-desc-line = '169';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays Wall-E Bitmap logo on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -5832,6 +5954,32 @@ _EnD_oF_dEf_TeXt_;
 @param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'oled_8c_1aec24e1dbbb1cf99cfec4d177ee7ffd80';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'display_mario_logo';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8g2_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'u8g2';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/oled.c';
+      func-mem-desc-line = '188';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+displays MARIO Bitmap logo on OLED screen
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param u8g2 pointer to u8g2_t struct
+
+@return esp_err_t i.e it shows if MARIO logo is displayed successfully or not
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -5856,7 +6004,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '165';
+      func-mem-desc-line = '207';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays LSA bar on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -5895,7 +6043,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '192';
+      func-mem-desc-line = '234';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays pitch and roll readings on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -5941,7 +6089,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'u8g2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '217';
+      func-mem-desc-line = '259';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays kp, ki and kd reading on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -5949,6 +6097,60 @@ _EnD_oF_dEf_TeXt_;
 @param kp value of kp in float
 @param ki value of ki in float
 @param kd value of kd in float
+@param u8g2 pointer to u8g2_t struct
+
+@return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'oled_8c_1ab9cb87a5d0d1713f640be36d426e0e85';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'display_servo_values';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's1';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's2';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's3';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 's4';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+u8g2_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'u8g2';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/oled.c';
+      func-mem-desc-line = '287';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+displays Servo angles on the OLED screen
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param s1 value of Servo_A in float
+@param s2 value of Servo_B in float
+@param s3 value of Servo_C in float
+@param s4 value of Servo_D in float
 @param u8g2 pointer to u8g2_t struct
 
 @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
@@ -5988,36 +6190,35 @@ _EnD_oF_dEf_TeXt_;
       var-mem-name = 'sra_logo';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,
-0b11111111,0b11111000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b11111111,
-0b11111111,0b11100000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00011111,0b11111111,
-0b11111111,0b11000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11111111,
-0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000110,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000011,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b10000111,0b11111110,0b00011111,0b11110000,0b00111111,0b11111111,0b11111111,0b10000000,0b00000000,0b01111111,0b10000000,0b00000111,0b11111111,
-0b11111111,0b10001111,0b11111100,0b00011111,0b11111000,0b00111111,0b11111111,0b11111111,0b11000000,0b00000000,0b11111111,0b11000000,0b00000111,0b11111111,
-0b11111111,0b10001111,0b11000000,0b00000000,0b10010000,0b00000000,0b00000000,0b11101111,0b11000000,0b00000001,0b11111111,0b11100000,0b00000111,0b11111111,
-0b11111111,0b10001111,0b11111100,0b00011111,0b10000000,0b00000000,0b00000000,0b01101111,0b11000000,0b00000111,0b11110011,0b11110000,0b00000111,0b11111111,
-0b11111111,0b10000111,0b11111110,0b00011111,0b11110000,0b00111111,0b11111111,0b11111111,0b10000000,0b00001111,0b11100001,0b11111100,0b00000111,0b11111111,
-0b11111111,0b11000000,0b00000000,0b00000011,0b11111000,0b00111111,0b11111111,0b11111111,0b10000000,0b00011111,0b10000000,0b11111110,0b00000111,0b11111111,
-0b11111111,0b11000111,0b10000000,0b00000001,0b11111000,0b00111111,0b00000000,0b11101111,0b11000000,0b00111111,0b00000000,0b00111111,0b00000111,0b11111111,
-0b11111111,0b11101111,0b11111100,0b00011111,0b11111000,0b00111111,0b00000001,0b11100111,0b11000000,0b11111110,0b00000000,0b00011111,0b10000111,0b11111111,
-0b11111111,0b11110111,0b11111110,0b00011111,0b11110000,0b00111111,0b00000011,0b11000111,0b11000001,0b11111100,0b00000000,0b00001111,0b11100111,0b11111111,
-0b11111111,0b11111000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b10000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b11111110,0b00000000,0b00000000,0b00000000,0b00000000,0b00011111,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b11111111,0b10000000,0b00000000,0b00000000,0b00000000,0b01111110,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b11111111,0b11110000,0b00000000,0b00000000,0b00000011,0b11111000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b00000000,0b00000000,0b00111111,0b11100000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00011111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11110000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,
-0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111,0b11111111
-}
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+	0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111,
+	0b11111111, 0b11100000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111,
+	0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11111111,
+	0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000011, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b10000111, 0b11111110, 0b00011111, 0b11110000, 0b00111111, 0b11111111, 0b11111111, 0b10000000, 0b00000000, 0b01111111, 0b10000000, 0b00000111, 0b11111111,
+	0b11111111, 0b10001111, 0b11111100, 0b00011111, 0b11111000, 0b00111111, 0b11111111, 0b11111111, 0b11000000, 0b00000000, 0b11111111, 0b11000000, 0b00000111, 0b11111111,
+	0b11111111, 0b10001111, 0b11000000, 0b00000000, 0b10010000, 0b00000000, 0b00000000, 0b11101111, 0b11000000, 0b00000001, 0b11111111, 0b11100000, 0b00000111, 0b11111111,
+	0b11111111, 0b10001111, 0b11111100, 0b00011111, 0b10000000, 0b00000000, 0b00000000, 0b01101111, 0b11000000, 0b00000111, 0b11110011, 0b11110000, 0b00000111, 0b11111111,
+	0b11111111, 0b10000111, 0b11111110, 0b00011111, 0b11110000, 0b00111111, 0b11111111, 0b11111111, 0b10000000, 0b00001111, 0b11100001, 0b11111100, 0b00000111, 0b11111111,
+	0b11111111, 0b11000000, 0b00000000, 0b00000011, 0b11111000, 0b00111111, 0b11111111, 0b11111111, 0b10000000, 0b00011111, 0b10000000, 0b11111110, 0b00000111, 0b11111111,
+	0b11111111, 0b11000111, 0b10000000, 0b00000001, 0b11111000, 0b00111111, 0b00000000, 0b11101111, 0b11000000, 0b00111111, 0b00000000, 0b00111111, 0b00000111, 0b11111111,
+	0b11111111, 0b11101111, 0b11111100, 0b00011111, 0b11111000, 0b00111111, 0b00000001, 0b11100111, 0b11000000, 0b11111110, 0b00000000, 0b00011111, 0b10000111, 0b11111111,
+	0b11111111, 0b11110111, 0b11111110, 0b00011111, 0b11110000, 0b00111111, 0b00000011, 0b11000111, 0b11000001, 0b11111100, 0b00000000, 0b00001111, 0b11100111, 0b11111111,
+	0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b11111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b01111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000011, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b00000000, 0b00000000, 0b00111111, 0b11100000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,
+	0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111}
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
       var-mem-desc-line = '29';
@@ -6039,38 +6240,86 @@ _EnD_oF_dEf_TeXt_;
       var-mem-name = 'walle_logo';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {
-0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00011111,0b11111110,0b01100111,0b00111111,0b11111100,0b00000000,0b00000000,
-0b00000000,0b00000000,0b01110011,0b00000110,0b01110110,0b01110000,0b01100110,0b00000000,0b00000000,
-0b00000000,0b00000000,0b01100011,0b00001111,0b11110111,0b11110000,0b11100110,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00111001,0b11111111,0b01110110,0b11111111,0b10011100,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00000010,0b00000000,0b11110111,0b10000000,0b01000000,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00000000,0b00000000,0b01111111,0b00000000,0b00000000,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00000000,0b00000000,0b11000011,0b10000000,0b00000000,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00001101,0b11111111,0b11111111,0b11111111,0b11111000,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00011001,0b11110011,0b00000000,0b01000111,0b10001100,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00111110,0b00110011,0b00000000,0b01000110,0b00111110,0b00000000,0b00000000,
-0b00000000,0b00000000,0b01100000,0b11100011,0b00000000,0b11000111,0b10000111,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00111111,0b11000011,0b11111111,0b11000011,0b11111110,0b00000000,0b00000000,
-0b00000000,0b00000000,0b00000001,0b10000000,0b00000000,0b00000001,0b11000000,0b00000000,0b00000000,
-0b00000000,0b00011111,0b11111111,0b10000000,0b00000000,0b00000001,0b11111111,0b11111100,0b00000000,
-0b00000000,0b00111000,0b01111001,0b10000000,0b00000000,0b00000001,0b10011110,0b00001100,0b00000000,
-0b00000000,0b00111000,0b00000001,0b11111111,0b11111111,0b11111111,0b10000000,0b00001100,0b00000000,
-0b00000000,0b00111000,0b11111001,0b10000011,0b00000000,0b11100001,0b10001111,0b10001100,0b00000000,
-0b00000000,0b00111000,0b11111001,0b10000011,0b00000000,0b01000001,0b10011111,0b10001100,0b00000000,
-0b00000000,0b00111000,0b00000001,0b11111110,0b00000000,0b01111111,0b10000000,0b00001100,0b00000000,
-0b00000000,0b00111000,0b00000001,0b10000000,0b00000000,0b00000001,0b10000000,0b00001100,0b00000000,
-0b00000000,0b00011111,0b11111111,0b10000000,0b00000000,0b00000000,0b11111111,0b11111100,0b00000000,
-0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11000000,
-0b00011000,0b11000110,0b00011111,0b11000001,0b10000000,0b00110000,0b00000000,0b00111111,0b11111000,
-0b00011001,0b11001110,0b00111000,0b01110001,0b10000000,0b00111000,0b00000100,0b01000111,0b11111100,
-0b00011101,0b11101110,0b00111111,0b11110001,0b11000000,0b00111000,0b00000000,0b01100001,0b11111100,
-0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00111111,0b11111000,
-0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00000000,0b00001111,0b11000000
-}
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00011111, 0b11111110, 0b01100111, 0b00111111, 0b11111100, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b01110011, 0b00000110, 0b01110110, 0b01110000, 0b01100110, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b01100011, 0b00001111, 0b11110111, 0b11110000, 0b11100110, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00111001, 0b11111111, 0b01110110, 0b11111111, 0b10011100, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000010, 0b00000000, 0b11110111, 0b10000000, 0b01000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b11000011, 0b10000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00001101, 0b11111111, 0b11111111, 0b11111111, 0b11111000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00011001, 0b11110011, 0b00000000, 0b01000111, 0b10001100, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00111110, 0b00110011, 0b00000000, 0b01000110, 0b00111110, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b01100000, 0b11100011, 0b00000000, 0b11000111, 0b10000111, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00111111, 0b11000011, 0b11111111, 0b11000011, 0b11111110, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000001, 0b10000000, 0b00000000, 0b00000001, 0b11000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00011111, 0b11111111, 0b10000000, 0b00000000, 0b00000001, 0b11111111, 0b11111100, 0b00000000,
+	0b00000000, 0b00111000, 0b01111001, 0b10000000, 0b00000000, 0b00000001, 0b10011110, 0b00001100, 0b00000000,
+	0b00000000, 0b00111000, 0b00000001, 0b11111111, 0b11111111, 0b11111111, 0b10000000, 0b00001100, 0b00000000,
+	0b00000000, 0b00111000, 0b11111001, 0b10000011, 0b00000000, 0b11100001, 0b10001111, 0b10001100, 0b00000000,
+	0b00000000, 0b00111000, 0b11111001, 0b10000011, 0b00000000, 0b01000001, 0b10011111, 0b10001100, 0b00000000,
+	0b00000000, 0b00111000, 0b00000001, 0b11111110, 0b00000000, 0b01111111, 0b10000000, 0b00001100, 0b00000000,
+	0b00000000, 0b00111000, 0b00000001, 0b10000000, 0b00000000, 0b00000001, 0b10000000, 0b00001100, 0b00000000,
+	0b00000000, 0b00011111, 0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b11111111, 0b11111100, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11000000,
+	0b00011000, 0b11000110, 0b00011111, 0b11000001, 0b10000000, 0b00110000, 0b00000000, 0b00111111, 0b11111000,
+	0b00011001, 0b11001110, 0b00111000, 0b01110001, 0b10000000, 0b00111000, 0b00000100, 0b01000111, 0b11111100,
+	0b00011101, 0b11101110, 0b00111111, 0b11110001, 0b11000000, 0b00111000, 0b00000000, 0b01100001, 0b11111100,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00111111, 0b11111000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11000000}
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '61';
+      var-mem-desc-line = '60';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'oled_8c_1a4f0c6003cce04e6b9960b0037ac79c20';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+const unsigned char
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'mario_logo';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11110000, 0b00000000, 0b11110000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b10000111, 0b10000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111100, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001101, 0b11111111, 0b11000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b10000110, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00111111, 0b11111111, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000011, 0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00111111, 0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000011, 0b11111111, 0b11111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00001111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00111111, 0b11111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000111, 0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111, 0b11100000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111, 0b11111100, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00111111, 0b11111111, 0b11111111, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000011, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000011, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000,
+	0b00000000, 0b00001111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000,
+	0b00000000, 0b00001111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11100000, 0b00000000,
+	0b00000000, 0b00001111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11100000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000,
+	0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/oled.c';
+      var-mem-desc-line = '90';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -6130,7 +6379,7 @@ _EnD_oF_dEf_TeXt_;
 Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG 
+@return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -6228,7 +6477,31 @@ _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @param config pointer to the servo_config struct
 @param degree_of_rotation angle to which the servo must be set, depends on value of MAX_DEGREE macro
-@return esp_err_t 
+@return esp_err_t
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'servo_8c_1a1089a49dd3762a303cd3d9572249d48d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'read_servo';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+servo_config *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'config';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/servo.c';
+      func-mem-desc-line = '112';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Get the angle of the servos.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return esp_err_t
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };

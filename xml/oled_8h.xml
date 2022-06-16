@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="50" column="11" bodyfile="src/oled.c" bodystart="92" bodyend="126" declfile="include/oled.h" declline="50" declcolumn="11"/>
+        <location file="include/oled.h" line="50" column="11" bodyfile="src/oled.c" bodystart="120" bodyend="149" declfile="include/oled.h" declline="50" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1a3fd9e14359b2890f6a79d6f568916ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="59" column="11" bodyfile="src/oled.c" bodystart="128" bodyend="144" declfile="include/oled.h" declline="59" declcolumn="11"/>
+        <location file="include/oled.h" line="59" column="11" bodyfile="src/oled.c" bodystart="151" bodyend="167" declfile="include/oled.h" declline="59" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1a8de1b63bbf5b8d095394a084ff48504b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -208,7 +208,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="68" column="11" bodyfile="src/oled.c" bodystart="146" bodyend="163" declfile="include/oled.h" declline="68" declcolumn="11"/>
+        <location file="include/oled.h" line="68" column="11" bodyfile="src/oled.c" bodystart="169" bodyend="186" declfile="include/oled.h" declline="68" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8h_1aec24e1dbbb1cf99cfec4d177ee7ffd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_mario_logo</definition>
+        <argsstring>(u8g2_t *u8g2)</argsstring>
+        <name>display_mario_logo</name>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays MARIO Bitmap logo on OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u8g2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if MARIO logo is displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/oled.h" line="77" column="11" bodyfile="src/oled.c" bodystart="188" bodyend="205" declfile="include/oled.h" declline="77" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1af1bd87b3c18b14b83abaa7a13e87b6f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -250,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="78" column="11" bodyfile="src/oled.c" bodystart="165" bodyend="190" declfile="include/oled.h" declline="78" declcolumn="11"/>
+        <location file="include/oled.h" line="87" column="11" bodyfile="src/oled.c" bodystart="207" bodyend="232" declfile="include/oled.h" declline="87" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1a5ff3f1819dfe0d92468bb32a80335e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -304,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="89" column="11" bodyfile="src/oled.c" bodystart="192" bodyend="215" declfile="include/oled.h" declline="89" declcolumn="11"/>
+        <location file="include/oled.h" line="98" column="11" bodyfile="src/oled.c" bodystart="234" bodyend="257" declfile="include/oled.h" declline="98" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1afb16632d6f605ccb07d1f21347e86377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -370,7 +400,85 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="101" column="11" bodyfile="src/oled.c" bodystart="217" bodyend="243" declfile="include/oled.h" declline="101" declcolumn="11"/>
+        <location file="include/oled.h" line="110" column="11" bodyfile="src/oled.c" bodystart="259" bodyend="285" declfile="include/oled.h" declline="110" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="oled_8h_1ab9cb87a5d0d1713f640be36d426e0e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t display_servo_values</definition>
+        <argsstring>(int s1, int s2, int s3, int s4, u8g2_t *u8g2)</argsstring>
+        <name>display_servo_values</name>
+        <param>
+          <type>int</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s3</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s4</declname>
+        </param>
+        <param>
+          <type>u8g2_t *</type>
+          <declname>u8g2</declname>
+        </param>
+        <briefdescription>
+<para>displays Servo angles on the OLED screen </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of Servo_A in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of Servo_B in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of Servo_C in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of Servo_D in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u8g2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to u8g2_t struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/oled.h" line="123" column="11" bodyfile="src/oled.c" bodystart="287" bodyend="317" declfile="include/oled.h" declline="123" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -426,13 +534,17 @@
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a8de1b63bbf5b8d095394a084ff48504b" kindref="member">display_walle_logo</ref>(u8g2_t<sp/>*u8g2);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1af1bd87b3c18b14b83abaa7a13e87b6f0" kindref="member">display_lsa</ref>(<ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/>readings,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a5ff3f1819dfe0d92468bb32a80335e0e" kindref="member">display_mpu</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>roll,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1afb16632d6f605ccb07d1f21347e86377" kindref="member">display_pid_values</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ki,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kd,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1aec24e1dbbb1cf99cfec4d177ee7ffd80" kindref="member">display_mario_logo</ref>(u8g2_t<sp/>*u8g2);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1af1bd87b3c18b14b83abaa7a13e87b6f0" kindref="member">display_lsa</ref>(<ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/>readings,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a5ff3f1819dfe0d92468bb32a80335e0e" kindref="member">display_mpu</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>roll,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1afb16632d6f605ccb07d1f21347e86377" kindref="member">display_pid_values</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ki,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kd,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1ab9cb87a5d0d1713f640be36d426e0e85" kindref="member">display_servo_values</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s3,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s4,<sp/>u8g2_t<sp/>*u8g2);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/oled.h"/>
   </compounddef>

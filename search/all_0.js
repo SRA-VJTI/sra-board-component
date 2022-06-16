@@ -12,5 +12,6 @@ var searchData=
   ['adc_2eh_9',['adc.h',['../adc_8h.html',1,'']]],
   ['adc_5freading_10',['adc_reading',['../unionline__sensor__array.html#ab46ab63e7396f219bfd4748e91fef673',1,'line_sensor_array']]],
   ['addr_11',['addr',['../structi2c__dev__t.html#a84ad7180602cb8e36b38c29e5b1c86c6',1,'i2c_dev_t']]],
-  ['alpha_12',['ALPHA',['../mpu6050_8h.html#af5abd28c44c29b7397c84f1fec4b1d84',1,'mpu6050.h']]]
+  ['alpha_12',['ALPHA',['../mpu6050_8h.html#af5abd28c44c29b7397c84f1fec4b1d84',1,'mpu6050.h']]],
+  ['angle_13',['angle',['../structservo__config.html#a0404b532c9903812101610fb245540e8',1,'servo_config']]]
 ];

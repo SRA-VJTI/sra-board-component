@@ -27,6 +27,7 @@
     <member refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kind="variable"><name>min_pulse_width</name></member>
     <member refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kind="variable"><name>max_pulse_width</name></member>
     <member refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kind="variable"><name>max_degree</name></member>
+    <member refid="structservo__config_1a0404b532c9903812101610fb245540e8" kind="variable"><name>angle</name></member>
     <member refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kind="variable"><name>mcpwm_num</name></member>
     <member refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kind="variable"><name>timer_num</name></member>
     <member refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kind="variable"><name>gen</name></member>
@@ -137,9 +138,11 @@
     <member refid="oled_8h_1a7e3ddc2d27dcdf2b5537aafea494d803" kind="function"><name>init_oled</name></member>
     <member refid="oled_8h_1a3fd9e14359b2890f6a79d6f568916ce3" kind="function"><name>display_sra_logo</name></member>
     <member refid="oled_8h_1a8de1b63bbf5b8d095394a084ff48504b" kind="function"><name>display_walle_logo</name></member>
+    <member refid="oled_8h_1aec24e1dbbb1cf99cfec4d177ee7ffd80" kind="function"><name>display_mario_logo</name></member>
     <member refid="oled_8h_1af1bd87b3c18b14b83abaa7a13e87b6f0" kind="function"><name>display_lsa</name></member>
     <member refid="oled_8h_1a5ff3f1819dfe0d92468bb32a80335e0e" kind="function"><name>display_mpu</name></member>
     <member refid="oled_8h_1afb16632d6f605ccb07d1f21347e86377" kind="function"><name>display_pid_values</name></member>
+    <member refid="oled_8h_1ab9cb87a5d0d1713f640be36d426e0e85" kind="function"><name>display_servo_values</name></member>
   </compound>
   <compound refid="pin__defs_8h" kind="file"><name>pin_defs.h</name>
     <member refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kind="define"><name>CHECK</name></member>
@@ -183,6 +186,7 @@
   <compound refid="servo_8h" kind="file"><name>servo.h</name>
     <member refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
     <member refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
+    <member refid="servo_8h_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
   </compound>
   <compound refid="sra__board_8h" kind="file"><name>sra_board.h</name>
   </compound>
@@ -278,12 +282,15 @@
     <member refid="oled_8c_1a994d7023617abc4e17322f9287bfb5af" kind="variable"><name>TAG_OLED</name></member>
     <member refid="oled_8c_1a82909a23095b9c349d3f4acc4d3a631b" kind="variable"><name>sra_logo</name></member>
     <member refid="oled_8c_1a097fd02aca20eddc85dbffce1528950b" kind="variable"><name>walle_logo</name></member>
+    <member refid="oled_8c_1a4f0c6003cce04e6b9960b0037ac79c20" kind="variable"><name>mario_logo</name></member>
     <member refid="oled_8c_1a7e3ddc2d27dcdf2b5537aafea494d803" kind="function"><name>init_oled</name></member>
     <member refid="oled_8c_1a3fd9e14359b2890f6a79d6f568916ce3" kind="function"><name>display_sra_logo</name></member>
     <member refid="oled_8c_1a8de1b63bbf5b8d095394a084ff48504b" kind="function"><name>display_walle_logo</name></member>
+    <member refid="oled_8c_1aec24e1dbbb1cf99cfec4d177ee7ffd80" kind="function"><name>display_mario_logo</name></member>
     <member refid="oled_8c_1af1bd87b3c18b14b83abaa7a13e87b6f0" kind="function"><name>display_lsa</name></member>
     <member refid="oled_8c_1a5ff3f1819dfe0d92468bb32a80335e0e" kind="function"><name>display_mpu</name></member>
     <member refid="oled_8c_1afb16632d6f605ccb07d1f21347e86377" kind="function"><name>display_pid_values</name></member>
+    <member refid="oled_8c_1ab9cb87a5d0d1713f640be36d426e0e85" kind="function"><name>display_servo_values</name></member>
   </compound>
   <compound refid="servo_8c" kind="file"><name>servo.c</name>
     <member refid="servo_8c_1a70fb9b3e7d410312baf880c1292f43ba" kind="define"><name>STR</name></member>
@@ -292,6 +299,7 @@
     <member refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
     <member refid="servo_8c_1a5b22e5ca5be55df86b36cea8f542291b" kind="function"><name>set_angle_servo_helper</name></member>
     <member refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
+    <member refid="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
   </compound>
   <compound refid="switches_8c" kind="file"><name>switches.c</name>
     <member refid="switches_8c_1ac00d65aab541451923cc2fc80893786e" kind="variable"><name>TAG_SWITCHES</name></member>

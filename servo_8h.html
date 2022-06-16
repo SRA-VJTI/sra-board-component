@@ -126,6 +126,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a203e9c05f59cfc6420e735d86f763301"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="servo_8h.html#a203e9c05f59cfc6420e735d86f763301">set_angle_servo</a> (<a class="el" href="structservo__config.html">servo_config</a> *config, unsigned int degree_of_rotation)</td></tr>
 <tr class="memdesc:a203e9c05f59cfc6420e735d86f763301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the angle of the servos attached to the servo port of SRA Board.  <a href="servo_8h.html#a203e9c05f59cfc6420e735d86f763301">More...</a><br /></td></tr>
 <tr class="separator:a203e9c05f59cfc6420e735d86f763301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1089a49dd3762a303cd3d9572249d48d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="servo_8h.html#a1089a49dd3762a303cd3d9572249d48d">read_servo</a> (<a class="el" href="structservo__config.html">servo_config</a> *config)</td></tr>
+<tr class="memdesc:a1089a49dd3762a303cd3d9572249d48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angle of the servos.  <a href="servo_8h.html#a1089a49dd3762a303cd3d9572249d48d">More...</a><br /></td></tr>
+<tr class="separator:a1089a49dd3762a303cd3d9572249d48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="af4079acff4a8c5a298d79d841fe96b80" name="af4079acff4a8c5a298d79d841fe96b80"></a>
@@ -145,6 +148,27 @@ Functions</h2></td></tr>
 
 <p>Enables Servo port on the sra board, sets up PWM for the three pins in servo port. </p>
 <dl class="section return"><dt>Returns</dt><dd>esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG </dd></dl>
+
+</div>
+</div>
+<a id="a1089a49dd3762a303cd3d9572249d48d" name="a1089a49dd3762a303cd3d9572249d48d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1089a49dd3762a303cd3d9572249d48d">&#9670;&nbsp;</a></span>read_servo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read_servo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structservo__config.html">servo_config</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the angle of the servos. </p>
+<dl class="section return"><dt>Returns</dt><dd>esp_err_t </dd></dl>
 
 </div>
 </div>

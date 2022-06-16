@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="72" column="11" bodyfile="src/servo.c" bodystart="31" bodyend="68" declfile="include/servo.h" declline="72" declcolumn="11"/>
+        <location file="include/servo.h" line="74" column="11" bodyfile="src/servo.c" bodystart="31" bodyend="68" declfile="include/servo.h" declline="74" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="servo_8h_1a203e9c05f59cfc6420e735d86f763301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -142,7 +142,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/servo.h" line="81" column="11" bodyfile="src/servo.c" bodystart="90" bodyend="109" declfile="include/servo.h" declline="81" declcolumn="11"/>
+        <location file="include/servo.h" line="83" column="11" bodyfile="src/servo.c" bodystart="90" bodyend="110" declfile="include/servo.h" declline="83" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="servo_8h_1a1089a49dd3762a303cd3d9572249d48d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_servo</definition>
+        <argsstring>(servo_config *config)</argsstring>
+        <name>read_servo</name>
+        <param>
+          <type><ref refid="structservo__config" kindref="compound">servo_config</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Get the angle of the servos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/servo.h" line="89" column="5" bodyfile="src/servo.c" bodystart="112" bodyend="115" declfile="include/servo.h" declline="89" declcolumn="5"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -188,21 +209,25 @@
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="structservo__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40" refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>;</highlight></codeline>
-<codeline lineno="41" refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kindref="member">min_pulse_width</ref>;</highlight></codeline>
-<codeline lineno="42" refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kindref="member">max_pulse_width</ref>;</highlight></codeline>
-<codeline lineno="43" refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kindref="member">max_degree</ref>;</highlight></codeline>
-<codeline lineno="44" refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_unit_t<sp/><ref refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kindref="member">mcpwm_num</ref>;</highlight></codeline>
-<codeline lineno="45" refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_timer_t<sp/><ref refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kindref="member">timer_num</ref>;</highlight></codeline>
-<codeline lineno="46" refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_t<sp/><ref refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kindref="member">gen</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="structservo__config" kindref="compound">servo_config</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kindref="member">enable_servo</ref>();</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kindref="member">set_angle_servo</ref>(<ref refid="structservo__config" kindref="compound">servo_config</ref><sp/>*config,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="39" refid="structservo__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kindref="member">servo_pin</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kindref="member">min_pulse_width</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kindref="member">max_pulse_width</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kindref="member">max_degree</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structservo__config_1a0404b532c9903812101610fb245540e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structservo__config_1a0404b532c9903812101610fb245540e8" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_unit_t<sp/><ref refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kindref="member">mcpwm_num</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_timer_t<sp/><ref refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kindref="member">timer_num</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_t<sp/><ref refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kindref="member">gen</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="structservo__config" kindref="compound">servo_config</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kindref="member">enable_servo</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">esp_err_t<sp/><ref refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kindref="member">set_angle_servo</ref>(<ref refid="structservo__config" kindref="compound">servo_config</ref><sp/>*config,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree_of_rotation);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="servo_8h_1a1089a49dd3762a303cd3d9572249d48d" kindref="member">read_servo</ref>(<ref refid="structservo__config" kindref="compound">servo_config</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/servo.h"/>
   </compounddef>
