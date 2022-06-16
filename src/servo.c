@@ -93,6 +93,7 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
     {
         if (config->servo_pin)
         {
+            config->angle = degree_of_rotation;
             return set_angle_servo_helper(config->servo_pin, config->max_degree, config->min_pulse_width, config->max_pulse_width, degree_of_rotation, config->mcpwm_num, config->timer_num, config->gen);
         }
         else
@@ -106,4 +107,9 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
         ESP_LOGE(TAG_SERVO, "error: servos not enabled, call enable_servo() before using servos");
         return ESP_FAIL;
     }
+}
+
+int read_servo(servo_config *config)
+{
+    return config->angle;
 }
