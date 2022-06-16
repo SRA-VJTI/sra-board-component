@@ -36,14 +36,16 @@
 #include "esp_err.h"
 #include "pin_defs.h"
 
-typedef struct {
+typedef struct
+{
     int servo_pin;
     int min_pulse_width;
     int max_pulse_width;
     int max_degree;
+    int angle;
     mcpwm_unit_t mcpwm_num;
     mcpwm_timer_t timer_num;
-    mcpwm_generator_t gen;    
+    mcpwm_generator_t gen;
 } servo_config;
 
 /** @struct servo_config
@@ -66,18 +68,24 @@ typedef struct {
 
 /**
  * @brief Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
- * 
- * @return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG 
+ *
+ * @return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG
  **/
 esp_err_t enable_servo();
 
 /**
  * @brief Set the angle of the servos attached to the servo port of SRA Board
- * 
+ *
  * @param config pointer to the servo_config struct
  * @param degree_of_rotation angle to which the servo must be set, depends on value of MAX_DEGREE macro
- * @return esp_err_t 
+ * @return esp_err_t
  */
 esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation);
+
+/**
+ * @brief Get the angle of the servos
+ * @return esp_err_t
+ */
+int read_servo(servo_config *config);
 
 #endif
