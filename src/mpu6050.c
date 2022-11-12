@@ -196,6 +196,45 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
     }
 }
 
+esp_err_t calibrate(int16_t *acce_raw_value, int16_t *gyro_raw_value)
+{
+	int n, i, j, k;
+	int16_t curr_acce_raw_value[BUFF_SIZE / 2], curr_gyro_raw_value[BUFF_SIZE / 2];
+	static bool calc_offset = true;
+	static int16_t acce_raw_value_offset[BUFF_SIZE / 2], gyro_raw_value_offset[BUFF_SIZE / 2];
+
+	if (calc_offset)
+	{
+		int ave_count = 200;
+		int16_t acce_raw_value_sum[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_sum[BUFF_SIZE / 2] = {0, 0, 0};
+		for (i = 0; i < ave_count; i++)
+		{
+			if (read_mpu6050_raw(curr_acce_raw_value, curr_gyro_raw_value) != ESP_OK)
+				return ESP_FAIL;
+
+			for (j = 0; j < BUFF_SIZE / 2; j++)
+			{
+				acce_raw_value_sum[j] += curr_acce_raw_value[j];
+				gyro_raw_value_sum[j] += curr_gyro_raw_value[j];
+			}
+		}
+		for (k = 0; k < BUFF_SIZE / 2; k++)
+		{
+			acce_raw_value_offset[k] = acce_raw_value_sum[k] / ave_count;
+			gyro_raw_value_offset[k] = gyro_raw_value_sum[k] / ave_count;
+		}
+
+		calc_offset = false;
+	}
+
+	for (n = 0; n < BUFF_SIZE / 2; n++)
+	{
+		acce_raw_value[n] -= acce_raw_value_offset[n];
+		gyro_raw_value[n] -= gyro_raw_value_offset[n];
+	}
+	return ESP_OK;
+}
+
 // Calculate roll and pitch angles of the MPU after applying the complementary filter
 esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
 {
@@ -208,6 +247,9 @@ esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
         ESP_LOGE(TAG_MPU, "%s", "Failed to read MPU!");
         err = ESP_FAIL;
     }
+
+	if (calibrate(acce_raw_value, gyro_raw_value) != ESP_OK)
+		ESP_LOGE(TAG_MPU, "%s", "Failed to read MPU for calibration");
 
     complementary_filter(acce_raw_value, gyro_raw_value, complementary_angle, mpu_offset);
     memcpy(euler_angle, complementary_angle, 2 * sizeof(float));
