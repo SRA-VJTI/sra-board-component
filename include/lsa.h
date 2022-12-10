@@ -63,4 +63,6 @@ esp_err_t enable_line_sensor();
 **/
 line_sensor_array read_line_sensor();
 
+void calibrate(int *black_margin, int *white_margin);
+
 #endif
