@@ -56,9 +56,7 @@ extern "C" {
 #endif
 #endif
 
-#ifdef CONFIG_ENABLE_OLED
-extern bool i2c_initialised;
-#endif
+extern SemaphoreHandle_t mutex;
 
 /**
  * I2C device descriptor
@@ -165,9 +163,6 @@ esp_err_t i2c_dev_read(const i2c_dev_t *dev, const void *out_data,
  */
 esp_err_t i2c_dev_write(const i2c_dev_t *dev, const void *out_reg,
         size_t out_reg_size, const void *out_data, size_t out_size);
-
-esp_err_t i2c_dev_write_oled(const i2c_dev_t *dev, const void *out_reg,
-        size_t out_reg_size, const uint8_t *out_data, size_t out_size);
 
 /**
  * @brief Read from register with an 8-bit address

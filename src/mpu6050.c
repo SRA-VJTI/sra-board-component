@@ -40,11 +40,20 @@ esp_err_t i2c_master_init(void)
     mpu6050_dev_t.cfg.scl_io_num = I2C_MASTER_SCL_IO;
     mpu6050_dev_t.cfg.master.clk_speed = I2C_MASTER_FREQ_HZ;
 
-#ifdef CONFIG_ENABLE_OLED
-    i2c_initialised = true;
-#endif
-
-    return i2c_dev_create_mutex(&mpu6050_dev_t);
+    if (mutex == NULL)
+    {
+        esp_err_t err = i2c_dev_create_mutex(&mpu6050_dev_t);
+        if (err == ESP_OK)
+        {
+            mutex = mpu6050_dev_t.mutex;
+        }
+        return err;
+    }
+    else
+    {
+        mpu6050_dev_t.mutex = mutex;
+        return ESP_OK;
+    }
 }
 
 // Initialise and power ON, MPU6050

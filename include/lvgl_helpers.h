@@ -40,7 +40,6 @@ extern "C" {
  *      DEFINES
  *********************/
 
-// SLA (0x3C) + WRITE_MODE (0x00) =  0x78 (0b01111000)
 #define OLED_I2C_ADDRESS                    0x3C
 #define OLED_WIDTH                          128
 #define OLED_HEIGHT                         64
@@ -101,31 +100,57 @@ extern "C" {
 
 #define DISP_BUF_SIZE   1024
 
-// #define DISP_BUF_SIZE  (LV_HOR_RES_MAX * LV_VER_RES_MAX)
-// #if defined (CONFIG_CUSTOM_DISPLAY_BUFFER_SIZE)
-// #endif
-// #if defined (CONFIG_LV_THEME_MONO)
-//     #define DISP_BUF_SIZE  (LV_HOR_RES_MAX * (LV_VER_RES_MAX / 8))
-// #else
-// #endif
+/**
+ * @brief Initialize LVGL I2C Master
+ * @param sda_pin gpio number for I2C master data
+ * @param scl_pin gpio number for I2C master clock
+ * @param speed_hz I2C master clock frequency
+ * @return esp_err_t returns ESP_OK if I2C is initialized successfully, else the appropriate error code 
+ */
+bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed_hz);
 
-/**********************
- *      TYPEDEFS
- **********************/
-
-/**********************
- * GLOBAL PROTOTYPES
- **********************/
-
-/* Initialize I2C master  */
-bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed);
-/* Initialize ssd1306 device  */
+/**
+ * @brief Initialize ssd1306 device
+ *
+ * @return esp_err_t returns ESP_OK if I2C is initialized successfully, else the appropriate error code 
+ */
 void ssd1306_init(void);
 
-void ssd1306_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color_map);
-void ssd1306_rounder(lv_disp_drv_t * disp_drv, lv_area_t *area);
-void ssd1306_set_px_cb(lv_disp_drv_t * disp_drv, uint8_t * buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa);
+/**
+ * @brief Flush the buffer on the screen
+ * @param drv pointer to the display driver structure
+ * @param area represents an area on the screen
+ * @param color_map represents the color map
+ */
+void ssd1306_flush(lv_disp_drv_t *drv, const lv_area_t *area, lv_color_t *color_map);
+
+/**
+ * @brief Round the area that needs to be updated
+ * @param drv pointer to the display driver structure
+ * @param area represents an area on the screen
+ */
+void ssd1306_rounder(lv_disp_drv_t *disp_drv, lv_area_t *area);
+
+/**
+ * @brief Draw a pixel into the buffer
+ * @param disp_drv pointer to the display driver structure
+ * @param buf pointer to the memory range where you want to update the data
+ * @param buf_w width of the range where you want to update the data
+ * @param x x co-ordinate of pixel to update
+ * @param y y co-ordinate of pixel to update
+ * @param color monochrome color setting, either full or clear
+ * @param opa opacity value
+ */
+void ssd1306_set_px_cb(lv_disp_drv_t *disp_drv, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa);
+
+/**
+ * @brief Turn off the display
+ */
 void ssd1306_sleep_in(void);
+
+/**
+ * @brief Turn on the display
+ */
 void ssd1306_sleep_out(void);
 
 /**********************
