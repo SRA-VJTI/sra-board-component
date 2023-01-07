@@ -174,7 +174,6 @@ bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed_hz)
         return ESP_OK;
     }
 
-    return ESP_OK; // != err;
 }
 
 /**********************
@@ -197,11 +196,11 @@ static uint8_t send_pixels(lv_disp_drv_t *disp_drv, void *color_buffer, size_t b
 {
     (void)disp_drv;
     I2C_DEV_TAKE_MUTEX(&ssd1306_dev_t);
-    uint8_t data = 0x40;
+    uint8_t data = OLED_CONTROL_BYTE_DATA_STREAM;
     I2C_DEV_CHECK(&ssd1306_dev_t, i2c_dev_write(&ssd1306_dev_t, NULL, 0, &data, 1));
 
     uint8_t buffer[buffer_len + 1];
-    buffer[0] = 0x40;
+    buffer[0] = OLED_CONTROL_BYTE_DATA_STREAM;
     memcpy(&buffer[1], color_buffer, buffer_len);
 
     I2C_DEV_CHECK(&ssd1306_dev_t, i2c_dev_write(&ssd1306_dev_t, NULL, 0, &buffer, buffer_len + 1));

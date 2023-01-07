@@ -308,30 +308,3 @@ esp_err_t i2c_dev_write_reg(const i2c_dev_t *dev, uint8_t reg,
 {
     return i2c_dev_write(dev, &reg, 1, out_data, out_size);
 }
-
-esp_err_t i2c_dev_write_oled(const i2c_dev_t *dev, const void *out_reg, size_t out_reg_size, const uint8_t *out_data, size_t out_size)
-{
-    if (!dev || !out_data || !out_size) return ESP_ERR_INVALID_ARG;
-
-    SEMAPHORE_TAKE(dev->port);
-
-    esp_err_t res = i2c_setup_port(dev);
-    if (res == ESP_OK)
-    {
-        i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-        i2c_master_start(cmd);
-        i2c_master_write_byte(cmd, dev->addr << 1, true);
-
-        uint8_t data = 0x40;
-        i2c_master_write_byte(cmd, data, true);
-        i2c_master_write(cmd, (void *)out_data, out_size, true);
-        i2c_master_stop(cmd);
-        res = i2c_master_cmd_begin(dev->port, cmd, pdMS_TO_TICKS(CONFIG_I2CDEV_TIMEOUT));
-        if (res != ESP_OK)
-            ESP_LOGI(TAG, "Could not write to device [0x%02x at %d]: %d (%s)", dev->addr, dev->port, res, esp_err_to_name(res));
-        i2c_cmd_link_delete(cmd);
-    }
-
-    SEMAPHORE_GIVE(dev->port);
-    return res;
-}
