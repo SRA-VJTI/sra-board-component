@@ -63,12 +63,12 @@ void calibrate(int *black_margin, int *white_margin)
     int Min = 4095;
  
     line_sensor_array current_line_sensor_readings;
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
     {
         current_line_sensor_readings.adc_reading[i] = 0;
     }
  
-    for (int j = 0; j < 4; j++)
+    for (int j = 0; j < 5; j++)
     {
         current_line_sensor_readings.adc_reading[j] = read_adc(line_sensor_pins[j]);
         if (current_line_sensor_readings.adc_reading[j] > Max)
