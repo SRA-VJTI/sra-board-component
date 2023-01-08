@@ -34,6 +34,7 @@
 #include "servo.h"
 #include "pin_defs.h"
 #include "utils.h"
+#include "stepper.h"
 
 #ifdef CONFIG_ENABLE_OLED
 #include "oled.h"
