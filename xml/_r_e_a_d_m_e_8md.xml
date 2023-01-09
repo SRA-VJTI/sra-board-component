@@ -81,7 +81,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">Toolchain<sp/>&amp;<sp/>Supported<sp/>SDK</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">*<sp/>[ESP-IDF<sp/>v4.2-release](https://github.com/espressif/esp-idf/tree/release/v4.2)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[ESP-IDF<sp/>v4.4-release](https://github.com/espressif/esp-idf/tree/release/v4.4)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Docs</highlight></codeline>
 <codeline></codeline>
@@ -91,7 +91,7 @@
 <codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">*<sp/>Hardware<sp/>Required<sp/>:<sp/>[SRA<sp/>Development<sp/>Board](https://github.com/SRA-VJTI/sra-board-hardware-design)</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>Recommended<sp/>ESP-IDF<sp/>[v4.2-release](https://github.com/espressif/esp-idf/tree/release/v4.2)<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Recommended<sp/>ESP-IDF<sp/>[v4.4-release](https://github.com/espressif/esp-idf/tree/release/v4.4)<sp/>.</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">_Refer<sp/>[espressif-docs](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/)<sp/>for<sp/>intallation<sp/>guide_</highlight></codeline>
 <codeline></codeline>

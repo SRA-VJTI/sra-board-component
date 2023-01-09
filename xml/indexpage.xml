@@ -59,7 +59,7 @@
 </para>
 <para>Toolchain &amp; Supported SDK</para>
 <para><itemizedlist>
-<listitem><para><ulink url="https://github.com/espressif/esp-idf/tree/release/v4.2">ESP-IDF v4.2-release</ulink></para>
+<listitem><para><ulink url="https://github.com/espressif/esp-idf/tree/release/v4.4">ESP-IDF v4.4-release</ulink></para>
 </listitem></itemizedlist>
 </para>
 <para>Docs</para>
@@ -71,7 +71,7 @@
 </para>
 <para><itemizedlist>
 <listitem><para>Hardware Required : <ulink url="https://github.com/SRA-VJTI/sra-board-hardware-design">SRA Development Board</ulink></para>
-</listitem><listitem><para>Recommended ESP-IDF <ulink url="https://github.com/espressif/esp-idf/tree/release/v4.2">v4.2-release</ulink> .</para>
+</listitem><listitem><para>Recommended ESP-IDF <ulink url="https://github.com/espressif/esp-idf/tree/release/v4.4">v4.4-release</ulink> .</para>
 </listitem></itemizedlist>
 </para>
 <para><emphasis>Refer <ulink url="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/">espressif-docs</ulink> for intallation guide</emphasis></para>
