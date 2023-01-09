@@ -53,4 +53,4 @@ Example for using two motor drivers present on SRA Board in both parallel and no
 
 - Stepper motors are used in application involving powerful and precise rotary movements
 
-- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/run_stepper)
+- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/stepper_motor)

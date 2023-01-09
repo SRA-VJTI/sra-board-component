@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := run_stepper
+PROJECT_NAME := stepper_motor
 
 include $(IDF_PATH)/make/project.mk
 

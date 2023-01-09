@@ -130,7 +130,7 @@ _For more examples, please refer to the [Documentation](https://sravjti.tech/sra
 |  [Servos](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/servos) 	|  Servos are used in the locomotion of bots like [Wall-E](https://github.com/SRA-VJTI/Wall-E_v2.1) . This example is for using the servo port on SRA Board to run servos 	|
 | [Switches](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches) | Manual Switches provide the traditional comfort to toggle the input variables. This example is for using four user switches present on SRA Board |
 | [OLED](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/oled) | Example for initialising the OLED and diplaying the "Hello World" on the screen |
-| [Run Stepper](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/run_stepper) | Example for testing the stepper motor driver A4988 along with a bipolar stepper motor using ESP32 |
+| [Stepper Motor](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/stepper_motor) | Example for testing the stepper motor driver A4988 along with a bipolar stepper motor using ESP32 |
 
 <!-- ROADMAP -->
 ## Roadmap
