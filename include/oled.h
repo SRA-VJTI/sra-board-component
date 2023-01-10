@@ -40,6 +40,10 @@
 #include "lvgl_helpers.h"
 #endif
 
+#define SRA_LOGO 1
+#define WALLE_LOGO 2
+#define MARIO_LOGO 3
+
 /**
  * @brief enables and configures OLED display
 
@@ -50,31 +54,13 @@
 esp_err_t init_oled();
 
 /**
- * @brief displays SRA logo on OLED screen
+ * @brief displays SRA/Wall-E/Mario logo on OLED screen
 
- * @param None
+ * @param logo_id macro 
 
- * @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
+ * @return esp_err_t i.e it shows if logo is displayed successfully or not
  **/
-esp_err_t display_sra_logo();
-
-/**
- * @brief displays Wall-E logo on OLED screen
-
- * @param None
-
- * @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
- **/
-esp_err_t display_walle_logo();
-
-/**
- * @brief displays MARIO logo on OLED screen
-
- * @param None
-
- * @return esp_err_t i.e it shows if MARIO logo is displayed successfully or not
- **/
-esp_err_t display_mario_logo();
+esp_err_t display_logo(int logo_id);
 
 /**
  * @brief displays LSA bar on OLED screen

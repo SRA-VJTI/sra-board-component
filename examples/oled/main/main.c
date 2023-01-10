@@ -38,7 +38,7 @@ void app_main()
 
     // Printing the string on screen    
     lv_obj_t *text_msg = lv_label_create(lv_scr_act());
-    lv_label_set_text(text_msg, "Hello World");
+    lv_label_set_text(text_msg, "Hello from SRA");
     lv_obj_align(text_msg, LV_ALIGN_CENTER, 0, 0);
 
     // Refresh Display

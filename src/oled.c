@@ -269,11 +269,11 @@ esp_err_t init_oled()
   lv_disp_drv_register(&disp_drv);
 
   // Display SRA logo
-  display_sra_logo();
+  display_logo(SRA_LOGO);
   vTaskDelay(100);
   
   // Display Wall-E logo
-  display_walle_logo();
+  display_logo(WALLE_LOGO);
 
   // Clear the screen
   lv_obj_clean(lv_scr_act()); 
@@ -282,69 +282,53 @@ esp_err_t init_oled()
   return ESP_OK;
 }
 
-esp_err_t display_sra_logo()
+esp_err_t display_logo(int logo_id)
 {
   // Clear the screen
   lv_obj_clean(lv_scr_act()); 
 
-  // Draw SRA logo on the screen
   lv_obj_t *logo = lv_img_create(lv_scr_act());
-  lv_img_set_src(logo, &sra_logo);
-  lv_obj_set_size(logo, 115, 64);
-  lv_obj_align(logo, LV_ALIGN_CENTER, 0, 0);
-  ESP_LOGI(TAG_OLED, "Displayed SRA logo on OLED Screen");
-
-  // Refresh Display
-  lv_refr_now(NULL);
-
-  return ESP_OK;
-}
-
-esp_err_t display_walle_logo()
-{ 
-  // Clear the screen
-  lv_obj_clean(lv_scr_act());
-
-  // Draw Wall-E logo on the screen
-  lv_obj_t *walle_logo = lv_img_create(lv_scr_act());
-  lv_img_set_src(walle_logo, &walle);
-  lv_obj_set_size(walle_logo, 108, 48);
-  lv_obj_align(walle_logo, LV_ALIGN_OUT_TOP_MID, 0, 0);
-
-  // print "Wall-e" text on the screen
   lv_obj_t *text = lv_label_create(lv_scr_act());
-  lv_label_set_text(text, "Wall-E 2023");
-  lv_obj_set_size(text, lv_obj_get_self_width(text), 16);
-  lv_obj_set_pos(text, 16, 48);
-  ESP_LOGI(TAG_OLED, "Displayed Wall-E logo on OLED Screen");
+  switch(logo_id)
+  {
+    case SRA_LOGO:
+      // Draw SRA logo on the screen
+      lv_img_set_src(logo, &sra_logo);
+      lv_obj_set_size(logo, 115, 64);
+      lv_obj_align(logo, LV_ALIGN_CENTER, 0, 0);
+      ESP_LOGI(TAG_OLED, "Displayed SRA logo on OLED Screen");
+      lv_obj_del(text);
+      break;
 
+    case WALLE_LOGO:
+      // Draw Wall-E logo on the screen
+      lv_img_set_src(logo, &walle);
+      lv_obj_set_size(logo, 108, 48);
+      lv_obj_align(logo, LV_ALIGN_OUT_TOP_MID, 0, 0);
+
+      // print "Wall-e" text on the screen
+      lv_label_set_text(text, CONFIG_WALL_E_LOGO_TEXT);
+      lv_obj_set_size(text, lv_obj_get_self_width(text), 16);
+      lv_obj_set_pos(text, 16, 48);
+      ESP_LOGI(TAG_OLED, "Displayed Wall-E logo on OLED Screen");
+      break;
+
+    case MARIO_LOGO:
+      // Draw Mario logo on the screen
+      lv_img_set_src(logo, &mario);
+      lv_obj_set_size(logo, 108, 48);
+      lv_obj_align(logo, LV_ALIGN_OUT_TOP_MID, 0, 0);
+
+      // print "Mario" text on the screen
+      lv_label_set_text(text, CONFIG_MARIO_LOGO_TEXT);
+      lv_obj_set_size(text, lv_obj_get_self_width(text), 16);
+      lv_obj_set_pos(text, 16, 48);
+      ESP_LOGI(TAG_OLED, "Displayed MARIO logo on OLED Screen");
+      break;
+  }
   // Refresh Display
   lv_refr_now(NULL);
 
-  return ESP_OK;
-}
-
-esp_err_t display_mario_logo()
-{
-  // Clear the screen
-  lv_obj_clean(lv_scr_act());
-
-  // Draw Mario logo on the screen
-  lv_obj_t *mario_logo = lv_img_create(lv_scr_act());
-  lv_img_set_src(mario_logo, &mario);
-  lv_obj_set_size(mario_logo, 108, 48);
-  lv_obj_align(mario_logo, LV_ALIGN_OUT_TOP_MID, 0, 0);
-
-  // print "Mario" text on the screen
-  lv_obj_t *text = lv_label_create(lv_scr_act());
-  lv_label_set_text(text, "Mario 2023");
-  lv_obj_set_size(text, lv_obj_get_self_width(text), 16);
-  lv_obj_set_pos(text, 16, 48);
-  ESP_LOGI(TAG_OLED, "Displayed MARIO logo on OLED Screen");
-
-  // Refresh Display
-  lv_refr_now(NULL);
-  
   return ESP_OK;
 }
 
@@ -391,14 +375,14 @@ esp_err_t display_mpu(float pitch, float roll)
   // Printing pitch on oled
   lv_obj_t *pitch_reading = lv_label_create(lv_scr_act());
   char pitch_str[20];
-  sprintf(pitch_str, "Pitch : %0.2f", pitch);
+  snprintf(pitch_str, sizeof(pitch_str), "Pitch : %0.2f", pitch);
   lv_label_set_text(pitch_reading, pitch_str);
   lv_obj_set_pos(pitch_reading, 2, 15);
 
   // Printing roll on oled
   lv_obj_t *roll_reading = lv_label_create(lv_scr_act());
   char roll_str[20];
-  sprintf(roll_str, "Roll : %0.2f", roll);
+  snprintf(roll_str, sizeof(roll_str), "Roll : %0.2f", roll);
   lv_label_set_text(roll_reading, roll_str);
   lv_obj_set_pos(roll_reading, 2, 30);
 
@@ -424,15 +408,15 @@ esp_err_t display_pid_values(float kp, float ki, float kd)
   }
 
   // Printing kp value on oled
-  sprintf(kp_str, "Kp: %0.2f", kp);
+  snprintf(kp_str, sizeof(kp_str), "Kp: %0.2f", kp);
   lv_label_set_text(text[0], kp_str);
 
   // Printing ki value on oled
-  sprintf(ki_str, "Ki: %0.2f", ki);
+  snprintf(ki_str, sizeof(ki_str), "Ki: %0.2f", ki);
   lv_label_set_text(text[1], ki_str);
 
   // Printing kd value on oled
-  sprintf(kd_str, "Kd: %0.2f", kd);
+  snprintf(kd_str, sizeof(kd_str), "Kd: %0.2f", kd);
   lv_label_set_text(text[2], kd_str);
 
   for (int i = 0; i < 3; ++i)
@@ -462,19 +446,19 @@ esp_err_t display_servo_values(int s1, int s2, int s3, int s4)
     text[i] = lv_label_create(scr);
   }
   // Printing Base angle value on oled
-  sprintf(sA_str, "Base     : %d", s1);
+  snprintf(sA_str, sizeof(sA_str), "Base     : %d", s1);
   lv_label_set_text(text[0], sA_str);
 
   // Printing Shoulder angle value on oled
-  sprintf(sB_str, "Shoulder : %d", s2);
+  snprintf(sB_str, sizeof(sB_str), "Shoulder : %d", s2);
   lv_label_set_text(text[1], sB_str);
 
   // Printing Elbow angle C value on oled
-  sprintf(sC_str, "Elbow    : %d", s3);
+  snprintf(sC_str, sizeof(sC_str), "Elbow    : %d", s3);
   lv_label_set_text(text[2], sC_str);
 
   // Printing Claw angle value on oled
-  sprintf(sD_str, "Claw     : %d", s4);
+  snprintf(sD_str, sizeof(sD_str), "Claw     : %d", s4);
   lv_label_set_text(text[3], sD_str);
 
   for (int i = 0; i < 4; ++i)
