@@ -1,7 +1,7 @@
 <map id="include/i2cdev.h" name="include/i2cdev.h">
-<area shape="rect" id="node1" title=" " alt="" coords="161,5,275,32"/>
-<area shape="rect" id="node2" href="$u8g2__esp32__hal_8h.html" title=" " alt="" coords="11,80,148,121"/>
-<area shape="rect" id="node4" href="$i2cdev_8c.html" title=" " alt="" coords="172,87,264,114"/>
-<area shape="rect" id="node5" href="$mpu6050_8c.html" title=" " alt="" coords="289,87,395,114"/>
-<area shape="rect" id="node3" href="$u8g2__esp32__hal_8c.html" title=" " alt="" coords="5,169,153,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="165,5,280,32"/>
+<area shape="rect" id="node2" href="$lvgl__helpers_8h.html" title=" " alt="" coords="5,80,152,107"/>
+<area shape="rect" id="node4" href="$i2cdev_8c.html" title=" " alt="" coords="177,80,269,107"/>
+<area shape="rect" id="node5" href="$mpu6050_8c.html" title=" " alt="" coords="293,80,400,107"/>
+<area shape="rect" id="node3" href="$lvgl__helpers_8c.html" title=" " alt="" coords="17,155,140,181"/>
 </map>

@@ -7,6 +7,8 @@
     <innerfile refid="esp__idf__lib__helpers_8h">esp_idf_lib_helpers.h</innerfile>
     <innerfile refid="i2cdev_8h">i2cdev.h</innerfile>
     <innerfile refid="lsa_8h">lsa.h</innerfile>
+    <innerfile refid="lv__conf_8h">lv_conf.h</innerfile>
+    <innerfile refid="lvgl__helpers_8h">lvgl_helpers.h</innerfile>
     <innerfile refid="motor__driver_8h">motor_driver.h</innerfile>
     <innerfile refid="mpu6050_8h">mpu6050.h</innerfile>
     <innerfile refid="oled_8h">oled.h</innerfile>
@@ -14,7 +16,6 @@
     <innerfile refid="servo_8h">servo.h</innerfile>
     <innerfile refid="sra__board_8h">sra_board.h</innerfile>
     <innerfile refid="switches_8h">switches.h</innerfile>
-    <innerfile refid="u8g2__esp32__hal_8h">u8g2_esp32_hal.h</innerfile>
     <innerfile refid="utils_8h">utils.h</innerfile>
     <briefdescription>
     </briefdescription>

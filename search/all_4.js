@@ -9,6 +9,5 @@ var searchData=
   ['enable_5fmpu6050_6',['enable_mpu6050',['../mpu6050_8h.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c'],['../mpu6050_8c.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c']]],
   ['enable_5fservo_7',['enable_servo',['../servo_8h.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c'],['../servo_8c.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c']]],
   ['enable_5fswitches_8',['enable_switches',['../switches_8h.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c'],['../switches_8c.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c']]],
-  ['esp_5ferror_5fcheck_9',['ESP_ERROR_CHECK',['../u8g2__esp32__hal_8c.html#a7d1b7992aa421f10dc473db899dcff8b',1,'u8g2_esp32_hal.c']]],
-  ['esp_5fidf_5flib_5fhelpers_2eh_10',['esp_idf_lib_helpers.h',['../esp__idf__lib__helpers_8h.html',1,'']]]
+  ['esp_5fidf_5flib_5fhelpers_2eh_9',['esp_idf_lib_helpers.h',['../esp__idf__lib__helpers_8h.html',1,'']]]
 ];

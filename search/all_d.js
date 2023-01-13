@@ -8,9 +8,8 @@ var searchData=
   ['read_5fmotor_5fdriver_5fmode_5fa_5',['read_motor_driver_mode_a',['../motor__driver_8h.html#ae7ed1b0e385fe871d79ac02fc5177768',1,'read_motor_driver_mode_a():&#160;motor_driver.c'],['../motor__driver_8c.html#ae7ed1b0e385fe871d79ac02fc5177768',1,'read_motor_driver_mode_a():&#160;motor_driver.c']]],
   ['read_5fmotor_5fdriver_5fmode_5fb_6',['read_motor_driver_mode_b',['../motor__driver_8h.html#a61b75cb1eb76f0a02144746799c6b3e1',1,'read_motor_driver_mode_b():&#160;motor_driver.c'],['../motor__driver_8c.html#a61b75cb1eb76f0a02144746799c6b3e1',1,'read_motor_driver_mode_b():&#160;motor_driver.c']]],
   ['read_5fmpu6050_7',['read_mpu6050',['../mpu6050_8h.html#a2103bceaa1a91be4c8bdbe49cbc22c34',1,'read_mpu6050(float *euler_angle, float *mpu_offset):&#160;mpu6050.c'],['../mpu6050_8c.html#a2103bceaa1a91be4c8bdbe49cbc22c34',1,'read_mpu6050(float *euler_angle, float *mpu_offset):&#160;mpu6050.c']]],
-  ['read_5fmpu6050_5fraw_8',['read_mpu6050_raw',['../mpu6050_8c.html#a7d1dcecaa06dcaa7586e8802546ab65c',1,'read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value):&#160;mpu6050.c'],['../mpu6050_8h.html#a7d1dcecaa06dcaa7586e8802546ab65c',1,'read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value):&#160;mpu6050.c']]],
+  ['read_5fmpu6050_5fraw_8',['read_mpu6050_raw',['../mpu6050_8h.html#a7d1dcecaa06dcaa7586e8802546ab65c',1,'read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value):&#160;mpu6050.c'],['../mpu6050_8c.html#a7d1dcecaa06dcaa7586e8802546ab65c',1,'read_mpu6050_raw(int16_t *acce_raw_value, int16_t *gyro_raw_value):&#160;mpu6050.c']]],
   ['read_5fservo_9',['read_servo',['../servo_8h.html#a1089a49dd3762a303cd3d9572249d48d',1,'read_servo(servo_config *config):&#160;servo.c'],['../servo_8c.html#a1089a49dd3762a303cd3d9572249d48d',1,'read_servo(servo_config *config):&#160;servo.c']]],
   ['read_5fswitch_10',['read_switch',['../switches_8h.html#aa394f2692a1f424f79d5c3dcfa0d7bc6',1,'read_switch(int switch_id):&#160;switches.c'],['../switches_8c.html#aa394f2692a1f424f79d5c3dcfa0d7bc6',1,'read_switch(int switch_id):&#160;switches.c']]],
-  ['readme_2emd_11',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['reset_12',['reset',['../structu8g2__esp32__hal__t.html#aac01d1a76cc59cc79789efa85d2b8a9e',1,'u8g2_esp32_hal_t']]]
+  ['readme_2emd_11',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
 ];

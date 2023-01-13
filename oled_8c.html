@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">oled.c File Reference</div></div>
@@ -99,45 +100,104 @@ Include dependency graph for oled.c:</div>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad60424588c0fc1ccd29f85bbc6d56615"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a></td></tr>
+<tr class="separator:ad60424588c0fc1ccd29f85bbc6d56615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7e3ddc2d27dcdf2b5537aafea494d803"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a7e3ddc2d27dcdf2b5537aafea494d803">init_oled</a> (u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:a7e3ddc2d27dcdf2b5537aafea494d803"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables and configures OLED display  <a href="oled_8c.html#a7e3ddc2d27dcdf2b5537aafea494d803">More...</a><br /></td></tr>
-<tr class="separator:a7e3ddc2d27dcdf2b5537aafea494d803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd9e14359b2890f6a79d6f568916ce3"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a3fd9e14359b2890f6a79d6f568916ce3">display_sra_logo</a> (u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:a3fd9e14359b2890f6a79d6f568916ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays SRA logo on OLED screen  <a href="oled_8c.html#a3fd9e14359b2890f6a79d6f568916ce3">More...</a><br /></td></tr>
-<tr class="separator:a3fd9e14359b2890f6a79d6f568916ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de1b63bbf5b8d095394a084ff48504b"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a8de1b63bbf5b8d095394a084ff48504b">display_walle_logo</a> (u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:a8de1b63bbf5b8d095394a084ff48504b"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays Wall-E Bitmap logo on OLED screen  <a href="oled_8c.html#a8de1b63bbf5b8d095394a084ff48504b">More...</a><br /></td></tr>
-<tr class="separator:a8de1b63bbf5b8d095394a084ff48504b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec24e1dbbb1cf99cfec4d177ee7ffd80"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#aec24e1dbbb1cf99cfec4d177ee7ffd80">display_mario_logo</a> (u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:aec24e1dbbb1cf99cfec4d177ee7ffd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays MARIO Bitmap logo on OLED screen  <a href="oled_8c.html#aec24e1dbbb1cf99cfec4d177ee7ffd80">More...</a><br /></td></tr>
-<tr class="separator:aec24e1dbbb1cf99cfec4d177ee7ffd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1bd87b3c18b14b83abaa7a13e87b6f0"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#af1bd87b3c18b14b83abaa7a13e87b6f0">display_lsa</a> (<a class="el" href="unionline__sensor__array.html">line_sensor_array</a> readings, u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:af1bd87b3c18b14b83abaa7a13e87b6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays LSA bar on OLED screen  <a href="oled_8c.html#af1bd87b3c18b14b83abaa7a13e87b6f0">More...</a><br /></td></tr>
-<tr class="separator:af1bd87b3c18b14b83abaa7a13e87b6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff3f1819dfe0d92468bb32a80335e0e"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a5ff3f1819dfe0d92468bb32a80335e0e">display_mpu</a> (float pitch, float roll, u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:a5ff3f1819dfe0d92468bb32a80335e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays pitch and roll readings on OLED screen  <a href="oled_8c.html#a5ff3f1819dfe0d92468bb32a80335e0e">More...</a><br /></td></tr>
-<tr class="separator:a5ff3f1819dfe0d92468bb32a80335e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb16632d6f605ccb07d1f21347e86377"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#afb16632d6f605ccb07d1f21347e86377">display_pid_values</a> (float kp, float ki, float kd, u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:afb16632d6f605ccb07d1f21347e86377"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays kp, ki and kd reading on the OLED screen  <a href="oled_8c.html#afb16632d6f605ccb07d1f21347e86377">More...</a><br /></td></tr>
-<tr class="separator:afb16632d6f605ccb07d1f21347e86377"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9cb87a5d0d1713f640be36d426e0e85"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ab9cb87a5d0d1713f640be36d426e0e85">display_servo_values</a> (int s1, int s2, int s3, int s4, u8g2_t *u8g2)</td></tr>
-<tr class="memdesc:ab9cb87a5d0d1713f640be36d426e0e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays Servo angles on the OLED screen  <a href="oled_8c.html#ab9cb87a5d0d1713f640be36d426e0e85">More...</a><br /></td></tr>
-<tr class="separator:ab9cb87a5d0d1713f640be36d426e0e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a836313d2aee4a4efe19c0a8b8e014065"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a836313d2aee4a4efe19c0a8b8e014065">LV_IMG_DECLARE</a> (<a class="el" href="oled_8c.html#af2b0070c0ea9adaf693fb4a21463ccce">sra_logo</a>)</td></tr>
+<tr class="separator:a836313d2aee4a4efe19c0a8b8e014065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b01a1b3fe056d7a93fb3182e6f98b49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a9b01a1b3fe056d7a93fb3182e6f98b49">LV_IMG_DECLARE</a> (<a class="el" href="oled_8c.html#aea1b9b71ec9ad4f81ec19b23bdc11e71">walle</a>)</td></tr>
+<tr class="separator:a9b01a1b3fe056d7a93fb3182e6f98b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f30fd25e2d55a3ee7ed8bec82148b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a23f30fd25e2d55a3ee7ed8bec82148b5">LV_IMG_DECLARE</a> (<a class="el" href="oled_8c.html#a854e3003f905cc6bf110e3b838b02b53">mario</a>)</td></tr>
+<tr class="separator:a23f30fd25e2d55a3ee7ed8bec82148b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f5821ae55ffbab7a4947ccef5e18ad"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ac8f5821ae55ffbab7a4947ccef5e18ad">init_oled</a> ()</td></tr>
+<tr class="memdesc:ac8f5821ae55ffbab7a4947ccef5e18ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">enables and configures OLED display  <a href="oled_8c.html#ac8f5821ae55ffbab7a4947ccef5e18ad">More...</a><br /></td></tr>
+<tr class="separator:ac8f5821ae55ffbab7a4947ccef5e18ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895f3fc97245c493b7414566815f3b48"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a895f3fc97245c493b7414566815f3b48">display_logo</a> (int logo_id)</td></tr>
+<tr class="memdesc:a895f3fc97245c493b7414566815f3b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays SRA/Wall-E/Mario logo on OLED screen  <a href="oled_8c.html#a895f3fc97245c493b7414566815f3b48">More...</a><br /></td></tr>
+<tr class="separator:a895f3fc97245c493b7414566815f3b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98433da15e8207817e3ffd4e42b626a0"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a98433da15e8207817e3ffd4e42b626a0">display_lsa</a> (<a class="el" href="unionline__sensor__array.html">line_sensor_array</a> readings)</td></tr>
+<tr class="memdesc:a98433da15e8207817e3ffd4e42b626a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays LSA bar on OLED screen  <a href="oled_8c.html#a98433da15e8207817e3ffd4e42b626a0">More...</a><br /></td></tr>
+<tr class="separator:a98433da15e8207817e3ffd4e42b626a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1258c05bcda38123f6b825ae1abfcd54"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a1258c05bcda38123f6b825ae1abfcd54">display_mpu</a> (float pitch, float roll)</td></tr>
+<tr class="memdesc:a1258c05bcda38123f6b825ae1abfcd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays pitch and roll readings on OLED screen  <a href="oled_8c.html#a1258c05bcda38123f6b825ae1abfcd54">More...</a><br /></td></tr>
+<tr class="separator:a1258c05bcda38123f6b825ae1abfcd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac588665be0f2f8fb00787ef97a32e03d"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ac588665be0f2f8fb00787ef97a32e03d">display_pid_values</a> (float kp, float ki, float kd)</td></tr>
+<tr class="memdesc:ac588665be0f2f8fb00787ef97a32e03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays kp, ki and kd reading on the OLED screen  <a href="oled_8c.html#ac588665be0f2f8fb00787ef97a32e03d">More...</a><br /></td></tr>
+<tr class="separator:ac588665be0f2f8fb00787ef97a32e03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479e088b824336912654e8c146885e1e"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a479e088b824336912654e8c146885e1e">display_servo_values</a> (int s1, int s2, int s3, int s4)</td></tr>
+<tr class="memdesc:a479e088b824336912654e8c146885e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays Servo angles on the OLED screen  <a href="oled_8c.html#a479e088b824336912654e8c146885e1e">More...</a><br /></td></tr>
+<tr class="separator:a479e088b824336912654e8c146885e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a82909a23095b9c349d3f4acc4d3a631b"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a82909a23095b9c349d3f4acc4d3a631b">sra_logo</a> []</td></tr>
-<tr class="separator:a82909a23095b9c349d3f4acc4d3a631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097fd02aca20eddc85dbffce1528950b"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a097fd02aca20eddc85dbffce1528950b">walle_logo</a> []</td></tr>
-<tr class="separator:a097fd02aca20eddc85dbffce1528950b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f0c6003cce04e6b9960b0037ac79c20"><td class="memItemLeft" align="right" valign="top">const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a4f0c6003cce04e6b9960b0037ac79c20">mario_logo</a> []</td></tr>
-<tr class="separator:a4f0c6003cce04e6b9960b0037ac79c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae652719e9e6fd5015a2801e5967de999"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="lv__conf_8h.html#a6b77dcb22fcdc624952dc307331e5db6">LV_ATTRIBUTE_MEM_ALIGN</a> <a class="el" href="lv__conf_8h.html#a9aa1f88eb217d43ff6f619e58b866d52">LV_ATTRIBUTE_LARGE_CONST</a> <a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a> []</td></tr>
+<tr class="separator:ae652719e9e6fd5015a2801e5967de999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b0070c0ea9adaf693fb4a21463ccce"><td class="memItemLeft" align="right" valign="top">const lv_img_dsc_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#af2b0070c0ea9adaf693fb4a21463ccce">sra_logo</a></td></tr>
+<tr class="separator:af2b0070c0ea9adaf693fb4a21463ccce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba1dc8ea39201f95759d4186054cc65"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="lv__conf_8h.html#a6b77dcb22fcdc624952dc307331e5db6">LV_ATTRIBUTE_MEM_ALIGN</a> <a class="el" href="lv__conf_8h.html#a9aa1f88eb217d43ff6f619e58b866d52">LV_ATTRIBUTE_LARGE_CONST</a> <a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a> []</td></tr>
+<tr class="separator:a6ba1dc8ea39201f95759d4186054cc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1b9b71ec9ad4f81ec19b23bdc11e71"><td class="memItemLeft" align="right" valign="top">const lv_img_dsc_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#aea1b9b71ec9ad4f81ec19b23bdc11e71">walle</a></td></tr>
+<tr class="separator:aea1b9b71ec9ad4f81ec19b23bdc11e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ab6ff9227127295ca863e2091c7f51"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="lv__conf_8h.html#a6b77dcb22fcdc624952dc307331e5db6">LV_ATTRIBUTE_MEM_ALIGN</a> <a class="el" href="lv__conf_8h.html#a9aa1f88eb217d43ff6f619e58b866d52">LV_ATTRIBUTE_LARGE_CONST</a> <a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a> []</td></tr>
+<tr class="separator:a95ab6ff9227127295ca863e2091c7f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854e3003f905cc6bf110e3b838b02b53"><td class="memItemLeft" align="right" valign="top">const lv_img_dsc_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a854e3003f905cc6bf110e3b838b02b53">mario</a></td></tr>
+<tr class="separator:a854e3003f905cc6bf110e3b838b02b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526c4564302c02d83a148c9184943179"><td class="memItemLeft" align="right" valign="top">lv_color_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a526c4564302c02d83a148c9184943179">buf_1</a> [<a class="el" href="lvgl__helpers_8h.html#a654a6892936b96d1d9563c5eabec9dab">DISP_BUF_SIZE</a>]</td></tr>
+<tr class="separator:a526c4564302c02d83a148c9184943179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05d1354c5c0aeda8efaa1b1e2e59995"><td class="memItemLeft" align="right" valign="top">lv_disp_draw_buf_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ab05d1354c5c0aeda8efaa1b1e2e59995">disp_buf</a></td></tr>
+<tr class="separator:ab05d1354c5c0aeda8efaa1b1e2e59995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae4a682aeb784530d1bf250fadbea59"><td class="memItemLeft" align="right" valign="top">lv_disp_drv_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a3ae4a682aeb784530d1bf250fadbea59">disp_drv</a></td></tr>
+<tr class="separator:a3ae4a682aeb784530d1bf250fadbea59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad60424588c0fc1ccd29f85bbc6d56615" name="ad60424588c0fc1ccd29f85bbc6d56615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60424588c0fc1ccd29f85bbc6d56615">&#9670;&nbsp;</a></span>LV_ATTRIBUTE_IMG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_ATTRIBUTE_IMG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af1bd87b3c18b14b83abaa7a13e87b6f0" name="af1bd87b3c18b14b83abaa7a13e87b6f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1bd87b3c18b14b83abaa7a13e87b6f0">&#9670;&nbsp;</a></span>display_lsa()</h2>
+<a id="a895f3fc97245c493b7414566815f3b48" name="a895f3fc97245c493b7414566815f3b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895f3fc97245c493b7414566815f3b48">&#9670;&nbsp;</a></span>display_logo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t display_logo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>logo_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>displays SRA/Wall-E/Mario logo on OLED screen </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logo_id</td><td>macro</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if logo is displayed successfully or not </dd></dl>
+
+</div>
+</div>
+<a id="a98433da15e8207817e3ffd4e42b626a0" name="a98433da15e8207817e3ffd4e42b626a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98433da15e8207817e3ffd4e42b626a0">&#9670;&nbsp;</a></span>display_lsa()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,18 +206,8 @@ Variables</h2></td></tr>
           <td class="memname">esp_err_t display_lsa </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="unionline__sensor__array.html">line_sensor_array</a>&#160;</td>
-          <td class="paramname"><em>readings</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>readings</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -165,8 +215,7 @@ Variables</h2></td></tr>
 <p>displays LSA bar on OLED screen </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">readings</td><td><a class="el" href="unionline__sensor__array.html">line_sensor_array</a> struct </td></tr>
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
+    <tr><td class="paramname">readings</td><td><a class="el" href="unionline__sensor__array.html">line_sensor_array</a> struct</td></tr>
   </table>
   </dd>
 </dl>
@@ -174,35 +223,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aec24e1dbbb1cf99cfec4d177ee7ffd80" name="aec24e1dbbb1cf99cfec4d177ee7ffd80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec24e1dbbb1cf99cfec4d177ee7ffd80">&#9670;&nbsp;</a></span>display_mario_logo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">esp_err_t display_mario_logo </td>
-          <td>(</td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>displays MARIO Bitmap logo on OLED screen </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if MARIO logo is displayed successfully or not </dd></dl>
-
-</div>
-</div>
-<a id="a5ff3f1819dfe0d92468bb32a80335e0e" name="a5ff3f1819dfe0d92468bb32a80335e0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ff3f1819dfe0d92468bb32a80335e0e">&#9670;&nbsp;</a></span>display_mpu()</h2>
+<a id="a1258c05bcda38123f6b825ae1abfcd54" name="a1258c05bcda38123f6b825ae1abfcd54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1258c05bcda38123f6b825ae1abfcd54">&#9670;&nbsp;</a></span>display_mpu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,13 +239,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>roll</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em>&#160;</td>
+          <td class="paramname"><em>roll</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -237,8 +253,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pitch</td><td>Value of pitch in float </td></tr>
-    <tr><td class="paramname">roll</td><td>Value of Roll in float </td></tr>
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
+    <tr><td class="paramname">roll</td><td>Value of Roll in float</td></tr>
   </table>
   </dd>
 </dl>
@@ -246,8 +261,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afb16632d6f605ccb07d1f21347e86377" name="afb16632d6f605ccb07d1f21347e86377"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb16632d6f605ccb07d1f21347e86377">&#9670;&nbsp;</a></span>display_pid_values()</h2>
+<a id="ac588665be0f2f8fb00787ef97a32e03d" name="ac588665be0f2f8fb00787ef97a32e03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac588665be0f2f8fb00787ef97a32e03d">&#9670;&nbsp;</a></span>display_pid_values()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,13 +283,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>kd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em>&#160;</td>
+          <td class="paramname"><em>kd</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -289,8 +298,7 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">kp</td><td>value of kp in float </td></tr>
     <tr><td class="paramname">ki</td><td>value of ki in float </td></tr>
-    <tr><td class="paramname">kd</td><td>value of kd in float </td></tr>
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
+    <tr><td class="paramname">kd</td><td>value of kd in float</td></tr>
   </table>
   </dd>
 </dl>
@@ -298,8 +306,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab9cb87a5d0d1713f640be36d426e0e85" name="ab9cb87a5d0d1713f640be36d426e0e85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9cb87a5d0d1713f640be36d426e0e85">&#9670;&nbsp;</a></span>display_servo_values()</h2>
+<a id="a479e088b824336912654e8c146885e1e" name="a479e088b824336912654e8c146885e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479e088b824336912654e8c146885e1e">&#9670;&nbsp;</a></span>display_servo_values()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,13 +334,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>s4</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em>&#160;</td>
+          <td class="paramname"><em>s4</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -348,8 +350,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">s1</td><td>value of Servo_A in float </td></tr>
     <tr><td class="paramname">s2</td><td>value of Servo_B in float </td></tr>
     <tr><td class="paramname">s3</td><td>value of Servo_C in float </td></tr>
-    <tr><td class="paramname">s4</td><td>value of Servo_D in float </td></tr>
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
+    <tr><td class="paramname">s4</td><td>value of Servo_D in float</td></tr>
   </table>
   </dd>
 </dl>
@@ -357,62 +358,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3fd9e14359b2890f6a79d6f568916ce3" name="a3fd9e14359b2890f6a79d6f568916ce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fd9e14359b2890f6a79d6f568916ce3">&#9670;&nbsp;</a></span>display_sra_logo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">esp_err_t display_sra_logo </td>
-          <td>(</td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>displays SRA logo on OLED screen </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if SRA logo is displayed successfully or not </dd></dl>
-
-</div>
-</div>
-<a id="a8de1b63bbf5b8d095394a084ff48504b" name="a8de1b63bbf5b8d095394a084ff48504b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de1b63bbf5b8d095394a084ff48504b">&#9670;&nbsp;</a></span>display_walle_logo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">esp_err_t display_walle_logo </td>
-          <td>(</td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>displays Wall-E Bitmap logo on OLED screen </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">u8g2</td><td>pointer to u8g2_t struct</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if Wall-E logo is displayed successfully or not </dd></dl>
-
-</div>
-</div>
-<a id="a7e3ddc2d27dcdf2b5537aafea494d803" name="a7e3ddc2d27dcdf2b5537aafea494d803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e3ddc2d27dcdf2b5537aafea494d803">&#9670;&nbsp;</a></span>init_oled()</h2>
+<a id="ac8f5821ae55ffbab7a4947ccef5e18ad" name="ac8f5821ae55ffbab7a4947ccef5e18ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f5821ae55ffbab7a4947ccef5e18ad">&#9670;&nbsp;</a></span>init_oled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,8 +367,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">esp_err_t init_oled </td>
           <td>(</td>
-          <td class="paramtype">u8g2_t *&#160;</td>
-          <td class="paramname"><em>u8g2</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -430,7 +376,7 @@ Variables</h2></td></tr>
 <p>enables and configures OLED display </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">u8g2</td><td>pointer to empty u8g2_t struct</td></tr>
+    <tr><td class="paramname">None</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -438,135 +384,215 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a23f30fd25e2d55a3ee7ed8bec82148b5" name="a23f30fd25e2d55a3ee7ed8bec82148b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f30fd25e2d55a3ee7ed8bec82148b5">&#9670;&nbsp;</a></span>LV_IMG_DECLARE() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="oled_8c.html#a854e3003f905cc6bf110e3b838b02b53">mario</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a836313d2aee4a4efe19c0a8b8e014065" name="a836313d2aee4a4efe19c0a8b8e014065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a836313d2aee4a4efe19c0a8b8e014065">&#9670;&nbsp;</a></span>LV_IMG_DECLARE() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="oled_8c.html#af2b0070c0ea9adaf693fb4a21463ccce">sra_logo</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b01a1b3fe056d7a93fb3182e6f98b49" name="a9b01a1b3fe056d7a93fb3182e6f98b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b01a1b3fe056d7a93fb3182e6f98b49">&#9670;&nbsp;</a></span>LV_IMG_DECLARE() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_IMG_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="oled_8c.html#aea1b9b71ec9ad4f81ec19b23bdc11e71">walle</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a4f0c6003cce04e6b9960b0037ac79c20" name="a4f0c6003cce04e6b9960b0037ac79c20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f0c6003cce04e6b9960b0037ac79c20">&#9670;&nbsp;</a></span>mario_logo</h2>
+<a id="a526c4564302c02d83a148c9184943179" name="a526c4564302c02d83a148c9184943179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526c4564302c02d83a148c9184943179">&#9670;&nbsp;</a></span>buf_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned char mario_logo[]</td>
+          <td class="memname">lv_color_t* buf_1[<a class="el" href="lvgl__helpers_8h.html#a654a6892936b96d1d9563c5eabec9dab">DISP_BUF_SIZE</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11110000, 0b00000000, 0b11110000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b10000111, 0b10000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111100, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001101, 0b11111111, 0b11000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b10000110, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00111111, 0b11111111, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000011, 0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00111111, 0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000011, 0b11111111, 0b11111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00001111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00111111, 0b11111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000111, 0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111, 0b11100000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111, 0b11111100, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00111111, 0b11111111, 0b11111111, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000001, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000011, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000011, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00001111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00001111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11100000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00001111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11100000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
-<a id="a82909a23095b9c349d3f4acc4d3a631b" name="a82909a23095b9c349d3f4acc4d3a631b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82909a23095b9c349d3f4acc4d3a631b">&#9670;&nbsp;</a></span>sra_logo</h2>
+<a id="ab05d1354c5c0aeda8efaa1b1e2e59995" name="ab05d1354c5c0aeda8efaa1b1e2e59995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05d1354c5c0aeda8efaa1b1e2e59995">&#9670;&nbsp;</a></span>disp_buf</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char sra_logo[]</td>
+          <td class="memname">lv_disp_draw_buf_t disp_buf</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11100000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000011, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10000111, 0b11111110, 0b00011111, 0b11110000, 0b00111111, 0b11111111, 0b11111111, 0b10000000, 0b00000000, 0b01111111, 0b10000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10001111, 0b11111100, 0b00011111, 0b11111000, 0b00111111, 0b11111111, 0b11111111, 0b11000000, 0b00000000, 0b11111111, 0b11000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10001111, 0b11000000, 0b00000000, 0b10010000, 0b00000000, 0b00000000, 0b11101111, 0b11000000, 0b00000001, 0b11111111, 0b11100000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10001111, 0b11111100, 0b00011111, 0b10000000, 0b00000000, 0b00000000, 0b01101111, 0b11000000, 0b00000111, 0b11110011, 0b11110000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b10000111, 0b11111110, 0b00011111, 0b11110000, 0b00111111, 0b11111111, 0b11111111, 0b10000000, 0b00001111, 0b11100001, 0b11111100, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11000000, 0b00000000, 0b00000011, 0b11111000, 0b00111111, 0b11111111, 0b11111111, 0b10000000, 0b00011111, 0b10000000, 0b11111110, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11000111, 0b10000000, 0b00000001, 0b11111000, 0b00111111, 0b00000000, 0b11101111, 0b11000000, 0b00111111, 0b00000000, 0b00111111, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11101111, 0b11111100, 0b00011111, 0b11111000, 0b00111111, 0b00000001, 0b11100111, 0b11000000, 0b11111110, 0b00000000, 0b00011111, 0b10000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11110111, 0b11111110, 0b00011111, 0b11110000, 0b00111111, 0b00000011, 0b11000111, 0b11000001, 0b11111100, 0b00000000, 0b00001111, 0b11100111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b00000000, 0b01111110, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000011, 0b11111000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b00000000, 0b00000000, 0b00111111, 0b11100000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00011111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11110000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111,</div>
-<div class="line">    0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b11111111}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
-<a id="a097fd02aca20eddc85dbffce1528950b" name="a097fd02aca20eddc85dbffce1528950b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a097fd02aca20eddc85dbffce1528950b">&#9670;&nbsp;</a></span>walle_logo</h2>
+<a id="a3ae4a682aeb784530d1bf250fadbea59" name="a3ae4a682aeb784530d1bf250fadbea59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae4a682aeb784530d1bf250fadbea59">&#9670;&nbsp;</a></span>disp_drv</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned char walle_logo[]</td>
+          <td class="memname">lv_disp_drv_t disp_drv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a854e3003f905cc6bf110e3b838b02b53" name="a854e3003f905cc6bf110e3b838b02b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854e3003f905cc6bf110e3b838b02b53">&#9670;&nbsp;</a></span>mario</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const lv_img_dsc_t mario</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00011111, 0b11111110, 0b01100111, 0b00111111, 0b11111100, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b01110011, 0b00000110, 0b01110110, 0b01110000, 0b01100110, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b01100011, 0b00001111, 0b11110111, 0b11110000, 0b11100110, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00111001, 0b11111111, 0b01110110, 0b11111111, 0b10011100, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000010, 0b00000000, 0b11110111, 0b10000000, 0b01000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b01111111, 0b00000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b11000011, 0b10000000, 0b00000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00001101, 0b11111111, 0b11111111, 0b11111111, 0b11111000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00011001, 0b11110011, 0b00000000, 0b01000111, 0b10001100, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00111110, 0b00110011, 0b00000000, 0b01000110, 0b00111110, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b01100000, 0b11100011, 0b00000000, 0b11000111, 0b10000111, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00111111, 0b11000011, 0b11111111, 0b11000011, 0b11111110, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000001, 0b10000000, 0b00000000, 0b00000001, 0b11000000, 0b00000000, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00011111, 0b11111111, 0b10000000, 0b00000000, 0b00000001, 0b11111111, 0b11111100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00111000, 0b01111001, 0b10000000, 0b00000000, 0b00000001, 0b10011110, 0b00001100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00111000, 0b00000001, 0b11111111, 0b11111111, 0b11111111, 0b10000000, 0b00001100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00111000, 0b11111001, 0b10000011, 0b00000000, 0b11100001, 0b10001111, 0b10001100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00111000, 0b11111001, 0b10000011, 0b00000000, 0b01000001, 0b10011111, 0b10001100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00111000, 0b00000001, 0b11111110, 0b00000000, 0b01111111, 0b10000000, 0b00001100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00111000, 0b00000001, 0b10000000, 0b00000000, 0b00000001, 0b10000000, 0b00001100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00011111, 0b11111111, 0b10000000, 0b00000000, 0b00000000, 0b11111111, 0b11111100, 0b00000000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11000000,</div>
-<div class="line">    0b00011000, 0b11000110, 0b00011111, 0b11000001, 0b10000000, 0b00110000, 0b00000000, 0b00111111, 0b11111000,</div>
-<div class="line">    0b00011001, 0b11001110, 0b00111000, 0b01110001, 0b10000000, 0b00111000, 0b00000100, 0b01000111, 0b11111100,</div>
-<div class="line">    0b00011101, 0b11101110, 0b00111111, 0b11110001, 0b11000000, 0b00111000, 0b00000000, 0b01100001, 0b11111100,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00111111, 0b11111000,</div>
-<div class="line">    0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00001111, 0b11000000}</div>
+<div class="line">  .header.cf = LV_IMG_CF_INDEXED_1BIT,</div>
+<div class="line">  .header.always_zero = 0,</div>
+<div class="line">  .header.reserved = 0,</div>
+<div class="line">  .header.w = 122,</div>
+<div class="line">  .header.h = 48,</div>
+<div class="line">  .data_size = 776,</div>
+<div class="line">  .data = <a class="code hl_variable" href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aoled_8c_html_a95ab6ff9227127295ca863e2091c7f51"><div class="ttname"><a href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t mario_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:175</div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a95ab6ff9227127295ca863e2091c7f51" name="a95ab6ff9227127295ca863e2091c7f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ab6ff9227127295ca863e2091c7f51">&#9670;&nbsp;</a></span>mario_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="lv__conf_8h.html#a6b77dcb22fcdc624952dc307331e5db6">LV_ATTRIBUTE_MEM_ALIGN</a> <a class="el" href="lv__conf_8h.html#a9aa1f88eb217d43ff6f619e58b866d52">LV_ATTRIBUTE_LARGE_CONST</a> <a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a> uint8_t mario_map[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2b0070c0ea9adaf693fb4a21463ccce" name="af2b0070c0ea9adaf693fb4a21463ccce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b0070c0ea9adaf693fb4a21463ccce">&#9670;&nbsp;</a></span>sra_logo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const lv_img_dsc_t sra_logo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .header.cf = LV_IMG_CF_INDEXED_1BIT,</div>
+<div class="line">  .header.always_zero = 0,</div>
+<div class="line">  .header.reserved = 0,</div>
+<div class="line">  .header.w = 115,</div>
+<div class="line">  .header.h = 64,</div>
+<div class="line">  .data_size = 968,</div>
+<div class="line">  .data = <a class="code hl_variable" href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aoled_8c_html_ae652719e9e6fd5015a2801e5967de999"><div class="ttname"><a href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t sra_logo_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:31</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae652719e9e6fd5015a2801e5967de999" name="ae652719e9e6fd5015a2801e5967de999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae652719e9e6fd5015a2801e5967de999">&#9670;&nbsp;</a></span>sra_logo_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="lv__conf_8h.html#a6b77dcb22fcdc624952dc307331e5db6">LV_ATTRIBUTE_MEM_ALIGN</a> <a class="el" href="lv__conf_8h.html#a9aa1f88eb217d43ff6f619e58b866d52">LV_ATTRIBUTE_LARGE_CONST</a> <a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a> uint8_t sra_logo_map[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea1b9b71ec9ad4f81ec19b23bdc11e71" name="aea1b9b71ec9ad4f81ec19b23bdc11e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1b9b71ec9ad4f81ec19b23bdc11e71">&#9670;&nbsp;</a></span>walle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const lv_img_dsc_t walle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .header.cf = LV_IMG_CF_INDEXED_1BIT,</div>
+<div class="line">  .header.always_zero = 0,</div>
+<div class="line">  .header.reserved = 0,</div>
+<div class="line">  .header.w = 108,</div>
+<div class="line">  .header.h = 48,</div>
+<div class="line">  .data_size = 680,</div>
+<div class="line">  .data = <a class="code hl_variable" href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aoled_8c_html_a6ba1dc8ea39201f95759d4186054cc65"><div class="ttname"><a href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t walle_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:111</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6ba1dc8ea39201f95759d4186054cc65" name="a6ba1dc8ea39201f95759d4186054cc65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba1dc8ea39201f95759d4186054cc65">&#9670;&nbsp;</a></span>walle_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="lv__conf_8h.html#a6b77dcb22fcdc624952dc307331e5db6">LV_ATTRIBUTE_MEM_ALIGN</a> <a class="el" href="lv__conf_8h.html#a9aa1f88eb217d43ff6f619e58b866d52">LV_ATTRIBUTE_LARGE_CONST</a> <a class="el" href="oled_8c.html#ad60424588c0fc1ccd29f85bbc6d56615">LV_ATTRIBUTE_IMG</a> uint8_t walle_map[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

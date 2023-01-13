@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['i2c_5finitialised_0',['i2c_initialised',['../u8g2__esp32__hal_8c.html#ac1ab3a177117fc701db300be817034e4',1,'u8g2_esp32_hal.c']]]
+  ['gen_0',['gen',['../structservo__config.html#a2c1c36c96b6fecf0f285f25f7a395c92',1,'servo_config']]]
 ];

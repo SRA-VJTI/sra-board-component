@@ -399,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="81" column="11" bodyfile="src/mpu6050.c" bodystart="32" bodyend="48" declfile="include/mpu6050.h" declline="81" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="81" column="11" bodyfile="src/mpu6050.c" bodystart="32" bodyend="57" declfile="include/mpu6050.h" declline="81" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -419,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="90" column="11" bodyfile="src/mpu6050.c" bodystart="51" bodyend="82" declfile="include/mpu6050.h" declline="90" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="90" column="11" bodyfile="src/mpu6050.c" bodystart="60" bodyend="91" declfile="include/mpu6050.h" declline="90" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -461,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="99" column="11" bodyfile="src/mpu6050.c" bodystart="85" bodyend="97" declfile="include/mpu6050.h" declline="99" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="99" column="11" bodyfile="src/mpu6050.c" bodystart="94" bodyend="106" declfile="include/mpu6050.h" declline="99" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -503,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="108" column="11" bodyfile="src/mpu6050.c" bodystart="100" bodyend="112" declfile="include/mpu6050.h" declline="108" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="108" column="11" bodyfile="src/mpu6050.c" bodystart="109" bodyend="121" declfile="include/mpu6050.h" declline="108" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="117" column="6" bodyfile="src/mpu6050.c" bodystart="115" bodyend="120" declfile="include/mpu6050.h" declline="117" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="117" column="6" bodyfile="src/mpu6050.c" bodystart="124" bodyend="129" declfile="include/mpu6050.h" declline="117" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -607,7 +607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="128" column="6" bodyfile="src/mpu6050.c" bodystart="125" bodyend="129" declfile="include/mpu6050.h" declline="128" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="128" column="6" bodyfile="src/mpu6050.c" bodystart="134" bodyend="138" declfile="include/mpu6050.h" declline="128" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a4b805f4cb3c30a323969abe87414ea90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -683,7 +683,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="140" column="6" bodyfile="src/mpu6050.c" bodystart="132" bodyend="147" declfile="include/mpu6050.h" declline="140" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="140" column="6" bodyfile="src/mpu6050.c" bodystart="141" bodyend="156" declfile="include/mpu6050.h" declline="140" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -725,7 +725,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="150" column="11" bodyfile="src/mpu6050.c" bodystart="149" bodyend="161" declfile="include/mpu6050.h" declline="150" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="150" column="11" bodyfile="src/mpu6050.c" bodystart="158" bodyend="170" declfile="include/mpu6050.h" declline="150" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a43b01d95c708717047b47d408a606323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -789,7 +789,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="160" column="6" bodyfile="src/mpu6050.c" bodystart="164" bodyend="197" declfile="include/mpu6050.h" declline="160" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="160" column="6" bodyfile="src/mpu6050.c" bodystart="173" bodyend="206" declfile="include/mpu6050.h" declline="160" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -831,7 +831,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="169" column="11" bodyfile="src/mpu6050.c" bodystart="200" bodyend="216" declfile="include/mpu6050.h" declline="169" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="169" column="11" bodyfile="src/mpu6050.c" bodystart="209" bodyend="225" declfile="include/mpu6050.h" declline="169" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -919,7 +919,7 @@
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*buf_1,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle);</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>

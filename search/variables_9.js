@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['scl_0',['scl',['../structu8g2__esp32__hal__t.html#ab143cfdeeafebf36f69ac0e04ecd209d',1,'u8g2_esp32_hal_t']]],
-  ['sda_1',['sda',['../structu8g2__esp32__hal__t.html#a8cbd19506bbbea5b9ccea80a664c085a',1,'u8g2_esp32_hal_t']]],
-  ['servo_5fpin_2',['servo_pin',['../structservo__config.html#ae18a1d7cfaeb5c16cf4717d54b264954',1,'servo_config']]],
-  ['sra_5flogo_3',['sra_logo',['../oled_8c.html#a82909a23095b9c349d3f4acc4d3a631b',1,'oled.c']]]
+  ['timeout_5fticks_0',['timeout_ticks',['../structi2c__dev__t.html#ad177c30687f89873cc6a6437f08f7fe0',1,'i2c_dev_t']]],
+  ['timer_5fnum_1',['timer_num',['../structservo__config.html#a20f0e138ce47ab49602a35c9cdac45a8',1,'servo_config']]]
 ];

@@ -1,0 +1,711 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="lvgl__helpers_8c" kind="file" language="C++">
+    <compoundname>lvgl_helpers.c</compoundname>
+    <includes refid="lvgl__helpers_8h" local="yes">lvgl_helpers.h</includes>
+    <includes local="yes">esp_log.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>esp_idf_lib_helpers.h</label>
+        <link refid="esp__idf__lib__helpers_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>i2cdev.h</label>
+        <link refid="i2cdev_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lvgl_helpers.h</label>
+        <link refid="lvgl__helpers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="1">
+        <label>src/lvgl_helpers.c</label>
+        <link refid="lvgl__helpers_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>driver/i2c.h</label>
+      </node>
+      <node id="8">
+        <label>esp_err.h</label>
+      </node>
+      <node id="10">
+        <label>esp_idf_version.h</label>
+      </node>
+      <node id="15">
+        <label>esp_log.h</label>
+      </node>
+      <node id="6">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="7">
+        <label>freertos/semphr.h</label>
+      </node>
+      <node id="13">
+        <label>lvgl.h</label>
+      </node>
+      <node id="11">
+        <label>soc/i2c_reg.h</label>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" prot="public" static="no">
+        <name>TAG</name>
+        <initializer>&quot;lvgl_helpers_ssd1306&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Code from <ulink url="https://github.com/yanbe/ssd1306-esp-idf-i2c.git">https://github.com/yanbe/ssd1306-esp-idf-i2c.git</ulink> is used as a starting point, in addition to code from <ulink url="https://github.com/espressif/esp-iot-solution">https://github.com/espressif/esp-iot-solution</ulink>.</para>
+<para>Definitions are borrowed from: <ulink url="http://robotcantalk.blogspot.com/2015/03/interfacing-arduino-with-ssd1306-driven.html">http://robotcantalk.blogspot.com/2015/03/interfacing-arduino-with-ssd1306-driven.html</ulink></para>
+<para>For LVGL the forum has been used, in particular: <ulink url="https://blog.littlevgl.com/2019-05-06/oled">https://blog.littlevgl.com/2019-05-06/oled</ulink> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="21" column="9" bodyfile="src/lvgl_helpers.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8c_1ade3c083fa7b1178fcca5671e1830f2f9" prot="public" static="no">
+        <name>BIT_SET</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a) |= (1U &lt;&lt; (b)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="44" column="9" bodyfile="src/lvgl_helpers.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8c_1a77fc3a931d1ad5fa08201e5c544817a0" prot="public" static="no">
+        <name>BIT_CLEAR</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a) &amp;= ~(1U &lt;&lt; (b)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="45" column="9" bodyfile="src/lvgl_helpers.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="lvgl__helpers_8c_1ad24fad10bb32cd13fccf4034f9bc30ce" prot="public" static="yes" mutable="no">
+        <type><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref></type>
+        <definition>i2c_dev_t ssd1306_dev_t</definition>
+        <argsstring></argsstring>
+        <name>ssd1306_dev_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="38" column="18" bodyfile="src/lvgl_helpers.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lvgl__helpers_8c_1a695f4589be54722f6c8a85a4e244e959" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t send_data</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, void *bytes, size_t bytes_len)</argsstring>
+        <name>send_data</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>disp_drv</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="182" column="16" bodyfile="src/lvgl_helpers.c" bodystart="182" bodyend="193" declfile="src/lvgl_helpers.c" declline="31" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1a54054274c6b5dfc98e2ba4318f801542" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t send_pixels</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, void *color_buffer, size_t buffer_len)</argsstring>
+        <name>send_pixels</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>disp_drv</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>color_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buffer_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="195" column="16" bodyfile="src/lvgl_helpers.c" bodystart="195" bodyend="210" declfile="src/lvgl_helpers.c" declline="32" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1a8c501b9eb4c6efb3f7d387a8d5390058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssd1306_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize ssd1306 device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t returns ESP_OK if I2C is initialized successfully, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="47" column="6" bodyfile="src/lvgl_helpers.c" bodystart="47" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1af580fb2d697f0ffca8491ebe2ed0d8b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_set_px_cb</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa)</argsstring>
+        <name>ssd1306_set_px_cb</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>disp_drv</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>lv_coord_t</type>
+          <declname>buf_w</declname>
+        </param>
+        <param>
+          <type>lv_coord_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>lv_coord_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>lv_color_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>lv_opa_t</type>
+          <declname>opa</declname>
+        </param>
+        <briefdescription>
+<para>Draw a pixel into the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disp_drv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the display driver structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory range where you want to update the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf_w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the range where you want to update the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x co-ordinate of pixel to update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y co-ordinate of pixel to update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>monochrome color setting, either full or clear </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opa</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>opacity value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="74" column="6" bodyfile="src/lvgl_helpers.c" bodystart="74" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1ab8806490eb3741caa8f03009cb1a16a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_flush</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)</argsstring>
+        <name>ssd1306_flush</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>drv</declname>
+          <defname>disp_drv</defname>
+        </param>
+        <param>
+          <type>const lv_area_t *</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>lv_color_t *</type>
+          <declname>color_map</declname>
+          <defname>color_p</defname>
+        </param>
+        <briefdescription>
+<para>Flush the buffer on the screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the display driver structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents an area on the screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents the color map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="90" column="6" bodyfile="src/lvgl_helpers.c" bodystart="90" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1af9bdc642d67c0bd08dba4a89d5725ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_rounder</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, lv_area_t *area)</argsstring>
+        <name>ssd1306_rounder</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>disp_drv</declname>
+        </param>
+        <param>
+          <type>lv_area_t *</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+<para>Round the area that needs to be updated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the display driver structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents an area on the screen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="116" column="6" bodyfile="src/lvgl_helpers.c" bodystart="116" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1a2bc107fb5554a2dd684aa3987a367795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_sleep_in</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssd1306_sleep_in</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn off the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="127" column="6" bodyfile="src/lvgl_helpers.c" bodystart="127" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1a37a965445288f68e66b229e6075bc72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_sleep_out</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssd1306_sleep_out</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="137" column="6" bodyfile="src/lvgl_helpers.c" bodystart="137" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8c_1a11c3b96751518cac93ea6bcfe1d4c254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lvgl_i2c_driver_init</definition>
+        <argsstring>(int sda_pin, int scl_pin, int speed_hz)</argsstring>
+        <name>lvgl_i2c_driver_init</name>
+        <param>
+          <type>int</type>
+          <declname>sda_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scl_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>speed_hz</declname>
+        </param>
+        <briefdescription>
+<para>Initialize LVGL I2C Master. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sda_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gpio number for I2C master data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scl_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gpio number for I2C master clock </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C master clock frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if I2C is initialized successfully, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lvgl_helpers.c" line="148" column="6" bodyfile="src/lvgl_helpers.c" bodystart="148" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*********************</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>INCLUDES</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lvgl__helpers_8h" kindref="compound">lvgl_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*********************</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>DEFINES</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAG<sp/>&quot;lvgl_helpers_ssd1306&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>TYPEDEFS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>STATIC<sp/>PROTOTYPES</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_data(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bytes,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_len);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_pixels(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*color_buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_len);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>STATIC<sp/>VARIABLES</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structi2c__dev__t" kindref="compound">i2c_dev_t</ref><sp/>ssd1306_dev_t;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MACROS</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIT_SET(a,<sp/>b)<sp/>((a)<sp/>|=<sp/>(1U<sp/>&lt;&lt;<sp/>(b)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIT_CLEAR(a,<sp/>b)<sp/>((a)<sp/>&amp;=<sp/>~(1U<sp/>&lt;&lt;<sp/>(b)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1a8c501b9eb4c6efb3f7d387a8d5390058" kindref="member">ssd1306_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>orientation_1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>orientation_2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>orientation_1<sp/>=<sp/><ref refid="lvgl__helpers_8h_1a584ed2ec1e2afac449af33efe545faca" kindref="member">OLED_CMD_SET_SEGMENT_REMAP</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0xA0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>orientation_2<sp/>=<sp/><ref refid="lvgl__helpers_8h_1a914e66123359c6606a8dbfd39233ff12" kindref="member">OLED_CMD_SET_COM_SCAN_MODE_REMAP</ref>;<sp/></highlight><highlight class="comment">//<sp/>OLED_CMD_SET_COM_SCAN_MODE_NORMAL;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>display_mode<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>display_mode<sp/>=<sp/><ref refid="lvgl__helpers_8h_1a64dbcd25b06517de9e10f8e99f8c6aa5" kindref="member">OLED_CMD_DISPLAY_NORMAL</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>conf[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a502157cbd6b2e06962e03c2226ab0c30" kindref="member">OLED_CONTROL_BYTE_CMD_STREAM</ref>,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a2538d3123df13cd51f2de5823b66fb00" kindref="member">OLED_CMD_SET_CHARGE_PUMP</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x14,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>orientation_1,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>orientation_2,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1aa4b911663c3d9ce2dca64552d18b3564" kindref="member">OLED_CMD_SET_CONTRAST</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>display_mode,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFF,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a2af8bf0d1d491b4dbd0974fb0da7053f" kindref="member">OLED_CMD_DISPLAY_ON</ref>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>err<sp/>=<sp/>send_data(NULL,<sp/>conf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(conf));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(0<sp/>==<sp/>err);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1af580fb2d697f0ffca8491ebe2ed0d8b9" kindref="member">ssd1306_set_px_cb</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>uint8_t<sp/>*buf,<sp/>lv_coord_t<sp/>buf_w,<sp/>lv_coord_t<sp/>x,<sp/>lv_coord_t<sp/>y,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lv_color_t<sp/>color,<sp/>lv_opa_t<sp/>opa)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>byte_index<sp/>=<sp/>x<sp/>+<sp/>((y<sp/>&gt;&gt;<sp/>3)<sp/>*<sp/>buf_w);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>bit_index<sp/>=<sp/>y<sp/>&amp;<sp/>0x7;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((color.full<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(LV_OPA_TRANSP<sp/>!=<sp/>opa))</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1ade3c083fa7b1178fcca5671e1830f2f9" kindref="member">BIT_SET</ref>(buf[byte_index],<sp/>bit_index);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1a77fc3a931d1ad5fa08201e5c544817a0" kindref="member">BIT_CLEAR</ref>(buf[byte_index],<sp/>bit_index);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1ab8806490eb3741caa8f03009cb1a16a2" kindref="member">ssd1306_flush</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>lv_area_t<sp/>*area,<sp/>lv_color_t<sp/>*color_p)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Divide<sp/>by<sp/>8<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>row1<sp/>=<sp/>area-&gt;y1<sp/>&gt;&gt;<sp/>3;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>row2<sp/>=<sp/>area-&gt;y2<sp/>&gt;&gt;<sp/>3;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>conf[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a502157cbd6b2e06962e03c2226ab0c30" kindref="member">OLED_CONTROL_BYTE_CMD_STREAM</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1afb4b92603e91bff28a2af9f16ca6a9fd" kindref="member">OLED_CMD_SET_MEMORY_ADDR_MODE</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a5818b6d236835e94c342bde0f77763ab" kindref="member">OLED_CMD_SET_COLUMN_RANGE</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t)area-&gt;x1,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t)area-&gt;x2,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a7449f69a3ba1a2d39251d51c6711d646" kindref="member">OLED_CMD_SET_PAGE_RANGE</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row1,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row2,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>err<sp/>=<sp/>send_data(<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>conf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(conf));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(0<sp/>==<sp/>err);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>send_pixels(<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>color_p,<sp/><ref refid="lvgl__helpers_8h_1a061de1674db2e9dc04c40ab09830b581" kindref="member">OLED_COLUMNS</ref><sp/>*<sp/>(1<sp/>+<sp/>row2<sp/>-<sp/>row1));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(0<sp/>==<sp/>err);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_disp_flush_ready(<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1af9bdc642d67c0bd08dba4a89d5725ba0" kindref="member">ssd1306_rounder</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>lv_area_t<sp/>*area)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>hor_max<sp/>=<sp/><ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>-&gt;hor_res;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ver_max<sp/>=<sp/><ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>-&gt;ver_res;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>area-&gt;x1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>area-&gt;y1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>area-&gt;x2<sp/>=<sp/>hor_max<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>area-&gt;y2<sp/>=<sp/>ver_max<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1a2bc107fb5554a2dd684aa3987a367795" kindref="member">ssd1306_sleep_in</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>conf[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a502157cbd6b2e06962e03c2226ab0c30" kindref="member">OLED_CONTROL_BYTE_CMD_STREAM</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a4b7ef5d20d4c4634a73a6c84101a7e94" kindref="member">OLED_CMD_DISPLAY_OFF</ref>};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>err<sp/>=<sp/>send_data(NULL,<sp/>conf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(conf));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(0<sp/>==<sp/>err);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1a37a965445288f68e66b229e6075bc72c" kindref="member">ssd1306_sleep_out</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>conf[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a502157cbd6b2e06962e03c2226ab0c30" kindref="member">OLED_CONTROL_BYTE_CMD_STREAM</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8h_1a2af8bf0d1d491b4dbd0974fb0da7053f" kindref="member">OLED_CMD_DISPLAY_ON</ref>};</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>err<sp/>=<sp/>send_data(NULL,<sp/>conf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(conf));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(0<sp/>==<sp/>err);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Config<sp/>the<sp/>i2c<sp/>master<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8c_1a11c3b96751518cac93ea6bcfe1d4c254" kindref="member">lvgl_i2c_driver_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sda_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scl_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed_hz)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(<ref refid="group__i2cdev_1ga8a96ea2cf13f4b50a9f5d5e17f40e01b" kindref="member">i2cdev_init</ref>());</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1a4b469f10acfaf5675d77fbe218c2ebe2" kindref="member">port</ref><sp/>=<sp/>I2C_NUM_1;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1a84ad7180602cb8e36b38c29e5b1c86c6" kindref="member">addr</ref><sp/>=<sp/><ref refid="lvgl__helpers_8h_1abed4d2dcf160800aedb228fa74d1b08a" kindref="member">OLED_I2C_ADDRESS</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.mode<sp/>=<sp/>I2C_MODE_MASTER;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.sda_io_num<sp/>=<sp/>sda_pin;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.scl_io_num<sp/>=<sp/>scl_pin;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.sda_pullup_en<sp/>=<sp/>GPIO_PULLUP_ENABLE;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.scl_pullup_en<sp/>=<sp/>GPIO_PULLUP_ENABLE;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.master.clk_speed<sp/>=<sp/><ref refid="lvgl__helpers_8h_1ac0e5e2f42117c387d5ed9b956505d82b" kindref="member">OLED_IIC_FREQ_HZ</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>i2c_dev_create_mutex(&amp;ssd1306_dev_t);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/><ref refid="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" kindref="member">i2c_dev_create_mutex</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref><sp/>=<sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref><sp/>=<sp/><ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>*<sp/><sp/><sp/>STATIC<sp/>FUNCTIONS</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_data(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bytes,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_len)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*data<sp/>=<sp/>(uint8_t<sp/>*)bytes;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>data,<sp/>bytes_len));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_pixels(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*color_buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_len)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data<sp/>=<sp/><ref refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" kindref="member">OLED_CONTROL_BYTE_DATA_STREAM</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>&amp;data,<sp/>1));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buffer[buffer_len<sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer[0]<sp/>=<sp/><ref refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" kindref="member">OLED_CONTROL_BYTE_DATA_STREAM</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;buffer[1],<sp/>color_buffer,<sp/>buffer_len);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>&amp;buffer,<sp/>buffer_len<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/lvgl_helpers.c"/>
+  </compounddef>
+</doxygen>

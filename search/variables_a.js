@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['timeout_5fticks_0',['timeout_ticks',['../structi2c__dev__t.html#ad177c30687f89873cc6a6437f08f7fe0',1,'i2c_dev_t']]],
-  ['timer_5fnum_1',['timer_num',['../structservo__config.html#a20f0e138ce47ab49602a35c9cdac45a8',1,'servo_config']]]
+  ['walle_0',['walle',['../oled_8c.html#aea1b9b71ec9ad4f81ec19b23bdc11e71',1,'oled.c']]],
+  ['walle_5fmap_1',['walle_map',['../oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65',1,'oled.c']]]
 ];

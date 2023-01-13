@@ -39,8 +39,8 @@
         </childnode>
       </node>
       <node id="3">
-        <label>include/u8g2_esp32_hal.h</label>
-        <link refid="u8g2__esp32__hal_8h"/>
+        <label>include/lvgl_helpers.h</label>
+        <link refid="lvgl__helpers_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
@@ -48,13 +48,13 @@
         <label>src/i2cdev.c</label>
         <link refid="i2cdev_8c"/>
       </node>
+      <node id="4">
+        <label>src/lvgl_helpers.c</label>
+        <link refid="lvgl__helpers_8c"/>
+      </node>
       <node id="6">
         <label>src/mpu6050.c</label>
         <link refid="mpu6050_8c"/>
-      </node>
-      <node id="4">
-        <label>src/u8g2_esp32_hal.c</label>
-        <link refid="u8g2__esp32__hal_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">

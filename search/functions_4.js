@@ -11,5 +11,5 @@ var searchData=
   ['i2c_5fmaster_5finit_8',['i2c_master_init',['../mpu6050_8h.html#aff189f3f860a58ec5ad054d15d8db470',1,'i2c_master_init():&#160;mpu6050.c'],['../mpu6050_8c.html#adbeb61fe3c40b09ee1b6de91f21cb6ae',1,'i2c_master_init(void):&#160;mpu6050.c']]],
   ['i2cdev_5fdone_9',['i2cdev_done',['../group__i2cdev.html#ga320d9f51aab144397f75448801aa85e4',1,'i2cdev_done():&#160;i2cdev.c'],['../group__i2cdev.html#ga320d9f51aab144397f75448801aa85e4',1,'i2cdev_done():&#160;i2cdev.c']]],
   ['i2cdev_5finit_10',['i2cdev_init',['../group__i2cdev.html#ga8a96ea2cf13f4b50a9f5d5e17f40e01b',1,'i2cdev_init():&#160;i2cdev.c'],['../group__i2cdev.html#ga8a96ea2cf13f4b50a9f5d5e17f40e01b',1,'i2cdev_init():&#160;i2cdev.c']]],
-  ['init_5foled_11',['init_oled',['../oled_8h.html#a7e3ddc2d27dcdf2b5537aafea494d803',1,'init_oled(u8g2_t *u8g2):&#160;oled.c'],['../oled_8c.html#a7e3ddc2d27dcdf2b5537aafea494d803',1,'init_oled(u8g2_t *u8g2):&#160;oled.c']]]
+  ['init_5foled_11',['init_oled',['../oled_8h.html#ac8f5821ae55ffbab7a4947ccef5e18ad',1,'init_oled():&#160;oled.c'],['../oled_8c.html#ac8f5821ae55ffbab7a4947ccef5e18ad',1,'init_oled():&#160;oled.c']]]
 ];

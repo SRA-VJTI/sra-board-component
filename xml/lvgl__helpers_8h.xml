@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="lvgl__helpers_8h" kind="file" language="C++">
+    <compoundname>lvgl_helpers.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="i2cdev_8h" local="yes">i2cdev.h</includes>
+    <includes local="yes">driver/i2c.h</includes>
+    <includes local="yes">assert.h</includes>
+    <includes local="yes">lvgl.h</includes>
+    <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
+    <includedby refid="lvgl__helpers_8c" local="yes">src/lvgl_helpers.c</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>esp_idf_lib_helpers.h</label>
+        <link refid="esp__idf__lib__helpers_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>i2cdev.h</label>
+        <link refid="i2cdev_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/lvgl_helpers.h</label>
+        <link refid="lvgl__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>pin_defs.h</label>
+        <link refid="pin__defs_8h"/>
+      </node>
+      <node id="11">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>driver/i2c.h</label>
+      </node>
+      <node id="7">
+        <label>esp_err.h</label>
+      </node>
+      <node id="9">
+        <label>esp_idf_version.h</label>
+      </node>
+      <node id="5">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="6">
+        <label>freertos/semphr.h</label>
+      </node>
+      <node id="12">
+        <label>lvgl.h</label>
+      </node>
+      <node id="10">
+        <label>soc/i2c_reg.h</label>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/lvgl_helpers.h</label>
+        <link refid="lvgl__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/lvgl_helpers.c</label>
+        <link refid="lvgl__helpers_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lvgl__helpers_8h_1abed4d2dcf160800aedb228fa74d1b08a" prot="public" static="no">
+        <name>OLED_I2C_ADDRESS</name>
+        <initializer>0x3C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>MIT License Copyright (c) 2020 LVGL Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</para>
+</listitem></itemizedlist>
+</para>
+<para>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</para>
+<para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="43" column="9" bodyfile="include/lvgl_helpers.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a9885a007def27c91dd1720fb65d55f87" prot="public" static="no">
+        <name>OLED_WIDTH</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="44" column="9" bodyfile="include/lvgl_helpers.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a149f081665424602c8c0f90a6e935f3b" prot="public" static="no">
+        <name>OLED_HEIGHT</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="45" column="9" bodyfile="include/lvgl_helpers.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a061de1674db2e9dc04c40ab09830b581" prot="public" static="no">
+        <name>OLED_COLUMNS</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="46" column="9" bodyfile="include/lvgl_helpers.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1ade7dfe72f52e8da2aeefe0ff95ff255d" prot="public" static="no">
+        <name>OLED_PAGES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="47" column="9" bodyfile="include/lvgl_helpers.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a820e64fe936c35d7ebe71a43f2fa2d0a" prot="public" static="no">
+        <name>OLED_PIXEL_PER_PAGE</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="48" column="9" bodyfile="include/lvgl_helpers.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a78f5e7fed625409baa85983b54bb8f64" prot="public" static="no">
+        <name>OLED_CONTROL_BYTE_CMD_SINGLE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="51" column="9" bodyfile="include/lvgl_helpers.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a502157cbd6b2e06962e03c2226ab0c30" prot="public" static="no">
+        <name>OLED_CONTROL_BYTE_CMD_STREAM</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="52" column="9" bodyfile="include/lvgl_helpers.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" prot="public" static="no">
+        <name>OLED_CONTROL_BYTE_DATA_STREAM</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="53" column="9" bodyfile="include/lvgl_helpers.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1aa4b911663c3d9ce2dca64552d18b3564" prot="public" static="no">
+        <name>OLED_CMD_SET_CONTRAST</name>
+        <initializer>0x81</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="56" column="9" bodyfile="include/lvgl_helpers.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1ac2cf6904d032d76c74ea238cc98dfdd0" prot="public" static="no">
+        <name>OLED_CMD_DISPLAY_RAM</name>
+        <initializer>0xA4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="57" column="9" bodyfile="include/lvgl_helpers.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a0b95a301540778847f10ab3a4636841e" prot="public" static="no">
+        <name>OLED_CMD_DISPLAY_ALLON</name>
+        <initializer>0xA5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="58" column="9" bodyfile="include/lvgl_helpers.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a64dbcd25b06517de9e10f8e99f8c6aa5" prot="public" static="no">
+        <name>OLED_CMD_DISPLAY_NORMAL</name>
+        <initializer>0xA6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="59" column="9" bodyfile="include/lvgl_helpers.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1ad54d108af613a3689118a312163e5770" prot="public" static="no">
+        <name>OLED_CMD_DISPLAY_INVERTED</name>
+        <initializer>0xA7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="60" column="9" bodyfile="include/lvgl_helpers.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a4b7ef5d20d4c4634a73a6c84101a7e94" prot="public" static="no">
+        <name>OLED_CMD_DISPLAY_OFF</name>
+        <initializer>0xAE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="61" column="9" bodyfile="include/lvgl_helpers.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a2af8bf0d1d491b4dbd0974fb0da7053f" prot="public" static="no">
+        <name>OLED_CMD_DISPLAY_ON</name>
+        <initializer>0xAF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="62" column="9" bodyfile="include/lvgl_helpers.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1afb4b92603e91bff28a2af9f16ca6a9fd" prot="public" static="no">
+        <name>OLED_CMD_SET_MEMORY_ADDR_MODE</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="65" column="9" bodyfile="include/lvgl_helpers.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a5818b6d236835e94c342bde0f77763ab" prot="public" static="no">
+        <name>OLED_CMD_SET_COLUMN_RANGE</name>
+        <initializer>0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="66" column="9" bodyfile="include/lvgl_helpers.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a7449f69a3ba1a2d39251d51c6711d646" prot="public" static="no">
+        <name>OLED_CMD_SET_PAGE_RANGE</name>
+        <initializer>0x22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="67" column="9" bodyfile="include/lvgl_helpers.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a5f5dcee272649a9849e4091f073e225e" prot="public" static="no">
+        <name>OLED_CMD_SET_DISPLAY_START_LINE</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="70" column="9" bodyfile="include/lvgl_helpers.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a584ed2ec1e2afac449af33efe545faca" prot="public" static="no">
+        <name>OLED_CMD_SET_SEGMENT_REMAP</name>
+        <initializer>0xA1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="71" column="9" bodyfile="include/lvgl_helpers.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a63c11b6be85fce318c3d4eb8f8eb5661" prot="public" static="no">
+        <name>OLED_CMD_SET_MUX_RATIO</name>
+        <initializer>0xA8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="72" column="9" bodyfile="include/lvgl_helpers.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a676f90164933be800288a715d76408e6" prot="public" static="no">
+        <name>OLED_CMD_SET_COM_SCAN_MODE_NORMAL</name>
+        <initializer>0xC0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="73" column="9" bodyfile="include/lvgl_helpers.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a914e66123359c6606a8dbfd39233ff12" prot="public" static="no">
+        <name>OLED_CMD_SET_COM_SCAN_MODE_REMAP</name>
+        <initializer>0xC8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="74" column="9" bodyfile="include/lvgl_helpers.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a1c14cdcd6777babd915e02dc93616955" prot="public" static="no">
+        <name>OLED_CMD_SET_DISPLAY_OFFSET</name>
+        <initializer>0xD3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="75" column="9" bodyfile="include/lvgl_helpers.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a7df97959544ed9ca39347f615d706699" prot="public" static="no">
+        <name>OLED_CMD_SET_COM_PIN_MAP</name>
+        <initializer>0xDA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="76" column="9" bodyfile="include/lvgl_helpers.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a68f12585bff1fd5cd72d59367dbd4721" prot="public" static="no">
+        <name>OLED_CMD_NOP</name>
+        <initializer>0xE3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="77" column="9" bodyfile="include/lvgl_helpers.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1abd40b55aa8f7e952d987c71e9ccdd29a" prot="public" static="no">
+        <name>OLED_CMD_SET_DISPLAY_CLK_DIV</name>
+        <initializer>0xD5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="80" column="9" bodyfile="include/lvgl_helpers.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a89838d662d13dc1ca303bb1d0afd5ddc" prot="public" static="no">
+        <name>OLED_CMD_SET_PRECHARGE</name>
+        <initializer>0xD9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="81" column="9" bodyfile="include/lvgl_helpers.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1ae57d5a3389b66f170790c8a663e5081f" prot="public" static="no">
+        <name>OLED_CMD_SET_VCOMH_DESELCT</name>
+        <initializer>0xDB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="82" column="9" bodyfile="include/lvgl_helpers.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a2538d3123df13cd51f2de5823b66fb00" prot="public" static="no">
+        <name>OLED_CMD_SET_CHARGE_PUMP</name>
+        <initializer>0x8D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="85" column="9" bodyfile="include/lvgl_helpers.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1ac0e5e2f42117c387d5ed9b956505d82b" prot="public" static="no">
+        <name>OLED_IIC_FREQ_HZ</name>
+        <initializer>400000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="87" column="9" bodyfile="include/lvgl_helpers.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1a654a6892936b96d1d9563c5eabec9dab" prot="public" static="no">
+        <name>DISP_BUF_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="101" column="9" bodyfile="include/lvgl_helpers.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lvgl__helpers_8h_1a11c3b96751518cac93ea6bcfe1d4c254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool lvgl_i2c_driver_init</definition>
+        <argsstring>(int sda_pin, int scl_pin, int speed_hz)</argsstring>
+        <name>lvgl_i2c_driver_init</name>
+        <param>
+          <type>int</type>
+          <declname>sda_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scl_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>speed_hz</declname>
+        </param>
+        <briefdescription>
+<para>Initialize LVGL I2C Master. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sda_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gpio number for I2C master data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scl_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gpio number for I2C master clock </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed_hz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C master clock frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if I2C is initialized successfully, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="110" column="6" bodyfile="src/lvgl_helpers.c" bodystart="148" bodyend="177" declfile="include/lvgl_helpers.h" declline="110" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8h_1a8c501b9eb4c6efb3f7d387a8d5390058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssd1306_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize ssd1306 device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t returns ESP_OK if I2C is initialized successfully, else the appropriate error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="117" column="6" bodyfile="src/lvgl_helpers.c" bodystart="47" bodyend="72" declfile="include/lvgl_helpers.h" declline="117" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8h_1a3aa379841186fc2d5916f5ab83283188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_flush</definition>
+        <argsstring>(lv_disp_drv_t *drv, const lv_area_t *area, lv_color_t *color_map)</argsstring>
+        <name>ssd1306_flush</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>drv</declname>
+        </param>
+        <param>
+          <type>const lv_area_t *</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>lv_color_t *</type>
+          <declname>color_map</declname>
+        </param>
+        <briefdescription>
+<para>Flush the buffer on the screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the display driver structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents an area on the screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents the color map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="125" column="6" bodyfile="src/lvgl_helpers.c" bodystart="90" bodyend="114" declfile="include/lvgl_helpers.h" declline="125" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8h_1af9bdc642d67c0bd08dba4a89d5725ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_rounder</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, lv_area_t *area)</argsstring>
+        <name>ssd1306_rounder</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>disp_drv</declname>
+        </param>
+        <param>
+          <type>lv_area_t *</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+<para>Round the area that needs to be updated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the display driver structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents an area on the screen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="132" column="6" bodyfile="src/lvgl_helpers.c" bodystart="116" bodyend="125" declfile="include/lvgl_helpers.h" declline="132" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8h_1af580fb2d697f0ffca8491ebe2ed0d8b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_set_px_cb</definition>
+        <argsstring>(lv_disp_drv_t *disp_drv, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa)</argsstring>
+        <name>ssd1306_set_px_cb</name>
+        <param>
+          <type>lv_disp_drv_t *</type>
+          <declname>disp_drv</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>lv_coord_t</type>
+          <declname>buf_w</declname>
+        </param>
+        <param>
+          <type>lv_coord_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>lv_coord_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>lv_color_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>lv_opa_t</type>
+          <declname>opa</declname>
+        </param>
+        <briefdescription>
+<para>Draw a pixel into the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disp_drv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the display driver structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory range where you want to update the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf_w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the range where you want to update the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x co-ordinate of pixel to update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y co-ordinate of pixel to update </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>monochrome color setting, either full or clear </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opa</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>opacity value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="144" column="6" bodyfile="src/lvgl_helpers.c" bodystart="74" bodyend="88" declfile="include/lvgl_helpers.h" declline="144" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_sleep_in</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssd1306_sleep_in</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn off the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="149" column="6" bodyfile="src/lvgl_helpers.c" bodystart="127" bodyend="135" declfile="include/lvgl_helpers.h" declline="149" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd1306_sleep_out</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssd1306_sleep_out</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Turn on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="154" column="6" bodyfile="src/lvgl_helpers.c" bodystart="137" bodyend="145" declfile="include/lvgl_helpers.h" declline="154" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LVGL_HELPERS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LVGL_HELPERS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*********************</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>INCLUDES</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="i2cdev_8h" kindref="compound">i2cdev.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/i2c.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;assert.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lvgl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*********************</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>DEFINES</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="lvgl__helpers_8h_1abed4d2dcf160800aedb228fa74d1b08a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_I2C_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x3C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="lvgl__helpers_8h_1a9885a007def27c91dd1720fb65d55f87" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_WIDTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="lvgl__helpers_8h_1a149f081665424602c8c0f90a6e935f3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_HEIGHT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="lvgl__helpers_8h_1a061de1674db2e9dc04c40ab09830b581" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_COLUMNS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="lvgl__helpers_8h_1ade7dfe72f52e8da2aeefe0ff95ff255d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_PAGES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="lvgl__helpers_8h_1a820e64fe936c35d7ebe71a43f2fa2d0a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_PIXEL_PER_PAGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Control<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="lvgl__helpers_8h_1a78f5e7fed625409baa85983b54bb8f64" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CONTROL_BYTE_CMD_SINGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="lvgl__helpers_8h_1a502157cbd6b2e06962e03c2226ab0c30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CONTROL_BYTE_CMD_STREAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CONTROL_BYTE_DATA_STREAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fundamental<sp/>commands<sp/>(pg.28)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="lvgl__helpers_8h_1aa4b911663c3d9ce2dca64552d18b3564" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_CONTRAST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x81<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x7F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="lvgl__helpers_8h_1ac2cf6904d032d76c74ea238cc98dfdd0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_DISPLAY_RAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="lvgl__helpers_8h_1a0b95a301540778847f10ab3a4636841e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_DISPLAY_ALLON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="lvgl__helpers_8h_1a64dbcd25b06517de9e10f8e99f8c6aa5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_DISPLAY_NORMAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="lvgl__helpers_8h_1ad54d108af613a3689118a312163e5770" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_DISPLAY_INVERTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="lvgl__helpers_8h_1a4b7ef5d20d4c4634a73a6c84101a7e94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_DISPLAY_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="lvgl__helpers_8h_1a2af8bf0d1d491b4dbd0974fb0da7053f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_DISPLAY_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Addressing<sp/>Command<sp/>Table<sp/>(pg.30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="lvgl__helpers_8h_1afb4b92603e91bff28a2af9f16ca6a9fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_MEMORY_ADDR_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x00<sp/>=<sp/>HORZ<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="lvgl__helpers_8h_1a5818b6d236835e94c342bde0f77763ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_COLUMN_RANGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x21<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>used<sp/>only<sp/>in<sp/>HORZ/VERT<sp/>mode<sp/>-<sp/>follow<sp/>with<sp/>0x00<sp/>and<sp/>0x7F<sp/>=<sp/>COL127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="lvgl__helpers_8h_1a7449f69a3ba1a2d39251d51c6711d646" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_PAGE_RANGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x22<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>used<sp/>only<sp/>in<sp/>HORZ/VERT<sp/>mode<sp/>-<sp/>follow<sp/>with<sp/>0x00<sp/>and<sp/>0x07<sp/>=<sp/>PAGE7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Hardware<sp/>Config<sp/>(pg.31)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="lvgl__helpers_8h_1a5f5dcee272649a9849e4091f073e225e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_DISPLAY_START_LINE<sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="lvgl__helpers_8h_1a584ed2ec1e2afac449af33efe545faca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_SEGMENT_REMAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="lvgl__helpers_8h_1a63c11b6be85fce318c3d4eb8f8eb5661" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_MUX_RATIO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA8<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x3F<sp/>=<sp/>64<sp/>MUX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="lvgl__helpers_8h_1a676f90164933be800288a715d76408e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_COM_SCAN_MODE_NORMAL<sp/><sp/><sp/>0xC0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="lvgl__helpers_8h_1a914e66123359c6606a8dbfd39233ff12" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_COM_SCAN_MODE_REMAP<sp/><sp/><sp/><sp/>0xC8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="lvgl__helpers_8h_1a1c14cdcd6777babd915e02dc93616955" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_DISPLAY_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xD3<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="lvgl__helpers_8h_1a7df97959544ed9ca39347f615d706699" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_COM_PIN_MAP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xDA<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="lvgl__helpers_8h_1a68f12585bff1fd5cd72d59367dbd4721" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_NOP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xE3<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Timing<sp/>and<sp/>Driving<sp/>Scheme<sp/>(pg.32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="lvgl__helpers_8h_1abd40b55aa8f7e952d987c71e9ccdd29a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_DISPLAY_CLK_DIV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xD5<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="lvgl__helpers_8h_1a89838d662d13dc1ca303bb1d0afd5ddc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_PRECHARGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xD9<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0xF1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="lvgl__helpers_8h_1ae57d5a3389b66f170790c8a663e5081f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_VCOMH_DESELCT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xDB<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Charge<sp/>Pump<sp/>(pg.62)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="lvgl__helpers_8h_1a2538d3123df13cd51f2de5823b66fb00" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_CMD_SET_CHARGE_PUMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x8D<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>follow<sp/>with<sp/>0x14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="lvgl__helpers_8h_1ac0e5e2f42117c387d5ed9b956505d82b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_IIC_FREQ_HZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>400000<sp/><sp/></highlight><highlight class="comment">//<sp/>I2C<sp/>clock<sp/>frequency</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DISP_BUF_SIZE<sp/>value<sp/>doesn&apos;t<sp/>have<sp/>an<sp/>special<sp/>meaning,<sp/>but<sp/>it&apos;s<sp/>the<sp/>size</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*<sp/>of<sp/>the<sp/>buffer(s)<sp/>passed<sp/>to<sp/>LVGL<sp/>as<sp/>display<sp/>buffers.<sp/>The<sp/>default<sp/>values<sp/>used</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*<sp/>were<sp/>the<sp/>values<sp/>working<sp/>for<sp/>the<sp/>contributor<sp/>of<sp/>the<sp/>display<sp/>controller.</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*<sp/>As<sp/>LVGL<sp/>supports<sp/>partial<sp/>display<sp/>updates<sp/>the<sp/>DISP_BUF_SIZE<sp/>doesn&apos;t</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>necessarily<sp/>need<sp/>to<sp/>be<sp/>equal<sp/>to<sp/>the<sp/>display<sp/>size.</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>*<sp/>When<sp/>using<sp/>RGB<sp/>displays<sp/>the<sp/>display<sp/>buffer<sp/>size<sp/>will<sp/>also<sp/>depends<sp/>on<sp/>the</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*<sp/>color<sp/>format<sp/>being<sp/>used,<sp/>for<sp/>RGB565<sp/>each<sp/>pixel<sp/>needs<sp/>2<sp/>bytes.</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/>When<sp/>using<sp/>the<sp/>mono<sp/>theme,<sp/>the<sp/>display<sp/>pixels<sp/>can<sp/>be<sp/>represented<sp/>in<sp/>one<sp/>bit,</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/>so<sp/>the<sp/>buffer<sp/>size<sp/>can<sp/>be<sp/>divided<sp/>by<sp/>8,<sp/>e.g.<sp/>see<sp/>SSD1306<sp/>display<sp/>size.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="lvgl__helpers_8h_1a654a6892936b96d1d9563c5eabec9dab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DISP_BUF_SIZE<sp/><sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a11c3b96751518cac93ea6bcfe1d4c254" kindref="member">lvgl_i2c_driver_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sda_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scl_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed_hz);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a8c501b9eb4c6efb3f7d387a8d5390058" kindref="member">ssd1306_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a3aa379841186fc2d5916f5ab83283188" kindref="member">ssd1306_flush</ref>(lv_disp_drv_t<sp/>*drv,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>lv_area_t<sp/>*area,<sp/>lv_color_t<sp/>*color_map);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1af9bdc642d67c0bd08dba4a89d5725ba0" kindref="member">ssd1306_rounder</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>lv_area_t<sp/>*area);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1af580fb2d697f0ffca8491ebe2ed0d8b9" kindref="member">ssd1306_set_px_cb</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>uint8_t<sp/>*buf,<sp/>lv_coord_t<sp/>buf_w,<sp/>lv_coord_t<sp/>x,<sp/>lv_coord_t<sp/>y,<sp/>lv_color_t<sp/>color,<sp/>lv_opa_t<sp/>opa);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" kindref="member">ssd1306_sleep_in</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" kindref="member">ssd1306_sleep_out</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MACROS</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>extern<sp/>&quot;C&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LVGL_HELPERS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/lvgl_helpers.h"/>
+  </compounddef>
+</doxygen>

@@ -1,8 +1,8 @@
 <map id="include/esp_idf_lib_helpers.h" name="include/esp_idf_lib_helpers.h">
-<area shape="rect" id="node1" title=" " alt="" coords="153,5,283,47"/>
-<area shape="rect" id="node2" href="$i2cdev_8h.html" title=" " alt="" coords="161,95,275,121"/>
-<area shape="rect" id="node3" href="$u8g2__esp32__hal_8h.html" title=" " alt="" coords="11,169,148,211"/>
-<area shape="rect" id="node5" href="$i2cdev_8c.html" title=" " alt="" coords="172,177,264,203"/>
-<area shape="rect" id="node6" href="$mpu6050_8c.html" title=" " alt="" coords="289,177,395,203"/>
-<area shape="rect" id="node4" href="$u8g2__esp32__hal_8c.html" title=" " alt="" coords="5,259,153,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="158,5,287,47"/>
+<area shape="rect" id="node2" href="$i2cdev_8h.html" title=" " alt="" coords="165,95,280,121"/>
+<area shape="rect" id="node3" href="$lvgl__helpers_8h.html" title=" " alt="" coords="5,169,152,196"/>
+<area shape="rect" id="node5" href="$i2cdev_8c.html" title=" " alt="" coords="177,169,269,196"/>
+<area shape="rect" id="node6" href="$mpu6050_8c.html" title=" " alt="" coords="293,169,400,196"/>
+<area shape="rect" id="node4" href="$lvgl__helpers_8c.html" title=" " alt="" coords="17,244,140,271"/>
 </map>
