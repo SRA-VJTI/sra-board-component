@@ -158,22 +158,7 @@ bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed_hz)
     ssd1306_dev_t.cfg.scl_pullup_en = GPIO_PULLUP_ENABLE;
     ssd1306_dev_t.cfg.master.clk_speed = OLED_IIC_FREQ_HZ;
 
-    // return i2c_dev_create_mutex(&ssd1306_dev_t);
-    if (mutex == NULL)
-    {
-        esp_err_t err = i2c_dev_create_mutex(&ssd1306_dev_t);
-        if (err == ESP_OK)
-        {
-            mutex = ssd1306_dev_t.mutex;
-        }
-        return err;
-    }
-    else
-    {
-        ssd1306_dev_t.mutex = mutex;
-        return ESP_OK;
-    }
-
+    return i2c_dev_create_mutex(&ssd1306_dev_t);
 }
 
 /**********************
