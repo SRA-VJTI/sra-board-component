@@ -45,7 +45,6 @@ typedef struct {
 } i2c_port_state_t;
 
 static i2c_port_state_t states[I2C_NUM_MAX];
-SemaphoreHandle_t mutex = NULL;
 static bool i2c_initialised = false;
 
 #if CONFIG_I2CDEV_NOLOCK
