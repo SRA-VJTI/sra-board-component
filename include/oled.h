@@ -36,66 +36,52 @@
 #include "lsa.h"
 
 #ifdef CONFIG_ENABLE_OLED
-#include "u8g2.h"
-#include "u8g2_esp32_hal.h"
+#include "lvgl.h"
+#include "lvgl_helpers.h"
 #endif
+
+#define SRA_LOGO 1
+#define WALLE_LOGO 2
+#define MARIO_LOGO 3
+#define WALLE_TEXT CONFIG_WALL_E_LOGO_TEXT
+#define MARIO_TEXT CONFIG_MARIO_LOGO_TEXT
 
 /**
  * @brief enables and configures OLED display
 
- * @param u8g2 pointer to empty u8g2_t struct
+ * @param None
 
  * @return esp_err_t i.e it shows if OLED is initialised successfully or not
  **/
-esp_err_t init_oled(u8g2_t *u8g2);
+esp_err_t init_oled();
 
 /**
- * @brief displays SRA logo on OLED screen
+ * @brief displays SRA/Wall-E/Mario logo on OLED screen
 
- * @param u8g2 pointer to u8g2_t struct
+ * @param logo_id macro 
 
- * @return esp_err_t i.e it shows if SRA logo is displayed successfully or not
+ * @return esp_err_t i.e it shows if logo is displayed successfully or not
  **/
-esp_err_t display_sra_logo(u8g2_t *u8g2);
-
-/**
- * @brief displays Wall-E Bitmap logo on OLED screen
-
- * @param u8g2 pointer to u8g2_t struct
-
- * @return esp_err_t i.e it shows if Wall-E logo is displayed successfully or not
- **/
-esp_err_t display_walle_logo(u8g2_t *u8g2);
-
-/**
- * @brief displays MARIO Bitmap logo on OLED screen
-
- * @param u8g2 pointer to u8g2_t struct
-
- * @return esp_err_t i.e it shows if MARIO logo is displayed successfully or not
- **/
-esp_err_t display_mario_logo(u8g2_t *u8g2);
+esp_err_t display_logo(int logo_id);
 
 /**
  * @brief displays LSA bar on OLED screen
 
  * @param readings line_sensor_array struct
- * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if LSA bar is displayed successfully or not
  **/
-esp_err_t display_lsa(line_sensor_array readings, u8g2_t *u8g2);
+esp_err_t display_lsa(line_sensor_array readings);
 
 /**
  * @brief displays pitch and roll readings on OLED screen
 
  * @param pitch Value of pitch in float
  * @param roll Value of Roll in float
- * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
-esp_err_t display_mpu(float pitch, float roll, u8g2_t *u8g2);
+esp_err_t display_mpu(float pitch, float roll);
 
 /**
  * @brief displays kp, ki and kd reading on the OLED screen
@@ -103,11 +89,10 @@ esp_err_t display_mpu(float pitch, float roll, u8g2_t *u8g2);
  * @param kp value of kp in float
  * @param ki value of ki in float
  * @param kd value of kd in float
- * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
-esp_err_t display_pid_values(float kp, float ki, float kd, u8g2_t *u8g2);
+esp_err_t display_pid_values(float kp, float ki, float kd);
 
 /**
  * @brief displays Servo angles on the OLED screen
@@ -116,10 +101,9 @@ esp_err_t display_pid_values(float kp, float ki, float kd, u8g2_t *u8g2);
  * @param s2 value of Servo_B in float
  * @param s3 value of Servo_C in float
  * @param s4 value of Servo_D in float
- * @param u8g2 pointer to u8g2_t struct
 
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
-esp_err_t display_servo_values(int s1, int s2, int s3, int s4, u8g2_t *u8g2);
+esp_err_t display_servo_values(int s1, int s2, int s3, int s4);
 
 #endif

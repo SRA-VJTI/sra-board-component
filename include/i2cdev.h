@@ -56,9 +56,7 @@ extern "C" {
 #endif
 #endif
 
-#ifdef CONFIG_ENABLE_OLED
-extern bool i2c_initialised;
-#endif
+extern SemaphoreHandle_t mutex;
 
 /**
  * I2C device descriptor

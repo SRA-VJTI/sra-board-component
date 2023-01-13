@@ -24,6 +24,18 @@ config ENABLE_OLED
     help
         Enables OLED support on SRA Board
 
+config WALL_E_LOGO_TEXT
+    string "Wall-E Logo Text on OLED"
+    default "Wall-E 2023"
+    help
+        Change Text displayed along with logo
+
+config MARIO_LOGO_TEXT
+    string "MARIO Logo Text on OLED"
+    default "MARIO 2023"
+    help
+        Change Text displayed along with logo
+
 menu "Servo motor configuration"
 
 menu "Servo A"

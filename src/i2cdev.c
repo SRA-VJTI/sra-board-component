@@ -45,6 +45,8 @@ typedef struct {
 } i2c_port_state_t;
 
 static i2c_port_state_t states[I2C_NUM_MAX];
+SemaphoreHandle_t mutex = NULL;
+static bool i2c_initialised = false;
 
 #if CONFIG_I2CDEV_NOLOCK
 #define SEMAPHORE_TAKE(port)
@@ -72,19 +74,23 @@ static i2c_port_state_t states[I2C_NUM_MAX];
 
 esp_err_t i2cdev_init()
 {
-    memset(states, 0, sizeof(states));
+    if(!i2c_initialised)
+    {
+        memset(states, 0, sizeof(states));
 
 #if !CONFIG_I2CDEV_NOLOCK
-    for (int i = 0; i < I2C_NUM_MAX; i++)
-    {
-        states[i].lock = xSemaphoreCreateMutex();
-        if (!states[i].lock)
+        for (int i = 0; i < I2C_NUM_MAX; i++)
         {
-            ESP_LOGE(TAG, "Could not create port mutex %d", i);
-            return ESP_FAIL;
+            states[i].lock = xSemaphoreCreateMutex();
+            if (!states[i].lock)
+            {
+                ESP_LOGE(TAG, "Could not create port mutex %d", i);
+                return ESP_FAIL;
+            }
         }
-    }
 #endif
+        i2c_initialised = true;
+    }
 
     return ESP_OK;
 }
