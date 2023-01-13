@@ -388,7 +388,7 @@ esp_err_t display_mpu(float pitch, float roll)
   lv_obj_set_pos(roll_reading, 0, 36);
   lv_obj_set_size(pitch_reading, 96 , lv_obj_get_self_height(pitch_reading));
 
-  // Create Meter for Roll Readings
+  // Create Meter for Pitch Readings
   lv_obj_t * meter = lv_meter_create(lv_scr_act());
   lv_obj_set_pos(meter, 64, 0);
   lv_obj_set_size(meter, 64, 64);
