@@ -27,8 +27,8 @@
 #include "freertos/task.h"
 #include "sra_board.h"
 
-#define BLACK_MARGIN 400
-#define WHITE_MARGIN 2000
+#define BLACK_MARGIN 4095
+#define WHITE_MARGIN 0
 #define CONSTRAIN_LSA_LOW 0
 #define CONSTRAIN_LSA_HIGH 1000
 
@@ -46,16 +46,17 @@ void app_main(void)
     {
         // get line sensor readings
         line_sensor_readings = read_line_sensor();
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 5; i++)
         {
-            // constrain lsa readings between BLACK_MARGIN and WHITE_MARGIN
-            line_sensor_readings.adc_reading[i] = bound(line_sensor_readings.adc_reading[i], BLACK_MARGIN, WHITE_MARGIN);
-            // map readings from (BLACK_MARGIN, WHITE_MARGIN) to (CONSTRAIN_LSA_LOW, CONSTRAIN_LSA_HIGH)
-            line_sensor_readings.adc_reading[i] = map(line_sensor_readings.adc_reading[i], BLACK_MARGIN, WHITE_MARGIN, CONSTRAIN_LSA_LOW, CONSTRAIN_LSA_HIGH);
+            // constrain lsa readings between WHITE_MARGIN and BLACK_MARGIN
+            line_sensor_readings.adc_reading[i] = bound(line_sensor_readings.adc_reading[i], WHITE_MARGIN, BLACK_MARGIN);
+            // map readings from (WHITE_MARGIN, BLACK_MARGIN) to (CONSTRAIN_LSA_LOW, CONSTRAIN_LSA_HIGH)
+            line_sensor_readings.adc_reading[i] = map(line_sensor_readings.adc_reading[i], WHITE_MARGIN, BLACK_MARGIN, CONSTRAIN_LSA_LOW, CONSTRAIN_LSA_HIGH);
+            line_sensor_readings.adc_reading[i] = 1000 - line_sensor_readings.adc_reading[i];
         }
 
         // log final lsa readings
-        ESP_LOGI(TAG, "LSA_1: %d \t LSA_2: %d \t LSA_3: %d \t LSA_4: %d",line_sensor_readings.adc_reading[0], line_sensor_readings.adc_reading[1], line_sensor_readings.adc_reading[2], line_sensor_readings.adc_reading[3] );
+        ESP_LOGI(TAG, "LSA_1: %d \t LSA_2: %d \t LSA_3: %d \t LSA_4: %d \t LSA_5: %d",line_sensor_readings.adc_reading[0], line_sensor_readings.adc_reading[1], line_sensor_readings.adc_reading[2], line_sensor_readings.adc_reading[3], line_sensor_readings.adc_reading[4] );
 
     }
 }
