@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="32" column="11" bodyfile="src/mpu6050.c" bodystart="32" bodyend="57"/>
+        <location file="src/mpu6050.c" line="32" column="11" bodyfile="src/mpu6050.c" bodystart="32" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="60" column="11" bodyfile="src/mpu6050.c" bodystart="60" bodyend="91"/>
+        <location file="src/mpu6050.c" line="47" column="11" bodyfile="src/mpu6050.c" bodystart="47" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a37ca4429a23f8b7da14122cc381516b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="94" column="11" bodyfile="src/mpu6050.c" bodystart="94" bodyend="106"/>
+        <location file="src/mpu6050.c" line="81" column="11" bodyfile="src/mpu6050.c" bodystart="81" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a6a709a3acda468f8ec109f09a3148a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="109" column="11" bodyfile="src/mpu6050.c" bodystart="109" bodyend="121"/>
+        <location file="src/mpu6050.c" line="96" column="11" bodyfile="src/mpu6050.c" bodystart="96" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -301,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="124" column="6" bodyfile="src/mpu6050.c" bodystart="124" bodyend="129"/>
+        <location file="src/mpu6050.c" line="111" column="6" bodyfile="src/mpu6050.c" bodystart="111" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="134" column="6" bodyfile="src/mpu6050.c" bodystart="134" bodyend="138"/>
+        <location file="src/mpu6050.c" line="121" column="6" bodyfile="src/mpu6050.c" bodystart="121" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a4b805f4cb3c30a323969abe87414ea90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -441,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="141" column="6" bodyfile="src/mpu6050.c" bodystart="141" bodyend="156"/>
+        <location file="src/mpu6050.c" line="128" column="6" bodyfile="src/mpu6050.c" bodystart="128" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a7d1dcecaa06dcaa7586e8802546ab65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -483,7 +483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="158" column="11" bodyfile="src/mpu6050.c" bodystart="158" bodyend="170"/>
+        <location file="src/mpu6050.c" line="145" column="11" bodyfile="src/mpu6050.c" bodystart="145" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a43b01d95c708717047b47d408a606323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -547,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="173" column="6" bodyfile="src/mpu6050.c" bodystart="173" bodyend="206"/>
+        <location file="src/mpu6050.c" line="160" column="6" bodyfile="src/mpu6050.c" bodystart="160" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8c_1a2103bceaa1a91be4c8bdbe49cbc22c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -589,7 +589,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/mpu6050.c" line="209" column="11" bodyfile="src/mpu6050.c" bodystart="209" bodyend="225"/>
+        <location file="src/mpu6050.c" line="196" column="11" bodyfile="src/mpu6050.c" bodystart="196" bodyend="212"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -639,189 +639,176 @@
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>mpu6050_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.scl_io_num<sp/>=<sp/><ref refid="mpu6050_8h_1a033b5e8a30541fe4ff939a62fdb7a43d" kindref="member">I2C_MASTER_SCL_IO</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>mpu6050_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.master.clk_speed<sp/>=<sp/><ref refid="mpu6050_8h_1a5c22ca4de37a83a59014e48b0a0b043d" kindref="member">I2C_MASTER_FREQ_HZ</ref>;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref><sp/>==<sp/>NULL)</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/><ref refid="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" kindref="member">i2c_dev_create_mutex</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref><sp/>=<sp/>mpu6050_dev_t.<ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref>;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mpu6050_dev_t.<ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref><sp/>=<sp/><ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref>;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" kindref="member">i2c_dev_create_mutex</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialise<sp/>and<sp/>power<sp/>ON,<sp/>MPU6050</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kindref="member">enable_mpu6050</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(<ref refid="mpu6050_8c_1adbeb61fe3c40b09ee1b6de91f21cb6ae" kindref="member">i2c_master_init</ref>());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Clock<sp/>Source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>value;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>&amp;<sp/>0xf8;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>|<sp/><ref refid="mpu6050_8h_1a3c240f7062a547fee82e419b565e440e" kindref="member">MPU6050_CLOCK_PLL_XGYRO</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialise<sp/>and<sp/>power<sp/>ON,<sp/>MPU6050</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kindref="member">enable_mpu6050</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(<ref refid="mpu6050_8c_1adbeb61fe3c40b09ee1b6de91f21cb6ae" kindref="member">i2c_master_init</ref>());</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Clock<sp/>Source</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>value;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>&amp;<sp/>0xf8;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>|<sp/><ref refid="mpu6050_8h_1a3c240f7062a547fee82e419b565e440e" kindref="member">MPU6050_CLOCK_PLL_XGYRO</ref>;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>fullscale<sp/>gyro<sp/>range</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="mpu6050_8h_1aac5b35a3fa5792b38fe7118bc72fb442" kindref="member">MPU6050_GYRO_FS_250</ref>;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a004871ad77398075d79e9111989007dc" kindref="member">MPU6050_RA_GYRO_CONFIG</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>fullscale<sp/>accel<sp/>range</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="mpu6050_8h_1aeb63b8456cc4d715ce1fbe29ca5b1722" kindref="member">MPU6050_ACCEL_FS_2</ref>;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a48b7d7b24a70b247e373bc5965a5dcc7" kindref="member">MPU6050_RA_ACCEL_CONFIG</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>fullscale<sp/>gyro<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="mpu6050_8h_1aac5b35a3fa5792b38fe7118bc72fb442" kindref="member">MPU6050_GYRO_FS_250</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a004871ad77398075d79e9111989007dc" kindref="member">MPU6050_RA_GYRO_CONFIG</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>fullscale<sp/>accel<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/><ref refid="mpu6050_8h_1aeb63b8456cc4d715ce1fbe29ca5b1722" kindref="member">MPU6050_ACCEL_FS_2</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a48b7d7b24a70b247e373bc5965a5dcc7" kindref="member">MPU6050_RA_ACCEL_CONFIG</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Sleep<sp/>Mode<sp/>to<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>&amp;<sp/>0x9f;<sp/></highlight><highlight class="comment">//<sp/>also<sp/>check<sp/>0xbf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>MPU6050_RA_WHO_AM_I</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Sleep<sp/>Mode<sp/>to<sp/>false</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>0x00;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>&amp;<sp/>0x9f;<sp/></highlight><highlight class="comment">//<sp/>also<sp/>check<sp/>0xbf</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kindref="member">i2c_dev_write_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1ac6c83146165a2307ac7155d4fa566df4" kindref="member">MPU6050_RA_PWR_MGMT_1</ref>,<sp/>&amp;value,<sp/>1));</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>MPU6050_RA_WHO_AM_I</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>accelerometer<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>accelerometer<sp/>values</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a57451d4cdfc1fbf9caab9c8676ecdabc" kindref="member">ACCE_START_ADDR</ref>,<sp/>data_rd,<sp/>size));</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>gyroscope<sp/>values</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a1aa49382bf0cf9dfe5333fde4fc5fbd0" kindref="member">GYRO_START_ADDR</ref>,<sp/>data_rd,<sp/>size));</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a57451d4cdfc1fbf9caab9c8676ecdabc" kindref="member">ACCE_START_ADDR</ref>,<sp/>data_rd,<sp/>size));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>gyroscope<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kindref="member">i2c_dev_read_reg</ref>(&amp;mpu6050_dev_t,<sp/><ref refid="mpu6050_8h_1a1aa49382bf0cf9dfe5333fde4fc5fbd0" kindref="member">GYRO_START_ADDR</ref>,<sp/>data_rd,<sp/>size));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;mpu6050_dev_t);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Combine<sp/>the<sp/>MSB<sp/>and<sp/>LSB<sp/>values<sp/>(8-bit)<sp/>to<sp/>a<sp/>single<sp/>value<sp/>(16-bit)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[0]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[0]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[1]);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[1]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[2]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[3]);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[2]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[4]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[5]);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notations<sp/>in<sp/>the<sp/>following<sp/>functions:<sp/>Index<sp/>0<sp/>-<sp/>Roll<sp/>angle;<sp/>Index<sp/>1<sp/>-<sp/>Pitch<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Combine<sp/>the<sp/>MSB<sp/>and<sp/>LSB<sp/>values<sp/>(8-bit)<sp/>to<sp/>a<sp/>single<sp/>value<sp/>(16-bit)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2)</highlight></codeline>
-<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[0]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[0]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[1]);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[1]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[2]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[3]);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[2]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[4]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[5]);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notations<sp/>in<sp/>the<sp/>following<sp/>functions:<sp/>Index<sp/>0<sp/>-<sp/>Roll<sp/>angle;<sp/>Index<sp/>1<sp/>-<sp/>Pitch<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>accelerometer<sp/>angle<sp/>using<sp/>the<sp/>raw<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle)</highlight></codeline>
-<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>acce_angle[0]<sp/>=<sp/>atan2(ay,<sp/>sqrt(pow(ax,<sp/>2)<sp/>+<sp/>pow(az,<sp/>2)))<sp/>*<sp/><ref refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" kindref="member">RAD_TO_DEG</ref>;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>acce_angle[1]<sp/>=<sp/>atan2(-ax,<sp/>sqrt(pow(ay,<sp/>2)<sp/>+<sp/>pow(az,<sp/>2)))<sp/>*<sp/><ref refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" kindref="member">RAD_TO_DEG</ref>;</highlight></codeline>
-<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>gyroscope<sp/>angle<sp/>using<sp/>the<sp/>raw<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(int16_t<sp/>gx,<sp/>int16_t<sp/>gy,<sp/>int16_t<sp/>gz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*gyro_angle)</highlight></codeline>
-<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(1<sp/>/<sp/>131)<sp/>sensitivity<sp/>factor<sp/>of<sp/>Gyroscope:<sp/>1<sp/>degree<sp/>rotation<sp/>gives<sp/>a<sp/>reading<sp/>of<sp/>131<sp/>units</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>gx<sp/>=<sp/>gx<sp/>/<sp/>131;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>gy<sp/>=<sp/>gy<sp/>/<sp/>131;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>gz<sp/>=<sp/>gz<sp/>/<sp/>131;</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>gyro_angle[0]<sp/>=<sp/>gx<sp/>*<sp/>dt;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>gyro_angle[1]<sp/>=<sp/>gy<sp/>*<sp/>dt;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>In<sp/>case<sp/>the<sp/>roll<sp/>angle<sp/>varies<sp/>widely<sp/>when<sp/>only<sp/>the<sp/>pitch<sp/>angle<sp/>changes,<sp/>activate<sp/>the<sp/>following<sp/>equations.</highlight></codeline>
-<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gyro_angle[0]<sp/>=<sp/>dt<sp/>*<sp/>(gx<sp/>+<sp/>gy<sp/>*<sp/>sin(gyro_angle[0])<sp/>*<sp/>tan(gyro_angle[1])<sp/>+<sp/>gz<sp/>*<sp/>cos(gyro_angle[0])<sp/>*<sp/>tan(gyro_angle[1]));</highlight></codeline>
-<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gyro_angle[1]<sp/>=<sp/>dt<sp/>*<sp/>(gy<sp/>*<sp/>cos(gyro_angle[0])<sp/>-<sp/>gz<sp/>*<sp/>sin(gyro_angle[0]));</highlight></codeline>
-<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value)</highlight></codeline>
-<codeline lineno="159"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>acce_rd[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>],<sp/>gyro_rd[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>];</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="mpu6050_8c_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(acce_rd,<sp/><ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>)<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/><ref refid="mpu6050_8c_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(gyro_rd,<sp/><ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>)<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(acce_rd,<sp/>acce_raw_value);</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(gyro_rd,<sp/>gyro_raw_value);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fuse<sp/>the<sp/>gyroscope<sp/>and<sp/>accelerometer<sp/>angle<sp/>in<sp/>a<sp/>complementary<sp/>fashion</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*complementary_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset)</highlight></codeline>
-<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_initial_reading<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>timer;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>accelerometer<sp/>angle<sp/>using<sp/>the<sp/>raw<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>acce_angle[0]<sp/>=<sp/>atan2(ay,<sp/>sqrt(pow(ax,<sp/>2)<sp/>+<sp/>pow(az,<sp/>2)))<sp/>*<sp/><ref refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" kindref="member">RAD_TO_DEG</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>acce_angle[1]<sp/>=<sp/>atan2(-ax,<sp/>sqrt(pow(ay,<sp/>2)<sp/>+<sp/>pow(az,<sp/>2)))<sp/>*<sp/><ref refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" kindref="member">RAD_TO_DEG</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>gyroscope<sp/>angle<sp/>using<sp/>the<sp/>raw<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(int16_t<sp/>gx,<sp/>int16_t<sp/>gy,<sp/>int16_t<sp/>gz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*gyro_angle)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(1<sp/>/<sp/>131)<sp/>sensitivity<sp/>factor<sp/>of<sp/>Gyroscope:<sp/>1<sp/>degree<sp/>rotation<sp/>gives<sp/>a<sp/>reading<sp/>of<sp/>131<sp/>units</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>gx<sp/>=<sp/>gx<sp/>/<sp/>131;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>gy<sp/>=<sp/>gy<sp/>/<sp/>131;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>gz<sp/>=<sp/>gz<sp/>/<sp/>131;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>gyro_angle[0]<sp/>=<sp/>gx<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>gyro_angle[1]<sp/>=<sp/>gy<sp/>*<sp/>dt;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>In<sp/>case<sp/>the<sp/>roll<sp/>angle<sp/>varies<sp/>widely<sp/>when<sp/>only<sp/>the<sp/>pitch<sp/>angle<sp/>changes,<sp/>activate<sp/>the<sp/>following<sp/>equations.</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gyro_angle[0]<sp/>=<sp/>dt<sp/>*<sp/>(gx<sp/>+<sp/>gy<sp/>*<sp/>sin(gyro_angle[0])<sp/>*<sp/>tan(gyro_angle[1])<sp/>+<sp/>gz<sp/>*<sp/>cos(gyro_angle[0])<sp/>*<sp/>tan(gyro_angle[1]));</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gyro_angle[1]<sp/>=<sp/>dt<sp/>*<sp/>(gy<sp/>*<sp/>cos(gyro_angle[0])<sp/>-<sp/>gz<sp/>*<sp/>sin(gyro_angle[0]));</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>acce_rd[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>],<sp/>gyro_rd[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="mpu6050_8c_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(acce_rd,<sp/><ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>)<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/><ref refid="mpu6050_8c_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(gyro_rd,<sp/><ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref>)<sp/>==<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(acce_rd,<sp/>acce_raw_value);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(gyro_rd,<sp/>gyro_raw_value);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fuse<sp/>the<sp/>gyroscope<sp/>and<sp/>accelerometer<sp/>angle<sp/>in<sp/>a<sp/>complementary<sp/>fashion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*complementary_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_initial_reading<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>timer;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acce_angle[2],<sp/>gyro_angle[2];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_initial_reading)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_initial_reading<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(acce_raw_value[0],<sp/>acce_raw_value[1],<sp/>acce_raw_value[2],<sp/>acce_angle);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complementary_angle[i]<sp/>=<sp/>acce_angle[i]<sp/>-<sp/>mpu_offset[i];</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acce_angle[2],<sp/>gyro_angle[2];</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt;</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_initial_reading)</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_initial_reading<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(acce_raw_value[0],<sp/>acce_raw_value[1],<sp/>acce_raw_value[2],<sp/>acce_angle);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer<sp/>=<sp/>esp_timer_get_time();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>dt<sp/>=<sp/>(float)(esp_timer_get_time()<sp/>-<sp/>timer)<sp/>/<sp/>1000000;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>timer<sp/>=<sp/>esp_timer_get_time();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(acce_raw_value[0],<sp/>acce_raw_value[1],<sp/>acce_raw_value[2],<sp/>acce_angle);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(gyro_raw_value[0],<sp/>gyro_raw_value[1],<sp/>gyro_raw_value[2],<sp/>dt,<sp/>gyro_angle);</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complementary_angle[i]<sp/>=<sp/>acce_angle[i]<sp/>-<sp/>mpu_offset[i];</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"></highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer<sp/>=<sp/>esp_timer_get_time();</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>acce_angle[i]<sp/>=<sp/>acce_angle[i]<sp/>-<sp/>mpu_offset[i];</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complementary_angle[i]<sp/>=<sp/><ref refid="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" kindref="member">ALPHA</ref><sp/>*<sp/>(complementary_angle[i]<sp/>+<sp/>gyro_angle[i])<sp/>+<sp/>(1<sp/>-<sp/><ref refid="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" kindref="member">ALPHA</ref>)<sp/>*<sp/>acce_angle[i];</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>dt<sp/>=<sp/>(float)(esp_timer_get_time()<sp/>-<sp/>timer)<sp/>/<sp/>1000000;</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>timer<sp/>=<sp/>esp_timer_get_time();</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(acce_raw_value[0],<sp/>acce_raw_value[1],<sp/>acce_raw_value[2],<sp/>acce_angle);</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(gyro_raw_value[0],<sp/>gyro_raw_value[1],<sp/>gyro_raw_value[2],<sp/>dt,<sp/>gyro_angle);</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>acce_angle[i]<sp/>=<sp/>acce_angle[i]<sp/>-<sp/>mpu_offset[i];</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complementary_angle[i]<sp/>=<sp/><ref refid="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" kindref="member">ALPHA</ref><sp/>*<sp/>(complementary_angle[i]<sp/>+<sp/>gyro_angle[i])<sp/>+<sp/>(1<sp/>-<sp/><ref refid="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" kindref="member">ALPHA</ref>)<sp/>*<sp/>acce_angle[i];</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Calculate<sp/>roll<sp/>and<sp/>pitch<sp/>angles<sp/>of<sp/>the<sp/>MPU<sp/>after<sp/>applying<sp/>the<sp/>complementary<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a2103bceaa1a91be4c8bdbe49cbc22c34" kindref="member">read_mpu6050</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*euler_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>acce_raw_value[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref><sp/>/<sp/>2],<sp/>gyro_raw_value[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref><sp/>/<sp/>2];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>complementary_angle[2];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="mpu6050_8c_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(acce_raw_value,<sp/>gyro_raw_value)<sp/>!=<sp/>ESP_OK)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MPU,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>read<sp/>MPU!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Calculate<sp/>roll<sp/>and<sp/>pitch<sp/>angles<sp/>of<sp/>the<sp/>MPU<sp/>after<sp/>applying<sp/>the<sp/>complementary<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8c_1a2103bceaa1a91be4c8bdbe49cbc22c34" kindref="member">read_mpu6050</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*euler_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset)</highlight></codeline>
-<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>acce_raw_value[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref><sp/>/<sp/>2],<sp/>gyro_raw_value[<ref refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kindref="member">BUFF_SIZE</ref><sp/>/<sp/>2];</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>complementary_angle[2];</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"></highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="mpu6050_8c_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(acce_raw_value,<sp/>gyro_raw_value)<sp/>!=<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_MPU,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>read<sp/>MPU!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(acce_raw_value,<sp/>gyro_raw_value,<sp/>complementary_angle,<sp/>mpu_offset);</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(euler_angle,<sp/>complementary_angle,<sp/>2<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpu6050_8c_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(acce_raw_value,<sp/>gyro_raw_value,<sp/>complementary_angle,<sp/>mpu_offset);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(euler_angle,<sp/>complementary_angle,<sp/>2<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/mpu6050.c"/>
   </compounddef>

@@ -7997,7 +7997,7 @@ file = {
         } while (0)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      define-mem-desc-line = '54';
+      define-mem-desc-line = '53';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8024,7 +8024,7 @@ _EnD_oF_dEf_TeXt_;
         } while (0)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      define-mem-desc-line = '66';
+      define-mem-desc-line = '65';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8044,7 +8044,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'i2cdev_init';
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '75';
+      func-mem-desc-line = '74';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Init library.
 _EnD_oF_dEf_TeXt_;
@@ -8065,7 +8065,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'i2cdev_done';
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '98';
+      func-mem-desc-line = '97';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Finish work with library.
 _EnD_oF_dEf_TeXt_;
@@ -8091,7 +8091,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '119';
+      func-mem-desc-line = '118';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Create mutex for device descriptor.
 _EnD_oF_dEf_TeXt_;
@@ -8118,7 +8118,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '137';
+      func-mem-desc-line = '136';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Delete mutex for device descriptor.
 _EnD_oF_dEf_TeXt_;
@@ -8145,7 +8145,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '149';
+      func-mem-desc-line = '148';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Take device mutex.
 _EnD_oF_dEf_TeXt_;
@@ -8172,7 +8172,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '165';
+      func-mem-desc-line = '164';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Give device mutex.
 _EnD_oF_dEf_TeXt_;
@@ -8205,7 +8205,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'b';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '181';
+      func-mem-desc-line = '180';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8229,7 +8229,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '194';
+      func-mem-desc-line = '193';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8277,7 +8277,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'in_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '242';
+      func-mem-desc-line = '241';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read from slave device.
 _EnD_oF_dEf_TeXt_;
@@ -8334,7 +8334,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'out_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '274';
+      func-mem-desc-line = '273';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Write to slave device.
 _EnD_oF_dEf_TeXt_;
@@ -8384,7 +8384,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'in_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '300';
+      func-mem-desc-line = '299';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read from register with an 8-bit address.
 _EnD_oF_dEf_TeXt_;
@@ -8432,7 +8432,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'out_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '306';
+      func-mem-desc-line = '305';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Write to register with an 8-bit address.
 _EnD_oF_dEf_TeXt_;
@@ -8489,27 +8489,6 @@ _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc';
-      var-mem-virt = normal;
-      var-mem-prot = public;
-      var-mem-type = <<_EnD_oF_dEf_TeXt_
-SemaphoreHandle_t
-_EnD_oF_dEf_TeXt_;
-      var-mem-name = 'mutex';
-      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= NULL
-_EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      var-mem-desc-line = '48';
-      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* var-member */
-    var-member = {
-      var-mem-kind = 'variable';
       var-mem-id   = 'i2cdev_8c_1ac1ab3a177117fc701db300be817034e4';
       var-mem-virt = normal;
       var-mem-prot = public;
@@ -8521,7 +8500,7 @@ _EnD_oF_dEf_TeXt_;
 = false
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      var-mem-desc-line = '49';
+      var-mem-desc-line = '48';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8727,7 +8706,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'bytes_len';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '182';
+      func-mem-desc-line = '167';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8763,7 +8742,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buffer_len';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '195';
+      func-mem-desc-line = '180';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9332,7 +9311,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '60';
+      func-mem-desc-line = '47';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise MPU-6050 (by sending the appropriate queued commands); 
 Refer this for more information: https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.
@@ -9364,7 +9343,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '94';
+      func-mem-desc-line = '81';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array
 Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other.
@@ -9397,7 +9376,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '109';
+      func-mem-desc-line = '96';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array
 Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other.
@@ -9430,7 +9409,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buf_2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '124';
+      func-mem-desc-line = '111';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Combine two 8-bit values to a 16-bit one
 Note that EVEN indices in the input buffer represent the MSB (Byte)
@@ -9474,7 +9453,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'acce_angle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '134';
+      func-mem-desc-line = '121';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the accelerometer raw values
 Axes and Angles - X: Roll, Y: Pitch, Z: Yaw.
@@ -9526,7 +9505,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_angle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '141';
+      func-mem-desc-line = '128';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the gyroscope raw values
 Axes and Angles - X: Roll, Y: Pitch, Z: Yaw
@@ -9562,7 +9541,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_raw_value';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '158';
+      func-mem-desc-line = '145';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form 
 i.e. 16-bit.
@@ -9607,7 +9586,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '173';
+      func-mem-desc-line = '160';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Fuse the gyroscope and accelerometer angle in a complementary fashion
 More on this here: https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues.
@@ -9641,7 +9620,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '209';
+      func-mem-desc-line = '196';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles.
 _EnD_oF_dEf_TeXt_;

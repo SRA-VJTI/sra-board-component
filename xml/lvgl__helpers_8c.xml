@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/lvgl_helpers.c" line="182" column="16" bodyfile="src/lvgl_helpers.c" bodystart="182" bodyend="193" declfile="src/lvgl_helpers.c" declline="31" declcolumn="16"/>
+        <location file="src/lvgl_helpers.c" line="167" column="16" bodyfile="src/lvgl_helpers.c" bodystart="167" bodyend="178" declfile="src/lvgl_helpers.c" declline="31" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="lvgl__helpers_8c_1a54054274c6b5dfc98e2ba4318f801542" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/lvgl_helpers.c" line="195" column="16" bodyfile="src/lvgl_helpers.c" bodystart="195" bodyend="210" declfile="src/lvgl_helpers.c" declline="32" declcolumn="16"/>
+        <location file="src/lvgl_helpers.c" line="180" column="16" bodyfile="src/lvgl_helpers.c" bodystart="180" bodyend="195" declfile="src/lvgl_helpers.c" declline="32" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="lvgl__helpers_8c_1a8c501b9eb4c6efb3f7d387a8d5390058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -496,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/lvgl_helpers.c" line="148" column="6" bodyfile="src/lvgl_helpers.c" bodystart="148" bodyend="177"/>
+        <location file="src/lvgl_helpers.c" line="148" column="6" bodyfile="src/lvgl_helpers.c" bodystart="148" bodyend="162"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -655,56 +655,41 @@
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.scl_pullup_en<sp/>=<sp/>GPIO_PULLUP_ENABLE;</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1ab070791328671f783f9d6d45af3c4c24" kindref="member">cfg</ref>.master.clk_speed<sp/>=<sp/><ref refid="lvgl__helpers_8h_1ac0e5e2f42117c387d5ed9b956505d82b" kindref="member">OLED_IIC_FREQ_HZ</ref>;</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>i2c_dev_create_mutex(&amp;ssd1306_dev_t);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref><sp/>==<sp/>NULL)</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/><ref refid="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" kindref="member">i2c_dev_create_mutex</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>==<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref><sp/>=<sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref>;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd1306_dev_t.<ref refid="structi2c__dev__t_1afb073a307ab7fb8817fb967107a958cd" kindref="member">mutex</ref><sp/>=<sp/><ref refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kindref="member">mutex</ref>;</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" kindref="member">i2c_dev_create_mutex</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*<sp/><sp/><sp/>STATIC<sp/>FUNCTIONS</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_data(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bytes,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_len)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*data<sp/>=<sp/>(uint8_t<sp/>*)bytes;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>data,<sp/>bytes_len));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
-<codeline lineno="180"><highlight class="comment"><sp/>*<sp/><sp/><sp/>STATIC<sp/>FUNCTIONS</highlight></codeline>
-<codeline lineno="181"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_data(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bytes,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_len)</highlight></codeline>
-<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*data<sp/>=<sp/>(uint8_t<sp/>*)bytes;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>data,<sp/>bytes_len));</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_pixels(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*color_buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_len)</highlight></codeline>
-<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>;</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data<sp/>=<sp/><ref refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" kindref="member">OLED_CONTROL_BYTE_DATA_STREAM</ref>;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>&amp;data,<sp/>1));</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buffer[buffer_len<sp/>+<sp/>1];</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer[0]<sp/>=<sp/><ref refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" kindref="member">OLED_CONTROL_BYTE_DATA_STREAM</ref>;</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;buffer[1],<sp/>color_buffer,<sp/>buffer_len);</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>&amp;buffer,<sp/>buffer_len<sp/>+<sp/>1));</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>send_pixels(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*color_buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buffer_len)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga097ee23eb474674923704d81d376e646" kindref="member">I2C_DEV_TAKE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>data<sp/>=<sp/><ref refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" kindref="member">OLED_CONTROL_BYTE_DATA_STREAM</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>&amp;data,<sp/>1));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buffer[buffer_len<sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer[0]<sp/>=<sp/><ref refid="lvgl__helpers_8h_1aa7023c65018cc95426796822db455ae1" kindref="member">OLED_CONTROL_BYTE_DATA_STREAM</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;buffer[1],<sp/>color_buffer,<sp/>buffer_len);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1gaeb71e2a5bb188971fa26aa14da35fad7" kindref="member">I2C_DEV_CHECK</ref>(&amp;ssd1306_dev_t,<sp/><ref refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kindref="member">i2c_dev_write</ref>(&amp;ssd1306_dev_t,<sp/>NULL,<sp/>0,<sp/>&amp;buffer,<sp/>buffer_len<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__i2cdev_1ga9d3fa5a5f0df1ad3e45350da5d647a22" kindref="member">I2C_DEV_GIVE_MUTEX</ref>(&amp;ssd1306_dev_t);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/lvgl_helpers.c"/>
   </compounddef>

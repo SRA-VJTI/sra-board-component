@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="59" column="26" bodyfile="src/i2cdev.c" bodystart="48" bodyend="-1" declfile="include/i2cdev.h" declline="59" declcolumn="26"/>
+        <location file="include/i2cdev.h" line="59" column="26" declfile="include/i2cdev.h" declline="59" declcolumn="26"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="83" column="11" bodyfile="src/i2cdev.c" bodystart="75" bodyend="96" declfile="include/i2cdev.h" declline="83" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="83" column="11" bodyfile="src/i2cdev.c" bodystart="74" bodyend="95" declfile="include/i2cdev.h" declline="83" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1ga320d9f51aab144397f75448801aa85e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="92" column="11" bodyfile="src/i2cdev.c" bodystart="98" bodyend="117" declfile="include/i2cdev.h" declline="92" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="92" column="11" bodyfile="src/i2cdev.c" bodystart="97" bodyend="116" declfile="include/i2cdev.h" declline="92" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1ga1c3a8d47ff8f1c985d6e1d98d668eb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="102" column="11" bodyfile="src/i2cdev.c" bodystart="119" bodyend="135" declfile="include/i2cdev.h" declline="102" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="102" column="11" bodyfile="src/i2cdev.c" bodystart="118" bodyend="134" declfile="include/i2cdev.h" declline="102" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1ga1e9101fef8e50349d63157e0e01ced0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="112" column="11" bodyfile="src/i2cdev.c" bodystart="137" bodyend="147" declfile="include/i2cdev.h" declline="112" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="112" column="11" bodyfile="src/i2cdev.c" bodystart="136" bodyend="146" declfile="include/i2cdev.h" declline="112" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1gab0a314a2a3c6a8c7f9e59cf3b69466da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="122" column="11" bodyfile="src/i2cdev.c" bodystart="149" bodyend="163" declfile="include/i2cdev.h" declline="122" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="122" column="11" bodyfile="src/i2cdev.c" bodystart="148" bodyend="162" declfile="include/i2cdev.h" declline="122" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1ga51961c290ebed5993c50e30009c40e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="132" column="11" bodyfile="src/i2cdev.c" bodystart="165" bodyend="179" declfile="include/i2cdev.h" declline="132" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="132" column="11" bodyfile="src/i2cdev.c" bodystart="164" bodyend="178" declfile="include/i2cdev.h" declline="132" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1ga9785ee992dab84bea0d7be83bb6e17fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="148" column="11" bodyfile="src/i2cdev.c" bodystart="242" bodyend="272" declfile="include/i2cdev.h" declline="148" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="148" column="11" bodyfile="src/i2cdev.c" bodystart="241" bodyend="271" declfile="include/i2cdev.h" declline="148" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -502,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="164" column="11" bodyfile="src/i2cdev.c" bodystart="274" bodyend="298" declfile="include/i2cdev.h" declline="164" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="164" column="11" bodyfile="src/i2cdev.c" bodystart="273" bodyend="297" declfile="include/i2cdev.h" declline="164" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -569,7 +569,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="178" column="11" bodyfile="src/i2cdev.c" bodystart="300" bodyend="304" declfile="include/i2cdev.h" declline="178" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="178" column="11" bodyfile="src/i2cdev.c" bodystart="299" bodyend="303" declfile="include/i2cdev.h" declline="178" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="group__i2cdev_1gad9827abf64603201a084148c0de097ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -636,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/i2cdev.h" line="192" column="11" bodyfile="src/i2cdev.c" bodystart="306" bodyend="310" declfile="include/i2cdev.h" declline="192" declcolumn="11"/>
+        <location file="include/i2cdev.h" line="192" column="11" bodyfile="src/i2cdev.c" bodystart="305" bodyend="309" declfile="include/i2cdev.h" declline="192" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

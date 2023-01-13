@@ -44,5 +44,5 @@ var searchData=
   ['mpu6050_5fread_5fgyro_41',['mpu6050_read_gyro',['../mpu6050_8h.html#a6a709a3acda468f8ec109f09a3148a3a',1,'mpu6050_read_gyro(uint8_t *data_rd, size_t size):&#160;mpu6050.c'],['../mpu6050_8c.html#a6a709a3acda468f8ec109f09a3148a3a',1,'mpu6050_read_gyro(uint8_t *data_rd, size_t size):&#160;mpu6050.c']]],
   ['mpu6050_5fscl_42',['MPU6050_SCL',['../pin__defs_8h.html#ae4a616964509f7581d0d423bea83d657',1,'pin_defs.h']]],
   ['mpu6050_5fsda_43',['MPU6050_SDA',['../pin__defs_8h.html#a439afff9b79599edab1529f62443ea5f',1,'pin_defs.h']]],
-  ['mutex_44',['mutex',['../structi2c__dev__t.html#afb073a307ab7fb8817fb967107a958cd',1,'i2c_dev_t::mutex()'],['../group__i2cdev.html#gafc659d089f5608a17e8650e59a7e26fc',1,'mutex():&#160;i2cdev.c'],['../group__i2cdev.html#gafc659d089f5608a17e8650e59a7e26fc',1,'mutex():&#160;i2cdev.c']]]
+  ['mutex_44',['mutex',['../structi2c__dev__t.html#afb073a307ab7fb8817fb967107a958cd',1,'i2c_dev_t::mutex()'],['../group__i2cdev.html#gafc659d089f5608a17e8650e59a7e26fc',1,'mutex():&#160;i2cdev.h']]]
 ];

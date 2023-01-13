@@ -422,7 +422,6 @@
     <member refid="i2cdev_8c_1a28a94ff9b7ccdbfec8e18e66ba103c16" kind="define"><name>SEMAPHORE_GIVE</name></member>
     <member refid="i2cdev_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" kind="variable"><name>TAG</name></member>
     <member refid="i2cdev_8c_1aa01f1f0b40d091b1369e72052b401901" kind="variable"><name>states</name></member>
-    <member refid="group__i2cdev_1gafc659d089f5608a17e8650e59a7e26fc" kind="variable"><name>mutex</name></member>
     <member refid="i2cdev_8c_1ac1ab3a177117fc701db300be817034e4" kind="variable"><name>i2c_initialised</name></member>
     <member refid="group__i2cdev_1ga8a96ea2cf13f4b50a9f5d5e17f40e01b" kind="function"><name>i2cdev_init</name></member>
     <member refid="group__i2cdev_1ga320d9f51aab144397f75448801aa85e4" kind="function"><name>i2cdev_done</name></member>
