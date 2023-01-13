@@ -171,10 +171,19 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
 esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset);
 
 /**
- * @brief Function to calculate the MPU offset pitch and roll values
- * @param Input array of MPU offset pitch and roll values to store the results in (passed by reference)
+ * @brief Function to calculate the MPU offset for raw values.
  * @return esp_err_t returns ESP_OK if successful, else ESP_FAIL
  */
-esp_err_t calibrate_mpu6050(float *offset);
+esp_err_t calibrate_mpu6050();
+
+/**
+ * @brief Helper function for the function calibrate_mpu6050() to calculate the average of the raw values.
+ * @param acce_raw_value_avg Input array of accelerometer raw values (passed by reference) to be filled by the function.
+ * @param gyro_raw_value_avg Input array of gyroscope raw values (passed by reference) to be filled by the function.
+ * @param acce_offs Offset to be applied to the accelerometer raw values.
+ * @param gyro_offs Offset to be applied to the gyroscope raw values.
+ * @return esp_err_t returns ESP_OK if successful, else ESP_FAIL
+ */
+esp_err_t avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs);
 
 #endif
