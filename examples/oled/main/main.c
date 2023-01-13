@@ -29,22 +29,21 @@ static const char *TAG = "oled_example";
 
 void app_main()
 {
-	// Declaring an empty u8g2_t struct to configure the oled
-	u8g2_t oled_config;
+    // Initialising the OLED
+    init_oled();
+    vTaskDelay(100);
 
-	// Initialising the OLED
-	init_oled(&oled_config);
-	vTaskDelay(100);
+    // Clearing the screen
+    lv_obj_clean(lv_scr_act());
 
-	// Clearing the screen
-	u8g2_ClearBuffer(&oled_config);
+    // Printing the string on screen    
+    lv_obj_t *text_msg = lv_label_create(lv_scr_act());
+    lv_label_set_text(text_msg, "Hello from SRA");
+    lv_obj_align(text_msg, LV_ALIGN_CENTER, 0, 0);
 
-	// Setting the font and printing the string on screen
-	u8g2_SetFont(&oled_config, u8g2_font_ncenB14_tr);
-	u8g2_DrawStr(&oled_config, 2, 17, "Hello World!");
-
-	// Sending the buffer to the screen
-	u8g2_SendBuffer(&oled_config);
+    // Refresh Display
+    lv_refr_now(NULL);
 
 	ESP_LOGI(TAG, "Successfully displayed Hello World on the OLED Screen");
 }
+

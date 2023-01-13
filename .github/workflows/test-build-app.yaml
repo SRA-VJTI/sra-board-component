@@ -6,7 +6,7 @@ jobs:
     name: Test Build of component
     runs-on: ubuntu-latest
     container:
-      image: espressif/idf:release-v4.1
+      image: espressif/idf:release-v4.4
     strategy:
       matrix:
         test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled, stepper_motor]
@@ -14,11 +14,11 @@ jobs:
       - name: Force Install GIT latest
         run: |
           apt-get update \
-          && apt-get install -y software-properties-common \
+          && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common \
           && apt-get update \
           && add-apt-repository -y ppa:git-core/ppa \
           && apt-get update \
-          && apt-get install -y git
+          && DEBIAN_FRONTEND=noninteractive apt-get install -y git
       - name: Setup Github Actions
         uses: actions/checkout@v2
         with:
