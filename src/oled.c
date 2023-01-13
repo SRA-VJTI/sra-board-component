@@ -375,16 +375,34 @@ esp_err_t display_mpu(float pitch, float roll)
   // Printing pitch on oled
   lv_obj_t *pitch_reading = lv_label_create(lv_scr_act());
   char pitch_str[20];
-  snprintf(pitch_str, sizeof(pitch_str), "Pitch : %0.2f", pitch);
+  sprintf(pitch_str, "Pitch : %0.2f", pitch);
   lv_label_set_text(pitch_reading, pitch_str);
-  lv_obj_set_pos(pitch_reading, 2, 15);
+  lv_obj_set_pos(pitch_reading, 0, 18);
+  lv_obj_set_size(pitch_reading, 96 , lv_obj_get_self_height(pitch_reading));
 
   // Printing roll on oled
   lv_obj_t *roll_reading = lv_label_create(lv_scr_act());
   char roll_str[20];
-  snprintf(roll_str, sizeof(roll_str), "Roll : %0.2f", roll);
+  sprintf(roll_str, "Roll : %0.2f", roll);
   lv_label_set_text(roll_reading, roll_str);
-  lv_obj_set_pos(roll_reading, 2, 30);
+  lv_obj_set_pos(roll_reading, 0, 36);
+  lv_obj_set_size(pitch_reading, 96 , lv_obj_get_self_height(pitch_reading));
+
+  // Create Meter for Roll Readings
+  lv_obj_t * meter = lv_meter_create(lv_scr_act());
+  lv_obj_set_pos(meter, 64, 0);
+  lv_obj_set_size(meter, 64, 64);
+
+  // Set scale of meter and ticks
+  lv_meter_scale_t * scale = lv_meter_add_scale(meter);
+  lv_meter_set_scale_range(meter, scale, 40, -40, 180, 270);
+  lv_meter_set_scale_ticks(meter, scale, 19, 1, 4, lv_color_black());
+  lv_meter_set_scale_major_ticks(meter, scale, 9, 1, 4, lv_color_black(), 10);
+
+  // Add Needle
+  lv_meter_indicator_t * indic;
+  indic = lv_meter_add_needle_line(meter, scale, 2, lv_color_black(), -10);
+  lv_meter_set_indicator_value(meter, indic, pitch);
 
   // Refresh Display
   lv_refr_now(NULL);
