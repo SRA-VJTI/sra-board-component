@@ -43,6 +43,8 @@
 #define SRA_LOGO 1
 #define WALLE_LOGO 2
 #define MARIO_LOGO 3
+#define WALLE_TEXT CONFIG_WALL_E_LOGO_TEXT
+#define MARIO_TEXT CONFIG_MARIO_LOGO_TEXT
 
 /**
  * @brief enables and configures OLED display

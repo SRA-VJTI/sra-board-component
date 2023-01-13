@@ -307,7 +307,7 @@ esp_err_t display_logo(int logo_id)
       lv_obj_align(logo, LV_ALIGN_OUT_TOP_MID, 0, 0);
 
       // print "Wall-e" text on the screen
-      lv_label_set_text(text, CONFIG_WALL_E_LOGO_TEXT);
+      lv_label_set_text(text, WALLE_TEXT);
       lv_obj_set_size(text, lv_obj_get_self_width(text), 16);
       lv_obj_set_pos(text, 16, 48);
       ESP_LOGI(TAG_OLED, "Displayed Wall-E logo on OLED Screen");
@@ -320,7 +320,7 @@ esp_err_t display_logo(int logo_id)
       lv_obj_align(logo, LV_ALIGN_OUT_TOP_MID, 0, 0);
 
       // print "Mario" text on the screen
-      lv_label_set_text(text, CONFIG_MARIO_LOGO_TEXT);
+      lv_label_set_text(text, MARIO_TEXT);
       lv_obj_set_size(text, lv_obj_get_self_width(text), 16);
       lv_obj_set_pos(text, 16, 48);
       ESP_LOGI(TAG_OLED, "Displayed MARIO logo on OLED Screen");
