@@ -16,12 +16,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="42" column="9"/>
+        <location file="include/lsa.h" line="43" column="9"/>
       </memberdef>
-      <memberdef kind="variable" id="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" prot="public" static="no" mutable="no">
         <type>int</type>
-        <definition>int line_sensor_array::adc_reading[4]</definition>
-        <argsstring>[4]</argsstring>
+        <definition>int line_sensor_array::adc_reading[5]</definition>
+        <argsstring>[5]</argsstring>
         <name>adc_reading</name>
         <briefdescription>
         </briefdescription>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="44" column="9" bodyfile="include/lsa.h" bodystart="44" bodyend="-1"/>
+        <location file="include/lsa.h" line="45" column="9" bodyfile="include/lsa.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,9 +49,9 @@
         <link refid="structline__sensor__array_1_1line__sensor"/>
       </node>
     </collaborationgraph>
-    <location file="include/lsa.h" line="34" column="1" bodyfile="include/lsa.h" bodystart="35" bodyend="45"/>
+    <location file="include/lsa.h" line="34" column="1" bodyfile="include/lsa.h" bodystart="35" bodyend="46"/>
     <listofallmembers>
-      <member refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>adc_reading</name></member>
+      <member refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>adc_reading</name></member>
       <member refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" prot="public" virt="non-virtual"><scope>line_sensor_array</scope><name>lsa</name></member>
     </listofallmembers>
   </compounddef>

@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="49" column="11" bodyfile="src/adc.c" bodystart="29" bodyend="43" declfile="include/adc.h" declline="49" declcolumn="11"/>
+        <location file="include/adc.h" line="49" column="11" bodyfile="src/adc.c" bodystart="29" bodyend="44" declfile="include/adc.h" declline="49" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="56" column="11" bodyfile="src/adc.c" bodystart="45" bodyend="65" declfile="include/adc.h" declline="56" declcolumn="11"/>
+        <location file="include/adc.h" line="56" column="11" bodyfile="src/adc.c" bodystart="46" bodyend="66" declfile="include/adc.h" declline="56" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1ab564ea72fa47c36b9d06977ea586cb1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="63" column="11" bodyfile="src/adc.c" bodystart="67" bodyend="75" declfile="include/adc.h" declline="63" declcolumn="11"/>
+        <location file="include/adc.h" line="63" column="11" bodyfile="src/adc.c" bodystart="68" bodyend="76" declfile="include/adc.h" declline="63" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/adc.h" line="72" column="5" bodyfile="src/adc.c" bodystart="77" bodyend="100" declfile="include/adc.h" declline="72" declcolumn="5"/>
+        <location file="include/adc.h" line="72" column="5" bodyfile="src/adc.c" bodystart="78" bodyend="105" declfile="include/adc.h" declline="72" declcolumn="5"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

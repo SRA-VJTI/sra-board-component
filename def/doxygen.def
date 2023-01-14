@@ -252,6 +252,24 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structline__sensor__array_1_1line__sensor_1a53d376dbad541492d7053dc73539f54b';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'A4';
+      sec-mem-desc-file = '/github/workspace/include/lsa.h';
+      sec-mem-desc-line = '42';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
   }; /* cp-section */
   cp-filename  = '/github/workspace/include/lsa.h';
   cp-fileline  = '36';
@@ -277,7 +295,7 @@ struct line_sensor_array::line_sensor
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'lsa';
       sec-mem-desc-file = '/github/workspace/include/lsa.h';
-      sec-mem-desc-line = '42';
+      sec-mem-desc-line = '43';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -287,7 +305,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673';
+      sec-mem-id   = 'unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -295,7 +313,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'adc_reading';
       sec-mem-desc-file = '/github/workspace/include/lsa.h';
-      sec-mem-desc-line = '44';
+      sec-mem-desc-line = '45';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -624,24 +642,18 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_bar_graph';
       func-mem-desc-file = '/github/workspace/include/bar_graph.h';
-      func-mem-desc-line = '59';
+      func-mem-desc-line = '53';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables the bar graph led's gpio pins
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-It will check for state of motor driver A and B, and accordingly init the free gpios.
+It will check for state of motor driver A, and accordingly init the free gpios.
 <hr>
 <table class="markdownTable">
-  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A \ilinebr </th>    <th class="markdownTableHeadNone"> Motor Driver B \ilinebr </th>    <th class="markdownTableHeadNone"> Mode \ilinebr </th>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 1 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 2 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 3 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 4 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 5 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 6 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 7 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 8 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 0 \ilinebr </td>  </tr></table>
+  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A \ilinebr </th>    <th class="markdownTableHeadNone"> Mode \ilinebr </th>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 0 \ilinebr </td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 1 \ilinebr </td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 2 \ilinebr </td>  </tr></table>
 
 enabled_bar_graph_flag is set to the value of Mode accordingly.
 
@@ -666,7 +678,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'data';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/bar_graph.h';
-      func-mem-desc-line = '98';
+      func-mem-desc-line = '91';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the value of bar graph LED.
 _EnD_oF_dEf_TeXt_;
@@ -674,22 +686,21 @@ _EnD_oF_dEf_TeXt_;
 The exact working of this is a bit hard to understand, so this is example. Below are the given states of motor drivers
 
 Motor Driver A: Normal
-Motor Driver B: Off
-Mode = 7, so for mode = 7,
-mask = bitmask[7] = 0x0F = 00001111
+Mode = 2, so for mode = 2,
+mask = bitmask[2] = 0x0F = 00001111
 data = 0xAA = 10101010
 
-Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED
+Since, motor driver A is in normal mode, we can only use IN5, IN6, IN7, IN8 pins of the bar graph LED
 
 @code 
 LED1 <-----> Motor Driver A (IN1) ----- 0    
 LED2 <-----> Motor Driver A (IN2) ----- 0    
 LED3 <-----> Motor Driver A (IN3) ----- 0    
-LED4 <-----> Motor Driver A (IN4) ----- 0    
-LED5 <--X--> Motor Driver B (IN5) ----- 1    
-LED6 <--X--> Motor Driver B (IN6) ----- 1    
-LED7 <--X--> Motor Driver B (IN7) ----- 1    
-LED8 <--X--> Motor Driver B (IN8) ----- 1    
+LED4 <-----> Motor Driver A (IN4) ----- 0
+LED5 <--X--> -------------- (IN5) ----- 1
+LED6 <--X--> -------------- (IN6) ----- 1
+LED7 <--X--> -------------- (IN7) ----- 1
+LED8 <--X--> -------------- (IN8) ----- 1
 @endcode
 
 Mask ==> 00001111 => 0x0F
@@ -724,7 +735,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'input_array';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/bar_graph.h';
-      func-mem-desc-line = '106';
+      func-mem-desc-line = '99';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 converts a boolean array of size 8 into 8-bit unsigned integer
 _EnD_oF_dEf_TeXt_;
@@ -1356,7 +1367,7 @@ union line_sensor_array
 _EnD_oF_dEf_TeXt_;
       typedef-mem-name = 'line_sensor_array';
       typedef-mem-desc-file = '/github/workspace/include/lsa.h';
-      typedef-mem-desc-line = '45';
+      typedef-mem-desc-line = '46';
       typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1376,7 +1387,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_line_sensor';
       func-mem-desc-file = '/github/workspace/include/lsa.h';
-      func-mem-desc-line = '54';
+      func-mem-desc-line = '55';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables and configures adc
 _EnD_oF_dEf_TeXt_;
@@ -1396,7 +1407,7 @@ line_sensor_array
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_line_sensor';
       func-mem-desc-file = '/github/workspace/include/lsa.h';
-      func-mem-desc-line = '64';
+      func-mem-desc-line = '65';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get multisampled line sensor array readings.
 _EnD_oF_dEf_TeXt_;
@@ -5339,42 +5350,6 @@ _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MOTOR_B_0';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-102
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '47';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MOTOR_B_1';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-103
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '48';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
       define-mem-id   = 'motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85';
       define-mem-virt = normal;
       define-mem-prot = public;
@@ -5389,12 +5364,12 @@ _EnD_oF_dEf_TeXt_;
 enable_motor_driver_##id(mode)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '56';
+      define-mem-desc-line = '54';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver in Parallel or Normal Mode.
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param id for id=a, enables motor driver a and for id=b, enables motor driver b
+@param id for id=a, enables motor driver a
 @param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
@@ -5411,13 +5386,13 @@ _EnD_oF_dEf_TeXt_;
 read_motor_driver_mode_##id()
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '64';
+      define-mem-desc-line = '62';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver.
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param id for id=a, returns mode of motor driver a, for id=b, returns mode of motor driver b
-@return int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode
+@param id for id=a, returns mode of motor driver a
+@return int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     };
@@ -5438,34 +5413,9 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mode';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '72';
+      func-mem-desc-line = '70';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver A in Parallel or Normal Mode.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
-@return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8h_1a11c7858cdd467a4bbcff436e43a585e1';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-esp_err_t
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'enable_motor_driver_b';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'mode';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '80';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Enables Motor driver B in Parallel or Normal Mode.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
@@ -5500,12 +5450,12 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'duty_cycle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '90';
+      func-mem-desc-line = '80';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the speed of motors.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param motor_id set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction
+@param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction
 @param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor
 @param duty_cycle set the duty cycle of the motor driver PWM
 @return esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs
@@ -5521,30 +5471,12 @@ int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_motor_driver_mode_a';
       func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '97';
+      func-mem-desc-line = '87';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver A.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @return int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8h_1a61b75cb1eb76f0a02144746799c6b3e1';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'read_motor_driver_mode_b';
-      func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '104';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Reads mode of motor driver B.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
@@ -6786,7 +6718,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_1';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-32
+12
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '59';
@@ -6894,7 +6826,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_7';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-12
+13
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '65';
@@ -6912,7 +6844,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_8';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-13
+23
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '66';
@@ -7069,15 +7001,33 @@ _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
+      define-mem-id   = 'pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'LSA_A4';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+32
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
+      define-mem-desc-line = '81';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
       define-mem-id   = 'pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16';
       define-mem-virt = normal;
       define-mem-prot = public;
       define-mem-name = 'MDA_NORMAL_IN_1';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-32
+12
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '85';
+      define-mem-desc-line = '86';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7095,7 +7045,7 @@ _EnD_oF_dEf_TeXt_;
 33
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '86';
+      define-mem-desc-line = '87';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7113,7 +7063,7 @@ _EnD_oF_dEf_TeXt_;
 25
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '87';
+      define-mem-desc-line = '88';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7131,79 +7081,7 @@ _EnD_oF_dEf_TeXt_;
 26
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '88';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1a074f338976294deee773f86c149766af';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MDB_NORMAL_IN_5';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-27
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '89';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1a5186251144aeb6708634d2e53eb37fa6';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MDB_NORMAL_IN_6';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-14
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '90';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1a45d361c8ed90ddb9c56d418eda0ad7a7';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MDB_NORMAL_IN_7';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-12
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '91';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1ae5c32c4e625ae38744483f26fbb809ad';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MDB_NORMAL_IN_8';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-13
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '92';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7221,7 +7099,7 @@ _EnD_oF_dEf_TeXt_;
 25
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '95';
+      define-mem-desc-line = '92';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7239,43 +7117,7 @@ _EnD_oF_dEf_TeXt_;
 26
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '96';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1aa7eeb54d670ea6ca908825e393b75d33';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MDB_PARALLEL_IN_5_7';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-12
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '97';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1a311349d98da80e0ea71b910031fd0f60';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MDB_PARALLEL_IN_6_8';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-13
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '98';
+      define-mem-desc-line = '93';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7293,7 +7135,7 @@ _EnD_oF_dEf_TeXt_;
 15
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '102';
+      define-mem-desc-line = '97';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7311,7 +7153,7 @@ _EnD_oF_dEf_TeXt_;
 5
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '103';
+      define-mem-desc-line = '98';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7329,7 +7171,7 @@ _EnD_oF_dEf_TeXt_;
 19
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '104';
+      define-mem-desc-line = '99';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7347,7 +7189,7 @@ _EnD_oF_dEf_TeXt_;
 18
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '105';
+      define-mem-desc-line = '100';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7670,7 +7512,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'characterize_adc1';
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '45';
+      func-mem-desc-line = '46';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Characterize ADC 1 using either Vref or Two Point.
 _EnD_oF_dEf_TeXt_;
@@ -7688,7 +7530,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_adc1';
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '67';
+      func-mem-desc-line = '68';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 call function config_adc1() and characterize_adc1().
 _EnD_oF_dEf_TeXt_;
@@ -7712,7 +7554,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'adc_pin';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '77';
+      func-mem-desc-line = '78';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read raw adc value of given adc pin.
 _EnD_oF_dEf_TeXt_;
@@ -7769,24 +7611,18 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_bar_graph';
       func-mem-desc-file = '/github/workspace/src/bar_graph.c';
-      func-mem-desc-line = '40';
+      func-mem-desc-line = '39';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables the bar graph led's gpio pins
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-It will check for state of motor driver A and B, and accordingly init the free gpios.
+It will check for state of motor driver A, and accordingly init the free gpios.
 <hr>
 <table class="markdownTable">
-  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A \ilinebr </th>    <th class="markdownTableHeadNone"> Motor Driver B \ilinebr </th>    <th class="markdownTableHeadNone"> Mode \ilinebr </th>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 1 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 2 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 3 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 4 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 5 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 6 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 7 \ilinebr </td>  </tr>
-<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 8 \ilinebr </td>  </tr>
-<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 0 \ilinebr </td>  </tr></table>
+  <tr class="markdownTableHead">    <th class="markdownTableHeadNone"> Motor Driver A \ilinebr </th>    <th class="markdownTableHeadNone"> Mode \ilinebr </th>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> off \ilinebr </td>    <td class="markdownTableBodyNone"> 0 \ilinebr </td>  </tr>
+<tr class="markdownTableRowEven">    <td class="markdownTableBodyNone"> parallel \ilinebr </td>    <td class="markdownTableBodyNone"> 1 \ilinebr </td>  </tr>
+<tr class="markdownTableRowOdd">    <td class="markdownTableBodyNone"> normal \ilinebr </td>    <td class="markdownTableBodyNone"> 2 \ilinebr </td>  </tr></table>
 
 enabled_bar_graph_flag is set to the value of Mode accordingly.
 
@@ -7811,7 +7647,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'data';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/bar_graph.c';
-      func-mem-desc-line = '127';
+      func-mem-desc-line = '88';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the value of bar graph LED.
 _EnD_oF_dEf_TeXt_;
@@ -7819,22 +7655,21 @@ _EnD_oF_dEf_TeXt_;
 The exact working of this is a bit hard to understand, so this is example. Below are the given states of motor drivers
 
 Motor Driver A: Normal
-Motor Driver B: Off
-Mode = 7, so for mode = 7,
-mask = bitmask[7] = 0x0F = 00001111
+Mode = 2, so for mode = 2,
+mask = bitmask[2] = 0x0F = 00001111
 data = 0xAA = 10101010
 
-Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED
+Since, motor driver A is in normal mode, we can only use IN5, IN6, IN7, IN8 pins of the bar graph LED
 
 @code 
 LED1 <-----> Motor Driver A (IN1) ----- 0    
 LED2 <-----> Motor Driver A (IN2) ----- 0    
 LED3 <-----> Motor Driver A (IN3) ----- 0    
-LED4 <-----> Motor Driver A (IN4) ----- 0    
-LED5 <--X--> Motor Driver B (IN5) ----- 1    
-LED6 <--X--> Motor Driver B (IN6) ----- 1    
-LED7 <--X--> Motor Driver B (IN7) ----- 1    
-LED8 <--X--> Motor Driver B (IN8) ----- 1    
+LED4 <-----> Motor Driver A (IN4) ----- 0
+LED5 <--X--> -------------- (IN5) ----- 1
+LED6 <--X--> -------------- (IN6) ----- 1
+LED7 <--X--> -------------- (IN7) ----- 1
+LED8 <--X--> -------------- (IN8) ----- 1
 @endcode
 
 Mask ==> 00001111 => 0x0F
@@ -7869,7 +7704,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'input_array';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/bar_graph.c';
-      func-mem-desc-line = '162';
+      func-mem-desc-line = '123';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 converts a boolean array of size 8 into 8-bit unsigned integer
 _EnD_oF_dEf_TeXt_;
@@ -7924,7 +7759,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'bar__graph_8c_1addb2cb3522d4b0bb9f4e6dcbef9ff958';
+      var-mem-id   = 'bar__graph_8c_1a759142241715f6d36b801742aabffbeb';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -7932,7 +7767,7 @@ static const uint8_t
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'bitmask';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= {0x00, 0xFF, 0xFC, 0xF0, 0xCF, 0xCC, 0xC0, 0x0F, 0x0C}
+= {0xFF, 0xCF, 0x0F}
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/bar_graph.c';
       var-mem-desc-line = '34';
@@ -7956,7 +7791,7 @@ _EnD_oF_dEf_TeXt_;
 = {BG_LED_1, BG_LED_2, BG_LED_3, BG_LED_4, BG_LED_5, BG_LED_6, BG_LED_7, BG_LED_8}
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/bar_graph.c';
-      var-mem-desc-line = '38';
+      var-mem-desc-line = '37';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8571,7 +8406,7 @@ _EnD_oF_dEf_TeXt_;
     var = {
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'lsa_8c_1a562fb80fd8fb21d608a04ff792eab99b';
+      var-mem-id   = 'lsa_8c_1aac1676855a0ef8b82f36998025182fbe';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -8579,7 +8414,7 @@ static const int
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'line_sensor_pins';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= {LSA_A0, LSA_A1, LSA_A2, LSA_A3}
+= {LSA_A0, LSA_A1, LSA_A2, LSA_A3, LSA_A4}
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/lsa.c';
       var-mem-desc-line = '27';
@@ -9043,34 +8878,9 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mode';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '31';
+      func-mem-desc-line = '30';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Motor driver A in Parallel or Normal Mode.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
-@return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8c_1a11c7858cdd467a4bbcff436e43a585e1';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-esp_err_t
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'enable_motor_driver_b';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'mode';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '107';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Enables Motor driver B in Parallel or Normal Mode.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
@@ -9111,7 +8921,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'timer_num';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '183';
+      func-mem-desc-line = '106';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9147,12 +8957,12 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'duty_cycle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '219';
+      func-mem-desc-line = '142';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the speed of motors.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param motor_id set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction
+@param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction
 @param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor
 @param duty_cycle set the duty cycle of the motor driver PWM
 @return esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs
@@ -9168,30 +8978,12 @@ int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_motor_driver_mode_a';
       func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '264';
+      func-mem-desc-line = '169';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Reads mode of motor driver A.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @return int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8c_1a61b75cb1eb76f0a02144746799c6b3e1';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'read_motor_driver_mode_b';
-      func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '269';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Reads mode of motor driver B.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
@@ -9231,27 +9023,6 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/motor_driver.c';
       var-mem-desc-line = '28';
-      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* var-member */
-    var-member = {
-      var-mem-kind = 'variable';
-      var-mem-id   = 'motor__driver_8c_1a214718d6a8178ee9f2a66f4689080507';
-      var-mem-virt = normal;
-      var-mem-prot = public;
-      var-mem-type = <<_EnD_oF_dEf_TeXt_
-static int
-_EnD_oF_dEf_TeXt_;
-      var-mem-name = 'mode_motor_driver_b';
-      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= 0
-_EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      var-mem-desc-line = '29';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;

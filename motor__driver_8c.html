@@ -96,18 +96,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a9fc3907d0ee8196eca819e1e5e1c6977"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977">enable_motor_driver_a</a> (int mode)</td></tr>
 <tr class="memdesc:a9fc3907d0ee8196eca819e1e5e1c6977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables Motor driver A in Parallel or Normal Mode.  <a href="motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977">More...</a><br /></td></tr>
 <tr class="separator:a9fc3907d0ee8196eca819e1e5e1c6977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c7858cdd467a4bbcff436e43a585e1"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a11c7858cdd467a4bbcff436e43a585e1">enable_motor_driver_b</a> (int mode)</td></tr>
-<tr class="memdesc:a11c7858cdd467a4bbcff436e43a585e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables Motor driver B in Parallel or Normal Mode.  <a href="motor__driver_8c.html#a11c7858cdd467a4bbcff436e43a585e1">More...</a><br /></td></tr>
-<tr class="separator:a11c7858cdd467a4bbcff436e43a585e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a027943094f99f52b1ea067ab85384686"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a027943094f99f52b1ea067ab85384686">set_motor_speed</a> (int motor_id, int direction, float duty_cycle)</td></tr>
 <tr class="memdesc:a027943094f99f52b1ea067ab85384686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the speed of motors.  <a href="motor__driver_8c.html#a027943094f99f52b1ea067ab85384686">More...</a><br /></td></tr>
 <tr class="separator:a027943094f99f52b1ea067ab85384686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ed1b0e385fe871d79ac02fc5177768"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#ae7ed1b0e385fe871d79ac02fc5177768">read_motor_driver_mode_a</a> ()</td></tr>
 <tr class="memdesc:ae7ed1b0e385fe871d79ac02fc5177768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads mode of motor driver A.  <a href="motor__driver_8c.html#ae7ed1b0e385fe871d79ac02fc5177768">More...</a><br /></td></tr>
 <tr class="separator:ae7ed1b0e385fe871d79ac02fc5177768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61b75cb1eb76f0a02144746799c6b3e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a61b75cb1eb76f0a02144746799c6b3e1">read_motor_driver_mode_b</a> ()</td></tr>
-<tr class="memdesc:a61b75cb1eb76f0a02144746799c6b3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads mode of motor driver B.  <a href="motor__driver_8c.html#a61b75cb1eb76f0a02144746799c6b3e1">More...</a><br /></td></tr>
-<tr class="separator:a61b75cb1eb76f0a02144746799c6b3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a9fc3907d0ee8196eca819e1e5e1c6977" name="a9fc3907d0ee8196eca819e1e5e1c6977"></a>
@@ -137,33 +131,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a11c7858cdd467a4bbcff436e43a585e1" name="a11c7858cdd467a4bbcff436e43a585e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11c7858cdd467a4bbcff436e43a585e1">&#9670;&nbsp;</a></span>enable_motor_driver_b()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">esp_err_t enable_motor_driver_b </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enables Motor driver B in Parallel or Normal Mode. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mode</td><td>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </dd></dl>
-
-</div>
-</div>
 <a id="ae7ed1b0e385fe871d79ac02fc5177768" name="ae7ed1b0e385fe871d79ac02fc5177768"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7ed1b0e385fe871d79ac02fc5177768">&#9670;&nbsp;</a></span>read_motor_driver_mode_a()</h2>
 
@@ -181,26 +148,6 @@ Functions</h2></td></tr>
 
 <p>Reads mode of motor driver A. </p>
 <dl class="section return"><dt>Returns</dt><dd>int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode </dd></dl>
-
-</div>
-</div>
-<a id="a61b75cb1eb76f0a02144746799c6b3e1" name="a61b75cb1eb76f0a02144746799c6b3e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61b75cb1eb76f0a02144746799c6b3e1">&#9670;&nbsp;</a></span>read_motor_driver_mode_b()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int read_motor_driver_mode_b </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads mode of motor driver B. </p>
-<dl class="section return"><dt>Returns</dt><dd>int returns mode of motor driver B, 1 = Parallel mode, 2 = Normal mode </dd></dl>
 
 </div>
 </div>
@@ -239,7 +186,7 @@ Functions</h2></td></tr>
 <p>Set the speed of motors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">motor_id</td><td>set it as MOTOR_A_0, MOTOR_A_1, MOTOR_B_0, MOTOR_B_1 to select the appropriate motor to set its speed and direction </td></tr>
+    <tr><td class="paramname">motor_id</td><td>set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction </td></tr>
     <tr><td class="paramname">direction</td><td>set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor </td></tr>
     <tr><td class="paramname">duty_cycle</td><td>set the duty cycle of the motor driver PWM </td></tr>
   </table>

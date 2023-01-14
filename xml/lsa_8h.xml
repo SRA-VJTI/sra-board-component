@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="45" column="19"/>
+        <location file="include/lsa.h" line="46" column="19"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="54" column="11" bodyfile="src/lsa.c" bodystart="29" bodyend="33" declfile="include/lsa.h" declline="54" declcolumn="11"/>
+        <location file="include/lsa.h" line="55" column="11" bodyfile="src/lsa.c" bodystart="29" bodyend="33" declfile="include/lsa.h" declline="55" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref></type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lsa.h" line="64" column="19" bodyfile="src/lsa.c" bodystart="35" bodyend="58" declfile="include/lsa.h" declline="64" declcolumn="19"/>
+        <location file="include/lsa.h" line="65" column="19" bodyfile="src/lsa.c" bodystart="35" bodyend="58" declfile="include/lsa.h" declline="65" declcolumn="19"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -236,16 +236,17 @@
 <codeline lineno="39" refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kindref="member">A1</ref>;</highlight></codeline>
 <codeline lineno="40" refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" kindref="member">A2</ref>;</highlight></codeline>
 <codeline lineno="41" refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" kindref="member">A3</ref>;</highlight></codeline>
-<codeline lineno="42" refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kindref="member">lsa</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[4];</highlight></codeline>
-<codeline lineno="45" refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" refkind="member"><highlight class="normal">}<sp/><ref refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" kindref="member">line_sensor_array</ref>;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd" kindref="member">enable_line_sensor</ref>();</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/><ref refid="lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2" kindref="member">read_line_sensor</ref>();</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="42" refid="structline__sensor__array_1_1line__sensor_1a53d376dbad541492d7053dc73539f54b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structline__sensor__array_1_1line__sensor_1a53d376dbad541492d7053dc73539f54b" kindref="member">A4</ref>;</highlight></codeline>
+<codeline lineno="43" refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kindref="member">lsa</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[5];</highlight></codeline>
+<codeline lineno="46" refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" refkind="member"><highlight class="normal">}<sp/><ref refid="lsa_8h_1abcc31f8fc8c2fa816012d1fcf059a19c" kindref="member">line_sensor_array</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd" kindref="member">enable_line_sensor</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/><ref refid="lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2" kindref="member">read_line_sensor</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/lsa.h"/>
   </compounddef>

@@ -17,10 +17,11 @@
     <member refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kind="variable"><name>A1</name></member>
     <member refid="structline__sensor__array_1_1line__sensor_1a0cb2e4a77c046952a58441f9db10438c" kind="variable"><name>A2</name></member>
     <member refid="structline__sensor__array_1_1line__sensor_1a78bbdd03189079ec65a1148bac0597f7" kind="variable"><name>A3</name></member>
+    <member refid="structline__sensor__array_1_1line__sensor_1a53d376dbad541492d7053dc73539f54b" kind="variable"><name>A4</name></member>
   </compound>
   <compound refid="unionline__sensor__array" kind="union"><name>line_sensor_array</name>
     <member refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kind="variable"><name>lsa</name></member>
-    <member refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kind="variable"><name>adc_reading</name></member>
+    <member refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kind="variable"><name>adc_reading</name></member>
   </compound>
   <compound refid="structservo__config" kind="struct"><name>servo_config</name>
     <member refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kind="variable"><name>servo_pin</name></member>
@@ -286,15 +287,11 @@
     <member refid="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" kind="define"><name>MOTOR_STOP</name></member>
     <member refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kind="define"><name>MOTOR_A_0</name></member>
     <member refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" kind="define"><name>MOTOR_A_1</name></member>
-    <member refid="motor__driver_8h_1aefb7d31b18eda2fefe6719d839bd69f9" kind="define"><name>MOTOR_B_0</name></member>
-    <member refid="motor__driver_8h_1aa99d57f658aa2b0cfc53c0cc75fce719" kind="define"><name>MOTOR_B_1</name></member>
     <member refid="motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85" kind="define"><name>enable_motor_driver</name></member>
     <member refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kind="define"><name>read_motor_driver_mode</name></member>
     <member refid="motor__driver_8h_1a9fc3907d0ee8196eca819e1e5e1c6977" kind="function"><name>enable_motor_driver_a</name></member>
-    <member refid="motor__driver_8h_1a11c7858cdd467a4bbcff436e43a585e1" kind="function"><name>enable_motor_driver_b</name></member>
     <member refid="motor__driver_8h_1a027943094f99f52b1ea067ab85384686" kind="function"><name>set_motor_speed</name></member>
     <member refid="motor__driver_8h_1ae7ed1b0e385fe871d79ac02fc5177768" kind="function"><name>read_motor_driver_mode_a</name></member>
-    <member refid="motor__driver_8h_1a61b75cb1eb76f0a02144746799c6b3e1" kind="function"><name>read_motor_driver_mode_b</name></member>
   </compound>
   <compound refid="mpu6050_8h" kind="file"><name>mpu6050.h</name>
     <member refid="mpu6050_8h_1a033b5e8a30541fe4ff939a62fdb7a43d" kind="define"><name>I2C_MASTER_SCL_IO</name></member>
@@ -367,18 +364,13 @@
     <member refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kind="define"><name>LSA_A1</name></member>
     <member refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kind="define"><name>LSA_A2</name></member>
     <member refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kind="define"><name>LSA_A3</name></member>
+    <member refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kind="define"><name>LSA_A4</name></member>
     <member refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" kind="define"><name>MDA_NORMAL_IN_1</name></member>
     <member refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" kind="define"><name>MDA_NORMAL_IN_2</name></member>
     <member refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" kind="define"><name>MDA_NORMAL_IN_3</name></member>
     <member refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" kind="define"><name>MDA_NORMAL_IN_4</name></member>
-    <member refid="pin__defs_8h_1a074f338976294deee773f86c149766af" kind="define"><name>MDB_NORMAL_IN_5</name></member>
-    <member refid="pin__defs_8h_1a5186251144aeb6708634d2e53eb37fa6" kind="define"><name>MDB_NORMAL_IN_6</name></member>
-    <member refid="pin__defs_8h_1a45d361c8ed90ddb9c56d418eda0ad7a7" kind="define"><name>MDB_NORMAL_IN_7</name></member>
-    <member refid="pin__defs_8h_1ae5c32c4e625ae38744483f26fbb809ad" kind="define"><name>MDB_NORMAL_IN_8</name></member>
     <member refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" kind="define"><name>MDA_PARALLEL_IN_1_2</name></member>
     <member refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" kind="define"><name>MDA_PARALLEL_IN_3_4</name></member>
-    <member refid="pin__defs_8h_1aa7eeb54d670ea6ca908825e393b75d33" kind="define"><name>MDB_PARALLEL_IN_5_7</name></member>
-    <member refid="pin__defs_8h_1a311349d98da80e0ea71b910031fd0f60" kind="define"><name>MDB_PARALLEL_IN_6_8</name></member>
     <member refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" kind="define"><name>SERVO_A</name></member>
     <member refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kind="define"><name>SERVO_B</name></member>
     <member refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kind="define"><name>SERVO_C</name></member>
@@ -411,7 +403,7 @@
   <compound refid="bar__graph_8c" kind="file"><name>bar_graph.c</name>
     <member refid="bar__graph_8c_1a20e93b67ced1c6f3e3799b413b75daff" kind="variable"><name>TAG_BAR_GRAPH</name></member>
     <member refid="bar__graph_8c_1a425348a406dd9fcdf5baed9fad5c4edc" kind="variable"><name>enabled_bar_graph_flag</name></member>
-    <member refid="bar__graph_8c_1addb2cb3522d4b0bb9f4e6dcbef9ff958" kind="variable"><name>bitmask</name></member>
+    <member refid="bar__graph_8c_1a759142241715f6d36b801742aabffbeb" kind="variable"><name>bitmask</name></member>
     <member refid="bar__graph_8c_1a9941740159d6edc34ca8c4c17d3c45e4" kind="variable"><name>pin_out</name></member>
     <member refid="bar__graph_8c_1ab10cdc6b54d4e647335eebb25dabd2f7" kind="function"><name>enable_bar_graph</name></member>
     <member refid="bar__graph_8c_1ae3c6552600f6d84335edd8bb6095fe3a" kind="function"><name>set_bar_graph</name></member>
@@ -437,7 +429,7 @@
     <member refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kind="function"><name>i2c_dev_write_reg</name></member>
   </compound>
   <compound refid="lsa_8c" kind="file"><name>lsa.c</name>
-    <member refid="lsa_8c_1a562fb80fd8fb21d608a04ff792eab99b" kind="variable"><name>line_sensor_pins</name></member>
+    <member refid="lsa_8c_1aac1676855a0ef8b82f36998025182fbe" kind="variable"><name>line_sensor_pins</name></member>
     <member refid="lsa_8c_1ae100292bb09dfe139df0cafc36ef19fd" kind="function"><name>enable_line_sensor</name></member>
     <member refid="lsa_8c_1a3db021dc5dafaf9643129580e2b17ea2" kind="function"><name>read_line_sensor</name></member>
   </compound>
@@ -459,13 +451,10 @@
   <compound refid="motor__driver_8c" kind="file"><name>motor_driver.c</name>
     <member refid="motor__driver_8c_1a8fcaec0ebdaf902608c2c55dd047cc6b" kind="variable"><name>TAG_MOTOR_DRIVER</name></member>
     <member refid="motor__driver_8c_1aa7773c94ae40290aa934c7fb3b243e0a" kind="variable"><name>mode_motor_driver_a</name></member>
-    <member refid="motor__driver_8c_1a214718d6a8178ee9f2a66f4689080507" kind="variable"><name>mode_motor_driver_b</name></member>
     <member refid="motor__driver_8c_1a9fc3907d0ee8196eca819e1e5e1c6977" kind="function"><name>enable_motor_driver_a</name></member>
-    <member refid="motor__driver_8c_1a11c7858cdd467a4bbcff436e43a585e1" kind="function"><name>enable_motor_driver_b</name></member>
     <member refid="motor__driver_8c_1a7f29277a8306338a778cd11d99433eb1" kind="function"><name>set_motor_speed_helper</name></member>
     <member refid="motor__driver_8c_1a027943094f99f52b1ea067ab85384686" kind="function"><name>set_motor_speed</name></member>
     <member refid="motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768" kind="function"><name>read_motor_driver_mode_a</name></member>
-    <member refid="motor__driver_8c_1a61b75cb1eb76f0a02144746799c6b3e1" kind="function"><name>read_motor_driver_mode_b</name></member>
   </compound>
   <compound refid="mpu6050_8c" kind="file"><name>mpu6050.c</name>
     <member refid="mpu6050_8c_1ab48a7997f8dce4ee930a82b44e4c9e70" kind="variable"><name>TAG_MPU</name></member>

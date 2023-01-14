@@ -151,28 +151,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>enables the bar graph led's gpio pins </p>
-<p >It will check for state of motor driver A and B, and accordingly init the free gpios. </p><hr  />
+<p >It will check for state of motor driver A, and accordingly init the free gpios. </p><hr  />
  <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Motor Driver A   </th><th class="markdownTableHeadNone">Motor Driver B   </th><th class="markdownTableHeadNone">Mode    </th></tr>
+<th class="markdownTableHeadNone">Motor Driver A   </th><th class="markdownTableHeadNone">Mode    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">1    </td></tr>
+<td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">0    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">2    </td></tr>
+<td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">1    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">5    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">6    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">off   </td><td class="markdownTableBodyNone">7    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">parallel   </td><td class="markdownTableBodyNone">8    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">0   </td></tr>
+<td class="markdownTableBodyNone">normal   </td><td class="markdownTableBodyNone">2   </td></tr>
 </table>
 <p >enabled_bar_graph_flag is set to the value of Mode accordingly.</p>
 <dl class="section return"><dt>Returns</dt><dd>esp_err_t returns ESP_OK if enabled correctly, and ESP_FAIL if it failed to initialise </dd></dl>
@@ -197,16 +185,16 @@ Functions</h2></td></tr>
 
 <p>Set the value of bar graph LED. </p>
 <p >The exact working of this is a bit hard to understand, so this is example. Below are the given states of motor drivers</p>
-<p >Motor Driver A: Normal Motor Driver B: Off Mode = 7, so for mode = 7, mask = bitmask[7] = 0x0F = 00001111 data = 0xAA = 10101010</p>
-<p >Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED</p>
+<p >Motor Driver A: Normal Mode = 2, so for mode = 2, mask = bitmask[2] = 0x0F = 00001111 data = 0xAA = 10101010</p>
+<p >Since, motor driver A is in normal mode, we can only use IN5, IN6, IN7, IN8 pins of the bar graph LED</p>
 <div class="fragment"><div class="line">LED1 &lt;-----&gt; Motor Driver A (IN1) ----- 0    </div>
 <div class="line">LED2 &lt;-----&gt; Motor Driver A (IN2) ----- 0    </div>
 <div class="line">LED3 &lt;-----&gt; Motor Driver A (IN3) ----- 0    </div>
-<div class="line">LED4 &lt;-----&gt; Motor Driver A (IN4) ----- 0    </div>
-<div class="line">LED5 &lt;--X--&gt; Motor Driver B (IN5) ----- 1    </div>
-<div class="line">LED6 &lt;--X--&gt; Motor Driver B (IN6) ----- 1    </div>
-<div class="line">LED7 &lt;--X--&gt; Motor Driver B (IN7) ----- 1    </div>
-<div class="line">LED8 &lt;--X--&gt; Motor Driver B (IN8) ----- 1    </div>
+<div class="line">LED4 &lt;-----&gt; Motor Driver A (IN4) ----- 0</div>
+<div class="line">LED5 &lt;--X--&gt; -------------- (IN5) ----- 1</div>
+<div class="line">LED6 &lt;--X--&gt; -------------- (IN6) ----- 1</div>
+<div class="line">LED7 &lt;--X--&gt; -------------- (IN7) ----- 1</div>
+<div class="line">LED8 &lt;--X--&gt; -------------- (IN8) ----- 1</div>
 </div><!-- fragment --><p >Mask ==&gt; 00001111 =&gt; 0x0F</p>
 <p >Now, if data is 10101010, then even though pins IN1-IN4 are being used by motor driver, it will be set by gpio_set_level, which will crash the esp32 device. So, we check in the bitmask if the following pin is free or not, if bit is 1, it can be used, if it is 0, then it can't be used.</p>
 <p >So, to achieve this we bitwise-and the mask with 0x80(10000000), if result is 0x80, then leftmost bit is 1, else it is 0. If leftmost bit is 1, means we can use this pin of bar graph, then we do the same thing with data, bitwise-and it with 0x80, to find the leftmost bit, if it is 1, the pin is set to 1, else 0. Now we left shift the data and mask variable.</p>

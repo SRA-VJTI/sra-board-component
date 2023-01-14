@@ -937,7 +937,7 @@
 <codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>lsa_readings[i]<sp/>=<sp/>lv_bar_create(lv_scr_act());</highlight></codeline>
 <codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(lsa_readings[i],<sp/>10,<sp/>40);</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_pos(lsa_readings[i],<sp/>(18<sp/>+<sp/>i<sp/>*<sp/>20),<sp/>0);</highlight></codeline>
-<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_bar_set_value(lsa_readings[i],<sp/>readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[3]<sp/>*<sp/>0.04,<sp/>LV_ANIM_OFF);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_bar_set_value(lsa_readings[i],<sp/>readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[3]<sp/>*<sp/>0.04,<sp/>LV_ANIM_OFF);</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(lsa_readings[i],<sp/>&amp;style_outline,<sp/>LV_PART_MAIN);</highlight></codeline>
 <codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(lsa_readings[i],<sp/>&amp;style,<sp/>LV_PART_INDICATOR);</highlight></codeline>
 <codeline lineno="362"><highlight class="normal"><sp/><sp/>}</highlight></codeline>

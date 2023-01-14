@@ -4,10 +4,9 @@ var searchData=
   ['enable_5fbar_5fgraph_1',['enable_bar_graph',['../bar__graph_8h.html#ab10cdc6b54d4e647335eebb25dabd2f7',1,'enable_bar_graph():&#160;bar_graph.c'],['../bar__graph_8c.html#ab10cdc6b54d4e647335eebb25dabd2f7',1,'enable_bar_graph():&#160;bar_graph.c']]],
   ['enable_5fline_5fsensor_2',['enable_line_sensor',['../lsa_8h.html#ae100292bb09dfe139df0cafc36ef19fd',1,'enable_line_sensor():&#160;lsa.c'],['../lsa_8c.html#ae100292bb09dfe139df0cafc36ef19fd',1,'enable_line_sensor():&#160;lsa.c']]],
   ['enable_5fmotor_5fdriver_3',['enable_motor_driver',['../motor__driver_8h.html#a95eb372d31d30f5034c1bd310b229b85',1,'motor_driver.h']]],
-  ['enable_5fmotor_5fdriver_5fa_4',['enable_motor_driver_a',['../motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977',1,'enable_motor_driver_a(int mode):&#160;motor_driver.c'],['../motor__driver_8h.html#a9fc3907d0ee8196eca819e1e5e1c6977',1,'enable_motor_driver_a(int mode):&#160;motor_driver.c']]],
-  ['enable_5fmotor_5fdriver_5fb_5',['enable_motor_driver_b',['../motor__driver_8h.html#a11c7858cdd467a4bbcff436e43a585e1',1,'enable_motor_driver_b(int mode):&#160;motor_driver.c'],['../motor__driver_8c.html#a11c7858cdd467a4bbcff436e43a585e1',1,'enable_motor_driver_b(int mode):&#160;motor_driver.c']]],
-  ['enable_5fmpu6050_6',['enable_mpu6050',['../mpu6050_8h.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c'],['../mpu6050_8c.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c']]],
-  ['enable_5fservo_7',['enable_servo',['../servo_8h.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c'],['../servo_8c.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c']]],
-  ['enable_5fswitches_8',['enable_switches',['../switches_8h.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c'],['../switches_8c.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c']]],
-  ['esp_5fidf_5flib_5fhelpers_2eh_9',['esp_idf_lib_helpers.h',['../esp__idf__lib__helpers_8h.html',1,'']]]
+  ['enable_5fmotor_5fdriver_5fa_4',['enable_motor_driver_a',['../motor__driver_8h.html#a9fc3907d0ee8196eca819e1e5e1c6977',1,'enable_motor_driver_a(int mode):&#160;motor_driver.c'],['../motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977',1,'enable_motor_driver_a(int mode):&#160;motor_driver.c']]],
+  ['enable_5fmpu6050_5',['enable_mpu6050',['../mpu6050_8h.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c'],['../mpu6050_8c.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c']]],
+  ['enable_5fservo_6',['enable_servo',['../servo_8h.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c'],['../servo_8c.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c']]],
+  ['enable_5fswitches_7',['enable_switches',['../switches_8h.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c'],['../switches_8c.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c']]],
+  ['esp_5fidf_5flib_5fhelpers_2eh_8',['esp_idf_lib_helpers.h',['../esp__idf__lib__helpers_8h.html',1,'']]]
 ];

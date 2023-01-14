@@ -80,12 +80,12 @@
       </node>
     </incdepgraph>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="lsa_8c_1a562fb80fd8fb21d608a04ff792eab99b" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="lsa_8c_1aac1676855a0ef8b82f36998025182fbe" prot="public" static="yes" mutable="no">
         <type>const int</type>
-        <definition>const int line_sensor_pins[4]</definition>
-        <argsstring>[4]</argsstring>
+        <definition>const int line_sensor_pins[5]</definition>
+        <argsstring>[5]</argsstring>
         <name>line_sensor_pins</name>
-        <initializer>= {<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>, <ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>, <ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>, <ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>}</initializer>
+        <initializer>= {<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>, <ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>, <ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>, <ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>, <ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -178,7 +178,7 @@
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lsa_8h" kindref="compound">lsa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_sensor_pins[4]<sp/>=<sp/>{<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>,<sp/><ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>,<sp/><ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>,<sp/><ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_sensor_pins[5]<sp/>=<sp/>{<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>,<sp/><ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>,<sp/><ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>,<sp/><ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>,<sp/><ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>};</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8c_1ae100292bb09dfe139df0cafc36ef19fd" kindref="member">enable_line_sensor</ref>()</highlight></codeline>
 <codeline lineno="30"><highlight class="normal">{</highlight></codeline>
@@ -190,22 +190,22 @@
 <codeline lineno="36"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/>line_sensor_readings;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5;<sp/>i++)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" kindref="member">NUMBER_OF_SAMPLES</ref>;<sp/>i++)</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>4;<sp/>j++)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>5;<sp/>j++)</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[j]<sp/>=<sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[j]<sp/>+<sp/><ref refid="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" kindref="member">read_adc</ref>(line_sensor_pins[j]);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[j]<sp/>=<sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[j]<sp/>+<sp/><ref refid="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" kindref="member">read_adc</ref>(line_sensor_pins[j]);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>4;<sp/>i++)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5;<sp/>i++)</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[i]<sp/>=<sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1ab46ab63e7396f219bfd4748e91fef673" kindref="member">adc_reading</ref>[i]<sp/>/<sp/><ref refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" kindref="member">NUMBER_OF_SAMPLES</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[i]<sp/>=<sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[i]<sp/>/<sp/><ref refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" kindref="member">NUMBER_OF_SAMPLES</ref>;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>line_sensor_readings;</highlight></codeline>
