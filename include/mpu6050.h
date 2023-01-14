@@ -73,6 +73,8 @@
 #define RAD_TO_DEG 57.2957795
 #define BUFF_SIZE 6
 
+#define MPU_CALIBRATION_AVG_COUNT CONFIG_MPU_CALIBRATION_AVG_COUNT
+
 /**
  * @brief Initialise the ESP32 I2C Driver in Master Mode
  * 
@@ -167,5 +169,21 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
  * @return esp_err_t returns ESP_OK if successful, else the appropriate error code
  */
 esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset);
+
+/**
+ * @brief Function to calculate the MPU offset for raw values.
+ * @return esp_err_t returns ESP_OK if successful, else ESP_FAIL
+ */
+esp_err_t calibrate_mpu6050();
+
+/**
+ * @brief Helper function for the function calibrate_mpu6050() to calculate the average of the raw values.
+ * @param acce_raw_value_avg Input array of accelerometer raw values (passed by reference) to be filled by the function.
+ * @param gyro_raw_value_avg Input array of gyroscope raw values (passed by reference) to be filled by the function.
+ * @param acce_offs Offset to be applied to the accelerometer raw values.
+ * @param gyro_offs Offset to be applied to the gyroscope raw values.
+ * @return esp_err_t returns ESP_OK if successful, else ESP_FAIL
+ */
+esp_err_t avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs);
 
 #endif

@@ -28,6 +28,13 @@
 static const char *TAG_MPU = "mpu_6050";
 static i2c_dev_t mpu6050_dev_t;
 
+#define MIN_ACCE_ERROR 5
+#define MIN_GYRO_ERROR 5
+#define MAX_CALIBRATION_ATTEMPTS 20
+#define G_RAW_VALUE 16384  //accelerometer reads this value for 1 g acceleration.
+
+static int16_t acce_raw_value_offset[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_offset[BUFF_SIZE / 2] = {0, 0, 0};
+
 // Initialise the I2C bus and install driver to specified pins
 esp_err_t i2c_master_init(void)
 {
@@ -192,6 +199,89 @@ void complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, floa
     }
 }
 
+esp_err_t avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs)
+{
+	int16_t curr_acce_raw_value[BUFF_SIZE / 2], curr_gyro_raw_value[BUFF_SIZE / 2];
+	long acce_raw_value_sum[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_sum[BUFF_SIZE / 2] = {0, 0, 0};
+	int i, j, k;
+	for (i = 0; i < MPU_CALIBRATION_AVG_COUNT; i++)
+	{
+		if (read_mpu6050_raw(curr_acce_raw_value, curr_gyro_raw_value) != ESP_OK)
+		{
+			ESP_LOGE(TAG_MPU, "%s", "Failed to read MPU for calibration !");
+			return ESP_FAIL;
+		}
+
+		for (j = 0; j < BUFF_SIZE / 2; j++)
+		{
+			acce_raw_value_sum[j] += curr_acce_raw_value[j] - acce_offs[j];
+			gyro_raw_value_sum[j] += curr_gyro_raw_value[j] - gyro_offs[j];
+		}
+	}
+
+	for (k = 0; k < BUFF_SIZE / 2; k++)
+	{
+		acce_raw_value_avg[k] = acce_raw_value_sum[k] / MPU_CALIBRATION_AVG_COUNT;
+		gyro_raw_value_avg[k] = gyro_raw_value_sum[k] / MPU_CALIBRATION_AVG_COUNT;
+	}
+
+	return ESP_OK;
+}
+
+// Calculate mpu_offset for calibration.
+esp_err_t calibrate_mpu6050()
+{
+	int16_t acce_raw_value_avg[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_avg[BUFF_SIZE / 2] = {0, 0, 0};
+	int8_t i, offset_ready;
+
+	if (avg_sensors(acce_raw_value_avg, gyro_raw_value_avg, acce_raw_value_offset, gyro_raw_value_offset) != ESP_OK)
+		return ESP_FAIL;
+
+	gyro_raw_value_offset[0] = gyro_raw_value_avg[0];
+	gyro_raw_value_offset[1] = gyro_raw_value_avg[1];
+	gyro_raw_value_offset[2] = gyro_raw_value_avg[2];
+
+	acce_raw_value_offset[0] = acce_raw_value_avg[0];
+	acce_raw_value_offset[1] = acce_raw_value_avg[1];
+	acce_raw_value_offset[2] = (G_RAW_VALUE - acce_raw_value_avg[2]);
+
+	for (i = 0, offset_ready = 0; i < MAX_CALIBRATION_ATTEMPTS && offset_ready != 6; i++)
+	{
+		if (avg_sensors(acce_raw_value_avg, gyro_raw_value_avg, acce_raw_value_offset, gyro_raw_value_offset) != ESP_OK)
+			return ESP_FAIL;
+
+		if(abs(gyro_raw_value_avg[0]) <= MIN_GYRO_ERROR) offset_ready++;
+		else gyro_raw_value_offset[0] += gyro_raw_value_avg[0];
+
+		if(abs(gyro_raw_value_avg[1]) <= MIN_GYRO_ERROR) offset_ready++;
+		else gyro_raw_value_offset[1] += gyro_raw_value_avg[1];
+
+		if(abs(gyro_raw_value_avg[2]) <= MIN_GYRO_ERROR) offset_ready++;
+		else gyro_raw_value_offset[2] += gyro_raw_value_avg[2];
+
+		if(abs(acce_raw_value_avg[0]) <= MIN_ACCE_ERROR) offset_ready++;
+		else acce_raw_value_offset[0] += acce_raw_value_avg[0];
+
+		if(abs(acce_raw_value_avg[1]) <= MIN_ACCE_ERROR) offset_ready++;
+		else acce_raw_value_offset[1] += acce_raw_value_avg[1];
+
+		if(abs(G_RAW_VALUE - acce_raw_value_avg[2]) <= MIN_ACCE_ERROR) offset_ready++;
+		else acce_raw_value_offset[2] += acce_raw_value_avg[2] - G_RAW_VALUE;
+
+		vTaskDelay(10 / portTICK_PERIOD_MS);
+	}
+
+	if (i == MAX_CALIBRATION_ATTEMPTS)
+	{
+		ESP_LOGW(TAG_MPU, "Maximum calibration attemps limit exceeded, quiting calibration.");
+		return ESP_FAIL;
+	}
+
+	ESP_LOGI("accelerometer offset values: ", "%d | %d | %d", acce_raw_value_offset[0], acce_raw_value_offset[1], acce_raw_value_offset[2]);
+	ESP_LOGI("gyroscope offset values: ", "%d | %d | %d", gyro_raw_value_offset[0], gyro_raw_value_offset[1], gyro_raw_value_offset[2]);
+	return ESP_OK;
+}
+
 // Calculate roll and pitch angles of the MPU after applying the complementary filter
 esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
 {
@@ -210,3 +300,4 @@ esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
 
     return err;
 }
+

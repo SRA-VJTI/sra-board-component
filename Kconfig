@@ -134,4 +134,10 @@ config NUMBER_OF_SAMPLES
     help
         sets the number of ADC samples to average to use with LSA
 
+config MPU_CALIBRATION_AVG_COUNT
+    int "Number of readings to take while taking average"
+    default 100
+    help
+	sets the number of reading to take while taking average for MPU calibration
+
 endmenu
