@@ -5925,6 +5925,24 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'mpu6050_8h_1a36226d7f0921c9ef24582124baa4c3b7';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MPU_CALIBRATION_AVG_COUNT';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+CONFIG_MPU_CALIBRATION_AVG_COUNT
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/mpu6050.h';
+      define-mem-desc-line = '76';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
     };
     func = {
     func-member = {
@@ -5937,7 +5955,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'i2c_master_init';
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '81';
+      func-mem-desc-line = '83';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise the ESP32 I2C Driver in Master Mode.
 _EnD_oF_dEf_TeXt_;
@@ -5960,7 +5978,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '90';
+      func-mem-desc-line = '92';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise MPU-6050 (by sending the appropriate queued commands); 
 Refer this for more information: https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.
@@ -5992,7 +6010,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '99';
+      func-mem-desc-line = '101';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array
 Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other.
@@ -6025,7 +6043,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '108';
+      func-mem-desc-line = '110';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array
 Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other.
@@ -6058,7 +6076,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buf_2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '117';
+      func-mem-desc-line = '119';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Combine two 8-bit values to a 16-bit one
 Note that EVEN indices in the input buffer represent the MSB (Byte)
@@ -6102,7 +6120,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'acce_angle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '128';
+      func-mem-desc-line = '130';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the accelerometer raw values
 Axes and Angles - X: Roll, Y: Pitch, Z: Yaw.
@@ -6154,7 +6172,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_angle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '140';
+      func-mem-desc-line = '142';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the gyroscope raw values
 Axes and Angles - X: Roll, Y: Pitch, Z: Yaw
@@ -6190,7 +6208,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_raw_value';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '150';
+      func-mem-desc-line = '152';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form 
 i.e. 16-bit.
@@ -6235,7 +6253,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '160';
+      func-mem-desc-line = '162';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Fuse the gyroscope and accelerometer angle in a complementary fashion
 More on this here: https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues.
@@ -6269,7 +6287,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/mpu6050.h';
-      func-mem-desc-line = '169';
+      func-mem-desc-line = '171';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles.
 _EnD_oF_dEf_TeXt_;
@@ -6277,6 +6295,70 @@ _EnD_oF_dEf_TeXt_;
 @param euler_angle Input array of angles to store the results in (passed by reference)
 @param mpu_offset Initial conditions for the accelerometer and gyroscope (Angle at rest position)
 @return esp_err_t returns ESP_OK if successful, else the appropriate error code
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mpu6050_8h_1afb2330f2330e6a13a16e271648954709';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'calibrate_mpu6050';
+      func-mem-desc-file = '/github/workspace/include/mpu6050.h';
+      func-mem-desc-line = '177';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Function to calculate the MPU offset for raw values.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return esp_err_t returns ESP_OK if successful, else ESP_FAIL
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mpu6050_8h_1aad4ab5073aa1052f269ac1327fc0b584';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'avg_sensors';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'acce_raw_value_avg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'gyro_raw_value_avg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'acce_offs';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'gyro_offs';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/mpu6050.h';
+      func-mem-desc-line = '187';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Helper function for the function calibrate_mpu6050() to calculate the average of the raw values.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param acce_raw_value_avg Input array of accelerometer raw values (passed by reference) to be filled by the function.
+@param gyro_raw_value_avg Input array of gyroscope raw values (passed by reference) to be filled by the function.
+@param acce_offs Offset to be applied to the accelerometer raw values.
+@param gyro_offs Offset to be applied to the gyroscope raw values.
+@return esp_err_t returns ESP_OK if successful, else ESP_FAIL
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
@@ -9043,6 +9125,80 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = 'mpu6050_8c';
   file-name = 'mpu6050.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'mpu6050_8c_1a715099a8b0078a88a0045d9b57c38260';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MIN_ACCE_ERROR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+5
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      define-mem-desc-line = '31';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'mpu6050_8c_1a7f8f0d32f0f2e4dd8ca1eca78b697b7f';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MIN_GYRO_ERROR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+5
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      define-mem-desc-line = '32';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'mpu6050_8c_1a1e4d2dba5c2a7c93721603af24528263';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MAX_CALIBRATION_ATTEMPTS';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+20
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      define-mem-desc-line = '33';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'mpu6050_8c_1a22c3bf9b7c8789d18e5075f356366ad6';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'G_RAW_VALUE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+16384
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      define-mem-desc-line = '34';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
     func = {
     func-member = {
       func-mem-kind = 'function';
@@ -9059,7 +9215,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '32';
+      func-mem-desc-line = '39';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise the ESP32 I2C Driver in Master Mode.
 _EnD_oF_dEf_TeXt_;
@@ -9082,7 +9238,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '47';
+      func-mem-desc-line = '54';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialise MPU-6050 (by sending the appropriate queued commands); 
 Refer this for more information: https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf.
@@ -9114,7 +9270,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '81';
+      func-mem-desc-line = '88';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the accelerometer raw values (Ax, Ay, Az) into an 8-bit array
 Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other.
@@ -9147,7 +9303,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '96';
+      func-mem-desc-line = '103';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the gyroscope raw values (Gx, Gy, Gz) into an 8-bit array
 Note that these raw values are actually 16-bit, split into MSB (Byte) and LSB (Byte), sent one after the other.
@@ -9180,7 +9336,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buf_2';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '111';
+      func-mem-desc-line = '118';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Combine two 8-bit values to a 16-bit one
 Note that EVEN indices in the input buffer represent the MSB (Byte)
@@ -9224,7 +9380,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'acce_angle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '121';
+      func-mem-desc-line = '128';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the accelerometer raw values
 Axes and Angles - X: Roll, Y: Pitch, Z: Yaw.
@@ -9276,7 +9432,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_angle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '128';
+      func-mem-desc-line = '135';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Compute the Euler angle (Pitch and Roll) from the gyroscope raw values
 Axes and Angles - X: Roll, Y: Pitch, Z: Yaw
@@ -9312,7 +9468,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'gyro_raw_value';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '145';
+      func-mem-desc-line = '152';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 A wrapper for reading the 8-bit raw values from MPU and then combining them to their final form 
 i.e. 16-bit.
@@ -9357,7 +9513,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '160';
+      func-mem-desc-line = '167';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Fuse the gyroscope and accelerometer angle in a complementary fashion
 More on this here: https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues.
@@ -9367,6 +9523,70 @@ _EnD_oF_dEf_TeXt_;
 @param gyro_raw_value Raw values from the gyroscope
 @param complementary_angle Resultant fused and filtered angle
 @param mpu_offset Offset of the MPU (accelerometer) at rest position
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mpu6050_8c_1aad4ab5073aa1052f269ac1327fc0b584';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'avg_sensors';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'acce_raw_value_avg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'gyro_raw_value_avg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'acce_offs';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const int16_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'gyro_offs';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      func-mem-desc-line = '202';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Helper function for the function calibrate_mpu6050() to calculate the average of the raw values.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param acce_raw_value_avg Input array of accelerometer raw values (passed by reference) to be filled by the function.
+@param gyro_raw_value_avg Input array of gyroscope raw values (passed by reference) to be filled by the function.
+@param acce_offs Offset to be applied to the accelerometer raw values.
+@param gyro_offs Offset to be applied to the gyroscope raw values.
+@return esp_err_t returns ESP_OK if successful, else ESP_FAIL
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mpu6050_8c_1afb2330f2330e6a13a16e271648954709';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'calibrate_mpu6050';
+      func-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      func-mem-desc-line = '232';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Function to calculate the MPU offset for raw values.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return esp_err_t returns ESP_OK if successful, else ESP_FAIL
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -9391,7 +9611,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'mpu_offset';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/mpu6050.c';
-      func-mem-desc-line = '196';
+      func-mem-desc-line = '286';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles.
 _EnD_oF_dEf_TeXt_;
@@ -9435,6 +9655,48 @@ _EnD_oF_dEf_TeXt_;
       var-mem-name = 'mpu6050_dev_t';
       var-mem-desc-file = '/github/workspace/src/mpu6050.c';
       var-mem-desc-line = '29';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'mpu6050_8c_1af30e274c62253ed09984a63cee4511df';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static int16_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'acce_raw_value_offset';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {0, 0, 0}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      var-mem-desc-line = '36';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'mpu6050_8c_1aba4f6343f1ca9d3ecf8daf0d17effedf';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static int16_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gyro_raw_value_offset';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {0, 0, 0}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/mpu6050.c';
+      var-mem-desc-line = '36';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bool_5fto_5fuint8_0',['bool_to_uint8',['../bar__graph_8h.html#aedf9bcb0b39fed044eb70e63fc74c496',1,'bool_to_uint8(bool *input_array):&#160;bar_graph.c'],['../bar__graph_8c.html#aedf9bcb0b39fed044eb70e63fc74c496',1,'bool_to_uint8(bool *input_array):&#160;bar_graph.c']]],
-  ['bound_1',['bound',['../utils_8h.html#a22fd7311bf5f09376f4c561febd38899',1,'bound(float val, float min, float max):&#160;utils.c'],['../utils_8c.html#a22fd7311bf5f09376f4c561febd38899',1,'bound(float val, float min, float max):&#160;utils.c']]]
+  ['avg_5fsensors_0',['avg_sensors',['../mpu6050_8h.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c'],['../mpu6050_8c.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c']]]
 ];

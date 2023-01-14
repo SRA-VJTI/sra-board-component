@@ -14,5 +14,6 @@ var searchData=
   ['adc_5freading_11',['adc_reading',['../unionline__sensor__array.html#adc5d41a5820d2fe86445854659bcd4f9',1,'line_sensor_array']]],
   ['addr_12',['addr',['../structi2c__dev__t.html#a84ad7180602cb8e36b38c29e5b1c86c6',1,'i2c_dev_t']]],
   ['alpha_13',['ALPHA',['../mpu6050_8h.html#af5abd28c44c29b7397c84f1fec4b1d84',1,'mpu6050.h']]],
-  ['angle_14',['angle',['../structservo__config.html#a0404b532c9903812101610fb245540e8',1,'servo_config']]]
+  ['angle_14',['angle',['../structservo__config.html#a0404b532c9903812101610fb245540e8',1,'servo_config']]],
+  ['avg_5fsensors_15',['avg_sensors',['../mpu6050_8h.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c'],['../mpu6050_8c.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c']]]
 ];

@@ -382,6 +382,17 @@
         </inbodydescription>
         <location file="include/mpu6050.h" line="74" column="9" bodyfile="include/mpu6050.h" bodystart="74" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="mpu6050_8h_1a36226d7f0921c9ef24582124baa4c3b7" prot="public" static="no">
+        <name>MPU_CALIBRATION_AVG_COUNT</name>
+        <initializer>CONFIG_MPU_CALIBRATION_AVG_COUNT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="76" column="9" bodyfile="include/mpu6050.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="mpu6050_8h_1aff189f3f860a58ec5ad054d15d8db470" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -399,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="81" column="11" bodyfile="src/mpu6050.c" bodystart="32" bodyend="44" declfile="include/mpu6050.h" declline="81" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="83" column="11" bodyfile="src/mpu6050.c" bodystart="39" bodyend="51" declfile="include/mpu6050.h" declline="83" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -419,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="90" column="11" bodyfile="src/mpu6050.c" bodystart="47" bodyend="78" declfile="include/mpu6050.h" declline="90" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="92" column="11" bodyfile="src/mpu6050.c" bodystart="54" bodyend="85" declfile="include/mpu6050.h" declline="92" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -461,7 +472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="99" column="11" bodyfile="src/mpu6050.c" bodystart="81" bodyend="93" declfile="include/mpu6050.h" declline="99" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="101" column="11" bodyfile="src/mpu6050.c" bodystart="88" bodyend="100" declfile="include/mpu6050.h" declline="101" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -503,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="108" column="11" bodyfile="src/mpu6050.c" bodystart="96" bodyend="108" declfile="include/mpu6050.h" declline="108" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="110" column="11" bodyfile="src/mpu6050.c" bodystart="103" bodyend="115" declfile="include/mpu6050.h" declline="110" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -543,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="117" column="6" bodyfile="src/mpu6050.c" bodystart="111" bodyend="116" declfile="include/mpu6050.h" declline="117" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="119" column="6" bodyfile="src/mpu6050.c" bodystart="118" bodyend="123" declfile="include/mpu6050.h" declline="119" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -607,7 +618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="128" column="6" bodyfile="src/mpu6050.c" bodystart="121" bodyend="125" declfile="include/mpu6050.h" declline="128" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="130" column="6" bodyfile="src/mpu6050.c" bodystart="128" bodyend="132" declfile="include/mpu6050.h" declline="130" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a4b805f4cb3c30a323969abe87414ea90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -683,7 +694,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="140" column="6" bodyfile="src/mpu6050.c" bodystart="128" bodyend="143" declfile="include/mpu6050.h" declline="140" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="142" column="6" bodyfile="src/mpu6050.c" bodystart="135" bodyend="150" declfile="include/mpu6050.h" declline="142" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -725,7 +736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="150" column="11" bodyfile="src/mpu6050.c" bodystart="145" bodyend="157" declfile="include/mpu6050.h" declline="150" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="152" column="11" bodyfile="src/mpu6050.c" bodystart="152" bodyend="164" declfile="include/mpu6050.h" declline="152" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a43b01d95c708717047b47d408a606323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -789,7 +800,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="160" column="6" bodyfile="src/mpu6050.c" bodystart="160" bodyend="193" declfile="include/mpu6050.h" declline="160" declcolumn="6"/>
+        <location file="include/mpu6050.h" line="162" column="6" bodyfile="src/mpu6050.c" bodystart="167" bodyend="200" declfile="include/mpu6050.h" declline="162" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -831,7 +842,90 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mpu6050.h" line="169" column="11" bodyfile="src/mpu6050.c" bodystart="196" bodyend="212" declfile="include/mpu6050.h" declline="169" declcolumn="11"/>
+        <location file="include/mpu6050.h" line="171" column="11" bodyfile="src/mpu6050.c" bodystart="286" bodyend="302" declfile="include/mpu6050.h" declline="171" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1afb2330f2330e6a13a16e271648954709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t calibrate_mpu6050</definition>
+        <argsstring>()</argsstring>
+        <name>calibrate_mpu6050</name>
+        <briefdescription>
+<para>Function to calculate the MPU offset for raw values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>esp_err_t returns ESP_OK if successful, else ESP_FAIL </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="177" column="11" bodyfile="src/mpu6050.c" bodystart="232" bodyend="283" declfile="include/mpu6050.h" declline="177" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mpu6050_8h_1aad4ab5073aa1052f269ac1327fc0b584" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t avg_sensors</definition>
+        <argsstring>(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs)</argsstring>
+        <name>avg_sensors</name>
+        <param>
+          <type>int16_t *</type>
+          <declname>acce_raw_value_avg</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>gyro_raw_value_avg</declname>
+        </param>
+        <param>
+          <type>const int16_t *</type>
+          <declname>acce_offs</declname>
+        </param>
+        <param>
+          <type>const int16_t *</type>
+          <declname>gyro_offs</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for the function <ref refid="mpu6050_8h_1afb2330f2330e6a13a16e271648954709" kindref="member">calibrate_mpu6050()</ref> to calculate the average of the raw values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>acce_raw_value_avg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input array of accelerometer raw values (passed by reference) to be filled by the function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gyro_raw_value_avg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input array of gyroscope raw values (passed by reference) to be filled by the function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acce_offs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to be applied to the accelerometer raw values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gyro_offs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset to be applied to the gyroscope raw values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>esp_err_t returns ESP_OK if successful, else ESP_FAIL </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mpu6050.h" line="187" column="11" bodyfile="src/mpu6050.c" bodystart="202" bodyend="229" declfile="include/mpu6050.h" declline="187" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -911,27 +1005,33 @@
 <codeline lineno="73" refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAD_TO_DEG<sp/>57.2957795</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="74" refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFF_SIZE<sp/>6</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1aff189f3f860a58ec5ad054d15d8db470" kindref="member">i2c_master_init</ref>();</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kindref="member">enable_mpu6050</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(int16_t<sp/>gx,<sp/>int16_t<sp/>gy,<sp/>int16_t<sp/>gz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*gyro_angle);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*complementary_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset);</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" kindref="member">read_mpu6050</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*euler_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="76" refid="mpu6050_8h_1a36226d7f0921c9ef24582124baa4c3b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU_CALIBRATION_AVG_COUNT<sp/>CONFIG_MPU_CALIBRATION_AVG_COUNT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1aff189f3f860a58ec5ad054d15d8db470" kindref="member">i2c_master_init</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kindref="member">enable_mpu6050</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" kindref="member">mpu6050_read_acce</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1a4b805f4cb3c30a323969abe87414ea90" kindref="member">compute_gyro_angle</ref>(int16_t<sp/>gx,<sp/>int16_t<sp/>gy,<sp/>int16_t<sp/>gz,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*gyro_angle);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" kindref="member">read_mpu6050_raw</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1a43b01d95c708717047b47d408a606323" kindref="member">complementary_filter</ref>(int16_t<sp/>*acce_raw_value,<sp/>int16_t<sp/>*gyro_raw_value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*complementary_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" kindref="member">read_mpu6050</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*euler_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*mpu_offset);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1afb2330f2330e6a13a16e271648954709" kindref="member">calibrate_mpu6050</ref>();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1aad4ab5073aa1052f269ac1327fc0b584" kindref="member">avg_sensors</ref>(int16_t<sp/>*acce_raw_value_avg,<sp/>int16_t<sp/>*gyro_raw_value_avg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int16_t<sp/>*acce_offs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int16_t<sp/>*gyro_offs);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/mpu6050.h"/>
   </compounddef>

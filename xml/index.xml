@@ -318,6 +318,7 @@
     <member refid="mpu6050_8h_1af5abd28c44c29b7397c84f1fec4b1d84" kind="define"><name>ALPHA</name></member>
     <member refid="mpu6050_8h_1a89e47af0449640d4f15191aba5ca24c6" kind="define"><name>RAD_TO_DEG</name></member>
     <member refid="mpu6050_8h_1a6c7cd32e1bac137f05e4a752b4ad10af" kind="define"><name>BUFF_SIZE</name></member>
+    <member refid="mpu6050_8h_1a36226d7f0921c9ef24582124baa4c3b7" kind="define"><name>MPU_CALIBRATION_AVG_COUNT</name></member>
     <member refid="mpu6050_8h_1aff189f3f860a58ec5ad054d15d8db470" kind="function"><name>i2c_master_init</name></member>
     <member refid="mpu6050_8h_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kind="function"><name>enable_mpu6050</name></member>
     <member refid="mpu6050_8h_1a37ca4429a23f8b7da14122cc381516b3" kind="function"><name>mpu6050_read_acce</name></member>
@@ -328,6 +329,8 @@
     <member refid="mpu6050_8h_1a7d1dcecaa06dcaa7586e8802546ab65c" kind="function"><name>read_mpu6050_raw</name></member>
     <member refid="mpu6050_8h_1a43b01d95c708717047b47d408a606323" kind="function"><name>complementary_filter</name></member>
     <member refid="mpu6050_8h_1a2103bceaa1a91be4c8bdbe49cbc22c34" kind="function"><name>read_mpu6050</name></member>
+    <member refid="mpu6050_8h_1afb2330f2330e6a13a16e271648954709" kind="function"><name>calibrate_mpu6050</name></member>
+    <member refid="mpu6050_8h_1aad4ab5073aa1052f269ac1327fc0b584" kind="function"><name>avg_sensors</name></member>
   </compound>
   <compound refid="oled_8h" kind="file"><name>oled.h</name>
     <member refid="oled_8h_1ac8072345fb17096a58749862b18d0d46" kind="define"><name>SRA_LOGO</name></member>
@@ -457,8 +460,14 @@
     <member refid="motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768" kind="function"><name>read_motor_driver_mode_a</name></member>
   </compound>
   <compound refid="mpu6050_8c" kind="file"><name>mpu6050.c</name>
+    <member refid="mpu6050_8c_1a715099a8b0078a88a0045d9b57c38260" kind="define"><name>MIN_ACCE_ERROR</name></member>
+    <member refid="mpu6050_8c_1a7f8f0d32f0f2e4dd8ca1eca78b697b7f" kind="define"><name>MIN_GYRO_ERROR</name></member>
+    <member refid="mpu6050_8c_1a1e4d2dba5c2a7c93721603af24528263" kind="define"><name>MAX_CALIBRATION_ATTEMPTS</name></member>
+    <member refid="mpu6050_8c_1a22c3bf9b7c8789d18e5075f356366ad6" kind="define"><name>G_RAW_VALUE</name></member>
     <member refid="mpu6050_8c_1ab48a7997f8dce4ee930a82b44e4c9e70" kind="variable"><name>TAG_MPU</name></member>
     <member refid="mpu6050_8c_1ab5c2255135e59c4e429780ab1778fa48" kind="variable"><name>mpu6050_dev_t</name></member>
+    <member refid="mpu6050_8c_1af30e274c62253ed09984a63cee4511df" kind="variable"><name>acce_raw_value_offset</name></member>
+    <member refid="mpu6050_8c_1aba4f6343f1ca9d3ecf8daf0d17effedf" kind="variable"><name>gyro_raw_value_offset</name></member>
     <member refid="mpu6050_8c_1adbeb61fe3c40b09ee1b6de91f21cb6ae" kind="function"><name>i2c_master_init</name></member>
     <member refid="mpu6050_8c_1a044ec3e6d6e04c8c1624a2f89ac4d7ec" kind="function"><name>enable_mpu6050</name></member>
     <member refid="mpu6050_8c_1a37ca4429a23f8b7da14122cc381516b3" kind="function"><name>mpu6050_read_acce</name></member>
@@ -468,6 +477,8 @@
     <member refid="mpu6050_8c_1a4b805f4cb3c30a323969abe87414ea90" kind="function"><name>compute_gyro_angle</name></member>
     <member refid="mpu6050_8c_1a7d1dcecaa06dcaa7586e8802546ab65c" kind="function"><name>read_mpu6050_raw</name></member>
     <member refid="mpu6050_8c_1a43b01d95c708717047b47d408a606323" kind="function"><name>complementary_filter</name></member>
+    <member refid="mpu6050_8c_1aad4ab5073aa1052f269ac1327fc0b584" kind="function"><name>avg_sensors</name></member>
+    <member refid="mpu6050_8c_1afb2330f2330e6a13a16e271648954709" kind="function"><name>calibrate_mpu6050</name></member>
     <member refid="mpu6050_8c_1a2103bceaa1a91be4c8bdbe49cbc22c34" kind="function"><name>read_mpu6050</name></member>
   </compound>
   <compound refid="oled_8c" kind="file"><name>oled.c</name>

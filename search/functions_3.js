@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['enable_5fadc1_0',['enable_adc1',['../adc_8h.html#ab564ea72fa47c36b9d06977ea586cb1a',1,'enable_adc1():&#160;adc.c'],['../adc_8c.html#ab564ea72fa47c36b9d06977ea586cb1a',1,'enable_adc1():&#160;adc.c']]],
-  ['enable_5fbar_5fgraph_1',['enable_bar_graph',['../bar__graph_8h.html#ab10cdc6b54d4e647335eebb25dabd2f7',1,'enable_bar_graph():&#160;bar_graph.c'],['../bar__graph_8c.html#ab10cdc6b54d4e647335eebb25dabd2f7',1,'enable_bar_graph():&#160;bar_graph.c']]],
-  ['enable_5fline_5fsensor_2',['enable_line_sensor',['../lsa_8h.html#ae100292bb09dfe139df0cafc36ef19fd',1,'enable_line_sensor():&#160;lsa.c'],['../lsa_8c.html#ae100292bb09dfe139df0cafc36ef19fd',1,'enable_line_sensor():&#160;lsa.c']]],
-  ['enable_5fmotor_5fdriver_5fa_3',['enable_motor_driver_a',['../motor__driver_8h.html#a9fc3907d0ee8196eca819e1e5e1c6977',1,'enable_motor_driver_a(int mode):&#160;motor_driver.c'],['../motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977',1,'enable_motor_driver_a(int mode):&#160;motor_driver.c']]],
-  ['enable_5fmpu6050_4',['enable_mpu6050',['../mpu6050_8h.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c'],['../mpu6050_8c.html#a044ec3e6d6e04c8c1624a2f89ac4d7ec',1,'enable_mpu6050(void):&#160;mpu6050.c']]],
-  ['enable_5fservo_5',['enable_servo',['../servo_8h.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c'],['../servo_8c.html#af4079acff4a8c5a298d79d841fe96b80',1,'enable_servo():&#160;servo.c']]],
-  ['enable_5fswitches_6',['enable_switches',['../switches_8h.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c'],['../switches_8c.html#a70de1897315528e8b85d34aa23341f39',1,'enable_switches():&#160;switches.c']]]
+  ['display_5flogo_0',['display_logo',['../oled_8h.html#a895f3fc97245c493b7414566815f3b48',1,'display_logo(int logo_id):&#160;oled.c'],['../oled_8c.html#a895f3fc97245c493b7414566815f3b48',1,'display_logo(int logo_id):&#160;oled.c']]],
+  ['display_5flsa_1',['display_lsa',['../oled_8h.html#a98433da15e8207817e3ffd4e42b626a0',1,'display_lsa(line_sensor_array readings):&#160;oled.c'],['../oled_8c.html#a98433da15e8207817e3ffd4e42b626a0',1,'display_lsa(line_sensor_array readings):&#160;oled.c']]],
+  ['display_5fmpu_2',['display_mpu',['../oled_8h.html#a1258c05bcda38123f6b825ae1abfcd54',1,'display_mpu(float pitch, float roll):&#160;oled.c'],['../oled_8c.html#a1258c05bcda38123f6b825ae1abfcd54',1,'display_mpu(float pitch, float roll):&#160;oled.c']]],
+  ['display_5fpid_5fvalues_3',['display_pid_values',['../oled_8h.html#ac588665be0f2f8fb00787ef97a32e03d',1,'display_pid_values(float kp, float ki, float kd):&#160;oled.c'],['../oled_8c.html#ac588665be0f2f8fb00787ef97a32e03d',1,'display_pid_values(float kp, float ki, float kd):&#160;oled.c']]],
+  ['display_5fservo_5fvalues_4',['display_servo_values',['../oled_8h.html#a479e088b824336912654e8c146885e1e',1,'display_servo_values(int s1, int s2, int s3, int s4):&#160;oled.c'],['../oled_8c.html#a479e088b824336912654e8c146885e1e',1,'display_servo_values(int s1, int s2, int s3, int s4):&#160;oled.c']]]
 ];

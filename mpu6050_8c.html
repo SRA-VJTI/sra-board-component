@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">mpu6050.c File Reference</div></div>
 </div><!--header-->
@@ -101,6 +102,17 @@ Include dependency graph for mpu6050.c:</div>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a715099a8b0078a88a0045d9b57c38260"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#a715099a8b0078a88a0045d9b57c38260">MIN_ACCE_ERROR</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a715099a8b0078a88a0045d9b57c38260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8f0d32f0f2e4dd8ca1eca78b697b7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#a7f8f0d32f0f2e4dd8ca1eca78b697b7f">MIN_GYRO_ERROR</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a7f8f0d32f0f2e4dd8ca1eca78b697b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4d2dba5c2a7c93721603af24528263"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#a1e4d2dba5c2a7c93721603af24528263">MAX_CALIBRATION_ATTEMPTS</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a1e4d2dba5c2a7c93721603af24528263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c3bf9b7c8789d18e5075f356366ad6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#a22c3bf9b7c8789d18e5075f356366ad6">G_RAW_VALUE</a>&#160;&#160;&#160;16384</td></tr>
+<tr class="separator:a22c3bf9b7c8789d18e5075f356366ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:adbeb61fe3c40b09ee1b6de91f21cb6ae"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#adbeb61fe3c40b09ee1b6de91f21cb6ae">i2c_master_init</a> (void)</td></tr>
@@ -130,11 +142,146 @@ Functions</h2></td></tr>
 <tr class="memitem:a43b01d95c708717047b47d408a606323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#a43b01d95c708717047b47d408a606323">complementary_filter</a> (int16_t *acce_raw_value, int16_t *gyro_raw_value, float *complementary_angle, float *mpu_offset)</td></tr>
 <tr class="memdesc:a43b01d95c708717047b47d408a606323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fuse the gyroscope and accelerometer angle in a complementary fashion More on this here: <a href="https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues">https://robotics.stackexchange.com/questions/10746/complimentary-filter-issues</a>.  <a href="mpu6050_8c.html#a43b01d95c708717047b47d408a606323">More...</a><br /></td></tr>
 <tr class="separator:a43b01d95c708717047b47d408a606323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ab5073aa1052f269ac1327fc0b584"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#aad4ab5073aa1052f269ac1327fc0b584">avg_sensors</a> (int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs)</td></tr>
+<tr class="memdesc:aad4ab5073aa1052f269ac1327fc0b584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for the function <a class="el" href="mpu6050_8h.html#afb2330f2330e6a13a16e271648954709" title="Function to calculate the MPU offset for raw values.">calibrate_mpu6050()</a> to calculate the average of the raw values.  <a href="mpu6050_8c.html#aad4ab5073aa1052f269ac1327fc0b584">More...</a><br /></td></tr>
+<tr class="separator:aad4ab5073aa1052f269ac1327fc0b584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2330f2330e6a13a16e271648954709"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#afb2330f2330e6a13a16e271648954709">calibrate_mpu6050</a> ()</td></tr>
+<tr class="memdesc:afb2330f2330e6a13a16e271648954709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to calculate the MPU offset for raw values.  <a href="mpu6050_8c.html#afb2330f2330e6a13a16e271648954709">More...</a><br /></td></tr>
+<tr class="separator:afb2330f2330e6a13a16e271648954709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2103bceaa1a91be4c8bdbe49cbc22c34"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mpu6050_8c.html#a2103bceaa1a91be4c8bdbe49cbc22c34">read_mpu6050</a> (float *euler_angle, float *mpu_offset)</td></tr>
 <tr class="memdesc:a2103bceaa1a91be4c8bdbe49cbc22c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ultimate function (application ready); takes in the input raw values and initial conditions and gives out the complementary pitch and roll angles.  <a href="mpu6050_8c.html#a2103bceaa1a91be4c8bdbe49cbc22c34">More...</a><br /></td></tr>
 <tr class="separator:a2103bceaa1a91be4c8bdbe49cbc22c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a22c3bf9b7c8789d18e5075f356366ad6" name="a22c3bf9b7c8789d18e5075f356366ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c3bf9b7c8789d18e5075f356366ad6">&#9670;&nbsp;</a></span>G_RAW_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define G_RAW_VALUE&#160;&#160;&#160;16384</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e4d2dba5c2a7c93721603af24528263" name="a1e4d2dba5c2a7c93721603af24528263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4d2dba5c2a7c93721603af24528263">&#9670;&nbsp;</a></span>MAX_CALIBRATION_ATTEMPTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_CALIBRATION_ATTEMPTS&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a715099a8b0078a88a0045d9b57c38260" name="a715099a8b0078a88a0045d9b57c38260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715099a8b0078a88a0045d9b57c38260">&#9670;&nbsp;</a></span>MIN_ACCE_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_ACCE_ERROR&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f8f0d32f0f2e4dd8ca1eca78b697b7f" name="a7f8f0d32f0f2e4dd8ca1eca78b697b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8f0d32f0f2e4dd8ca1eca78b697b7f">&#9670;&nbsp;</a></span>MIN_GYRO_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_GYRO_ERROR&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aad4ab5073aa1052f269ac1327fc0b584" name="aad4ab5073aa1052f269ac1327fc0b584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ab5073aa1052f269ac1327fc0b584">&#9670;&nbsp;</a></span>avg_sensors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t avg_sensors </td>
+          <td>(</td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>acce_raw_value_avg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t *&#160;</td>
+          <td class="paramname"><em>gyro_raw_value_avg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int16_t *&#160;</td>
+          <td class="paramname"><em>acce_offs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int16_t *&#160;</td>
+          <td class="paramname"><em>gyro_offs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function for the function <a class="el" href="mpu6050_8h.html#afb2330f2330e6a13a16e271648954709" title="Function to calculate the MPU offset for raw values.">calibrate_mpu6050()</a> to calculate the average of the raw values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">acce_raw_value_avg</td><td>Input array of accelerometer raw values (passed by reference) to be filled by the function. </td></tr>
+    <tr><td class="paramname">gyro_raw_value_avg</td><td>Input array of gyroscope raw values (passed by reference) to be filled by the function. </td></tr>
+    <tr><td class="paramname">acce_offs</td><td>Offset to be applied to the accelerometer raw values. </td></tr>
+    <tr><td class="paramname">gyro_offs</td><td>Offset to be applied to the gyroscope raw values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>esp_err_t returns ESP_OK if successful, else ESP_FAIL </dd></dl>
+
+</div>
+</div>
+<a id="afb2330f2330e6a13a16e271648954709" name="afb2330f2330e6a13a16e271648954709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2330f2330e6a13a16e271648954709">&#9670;&nbsp;</a></span>calibrate_mpu6050()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t calibrate_mpu6050 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to calculate the MPU offset for raw values. </p>
+<dl class="section return"><dt>Returns</dt><dd>esp_err_t returns ESP_OK if successful, else ESP_FAIL </dd></dl>
+
+</div>
+</div>
 <a id="abb35efd200ff172bedad87a7ec590c7a" name="abb35efd200ff172bedad87a7ec590c7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb35efd200ff172bedad87a7ec590c7a">&#9670;&nbsp;</a></span>combine_msb_lsb_raw_data()</h2>
 
