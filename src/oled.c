@@ -351,12 +351,12 @@ esp_err_t display_lsa(line_sensor_array readings)
   lv_obj_t *lsa_readings[5];
 
   // plot the bar of LSA 0-4
-  for (int i = 0; i < 5; ++i)
+  for (int i = 0; i < 5; i++)
   {
     lsa_readings[i] = lv_bar_create(lv_scr_act());
-    lv_obj_set_size(lsa_readings[i], 10, 40);
+    lv_obj_set_size(lsa_readings[i], 10, 50);
     lv_obj_set_pos(lsa_readings[i], (18 + i * 20), 0);
-    lv_bar_set_value(lsa_readings[i], readings.adc_reading[3] * 0.04, LV_ANIM_OFF);
+    lv_bar_set_value(lsa_readings[i], readings.adc_reading[4-i] * 0.1, LV_ANIM_OFF);
     lv_obj_add_style(lsa_readings[i], &style_outline, LV_PART_MAIN);
     lv_obj_add_style(lsa_readings[i], &style, LV_PART_INDICATOR);
   }
@@ -395,7 +395,7 @@ esp_err_t display_mpu(float pitch, float roll)
 
   // Set scale of meter and ticks
   lv_meter_scale_t * scale = lv_meter_add_scale(meter);
-  lv_meter_set_scale_range(meter, scale, 40, -40, 180, 270);
+  lv_meter_set_scale_range(meter, scale, 40, -70, 180, 270);
   lv_meter_set_scale_ticks(meter, scale, 19, 1, 4, lv_color_black());
   lv_meter_set_scale_major_ticks(meter, scale, 9, 1, 4, lv_color_black(), 10);
 
