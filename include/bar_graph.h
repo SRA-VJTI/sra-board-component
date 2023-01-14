@@ -60,7 +60,7 @@ esp_err_t enable_bar_graph();
  * mask = bitmask[2] = 0x0F = 00001111
  * data = 0xAA = 10101010
  * 
- * Since, motor driver A is in normal mode, we can only use IN1, IN5, IN6, IN8 pins of the bar graph LED
+ * Since, motor driver A is in normal mode, we can only use IN5, IN6, IN7, IN8 pins of the bar graph LED
  * 
  * ```
  * LED1 <-----> Motor Driver A (IN1) ----- 0    

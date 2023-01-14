@@ -42,7 +42,7 @@ typedef union line_sensor_array
         int A4;
     } lsa;
 
-    int adc_reading[4];
+    int adc_reading[5];
 } line_sensor_array;
 
 /**
