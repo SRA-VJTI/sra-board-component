@@ -31,7 +31,7 @@ static i2c_dev_t mpu6050_dev_t;
 #define MIN_ACCE_ERROR 5
 #define MIN_GYRO_ERROR 5
 #define MAX_CALIBRATION_ATTEMPTS 20
-#define G_RAW_VLAUE 16384  //accelerometer reads this value for 1 g acceleration.
+#define G_RAW_VALUE 16384  //accelerometer reads this value for 1 g acceleration.
 
 static int16_t acce_raw_value_offset[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_offset[BUFF_SIZE / 2] = {0, 0, 0};
 
@@ -256,7 +256,7 @@ esp_err_t calibrate_mpu6050()
 
 	acce_raw_value_offset[0] = acce_raw_value_avg[0];
 	acce_raw_value_offset[1] = acce_raw_value_avg[1];
-	acce_raw_value_offset[2] = (G_RAW_VLAUE - acce_raw_value_avg[2]);
+	acce_raw_value_offset[2] = (G_RAW_VALUE - acce_raw_value_avg[2]);
 
 	for (i = 0, offset_ready = 0; i < MAX_CALIBRATION_ATTEMPTS && offset_ready != 6; i++)
 	{
@@ -278,8 +278,8 @@ esp_err_t calibrate_mpu6050()
 		if(abs(acce_raw_value_avg[1]) <= MIN_ACCE_ERROR) offset_ready++;
 		else acce_raw_value_offset[1] += acce_raw_value_avg[1];
 
-		if(abs(G_RAW_VLAUE - acce_raw_value_avg[2]) <= MIN_ACCE_ERROR) offset_ready++;
-		else acce_raw_value_offset[2] += acce_raw_value_avg[2] - G_RAW_VLAUE;
+		if(abs(G_RAW_VALUE - acce_raw_value_avg[2]) <= MIN_ACCE_ERROR) offset_ready++;
+		else acce_raw_value_offset[2] += acce_raw_value_avg[2] - G_RAW_VALUE;
 
 		vTaskDelay(10 / portTICK_PERIOD_MS);
 	}
@@ -302,26 +302,11 @@ esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
     int16_t acce_raw_value[BUFF_SIZE / 2], gyro_raw_value[BUFF_SIZE / 2];
     static float complementary_angle[2];
 
-	// static bool is_initial_reading = true;
-	//
-	// if (is_initial_reading) {
-	// 	if (calibrate_mpu6050() != ESP_OK)
-	// 	  ESP_LOGW(TAG_MPU, "MPU calibration failed.");
-	//
-	// 	is_initial_reading = false;
-	// }
-
     if (read_mpu6050_raw(acce_raw_value, gyro_raw_value) != ESP_OK)
     {
         ESP_LOGE(TAG_MPU, "%s", "Failed to read MPU!");
         err = ESP_FAIL;
     }
-
-	// for(int i = 0; i < 3; i++)
-	// {
-	// 	acce_raw_value[i] -= acce_raw_value_offset[i];
-	// 	gyro_raw_value[i] -= gyro_raw_value_offset[i];
-	// }
 
     complementary_filter(acce_raw_value, gyro_raw_value, complementary_angle, mpu_offset);
     memcpy(euler_angle, complementary_angle, 2 * sizeof(float));
