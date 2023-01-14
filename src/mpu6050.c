@@ -282,12 +282,12 @@ esp_err_t calibrate_mpu6050()
 		else acce_raw_value_offset[2] += acce_raw_value_avg[2] - G_RAW_VLAUE;
 
 		vTaskDelay(10 / portTICK_PERIOD_MS);
+	}
 
-		if (i == MAX_CALIBRATION_ATTEMPTS)
-		{
-			ESP_LOGW(TAG_MPU, "Maximum calibration attemps limit exceeded, quiting calibration.");
-			return ESP_FAIL;
-		}
+	if (i == MAX_CALIBRATION_ATTEMPTS)
+	{
+		ESP_LOGW(TAG_MPU, "Maximum calibration attemps limit exceeded, quiting calibration.");
+		return ESP_FAIL;
 	}
 
 	ESP_LOGI("accelerometer offset values: ", "%d | %d | %d", acce_raw_value_offset[0], acce_raw_value_offset[1], acce_raw_value_offset[2]);
