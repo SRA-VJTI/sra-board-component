@@ -36,19 +36,13 @@
 #include "motor_driver.h"
 
 /**
- * It will check for state of motor driver A and B, and accordingly init the free gpios.
- * __________________________________________
- * | Motor Driver A | Motor Driver B | Mode |
- * |----------------|----------------|------|
- * |     off        |      off       |   1  |
- * |     off        |      parallel  |   2  |
- * |     off        |      normal    |   3  |
- * |     parallel   |      off       |   4  |
- * |     parallel   |      parallel  |   5  |
- * |     parallel   |      normal    |   6  |
- * |     normal     |      off       |   7  |
- * |     normal     |      parallel  |   8  |
- * |     normal     |      normal    |   0  |
+ * It will check for state of motor driver A, and accordingly init the free gpios.
+ * _________________________
+ * | Motor Driver A | Mode |
+ * |----------------|------|
+ * |     off        |   0  |
+ * |     parallel   |   1  |
+ * |     normal     |   2  |
  * 
  * enabled_bar_graph_flag is set to the value of Mode accordingly.
  * 
@@ -62,22 +56,21 @@ esp_err_t enable_bar_graph();
  * The exact working of this is a bit hard to understand, so this is example. Below are the given states of motor drivers
  * 
  * Motor Driver A: Normal
- * Motor Driver B: Off
- * Mode = 7, so for mode = 7,
- * mask = bitmask[7] = 0x0F = 00001111
+ * Mode = 2, so for mode = 2,
+ * mask = bitmask[2] = 0x0F = 00001111
  * data = 0xAA = 10101010
  * 
- * Since, motor driver A is in normal mode and motor driver B is off, we can only use IN5 - IN8 pins of the bar graph LED
+ * Since, motor driver A is in normal mode, we can only use IN1, IN5, IN6, IN8 pins of the bar graph LED
  * 
  * ```
  * LED1 <-----> Motor Driver A (IN1) ----- 0    
  * LED2 <-----> Motor Driver A (IN2) ----- 0    
  * LED3 <-----> Motor Driver A (IN3) ----- 0    
- * LED4 <-----> Motor Driver A (IN4) ----- 0    
- * LED5 <--X--> Motor Driver B (IN5) ----- 1    
- * LED6 <--X--> Motor Driver B (IN6) ----- 1    
- * LED7 <--X--> Motor Driver B (IN7) ----- 1    
- * LED8 <--X--> Motor Driver B (IN8) ----- 1    
+ * LED4 <-----> Motor Driver A (IN4) ----- 0
+ * LED5 <--X--> -------------- (IN5) ----- 1
+ * LED6 <--X--> -------------- (IN6) ----- 1
+ * LED7 <--X--> -------------- (IN7) ----- 1
+ * LED8 <--X--> -------------- (IN8) ----- 1
  * ```
  *   
  * Mask ==> 00001111 => 0x0F
