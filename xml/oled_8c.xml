@@ -932,12 +932,12 @@
 <codeline lineno="351"><highlight class="normal"><sp/><sp/>lv_obj_t<sp/>*lsa_readings[5];</highlight></codeline>
 <codeline lineno="352"><highlight class="normal"></highlight></codeline>
 <codeline lineno="353"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>plot<sp/>the<sp/>bar<sp/>of<sp/>LSA<sp/>0-4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="354"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5;<sp/>++i)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>5;<sp/>i++)</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>lsa_readings[i]<sp/>=<sp/>lv_bar_create(lv_scr_act());</highlight></codeline>
-<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(lsa_readings[i],<sp/>10,<sp/>40);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_size(lsa_readings[i],<sp/>10,<sp/>50);</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_set_pos(lsa_readings[i],<sp/>(18<sp/>+<sp/>i<sp/>*<sp/>20),<sp/>0);</highlight></codeline>
-<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_bar_set_value(lsa_readings[i],<sp/>readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[3]<sp/>*<sp/>0.04,<sp/>LV_ANIM_OFF);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_bar_set_value(lsa_readings[i],<sp/>readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[4-i]<sp/>*<sp/>0.1,<sp/>LV_ANIM_OFF);</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(lsa_readings[i],<sp/>&amp;style_outline,<sp/>LV_PART_MAIN);</highlight></codeline>
 <codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>lv_obj_add_style(lsa_readings[i],<sp/>&amp;style,<sp/>LV_PART_INDICATOR);</highlight></codeline>
 <codeline lineno="362"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -976,7 +976,7 @@
 <codeline lineno="395"><highlight class="normal"></highlight></codeline>
 <codeline lineno="396"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>scale<sp/>of<sp/>meter<sp/>and<sp/>ticks</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="397"><highlight class="normal"><sp/><sp/>lv_meter_scale_t<sp/>*<sp/>scale<sp/>=<sp/>lv_meter_add_scale(meter);</highlight></codeline>
-<codeline lineno="398"><highlight class="normal"><sp/><sp/>lv_meter_set_scale_range(meter,<sp/>scale,<sp/>40,<sp/>-40,<sp/>180,<sp/>270);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/>lv_meter_set_scale_range(meter,<sp/>scale,<sp/>40,<sp/>-70,<sp/>180,<sp/>270);</highlight></codeline>
 <codeline lineno="399"><highlight class="normal"><sp/><sp/>lv_meter_set_scale_ticks(meter,<sp/>scale,<sp/>19,<sp/>1,<sp/>4,<sp/>lv_color_black());</highlight></codeline>
 <codeline lineno="400"><highlight class="normal"><sp/><sp/>lv_meter_set_scale_major_ticks(meter,<sp/>scale,<sp/>9,<sp/>1,<sp/>4,<sp/>lv_color_black(),<sp/>10);</highlight></codeline>
 <codeline lineno="401"><highlight class="normal"></highlight></codeline>
