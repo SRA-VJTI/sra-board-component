@@ -78,6 +78,7 @@
 #define LSA_A1 35
 #define LSA_A2 36
 #define LSA_A3 39
+#define LSA_A4 32
 /////////////////////////////
 
 /////// motor driver ////////

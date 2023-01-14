@@ -32,10 +32,11 @@ esp_err_t config_adc1()
     CHECK(adc1_config_width(ADC_WIDTH_BIT_12));
 
     // Configure ADC to 11dB attenuation
-    CHECK(adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11));
-    CHECK(adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11));
-    CHECK(adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11));
+    CHECK(adc1_config_channel_atten(ADC_CHANNEL_4, ADC_ATTEN_DB_11));
     CHECK(adc1_config_channel_atten(ADC_CHANNEL_7, ADC_ATTEN_DB_11));
+    CHECK(adc1_config_channel_atten(ADC_CHANNEL_6, ADC_ATTEN_DB_11));
+    CHECK(adc1_config_channel_atten(ADC_CHANNEL_3, ADC_ATTEN_DB_11));
+    CHECK(adc1_config_channel_atten(ADC_CHANNEL_0, ADC_ATTEN_DB_11));
 
     ESP_LOGI(TAG_ADC, "Configured ADC_1 to 12 Bit and 11dB attenuation");
 
@@ -78,7 +79,7 @@ int read_adc(int adc_pin)
 {
     if (adc_pin == LSA_A0)
     {
-        return adc1_get_raw(ADC_CHANNEL_6);
+        return adc1_get_raw(ADC_CHANNEL_4);
     }
     else if (adc_pin == LSA_A1)
     {
@@ -86,11 +87,15 @@ int read_adc(int adc_pin)
     }
     else if (adc_pin == LSA_A2)
     {
-        return adc1_get_raw(ADC_CHANNEL_0);
+        return adc1_get_raw(ADC_CHANNEL_6);
     }
     else if (adc_pin == LSA_A3)
     {
         return adc1_get_raw(ADC_CHANNEL_3);
+    }
+    else if (adc_pin == LSA_A4)
+    {
+        return adc1_get_raw(ADC_CHANNEL_0);
     }
     else
     {
