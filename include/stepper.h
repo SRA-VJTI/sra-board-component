@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c)  2021 Society of Robotics and Automation
+ * Copyright (c)  2023 Society of Robotics and Automation
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -90,25 +90,29 @@ esp_err_t init_stepper(stepper_config_t *stepper);
 
  * @return int containing first pulse interval delay as per the accelaration value.
  **/
-int calc_first_delay_in_millis(stepper_config_t *stepper);
+static int calc_first_delay_in_millis(stepper_config_t *stepper);
 
 /**
  * @brief calculates delay for next step interval for accelaration.
 
  * @param stepper pointer to stepper_config_t struct
 
+ * @param n count of the previous step that was executed.
+
  * @return int containing delay for next step interval for accelaration.
  **/
-int cal_delay_accl(stepper_config_t *stepper, int n);
+static int cal_delay_accl(stepper_config_t *stepper, int n);
 
 /**
  * @brief calculates delay for next step interval for decelaration.
 
  * @param stepper pointer to stepper_config_t struct
 
+ * @param n count of the previous step that was executed.
+
  * @return int containing delay for next step interval for decelaration.
  **/
-int cal_delay_decel(stepper_config_t *stepper, int n);
+static int cal_delay_decel(stepper_config_t *stepper, int n);
 
 /**
  * @brief moves stepper to a specified position as per number of steps.

@@ -1,7 +1,7 @@
 /*
- * The MIT License (MIT)
+ * MIT License
  *
- * Copyright (c) 2018 Ruslan V. Uss <unclerus@gmail.com>
+ * Copyright (c)  2023 Society of Robotics and Automation
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -9,6 +9,7 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
  *
@@ -25,11 +26,11 @@
 #include <math.h>
 static const char *TAG_STEPPER = "stepper";
 
-esp_timer_handle_t oneshot_timer;
+static esp_timer_handle_t oneshot_timer;
 int ramp_up = 0;
 int delay;
 long steps_to_move = 0;
-unsigned long n = 0;
+static unsigned long n = 0;
 
 static void oneshot_timer_callback(void *arg);
 
@@ -65,20 +66,20 @@ esp_err_t init_stepper(stepper_config_t *stepper)
     }
 }
 
-int calc_first_delay_in_millis(stepper_config_t *stepper)
+static int calc_first_delay_in_millis(stepper_config_t *stepper)
 {
     float delay_in_sec = 0.676 * sqrtf((4 * M_PI / stepper->steps_per_revolution) / stepper->accl_decel);
     int delay = (int)((2000 * delay_in_sec) + 0.5);
     return delay;
 }
 
-int cal_delay_accl(stepper_config_t *stepper, int n)
+static int cal_delay_accl(stepper_config_t *stepper, int n)
 {
     int cn = stepper->prev_delay - (2 * stepper->prev_delay) / (4 * n + 1);
     return abs(cn);
 }
 
-int cal_delay_decel(stepper_config_t *stepper, int n)
+static int cal_delay_decel(stepper_config_t *stepper, int n)
 {
     int cn = (stepper->prev_delay * (4 * n + 1)) / (4 * n - 1);
     return abs(cn);
