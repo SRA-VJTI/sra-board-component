@@ -30,7 +30,7 @@ static i2c_dev_t mpu6050_dev_t;
 
 #define MIN_ACCE_ERROR 5
 #define MIN_GYRO_ERROR 5
-#define MAX_CALIBRATION_ATTEMPTS 5
+#define MAX_CALIBRATION_ATTEMPTS 20
 #define G_RAW_VLAUE 16384  //accelerometer reads this value for 1 g acceleration.
 
 static int16_t acce_raw_value_offset[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_offset[BUFF_SIZE / 2] = {0, 0, 0};
@@ -245,7 +245,7 @@ esp_err_t avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, 
 esp_err_t calibrate_mpu6050()
 {
 	int16_t acce_raw_value_avg[BUFF_SIZE / 2] = {0, 0, 0}, gyro_raw_value_avg[BUFF_SIZE / 2] = {0, 0, 0};
-	int8_t calibration_attemps = 0;
+	int8_t i, offset_ready;
 
 	if (avg_sensors(acce_raw_value_avg, gyro_raw_value_avg, acce_raw_value_offset, gyro_raw_value_offset) != ESP_OK)
 		return ESP_FAIL;
@@ -258,17 +258,10 @@ esp_err_t calibrate_mpu6050()
 	acce_raw_value_offset[1] = acce_raw_value_avg[1];
 	acce_raw_value_offset[2] = (G_RAW_VLAUE - acce_raw_value_avg[2]);
 
-	while(1)
+	for (i = 0, offset_ready = 0; i < MAX_CALIBRATION_ATTEMPTS && offset_ready != 6; i++)
 	{
-		int offset_ready = 0;
-
-		if (calibration_attemps > MAX_CALIBRATION_ATTEMPTS)
-		{
-			ESP_LOGW(TAG_MPU, "Maximum calibration attemps limit exceeded, quiting calibration.");
+		if (avg_sensors(acce_raw_value_avg, gyro_raw_value_avg, acce_raw_value_offset, gyro_raw_value_offset) != ESP_OK)
 			return ESP_FAIL;
-		}
-
-		avg_sensors(acce_raw_value_avg, gyro_raw_value_avg, acce_raw_value_offset, gyro_raw_value_offset);
 
 		if(abs(gyro_raw_value_avg[0]) <= MIN_GYRO_ERROR) offset_ready++;
 		else gyro_raw_value_offset[0] += gyro_raw_value_avg[0];
@@ -290,10 +283,11 @@ esp_err_t calibrate_mpu6050()
 
 		vTaskDelay(10 / portTICK_PERIOD_MS);
 
-		if(offset_ready == 6)
-			break;
-
-		calibration_attemps++;
+		if (i == MAX_CALIBRATION_ATTEMPTS)
+		{
+			ESP_LOGW(TAG_MPU, "Maximum calibration attemps limit exceeded, quiting calibration.");
+			return ESP_FAIL;
+		}
 	}
 
 	ESP_LOGI("accelerometer offset values: ", "%d | %d | %d", acce_raw_value_offset[0], acce_raw_value_offset[1], acce_raw_value_offset[2]);
@@ -334,3 +328,4 @@ esp_err_t read_mpu6050(float *euler_angle, float *mpu_offset)
 
     return err;
 }
+
