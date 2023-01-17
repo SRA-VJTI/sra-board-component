@@ -9898,7 +9898,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'roll';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '370';
+      func-mem-desc-line = '392';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays pitch and roll readings on OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -9937,7 +9937,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kd';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '413';
+      func-mem-desc-line = '435';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays kp, ki and kd reading on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -9983,7 +9983,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 's4';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '452';
+      func-mem-desc-line = '474';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays Servo angles on the OLED screen
 _EnD_oF_dEf_TeXt_;

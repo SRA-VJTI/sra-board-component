@@ -260,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="74" column="11" bodyfile="src/oled.c" bodystart="335" bodyend="368" declfile="include/oled.h" declline="74" declcolumn="11"/>
+        <location file="include/oled.h" line="74" column="11" bodyfile="src/oled.c" bodystart="335" bodyend="390" declfile="include/oled.h" declline="74" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1a1258c05bcda38123f6b825ae1abfcd54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="84" column="11" bodyfile="src/oled.c" bodystart="370" bodyend="411" declfile="include/oled.h" declline="84" declcolumn="11"/>
+        <location file="include/oled.h" line="84" column="11" bodyfile="src/oled.c" bodystart="392" bodyend="433" declfile="include/oled.h" declline="84" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1ac588665be0f2f8fb00787ef97a32e03d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -356,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="95" column="11" bodyfile="src/oled.c" bodystart="413" bodyend="450" declfile="include/oled.h" declline="95" declcolumn="11"/>
+        <location file="include/oled.h" line="95" column="11" bodyfile="src/oled.c" bodystart="435" bodyend="472" declfile="include/oled.h" declline="95" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1a479e088b824336912654e8c146885e1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -422,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="107" column="11" bodyfile="src/oled.c" bodystart="452" bodyend="492" declfile="include/oled.h" declline="107" declcolumn="11"/>
+        <location file="include/oled.h" line="107" column="11" bodyfile="src/oled.c" bodystart="474" bodyend="514" declfile="include/oled.h" declline="107" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
