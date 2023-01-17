@@ -337,28 +337,50 @@ esp_err_t display_lsa(line_sensor_array readings)
   // Clear the screen
   lv_obj_clean(lv_scr_act());
 
-  static lv_style_t style;
-  lv_style_init(&style);
-  lv_style_set_bg_opa(&style, LV_OPA_COVER);
-  lv_style_set_bg_color(&style, lv_color_black());
+  static lv_color_t cbuf[LV_CANVAS_BUF_SIZE_INDEXED_1BIT(128, 64)];
+  lv_obj_t *canvas = lv_canvas_create(lv_scr_act());
+  lv_canvas_set_buffer(canvas, cbuf, 128, 64, LV_IMG_CF_INDEXED_1BIT);
+  lv_canvas_set_palette(canvas, 0, lv_color_white());
+  lv_canvas_set_palette(canvas, 1, lv_color_black());
 
-  static lv_style_t style_outline;
-  lv_style_init(&style_outline);
-  lv_style_set_outline_opa(&style_outline, LV_OPA_COVER);
-  lv_style_set_outline_width(&style_outline, 2);
-  lv_style_set_outline_color(&style_outline, lv_color_black());
+  lv_color_t c0;
+  lv_color_t c1;
 
-  lv_obj_t *lsa_readings[5];
+  c0.full = 0;
+  c1.full = 1;
 
-  // plot the bar of LSA 0-4
-  for (int i = 0; i < 5; i++)
+  for (uint32_t i = 0; i < 5; i++)
   {
-    lsa_readings[i] = lv_bar_create(lv_scr_act());
-    lv_obj_set_size(lsa_readings[i], 10, 50);
-    lv_obj_set_pos(lsa_readings[i], (18 + i * 20), 0);
-    lv_bar_set_value(lsa_readings[i], readings.adc_reading[4-i] * 0.1, LV_ANIM_OFF);
-    lv_obj_add_style(lsa_readings[i], &style_outline, LV_PART_MAIN);
-    lv_obj_add_style(lsa_readings[i], &style, LV_PART_INDICATOR);
+    // Horizontal Border of Bar
+    for (uint32_t x = 18 + i * 20; x < 28 + i * 20; x++)
+    {
+      lv_canvas_set_px_color(canvas, x, 2, c1);
+      lv_canvas_set_px_color(canvas, x, 52, c1);
+    }
+    // Vertical Border of Bar
+    for (uint32_t y = 2; y < 53; y++)
+    {
+      lv_canvas_set_px_color(canvas, 18 + i * 20, y, c1);
+      lv_canvas_set_px_color(canvas, 28 + i * 20, y, c1);
+    }
+
+    // Reset Bar to Black
+    for (uint32_t a = 51; a > 2; a--)
+    {
+      for (uint32_t b = 19 + i * 20; b < 28 + i * 20; b++)
+      {
+        lv_canvas_set_px_color(canvas, b, a, c0);
+      }
+    }
+
+    // Set Bar value according to LSA
+    for (uint32_t a = 52; a > 100 - (int)(readings.adc_reading[4 - i] * 0.1); a--)
+    {
+      for (uint32_t b = 19 + i * 20; b < 28 + i * 20; b++)
+      {
+        lv_canvas_set_px_color(canvas, b, a, c1);
+      }
+    }
   }
 
   // Refresh Display
