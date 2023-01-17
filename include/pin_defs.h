@@ -100,4 +100,7 @@
 #define SERVO_D 18
 /////////////////////////////
 
+#define STEP 14
+#define DIR 27
+
 #endif

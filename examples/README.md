@@ -48,3 +48,9 @@ Example for using two motor drivers present on SRA Board in both parallel and no
 - Manual Switches provide the traditional comfort to toggle the input variables
 
 - [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches) for using four user switches present on SRA Board
+
+### Stepper Motor
+
+- Stepper motors are used in application involving powerful and precise rotary movements
+
+- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/stepper_motor)
