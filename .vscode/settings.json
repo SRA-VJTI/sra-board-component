@@ -1,0 +1,17 @@
+{
+    "idf.espIdfPath": "/Users/zainsiddavatam/esp/esp-idf",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "mcpwm.h": "c",
+        "cdefs.h": "c",
+        "mcpwm_prelude.h": "c",
+        "freertos.h": "c",
+        "esp_check.h": "c"
+    },
+    "idf.adapterTargetName": "esp32",
+    "idf.openOcdConfigs": [
+        "board/esp32-wrover-kit-3.3v.cfg"
+    ],
+    "idf.port": "/dev/cu.usbserial-10",
+    "idf.flashType": "UART"
+}

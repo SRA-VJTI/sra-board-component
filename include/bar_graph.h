@@ -33,7 +33,7 @@
 #include "esp_log.h"
 #include "esp_err.h"
 #include "pin_defs.h"
-#include "motor_driver.h"
+//#include "motor_driver.h"
 
 /**
  * It will check for state of motor driver A, and accordingly init the free gpios.

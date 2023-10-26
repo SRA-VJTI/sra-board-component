@@ -36,54 +36,54 @@ static const uint8_t bitmask[3] = {0xFF, 0xCF, 0x0F};
 // Just an array of pins used by bar graph led
 static const int pin_out[8] = {BG_LED_1, BG_LED_2, BG_LED_3, BG_LED_4, BG_LED_5, BG_LED_6, BG_LED_7, BG_LED_8};
 
-esp_err_t enable_bar_graph()
-{
-    uint64_t bit_mask = 0;
-    // motor driver a is off so we can use IN1 - IN8 pins
-    if (read_motor_driver_mode(a) == 0)
-    {
-        bit_mask = (1ULL << BG_LED_1) | (1ULL << BG_LED_2) | (1ULL << BG_LED_3) | (1ULL << BG_LED_4) | (1ULL << BG_LED_5) | (1ULL << BG_LED_6) | (1ULL << BG_LED_7) | (1ULL << BG_LED_8);
-        enabled_bar_graph_flag = 0;
-    }
-    // motor driver a is in parallel mode, so we can use IN1, IN2, IN5 - IN8 pins
-    else if (read_motor_driver_mode(a) == 1)
-    {
-        bit_mask = (1ULL << BG_LED_1) | (1ULL << BG_LED_2) | (1ULL << BG_LED_5) | (1ULL << BG_LED_6) | (1ULL << BG_LED_7) | (1ULL << BG_LED_8);
-        enabled_bar_graph_flag = 1;
-    }
-    // motor driver a is in normal mode, so we can use IN5, IN6, IN7, IN8 pins
-    else if (read_motor_driver_mode(a) == 2)
-    {
-        bit_mask = (1ULL << BG_LED_5) | (1ULL << BG_LED_6) | (1ULL << BG_LED_7) | (1ULL << BG_LED_8);
-        enabled_bar_graph_flag = 2;
-    }
+// esp_err_t enable_bar_graph()
+// {
+//     uint64_t bit_mask = 0;
+//     // motor driver a is off so we can use IN1 - IN8 pins
+//     if (read_motor_driver_mode(a) == 0)
+//     {
+//         bit_mask = (1ULL << BG_LED_1) | (1ULL << BG_LED_2) | (1ULL << BG_LED_3) | (1ULL << BG_LED_4) | (1ULL << BG_LED_5) | (1ULL << BG_LED_6) | (1ULL << BG_LED_7) | (1ULL << BG_LED_8);
+//         enabled_bar_graph_flag = 0;
+//     }
+//     // motor driver a is in parallel mode, so we can use IN1, IN2, IN5 - IN8 pins
+//     else if (read_motor_driver_mode(a) == 1)
+//     {
+//         bit_mask = (1ULL << BG_LED_1) | (1ULL << BG_LED_2) | (1ULL << BG_LED_5) | (1ULL << BG_LED_6) | (1ULL << BG_LED_7) | (1ULL << BG_LED_8);
+//         enabled_bar_graph_flag = 1;
+//     }
+//     // motor driver a is in normal mode, so we can use IN5, IN6, IN7, IN8 pins
+//     else if (read_motor_driver_mode(a) == 2)
+//     {
+//         bit_mask = (1ULL << BG_LED_5) | (1ULL << BG_LED_6) | (1ULL << BG_LED_7) | (1ULL << BG_LED_8);
+//         enabled_bar_graph_flag = 2;
+//     }
 
-    gpio_config_t io_conf;
-    // bit mask for the pins, each bit maps to a GPIO
-    io_conf.pin_bit_mask = bit_mask;
-    // set gpio mode to input
-    io_conf.mode = GPIO_MODE_OUTPUT;
-    // enable pull up resistors
-    io_conf.pull_up_en = 0;
-    // disable pull down resistors
-    io_conf.pull_down_en = 1;
-    // disable gpio interrupts
-    io_conf.intr_type = GPIO_INTR_DISABLE;
-    // detailed description can be found at https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t
+//     gpio_config_t io_conf;
+//     // bit mask for the pins, each bit maps to a GPIO
+//     io_conf.pin_bit_mask = bit_mask;
+//     // set gpio mode to input
+//     io_conf.mode = GPIO_MODE_OUTPUT;
+//     // enable pull up resistors
+//     io_conf.pull_up_en = 0;
+//     // disable pull down resistors
+//     io_conf.pull_down_en = 1;
+//     // disable gpio interrupts
+//     io_conf.intr_type = GPIO_INTR_DISABLE;
+//     // detailed description can be found at https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html#_CPPv413gpio_config_t
 
-    esp_err_t err = gpio_config(&io_conf);
-    if (err == ESP_OK)
-    {
-        ESP_LOGI(TAG_BAR_GRAPH, "enabled bar graph leds in mode: %d", enabled_bar_graph_flag);
-    }
-    else
-    {
-        ESP_LOGE(TAG_BAR_GRAPH, "error: %s", esp_err_to_name(err));
-        enabled_bar_graph_flag = 0;
-    }
+//     esp_err_t err = gpio_config(&io_conf);
+//     if (err == ESP_OK)
+//     {
+//         ESP_LOGI(TAG_BAR_GRAPH, "enabled bar graph leds in mode: %d", enabled_bar_graph_flag);
+//     }
+//     else
+//     {
+//         ESP_LOGE(TAG_BAR_GRAPH, "error: %s", esp_err_to_name(err));
+//         enabled_bar_graph_flag = 0;
+//     }
 
-    return err;
-}
+//     return err;
+// }
 
 esp_err_t set_bar_graph(uint8_t data)
 {
