@@ -37,15 +37,13 @@ static const char* TAG = "LSA_READINGS";
 void app_main(void)
 {
     // enable line sensor
-    ESP_ERROR_CHECK(enable_line_sensor());
-
-    //Union containing line sensor readings
+    adc_handle_t adc_handle;
+    ESP_ERROR_CHECK(enable_line_sensor(&adc_handle));
     line_sensor_array line_sensor_readings;
-
-    while(1)
+    while (1)
     {
         // get line sensor readings
-        line_sensor_readings = read_line_sensor();
+        line_sensor_readings = read_line_sensor(adc_handle);
         for(int i = 0; i < 5; i++)
         {
             // constrain lsa readings between BLACK_MARGIN and WHITE_MARGIN
@@ -58,6 +56,5 @@ void app_main(void)
 
         // log final lsa readings
         ESP_LOGI(TAG, "LSA_0: %d \t LSA_1: %d \t LSA_2: %d \t LSA_3: %d \t LSA_4: %d",line_sensor_readings.adc_reading[0], line_sensor_readings.adc_reading[1], line_sensor_readings.adc_reading[2], line_sensor_readings.adc_reading[3], line_sensor_readings.adc_reading[4]);
-
     }
 }

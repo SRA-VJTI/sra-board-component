@@ -52,7 +52,7 @@ typedef union line_sensor_array
 
  * @return esp_err_t i.e it shows if adc is initialised successfully or not
  **/
-esp_err_t enable_line_sensor();
+esp_err_t enable_line_sensor(adc_handle_t *adc_handle);
 
 /**
  * @brief Get multisampled line sensor array readings
@@ -62,6 +62,6 @@ esp_err_t enable_line_sensor();
  * @return Returns a pointer to a struct that contains multisampled adc readings 
            for all the pins specified in lsa_pins array
 **/
-line_sensor_array read_line_sensor();
+line_sensor_array read_line_sensor(adc_handle_t adc_handle);
 
 #endif
