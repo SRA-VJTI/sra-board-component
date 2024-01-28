@@ -33,7 +33,6 @@ esp_err_t config_adc1(adc_obj_t *adc_obj)
         .bitwidth = ADC_BITWIDTH_12,
         .atten = ADC_ATTEN,
     };
-    ESP_LOGI(TAG, "ADC1 handle address: %p", adc_obj->adc1_handle);
     //assign channels to each io in adc_io
     for (int i = 0; i < sizeof(adc_io) / sizeof(adc_io[0]); i++)
     {
@@ -116,10 +115,8 @@ esp_err_t enable_adc1(adc_obj_t** adc_obj)
         .unit_id = ADC_UNIT_1,
     };
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &ret->adc1_handle));
-    ESP_LOGI(TAG, "Handle address: %p", ret->adc1_handle);
     config_adc1(ret);
     calib_init(ret);
-    //assign return value to adc_handle
     *adc_obj = ret;
 
     return ESP_OK;
