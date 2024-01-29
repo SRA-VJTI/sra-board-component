@@ -1,12 +1,12 @@
 name: SRA Board component
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build-test:
     name: Test Build of component
     runs-on: ubuntu-latest
     container:
-      image: espressif/idf:release-v4.4
+      image: espressif/idf:release-v5.1
     strategy:
       matrix:
         test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled]
