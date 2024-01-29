@@ -20,7 +20,7 @@ jobs:
           && apt-get update \
           && DEBIAN_FRONTEND=noninteractive apt-get install -y git
       - name: Setup Github Actions
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 1
