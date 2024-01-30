@@ -2,6 +2,9 @@
 # Build folder
 build/
 
+#sdkconfig files
+sdkconfig*
+
 # Prerequisites
 *.d
 
@@ -75,9 +78,5 @@ dkms.conf
 # Executables
 
 ### vscode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode/
 *.code-workspace
