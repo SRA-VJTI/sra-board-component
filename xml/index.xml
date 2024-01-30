@@ -368,6 +368,7 @@
     <member refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kind="define"><name>LSA_A2</name></member>
     <member refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kind="define"><name>LSA_A3</name></member>
     <member refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kind="define"><name>LSA_A4</name></member>
+    <member refid="pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a" kind="define"><name>BATTERY</name></member>
     <member refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" kind="define"><name>MDA_NORMAL_IN_1</name></member>
     <member refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" kind="define"><name>MDA_NORMAL_IN_2</name></member>
     <member refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" kind="define"><name>MDA_NORMAL_IN_3</name></member>

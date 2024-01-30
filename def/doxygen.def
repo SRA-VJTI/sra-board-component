@@ -6818,7 +6818,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_2';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-33
+13
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '60';
@@ -6872,7 +6872,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_5';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-27
+15
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '63';
@@ -6890,7 +6890,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_6';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-14
+5
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '64';
@@ -6908,7 +6908,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_7';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-13
+18
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '65';
@@ -6926,7 +6926,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BG_LED_8';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-23
+19
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '66';
@@ -6980,7 +6980,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'SWITCH_3';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-17
+27
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '72';
@@ -6998,7 +6998,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'SWITCH_4';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-16
+14
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '73';
@@ -7016,7 +7016,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'LSA_A0';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-34
+32
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '77';
@@ -7052,7 +7052,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'LSA_A2';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-36
+34
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '79';
@@ -7088,10 +7088,28 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'LSA_A4';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-32
+36
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '81';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BATTERY';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+33
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
+      define-mem-desc-line = '83';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7109,7 +7127,7 @@ _EnD_oF_dEf_TeXt_;
 12
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '86';
+      define-mem-desc-line = '88';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7124,10 +7142,10 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'MDA_NORMAL_IN_2';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-33
+13
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '87';
+      define-mem-desc-line = '89';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7145,7 +7163,7 @@ _EnD_oF_dEf_TeXt_;
 25
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '88';
+      define-mem-desc-line = '90';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7163,7 +7181,7 @@ _EnD_oF_dEf_TeXt_;
 26
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '89';
+      define-mem-desc-line = '91';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7181,7 +7199,7 @@ _EnD_oF_dEf_TeXt_;
 25
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '92';
+      define-mem-desc-line = '94';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7199,7 +7217,7 @@ _EnD_oF_dEf_TeXt_;
 26
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '93';
+      define-mem-desc-line = '95';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7217,7 +7235,7 @@ _EnD_oF_dEf_TeXt_;
 15
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '97';
+      define-mem-desc-line = '99';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7235,7 +7253,7 @@ _EnD_oF_dEf_TeXt_;
 5
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '98';
+      define-mem-desc-line = '100';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7253,7 +7271,7 @@ _EnD_oF_dEf_TeXt_;
 19
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '99';
+      define-mem-desc-line = '101';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -7271,7 +7289,7 @@ _EnD_oF_dEf_TeXt_;
 18
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
-      define-mem-desc-line = '100';
+      define-mem-desc-line = '102';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
