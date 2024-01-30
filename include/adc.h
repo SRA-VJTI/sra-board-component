@@ -40,7 +40,7 @@
 #include "esp_err.h"
 #include "pin_defs.h"
 
-#define ADC_ATTEN ADC_ATTEN_DB_12
+#define ADC_ATTEN ADC_ATTEN_DB_11
 
 
 /**
