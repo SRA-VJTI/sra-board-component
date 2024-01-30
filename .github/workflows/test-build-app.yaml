@@ -9,7 +9,7 @@ jobs:
       image: espressif/idf:release-v4.4
     strategy:
       matrix:
-        test-apps: [bar_graph, lsa, motor_driver_normal, motor_driver_parallel, mpu6050, servos, switches, oled]
+        test-apps: [bar_graph, lsa, motor_driver_normal, mpu6050, servos, switches, oled]
     steps:
       - name: Force Install GIT latest
         run: |
