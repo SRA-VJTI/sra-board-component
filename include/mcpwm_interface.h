@@ -22,7 +22,8 @@
  * SOFTWARE.
  */
 
-#pragma once
+#ifndef MCPWM_INTERFACE_H
+#define MCPWM_INTERFACE_H
 
 #include <stdint.h>
 #include "esp_err.h"
@@ -131,3 +132,5 @@ typedef struct {
  *      - ESP_FAIL: Create BDC Motor handle failed because some other error
  */
 esp_err_t motor_new_mcpwm_device(const motor_config_t *motor_config, const motor_mcpwm_config_t *mcpwm_config, motor_t** ret_motor);
+
+#endif

@@ -22,7 +22,8 @@
  * SOFTWARE.
  */
 
-#pragma once
+#ifndef MOTOR_DRIVER_H
+#define MOTOR_DRIVER_H
 
 #include "esp_err.h"
 #include "mcpwm_interface.h"
@@ -63,3 +64,5 @@ esp_err_t set_motor_speed(motor_handle_t motor, int direction, float duty_cycle)
  * @return true if the motor driver is engaged, false otherwise.
  */
 int get_motor_driver_status();
+
+#endif
