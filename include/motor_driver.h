@@ -43,8 +43,8 @@
  *  @param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to bind to the handle.
  *  @return
  *    - ESP_OK: Success
- * - ESP_ERR_INVALID_ARG: Invalid argument
- * - ESP_FAIL: Failed
+ *    - ESP_ERR_INVALID_ARG: Invalid argument
+ *    - ESP_FAIL: Failed
  */
 esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id);
 

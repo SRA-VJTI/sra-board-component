@@ -25,8 +25,6 @@
 #ifndef _UTILS_H
 #define _UTILS_H
 
-#include "esp_log.h"
-
 /**
  * @brief Bound a value in a range [min, max]
  * 
