@@ -37,18 +37,18 @@ esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id) {
 	if(motor_id == MOTOR_A_0){
 		motor_config.pwma_gpio_num = MDA_NORMAL_IN_1,
 		motor_config.pwmb_gpio_num = MDA_NORMAL_IN_2,
-		motor_config.pwm_freq_hz = 20000; // 20kHz PWM frequency
+		motor_config.pwm_freq_hz = MCPWM_FREQ; // 20kHz PWM frequency
 	} else if(motor_id == MOTOR_A_1) {
 		motor_config.pwma_gpio_num = MDA_NORMAL_IN_3,
 		motor_config.pwmb_gpio_num = MDA_NORMAL_IN_4,
-		motor_config.pwm_freq_hz = 20000; // 20kHz PWM frequency
+		motor_config.pwm_freq_hz = MCPWM_FREQ; // 20kHz PWM frequency
 	} else {
 		ESP_LOGE(TAG, "Invalid motor id");
 		return ESP_FAIL;
 	}
 	motor_mcpwm_config_t motor_mcpwm_config;
 	motor_mcpwm_config.group_id = 0;
-	motor_mcpwm_config.resolution_hz = 10000000; // 10MHz
+	motor_mcpwm_config.resolution_hz = MCPWM_RESOLUTION; // 10MHz
 	ESP_ERROR_CHECK(motor_new_mcpwm_device(&motor_config, &motor_mcpwm_config, motor));
 	ESP_ERROR_CHECK((*motor)->enable(*motor));
 	enabled_motor_driver_flag = 1;
@@ -56,7 +56,7 @@ esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id) {
 }
 
 esp_err_t set_motor_speed(motor_handle_t motor, int direction, float speed) {
-	speed = (uint32_t)map(speed, 0, 100, 0, 500);
+	speed = (uint32_t)map(speed, 0, 100, 0, MCPWM_RESOLUTION / MCPWM_FREQ);
 	if(direction == MOTOR_FORWARD){
 		motor->forward(motor);
 		motor->set_speed(motor, speed);

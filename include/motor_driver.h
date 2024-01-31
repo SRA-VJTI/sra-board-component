@@ -35,6 +35,8 @@
 #define MOTOR_BACKWARD 201
 #define MOTOR_STOP 202
 
+#define MCPWM_FREQ 20000
+#define MCPWM_RESOLUTION 10000000
 /**
  *  @brief Enable motor driver
  *  @param motor_handle_t Motor object handle
