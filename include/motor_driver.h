@@ -26,6 +26,7 @@
 #define MOTOR_DRIVER_H
 
 #include "esp_err.h"
+#include "esp_log.h"
 #include "mcpwm_interface.h"
 
 #define MOTOR_A_0 100
