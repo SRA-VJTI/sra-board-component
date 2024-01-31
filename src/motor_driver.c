@@ -30,6 +30,8 @@
 
 static const char *TAG = "MOTOR";
 
+static int enabled_motor_driver_flag = 0;
+
 esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id) { 
 	motor_config_t motor_config;
 	if(motor_id == MOTOR_A_0){
@@ -49,6 +51,7 @@ esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id) {
 	motor_mcpwm_config.resolution_hz = 10000000; // 10MHz
 	ESP_ERROR_CHECK(motor_new_mcpwm_device(&motor_config, &motor_mcpwm_config, motor));
 	ESP_ERROR_CHECK((*motor)->enable(*motor));
+	enabled_motor_driver_flag = 1;
 	return ESP_OK;
 }
 
@@ -63,10 +66,14 @@ esp_err_t set_motor_speed(motor_handle_t motor, int direction, float speed) {
 		motor->set_speed(motor, speed);
 		return ESP_OK;
 	} else if(direction == MOTOR_STOP){
-		motor->brake(motor);
+		motor->set_speed(motor, 0);
 		return ESP_OK;
 	} else {
 		ESP_LOGE(TAG, "Invalid motor direction");
 		return ESP_FAIL;
 	}
+}
+
+int get_motor_driver_status() {
+	return enabled_motor_driver_flag;
 }

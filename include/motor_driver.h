@@ -55,3 +55,11 @@ esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id);
  * 	- ESP_FAIL if any error occurs
 */
 esp_err_t set_motor_speed(motor_handle_t motor, int direction, float duty_cycle);
+
+
+/**
+ * @brief Checks if the motor driver is engaged.
+ *
+ * @return true if the motor driver is engaged, false otherwise.
+ */
+int get_motor_driver_status();
