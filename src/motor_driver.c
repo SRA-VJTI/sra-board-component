@@ -22,8 +22,6 @@
  * SOFTWARE.
  */
 
-#include "esp_log.h"
-#include "esp_check.h"
 #include "motor_driver.h"
 #include "utils.h"
 #include "pin_defs.h"

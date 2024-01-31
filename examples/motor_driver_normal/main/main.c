@@ -27,19 +27,21 @@
 #include "freertos/task.h"
 #include "sra_board.h"
 
+static const char* TAG = "MOTOR";
+
 void app_main(void)
 {
     motor_handle_t motor1;
     enable_motor_driver(&motor1, MOTOR_A_1);
     while(1){
         set_motor_speed(motor1, MOTOR_FORWARD, 60);
-        ESP_LOGI("MOTOR", "Forward");
+        ESP_LOGI(TAG, "Forward");
         vTaskDelay(1000 / portTICK_PERIOD_MS);
         set_motor_speed(motor1, MOTOR_BACKWARD, 60);
-        ESP_LOGI("MOTOR", "Backward");
+        ESP_LOGI(TAG, "Backward");
         vTaskDelay(1000 / portTICK_PERIOD_MS);
         set_motor_speed(motor1, MOTOR_STOP, 0);
-        ESP_LOGI("MOTOR", "Stop");
+        ESP_LOGI(TAG, "Stop");
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }

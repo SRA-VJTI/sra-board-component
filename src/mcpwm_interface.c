@@ -22,11 +22,7 @@
  * SOFTWARE.
  */
 
-#include <stdlib.h>
-#include <string.h>
-#include <sys/cdefs.h>
 
-#include "esp_log.h"
 #include "driver/mcpwm_prelude.h"
 #include "esp_check.h"
 #include "mcpwm_interface.h"
