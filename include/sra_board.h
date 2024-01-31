@@ -32,6 +32,7 @@
 #include "mcpwm_interface.h"
 #include "motor_driver.h"
 #include "mpu6050.h"
+#include "servo.h"
 #include "pin_defs.h"
 #include "utils.h"
 
