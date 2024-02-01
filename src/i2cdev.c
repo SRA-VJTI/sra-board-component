@@ -197,7 +197,7 @@ static esp_err_t i2c_setup_port(const i2c_dev_t *dev)
     esp_err_t res;
     if (!cfg_equal(&dev->cfg, &states[dev->port].config))
     {
-        ESP_LOGD(TAG, "Reconfiguring I2C driver on port %d", (int)dev->port);
+        ESP_LOGD(TAG, "Reconfiguring I2C driver on port %d", dev->port);
         i2c_config_t temp;
         memcpy(&temp, &dev->cfg, sizeof(i2c_config_t));
         temp.mode = I2C_MODE_MASTER;

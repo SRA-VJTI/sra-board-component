@@ -41,7 +41,7 @@
 #include "pin_defs.h"
 
 #define ADC_ATTEN ADC_ATTEN_DB_11
-
+#define ADC_BITWIDTH_LEN ADC_BITWIDTH_12
 
 /**
  * @brief Structure representing an ADC object.
@@ -55,7 +55,7 @@ typedef struct
     bool do_calib[5]; /**< Array indicating whether calibration should be performed for each channel. */
 } adc_obj_t;
 
-typedef adc_obj_t* adc_handle_t;
+typedef adc_obj_t *adc_handle_t;
 
 /**
  * @brief call function config_adc1() and characterize_adc1().

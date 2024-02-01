@@ -30,10 +30,10 @@ static const int adc_io[5] = {LSA_A0, LSA_A1, LSA_A2, LSA_A3, LSA_A4};
 esp_err_t config_adc1(adc_obj_t *adc_obj)
 {
     adc_oneshot_chan_cfg_t config = {
-        .bitwidth = ADC_BITWIDTH_12,
+        .bitwidth = ADC_BITWIDTH_LEN,
         .atten = ADC_ATTEN,
     };
-    //assign channels to each io in adc_io
+    // Assign channels to each io in adc_io
     for (int i = 0; i < sizeof(adc_io) / sizeof(adc_io[0]); i++)
     {
         adc_channel_t channel;
@@ -58,7 +58,7 @@ static bool adc_calibration_init(adc_unit_t unit, adc_channel_t channel, adc_att
             .unit_id = unit,
             .chan = channel,
             .atten = atten,
-            .bitwidth = ADC_BITWIDTH_12,
+            .bitwidth = ADC_BITWIDTH_LEN,
         };
         ret = adc_cali_create_scheme_curve_fitting(&cali_config, &handle);
         if (ret == ESP_OK) {
@@ -73,7 +73,7 @@ static bool adc_calibration_init(adc_unit_t unit, adc_channel_t channel, adc_att
         adc_cali_line_fitting_config_t cali_config = {
             .unit_id = unit,
             .atten = atten,
-            .bitwidth = ADC_BITWIDTH_12,
+            .bitwidth = ADC_BITWIDTH_LEN,
         };
         ret = adc_cali_create_scheme_line_fitting(&cali_config, &handle);
         if (ret == ESP_OK) {
