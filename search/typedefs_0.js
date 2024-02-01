@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['line_5fsensor_5farray_0',['line_sensor_array',['../lsa_8h.html#abcc31f8fc8c2fa816012d1fcf059a19c',1,'lsa.h']]]
+  ['adc_5fhandle_5ft_0',['adc_handle_t',['../adc_8h.html#a1973e31270d9eaf6f7e007b4f12d23f9',1,'adc.h']]]
 ];

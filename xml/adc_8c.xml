@@ -27,8 +27,10 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
       </node>
@@ -38,25 +40,28 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>driver/adc.h</label>
-      </node>
       <node id="6">
-        <label>esp_adc_cal.h</label>
-      </node>
-      <node id="11">
-        <label>esp_err.h</label>
-      </node>
-      <node id="10">
-        <label>esp_log.h</label>
+        <label>esp_adc/adc_cali.h</label>
       </node>
       <node id="7">
-        <label>freertos/FreeRTOS.h</label>
+        <label>esp_adc/adc_cali_scheme.h</label>
       </node>
-      <node id="9">
-        <label>freertos/event_groups.h</label>
+      <node id="5">
+        <label>esp_adc/adc_oneshot.h</label>
+      </node>
+      <node id="12">
+        <label>esp_err.h</label>
+      </node>
+      <node id="11">
+        <label>esp_log.h</label>
       </node>
       <node id="8">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="10">
+        <label>freertos/event_groups.h</label>
+      </node>
+      <node id="9">
         <label>freertos/task.h</label>
       </node>
       <node id="3">
@@ -67,11 +72,11 @@
       </node>
     </incdepgraph>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="adc_8c_1a769573371a4f88011e5c68c6c78aa371" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="adc_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" prot="public" static="yes" mutable="no">
         <type>const char *</type>
-        <definition>const char* TAG_ADC</definition>
+        <definition>const char* TAG</definition>
         <argsstring></argsstring>
-        <name>TAG_ADC</name>
+        <name>TAG</name>
         <initializer>= &quot;adc&quot;</initializer>
         <briefdescription>
         </briefdescription>
@@ -81,50 +86,96 @@
         </inbodydescription>
         <location file="src/adc.c" line="27" column="19" bodyfile="src/adc.c" bodystart="27" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="adc_8c_1a9b7951ef83ad185e60693fc5a54deb9a" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int adc_io[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>adc_io</name>
+        <initializer>= {<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>, <ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>, <ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>, <ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>, <ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/adc.c" line="28" column="18" bodyfile="src/adc.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="adc_8c_1a0eb8c90dffee280b1a79d8fb16968a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="adc_8c_1ae719088fda3590b4ce5153c4ecffb859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
         <definition>esp_err_t config_adc1</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(adc_obj_t *adc_obj)</argsstring>
         <name>config_adc1</name>
+        <param>
+          <type><ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref> *</type>
+          <declname>adc_obj</declname>
+        </param>
         <briefdescription>
-<para>Configure width and attenuation of ADC 1. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG. <linebreak/>
- </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/adc.c" line="29" column="11" bodyfile="src/adc.c" bodystart="29" bodyend="44"/>
+        <location file="src/adc.c" line="30" column="11" bodyfile="src/adc.c" bodystart="30" bodyend="46"/>
       </memberdef>
-      <memberdef kind="function" id="adc_8c_1a97ba6a060bde9d47d6783e6c8c73e6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="adc_8c_1acfe1d4dee010dba50ecf59a02d67454e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool adc_calibration_init</definition>
+        <argsstring>(adc_unit_t unit, adc_channel_t channel, adc_atten_t atten, adc_cali_handle_t *out_handle)</argsstring>
+        <name>adc_calibration_init</name>
+        <param>
+          <type>adc_unit_t</type>
+          <declname>unit</declname>
+        </param>
+        <param>
+          <type>adc_channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>adc_atten_t</type>
+          <declname>atten</declname>
+        </param>
+        <param>
+          <type>adc_cali_handle_t *</type>
+          <declname>out_handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/adc.c" line="48" column="13" bodyfile="src/adc.c" bodystart="48" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="adc_8c_1a92b279061f360ef912815e8b0c0a1982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
-        <definition>esp_err_t characterize_adc1</definition>
-        <argsstring>()</argsstring>
-        <name>characterize_adc1</name>
+        <definition>esp_err_t calib_init</definition>
+        <argsstring>(adc_obj_t *adc_obj)</argsstring>
+        <name>calib_init</name>
+        <param>
+          <type><ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref> *</type>
+          <declname>adc_obj</declname>
+        </param>
         <briefdescription>
-<para>Characterize ADC 1 using either Vref or Two Point. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>esp_err_t </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/adc.c" line="46" column="11" bodyfile="src/adc.c" bodystart="46" bodyend="66"/>
+        <location file="src/adc.c" line="97" column="11" bodyfile="src/adc.c" bodystart="97" bodyend="107"/>
       </memberdef>
-      <memberdef kind="function" id="adc_8c_1ab564ea72fa47c36b9d06977ea586cb1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="adc_8c_1a60adcc2279d178d4876c9f8f63525067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
         <definition>esp_err_t enable_adc1</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(adc_obj_t **adc_obj)</argsstring>
         <name>enable_adc1</name>
+        <param>
+          <type><ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref> **</type>
+          <declname>adc_obj</declname>
+        </param>
         <briefdescription>
-<para>call function <ref refid="adc_8h_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1()</ref> and <ref refid="adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1()</ref>. </para>
+<para>call function <ref refid="adc_8c_1ae719088fda3590b4ce5153c4ecffb859" kindref="member">config_adc1()</ref> and characterize_adc1(). </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG. <linebreak/>
@@ -134,37 +185,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/adc.c" line="68" column="11" bodyfile="src/adc.c" bodystart="68" bodyend="76"/>
+        <location file="src/adc.c" line="109" column="11" bodyfile="src/adc.c" bodystart="109" bodyend="123"/>
       </memberdef>
-      <memberdef kind="function" id="adc_8c_1a5056ff0fa4f211e8cbbf6e706228d864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="adc_8c_1a6535e5936468e64673af814623694d98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int read_adc</definition>
-        <argsstring>(int adc_pin)</argsstring>
+        <argsstring>(adc_handle_t adc_handle, int gpio)</argsstring>
         <name>read_adc</name>
         <param>
+          <type><ref refid="adc_8h_1a1973e31270d9eaf6f7e007b4f12d23f9" kindref="member">adc_handle_t</ref></type>
+          <declname>adc_handle</declname>
+        </param>
+        <param>
           <type>int</type>
-          <declname>adc_pin</declname>
+          <declname>gpio</declname>
         </param>
         <briefdescription>
-<para>Read raw adc value of given adc pin. </para>
+<para>Reads the adc value from the GPIO(channel) specified. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>adc_pin</parametername>
+<parametername>adc_handle_t</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>One of the GPIO pin to which LSA is connected (36/39/35/34)</para>
+<para>adc_handle - pointer to adc object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gpio - gpio pin number of the channel to be read. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG. </para>
+<simplesect kind="return"><para>int - returns the adc value read from the channel. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/adc.c" line="78" column="5" bodyfile="src/adc.c" bodystart="78" bodyend="105"/>
+        <location file="src/adc.c" line="125" column="5" bodyfile="src/adc.c" bodystart="125" bodyend="163"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -198,85 +261,143 @@
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="adc_8h" kindref="compound">adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_ADC<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;adc&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8c_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1</ref>()</highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>ADC<sp/>to<sp/>12<sp/>bit<sp/>width</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(adc1_config_width(ADC_WIDTH_BIT_12));</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>ADC<sp/>to<sp/>11dB<sp/>attenuation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(adc1_config_channel_atten(ADC_CHANNEL_4,<sp/>ADC_ATTEN_DB_11));</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(adc1_config_channel_atten(ADC_CHANNEL_7,<sp/>ADC_ATTEN_DB_11));</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(adc1_config_channel_atten(ADC_CHANNEL_6,<sp/>ADC_ATTEN_DB_11));</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(adc1_config_channel_atten(ADC_CHANNEL_3,<sp/>ADC_ATTEN_DB_11));</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(adc1_config_channel_atten(ADC_CHANNEL_0,<sp/>ADC_ATTEN_DB_11));</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;Configured<sp/>ADC_1<sp/>to<sp/>12<sp/>Bit<sp/>and<sp/>11dB<sp/>attenuation&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8c_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1</ref>()</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_adc_cal_characteristics_t<sp/>adc_chars;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_adc_cal_value_t<sp/>val_type<sp/>=<sp/>esp_adc_cal_characterize(ADC_UNIT_1,<sp/>ADC_ATTEN_DB_11,<sp/>ADC_WIDTH_BIT_12,<sp/><ref refid="adc_8h_1a63baed8df076ce9dddaea1ae8694c1d8" kindref="member">DEFAULT_VREF</ref>,<sp/>&amp;adc_chars);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val_type<sp/>==<sp/>ESP_ADC_CAL_VAL_EFUSE_TP)</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;eFuse<sp/>Two<sp/>Point:<sp/>Supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;Characterized<sp/>using<sp/>Two<sp/>Point<sp/>Value&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val_type<sp/>==<sp/>ESP_ADC_CAL_VAL_EFUSE_VREF)</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;eFuse<sp/>Vref:<sp/>Supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;Characterized<sp/>using<sp/>eFuse<sp/>Vref&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;Characterized<sp/>using<sp/>Default<sp/>Vref&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8c_1ab564ea72fa47c36b9d06977ea586cb1a" kindref="member">enable_adc1</ref>()</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(<ref refid="adc_8c_1a0eb8c90dffee280b1a79d8fb16968a74" kindref="member">config_adc1</ref>());</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kindref="member">CHECK</ref>(<ref refid="adc_8c_1a97ba6a060bde9d47d6783e6c8c73e6fc" kindref="member">characterize_adc1</ref>());</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;Configured<sp/>and<sp/>Characterized<sp/>adc<sp/>1&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adc_8c_1a5056ff0fa4f211e8cbbf6e706228d864" kindref="member">read_adc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_pin)</highlight></codeline>
-<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adc_pin<sp/>==<sp/><ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>)</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adc1_get_raw(ADC_CHANNEL_4);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adc_pin<sp/>==<sp/><ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>)</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adc1_get_raw(ADC_CHANNEL_7);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adc_pin<sp/>==<sp/><ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adc1_get_raw(ADC_CHANNEL_6);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adc_pin<sp/>==<sp/><ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adc1_get_raw(ADC_CHANNEL_3);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adc_pin<sp/>==<sp/><ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>)</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adc1_get_raw(ADC_CHANNEL_0);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(TAG_ADC,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>adc<sp/>pin&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_FAIL;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;adc&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_io[5]<sp/>=<sp/>{<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>,<sp/><ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>,<sp/><ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>,<sp/><ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>,<sp/><ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8c_1ae719088fda3590b4ce5153c4ecffb859" kindref="member">config_adc1</ref>(<ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref><sp/>*adc_obj)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>adc_oneshot_chan_cfg_t<sp/>config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.bitwidth<sp/>=<sp/><ref refid="adc_8h_1a6e20add5d75926f896f2602a1b839673" kindref="member">ADC_BITWIDTH_LEN</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.atten<sp/>=<sp/><ref refid="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" kindref="member">ADC_ATTEN</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>channels<sp/>to<sp/>each<sp/>io<sp/>in<sp/>adc_io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(adc_io)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(adc_io[0]);<sp/>i++)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_channel_t<sp/>channel;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_unit_t<sp/>unit;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_oneshot_io_to_channel(adc_io[i],<sp/>&amp;unit,<sp/>&amp;channel));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_oneshot_config_channel(adc_obj-&gt;<ref refid="structadc__obj__t_1a66668c57bedb2a45a3e4e454a2a9fbd2" kindref="member">adc1_handle</ref>,<sp/>channel,<sp/>&amp;config));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>adc_calibration_init(adc_unit_t<sp/>unit,<sp/>adc_channel_t<sp/>channel,<sp/>adc_atten_t<sp/>atten,<sp/>adc_cali_handle_t<sp/>*out_handle)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>adc_cali_handle_t<sp/>handle<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>ret<sp/>=<sp/>ESP_FAIL;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>calibrated<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ADC_CALI_SCHEME_CURVE_FITTING_SUPPORTED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!calibrated)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;calibration<sp/>scheme<sp/>version<sp/>is<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Curve<sp/>Fitting&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_cali_curve_fitting_config_t<sp/>cali_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.unit_id<sp/>=<sp/>unit,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.chan<sp/>=<sp/>channel,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.atten<sp/>=<sp/>atten,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.bitwidth<sp/>=<sp/><ref refid="adc_8h_1a6e20add5d75926f896f2602a1b839673" kindref="member">ADC_BITWIDTH_LEN</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>adc_cali_create_scheme_curve_fitting(&amp;cali_config,<sp/>&amp;handle);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calibrated<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ADC_CALI_SCHEME_LINE_FITTING_SUPPORTED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!calibrated)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;calibration<sp/>scheme<sp/>version<sp/>is<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Line<sp/>Fitting&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_cali_line_fitting_config_t<sp/>cali_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.unit_id<sp/>=<sp/>unit,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.atten<sp/>=<sp/>atten,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.bitwidth<sp/>=<sp/><ref refid="adc_8h_1a6e20add5d75926f896f2602a1b839673" kindref="member">ADC_BITWIDTH_LEN</ref>,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>adc_cali_create_scheme_line_fitting(&amp;cali_config,<sp/>&amp;handle);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calibrated<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>*out_handle<sp/>=<sp/>handle;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Calibration<sp/>Success&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/>ESP_ERR_NOT_SUPPORTED<sp/>||<sp/>!calibrated)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGW(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;eFuse<sp/>not<sp/>burnt,<sp/>skip<sp/>software<sp/>calibration&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>arg<sp/>or<sp/>no<sp/>memory&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>calibrated;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8c_1a92b279061f360ef912815e8b0c0a1982" kindref="member">calib_init</ref>(<ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref><sp/>*adc_obj)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(adc_io)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(adc_io[0]);<sp/>i++)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_channel_t<sp/>channel;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_unit_t<sp/>unit;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_oneshot_io_to_channel(adc_io[i],<sp/>&amp;unit,<sp/>&amp;channel));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_obj-&gt;<ref refid="structadc__obj__t_1ad5df4503073e7c38b0479ac3c3dd15f2" kindref="member">do_calib</ref>[i]<sp/>=<sp/>adc_calibration_init(ADC_UNIT_1,<sp/>channel,<sp/><ref refid="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" kindref="member">ADC_ATTEN</ref>,<sp/>&amp;adc_obj-&gt;<ref refid="structadc__obj__t_1a6b2a6462d600be95f428bb4db4292be9" kindref="member">adc1_cali_handle</ref>[i]);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">esp_err_t<sp/><ref refid="adc_8c_1a60adcc2279d178d4876c9f8f63525067" kindref="member">enable_adc1</ref>(<ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref>**<sp/>adc_obj)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref><sp/>*ret<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structadc__obj__t" kindref="compound">adc_obj_t</ref>));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(ret<sp/>==<sp/>NULL<sp/>?<sp/>ESP_ERR_NO_MEM<sp/>:<sp/>ESP_OK);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>adc_oneshot_unit_init_cfg_t<sp/>init_config1<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.unit_id<sp/>=<sp/>ADC_UNIT_1,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_oneshot_new_unit(&amp;init_config1,<sp/>&amp;ret-&gt;<ref refid="structadc__obj__t_1a66668c57bedb2a45a3e4e454a2a9fbd2" kindref="member">adc1_handle</ref>));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adc_8c_1ae719088fda3590b4ce5153c4ecffb859" kindref="member">config_adc1</ref>(ret);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adc_8c_1a92b279061f360ef912815e8b0c0a1982" kindref="member">calib_init</ref>(ret);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>*adc_obj<sp/>=<sp/>ret;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adc_8c_1a6535e5936468e64673af814623694d98" kindref="member">read_adc</ref>(<ref refid="structadc__obj__t" kindref="compound">adc_handle_t</ref><sp/>adc_handle,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gpio)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_reading<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voltage<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>adc_channel_t<sp/>channel;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>adc_unit_t<sp/>unit;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_oneshot_io_to_channel(gpio,<sp/>&amp;unit,<sp/>&amp;channel));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_oneshot_read(adc_handle-&gt;<ref refid="structadc__obj__t_1a66668c57bedb2a45a3e4e454a2a9fbd2" kindref="member">adc1_handle</ref>,<sp/>channel,<sp/>&amp;adc_reading));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arr_loc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(gpio)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>:</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr_loc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr_loc<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>:</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr_loc<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>:</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr_loc<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>:</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr_loc<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adc_handle-&gt;<ref refid="structadc__obj__t_1ad5df4503073e7c38b0479ac3c3dd15f2" kindref="member">do_calib</ref>[arr_loc])</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(adc_cali_raw_to_voltage(adc_handle-&gt;<ref refid="structadc__obj__t_1a6b2a6462d600be95f428bb4db4292be9" kindref="member">adc1_cali_handle</ref>[arr_loc],<sp/>adc_reading,<sp/>&amp;voltage));</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>voltage;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adc_reading;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/adc.c"/>
   </compounddef>

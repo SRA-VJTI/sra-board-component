@@ -25,6 +25,8 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
@@ -48,25 +50,28 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>driver/adc.h</label>
-      </node>
       <node id="9">
-        <label>esp_adc_cal.h</label>
-      </node>
-      <node id="14">
-        <label>esp_err.h</label>
-      </node>
-      <node id="13">
-        <label>esp_log.h</label>
+        <label>esp_adc/adc_cali.h</label>
       </node>
       <node id="10">
-        <label>freertos/FreeRTOS.h</label>
+        <label>esp_adc/adc_cali_scheme.h</label>
       </node>
-      <node id="12">
-        <label>freertos/event_groups.h</label>
+      <node id="8">
+        <label>esp_adc/adc_oneshot.h</label>
+      </node>
+      <node id="15">
+        <label>esp_err.h</label>
+      </node>
+      <node id="14">
+        <label>esp_log.h</label>
       </node>
       <node id="11">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="13">
+        <label>freertos/event_groups.h</label>
+      </node>
+      <node id="12">
         <label>freertos/task.h</label>
       </node>
       <node id="3">
@@ -96,11 +101,15 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="lsa_8c_1ae100292bb09dfe139df0cafc36ef19fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="lsa_8c_1a44672e9bdc12fc55998213bb63e130c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
         <definition>esp_err_t enable_line_sensor</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(adc_handle_t *adc_handle)</argsstring>
         <name>enable_line_sensor</name>
+        <param>
+          <type><ref refid="adc_8h_1a1973e31270d9eaf6f7e007b4f12d23f9" kindref="member">adc_handle_t</ref> *</type>
+          <declname>adc_handle</declname>
+        </param>
         <briefdescription>
 <para>enables and configures adc </para>
         </briefdescription>
@@ -121,11 +130,15 @@
         </inbodydescription>
         <location file="src/lsa.c" line="29" column="11" bodyfile="src/lsa.c" bodystart="29" bodyend="33"/>
       </memberdef>
-      <memberdef kind="function" id="lsa_8c_1a3db021dc5dafaf9643129580e2b17ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="lsa_8c_1aa29ce2add0b0690a7d3f53f4520b4142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref></type>
         <definition>line_sensor_array read_line_sensor</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(adc_handle_t adc_handle)</argsstring>
         <name>read_line_sensor</name>
+        <param>
+          <type><ref refid="adc_8h_1a1973e31270d9eaf6f7e007b4f12d23f9" kindref="member">adc_handle_t</ref></type>
+          <declname>adc_handle</declname>
+        </param>
         <briefdescription>
 <para>Get multisampled line sensor array readings. </para>
         </briefdescription>
@@ -180,13 +193,13 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_sensor_pins[5]<sp/>=<sp/>{<ref refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kindref="member">LSA_A0</ref>,<sp/><ref refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kindref="member">LSA_A1</ref>,<sp/><ref refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kindref="member">LSA_A2</ref>,<sp/><ref refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" kindref="member">LSA_A3</ref>,<sp/><ref refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" kindref="member">LSA_A4</ref>};</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8c_1ae100292bb09dfe139df0cafc36ef19fd" kindref="member">enable_line_sensor</ref>()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">esp_err_t<sp/><ref refid="lsa_8c_1a44672e9bdc12fc55998213bb63e130c4" kindref="member">enable_line_sensor</ref>(<ref refid="structadc__obj__t" kindref="compound">adc_handle_t</ref><sp/>*adc_handle)</highlight></codeline>
 <codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/><ref refid="adc_8h_1ab564ea72fa47c36b9d06977ea586cb1a" kindref="member">enable_adc1</ref>(line_sensor_pins);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(<ref refid="adc_8h_1a60adcc2279d178d4876c9f8f63525067" kindref="member">enable_adc1</ref>(adc_handle));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/><ref refid="lsa_8c_1a3db021dc5dafaf9643129580e2b17ea2" kindref="member">read_line_sensor</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/><ref refid="lsa_8c_1aa29ce2add0b0690a7d3f53f4520b4142" kindref="member">read_line_sensor</ref>(<ref refid="structadc__obj__t" kindref="compound">adc_handle_t</ref><sp/>adc_handle)</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionline__sensor__array" kindref="compound">line_sensor_array</ref><sp/>line_sensor_readings;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
@@ -199,7 +212,7 @@
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>5;<sp/>j++)</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[j]<sp/>=<sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[j]<sp/>+<sp/><ref refid="adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864" kindref="member">read_adc</ref>(line_sensor_pins[j]);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[j]<sp/>=<sp/>line_sensor_readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[j]<sp/>+<sp/><ref refid="adc_8h_1a6535e5936468e64673af814623694d98" kindref="member">read_adc</ref>(adc_handle,<sp/>line_sensor_pins[j]);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>

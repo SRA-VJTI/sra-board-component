@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['line_5fsensor_0',['line_sensor',['../structline__sensor__array_1_1line__sensor.html',1,'line_sensor_array']]],
-  ['line_5fsensor_5farray_1',['line_sensor_array',['../unionline__sensor__array.html',1,'']]]
+  ['i2c_5fdev_5ft_0',['i2c_dev_t',['../structi2c__dev__t.html',1,'']]]
 ];

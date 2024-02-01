@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['i2c_5fdev_5ft_0',['i2c_dev_t',['../structi2c__dev__t.html',1,'']]]
+  ['adc_5fobj_5ft_0',['adc_obj_t',['../structadc__obj__t.html',1,'']]]
 ];

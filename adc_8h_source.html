@@ -100,33 +100,41 @@ $(function() {
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;driver/adc.h&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;esp_adc_cal.h&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;freertos/event_groups.h&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;esp_log.h&quot;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;esp_err.h&quot;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="pin__defs_8h.html">pin_defs.h</a>&quot;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="adc_8h.html#a63baed8df076ce9dddaea1ae8694c1d8">   42</a></span><span class="preprocessor">#define DEFAULT_VREF 1100</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>esp_err_t <a class="code hl_function" href="adc_8h.html#a0eb8c90dffee280b1a79d8fb16968a74">config_adc1</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>esp_err_t <a class="code hl_function" href="adc_8h.html#a97ba6a060bde9d47d6783e6c8c73e6fc">characterize_adc1</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;esp_adc/adc_oneshot.h&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;esp_adc/adc_cali.h&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;esp_adc/adc_cali_scheme.h&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;freertos/event_groups.h&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;esp_log.h&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;esp_err.h&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="pin__defs_8h.html">pin_defs.h</a>&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="adc_8h.html#a9851d7403086e8d8ce491625b0f8863d">   43</a></span><span class="preprocessor">#define ADC_ATTEN ADC_ATTEN_DB_11</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="adc_8h.html#a6e20add5d75926f896f2602a1b839673">   44</a></span><span class="preprocessor">#define ADC_BITWIDTH_LEN ADC_BITWIDTH_12</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structadc__obj__t.html">   51</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structadc__obj__t.html#a66668c57bedb2a45a3e4e454a2a9fbd2">   53</a></span>    adc_oneshot_unit_handle_t <a class="code hl_variable" href="structadc__obj__t.html#a66668c57bedb2a45a3e4e454a2a9fbd2">adc1_handle</a>; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structadc__obj__t.html#a6b2a6462d600be95f428bb4db4292be9">   54</a></span>    adc_cali_handle_t adc1_cali_handle[5]; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structadc__obj__t.html#ad5df4503073e7c38b0479ac3c3dd15f2">   55</a></span>    <span class="keywordtype">bool</span> do_calib[5]; </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <a class="code hl_struct" href="structadc__obj__t.html">adc_obj_t</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>esp_err_t <a class="code hl_function" href="adc_8h.html#ab564ea72fa47c36b9d06977ea586cb1a">enable_adc1</a>();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">int</span> <a class="code hl_function" href="adc_8h.html#a5056ff0fa4f211e8cbbf6e706228d864">read_adc</a>(<span class="keywordtype">int</span> adc_pin);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aadc_8h_html_a0eb8c90dffee280b1a79d8fb16968a74"><div class="ttname"><a href="adc_8h.html#a0eb8c90dffee280b1a79d8fb16968a74">config_adc1</a></div><div class="ttdeci">esp_err_t config_adc1()</div><div class="ttdoc">Configure width and attenuation of ADC 1.</div><div class="ttdef"><b>Definition:</b> adc.c:29</div></div>
-<div class="ttc" id="aadc_8h_html_a5056ff0fa4f211e8cbbf6e706228d864"><div class="ttname"><a href="adc_8h.html#a5056ff0fa4f211e8cbbf6e706228d864">read_adc</a></div><div class="ttdeci">int read_adc(int adc_pin)</div><div class="ttdoc">Read raw adc value of given adc pin.</div><div class="ttdef"><b>Definition:</b> adc.c:78</div></div>
-<div class="ttc" id="aadc_8h_html_a97ba6a060bde9d47d6783e6c8c73e6fc"><div class="ttname"><a href="adc_8h.html#a97ba6a060bde9d47d6783e6c8c73e6fc">characterize_adc1</a></div><div class="ttdeci">esp_err_t characterize_adc1()</div><div class="ttdoc">Characterize ADC 1 using either Vref or Two Point.</div><div class="ttdef"><b>Definition:</b> adc.c:46</div></div>
-<div class="ttc" id="aadc_8h_html_ab564ea72fa47c36b9d06977ea586cb1a"><div class="ttname"><a href="adc_8h.html#ab564ea72fa47c36b9d06977ea586cb1a">enable_adc1</a></div><div class="ttdeci">esp_err_t enable_adc1()</div><div class="ttdoc">call function config_adc1() and characterize_adc1().</div><div class="ttdef"><b>Definition:</b> adc.c:68</div></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="adc_8h.html#a1973e31270d9eaf6f7e007b4f12d23f9">   58</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="structadc__obj__t.html">adc_obj_t</a> *<a class="code hl_typedef" href="adc_8h.html#a1973e31270d9eaf6f7e007b4f12d23f9">adc_handle_t</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>esp_err_t <a class="code hl_function" href="adc_8h.html#a60adcc2279d178d4876c9f8f63525067">enable_adc1</a>(<a class="code hl_struct" href="structadc__obj__t.html">adc_obj_t</a>** adc_obj);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">int</span> <a class="code hl_function" href="adc_8h.html#a6535e5936468e64673af814623694d98">read_adc</a>(<a class="code hl_struct" href="structadc__obj__t.html">adc_handle_t</a> adc_handle, <span class="keywordtype">int</span> gpio);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aadc_8h_html_a1973e31270d9eaf6f7e007b4f12d23f9"><div class="ttname"><a href="adc_8h.html#a1973e31270d9eaf6f7e007b4f12d23f9">adc_handle_t</a></div><div class="ttdeci">adc_obj_t * adc_handle_t</div><div class="ttdef"><b>Definition:</b> adc.h:58</div></div>
+<div class="ttc" id="aadc_8h_html_a60adcc2279d178d4876c9f8f63525067"><div class="ttname"><a href="adc_8h.html#a60adcc2279d178d4876c9f8f63525067">enable_adc1</a></div><div class="ttdeci">esp_err_t enable_adc1(adc_obj_t **adc_obj)</div><div class="ttdoc">call function config_adc1() and characterize_adc1().</div><div class="ttdef"><b>Definition:</b> adc.c:109</div></div>
+<div class="ttc" id="aadc_8h_html_a6535e5936468e64673af814623694d98"><div class="ttname"><a href="adc_8h.html#a6535e5936468e64673af814623694d98">read_adc</a></div><div class="ttdeci">int read_adc(adc_handle_t adc_handle, int gpio)</div><div class="ttdoc">Reads the adc value from the GPIO(channel) specified.</div><div class="ttdef"><b>Definition:</b> adc.c:125</div></div>
 <div class="ttc" id="apin__defs_8h_html"><div class="ttname"><a href="pin__defs_8h.html">pin_defs.h</a></div></div>
+<div class="ttc" id="astructadc__obj__t_html"><div class="ttname"><a href="structadc__obj__t.html">adc_obj_t</a></div><div class="ttdoc">Structure representing an ADC object.</div><div class="ttdef"><b>Definition:</b> adc.h:52</div></div>
+<div class="ttc" id="astructadc__obj__t_html_a66668c57bedb2a45a3e4e454a2a9fbd2"><div class="ttname"><a href="structadc__obj__t.html#a66668c57bedb2a45a3e4e454a2a9fbd2">adc_obj_t::adc1_handle</a></div><div class="ttdeci">adc_oneshot_unit_handle_t adc1_handle</div><div class="ttdef"><b>Definition:</b> adc.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

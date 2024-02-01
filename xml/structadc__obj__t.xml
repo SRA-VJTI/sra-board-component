@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structadc__obj__t" kind="struct" language="C++" prot="public">
+    <compoundname>adc_obj_t</compoundname>
+    <includes refid="adc_8h" local="no">adc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structadc__obj__t_1a66668c57bedb2a45a3e4e454a2a9fbd2" prot="public" static="no" mutable="no">
+        <type>adc_oneshot_unit_handle_t</type>
+        <definition>adc_oneshot_unit_handle_t adc_obj_t::adc1_handle</definition>
+        <argsstring></argsstring>
+        <name>adc1_handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle for ADC1 oneshot unit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/adc.h" line="53" column="31" bodyfile="include/adc.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structadc__obj__t_1a6b2a6462d600be95f428bb4db4292be9" prot="public" static="no" mutable="no">
+        <type>adc_cali_handle_t</type>
+        <definition>adc_cali_handle_t adc_obj_t::adc1_cali_handle[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>adc1_cali_handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of calibration handles for ADC1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/adc.h" line="54" column="23" bodyfile="include/adc.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structadc__obj__t_1ad5df4503073e7c38b0479ac3c3dd15f2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool adc_obj_t::do_calib[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>do_calib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array indicating whether calibration should be performed for each channel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/adc.h" line="55" column="10" bodyfile="include/adc.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure representing an ADC object. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure holds the handles and calibration data for an ADC. </para>
+    </detaileddescription>
+    <location file="include/adc.h" line="51" column="1" bodyfile="include/adc.h" bodystart="52" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structadc__obj__t_1a6b2a6462d600be95f428bb4db4292be9" prot="public" virt="non-virtual"><scope>adc_obj_t</scope><name>adc1_cali_handle</name></member>
+      <member refid="structadc__obj__t_1a66668c57bedb2a45a3e4e454a2a9fbd2" prot="public" virt="non-virtual"><scope>adc_obj_t</scope><name>adc1_handle</name></member>
+      <member refid="structadc__obj__t_1ad5df4503073e7c38b0479ac3c3dd15f2" prot="public" virt="non-virtual"><scope>adc_obj_t</scope><name>do_calib</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

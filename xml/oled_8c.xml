@@ -15,15 +15,17 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
@@ -68,16 +70,19 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="14">
-        <label>driver/adc.h</label>
-      </node>
       <node id="5">
         <label>driver/gpio.h</label>
       </node>
       <node id="15">
-        <label>esp_adc_cal.h</label>
+        <label>esp_adc/adc_cali.h</label>
       </node>
-      <node id="17">
+      <node id="16">
+        <label>esp_adc/adc_cali_scheme.h</label>
+      </node>
+      <node id="14">
+        <label>esp_adc/adc_oneshot.h</label>
+      </node>
+      <node id="18">
         <label>esp_err.h</label>
       </node>
       <node id="6">
@@ -86,7 +91,7 @@
       <node id="7">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="16">
+      <node id="17">
         <label>freertos/event_groups.h</label>
       </node>
       <node id="8">

@@ -1,5 +1,74 @@
 AutoGen Definitions dummy;
 struct = {
+  cp-id     = 'structadc__obj__t';
+  cp-name   = 'adc_obj_t';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structadc__obj__t_1a66668c57bedb2a45a3e4e454a2a9fbd2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+adc_oneshot_unit_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'adc1_handle';
+      sec-mem-desc-file = '/github/workspace/include/adc.h';
+      sec-mem-desc-line = '53';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Handle for ADC1 oneshot unit. 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structadc__obj__t_1a6b2a6462d600be95f428bb4db4292be9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+adc_cali_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'adc1_cali_handle';
+      sec-mem-desc-file = '/github/workspace/include/adc.h';
+      sec-mem-desc-line = '54';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Array of calibration handles for ADC1. 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structadc__obj__t_1ad5df4503073e7c38b0479ac3c3dd15f2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'do_calib';
+      sec-mem-desc-file = '/github/workspace/include/adc.h';
+      sec-mem-desc-line = '55';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Array indicating whether calibration should be performed for each channel. 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/include/adc.h';
+  cp-fileline  = '51';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Structure representing an ADC object.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+This structure holds the handles and calibration data for an ADC.
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
   cp-id     = 'structi2c__dev__t';
   cp-name   = 'i2c_dev_t';
   cp-section = {
@@ -972,15 +1041,33 @@ file = {
     define = {
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'adc_8h_1a63baed8df076ce9dddaea1ae8694c1d8';
+      define-mem-id   = 'adc_8h_1a9851d7403086e8d8ce491625b0f8863d';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'DEFAULT_VREF';
+      define-mem-name = 'ADC_ATTEN';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-1100
+ADC_ATTEN_DB_11
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/adc.h';
-      define-mem-desc-line = '42';
+      define-mem-desc-line = '43';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'adc_8h_1a6e20add5d75926f896f2602a1b839673';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'ADC_BITWIDTH_LEN';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+ADC_BITWIDTH_12
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/adc.h';
+      define-mem-desc-line = '44';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -989,54 +1076,44 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     };
+    typedef = {
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = 'adc_8h_1a1973e31270d9eaf6f7e007b4f12d23f9';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+adc_obj_t *
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'adc_handle_t';
+      typedef-mem-desc-file = '/github/workspace/include/adc.h';
+      typedef-mem-desc-line = '58';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    };
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'adc_8h_1a0eb8c90dffee280b1a79d8fb16968a74';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-esp_err_t
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'config_adc1';
-      func-mem-desc-file = '/github/workspace/include/adc.h';
-      func-mem-desc-line = '49';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Configure width and attenuation of ADC 1.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  <br>
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'adc_8h_1a97ba6a060bde9d47d6783e6c8c73e6fc';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-esp_err_t
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'characterize_adc1';
-      func-mem-desc-file = '/github/workspace/include/adc.h';
-      func-mem-desc-line = '56';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Characterize ADC 1 using either Vref or Two Point.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t 
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'adc_8h_1ab564ea72fa47c36b9d06977ea586cb1a';
+      func-mem-id   = 'adc_8h_1a60adcc2279d178d4876c9f8f63525067';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_adc1';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_obj_t **
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_obj';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/adc.h';
-      func-mem-desc-line = '63';
+      func-mem-desc-line = '65';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 call function config_adc1() and characterize_adc1().
 _EnD_oF_dEf_TeXt_;
@@ -1046,7 +1123,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'adc_8h_1a5056ff0fa4f211e8cbbf6e706228d864';
+      func-mem-id   = 'adc_8h_1a6535e5936468e64673af814623694d98';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -1055,19 +1132,25 @@ _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_adc';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_handle';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
 int
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'adc_pin';
+        func-mem-param-declname = 'gpio';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/adc.h';
-      func-mem-desc-line = '72';
+      func-mem-desc-line = '74';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Read raw adc value of given adc pin.
+Reads the adc value from the GPIO(channel) specified.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param adc_pin One of the GPIO pin to which LSA is connected (36/39/35/34)
-
-@return esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG.
+@param adc_handle_t adc_handle - pointer to adc object.
+@param int gpio - gpio pin number of the channel to be read.
+@return int - returns the adc value read from the channel. 
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
@@ -1831,13 +1914,19 @@ _EnD_oF_dEf_TeXt_;
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lsa_8h_1ae100292bb09dfe139df0cafc36ef19fd';
+      func-mem-id   = 'lsa_8h_1a44672e9bdc12fc55998213bb63e130c4';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_line_sensor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_handle_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_handle';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lsa.h';
       func-mem-desc-line = '55';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
@@ -1851,13 +1940,19 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lsa_8h_1a3db021dc5dafaf9643129580e2b17ea2';
+      func-mem-id   = 'lsa_8h_1aa29ce2add0b0690a7d3f53f4520b4142';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 line_sensor_array
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_line_sensor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_handle';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lsa.h';
       func-mem-desc-line = '65';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
@@ -8093,51 +8188,111 @@ file = {
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'adc_8c_1a0eb8c90dffee280b1a79d8fb16968a74';
+      func-mem-id   = 'adc_8c_1ae719088fda3590b4ce5153c4ecffb859';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'config_adc1';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_obj_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_obj';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '29';
+      func-mem-desc-line = '30';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Configure width and attenuation of ADC 1.
+
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  <br>
+
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'adc_8c_1a97ba6a060bde9d47d6783e6c8c73e6fc';
+      func-mem-id   = 'adc_8c_1acfe1d4dee010dba50ecf59a02d67454e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static bool
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'adc_calibration_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_unit_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'unit';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_channel_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'channel';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_atten_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'atten';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_cali_handle_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'out_handle';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/adc.c';
+      func-mem-desc-line = '48';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'adc_8c_1a92b279061f360ef912815e8b0c0a1982';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'characterize_adc1';
+      func-mem-name = 'calib_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_obj_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_obj';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '46';
+      func-mem-desc-line = '97';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Characterize ADC 1 using either Vref or Two Point.
+
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return esp_err_t 
+
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'adc_8c_1ab564ea72fa47c36b9d06977ea586cb1a';
+      func-mem-id   = 'adc_8c_1a60adcc2279d178d4876c9f8f63525067';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_adc1';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_obj_t **
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_obj';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '68';
+      func-mem-desc-line = '109';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 call function config_adc1() and characterize_adc1().
 _EnD_oF_dEf_TeXt_;
@@ -8147,7 +8302,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'adc_8c_1a5056ff0fa4f211e8cbbf6e706228d864';
+      func-mem-id   = 'adc_8c_1a6535e5936468e64673af814623694d98';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -8156,37 +8311,64 @@ _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_adc';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_handle';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
 int
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'adc_pin';
+        func-mem-param-declname = 'gpio';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/adc.c';
-      func-mem-desc-line = '78';
+      func-mem-desc-line = '125';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Read raw adc value of given adc pin.
+Reads the adc value from the GPIO(channel) specified.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param adc_pin One of the GPIO pin to which LSA is connected (36/39/35/34)
-
-@return esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG.
+@param adc_handle_t adc_handle - pointer to adc object.
+@param int gpio - gpio pin number of the channel to be read.
+@return int - returns the adc value read from the channel. 
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
     var = {
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'adc_8c_1a769573371a4f88011e5c68c6c78aa371';
+      var-mem-id   = 'adc_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
 static const char *
 _EnD_oF_dEf_TeXt_;
-      var-mem-name = 'TAG_ADC';
+      var-mem-name = 'TAG';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = "adc"
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/adc.c';
       var-mem-desc-line = '27';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'adc_8c_1a9b7951ef83ad185e60693fc5a54deb9a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const int
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'adc_io';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {LSA_A0, LSA_A1, LSA_A2, LSA_A3, LSA_A4}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/adc.c';
+      var-mem-desc-line = '28';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -8970,13 +9152,19 @@ file = {
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lsa_8c_1ae100292bb09dfe139df0cafc36ef19fd';
+      func-mem-id   = 'lsa_8c_1a44672e9bdc12fc55998213bb63e130c4';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_line_sensor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_handle_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_handle';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lsa.c';
       func-mem-desc-line = '29';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
@@ -8990,13 +9178,19 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lsa_8c_1a3db021dc5dafaf9643129580e2b17ea2';
+      func-mem-id   = 'lsa_8c_1aa29ce2add0b0690a7d3f53f4520b4142';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 line_sensor_array
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'read_line_sensor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+adc_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'adc_handle';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lsa.c';
       func-mem-desc-line = '35';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_

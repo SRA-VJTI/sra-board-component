@@ -11,9 +11,15 @@ var searchData=
   ['ack_5fval_8',['ACK_VAL',['../mpu6050_8h.html#a1d64a546dacc15052a6c4887f9d0020f',1,'mpu6050.h']]],
   ['adc_2ec_9',['adc.c',['../adc_8c.html',1,'']]],
   ['adc_2eh_10',['adc.h',['../adc_8h.html',1,'']]],
-  ['adc_5freading_11',['adc_reading',['../unionline__sensor__array.html#adc5d41a5820d2fe86445854659bcd4f9',1,'line_sensor_array']]],
-  ['addr_12',['addr',['../structi2c__dev__t.html#a84ad7180602cb8e36b38c29e5b1c86c6',1,'i2c_dev_t']]],
-  ['alpha_13',['ALPHA',['../mpu6050_8h.html#af5abd28c44c29b7397c84f1fec4b1d84',1,'mpu6050.h']]],
-  ['angle_14',['angle',['../structservo__config.html#a0404b532c9903812101610fb245540e8',1,'servo_config']]],
-  ['avg_5fsensors_15',['avg_sensors',['../mpu6050_8h.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c'],['../mpu6050_8c.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c']]]
+  ['adc1_5fcali_5fhandle_11',['adc1_cali_handle',['../structadc__obj__t.html#a6b2a6462d600be95f428bb4db4292be9',1,'adc_obj_t']]],
+  ['adc1_5fhandle_12',['adc1_handle',['../structadc__obj__t.html#a66668c57bedb2a45a3e4e454a2a9fbd2',1,'adc_obj_t']]],
+  ['adc_5fatten_13',['ADC_ATTEN',['../adc_8h.html#a9851d7403086e8d8ce491625b0f8863d',1,'adc.h']]],
+  ['adc_5fbitwidth_5flen_14',['ADC_BITWIDTH_LEN',['../adc_8h.html#a6e20add5d75926f896f2602a1b839673',1,'adc.h']]],
+  ['adc_5fhandle_5ft_15',['adc_handle_t',['../adc_8h.html#a1973e31270d9eaf6f7e007b4f12d23f9',1,'adc.h']]],
+  ['adc_5fobj_5ft_16',['adc_obj_t',['../structadc__obj__t.html',1,'']]],
+  ['adc_5freading_17',['adc_reading',['../unionline__sensor__array.html#adc5d41a5820d2fe86445854659bcd4f9',1,'line_sensor_array']]],
+  ['addr_18',['addr',['../structi2c__dev__t.html#a84ad7180602cb8e36b38c29e5b1c86c6',1,'i2c_dev_t']]],
+  ['alpha_19',['ALPHA',['../mpu6050_8h.html#af5abd28c44c29b7397c84f1fec4b1d84',1,'mpu6050.h']]],
+  ['angle_20',['angle',['../structservo__config.html#a0404b532c9903812101610fb245540e8',1,'servo_config']]],
+  ['avg_5fsensors_21',['avg_sensors',['../mpu6050_8h.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c'],['../mpu6050_8c.html#aad4ab5073aa1052f269ac1327fc0b584',1,'avg_sensors(int16_t *acce_raw_value_avg, int16_t *gyro_raw_value_avg, const int16_t *acce_offs, const int16_t *gyro_offs):&#160;mpu6050.c']]]
 ];
