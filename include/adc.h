@@ -28,8 +28,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "driver/adc.h"
-#include "esp_adc_cal.h"
+#include "esp_adc/adc_oneshot.h"
+#include "esp_adc/adc_cali.h"
+#include "esp_adc/adc_cali_scheme.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -39,36 +40,37 @@
 #include "esp_err.h"
 #include "pin_defs.h"
 
-#define DEFAULT_VREF 1100
+#define ADC_ATTEN ADC_ATTEN_DB_11
+#define ADC_BITWIDTH_LEN ADC_BITWIDTH_12
 
 /**
- * @brief Configure width and attenuation of ADC 1
+ * @brief Structure representing an ADC object.
  * 
- * @return esp_err_t - returns ESP_OK if 11dB attenuation and 12 bit width configured to ADC 1, else it returns ESP_ERR_INVALID_ARG.  
- **/
-esp_err_t config_adc1();
+ * This structure holds the handles and calibration data for an ADC.
+ */
+typedef struct
+{
+    adc_oneshot_unit_handle_t adc1_handle; /**< Handle for ADC1 oneshot unit. */
+    adc_cali_handle_t adc1_cali_handle[5]; /**< Array of calibration handles for ADC1. */
+    bool do_calib[5]; /**< Array indicating whether calibration should be performed for each channel. */
+} adc_obj_t;
 
-/**
- * @brief Characterize ADC 1 using either Vref or Two Point
- * 
- * @return esp_err_t 
- **/
-esp_err_t characterize_adc1();
+typedef adc_obj_t *adc_handle_t;
 
 /**
  * @brief call function config_adc1() and characterize_adc1().
  * 
  * @return esp_err_t - returns ESP_OK if Configuration and Characterization of adc1 is successful, else it returns ESP_ERR_INVALID_ARG.  
  **/
-esp_err_t enable_adc1();
+esp_err_t enable_adc1(adc_obj_t** adc_obj);
 
 /**
- * @brief Read raw adc value of given adc pin.
+ * @brief Reads the adc value from the GPIO(channel) specified.
  * 
- * @param adc_pin One of the GPIO pin to which LSA is connected (36/39/35/34)
- * 
- * @return esp_err_t -returns raw reading of adc pin if lsa pin is passed to function, else it returns ESP_ERR_INVALID_ARG.
+ * @param adc_handle_t adc_handle - pointer to adc object.
+ * @param int gpio - gpio pin number of the channel to be read.
+ * @return int - returns the adc value read from the channel. 
  **/
-int read_adc(int adc_pin);
+int read_adc(adc_handle_t adc_handle, int gpio);
 
 #endif

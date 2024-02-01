@@ -1,4 +1,7 @@
 ### C ###
+# SDK Config files
+sdkconfig
+
 # Build folder
 build/
 
