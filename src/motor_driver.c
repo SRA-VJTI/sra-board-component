@@ -23,150 +23,56 @@
  */
 
 #include "motor_driver.h"
+#include "utils.h"
+#include "pin_defs.h"
 
-static const char *TAG_MOTOR_DRIVER = "motor_driver";
-static int mode_motor_driver_a = 0;
+static const char *TAG = "MOTOR";
 
-esp_err_t enable_motor_driver_a(int mode)
-{
-    esp_err_t err;
+static int enabled_motor_driver_flag = 0;
 
-    if (mode == PARALLEL_MODE)
-    {
-        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_PARALLEL_IN_1_2), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, MDA_PARALLEL_IN_3_4), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-    }
-    else if (mode == NORMAL_MODE)
-    {
-        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, MDA_NORMAL_IN_1), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, MDA_NORMAL_IN_2), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MDA_NORMAL_IN_3), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-        CHECK_LOGE(err, mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, MDA_NORMAL_IN_4), TAG_MOTOR_DRIVER, "error: %s", esp_err_to_name(err));
-    }
-    else
-    {
-        ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "invalid motor driver mode selected");
-        return ESP_FAIL;
-    }
-
-    mcpwm_config_t pwm_config;
-    // sets the pwm frequency = 20000
-    pwm_config.frequency = 20000;
-    // sets the initial duty cycle of PWMxA = 0
-    pwm_config.cmpr_a = 0;
-    // sets the initial duty cycle of PWMxB = 0
-    pwm_config.cmpr_b = 0;
-    // sets the pwm counter mode
-    pwm_config.counter_mode = MCPWM_UP_COUNTER;
-    // sets the pwm duty mode
-    pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
-
-    if (mode == PARALLEL_MODE)
-    {
-        esp_err_t err1_0 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config);
-
-        if (err1_0 == ESP_OK)
-        {
-            ESP_LOGI(TAG_MOTOR_DRIVER, "enabled motor driver A in parallel mode");
-
-            mode_motor_driver_a = 1;
-            return ESP_OK;
-        }
-        else
-        {
-            mode_motor_driver_a = 0;
-            return ESP_FAIL;
-        }
-    }
-    else if (mode == NORMAL_MODE)
-    {
-        esp_err_t err1_0 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config);
-        esp_err_t err1_1 = mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_1, &pwm_config);
-
-        if (err1_0 == ESP_OK && err1_1 == ESP_OK)
-        {
-            ESP_LOGI(TAG_MOTOR_DRIVER, "enabled motor driver A in normal mode");
-            mode_motor_driver_a = 2;
-
-            return ESP_OK;
-        }
-        else
-        {
-            mode_motor_driver_a = 0;
-            return ESP_FAIL;
-        }
-    }
-    else
-    {
-        ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "invalid motor driver mode selected");
-        return ESP_FAIL;
-    }
+esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id) { 
+	motor_config_t motor_config;
+	if(motor_id == MOTOR_A_0){
+		motor_config.pwma_gpio_num = MDA_NORMAL_IN_1,
+		motor_config.pwmb_gpio_num = MDA_NORMAL_IN_2,
+		motor_config.pwm_freq_hz = MCPWM_FREQ; // 20kHz PWM frequency
+	} else if(motor_id == MOTOR_A_1) {
+		motor_config.pwma_gpio_num = MDA_NORMAL_IN_3,
+		motor_config.pwmb_gpio_num = MDA_NORMAL_IN_4,
+		motor_config.pwm_freq_hz = MCPWM_FREQ; // 20kHz PWM frequency
+	} else {
+		ESP_LOGE(TAG, "Invalid motor id");
+		return ESP_FAIL;
+	}
+	motor_mcpwm_config_t motor_mcpwm_config;
+	motor_mcpwm_config.group_id = 0;
+	motor_mcpwm_config.resolution_hz = MCPWM_RESOLUTION; // 10MHz
+	ESP_ERROR_CHECK(motor_new_mcpwm_device(&motor_config, &motor_mcpwm_config, motor));
+	ESP_ERROR_CHECK((*motor)->enable(*motor));
+	enabled_motor_driver_flag = 1;
+	return ESP_OK;
 }
 
-static esp_err_t set_motor_speed_helper(int direction, float duty_cycle, mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num)
-{
-    if (direction == MOTOR_FORWARD)
-    {
-        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
-        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, 0);
-        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-
-        return ESP_OK;
-    }
-    else if (direction == MOTOR_BACKWARD)
-    {
-        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, 0);
-        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, duty_cycle);
-        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-
-        return ESP_OK;
-    }
-    else if (direction == MOTOR_STOP)
-    {
-        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, 0);
-        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
-        mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, 0);
-        mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
-
-        return ESP_OK;
-    }
-    else
-    {
-        ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor direction selected");
-        return ESP_FAIL;
-    }
+esp_err_t set_motor_speed(motor_handle_t motor, int direction, float speed) {
+	// map is used to map the speed from 0-100 to 0-MCPWM_TICKS. MCPWM_TICKS is the resolution of the pwm signal. It is calculated as MCPWM_TICKS = MCPWM_RESOLUTION / MCPWM_FREQ
+	speed = (uint32_t)map(speed, 0, 100, 0, MCPWM_RESOLUTION / MCPWM_FREQ);
+	if(direction == MOTOR_FORWARD){
+		motor->forward(motor);
+		motor->set_speed(motor, speed);
+		return ESP_OK;
+	} else if(direction == MOTOR_BACKWARD){
+		motor->backwards(motor);
+		motor->set_speed(motor, speed);
+		return ESP_OK;
+	} else if(direction == MOTOR_STOP){
+		motor->set_speed(motor, 0);
+		return ESP_OK;
+	} else {
+		ESP_LOGE(TAG, "Invalid motor direction");
+		return ESP_FAIL;
+	}
 }
 
-esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)
-{
-    if ((motor_id == MOTOR_A_0 || motor_id == MOTOR_A_1) && read_motor_driver_mode(a) != 0)
-    {
-        if (read_motor_driver_mode(a) == PARALLEL_MODE)
-        {
-            return set_motor_speed_helper(direction, duty_cycle, MCPWM_UNIT_1, MCPWM_TIMER_0);
-        }
-        else if (read_motor_driver_mode(a) == NORMAL_MODE)
-        {
-            mcpwm_timer_t timer_val = motor_id == MOTOR_A_0 ? MCPWM_TIMER_0 : MCPWM_TIMER_1;
-
-            return set_motor_speed_helper(direction, duty_cycle, MCPWM_UNIT_1, timer_val);
-        }
-        else
-        {
-            ESP_LOGE(TAG_MOTOR_DRIVER, "error: %s", "motor driver A is disabled, call enable_motor_driver(a)");
-            return ESP_FAIL;
-        }
-    }
-    else
-    {
-        ESP_LOGE(TAG_MOTOR_DRIVER, "invalid motor_id selected");
-        return ESP_FAIL;
-    }
-}
-
-int read_motor_driver_mode_a()
-{
-    return mode_motor_driver_a;
+int get_motor_driver_status() {
+	return enabled_motor_driver_flag;
 }

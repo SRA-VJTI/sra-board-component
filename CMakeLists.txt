@@ -1,4 +1,6 @@
-set(srcs "src/i2cdev.c" "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/motor_driver.c" "src/mpu6050.c" "src/servo.c" "src/utils.c")
+cmake_minimum_required(VERSION 3.22)
+
+set(srcs "src/i2cdev.c" "src/adc.c" "src/bar_graph.c" "src/switches.c" "src/lsa.c" "src/mcpwm_interface.c" "src/mpu6050.c" "src/servo.c" "src/utils.c" "src/motor_driver.c")
 set(include_dirs include)
 
 if(CONFIG_ENABLE_OLED)
