@@ -222,7 +222,7 @@ static esp_err_t i2c_setup_port(const i2c_dev_t *dev)
         states[dev->port].installed = true;
 
         memcpy(&states[dev->port].config, &temp, sizeof(i2c_config_t));
-        ESP_LOGD(TAG, "I2C driver successfully reconfigured on port %d", (int)dev->port);
+        ESP_LOGD(TAG, "I2C driver successfully reconfigured on port %d", dev->port);
     }
 #if HELPER_TARGET_IS_ESP32
     int t;
