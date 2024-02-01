@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="mcpwm__interface_8c" kind="file" language="C++">
+    <compoundname>mcpwm_interface.c</compoundname>
+    <includes local="yes">driver/mcpwm_prelude.h</includes>
+    <includes local="yes">esp_check.h</includes>
+    <includes refid="mcpwm__interface_8h" local="yes">mcpwm_interface.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>mcpwm_interface.h</label>
+        <link refid="mcpwm__interface_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/mcpwm_interface.c</label>
+        <link refid="mcpwm__interface_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>driver/mcpwm_prelude.h</label>
+      </node>
+      <node id="3">
+        <label>esp_check.h</label>
+      </node>
+      <node id="6">
+        <label>esp_err.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmotor__mcpwm__obj" prot="public">motor_mcpwm_obj</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="mcpwm__interface_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* TAG</definition>
+        <argsstring></argsstring>
+        <name>TAG</name>
+        <initializer>= &quot;MCPWM&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="30" column="19" bodyfile="src/mcpwm_interface.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mcpwm__interface_8c_1a6bc48cb0a4e2882424e61a05a20bb46b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_enable</definition>
+        <argsstring>(motor_t *motor)</argsstring>
+        <name>motor_enable</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="42" column="18" bodyfile="src/mcpwm_interface.c" bodystart="42" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1a33e1892fea7caa61c0a7eb9150079cf2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_disable</definition>
+        <argsstring>(motor_t *motor)</argsstring>
+        <name>motor_disable</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="52" column="18" bodyfile="src/mcpwm_interface.c" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1afce1a83fea515b7fdec1ac29d55d6ad9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_set_speed</definition>
+        <argsstring>(motor_t *motor, uint32_t speed)</argsstring>
+        <name>motor_set_speed</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="61" column="18" bodyfile="src/mcpwm_interface.c" bodystart="61" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1a13ebe7d084556fd886ef998a58951acd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_forward</definition>
+        <argsstring>(motor_t *motor)</argsstring>
+        <name>motor_forward</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="70" column="18" bodyfile="src/mcpwm_interface.c" bodystart="70" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1a49674aa3230fb3ac86d76176c47f41e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_backwards</definition>
+        <argsstring>(motor_t *motor)</argsstring>
+        <name>motor_backwards</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="79" column="18" bodyfile="src/mcpwm_interface.c" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1a41e670ddec66a11544f308f64abbf403" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_brake</definition>
+        <argsstring>(motor_t *motor)</argsstring>
+        <name>motor_brake</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="88" column="18" bodyfile="src/mcpwm_interface.c" bodystart="88" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1aca82d34d06a36146d9a096c7dac4dea3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t motor_del</definition>
+        <argsstring>(motor_t *motor)</argsstring>
+        <name>motor_del</name>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+          <declname>motor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="96" column="18" bodyfile="src/mcpwm_interface.c" bodystart="96" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="mcpwm__interface_8c_1a5604e0b69a2f829c0f4ea6234cd05cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t motor_new_mcpwm_device</definition>
+        <argsstring>(const motor_config_t *motor_config, const motor_mcpwm_config_t *mcpwm_config, motor_t **ret_motor)</argsstring>
+        <name>motor_new_mcpwm_device</name>
+        <param>
+          <type>const <ref refid="structmotor__config__t" kindref="compound">motor_config_t</ref> *</type>
+          <declname>motor_config</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmotor__mcpwm__config__t" kindref="compound">motor_mcpwm_config_t</ref> *</type>
+          <declname>mcpwm_config</declname>
+        </param>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> **</type>
+          <declname>ret_motor</declname>
+        </param>
+        <briefdescription>
+<para>Create Motor based on MCPWM peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mcpwm_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MCPWM specific configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ret_motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned Motor handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Create BDC Motor handle successfully</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG: Create BDC Motor handle failed because of invalid argument</para>
+</listitem><listitem><para>ESP_ERR_NO_MEM: Create BDC Motor handle failed because of out of memory</para>
+</listitem><listitem><para>ESP_FAIL: Create BDC Motor handle failed because some other error </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mcpwm_interface.c" line="110" column="11" bodyfile="src/mcpwm_interface.c" bodystart="110" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/mcpwm_prelude.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_check.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mcpwm__interface_8h" kindref="compound">mcpwm_interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MCPWM&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>base;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_timer_handle_t<sp/>timer;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_oper_handle_t<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_cmpr_handle_t<sp/>cmpa;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_cmpr_handle_t<sp/>cmpb;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_gen_handle_t<sp/>gena;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_gen_handle_t<sp/>genb;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/>motor_mcpwm_obj;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_enable(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(motor,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>%p<sp/>enable<sp/>of<sp/>timer<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>mcpwm_motor,<sp/>mcpwm_motor-&gt;timer);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_timer_enable(mcpwm_motor-&gt;timer),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;enable<sp/>timer<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_timer_start_stop(mcpwm_motor-&gt;timer,<sp/>MCPWM_TIMER_START_NO_STOP),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;start<sp/>timer<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_disable(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(motor,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_timer_start_stop(mcpwm_motor-&gt;timer,<sp/>MCPWM_TIMER_STOP_EMPTY),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;stop<sp/>timer<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_timer_disable(mcpwm_motor-&gt;timer),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;disable<sp/>timer<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_set_speed(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor,<sp/>uint32_t<sp/>speed)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(motor,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_comparator_set_compare_value(mcpwm_motor-&gt;cmpa,<sp/>speed),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>compare<sp/>value<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_comparator_set_compare_value(mcpwm_motor-&gt;cmpb,<sp/>speed),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>compare<sp/>value<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_forward(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(motor,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_generator_set_force_level(mcpwm_motor-&gt;gena,<sp/>-1,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;disable<sp/>force<sp/>level<sp/>for<sp/>gena<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_generator_set_force_level(mcpwm_motor-&gt;genb,<sp/>0,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>force<sp/>level<sp/>for<sp/>genb<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_backwards(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(motor,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_generator_set_force_level(mcpwm_motor-&gt;genb,<sp/>-1,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;disable<sp/>force<sp/>level<sp/>for<sp/>genb<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_generator_set_force_level(mcpwm_motor-&gt;gena,<sp/>0,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>force<sp/>level<sp/>for<sp/>gena<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_brake(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor){</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(motor,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_generator_set_force_level(mcpwm_motor-&gt;gena,<sp/>1,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>force<sp/>level<sp/>for<sp/>gena<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(mcpwm_generator_set_force_level(mcpwm_motor-&gt;genb,<sp/>1,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;set<sp/>force<sp/>level<sp/>for<sp/>genb<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>motor_del(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>__containerof(motor,<sp/>motor_mcpwm_obj,<sp/>base);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_del_generator(mcpwm_motor-&gt;gena);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_del_generator(mcpwm_motor-&gt;genb);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_del_comparator(mcpwm_motor-&gt;cmpa);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_del_comparator(mcpwm_motor-&gt;cmpb);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_del_operator(mcpwm_motor-&gt;operator);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_del_timer(mcpwm_motor-&gt;timer);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>free(mcpwm_motor);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">esp_err_t<sp/><ref refid="mcpwm__interface_8c_1a5604e0b69a2f829c0f4ea6234cd05cdb" kindref="member">motor_new_mcpwm_device</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmotor__config__t" kindref="compound">motor_config_t</ref><sp/>*motor_config,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmotor__mcpwm__config__t" kindref="compound">motor_mcpwm_config_t</ref><sp/>*mcpwm_config,<sp/><ref refid="structmotor__t" kindref="compound">motor_t</ref>**<sp/>ret_motor){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_mcpwm_obj<sp/>*mcpwm_motor<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>ret<sp/>=<sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_FALSE(motor_config<sp/>&amp;&amp;<sp/>mcpwm_config<sp/>&amp;&amp;<sp/>ret_motor,<sp/>ESP_ERR_INVALID_ARG,<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>argument&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(motor_mcpwm_obj));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_FALSE(mcpwm_motor,<sp/>ESP_ERR_NO_MEM,<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;no<sp/>mem<sp/>for<sp/>motor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_timer_config_t<sp/>timer_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.group_id<sp/>=<sp/>mcpwm_config-&gt;<ref refid="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" kindref="member">group_id</ref>,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.clk_src<sp/>=<sp/>MCPWM_TIMER_CLK_SRC_DEFAULT,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.resolution_hz<sp/>=<sp/>mcpwm_config-&gt;<ref refid="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" kindref="member">resolution_hz</ref>,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.period_ticks<sp/>=<sp/>mcpwm_config-&gt;<ref refid="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" kindref="member">resolution_hz</ref><sp/>/<sp/>motor_config-&gt;<ref refid="structmotor__config__t_1a6e272360273a3c788501b34828df8fd6" kindref="member">pwm_freq_hz</ref>,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.count_mode<sp/>=<sp/>MCPWM_TIMER_COUNT_MODE_UP,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_new_timer(&amp;timer_config,<sp/>&amp;mcpwm_motor-&gt;timer),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;create<sp/>MCPWM<sp/>timer<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_operator_config_t<sp/>operator_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.group_id<sp/>=<sp/>mcpwm_config-&gt;<ref refid="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" kindref="member">group_id</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_new_operator(&amp;operator_config,<sp/>&amp;mcpwm_motor-&gt;operator),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;create<sp/>MCPWM<sp/>operator<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_operator_connect_timer(mcpwm_motor-&gt;operator,<sp/>mcpwm_motor-&gt;timer),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;connect<sp/>timer<sp/>and<sp/>operator<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_comparator_config_t<sp/>comparator_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flags.update_cmp_on_tez<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_new_comparator(mcpwm_motor-&gt;operator,<sp/>&amp;comparator_config,<sp/>&amp;mcpwm_motor-&gt;cmpa),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;create<sp/>comparator<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_new_comparator(mcpwm_motor-&gt;operator,<sp/>&amp;comparator_config,<sp/>&amp;mcpwm_motor-&gt;cmpb),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;create<sp/>comparator<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>initial<sp/>compare<sp/>value<sp/>for<sp/>both<sp/>comparators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_comparator_set_compare_value(mcpwm_motor-&gt;cmpa,<sp/>0);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_comparator_set_compare_value(mcpwm_motor-&gt;cmpb,<sp/>0);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_config_t<sp/>generator_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.gen_gpio_num<sp/>=<sp/>motor_config-&gt;<ref refid="structmotor__config__t_1aaaf19a606b77fac6d97be5b1790971f9" kindref="member">pwma_gpio_num</ref>,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_new_generator(mcpwm_motor-&gt;operator,<sp/>&amp;generator_config,<sp/>&amp;mcpwm_motor-&gt;gena),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;create<sp/>generator<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>generator_config.gen_gpio_num<sp/>=<sp/>motor_config-&gt;<ref refid="structmotor__config__t_1ae766ceb0d56dea9bda56f5c27b38ab81" kindref="member">pwmb_gpio_num</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_GOTO_ON_ERROR(mcpwm_new_generator(mcpwm_motor-&gt;operator,<sp/>&amp;generator_config,<sp/>&amp;mcpwm_motor-&gt;genb),<sp/>err,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;create<sp/>generator<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>mcpwm_generator_set_actions_on_timer_event(mcpwm_motor-&gt;gena,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP,<sp/>MCPWM_TIMER_EVENT_EMPTY,<sp/>MCPWM_GEN_ACTION_HIGH),</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_TIMER_EVENT_ACTION_END());</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_set_actions_on_compare_event(mcpwm_motor-&gt;gena,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP,<sp/>mcpwm_motor-&gt;cmpa,<sp/>MCPWM_GEN_ACTION_LOW),</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_COMPARE_EVENT_ACTION_END());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_set_actions_on_timer_event(mcpwm_motor-&gt;genb,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP,<sp/>MCPWM_TIMER_EVENT_EMPTY,<sp/>MCPWM_GEN_ACTION_HIGH),</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_TIMER_EVENT_ACTION_END());</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_generator_set_actions_on_compare_event(mcpwm_motor-&gt;genb,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP,<sp/>mcpwm_motor-&gt;cmpb,<sp/>MCPWM_GEN_ACTION_LOW),</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCPWM_GEN_COMPARE_EVENT_ACTION_END());</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.enable<sp/>=<sp/>motor_enable;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.disable<sp/>=<sp/>motor_disable;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.set_speed<sp/>=<sp/>motor_set_speed;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.forward<sp/>=<sp/>motor_forward;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.backwards<sp/>=<sp/>motor_backwards;<sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.brake<sp/>=<sp/>motor_brake;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>mcpwm_motor-&gt;base.del<sp/>=<sp/>motor_del;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>*ret_motor<sp/>=<sp/>&amp;mcpwm_motor-&gt;base;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>%p<sp/>created&quot;</highlight><highlight class="normal">,<sp/>mcpwm_motor);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGI(<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;motor<sp/>timer<sp/>%p<sp/>created&quot;</highlight><highlight class="normal">,<sp/>mcpwm_motor-&gt;timer);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">err:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor-&gt;gena)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_del_generator(mcpwm_motor-&gt;gena);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor-&gt;genb)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_del_generator(mcpwm_motor-&gt;genb);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor-&gt;cmpa)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_del_comparator(mcpwm_motor-&gt;cmpa);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor-&gt;cmpb)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_del_comparator(mcpwm_motor-&gt;cmpb);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor-&gt;operator)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_del_operator(mcpwm_motor-&gt;operator);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mcpwm_motor-&gt;timer)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mcpwm_del_timer(mcpwm_motor-&gt;timer);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(mcpwm_motor);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/mcpwm_interface.c"/>
+  </compounddef>
+</doxygen>

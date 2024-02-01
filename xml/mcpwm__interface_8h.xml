@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="mcpwm__interface_8h" kind="file" language="C++">
+    <compoundname>mcpwm_interface.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">esp_err.h</includes>
+    <includedby refid="motor__driver_8h" local="yes">include/motor_driver.h</includedby>
+    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
+    <includedby refid="mcpwm__interface_8c" local="yes">src/mcpwm_interface.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/mcpwm_interface.h</label>
+        <link refid="mcpwm__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>esp_err.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>include/bar_graph.h</label>
+        <link refid="bar__graph_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/mcpwm_interface.h</label>
+        <link refid="mcpwm__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
+      </node>
+      <node id="5">
+        <label>src/bar_graph.c</label>
+        <link refid="bar__graph_8c"/>
+      </node>
+      <node id="7">
+        <label>src/mcpwm_interface.c</label>
+        <link refid="mcpwm__interface_8c"/>
+      </node>
+      <node id="6">
+        <label>src/motor_driver.c</label>
+        <link refid="motor__driver_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmotor__t" prot="public">motor_t</innerclass>
+    <innerclass refid="structmotor__config__t" prot="public">motor_config_t</innerclass>
+    <innerclass refid="structmotor__mcpwm__config__t" prot="public">motor_mcpwm_config_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="mcpwm__interface_8h_1af4cce5d75b7d89206f2b7f2825d3f9fc" prot="public" static="no">
+        <type>struct <ref refid="structmotor__t" kindref="compound">motor_t</ref></type>
+        <definition>typedef struct motor_t motor_t</definition>
+        <argsstring></argsstring>
+        <name>motor_t</name>
+        <briefdescription>
+<para>Motor interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="35" column="22" bodyfile="include/mcpwm_interface.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="mcpwm__interface_8h_1a8e393520bb8d8a3f9e26ce6ae979fd91" prot="public" static="no">
+        <type>struct <ref refid="structmotor__t" kindref="compound">motor_t</ref> *</type>
+        <definition>typedef struct motor_t* motor_handle_t</definition>
+        <argsstring></argsstring>
+        <name>motor_handle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="36" column="23" bodyfile="include/mcpwm_interface.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mcpwm__interface_8h_1a5604e0b69a2f829c0f4ea6234cd05cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t motor_new_mcpwm_device</definition>
+        <argsstring>(const motor_config_t *motor_config, const motor_mcpwm_config_t *mcpwm_config, motor_t **ret_motor)</argsstring>
+        <name>motor_new_mcpwm_device</name>
+        <param>
+          <type>const <ref refid="structmotor__config__t" kindref="compound">motor_config_t</ref> *</type>
+          <declname>motor_config</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmotor__mcpwm__config__t" kindref="compound">motor_mcpwm_config_t</ref> *</type>
+          <declname>mcpwm_config</declname>
+        </param>
+        <param>
+          <type><ref refid="structmotor__t" kindref="compound">motor_t</ref> **</type>
+          <declname>ret_motor</declname>
+        </param>
+        <briefdescription>
+<para>Create Motor based on MCPWM peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mcpwm_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MCPWM specific configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ret_motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Returned Motor handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Create BDC Motor handle successfully</para>
+</listitem><listitem><para>ESP_ERR_INVALID_ARG: Create BDC Motor handle failed because of invalid argument</para>
+</listitem><listitem><para>ESP_ERR_NO_MEM: Create BDC Motor handle failed because of out of memory</para>
+</listitem><listitem><para>ESP_FAIL: Create BDC Motor handle failed because some other error </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="134" column="11" bodyfile="src/mcpwm_interface.c" bodystart="110" bodyend="201" declfile="include/mcpwm_interface.h" declline="134" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2021<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MCPWM_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCPWM_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="mcpwm__interface_8h_1af4cce5d75b7d89206f2b7f2825d3f9fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/><ref refid="structmotor__t" kindref="compound">motor_t</ref>;</highlight></codeline>
+<codeline lineno="36" refid="mcpwm__interface_8h_1a8e393520bb8d8a3f9e26ce6ae979fd91" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmotor__t" kindref="compound">motor_t</ref>*<sp/><ref refid="mcpwm__interface_8h_1a8e393520bb8d8a3f9e26ce6ae979fd91" kindref="member">motor_handle_t</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structmotor__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="47" refid="structmotor__t_1a7f2e158fc138329b1bb4490b58135964" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1a7f2e158fc138329b1bb4490b58135964" kindref="member">enable</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor);</highlight></codeline>
+<codeline lineno="56" refid="structmotor__t_1a3bc717ecf40e22fabd8c68194142f1da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1a3bc717ecf40e22fabd8c68194142f1da" kindref="member">disable</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor);</highlight></codeline>
+<codeline lineno="66" refid="structmotor__t_1aa2bf878e84240b295d22be4ebe7070c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1aa2bf878e84240b295d22be4ebe7070c6" kindref="member">set_speed</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor,<sp/>uint32_t<sp/>speed);</highlight></codeline>
+<codeline lineno="75" refid="structmotor__t_1a0a2ce097f8de1f837862f26fe3c3cac2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1a0a2ce097f8de1f837862f26fe3c3cac2" kindref="member">forward</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor);</highlight></codeline>
+<codeline lineno="84" refid="structmotor__t_1a86d7562895cc446a0b8d93d7b080e31e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1a86d7562895cc446a0b8d93d7b080e31e" kindref="member">backwards</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor);</highlight></codeline>
+<codeline lineno="93" refid="structmotor__t_1a16c896b9e76bdbba9d47767c613dd2dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1a16c896b9e76bdbba9d47767c613dd2dd" kindref="member">brake</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor);</highlight></codeline>
+<codeline lineno="102" refid="structmotor__t_1aa9f11ef509302dcec770bad6fcdd7914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>(*<ref refid="structmotor__t_1aa9f11ef509302dcec770bad6fcdd7914" kindref="member">del</ref>)(<ref refid="structmotor__t" kindref="compound">motor_t</ref><sp/>*motor);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structmotor__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109" refid="structmotor__config__t_1aaaf19a606b77fac6d97be5b1790971f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structmotor__config__t_1aaaf19a606b77fac6d97be5b1790971f9" kindref="member">pwma_gpio_num</ref>;<sp/></highlight></codeline>
+<codeline lineno="110" refid="structmotor__config__t_1ae766ceb0d56dea9bda56f5c27b38ab81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structmotor__config__t_1ae766ceb0d56dea9bda56f5c27b38ab81" kindref="member">pwmb_gpio_num</ref>;<sp/></highlight></codeline>
+<codeline lineno="111" refid="structmotor__config__t_1a6e272360273a3c788501b34828df8fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structmotor__config__t_1a6e272360273a3c788501b34828df8fd6" kindref="member">pwm_freq_hz</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}<sp/><ref refid="structmotor__config__t" kindref="compound">motor_config_t</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="structmotor__mcpwm__config__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118" refid="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" kindref="member">group_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" kindref="member">resolution_hz</ref>;<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}<sp/><ref refid="structmotor__mcpwm__config__t" kindref="compound">motor_mcpwm_config_t</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">esp_err_t<sp/><ref refid="mcpwm__interface_8h_1a5604e0b69a2f829c0f4ea6234cd05cdb" kindref="member">motor_new_mcpwm_device</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmotor__config__t" kindref="compound">motor_config_t</ref><sp/>*motor_config,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmotor__mcpwm__config__t" kindref="compound">motor_mcpwm_config_t</ref><sp/>*mcpwm_config,<sp/><ref refid="structmotor__t" kindref="compound">motor_t</ref>**<sp/>ret_motor);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/mcpwm_interface.h"/>
+  </compounddef>
+</doxygen>

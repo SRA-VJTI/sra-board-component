@@ -73,72 +73,87 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="motor__driver_8h_source.html">motor_driver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pin__defs_8h_source.html">pin_defs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for motor_driver.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="motor__driver_8c__incl.png" border="0" usemap="#asrc_2motor__driver_8c" alt=""/></div>
 <map name="asrc_2motor__driver_8c" id="asrc_2motor__driver_8c">
-<area shape="rect" title=" " alt="" coords="473,5,600,32"/>
-<area shape="rect" href="motor__driver_8h.html" title=" " alt="" coords="485,80,589,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,65,181"/>
-<area shape="rect" title=" " alt="" coords="89,155,232,181"/>
-<area shape="rect" title=" " alt="" coords="257,155,371,181"/>
-<area shape="rect" title=" " alt="" coords="396,155,541,181"/>
-<area shape="rect" title=" " alt="" coords="565,155,644,181"/>
-<area shape="rect" title=" " alt="" coords="669,155,746,181"/>
-<area shape="rect" title=" " alt="" coords="770,155,845,181"/>
-<area shape="rect" href="pin__defs_8h.html" title=" " alt="" coords="869,155,951,181"/>
+<area shape="rect" title=" " alt="" coords="102,5,229,32"/>
+<area shape="rect" href="motor__driver_8h.html" title=" " alt="" coords="9,80,113,107"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="137,80,193,107"/>
+<area shape="rect" href="pin__defs_8h.html" title=" " alt="" coords="218,80,299,107"/>
+<area shape="rect" title=" " alt="" coords="5,229,80,256"/>
+<area shape="rect" title=" " alt="" coords="23,155,100,181"/>
+<area shape="rect" href="mcpwm__interface_8h.html" title=" " alt="" coords="125,155,259,181"/>
+<area shape="rect" title=" " alt="" coords="160,229,224,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9fc3907d0ee8196eca819e1e5e1c6977"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977">enable_motor_driver_a</a> (int mode)</td></tr>
-<tr class="memdesc:a9fc3907d0ee8196eca819e1e5e1c6977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables Motor driver A in Parallel or Normal Mode.  <a href="motor__driver_8c.html#a9fc3907d0ee8196eca819e1e5e1c6977">More...</a><br /></td></tr>
-<tr class="separator:a9fc3907d0ee8196eca819e1e5e1c6977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a027943094f99f52b1ea067ab85384686"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a027943094f99f52b1ea067ab85384686">set_motor_speed</a> (int motor_id, int direction, float duty_cycle)</td></tr>
-<tr class="memdesc:a027943094f99f52b1ea067ab85384686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the speed of motors.  <a href="motor__driver_8c.html#a027943094f99f52b1ea067ab85384686">More...</a><br /></td></tr>
-<tr class="separator:a027943094f99f52b1ea067ab85384686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7ed1b0e385fe871d79ac02fc5177768"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#ae7ed1b0e385fe871d79ac02fc5177768">read_motor_driver_mode_a</a> ()</td></tr>
-<tr class="memdesc:ae7ed1b0e385fe871d79ac02fc5177768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads mode of motor driver A.  <a href="motor__driver_8c.html#ae7ed1b0e385fe871d79ac02fc5177768">More...</a><br /></td></tr>
-<tr class="separator:ae7ed1b0e385fe871d79ac02fc5177768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01c5af0716d82921a05fbce43c99ee6"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#aa01c5af0716d82921a05fbce43c99ee6">enable_motor_driver</a> (<a class="el" href="mcpwm__interface_8h.html#a8e393520bb8d8a3f9e26ce6ae979fd91">motor_handle_t</a> *motor, int motor_id)</td></tr>
+<tr class="memdesc:aa01c5af0716d82921a05fbce43c99ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable motor driver.  <a href="motor__driver_8c.html#aa01c5af0716d82921a05fbce43c99ee6">More...</a><br /></td></tr>
+<tr class="separator:aa01c5af0716d82921a05fbce43c99ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1239d2fdeea80183763d4496bb1270"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a6e1239d2fdeea80183763d4496bb1270">set_motor_speed</a> (<a class="el" href="mcpwm__interface_8h.html#a8e393520bb8d8a3f9e26ce6ae979fd91">motor_handle_t</a> motor, int direction, float speed)</td></tr>
+<tr class="separator:a6e1239d2fdeea80183763d4496bb1270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54973c5524a0a71200564d15cb0114be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__driver_8c.html#a54973c5524a0a71200564d15cb0114be">get_motor_driver_status</a> ()</td></tr>
+<tr class="memdesc:a54973c5524a0a71200564d15cb0114be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the motor driver is engaged.  <a href="motor__driver_8c.html#a54973c5524a0a71200564d15cb0114be">More...</a><br /></td></tr>
+<tr class="separator:a54973c5524a0a71200564d15cb0114be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9fc3907d0ee8196eca819e1e5e1c6977" name="a9fc3907d0ee8196eca819e1e5e1c6977"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fc3907d0ee8196eca819e1e5e1c6977">&#9670;&nbsp;</a></span>enable_motor_driver_a()</h2>
+<a id="aa01c5af0716d82921a05fbce43c99ee6" name="aa01c5af0716d82921a05fbce43c99ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01c5af0716d82921a05fbce43c99ee6">&#9670;&nbsp;</a></span>enable_motor_driver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">esp_err_t enable_motor_driver_a </td>
+          <td class="memname">esp_err_t enable_motor_driver </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="mcpwm__interface_8h.html#a8e393520bb8d8a3f9e26ce6ae979fd91">motor_handle_t</a> *&#160;</td>
+          <td class="paramname"><em>motor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>motor_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enables Motor driver A in Parallel or Normal Mode. </p>
+<p>Enable motor driver. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode </td></tr>
+    <tr><td class="paramname">motor_handle_t</td><td>Motor object handle </td></tr>
+    <tr><td class="paramname">motor_id</td><td>set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to bind to the handle. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>ESP_OK: Success</li>
+<li>ESP_ERR_INVALID_ARG: Invalid argument</li>
+<li>ESP_FAIL: Failed </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
-<a id="ae7ed1b0e385fe871d79ac02fc5177768" name="ae7ed1b0e385fe871d79ac02fc5177768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7ed1b0e385fe871d79ac02fc5177768">&#9670;&nbsp;</a></span>read_motor_driver_mode_a()</h2>
+<a id="a54973c5524a0a71200564d15cb0114be" name="a54973c5524a0a71200564d15cb0114be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54973c5524a0a71200564d15cb0114be">&#9670;&nbsp;</a></span>get_motor_driver_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int read_motor_driver_mode_a </td>
+          <td class="memname">int get_motor_driver_status </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -146,13 +161,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reads mode of motor driver A. </p>
-<dl class="section return"><dt>Returns</dt><dd>int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode </dd></dl>
+<p>Checks if the motor driver is engaged. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the motor driver is engaged, false otherwise. </dd></dl>
 
 </div>
 </div>
-<a id="a027943094f99f52b1ea067ab85384686" name="a027943094f99f52b1ea067ab85384686"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027943094f99f52b1ea067ab85384686">&#9670;&nbsp;</a></span>set_motor_speed()</h2>
+<a id="a6e1239d2fdeea80183763d4496bb1270" name="a6e1239d2fdeea80183763d4496bb1270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1239d2fdeea80183763d4496bb1270">&#9670;&nbsp;</a></span>set_motor_speed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,8 +175,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">esp_err_t set_motor_speed </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>motor_id</em>, </td>
+          <td class="paramtype"><a class="el" href="mcpwm__interface_8h.html#a8e393520bb8d8a3f9e26ce6ae979fd91">motor_handle_t</a>&#160;</td>
+          <td class="paramname"><em>motor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -173,7 +188,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>duty_cycle</em>&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,17 +197,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set the speed of motors. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">motor_id</td><td>set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction </td></tr>
-    <tr><td class="paramname">direction</td><td>set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor </td></tr>
-    <tr><td class="paramname">duty_cycle</td><td>set the duty cycle of the motor driver PWM </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs </dd></dl>
 
 </div>
 </div>

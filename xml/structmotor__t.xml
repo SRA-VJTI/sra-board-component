@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structmotor__t" kind="struct" language="C++" prot="public">
+    <compoundname>motor_t</compoundname>
+    <includes refid="mcpwm__interface_8h" local="no">mcpwm_interface.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmotor__t_1a7f2e158fc138329b1bb4490b58135964" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::enable) (motor_t *motor)</definition>
+        <argsstring>)(motor_t *motor)</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor_handle_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem></itemizedlist>
+</para>
+<para>ESP_FAIL: Failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="47" column="5" bodyfile="include/mcpwm_interface.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__t_1a3bc717ecf40e22fabd8c68194142f1da" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::disable) (motor_t *motor)</definition>
+        <argsstring>)(motor_t *motor)</argsstring>
+        <name>disable</name>
+        <briefdescription>
+<para>Disable motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem></itemizedlist>
+</para>
+<para>ESP_FAIL: Failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="56" column="5" bodyfile="include/mcpwm_interface.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__t_1aa2bf878e84240b295d22be4ebe7070c6" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::set_speed) (motor_t *motor, uint32_t speed)</definition>
+        <argsstring>)(motor_t *motor, uint32_t speed)</argsstring>
+        <name>set_speed</name>
+        <briefdescription>
+<para>Set motor speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed of motor, 0~100 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem></itemizedlist>
+</para>
+<para>ESP_FAIL: Failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="66" column="5" bodyfile="include/mcpwm_interface.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__t_1a0a2ce097f8de1f837862f26fe3c3cac2" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::forward) (motor_t *motor)</definition>
+        <argsstring>)(motor_t *motor)</argsstring>
+        <name>forward</name>
+        <briefdescription>
+<para>Set direction of motor to forward. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem></itemizedlist>
+</para>
+<para>ESP_FAIL: Failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="75" column="5" bodyfile="include/mcpwm_interface.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__t_1a86d7562895cc446a0b8d93d7b080e31e" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::backwards) (motor_t *motor)</definition>
+        <argsstring>)(motor_t *motor)</argsstring>
+        <name>backwards</name>
+        <briefdescription>
+<para>Set direction of motor to backwards. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem><listitem><para>ESP_FAIL: Failed </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="84" column="5" bodyfile="include/mcpwm_interface.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__t_1a16c896b9e76bdbba9d47767c613dd2dd" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::brake) (motor_t *motor)</definition>
+        <argsstring>)(motor_t *motor)</argsstring>
+        <name>brake</name>
+        <briefdescription>
+<para>Brake motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem><listitem><para>ESP_FAIL: Failed </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="93" column="5" bodyfile="include/mcpwm_interface.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__t_1aa9f11ef509302dcec770bad6fcdd7914" prot="public" static="no" mutable="no">
+        <type>esp_err_t(*</type>
+        <definition>esp_err_t(* motor_t::del) (motor_t *motor)</definition>
+        <argsstring>)(motor_t *motor)</argsstring>
+        <name>del</name>
+        <briefdescription>
+<para>Delete motor object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>motor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Motor object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><itemizedlist>
+<listitem><para>ESP_OK: Success</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>ESP_ERR_INVALID_ARG: Invalid argument</para>
+</listitem></itemizedlist>
+</para>
+<para>ESP_FAIL: Failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="102" column="5" bodyfile="include/mcpwm_interface.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mcpwm_interface.h" line="38" column="1" bodyfile="include/mcpwm_interface.h" bodystart="38" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structmotor__t_1a86d7562895cc446a0b8d93d7b080e31e" prot="public" virt="non-virtual"><scope>motor_t</scope><name>backwards</name></member>
+      <member refid="structmotor__t_1a16c896b9e76bdbba9d47767c613dd2dd" prot="public" virt="non-virtual"><scope>motor_t</scope><name>brake</name></member>
+      <member refid="structmotor__t_1aa9f11ef509302dcec770bad6fcdd7914" prot="public" virt="non-virtual"><scope>motor_t</scope><name>del</name></member>
+      <member refid="structmotor__t_1a3bc717ecf40e22fabd8c68194142f1da" prot="public" virt="non-virtual"><scope>motor_t</scope><name>disable</name></member>
+      <member refid="structmotor__t_1a7f2e158fc138329b1bb4490b58135964" prot="public" virt="non-virtual"><scope>motor_t</scope><name>enable</name></member>
+      <member refid="structmotor__t_1a0a2ce097f8de1f837862f26fe3c3cac2" prot="public" virt="non-virtual"><scope>motor_t</scope><name>forward</name></member>
+      <member refid="structmotor__t_1aa2bf878e84240b295d22be4ebe7070c6" prot="public" virt="non-virtual"><scope>motor_t</scope><name>set_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -97,41 +97,41 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef MOTOR_DRIVER_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define MOTOR_DRIVER_H</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;driver/mcpwm.h&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;soc/mcpwm_periph.h&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;esp_attr.h&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;esp_log.h&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;esp_err.h&quot;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="pin__defs_8h.html">pin_defs.h</a>&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#a3392e32a84aa6c7c3311e0ba6ce01259">   38</a></span><span class="preprocessor">#define PARALLEL_MODE 1</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#aa045b6864425ecb90f2c253e8440d21c">   39</a></span><span class="preprocessor">#define NORMAL_MODE 2</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#aecfc8cb31c77ff43036a88e475f0198d">   41</a></span><span class="preprocessor">#define MOTOR_FORWARD 200</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#ae29c16906c059ef2615d54a3ee144763">   42</a></span><span class="preprocessor">#define MOTOR_BACKWARD 201</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#aa61a6c32d7187d20f8ea4171b8bf8dd7">   43</a></span><span class="preprocessor">#define MOTOR_STOP 202</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#a60a0d0982603cefa4efa58450dd39104">   45</a></span><span class="preprocessor">#define MOTOR_A_0 100</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#ab115b64cb678fa39054d32dd04a0fbea">   46</a></span><span class="preprocessor">#define MOTOR_A_1 101</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#a95eb372d31d30f5034c1bd310b229b85">   54</a></span><span class="preprocessor">#define enable_motor_driver(id, mode) enable_motor_driver_##id(mode)</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#ab86dcd9449875dab4e7f006bfd4b47fa">   62</a></span><span class="preprocessor">#define read_motor_driver_mode(id) read_motor_driver_mode_##id()</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;esp_err.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;esp_log.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="mcpwm__interface_8h.html">mcpwm_interface.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#a60a0d0982603cefa4efa58450dd39104">   32</a></span><span class="preprocessor">#define MOTOR_A_0 100</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#ab115b64cb678fa39054d32dd04a0fbea">   33</a></span><span class="preprocessor">#define MOTOR_A_1 101</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#aecfc8cb31c77ff43036a88e475f0198d">   35</a></span><span class="preprocessor">#define MOTOR_FORWARD 200</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#ae29c16906c059ef2615d54a3ee144763">   36</a></span><span class="preprocessor">#define MOTOR_BACKWARD 201</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#aa61a6c32d7187d20f8ea4171b8bf8dd7">   37</a></span><span class="preprocessor">#define MOTOR_STOP 202</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#a6e8126ff5ecff090a1ad8fbe981a4b44">   39</a></span><span class="preprocessor">#define MCPWM_FREQ 20000</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="motor__driver_8h.html#aef25c062c18accc2650e496b7cf7e362">   40</a></span><span class="preprocessor">#define MCPWM_RESOLUTION 10000000</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>esp_err_t <a class="code hl_function" href="motor__driver_8h.html#aa01c5af0716d82921a05fbce43c99ee6">enable_motor_driver</a>(<a class="code hl_struct" href="structmotor__t.html">motor_handle_t</a> *motor, <span class="keywordtype">int</span> motor_id);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> * @brief Set duty cycle for one of the motors.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"> * @param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"> * @param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment"> * @param duty_cycle set the duty cycle of the motor driver PWM</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"> * @return </span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"> *  - ESP_OK if speed correctly</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"> *  - ESP_FAIL if any error occurs</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>esp_err_t <a class="code hl_function" href="motor__driver_8h.html#ad95e7531126132b16efaac90308cdb6a">set_motor_speed</a>(<a class="code hl_struct" href="structmotor__t.html">motor_handle_t</a> motor, <span class="keywordtype">int</span> direction, <span class="keywordtype">float</span> duty_cycle);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>esp_err_t <a class="code hl_function" href="motor__driver_8h.html#a9fc3907d0ee8196eca819e1e5e1c6977">enable_motor_driver_a</a>(<span class="keywordtype">int</span> mode);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>esp_err_t <a class="code hl_function" href="motor__driver_8h.html#a027943094f99f52b1ea067ab85384686">set_motor_speed</a>(<span class="keywordtype">int</span> motor_id, <span class="keywordtype">int</span> direction, <span class="keywordtype">float</span> duty_cycle);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keywordtype">int</span> <a class="code hl_function" href="motor__driver_8h.html#ae7ed1b0e385fe871d79ac02fc5177768">read_motor_driver_mode_a</a>();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="amotor__driver_8h_html_a027943094f99f52b1ea067ab85384686"><div class="ttname"><a href="motor__driver_8h.html#a027943094f99f52b1ea067ab85384686">set_motor_speed</a></div><div class="ttdeci">esp_err_t set_motor_speed(int motor_id, int direction, float duty_cycle)</div><div class="ttdoc">Set the speed of motors.</div><div class="ttdef"><b>Definition:</b> motor_driver.c:142</div></div>
-<div class="ttc" id="amotor__driver_8h_html_a9fc3907d0ee8196eca819e1e5e1c6977"><div class="ttname"><a href="motor__driver_8h.html#a9fc3907d0ee8196eca819e1e5e1c6977">enable_motor_driver_a</a></div><div class="ttdeci">esp_err_t enable_motor_driver_a(int mode)</div><div class="ttdoc">Enables Motor driver A in Parallel or Normal Mode.</div><div class="ttdef"><b>Definition:</b> motor_driver.c:30</div></div>
-<div class="ttc" id="amotor__driver_8h_html_ae7ed1b0e385fe871d79ac02fc5177768"><div class="ttname"><a href="motor__driver_8h.html#ae7ed1b0e385fe871d79ac02fc5177768">read_motor_driver_mode_a</a></div><div class="ttdeci">int read_motor_driver_mode_a()</div><div class="ttdoc">Reads mode of motor driver A.</div><div class="ttdef"><b>Definition:</b> motor_driver.c:169</div></div>
-<div class="ttc" id="apin__defs_8h_html"><div class="ttname"><a href="pin__defs_8h.html">pin_defs.h</a></div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">int</span> <a class="code hl_function" href="motor__driver_8h.html#a54973c5524a0a71200564d15cb0114be">get_motor_driver_status</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="amcpwm__interface_8h_html"><div class="ttname"><a href="mcpwm__interface_8h.html">mcpwm_interface.h</a></div></div>
+<div class="ttc" id="amotor__driver_8h_html_a54973c5524a0a71200564d15cb0114be"><div class="ttname"><a href="motor__driver_8h.html#a54973c5524a0a71200564d15cb0114be">get_motor_driver_status</a></div><div class="ttdeci">int get_motor_driver_status()</div><div class="ttdoc">Checks if the motor driver is engaged.</div><div class="ttdef"><b>Definition:</b> motor_driver.c:76</div></div>
+<div class="ttc" id="amotor__driver_8h_html_aa01c5af0716d82921a05fbce43c99ee6"><div class="ttname"><a href="motor__driver_8h.html#aa01c5af0716d82921a05fbce43c99ee6">enable_motor_driver</a></div><div class="ttdeci">esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id)</div><div class="ttdoc">Enable motor driver.</div><div class="ttdef"><b>Definition:</b> motor_driver.c:33</div></div>
+<div class="ttc" id="amotor__driver_8h_html_ad95e7531126132b16efaac90308cdb6a"><div class="ttname"><a href="motor__driver_8h.html#ad95e7531126132b16efaac90308cdb6a">set_motor_speed</a></div><div class="ttdeci">esp_err_t set_motor_speed(motor_handle_t motor, int direction, float duty_cycle)</div><div class="ttdef"><b>Definition:</b> motor_driver.c:56</div></div>
+<div class="ttc" id="astructmotor__t_html"><div class="ttname"><a href="structmotor__t.html">motor_t</a></div><div class="ttdef"><b>Definition:</b> mcpwm_interface.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

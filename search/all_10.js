@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['utils_2ec_0',['utils.c',['../utils_8c.html',1,'']]],
-  ['utils_2eh_1',['utils.h',['../utils_8h.html',1,'']]]
+  ['tag_0',['TAG',['../lvgl__helpers_8c.html#afc3d101f633a076cc1ca84b85b6224b2',1,'lvgl_helpers.c']]],
+  ['timeout_5fticks_1',['timeout_ticks',['../structi2c__dev__t.html#ad177c30687f89873cc6a6437f08f7fe0',1,'i2c_dev_t']]],
+  ['timer_5fnum_2',['timer_num',['../structservo__config.html#a20f0e138ce47ab49602a35c9cdac45a8',1,'servo_config']]]
 ];

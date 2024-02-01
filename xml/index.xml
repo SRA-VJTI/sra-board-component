@@ -23,6 +23,33 @@
     <member refid="unionline__sensor__array_1a21a53a7659df2db5b988bfe19f4069d5" kind="variable"><name>lsa</name></member>
     <member refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kind="variable"><name>adc_reading</name></member>
   </compound>
+  <compound refid="structmotor__config__t" kind="struct"><name>motor_config_t</name>
+    <member refid="structmotor__config__t_1aaaf19a606b77fac6d97be5b1790971f9" kind="variable"><name>pwma_gpio_num</name></member>
+    <member refid="structmotor__config__t_1ae766ceb0d56dea9bda56f5c27b38ab81" kind="variable"><name>pwmb_gpio_num</name></member>
+    <member refid="structmotor__config__t_1a6e272360273a3c788501b34828df8fd6" kind="variable"><name>pwm_freq_hz</name></member>
+  </compound>
+  <compound refid="structmotor__mcpwm__config__t" kind="struct"><name>motor_mcpwm_config_t</name>
+    <member refid="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" kind="variable"><name>group_id</name></member>
+    <member refid="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" kind="variable"><name>resolution_hz</name></member>
+  </compound>
+  <compound refid="structmotor__mcpwm__obj" kind="struct"><name>motor_mcpwm_obj</name>
+    <member refid="structmotor__mcpwm__obj_1af6b993d4d3fdd10ba5d69cd56c6ba596" kind="variable"><name>base</name></member>
+    <member refid="structmotor__mcpwm__obj_1aeb26f67694de6391845a945d7a210d06" kind="variable"><name>timer</name></member>
+    <member refid="structmotor__mcpwm__obj_1a46bb1a17250fb9889cd9bb6145e39860" kind="variable"><name>operator</name></member>
+    <member refid="structmotor__mcpwm__obj_1a0684df164f102220dfbb0487c65f7821" kind="variable"><name>cmpa</name></member>
+    <member refid="structmotor__mcpwm__obj_1a1abb8352c595f2742cef41dda0d87d27" kind="variable"><name>cmpb</name></member>
+    <member refid="structmotor__mcpwm__obj_1a18cd2e73ef3f3c96707514bff4979822" kind="variable"><name>gena</name></member>
+    <member refid="structmotor__mcpwm__obj_1a9f8bf1595ddc2c31b722c3d8750e81f6" kind="variable"><name>genb</name></member>
+  </compound>
+  <compound refid="structmotor__t" kind="struct"><name>motor_t</name>
+    <member refid="structmotor__t_1a7f2e158fc138329b1bb4490b58135964" kind="variable"><name>enable</name></member>
+    <member refid="structmotor__t_1a3bc717ecf40e22fabd8c68194142f1da" kind="variable"><name>disable</name></member>
+    <member refid="structmotor__t_1aa2bf878e84240b295d22be4ebe7070c6" kind="variable"><name>set_speed</name></member>
+    <member refid="structmotor__t_1a0a2ce097f8de1f837862f26fe3c3cac2" kind="variable"><name>forward</name></member>
+    <member refid="structmotor__t_1a86d7562895cc446a0b8d93d7b080e31e" kind="variable"><name>backwards</name></member>
+    <member refid="structmotor__t_1a16c896b9e76bdbba9d47767c613dd2dd" kind="variable"><name>brake</name></member>
+    <member refid="structmotor__t_1aa9f11ef509302dcec770bad6fcdd7914" kind="variable"><name>del</name></member>
+  </compound>
   <compound refid="structservo__config" kind="struct"><name>servo_config</name>
     <member refid="structservo__config_1ae18a1d7cfaeb5c16cf4717d54b264954" kind="variable"><name>servo_pin</name></member>
     <member refid="structservo__config_1a0814099ee19c534c5562d80c2a538c48" kind="variable"><name>min_pulse_width</name></member>
@@ -279,19 +306,22 @@
     <member refid="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" kind="function"><name>ssd1306_sleep_in</name></member>
     <member refid="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" kind="function"><name>ssd1306_sleep_out</name></member>
   </compound>
+  <compound refid="mcpwm__interface_8h" kind="file"><name>mcpwm_interface.h</name>
+    <member refid="mcpwm__interface_8h_1af4cce5d75b7d89206f2b7f2825d3f9fc" kind="typedef"><name>motor_t</name></member>
+    <member refid="mcpwm__interface_8h_1a8e393520bb8d8a3f9e26ce6ae979fd91" kind="typedef"><name>motor_handle_t</name></member>
+    <member refid="mcpwm__interface_8h_1a5604e0b69a2f829c0f4ea6234cd05cdb" kind="function"><name>motor_new_mcpwm_device</name></member>
+  </compound>
   <compound refid="motor__driver_8h" kind="file"><name>motor_driver.h</name>
-    <member refid="motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259" kind="define"><name>PARALLEL_MODE</name></member>
-    <member refid="motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c" kind="define"><name>NORMAL_MODE</name></member>
+    <member refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kind="define"><name>MOTOR_A_0</name></member>
+    <member refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" kind="define"><name>MOTOR_A_1</name></member>
     <member refid="motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d" kind="define"><name>MOTOR_FORWARD</name></member>
     <member refid="motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763" kind="define"><name>MOTOR_BACKWARD</name></member>
     <member refid="motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7" kind="define"><name>MOTOR_STOP</name></member>
-    <member refid="motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104" kind="define"><name>MOTOR_A_0</name></member>
-    <member refid="motor__driver_8h_1ab115b64cb678fa39054d32dd04a0fbea" kind="define"><name>MOTOR_A_1</name></member>
-    <member refid="motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85" kind="define"><name>enable_motor_driver</name></member>
-    <member refid="motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa" kind="define"><name>read_motor_driver_mode</name></member>
-    <member refid="motor__driver_8h_1a9fc3907d0ee8196eca819e1e5e1c6977" kind="function"><name>enable_motor_driver_a</name></member>
-    <member refid="motor__driver_8h_1a027943094f99f52b1ea067ab85384686" kind="function"><name>set_motor_speed</name></member>
-    <member refid="motor__driver_8h_1ae7ed1b0e385fe871d79ac02fc5177768" kind="function"><name>read_motor_driver_mode_a</name></member>
+    <member refid="motor__driver_8h_1a6e8126ff5ecff090a1ad8fbe981a4b44" kind="define"><name>MCPWM_FREQ</name></member>
+    <member refid="motor__driver_8h_1aef25c062c18accc2650e496b7cf7e362" kind="define"><name>MCPWM_RESOLUTION</name></member>
+    <member refid="motor__driver_8h_1aa01c5af0716d82921a05fbce43c99ee6" kind="function"><name>enable_motor_driver</name></member>
+    <member refid="motor__driver_8h_1ad95e7531126132b16efaac90308cdb6a" kind="function"><name>set_motor_speed</name></member>
+    <member refid="motor__driver_8h_1a54973c5524a0a71200564d15cb0114be" kind="function"><name>get_motor_driver_status</name></member>
   </compound>
   <compound refid="mpu6050_8h" kind="file"><name>mpu6050.h</name>
     <member refid="mpu6050_8h_1a033b5e8a30541fe4ff939a62fdb7a43d" kind="define"><name>I2C_MASTER_SCL_IO</name></member>
@@ -452,13 +482,23 @@
     <member refid="lvgl__helpers_8c_1a37a965445288f68e66b229e6075bc72c" kind="function"><name>ssd1306_sleep_out</name></member>
     <member refid="lvgl__helpers_8c_1a11c3b96751518cac93ea6bcfe1d4c254" kind="function"><name>lvgl_i2c_driver_init</name></member>
   </compound>
+  <compound refid="mcpwm__interface_8c" kind="file"><name>mcpwm_interface.c</name>
+    <member refid="mcpwm__interface_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" kind="variable"><name>TAG</name></member>
+    <member refid="mcpwm__interface_8c_1a6bc48cb0a4e2882424e61a05a20bb46b" kind="function"><name>motor_enable</name></member>
+    <member refid="mcpwm__interface_8c_1a33e1892fea7caa61c0a7eb9150079cf2" kind="function"><name>motor_disable</name></member>
+    <member refid="mcpwm__interface_8c_1afce1a83fea515b7fdec1ac29d55d6ad9" kind="function"><name>motor_set_speed</name></member>
+    <member refid="mcpwm__interface_8c_1a13ebe7d084556fd886ef998a58951acd" kind="function"><name>motor_forward</name></member>
+    <member refid="mcpwm__interface_8c_1a49674aa3230fb3ac86d76176c47f41e7" kind="function"><name>motor_backwards</name></member>
+    <member refid="mcpwm__interface_8c_1a41e670ddec66a11544f308f64abbf403" kind="function"><name>motor_brake</name></member>
+    <member refid="mcpwm__interface_8c_1aca82d34d06a36146d9a096c7dac4dea3" kind="function"><name>motor_del</name></member>
+    <member refid="mcpwm__interface_8c_1a5604e0b69a2f829c0f4ea6234cd05cdb" kind="function"><name>motor_new_mcpwm_device</name></member>
+  </compound>
   <compound refid="motor__driver_8c" kind="file"><name>motor_driver.c</name>
-    <member refid="motor__driver_8c_1a8fcaec0ebdaf902608c2c55dd047cc6b" kind="variable"><name>TAG_MOTOR_DRIVER</name></member>
-    <member refid="motor__driver_8c_1aa7773c94ae40290aa934c7fb3b243e0a" kind="variable"><name>mode_motor_driver_a</name></member>
-    <member refid="motor__driver_8c_1a9fc3907d0ee8196eca819e1e5e1c6977" kind="function"><name>enable_motor_driver_a</name></member>
-    <member refid="motor__driver_8c_1a7f29277a8306338a778cd11d99433eb1" kind="function"><name>set_motor_speed_helper</name></member>
-    <member refid="motor__driver_8c_1a027943094f99f52b1ea067ab85384686" kind="function"><name>set_motor_speed</name></member>
-    <member refid="motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768" kind="function"><name>read_motor_driver_mode_a</name></member>
+    <member refid="motor__driver_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" kind="variable"><name>TAG</name></member>
+    <member refid="motor__driver_8c_1a460a7194883ccd7f046426c678add94e" kind="variable"><name>enabled_motor_driver_flag</name></member>
+    <member refid="motor__driver_8c_1aa01c5af0716d82921a05fbce43c99ee6" kind="function"><name>enable_motor_driver</name></member>
+    <member refid="motor__driver_8c_1a6e1239d2fdeea80183763d4496bb1270" kind="function"><name>set_motor_speed</name></member>
+    <member refid="motor__driver_8c_1a54973c5524a0a71200564d15cb0114be" kind="function"><name>get_motor_driver_status</name></member>
   </compound>
   <compound refid="mpu6050_8c" kind="file"><name>mpu6050.c</name>
     <member refid="mpu6050_8c_1a715099a8b0078a88a0045d9b57c38260" kind="define"><name>MIN_ACCE_ERROR</name></member>

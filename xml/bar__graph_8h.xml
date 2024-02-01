@@ -33,24 +33,22 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>motor_driver.h</label>
-        <link refid="motor__driver_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="10">
+        <label>mcpwm_interface.h</label>
+        <link refid="mcpwm__interface_8h"/>
         <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+      </node>
+      <node id="9">
+        <label>motor_driver.h</label>
+        <link refid="motor__driver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -59,12 +57,6 @@
       </node>
       <node id="5">
         <label>driver/gpio.h</label>
-      </node>
-      <node id="11">
-        <label>driver/mcpwm.h</label>
-      </node>
-      <node id="13">
-        <label>esp_attr.h</label>
       </node>
       <node id="7">
         <label>esp_err.h</label>
@@ -75,14 +67,11 @@
       <node id="4">
         <label>freertos/FreeRTOS.h</label>
       </node>
-      <node id="12">
-        <label>soc/mcpwm_periph.h</label>
-      </node>
       <node id="3">
         <label>stdbool.h</label>
       </node>
-      <node id="10">
-        <label>stdio.h</label>
+      <node id="11">
+        <label>stdint.h</label>
       </node>
       <node id="2">
         <label>stdlib.h</label>
@@ -142,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/bar_graph.h" line="53" column="11" bodyfile="src/bar_graph.c" bodystart="39" bodyend="86" declfile="include/bar_graph.h" declline="53" declcolumn="11"/>
+        <location file="include/bar_graph.h" line="53" column="11" bodyfile="src/bar_graph.c" bodystart="39" bodyend="80" declfile="include/bar_graph.h" declline="53" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="bar__graph_8h_1ae3c6552600f6d84335edd8bb6095fe3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -187,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/bar_graph.h" line="91" column="11" bodyfile="src/bar_graph.c" bodystart="88" bodyend="121" declfile="include/bar_graph.h" declline="91" declcolumn="11"/>
+        <location file="include/bar_graph.h" line="91" column="11" bodyfile="src/bar_graph.c" bodystart="82" bodyend="115" declfile="include/bar_graph.h" declline="91" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="bar__graph_8h_1aedf9bcb0b39fed044eb70e63fc74c496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t</type>
@@ -217,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/bar_graph.h" line="99" column="9" bodyfile="src/bar_graph.c" bodystart="123" bodyend="126" declfile="include/bar_graph.h" declline="99" declcolumn="9"/>
+        <location file="include/bar_graph.h" line="99" column="9" bodyfile="src/bar_graph.c" bodystart="117" bodyend="120" declfile="include/bar_graph.h" declline="99" declcolumn="9"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

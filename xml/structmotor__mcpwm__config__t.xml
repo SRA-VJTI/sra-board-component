@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structmotor__mcpwm__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>motor_mcpwm_config_t</compoundname>
+    <includes refid="mcpwm__interface_8h" local="no">mcpwm_interface.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int motor_mcpwm_config_t::group_id</definition>
+        <argsstring></argsstring>
+        <name>group_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MCPWM group number </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="118" column="9" bodyfile="include/mcpwm_interface.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t motor_mcpwm_config_t::resolution_hz</definition>
+        <argsstring></argsstring>
+        <name>resolution_hz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MCPWM timer resolution </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mcpwm_interface.h" line="119" column="14" bodyfile="include/mcpwm_interface.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Motor MCPWM specific configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mcpwm_interface.h" line="117" column="1" bodyfile="include/mcpwm_interface.h" bodystart="117" bodyend="120"/>
+    <listofallmembers>
+      <member refid="structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a" prot="public" virt="non-virtual"><scope>motor_mcpwm_config_t</scope><name>group_id</name></member>
+      <member refid="structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c" prot="public" virt="non-virtual"><scope>motor_mcpwm_config_t</scope><name>resolution_hz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -356,6 +356,458 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* union */
 struct = {
+  cp-id     = 'structmotor__config__t';
+  cp-name   = 'motor_config_t';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__config__t_1aaaf19a606b77fac6d97be5b1790971f9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint32_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'pwma_gpio_num';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '109';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Motor PWM A gpio number 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__config__t_1ae766ceb0d56dea9bda56f5c27b38ab81';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint32_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'pwmb_gpio_num';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '110';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Motor PWM B gpio number 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__config__t_1a6e272360273a3c788501b34828df8fd6';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint32_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'pwm_freq_hz';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '111';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+PWM frequency, in Hz 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/include/mcpwm_interface.h';
+  cp-fileline  = '108';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Motor Configuration.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
+  cp-id     = 'structmotor__mcpwm__config__t';
+  cp-name   = 'motor_mcpwm_config_t';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__config__t_1a78260ba403f0b1b7206fdc7e0b227e7a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'group_id';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '118';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+MCPWM group number 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__config__t_1ad375c245f9eae86a6fe53dacee3f320c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint32_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'resolution_hz';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '119';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+MCPWM timer resolution 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/include/mcpwm_interface.h';
+  cp-fileline  = '117';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Motor MCPWM specific configuration.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
+  cp-id     = 'structmotor__mcpwm__obj';
+  cp-name   = 'motor_mcpwm_obj';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1af6b993d4d3fdd10ba5d69cd56c6ba596';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+motor_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'base';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '33';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1aeb26f67694de6391845a945d7a210d06';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_timer_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'timer';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '34';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1a46bb1a17250fb9889cd9bb6145e39860';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_oper_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'operator';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '35';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1a0684df164f102220dfbb0487c65f7821';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_cmpr_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'cmpa';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '36';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1a1abb8352c595f2742cef41dda0d87d27';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_cmpr_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'cmpb';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1a18cd2e73ef3f3c96707514bff4979822';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_gen_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'gena';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '38';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__mcpwm__obj_1a9f8bf1595ddc2c31b722c3d8750e81f6';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_gen_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'genb';
+      sec-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      sec-mem-desc-line = '39';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/src/mcpwm_interface.c';
+  cp-fileline  = '32';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'motor_mcpwm_obj';
+        node-child = {
+          child-id = '2';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+base
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'motor_t';
+        node-link = {
+          node-link-id = 'structmotor__t';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
+  cp-id     = 'structmotor__t';
+  cp-name   = 'motor_t';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1a7f2e158fc138329b1bb4490b58135964';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'enable';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '47';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Enable motor.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor_handle_t Motor object handle
+@return
+    - ESP_OK: Success
+   - ESP_ERR_INVALID_ARG: Invalid argument
+  - ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1a3bc717ecf40e22fabd8c68194142f1da';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'disable';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '56';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Disable motor.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor Motor object
+@return
+    - ESP_OK: Success
+   - ESP_ERR_INVALID_ARG: Invalid argument
+  - ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1aa2bf878e84240b295d22be4ebe7070c6';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'set_speed';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '66';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set motor speed.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor Motor object
+@param speed Speed of motor, 0~100
+@return
+    - ESP_OK: Success
+   - ESP_ERR_INVALID_ARG: Invalid argument
+  - ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1a0a2ce097f8de1f837862f26fe3c3cac2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'forward';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '75';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set direction of motor to forward.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor Motor object
+@return
+   - ESP_OK: Success
+ - ESP_ERR_INVALID_ARG: Invalid argument
+- ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1a86d7562895cc446a0b8d93d7b080e31e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'backwards';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '84';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set direction of motor to backwards.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor Motor object
+@return
+  - ESP_OK: Success
+- ESP_ERR_INVALID_ARG: Invalid argument
+- ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1a16c896b9e76bdbba9d47767c613dd2dd';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'brake';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '93';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Brake motor.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor Motor object
+@return
+ - ESP_OK: Success
+- ESP_ERR_INVALID_ARG: Invalid argument
+- ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structmotor__t_1aa9f11ef509302dcec770bad6fcdd7914';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t(*
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'del';
+      sec-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      sec-mem-desc-line = '102';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Delete motor object.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor Motor object
+@return
+    - ESP_OK: Success
+   - ESP_ERR_INVALID_ARG: Invalid argument
+  - ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/include/mcpwm_interface.h';
+  cp-fileline  = '38';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
   cp-id     = 'structservo__config';
   cp-name   = 'servo_config';
   cp-section = {
@@ -5219,99 +5671,104 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
+  file-id   = 'mcpwm__interface_8h';
+  file-name = 'mcpwm_interface.h';
+    typedef = {
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = 'mcpwm__interface_8h_1af4cce5d75b7d89206f2b7f2825d3f9fc';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+struct motor_t
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'motor_t';
+      typedef-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      typedef-mem-desc-line = '35';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Motor interface.
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = 'mcpwm__interface_8h_1a8e393520bb8d8a3f9e26ce6ae979fd91';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+struct motor_t *
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'motor_handle_t';
+      typedef-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      typedef-mem-desc-line = '36';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8h_1a5604e0b69a2f829c0f4ea6234cd05cdb';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_new_mcpwm_device';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const motor_config_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor_config';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const motor_mcpwm_config_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'mcpwm_config';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t **
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'ret_motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/mcpwm_interface.h';
+      func-mem-desc-line = '134';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Create Motor based on MCPWM peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor_config: Motor configuration
+@param mcpwm_config: MCPWM specific configuration
+@param ret_motor Returned Motor handle
+@return
+     - ESP_OK: Create BDC Motor handle successfully
+     - ESP_ERR_INVALID_ARG: Create BDC Motor handle failed because of invalid argument
+     - ESP_ERR_NO_MEM: Create BDC Motor handle failed because of out of memory
+     - ESP_FAIL: Create BDC Motor handle failed because some other error
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/github/workspace/include/mcpwm_interface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
   file-id   = 'motor__driver_8h';
   file-name = 'motor_driver.h';
     define = {
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1a3392e32a84aa6c7c3311e0ba6ce01259';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'PARALLEL_MODE';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-1
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '38';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1aa045b6864425ecb90f2c253e8440d21c';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'NORMAL_MODE';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-2
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '39';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MOTOR_FORWARD';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-200
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '41';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MOTOR_BACKWARD';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-201
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '42';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
-    define-member = {
-      define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7';
-      define-mem-virt = normal;
-      define-mem-prot = public;
-      define-mem-name = 'MOTOR_STOP';
-      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-202
-_EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '43';
-      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
       define-mem-id   = 'motor__driver_8h_1a60a0d0982603cefa4efa58450dd39104';
@@ -5322,7 +5779,7 @@ _EnD_oF_dEf_TeXt_;
 100
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '45';
+      define-mem-desc-line = '32';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -5340,7 +5797,7 @@ _EnD_oF_dEf_TeXt_;
 101
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '46';
+      define-mem-desc-line = '33';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -5350,81 +5807,134 @@ _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1a95eb372d31d30f5034c1bd310b229b85';
+      define-mem-id   = 'motor__driver_8h_1aecfc8cb31c77ff43036a88e475f0198d';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'enable_motor_driver';
-      define-mem-param  = {
-        define-mem-def-name = 'id';
-      }; /*        define-mem-def--param */
-      define-mem-param  = {
-        define-mem-def-name = 'mode';
-      }; /*        define-mem-def--param */
+      define-mem-name = 'MOTOR_FORWARD';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-enable_motor_driver_##id(mode)
+200
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '54';
+      define-mem-desc-line = '35';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Enables Motor driver in Parallel or Normal Mode.
+
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param id for id=a, enables motor driver a
-@param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
+
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'motor__driver_8h_1ab86dcd9449875dab4e7f006bfd4b47fa';
+      define-mem-id   = 'motor__driver_8h_1ae29c16906c059ef2615d54a3ee144763';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'read_motor_driver_mode';
-      define-mem-param  = {
-        define-mem-def-name = 'id';
-      }; /*        define-mem-def--param */
+      define-mem-name = 'MOTOR_BACKWARD';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-read_motor_driver_mode_##id()
+201
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      define-mem-desc-line = '62';
+      define-mem-desc-line = '36';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Reads mode of motor driver.
+
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param id for id=a, returns mode of motor driver a
-@return int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'motor__driver_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MOTOR_STOP';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+202
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
+      define-mem-desc-line = '37';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'motor__driver_8h_1a6e8126ff5ecff090a1ad8fbe981a4b44';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MCPWM_FREQ';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+20000
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
+      define-mem-desc-line = '39';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'motor__driver_8h_1aef25c062c18accc2650e496b7cf7e362';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MCPWM_RESOLUTION';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+10000000
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/motor_driver.h';
+      define-mem-desc-line = '40';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     };
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8h_1a9fc3907d0ee8196eca819e1e5e1c6977';
+      func-mem-id   = 'motor__driver_8h_1aa01c5af0716d82921a05fbce43c99ee6';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 esp_err_t
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'enable_motor_driver_a';
+      func-mem-name = 'enable_motor_driver';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_handle_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
 int
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'mode';
+        func-mem-param-declname = 'motor_id';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '70';
+      func-mem-desc-line = '50';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Enables Motor driver A in Parallel or Normal Mode.
+Enable motor driver.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
-@return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
+@param motor_handle_t Motor object handle
+@param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to bind to the handle.
+@return
+  - ESP_OK: Success
+  - ESP_ERR_INVALID_ARG: Invalid argument
+  - ESP_FAIL: Failed
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8h_1a027943094f99f52b1ea067ab85384686';
+      func-mem-id   = 'motor__driver_8h_1ad95e7531126132b16efaac90308cdb6a';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -5433,9 +5943,9 @@ _EnD_oF_dEf_TeXt_;
       func-mem-name = 'set_motor_speed';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
+motor_handle_t
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'motor_id';
+        func-mem-param-declname = 'motor';
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
@@ -5450,33 +5960,30 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'duty_cycle';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '80';
+      func-mem-desc-line = '61';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Set the speed of motors.
+
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction
-@param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor
-@param duty_cycle set the duty cycle of the motor driver PWM
-@return esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs
+
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8h_1ae7ed1b0e385fe871d79ac02fc5177768';
+      func-mem-id   = 'motor__driver_8h_1a54973c5524a0a71200564d15cb0114be';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 int
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'read_motor_driver_mode_a';
+      func-mem-name = 'get_motor_driver_status';
       func-mem-desc-file = '/github/workspace/include/motor_driver.h';
-      func-mem-desc-line = '87';
+      func-mem-desc-line = '69';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Reads mode of motor driver A.
+Checks if the motor driver is engaged.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode
+@return true if the motor driver is engaged, false otherwise.
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
@@ -7747,7 +8254,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'data';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/bar_graph.c';
-      func-mem-desc-line = '88';
+      func-mem-desc-line = '82';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the value of bar graph LED.
 _EnD_oF_dEf_TeXt_;
@@ -7804,7 +8311,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'input_array';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/bar_graph.c';
-      func-mem-desc-line = '123';
+      func-mem-desc-line = '117';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 converts a boolean array of size 8 into 8-bit unsigned integer
 _EnD_oF_dEf_TeXt_;
@@ -7867,7 +8374,7 @@ static const uint8_t
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'bitmask';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= {0xFF, 0xCF, 0x0F}
+= {0xFF, 0x0F}
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/bar_graph.c';
       var-mem-desc-line = '34';
@@ -8959,69 +9466,26 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
-  file-id   = 'motor__driver_8c';
-  file-name = 'motor_driver.c';
+  file-id   = 'mcpwm__interface_8c';
+  file-name = 'mcpwm_interface.c';
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8c_1a9fc3907d0ee8196eca819e1e5e1c6977';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-esp_err_t
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'enable_motor_driver_a';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'mode';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '30';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Enables Motor driver A in Parallel or Normal Mode.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param mode if mode = 1 is passed, motor driver is operated in parallel mode, if mode = 2 is passed, motor driver is operated in normal mode
-@return esp_err_t returns ESP_OK if motor driver initialised properly, else it returns ESP_ERR_INVALID_ARG 
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8c_1a7f29277a8306338a778cd11d99433eb1';
+      func-mem-id   = 'mcpwm__interface_8c_1a6bc48cb0a4e2882424e61a05a20bb46b';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 static esp_err_t
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'set_motor_speed_helper';
+      func-mem-name = 'motor_enable';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
+motor_t *
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'direction';
+        func-mem-param-declname = 'motor';
       }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-float
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'duty_cycle';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_unit_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'mcpwm_num';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_timer_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'timer_num';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '106';
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '42';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9031,7 +9495,272 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8c_1a027943094f99f52b1ea067ab85384686';
+      func-mem-id   = 'mcpwm__interface_8c_1a33e1892fea7caa61c0a7eb9150079cf2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_disable';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '52';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8c_1afce1a83fea515b7fdec1ac29d55d6ad9';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_set_speed';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint32_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'speed';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '61';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8c_1a13ebe7d084556fd886ef998a58951acd';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_forward';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '70';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8c_1a49674aa3230fb3ac86d76176c47f41e7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_backwards';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '79';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8c_1a41e670ddec66a11544f308f64abbf403';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_brake';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '88';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8c_1aca82d34d06a36146d9a096c7dac4dea3';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_del';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '96';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'mcpwm__interface_8c_1a5604e0b69a2f829c0f4ea6234cd05cdb';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'motor_new_mcpwm_device';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const motor_config_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor_config';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const motor_mcpwm_config_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'mcpwm_config';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_t **
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'ret_motor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      func-mem-desc-line = '110';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Create Motor based on MCPWM peripheral.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor_config: Motor configuration
+@param mcpwm_config: MCPWM specific configuration
+@param ret_motor Returned Motor handle
+@return
+     - ESP_OK: Create BDC Motor handle successfully
+     - ESP_ERR_INVALID_ARG: Create BDC Motor handle failed because of invalid argument
+     - ESP_ERR_NO_MEM: Create BDC Motor handle failed because of out of memory
+     - ESP_FAIL: Create BDC Motor handle failed because some other error
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'mcpwm__interface_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const char *
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'TAG';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= "MCPWM"
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/mcpwm_interface.c';
+      var-mem-desc-line = '30';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/github/workspace/src/mcpwm_interface.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'motor__driver_8c';
+  file-name = 'motor_driver.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'motor__driver_8c_1aa01c5af0716d82921a05fbce43c99ee6';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'enable_motor_driver';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+motor_handle_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'motor_id';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/motor_driver.c';
+      func-mem-desc-line = '33';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Enable motor driver.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param motor_handle_t Motor object handle
+@param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to bind to the handle.
+@return
+  - ESP_OK: Success
+  - ESP_ERR_INVALID_ARG: Invalid argument
+  - ESP_FAIL: Failed
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'motor__driver_8c_1a6e1239d2fdeea80183763d4496bb1270';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -9040,9 +9769,9 @@ _EnD_oF_dEf_TeXt_;
       func-mem-name = 'set_motor_speed';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
+motor_handle_t
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'motor_id';
+        func-mem-param-declname = 'motor';
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
@@ -9054,54 +9783,51 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
 float
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'duty_cycle';
+        func-mem-param-declname = 'speed';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '142';
+      func-mem-desc-line = '56';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Set the speed of motors.
+
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction
-@param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor
-@param duty_cycle set the duty cycle of the motor driver PWM
-@return esp_err_t returns ESP_OK if speed correctly, ESP_FAIL if any error occurs
+
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'motor__driver_8c_1ae7ed1b0e385fe871d79ac02fc5177768';
+      func-mem-id   = 'motor__driver_8c_1a54973c5524a0a71200564d15cb0114be';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 int
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'read_motor_driver_mode_a';
+      func-mem-name = 'get_motor_driver_status';
       func-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      func-mem-desc-line = '169';
+      func-mem-desc-line = '76';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Reads mode of motor driver A.
+Checks if the motor driver is engaged.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@return int returns mode of motor driver A, 1 = Parallel mode, 2 = Normal mode
+@return true if the motor driver is engaged, false otherwise.
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
     var = {
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'motor__driver_8c_1a8fcaec0ebdaf902608c2c55dd047cc6b';
+      var-mem-id   = 'motor__driver_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
 static const char *
 _EnD_oF_dEf_TeXt_;
-      var-mem-name = 'TAG_MOTOR_DRIVER';
+      var-mem-name = 'TAG';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= "motor_driver"
+= "MOTOR"
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      var-mem-desc-line = '27';
+      var-mem-desc-line = '29';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9111,18 +9837,18 @@ _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'motor__driver_8c_1aa7773c94ae40290aa934c7fb3b243e0a';
+      var-mem-id   = 'motor__driver_8c_1a460a7194883ccd7f046426c678add94e';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
 static int
 _EnD_oF_dEf_TeXt_;
-      var-mem-name = 'mode_motor_driver_a';
+      var-mem-name = 'enabled_motor_driver_flag';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/motor_driver.c';
-      var-mem-desc-line = '28';
+      var-mem-desc-line = '31';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;

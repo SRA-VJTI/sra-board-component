@@ -9,6 +9,7 @@
     <innerfile refid="lsa_8h">lsa.h</innerfile>
     <innerfile refid="lv__conf_8h">lv_conf.h</innerfile>
     <innerfile refid="lvgl__helpers_8h">lvgl_helpers.h</innerfile>
+    <innerfile refid="mcpwm__interface_8h">mcpwm_interface.h</innerfile>
     <innerfile refid="motor__driver_8h">motor_driver.h</innerfile>
     <innerfile refid="mpu6050_8h">mpu6050.h</innerfile>
     <innerfile refid="oled_8h">oled.h</innerfile>

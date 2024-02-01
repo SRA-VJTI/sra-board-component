@@ -7,6 +7,7 @@
     <innerfile refid="i2cdev_8c">i2cdev.c</innerfile>
     <innerfile refid="lsa_8c">lsa.c</innerfile>
     <innerfile refid="lvgl__helpers_8c">lvgl_helpers.c</innerfile>
+    <innerfile refid="mcpwm__interface_8c">mcpwm_interface.c</innerfile>
     <innerfile refid="motor__driver_8c">motor_driver.c</innerfile>
     <innerfile refid="mpu6050_8c">mpu6050.c</innerfile>
     <innerfile refid="oled_8c">oled.c</innerfile>

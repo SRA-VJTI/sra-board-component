@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gen_0',['gen',['../structservo__config.html#a2c1c36c96b6fecf0f285f25f7a395c92',1,'servo_config']]]
+  ['enable_0',['enable',['../structmotor__t.html#a7f2e158fc138329b1bb4490b58135964',1,'motor_t']]]
 ];
