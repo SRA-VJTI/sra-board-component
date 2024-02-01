@@ -54,6 +54,7 @@ esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id) {
 }
 
 esp_err_t set_motor_speed(motor_handle_t motor, int direction, float speed) {
+	// map is used to map the speed from 0-100 to 0-MCPWM_TICKS. MCPWM_TICKS is the resolution of the pwm signal. It is calculated as MCPWM_TICKS = MCPWM_RESOLUTION / MCPWM_FREQ
 	speed = (uint32_t)map(speed, 0, 100, 0, MCPWM_RESOLUTION / MCPWM_FREQ);
 	if(direction == MOTOR_FORWARD){
 		motor->forward(motor);
