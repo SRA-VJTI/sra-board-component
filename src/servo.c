@@ -22,62 +22,6 @@
  * SOFTWARE.
  */
 
-Online
-YESTERDAY
-YESTERDAY
-Roll no wise change kela?
-10:01 am
-Ho
-10:02 am
-Suraj
-Roll no wise change kela?
-Sakshi la vichar na
-10:13 am
-Msg kr atach
-10:13 am
-Suraj
-Roll no wise change kela?
-Okumura nahi pahijey
-10:29 am
-Okay
-10:30 am
-1:10 pm
-.
-4:31 pm
-ESP_LOGI(TAG, "Create comparators and generators from the operator");
-    mcpwm_cmpr_handle_t comparators[5] = {NULL};
-    mcpwm_gen_handle_t generators[5] = {NULL};
-
-    for (int i = 0; i < 5; i++) {
-        mcpwm_comparator_config_t comparator_config = {
-            .flags.update_cmp_on_tez = true,
-        };
-        ESP_ERROR_CHECK(mcpwm_new_comparator(oper, &comparator_config, &comparators[i]));
-
-        mcpwm_generator_config_t generator_config = {
-            .gen_gpio_num = i == 0 ? SERVO_PULSE_GPIO_1 : (i == 1 ? SERVO_PULSE_GPIO_2 : (i == 2 ? SERVO_PULSE_GPIO_3 : (i == 3 ? SERVO_PULSE_GPIO_4 : SERVO_PULSE_GPIO_5))),
-        };
-        ESP_ERROR_CHECK(mcpwm_new_generator(oper, &generator_config, &generators[i]));
-    }
-
-    for (int i = 0; i < 5; i++) {
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparators[i], example_angle_to_compare(0)));
-        ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generators[i],
-                        MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)));
-    }
-
-    for (int i = 0; i < 5; i++) {
-        ESP_ERROR_CHECK(mcpwm_timer_enable(timer));
-        ESP_ERROR_CHECK(mcpwm_timer_start_stop(timer, MCPWM_TIMER_START_NO_STOP));
-    }
-8:44 pm
-mcpwm_generator_config_t generator_config = {
-            .gen_gpio_num = (i == 0 ? SERVO_PULSE_GPIO_2 : (i == 1 ? SERVO_PULSE_GPIO_3 : (i == 2 ? SERVO_PULSE_GPIO_4 : SERVO_PULSE_GPIO_5))),
-        };
-8:54 pm
-MARIO.zip
-ZIP•438 MB
-9:03 pm
 #include "servo.h"
 
 static const char *TAG_SERVO = "servo";
@@ -169,7 +113,7 @@ static esp_err_t set_angle_servo_helper(int servo_pin, int servo_max, int servo_
 
 esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
 {
-    if (enabled_servo_flag)
+        if (enabled_servo_flag)
     {
         if (config->servo_pin)
         {
