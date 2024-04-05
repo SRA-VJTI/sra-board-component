@@ -27,9 +27,8 @@
 
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
-#include "driver/mcpwm.h"
-#include "soc/mcpwm_periph.h"
 #include "esp_attr.h"
+#include "driver/mcpwm_prelude.h"
 
 #include "sdkconfig.h"
 #include "esp_log.h"
@@ -43,9 +42,7 @@ typedef struct
     int max_pulse_width;
     int max_degree;
     int angle;
-    mcpwm_unit_t mcpwm_num;
-    mcpwm_timer_t timer_num;
-    mcpwm_generator_t gen;
+    int cmp_num;
 } servo_config;
 
 /** @struct servo_config
