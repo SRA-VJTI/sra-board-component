@@ -30,6 +30,7 @@
 #include "esp_attr.h"
 #include "driver/mcpwm_prelude.h"
 
+
 #include "sdkconfig.h"
 #include "esp_log.h"
 #include "esp_err.h"
@@ -44,6 +45,9 @@ typedef struct
     int angle;
     int cmp_num;
 } servo_config;
+
+
+
 
 /** @struct servo_config
  *  @brief This structure contains the configuration of servos
