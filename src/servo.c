@@ -62,11 +62,11 @@ esp_err_t enable_servo()
     };
     ESP_ERROR_CHECK(mcpwm_new_comparator(oper, &comparator_config, &comparator_0));
 
-    mcpwm_gen_handle_t generator = NULL;
-    mcpwm_generator_config_t generator_config = {
+    mcpwm_gen_handle_t generator_a = NULL;
+    mcpwm_generator_config_t generator_config_a = {
         .gen_gpio_num = SERVO_A,
     };
-    ESP_ERROR_CHECK(mcpwm_new_generator(oper, &generator_config, &generator));
+    ESP_ERROR_CHECK(mcpwm_new_generator(oper, &generator_config_a, &generator_a));
 
     // Similarly, create generator B for SERVO_B
     mcpwm_gen_handle_t generator_b = NULL;
@@ -76,9 +76,9 @@ esp_err_t enable_servo()
     ESP_ERROR_CHECK(mcpwm_new_generator(oper, &generator_config_b, &generator_b));
 
     // Set actions for generator A and B
-    ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator,
+    ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator_a,
                     MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)));
-    ESP_ERROR_CHECK(mcpwm_generator_set_action_on_compare_event(generator,
+    ESP_ERROR_CHECK(mcpwm_generator_set_action_on_compare_event(generator_a,
                     MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_0, MCPWM_GEN_ACTION_LOW)));
 
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator_b,
@@ -211,4 +211,3 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
         return ESP_FAIL;
     }
 }
-
