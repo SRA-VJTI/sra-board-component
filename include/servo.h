@@ -43,7 +43,6 @@ typedef struct
     int max_pulse_width;
     int max_degree;
     int angle;
-    int cmp_num;
 } servo_config;
 
 
@@ -88,5 +87,3 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
  * @return esp_err_t
  */
 int read_servo(servo_config *config);
-
-#endif
