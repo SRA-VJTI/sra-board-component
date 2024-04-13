@@ -42,11 +42,7 @@ typedef struct
     int min_pulse_width;
     int max_pulse_width;
     int max_degree;
-    int angle;
 } servo_config;
-
-
-
 
 /** @struct servo_config
  *  @brief This structure contains the configuration of servos
@@ -87,3 +83,5 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
  * @return esp_err_t
  */
 int read_servo(servo_config *config);
+
+#endif
