@@ -1,4 +1,4 @@
-/*
+/
  * MIT License
  *
  * Copyright (c)  2021 Society of Robotics and Automation
@@ -30,8 +30,10 @@ static int enabled_servo_flag = 0;
 #define SERVO_TIMEBASE_RESOLUTION_HZ 1000000  // 1MHz, 1us per tick
 #define SERVO_TIMEBASE_PERIOD        20000    // 20000 ticks, 20ms
 
-mcpwm_cmpr_handle_t comparator_0= NULL;
-mcpwm_cmpr_handle_t comparator_1= NULL;
+mcpwm_cmpr_handle_t comparator_a= NULL;
+mcpwm_cmpr_handle_t comparator_b= NULL;
+mcpwm_cmpr_handle_t comparator_c= NULL;
+mcpwm_cmpr_handle_t comparator_d= NULL;
 
 esp_err_t enable_servo()
 {
@@ -57,10 +59,15 @@ esp_err_t enable_servo()
 
     ESP_LOGI(TAG_SERVO, "Create comparator_0 and generator from the operator for servos A and B");
 
-    mcpwm_comparator_config_t comparator_config = {
+    mcpwm_comparator_config_t comparator_config_a = {
         .flags.update_cmp_on_tez = true,
     };
-    ESP_ERROR_CHECK(mcpwm_new_comparator(oper, &comparator_config, &comparator_0));
+    ESP_ERROR_CHECK(mcpwm_new_comparator(oper, &comparator_config_a, &comparator_a));
+
+    mcpwm_comparator_config_t comparator_config_b = {
+        .flags.update_cmp_on_tez = true,
+    };
+    ESP_ERROR_CHECK(mcpwm_new_comparator(oper, &comparator_config_b, &comparator_b));
 
     mcpwm_gen_handle_t generator_a = NULL;
     mcpwm_generator_config_t generator_config_a = {
@@ -79,12 +86,12 @@ esp_err_t enable_servo()
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator_a,
                     MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)));
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_compare_event(generator_a,
-                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_0, MCPWM_GEN_ACTION_LOW)));
+                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_a, MCPWM_GEN_ACTION_LOW)));
 
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator_b,
                     MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)));
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_compare_event(generator_b,
-                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_0, MCPWM_GEN_ACTION_LOW)));
+                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_b, MCPWM_GEN_ACTION_LOW)));
 
 
     // Now, create a new timer, operator, and generators for servos C and D
@@ -110,10 +117,15 @@ esp_err_t enable_servo()
    
     ESP_LOGI(TAG_SERVO, "Create comparator and generator from the operator for servos C and D");
 
-    mcpwm_comparator_config_t comparator_config_1 = {
+    mcpwm_comparator_config_t comparator_config_c = {
         .flags.update_cmp_on_tez = true,
     };
-    ESP_ERROR_CHECK(mcpwm_new_comparator(oper_1, &comparator_config_1, &comparator_1));
+    ESP_ERROR_CHECK(mcpwm_new_comparator(oper_1, &comparator_config_1, &comparator_c));
+
+    mcpwm_comparator_config_t comparator_config_d = {
+        .flags.update_cmp_on_tez = true,
+    };
+    ESP_ERROR_CHECK(mcpwm_new_comparator(oper_1, &comparator_config_1, &comparator_d));
 
 
     //  Similarly, create generator C for SERVO_C
@@ -135,12 +147,12 @@ esp_err_t enable_servo()
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator_c,
                     MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)));
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_compare_event(generator_c,
-                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_1, MCPWM_GEN_ACTION_LOW)));
+                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_c, MCPWM_GEN_ACTION_LOW)));
 
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator_d,
                     MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, MCPWM_TIMER_EVENT_EMPTY, MCPWM_GEN_ACTION_HIGH)));
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_compare_event(generator_d,
-                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_1, MCPWM_GEN_ACTION_LOW)));
+                    MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP, comparator_d, MCPWM_GEN_ACTION_LOW)));
 
 
     // Enable and start both timers
@@ -157,7 +169,7 @@ esp_err_t enable_servo()
     return ESP_OK;
 }
 
-static esp_err_t set_angle_servo_helper(int servo_pin, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, int cmp_num, unsigned int degree_of_rotation)
+static esp_err_t set_angle_servo_helper(int servo_pin, int servo_max, int servo_min_pulsewidth, int servo_max_pulsewidth, unsigned int degree_of_rotation)
 {
     degree_of_rotation = degree_of_rotation > servo_max ? servo_max : degree_of_rotation;
 
@@ -167,16 +179,23 @@ static esp_err_t set_angle_servo_helper(int servo_pin, int servo_max, int servo_
 
     
     esp_err_t err;
-    if (cmp_num == 0)
-    {
-        err = mcpwm_comparator_set_compare_value(comparator_0, cal_pulsewidth);
+    switch(servo_pin) {
+        case SERVO_A:
+            err = mcpwm_comparator_set_compare_value(comparator_a, cal_pulsewidth);
+            break;
+        case SERVO_B:
+            err = mcpwm_comparator_set_compare_value(comparator_b, cal_pulsewidth);
+            break;
+        case SERVO_C:
+            err = mcpwm_comparator_set_compare_value(comparator_c, cal_pulsewidth);
+            break;
+        case SERVO_D:
+            err = mcpwm_comparator_set_compare_value(comparator_d, cal_pulsewidth);
+            break;
+        default:
+            err = ESP_ERR_INVALID_ARG;
+            break;
     }
-    else
-    {
-        err = mcpwm_comparator_set_compare_value(comparator_1, cal_pulsewidth);
-    }
-
-
 
     if (err == ESP_OK)
     {
@@ -197,7 +216,7 @@ esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation)
         if (config->servo_pin)
         {
             config->angle = degree_of_rotation;
-            return set_angle_servo_helper(config->servo_pin, config->max_degree, config->min_pulse_width, config->max_pulse_width, config->cmp_num, degree_of_rotation);
+            return set_angle_servo_helper(config->servo_pin, config->max_degree, config->min_pulse_width, config->max_pulse_width, degree_of_rotation);
         }
         else
         {
