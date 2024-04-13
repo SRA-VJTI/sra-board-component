@@ -232,7 +232,7 @@ static esp_err_t i2c_setup_port(const i2c_dev_t *dev)
     uint32_t ticks = dev->timeout_ticks ? dev->timeout_ticks : I2CDEV_MAX_STRETCH_TIME;
     if ((ticks != t) && (res = i2c_set_timeout(dev->port, ticks)) != ESP_OK)
         return res;
-    ESP_LOGD(TAG, "Timeout: ticks = %d (%d usec) on port %d", dev->timeout_ticks, dev->timeout_ticks / 80, dev->port);
+    ESP_LOGD(TAG, "Timeout: ticks = %lu (%lu usec) on port %d", dev->timeout_ticks, dev->timeout_ticks / 80, dev->port);
 #endif
 
     return ESP_OK;
