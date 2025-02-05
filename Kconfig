@@ -26,13 +26,13 @@ config ENABLE_OLED
 
 config WALL_E_LOGO_TEXT
     string "Wall-E Logo Text on OLED"
-    default "Wall-E 2024"
+    default "Wall-E 2025"
     help
         Change Text displayed along with logo
 
 config MARIO_LOGO_TEXT
     string "MARIO Logo Text on OLED"
-    default "MARIO 2024"
+    default "MARIO 2025"
     help
         Change Text displayed along with logo
 

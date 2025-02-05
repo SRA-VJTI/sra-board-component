@@ -117,7 +117,7 @@ git clone https://github.com/SRA-VJTI/sra-board-component.git
 
 - Visit [examples](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples)
 
-_For more examples, please refer to the [Documentation](https://sravjti.tech/sra-board-component/)_
+_For more examples, please refer to the [Documentation](https://sravjti.in/sra-board-component/)_
 
 ### Examples
 

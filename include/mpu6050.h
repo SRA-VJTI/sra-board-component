@@ -69,7 +69,7 @@
 #define ACK_VAL 0x0                /*!< I2C ack value */
 #define NACK_VAL 0x1               /*!< I2C nack value */
 
-#define ALPHA 0.9834
+#define ALPHA 0.9950
 #define RAD_TO_DEG 57.2957795
 #define BUFF_SIZE 6
 
