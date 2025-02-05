@@ -6480,7 +6480,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'ALPHA';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-0.9834
+0.9950
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/mpu6050.h';
       define-mem-desc-line = '72';
