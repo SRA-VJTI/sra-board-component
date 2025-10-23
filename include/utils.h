@@ -26,6 +26,16 @@
 #define _UTILS_H
 
 /**
+ * @brief Number of bits in a byte
+ */
+#define BITS_IN_A_BYTE 8
+
+/**
+ * @brief Number of bits in 4 bytes / int32_t / uint32_t
+ */
+#define BITS_IN_4_BYTES 32
+
+/**
  * @brief Bound a value in a range [min, max]
  * 
  * @param val  value to be bound
