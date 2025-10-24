@@ -9,7 +9,6 @@
 #include "utils.h"
 
 #include "driver/gpio.h"
-#include "soc/gpio_num.h"
 #include "hal/gpio_types.h"
 #include "esp_err.h"
 #include "esp_check.h"
