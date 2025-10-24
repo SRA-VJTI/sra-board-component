@@ -2,9 +2,9 @@
 #include <freertos/task.h>
 #include <freertos/portable.h>
 
+#include <limits.h>
 #include "led_matrix.h"
 #include "driver/gpio.h"
-#include <inttypes.h>
 #include <esp_err.h>
 #include <esp_log.h>
 #include <esp_heap_caps.h>
@@ -27,7 +27,7 @@ void app_main(void)
 
     for (int i = 0; i < 3; i++) {
         // Set the initial pattern and send the data
-        led_matrix_set_data(xMyLEDMatrix, UINT32_MAX - 1);
+        led_matrix_set_data(xMyLEDMatrix, UINT32_MAX);
         led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR);
         ESP_LOGI(TAG, "Cycle %d initial pattern: 0x%08" PRIx32 ", SDATA:%d SRCLK:%d RCLK:%d",
                  i, xMyLEDMatrix->data,
