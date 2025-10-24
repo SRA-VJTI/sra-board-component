@@ -30,7 +30,7 @@ typedef union {
     };
 } shift_register_t;
 
-esp_err_t shift_register_gpio_init(shift_register_t *conf);
+esp_err_t shift_register_gpio_init(shift_register_t **conf);
 esp_err_t shift_register_write_byte(const shift_register_t *sreg, const uint8_t data, const bool instant);
 esp_err_t shift_register_write_int(const shift_register_t *sreg, const uint32_t data, const bool instant);
 

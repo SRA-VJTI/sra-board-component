@@ -2,29 +2,29 @@
 
 static const char *TAG = "Shift Register";
 
-esp_err_t shift_register_gpio_init(shift_register_t *conf)
+esp_err_t shift_register_gpio_init(shift_register_t **conf)
 {
     // Allocate memory
-    conf = (shift_register_t *) heap_caps_malloc(sizeof(shift_register_t), MALLOC_CAP_DEFAULT | MALLOC_CAP_8BIT);
+    *conf = (shift_register_t *) heap_caps_malloc(sizeof(shift_register_t), MALLOC_CAP_DEFAULT | MALLOC_CAP_8BIT);
 
     // if (!conf) ...
     ESP_RETURN_ON_FALSE(
-        (conf != NULL),
+        (*conf != NULL),
         ESP_ERR_NO_MEM,
         TAG,
         "Could not allocate memory!"
     );
 
-    conf->sdata = SHIFT_REGISTER_SDATA;
-    conf->srclk = SHIFT_REGISTER_SRCLK;
-    conf->rclk  = SHIFT_REGISTER_RCLK;
+    (*conf)->sdata = SHIFT_REGISTER_SDATA;
+    (*conf)->srclk = SHIFT_REGISTER_SRCLK;
+    (*conf)->rclk  = SHIFT_REGISTER_RCLK;
 
-    gpio_set_direction(conf->sdata, GPIO_MODE_OUTPUT);
-    gpio_set_direction(conf->srclk, GPIO_MODE_OUTPUT);
-    gpio_set_direction(conf->rclk,  GPIO_MODE_OUTPUT);
-    gpio_set_level(conf->sdata, 0);
-    gpio_set_level(conf->srclk, 0);
-    gpio_set_level(conf->rclk,  0);
+    gpio_set_direction((*conf)->sdata, GPIO_MODE_OUTPUT);
+    gpio_set_direction((*conf)->srclk, GPIO_MODE_OUTPUT);
+    gpio_set_direction((*conf)->rclk,  GPIO_MODE_OUTPUT);
+    gpio_set_level((*conf)->sdata, 0);
+    gpio_set_level((*conf)->srclk, 0);
+    gpio_set_level((*conf)->rclk,  0);
 
     return ESP_OK;
 }

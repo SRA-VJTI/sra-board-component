@@ -2,23 +2,23 @@
 
 static const char *TAG = "LED Matrix";
 
-esp_err_t led_matrix_init(led_matrix *matrix)
+esp_err_t led_matrix_init(led_matrix **matrix)
 {
     esp_err_t ret = ESP_OK;
     
-    matrix = (led_matrix *) heap_caps_malloc(sizeof(led_matrix), MALLOC_CAP_DEFAULT | MALLOC_CAP_8BIT);
+    *matrix = (led_matrix *) heap_caps_malloc(sizeof(led_matrix), MALLOC_CAP_DEFAULT | MALLOC_CAP_8BIT);
     ESP_RETURN_ON_FALSE(
-        (matrix != NULL),
+        (*matrix != NULL),
         ESP_ERR_NO_MEM,
         TAG,
         "Could not allocate memory!"
     );
 
-    ret = shift_register_gpio_init(matrix->config);
+    ret = shift_register_gpio_init(&((*matrix)->config));
     if (ret != ESP_OK)
         return ret;
 
-    matrix->data = 0;
+    (*matrix)->data = 0;
     return ret;
 }
 

@@ -15,7 +15,7 @@ void app_main(void)
     led_matrix *xMyLEDMatrix = NULL;
 
     // Initialise the LED Matrix and Shift Register Pins
-    ESP_ERROR_CHECK(led_matrix_init(xMyLEDMatrix));
+    ESP_ERROR_CHECK(led_matrix_init(&xMyLEDMatrix));
 
     for (int i = 0; i < 3; i++) {
         // Set the initial pattern and send the data

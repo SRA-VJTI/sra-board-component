@@ -23,7 +23,7 @@ typedef enum {
 static const uint8_t led_matrix_rows = CONFIG_LED_MATRIX_ROWS;
 static const uint8_t led_matrix_columns = CONFIG_LED_MATRIX_COLUMNS;
 
-esp_err_t led_matrix_init(led_matrix *matrix);
+esp_err_t led_matrix_init(led_matrix **matrix);
 
 esp_err_t led_matrix_set_data(led_matrix *matrix, const led_matrix_data_t data);
 esp_err_t led_matrix_write(const led_matrix *matrix, const led_matrix_output_mode_t mode);
