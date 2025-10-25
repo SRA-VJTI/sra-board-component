@@ -50,11 +50,8 @@ void app_main(void)
         led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR);
         ESP_LOGI(
             TAG,
-            "Streaming pattern: %lu, SDATA:%d SRCLK:%d RCLK:%d",
+            "Streaming pattern: %lu",
             xMyLEDMatrix->data,
-            gpio_get_level(xMyLEDMatrix->config->sdata),
-            gpio_get_level(xMyLEDMatrix->config->srclk),
-            gpio_get_level(xMyLEDMatrix->config->rclk)
         );
 
         // Update
