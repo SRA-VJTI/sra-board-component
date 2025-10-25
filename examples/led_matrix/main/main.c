@@ -29,21 +29,18 @@ void app_main(void)
         // Set the initial pattern and send the data
         led_matrix_set_data(xMyLEDMatrix, UINT32_MAX);
         led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR);
-        ESP_LOGI(TAG, "Cycle %d initial pattern: 0x%08" PRIx32 ", SDATA:%d SRCLK:%d RCLK:%d",
-                 i, xMyLEDMatrix->data,
-                 gpio_get_level(xMyLEDMatrix->config->sdata),
-                 gpio_get_level(xMyLEDMatrix->config->srclk),
-                 gpio_get_level(xMyLEDMatrix->config->rclk));
+        ESP_LOGI(TAG, "All LEDs turned ON");
 
+        // Wait for 3000 ms
+        vTaskDelay(pdMS_TO_TICKS(3000));
 
         // Clear the LED Matrix
         led_matrix_set_data(xMyLEDMatrix, 0);
         led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR);
-        ESP_LOGI(TAG, "Cycle %d cleared matrix: 0x%08" PRIx32 ", SDATA:%d SRCLK:%d RCLK:%d",
-                 i, xMyLEDMatrix->data,
-                 gpio_get_level(xMyLEDMatrix->config->sdata),
-                 gpio_get_level(xMyLEDMatrix->config->srclk),
-                 gpio_get_level(xMyLEDMatrix->config->rclk));
+        ESP_LOGI(TAG, "All LEDs turned OFF");
+        
+        // Wait for 3000 ms
+        vTaskDelay(pdMS_TO_TICKS(3000));
     }
 
     led_matrix_data_t d = 1;
@@ -51,11 +48,14 @@ void app_main(void)
         // Write data
         led_matrix_set_data(xMyLEDMatrix, d);
         led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR);
-        ESP_LOGI(TAG, "Streaming pattern: 0x%08" PRIx32 ", SDATA:%d SRCLK:%d RCLK:%d",
-                 xMyLEDMatrix->data,
-                 gpio_get_level(xMyLEDMatrix->config->sdata),
-                 gpio_get_level(xMyLEDMatrix->config->srclk),
-                 gpio_get_level(xMyLEDMatrix->config->rclk));
+        ESP_LOGI(
+            TAG,
+            "Streaming pattern: %lu, SDATA:%d SRCLK:%d RCLK:%d",
+            xMyLEDMatrix->data,
+            gpio_get_level(xMyLEDMatrix->config->sdata),
+            gpio_get_level(xMyLEDMatrix->config->srclk),
+            gpio_get_level(xMyLEDMatrix->config->rclk)
+        );
 
         // Update
         if (d)
