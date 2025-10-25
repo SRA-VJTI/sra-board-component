@@ -51,7 +51,7 @@ void app_main(void)
         ESP_LOGI(
             TAG,
             "Streaming pattern: %lu",
-            xMyLEDMatrix->data,
+            xMyLEDMatrix->data
         );
 
         // Update
