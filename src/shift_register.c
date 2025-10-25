@@ -19,29 +19,29 @@ esp_err_t shift_register_gpio_init(shift_register_t **conf)
     (*conf)->srclk = SHIFT_REGISTER_SRCLK;
     (*conf)->rclk  = SHIFT_REGISTER_RCLK;
 
-    gpio_config_t io_conf = {0};
-    uint64_t pin_mask = (1ULL << (*conf)->sdata) |
-                        (1ULL << (*conf)->srclk) |
-                        (1ULL << (*conf)->rclk);
-
-    io_conf.intr_type = GPIO_INTR_DISABLE;
-    io_conf.mode = GPIO_MODE_OUTPUT;
-    io_conf.pin_bit_mask = pin_mask;
-    io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
-    io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
+    // Only possible errors for set_direction and set_level are that the input pin is an invalid pin.
     ESP_RETURN_ON_ERROR(
-        gpio_config(&io_conf),
+        gpio_set_direction((*conf)->sdata, GPIO_MODE_OUTPUT),
         TAG,
-        "Failed to configure shift register GPIOs"
+        "Failed to set mode for pin %d",
+        (*conf)->sdata
     );
 
-    gpio_set_level((*conf)->sdata, 1);
-    gpio_set_level((*conf)->srclk, 1);
-    gpio_set_level((*conf)->rclk,  1);
-    ESP_LOGI(TAG, "Sanity high check -> SDATA:%d SRCLK:%d RCLK:%d",
-             gpio_get_level((*conf)->sdata),
-             gpio_get_level((*conf)->srclk),
-             gpio_get_level((*conf)->rclk));
+    ESP_RETURN_ON_ERROR(
+        gpio_set_direction((*conf)->srclk, GPIO_MODE_OUTPUT),
+        TAG,
+        "Failed to set mode for pin %d",
+        (*conf)->sdata
+    );
+
+    ESP_RETURN_ON_ERROR(
+        gpio_set_direction((*conf)->rclk, GPIO_MODE_OUTPUT),
+        TAG,
+        "Failed to set mode for pin %d",
+        (*conf)->sdata
+    );
+
+    // If set_level were to give an error then set_direction would have given the same error as well.
     gpio_set_level((*conf)->sdata, 0);
     gpio_set_level((*conf)->srclk, 0);
     gpio_set_level((*conf)->rclk,  0);
