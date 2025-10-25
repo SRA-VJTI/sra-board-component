@@ -3,6 +3,7 @@
 #include <freertos/portable.h>
 
 #include <limits.h>
+#include "freertos/projdefs.h"
 #include "led_matrix.h"
 #include "driver/gpio.h"
 #include <esp_err.h>
@@ -59,5 +60,8 @@ void app_main(void)
             d = d << 1;
         else
             d = 1;
+
+        // Delay for 1000 ms
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
