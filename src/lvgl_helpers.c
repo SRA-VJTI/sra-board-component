@@ -13,6 +13,7 @@
  *********************/
 #include "lvgl_helpers.h"
 #include "esp_log.h"
+#include <string.h>
 
 /*********************
  *      DEFINES
@@ -28,14 +29,16 @@
  *  STATIC PROTOTYPES
  **********************/
 
-static uint8_t send_data(lv_disp_drv_t *disp_drv, void *bytes, size_t bytes_len);
-static uint8_t send_pixels(lv_disp_drv_t *disp_drv, void *color_buffer, size_t buffer_len);
+static uint8_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes_len);
+static uint8_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, size_t buffer_len);
+static void convert_htiled_to_ssd1306(const uint8_t *src, uint32_t width, uint32_t height, uint8_t *dst);
 
 /**********************
  *  STATIC VARIABLES
  **********************/
 
 static i2c_dev_t ssd1306_dev_t;
+static uint8_t ssd1306_framebuffer[DISP_BUF_SIZE];
 
 /**********************
  *      MACROS
@@ -71,27 +74,14 @@ void ssd1306_init(void)
     assert(0 == err);
 }
 
-void ssd1306_set_px_cb(lv_disp_drv_t *disp_drv, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y,
-                       lv_color_t color, lv_opa_t opa)
-{
-    uint16_t byte_index = x + ((y >> 3) * buf_w);
-    uint8_t bit_index = y & 0x7;
-
-    if ((color.full == 0) && (LV_OPA_TRANSP != opa))
-    {
-        BIT_SET(buf[byte_index], bit_index);
-    }
-    else
-    {
-        BIT_CLEAR(buf[byte_index], bit_index);
-    }
-}
-
-void ssd1306_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)
+void ssd1306_flush(lv_display_t *disp_drv, const lv_area_t *area, uint8_t *px_map)
 {
     /* Divide by 8 */
     uint8_t row1 = area->y1 >> 3;
     uint8_t row2 = area->y2 >> 3;
+    uint32_t width = (uint32_t)(area->x2 - area->x1 + 1);
+    uint32_t height = (uint32_t)(area->y2 - area->y1 + 1);
+    LV_ASSERT((height % 8U) == 0U);
 
     uint8_t conf[] = {
         OLED_CONTROL_BYTE_CMD_STREAM,
@@ -105,23 +95,33 @@ void ssd1306_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *c
         row2,
     };
 
+    const uint8_t *htiled = px_map + LVGL_MONO_PALETTE_BYTES;
+    convert_htiled_to_ssd1306(htiled, width, height, ssd1306_framebuffer);
+
     uint8_t err = send_data(disp_drv, conf, sizeof(conf));
     assert(0 == err);
-    err = send_pixels(disp_drv, color_p, OLED_COLUMNS * (1 + row2 - row1));
+
+    size_t page_cnt = (size_t)(row2 - row1 + 1);
+    size_t payload_len = width * page_cnt;
+    err = send_pixels(disp_drv, ssd1306_framebuffer, payload_len);
     assert(0 == err);
 
-    lv_disp_flush_ready(disp_drv);
+    lv_display_flush_ready(disp_drv);
 }
 
-void ssd1306_rounder(lv_disp_drv_t *disp_drv, lv_area_t *area)
+void ssd1306_rounder_event_cb(lv_event_t *e)
 {
-    uint8_t hor_max = disp_drv->hor_res;
-    uint8_t ver_max = disp_drv->ver_res;
+    lv_display_t *disp = lv_event_get_target(e);
+    lv_area_t *area = lv_event_get_param(e);
+    if (!disp || !area)
+    {
+        return;
+    }
 
     area->x1 = 0;
     area->y1 = 0;
-    area->x2 = hor_max - 1;
-    area->y2 = ver_max - 1;
+    area->x2 = lv_display_get_horizontal_resolution(disp) - 1;
+    area->y2 = lv_display_get_vertical_resolution(disp) - 1;
 }
 
 void ssd1306_sleep_in(void)
@@ -164,11 +164,11 @@ bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed_hz)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-static uint8_t send_data(lv_disp_drv_t *disp_drv, void *bytes, size_t bytes_len)
+static uint8_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes_len)
 {
     (void)disp_drv;
 
-    uint8_t *data = (uint8_t *)bytes;
+    const uint8_t *data = (const uint8_t *)bytes;
 
     I2C_DEV_TAKE_MUTEX(&ssd1306_dev_t);
     I2C_DEV_CHECK(&ssd1306_dev_t, i2c_dev_write(&ssd1306_dev_t, NULL, 0, data, bytes_len));
@@ -177,7 +177,7 @@ static uint8_t send_data(lv_disp_drv_t *disp_drv, void *bytes, size_t bytes_len)
     return ESP_OK;
 }
 
-static uint8_t send_pixels(lv_disp_drv_t *disp_drv, void *color_buffer, size_t buffer_len)
+static uint8_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, size_t buffer_len)
 {
     (void)disp_drv;
     I2C_DEV_TAKE_MUTEX(&ssd1306_dev_t);
@@ -192,4 +192,31 @@ static uint8_t send_pixels(lv_disp_drv_t *disp_drv, void *color_buffer, size_t b
     I2C_DEV_GIVE_MUTEX(&ssd1306_dev_t);
 
     return ESP_OK;
+}
+
+static void convert_htiled_to_ssd1306(const uint8_t *src, uint32_t width, uint32_t height, uint8_t *dst)
+{
+    LV_ASSERT(src != NULL);
+    LV_ASSERT(dst != NULL);
+    LV_ASSERT((width * height / 8U) <= (uint32_t)sizeof(ssd1306_framebuffer));
+    memset(dst, 0, width * height / 8U);
+
+    for (uint32_t y = 0; y < height; y++)
+    {
+        for (uint32_t x = 0; x < width; x++)
+        {
+            uint32_t src_index = y * width + x;
+            uint8_t pixel = (src[src_index / 8U] >> (7 - (src_index % 8U))) & 0x1U;
+            uint32_t dest_index = x + ((y >> 3U) * width);
+            uint8_t bit_index = y & 0x7U;
+            if (pixel)
+            {
+                BIT_SET(dst[dest_index], bit_index);
+            }
+            else
+            {
+                BIT_CLEAR(dst[dest_index], bit_index);
+            }
+        }
+    }
 }

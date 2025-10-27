@@ -1,6 +1,6 @@
 /**
  * @file lv_conf.h
- * Configuration file for v8.3.3
+ * Configuration file for v9.4.0
  */
 
 /*
@@ -483,7 +483,7 @@
     #define LV_LABEL_LONG_TXT_HINT 1  /*Store some extra info in labels to speed up drawing of very long texts*/
 #endif
 
-#define LV_USE_LINE       0
+#define LV_USE_LINE       1
 
 #define LV_USE_ROLLER     0   /*Requires: lv_label*/
 #if LV_USE_ROLLER
