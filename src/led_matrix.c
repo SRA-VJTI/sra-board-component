@@ -47,7 +47,22 @@ esp_err_t led_matrix_init(led_matrix **matrix)
     return ret;
 }
 
-esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t pin, const uint8_t led_value)
+led_matrix_data_t bool_to_uint32(led_matrix_data_arr_t input_arr)
+{
+    uint8_t logical_pin;
+    led_matrix_data_t ret = 0;
+
+    for (int r = 0; r < led_matrix_rows; r++)
+        for (int c = 0; c < led_matrix_columns; c++)
+            if (input_arr[r][c]) {
+                logical_pin = (led_matrix_rows - (r + 1)) * led_matrix_columns + c;
+                ret = ret | (0x1 << led_matrix_map[logical_pin]);
+            }
+
+    return ret;
+}
+
+esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t logical_pin, const uint8_t led_value)
 {
     ESP_RETURN_ON_FALSE(
         (matrix != NULL),
@@ -57,7 +72,7 @@ esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t pin, const uint8_
     );
 
     ESP_RETURN_ON_FALSE(
-        (pin < 30),
+        (logical_pin < 30),
         ESP_ERR_INVALID_ARG,
         TAG,
         "LED index greater than %d!",
@@ -65,7 +80,7 @@ esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t pin, const uint8_
     );
 
     // Find the physical pin from the logical pin
-    const uint8_t physical_pin = led_matrix_map[pin];
+    const uint8_t physical_pin = led_matrix_map[logical_pin];
     // Find the corresponding pin
     const uint8_t current_bit = (matrix->data & (1 << physical_pin));
 

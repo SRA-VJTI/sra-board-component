@@ -29,8 +29,17 @@
 #include "shift_register.h"
 #include "esp_log.h"
 
+/**
+ * @brief An integer used as a bitarray to represent the LED matrix data type.
+ */
 typedef uint32_t led_matrix_data_t;
-typedef uint8_t  led_matrix_data_arr_t[6];
+
+/**
+ * @brief An array of booleans used to represent the LED matrix data instead of the uint32_t.
+
+ * @note Valid when the SRA Board is in its upright orientation (text and logo upright).
+ */
+typedef bool led_matrix_data_arr_t[CONFIG_LED_MATRIX_ROWS][CONFIG_LED_MATRIX_COLUMNS];
 
 /**
  * @brief Struct used as a handle for LED matrix
@@ -58,9 +67,14 @@ static const uint8_t led_matrix_rows = CONFIG_LED_MATRIX_ROWS;
  **/
 static const uint8_t led_matrix_columns = CONFIG_LED_MATRIX_COLUMNS;
 
-// Default SRA Board mapping (change for future versions)
 /**
  * @brief A mapping of the logical indexes of the LED matrix to the actual physical configuration of the LEDs, start from the bottom left
+
+ * @details This mapping starts from the bottom left of the matrix and defines how each logical LED index corresponds to the physical wiring of the LED matrix
+ * @details Default SRA Board LED matrix mappings (change for future versions, current version : v2.7)
+
+ * @note This mapping starts from the bottom left of the matrix and the next logical index corresponds to the LED to the right in the same row. If the LED happens to be the last one in the row then the index corresponds to the first LED in the next (upper) row
+ * @note For the v2.7 mapping pins outputs 6 and 7 are not connected to any LEDs and do not have any effect on the final pattern of the LEDs. (Remove or update this note in later versions)
  **/
 static const uint8_t led_matrix_map[CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS] = {
      0,  1,  2,  3,  4,  5,
@@ -78,6 +92,15 @@ static const uint8_t led_matrix_map[CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_C
  * @return Returns an error if the could not allocate enough memory or if shift register configuration failed, else returns ESP_OK
  **/
 esp_err_t led_matrix_init(led_matrix **matrix);
+
+/**
+ * @brief Converts a boolean array of size CONFIG_LED_MATRIX_ROWSxCONFIG_LED_MATRIX_COLUMNS to a 32-bit unsigned integer
+
+ * @param input_arr: Boolean input array of dimensions (CONFIG_LED_MATRIX_ROWS, CONFIG_LED_MATRIX_COLUMNS)
+
+ * @return A 32-bit value representing the LED states, where each bit corresponds to one physical LED as defined by @ref led_matrix_map.
+ */
+led_matrix_data_t bool_to_uint32(led_matrix_data_arr_t input_arr);
 
 /**
  * @brief Sets a single bit of the "data" field of the passed in matrix.

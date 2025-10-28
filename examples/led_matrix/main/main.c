@@ -72,7 +72,7 @@ void app_main(void)
     while (1) {
         ESP_ERROR_CHECK(led_matrix_set_data(xMyLEDMatrix, 0x1 << i));
         ESP_ERROR_CHECK(led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
-        if (++i == UINT32_MAX)
+        if (++i == CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS)
             i = 0;
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
