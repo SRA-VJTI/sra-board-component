@@ -72,7 +72,7 @@ esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t logical_pin, cons
     );
 
     ESP_RETURN_ON_FALSE(
-        (logical_pin < 30),
+        (logical_pin < (led_matrix_rows * led_matrix_columns)),
         ESP_ERR_INVALID_ARG,
         TAG,
         "LED index greater than %d!",
@@ -81,12 +81,12 @@ esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t logical_pin, cons
 
     // Find the physical pin from the logical pin
     const uint8_t physical_pin = led_matrix_map[logical_pin];
-    // Find the corresponding pin
-    const uint8_t current_bit = (matrix->data & (1 << physical_pin));
+    // Find the corresponding bit
+    const uint8_t current_bit = (matrix->data >> physical_pin) & 0x1;
 
     // If the bits don't match then flip the bit
-    if ((current_bit && !led_value) || (!current_bit && led_value))
-        matrix->data ^= (1 << physical_pin);
+    if ((!current_bit && led_value) || (current_bit && !led_value))
+        matrix->data ^= (0x1 << physical_pin);
 
     return ESP_OK;
 }
@@ -102,7 +102,7 @@ esp_err_t led_matrix_set_data(led_matrix *matrix, const led_matrix_data_t data)
     
     esp_err_t ret = ESP_OK;
     for (int i = 0; i < led_matrix_rows * led_matrix_columns; i++)
-        if ((ret = led_matrix_set_bit(matrix, i, data & (0x1 << i))) != ESP_OK)
+        if ((ret = led_matrix_set_bit(matrix, i, (data >> i) & 0x1)) != ESP_OK)
             return ret;
 
     return ESP_OK;
