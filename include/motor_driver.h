@@ -49,7 +49,7 @@
  */
 esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id);
 
-/** 
+/*
  * @brief Set duty cycle for one of the motors.
  * @param motor_id set it as MOTOR_A_0, MOTOR_A_1 to select the appropriate motor to set its speed and direction
  * @param direction set is as MOTOR_FORWARD for forward motion, MOTOR_BACKWARD for backward motion, MOTOR_STOP to stop the motor
@@ -57,7 +57,7 @@ esp_err_t enable_motor_driver(motor_handle_t *motor, int motor_id);
  * @return 
  * 	- ESP_OK if speed correctly
  * 	- ESP_FAIL if any error occurs
- **/
+*/
 esp_err_t set_motor_speed(motor_handle_t motor, int direction, float duty_cycle);
 
 
