@@ -22,46 +22,42 @@
  * SOFTWARE.
  */
 
+#include <limits.h>
+
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/portable.h>
 #include <freertos/projdefs.h>
-
-#include <limits.h>
-#include "led_matrix.h"
-#include "driver/gpio.h"
+#include <driver/gpio.h>
 #include <esp_err.h>
 #include <esp_log.h>
-#include <esp_heap_caps.h>
 
-#define SPECIAL_PATTERN {};
+#include "led_matrix.h"
 
 static const char *TAG = "LED Matrix demo";
 
 void app_main(void)
 {
-    led_matrix *xMyLEDMatrix = NULL;
-
     // Initialise the LED Matrix and Shift Register Pins
-    ESP_ERROR_CHECK(led_matrix_init(&xMyLEDMatrix));
+    led_matrix xMyLEDMatrix = led_matrix_init();
 
     ESP_LOGI(TAG, "Shift register pins -> SDATA: %d, SRCLK: %d, RCLK: %d",
-             xMyLEDMatrix->config->sdata,
-             xMyLEDMatrix->config->srclk,
-             xMyLEDMatrix->config->rclk);
+             xMyLEDMatrix.config.sdata,
+             xMyLEDMatrix.config.srclk,
+             xMyLEDMatrix.config.rclk);
 
     for (int i = 0; i < 3; i++) {
         // Set the initial pattern and send the data
-        ESP_ERROR_CHECK(led_matrix_set_data_raw(xMyLEDMatrix, UINT32_MAX));
-        ESP_ERROR_CHECK(led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
+        ESP_ERROR_CHECK(led_matrix_set_data_raw(&xMyLEDMatrix, UINT32_MAX));
+        ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
         ESP_LOGI(TAG, "All LEDs turned ON");
 
         // Wait for 1000 ms
         vTaskDelay(pdMS_TO_TICKS(1000));
 
         // Clear the LED Matrix
-        ESP_ERROR_CHECK(led_matrix_set_data_raw(xMyLEDMatrix, 0));
-        ESP_ERROR_CHECK(led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
+        ESP_ERROR_CHECK(led_matrix_set_data_raw(&xMyLEDMatrix, 0));
+        ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
         ESP_LOGI(TAG, "All LEDs turned OFF");
         
         // Wait for 1000 ms
@@ -70,10 +66,13 @@ void app_main(void)
 
     int i = 0;
     while (1) {
-        ESP_ERROR_CHECK(led_matrix_set_data(xMyLEDMatrix, 0x1 << i));
-        ESP_ERROR_CHECK(led_matrix_write(xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
+        // Turn on a single LED matrix corresponding to the integer (2^i)
+        ESP_ERROR_CHECK(led_matrix_set_data(&xMyLEDMatrix, 0x1 << i));
+        ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
         if (++i == CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS)
             i = 0;
+
+        // Wait for 1000 ms
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }

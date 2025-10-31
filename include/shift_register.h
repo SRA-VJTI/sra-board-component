@@ -36,7 +36,6 @@
 #include "hal/gpio_types.h"
 #include "esp_err.h"
 #include "esp_check.h"
-#include "esp_heap_caps.h"
 #include "esp_rom_sys.h"
 
 /**
@@ -53,7 +52,7 @@ typedef struct {
  * @param conf: The handle to use and represent the shift registers.
  * @return Returns an error if there is an error during configuring the GPIOs or if memory for the handle cannot be allocated, otherwise ESP_OK
  **/
-esp_err_t shift_register_gpio_init(shift_register_t **conf);
+esp_err_t shift_register_gpio_init(shift_register_t *conf);
 
 /**
  * @brief Writes a single byte to the shift register and latches it (single shift register)

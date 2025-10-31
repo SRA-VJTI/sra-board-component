@@ -26,27 +26,24 @@
 
 static const char *TAG = "Shift Register";
 
-esp_err_t shift_register_gpio_init(shift_register_t **conf)
+esp_err_t shift_register_gpio_init(shift_register_t *conf)
 {
-    // Allocate memory
-    *conf = (shift_register_t *) heap_caps_malloc(sizeof(shift_register_t), MALLOC_CAP_DEFAULT | MALLOC_CAP_8BIT);
-
     // if (!conf) ...
     ESP_RETURN_ON_FALSE(
-        (*conf != NULL),
-        ESP_ERR_NO_MEM,
+        (conf != NULL),
+        ESP_ERR_INVALID_ARG,
         TAG,
-        "Could not allocate memory!"
+        "Handle is NULL!"
     );
 
-    (*conf)->sdata = SHIFT_REGISTER_SDATA;
-    (*conf)->srclk = SHIFT_REGISTER_SRCLK;
-    (*conf)->rclk  = SHIFT_REGISTER_RCLK;
+    (conf)->sdata = SHIFT_REGISTER_SDATA;
+    (conf)->srclk = SHIFT_REGISTER_SRCLK;
+    (conf)->rclk  = SHIFT_REGISTER_RCLK;
 
     gpio_config_t io_conf = {0};
-    uint64_t pin_mask = (1ULL << (*conf)->sdata) |
-                        (1ULL << (*conf)->srclk) |
-                        (1ULL << (*conf)->rclk);
+    uint64_t pin_mask = (1ULL << (conf)->sdata) |
+                        (1ULL << (conf)->srclk) |
+                        (1ULL << (conf)->rclk);
 
     io_conf.intr_type = GPIO_INTR_DISABLE;
     io_conf.mode = GPIO_MODE_OUTPUT;

@@ -46,7 +46,7 @@ typedef bool led_matrix_data_arr_t[CONFIG_LED_MATRIX_ROWS][CONFIG_LED_MATRIX_COL
  **/
 typedef struct {
     led_matrix_data_t data;
-    shift_register_t *config;
+    shift_register_t config;
 } led_matrix;
 
 /**
@@ -91,7 +91,7 @@ static const uint8_t led_matrix_map[CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_C
 
  * @return Returns an error if the could not allocate enough memory or if shift register configuration failed, else returns ESP_OK
  **/
-esp_err_t led_matrix_init(led_matrix **matrix);
+led_matrix led_matrix_init(void);
 
 /**
  * @brief Converts a boolean array of size CONFIG_LED_MATRIX_ROWSxCONFIG_LED_MATRIX_COLUMNS to a 32-bit unsigned integer
