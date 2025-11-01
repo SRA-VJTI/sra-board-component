@@ -15,7 +15,6 @@
 - [Software Usage](#software-usage)  
 - [Examples & Running](#examples--running)  
 - [Applications](#applications)  
-- [Scope of Improvement](#scope-of-improvement)  
 
 ---
 
@@ -52,8 +51,8 @@ Emits IR light onto the surface. The light reflected from the surface is then de
 
 ### Photo Transistor  
 Receives the reflected IR light.  
-- **White surface:** high reflection → high signal value  
-- **Black surface:** low reflection → low signal value  
+**White surface:** high reflection → high signal value  
+**Black surface:** low reflection → low signal value  
 
 ### Resistors  
 Used to limit the current passing through the emitters and transistors, protecting them from overcurrent.  
@@ -137,23 +136,3 @@ Detect edges or gaps for navigation or path correction.
 Demonstrate reflectivity principles and sensor interfacing.
 - Obstacle Detection (Limited):
 Detect sudden changes in reflection levels on flat surfaces.
-
-## Scope of Improvement
-
-- Ambient Light Interference:
-The LSA’s accuracy can degrade under bright ambient conditions.
-Use an IR filter or place the module closer to the surface to improve reliability.
-
-- Color Detection:
-Currently, the LSA distinguishes only black and white.
-With proper calibration, it can be extended to detect multiple colors (RGB).
-
-- Sensor Resolution:
-Increasing the number of emitter-detector pairs can improve line position accuracy.
-
-- Dynamic Calibration:
-Implement automatic calibration and filtering algorithms for stable, real-time readings.
-
-- Hardware Upgrades:
-Use digital photodiodes or IR sensors with built-in ADCs for better precision.
-
