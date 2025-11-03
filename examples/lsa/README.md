@@ -4,7 +4,8 @@
 
 ## Table of Contents  
 - [Overview](#overview)  
-- [Hardware Setup](#hardware-setup)  
+- [Logic Followed](#logic-followed)  
+- [Hardware Setup](#hardware-setup)
 - [Components of LSA](#components-of-lsa)  
 - [Functions of Components](#functions-of-components)  
   - [Infrared Emitter](#infrared-emitter)  
@@ -22,6 +23,24 @@
 The **Light Sensor Array (LSA)** detects white and black surfaces by sensing differences in reflectivity. It sends this data to the microcontroller (ESP32 on the SRA Board) for processing, enabling functionalities such as **line following** and **surface detection**.
 
 This example demonstrates interfacing the LSA module with the SRA Board, reading sensor values, and mapping them for control applications.
+
+- **Actual LSA**
+<img src="assets/lsa_physical.png" width="750" height="375" >
+
+- **PCB Model**
+<img src="assets/lsa_pcb_image.png" width="750" height="375">
+
+---
+
+## Logic Followed
+
+1. **Absorptivity**: Black surfaces exhibit high absorptivity, hence absorb most of the light emitted by the infrared emitters.
+
+2. **Reflectivity**: White surfaces exhibit high reflectivity, hence reflect most of the light back towards the photo transistors.
+
+3. **Sensor Response**: The phototransistors convert the reflected light into electrical signals — higher values for white surfaces and lower values for black surfaces.
+
+4. **Line detection**: The LSA distinguishes lines or edges by detecting variations in reflected light intensity for [applications](#applications).
 
 ---
 
@@ -119,11 +138,26 @@ These can be found in the `include/` directory under `lsa.h`.
 
 ---
 
-## Examples & Running  
+## Examples & Running
 
 1. Navigate to the example directory:  
    ```bash
    cd examples/lsa
+   ```
+2. Set up the ESP-IDF environment:
+   ```bash
+   source $IDF_PATH/export.sh
+   ```
+3. Build the project:
+   ```bash
+   idf.py build
+   ```
+4. Flash to your ESP32 device and monitor output:
+   ```bash
+   idf.py flash monitor
+   ```
+
+---
 
 ## Applications
 - Line Following Robots:
