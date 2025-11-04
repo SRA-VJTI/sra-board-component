@@ -129,3 +129,36 @@ esp_err_t led_matrix_write(const led_matrix *matrix, const led_matrix_output_mod
 
     return ESP_OK;
 }
+
+esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, double wait_ms)
+{
+    ESP_RETURN_ON_FALSE(
+        (matrix != NULL),
+        ESP_ERR_INVALID_ARG,
+        TAG,
+        "Handle is NULL"
+    );
+
+    ESP_RETURN_ON_FALSE(
+        (message != NULL),
+        ESP_ERR_INVALID_ARG,
+        TAG,
+        "Handle is NULL"
+    );
+
+    size_t i;
+    size_t mlen = strlen(message);
+    for (i = 0; i < mlen; i++)
+    {
+        // If character is less than 0x20 (" ") or greater than 0x7F (DEL) in ASCII
+        if (message[i] < 0x20 || message[i] > 0x7F) {
+            matrix->data = bool_to_uint32(led_matrix_chars[0]); // Set it to a space
+        } else {
+            matrix->data = bool_to_uint32(led_matrix_chars[message[i] - 0x20]);
+        }
+        led_matrix_write(matrix, LED_MATRIX_OUTPUT_PAR);
+        vTaskDelay(pdMS_TO_TICKS(wait_ms));
+    }
+
+    return ESP_OK;
+}

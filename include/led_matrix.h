@@ -25,9 +25,12 @@
 #ifndef LED_MATRIX_H
 #define LED_MATRIX_H
 
+#include <string.h>
 #include <stdint.h>
-#include "shift_register.h"
+#include <freertos/FreeRTOS.h>
 #include "esp_log.h"
+
+#include "shift_register.h"
 
 /**
  * @brief An integer used as a bitarray to represent the LED matrix data type.
@@ -142,5 +145,16 @@ esp_err_t led_matrix_set_data_raw(led_matrix *matrix, const led_matrix_data_t da
  * @return Returns an error if a NULL matrix is passed, else returns ESP_OK
  **/
 esp_err_t led_matrix_write(const led_matrix *matrix, const led_matrix_output_mode_t mode);
+
+/** 
+ * @brief Displays the entered string character by character on the LED Matrix with a delay of "wait_ms" ms between characters
+
+ * @param matrix: The handle to represent and use the matrix of LEDs.
+ * @param message: The message to be displayed on the screen.
+ * @param wait_ms: The time to wait between two characters (in ms)
+
+ * @return Returns an error if a NULL matrix or message is passed, else returns ESP_OK
+ **/
+esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, double wait_ms);
 
 #endif

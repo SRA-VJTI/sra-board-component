@@ -27,7 +27,6 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/portable.h>
-#include <freertos/projdefs.h>
 #include <driver/gpio.h>
 #include <esp_err.h>
 #include <esp_log.h>
