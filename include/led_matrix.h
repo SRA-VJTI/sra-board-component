@@ -103,7 +103,7 @@ led_matrix led_matrix_init(void);
 
  * @return A 32-bit value representing the LED states, where each bit corresponds to one physical LED as defined by @ref led_matrix_map.
  */
-led_matrix_data_t bool_to_uint32(led_matrix_data_arr_t input_arr);
+led_matrix_data_t bool_to_uint32(const led_matrix_data_arr_t input_arr);
 
 /**
  * @brief Sets a single bit of the "data" field of the passed in matrix.

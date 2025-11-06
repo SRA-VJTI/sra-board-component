@@ -153,11 +153,11 @@ comment "These dimensions must always correspond to the actual number of LEDs on
 
 config LED_MATRIX_ROWS
     int "The number of rows currently present in the LED Matrix"
-    default 6
+    default 5
 
 config LED_MATRIX_COLUMNS
     int "The number of columns currently present in the LED Matrix"
-    default 5
+    default 6
 
 endmenu
 

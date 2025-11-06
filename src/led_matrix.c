@@ -24,6 +24,7 @@
 
 
 #include "led_matrix.h"
+#include "led_matrix_font.h"
 
 static const char *TAG = "LED Matrix";
 
@@ -37,7 +38,7 @@ led_matrix led_matrix_init(void)
     };
 }
 
-led_matrix_data_t bool_to_uint32(led_matrix_data_arr_t input_arr)
+led_matrix_data_t bool_to_uint32(const led_matrix_data_arr_t input_arr)
 {
     uint8_t logical_pin;
     led_matrix_data_t ret = 0;
