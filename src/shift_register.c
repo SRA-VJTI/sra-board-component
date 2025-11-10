@@ -24,7 +24,7 @@
 
 #include "shift_register.h"
 
-static const char *TAG = "Shift Register";
+static const char *TAG_SHIFT_REGISTER = "shift_register";
 
 esp_err_t shift_register_gpio_init(shift_register_t *conf)
 {
@@ -32,7 +32,7 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf)
     ESP_RETURN_ON_FALSE(
         (conf != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_SHIFT_REGISTER,
         "Handle is NULL!"
     );
 
@@ -52,7 +52,7 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf)
     io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
     ESP_RETURN_ON_ERROR(
         gpio_config(&io_conf),
-        TAG,
+        TAG_SHIFT_REGISTER,
         "Failed to configure shift register GPIOs"
     );
 
@@ -74,7 +74,7 @@ esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t
     ESP_RETURN_ON_FALSE(
         (sreg != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_SHIFT_REGISTER,
         "Handle is NULL"
     );
 
@@ -102,7 +102,7 @@ esp_err_t shift_register_write_uint32(const shift_register_t *sreg, const uint32
     ESP_RETURN_ON_FALSE(
         (sreg != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_SHIFT_REGISTER,
         "Handle is NULL"
     );
 

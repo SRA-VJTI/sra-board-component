@@ -26,7 +26,7 @@
 #include "led_matrix.h"
 #include "led_matrix_font.h"
 
-static const char *TAG = "LED Matrix";
+static const char *TAG_LED_MATRIX = "led_matrix";
 
 led_matrix led_matrix_init(void)
 {
@@ -58,14 +58,14 @@ esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t logical_pin, cons
     ESP_RETURN_ON_FALSE(
         (matrix != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "Handle is NULL"
     );
 
     ESP_RETURN_ON_FALSE(
         (logical_pin < (led_matrix_rows * led_matrix_columns)),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "LED index greater than %d!",
         led_matrix_rows * led_matrix_columns - 1
     );
@@ -87,7 +87,7 @@ esp_err_t led_matrix_set_data(led_matrix *matrix, const led_matrix_data_t data)
     ESP_RETURN_ON_FALSE(
         (matrix != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "Handle is NULL"
     );
     
@@ -104,7 +104,7 @@ esp_err_t led_matrix_set_data_raw(led_matrix *matrix, const led_matrix_data_t da
     ESP_RETURN_ON_FALSE(
         (matrix != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "Handle is NULL"
     );
     
@@ -117,14 +117,14 @@ esp_err_t led_matrix_write(const led_matrix *matrix, const led_matrix_output_mod
     ESP_RETURN_ON_FALSE(
         (matrix != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "Handle is NULL"
     );
 
     if (mode == LED_MATRIX_OUTPUT_SEQ)
-        shift_register_write_int(&(matrix->config), matrix->data, 0);
+        shift_register_write_uint32(&(matrix->config), matrix->data, 0);
     else if (mode == LED_MATRIX_OUTPUT_PAR)
-        shift_register_write_int(&(matrix->config), matrix->data, 1);
+        shift_register_write_uint32(&(matrix->config), matrix->data, 1);
     else
         return ESP_ERR_INVALID_ARG;
 
@@ -136,14 +136,14 @@ esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, dou
     ESP_RETURN_ON_FALSE(
         (matrix != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "Handle is NULL"
     );
 
     ESP_RETURN_ON_FALSE(
         (message != NULL),
         ESP_ERR_INVALID_ARG,
-        TAG,
+        TAG_LED_MATRIX,
         "Handle is NULL"
     );
 
