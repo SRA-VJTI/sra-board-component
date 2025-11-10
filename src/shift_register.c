@@ -36,9 +36,9 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf)
         "Handle is NULL!"
     );
 
-    (conf)->sdata = SHIFT_REGISTER_SDATA;
-    (conf)->srclk = SHIFT_REGISTER_SRCLK;
-    (conf)->rclk  = SHIFT_REGISTER_RCLK;
+    conf->sdata = SHIFT_REGISTER_SDATA;
+    conf->srclk = SHIFT_REGISTER_SRCLK;
+    conf->rclk  = SHIFT_REGISTER_RCLK;
 
     gpio_config_t io_conf = {0};
     uint64_t pin_mask = (1ULL << (conf)->sdata) |
