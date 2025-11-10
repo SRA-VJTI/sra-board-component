@@ -60,7 +60,7 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf);
  * @param data: The data to be sent to the shift register.
  * @param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
  **/
-esp_err_t shift_register_write_byte(const shift_register_t *sreg, const uint8_t data, const bool instant);
+esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t data, const bool instant);
 
 /**
  * @brief Writes a four bytes to the shift register and latches it (four cascaded shift registers)
@@ -68,6 +68,6 @@ esp_err_t shift_register_write_byte(const shift_register_t *sreg, const uint8_t 
  * @param data: The data to be sent to the shift register.
  * @param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
  **/
-esp_err_t shift_register_write_int(const shift_register_t *sreg, const uint32_t data, const bool instant);
+esp_err_t shift_register_write_uint32(const shift_register_t *sreg, const uint32_t data, const bool instant);
 
 #endif

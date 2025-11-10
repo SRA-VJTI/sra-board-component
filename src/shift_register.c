@@ -67,7 +67,7 @@ static inline void clock_toggle_rising(gpio_num_t clk, int32_t delay_us)
     gpio_set_level(clk, 0);     // final edge (falling)
 }
 
-esp_err_t shift_register_write_byte(const shift_register_t *sreg, const uint8_t data, const bool instant)
+esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t data, const bool instant)
 {
     int i;
 
@@ -95,7 +95,7 @@ esp_err_t shift_register_write_byte(const shift_register_t *sreg, const uint8_t 
     return ESP_OK;
 }
 
-esp_err_t shift_register_write_int(const shift_register_t *sreg, const uint32_t data, const bool instant)
+esp_err_t shift_register_write_uint32(const shift_register_t *sreg, const uint32_t data, const bool instant)
 {
     int i;
 
