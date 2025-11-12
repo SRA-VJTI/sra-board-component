@@ -23,6 +23,8 @@
  */
 
 #include "oled.h"
+#include "esp_netif.h"
+#include "lwip/ip4_addr.h"
 
 static const char *TAG_OLED = "oled";
 
@@ -432,43 +434,36 @@ esp_err_t display_mpu(float pitch, float roll)
   return ESP_OK;
 }
 
-esp_err_t display_pid_values(float kp, float ki, float kd)
+esp_err_t display_pid_values(float kp, float ki, float kd, const esp_netif_ip_info_t *ip_info)
 {
-  // Clear the screen
-  lv_obj_clean(lv_scr_act());
+    lv_obj_clean(lv_scr_act());
 
-  char kp_str[10], ki_str[10], kd_str[10];
+    char kp_str[16], ki_str[16], kd_str[16], ip_str[32];
+    const char *ip_str_value = ip4addr_ntoa((const ip4_addr_t *)&ip_info->ip);
 
-  lv_obj_t *scr = lv_disp_get_scr_act(NULL);
-  lv_obj_t* text[3];
+    lv_obj_t *scr = lv_disp_get_scr_act(NULL);
+    lv_obj_t *text[4];
 
-  for (int i = 0; i < 3; ++i)
-  {
-    text[i] = lv_label_create(scr);
-  }
+    for (int i = 0; i < 4; ++i)
+        text[i] = lv_label_create(scr);
 
-  // Printing kp value on oled
-  snprintf(kp_str, sizeof(kp_str), "Kp: %0.2f", kp);
-  lv_label_set_text(text[0], kp_str);
+    snprintf(kp_str, sizeof(kp_str), "Kp: %.2f", kp);
+    lv_label_set_text(text[0], kp_str);
 
-  // Printing ki value on oled
-  snprintf(ki_str, sizeof(ki_str), "Ki: %0.2f", ki);
-  lv_label_set_text(text[1], ki_str);
+    snprintf(ki_str, sizeof(ki_str), "Ki: %.2f", ki);
+    lv_label_set_text(text[1], ki_str);
 
-  // Printing kd value on oled
-  snprintf(kd_str, sizeof(kd_str), "Kd: %0.2f", kd);
-  lv_label_set_text(text[2], kd_str);
+    snprintf(kd_str, sizeof(kd_str), "Kd: %.2f", kd);
+    lv_label_set_text(text[2], kd_str);
 
-  for (int i = 0; i < 3; ++i)
-  {
-    lv_obj_set_size(text[i], lv_obj_get_self_width(text[i]), 16);
-    lv_obj_set_pos(text[i], 30 * i, 16 * (i + 1));
-  }
+    snprintf(ip_str, sizeof(ip_str), "IP: %s", ip_str_value);
+    lv_label_set_text(text[3], ip_str);
 
-  // Refresh Display
-  lv_refr_now(NULL);
+    for (int i = 0; i < 4; ++i)
+        lv_obj_set_pos(text[i], 0, 16 * i);
 
-  return ESP_OK;
+    lv_refr_now(NULL);
+    return ESP_OK;
 }
 
 esp_err_t display_servo_values(int s1, int s2, int s3, int s4)
