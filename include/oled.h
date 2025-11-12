@@ -34,7 +34,6 @@
 #include <freertos/task.h>
 #include "pin_defs.h"
 #include "lsa.h"
-#include "esp_netif.h"
 
 #ifdef CONFIG_ENABLE_OLED
 #include "lvgl.h"
@@ -94,7 +93,7 @@ esp_err_t display_mpu(float pitch, float roll);
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
 
-esp_err_t display_pid_values(float kp, float ki, float kd, const esp_netif_ip_info_t *ip_info);
+esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_value);
 
 
 /**
