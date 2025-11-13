@@ -44,8 +44,8 @@
 
 //////// mpu //////
 #define MPU6050_INT 23
-#define MPU6050_SDA 22
-#define MPU6050_SCL 21
+#define MPU6050_SCL 22
+#define MPU6050_SDA 21
 
 /////////////////////////////
 
