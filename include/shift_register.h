@@ -34,9 +34,10 @@
 
 #include "driver/gpio.h"
 #include "hal/gpio_types.h"
+#include "driver/gptimer.h"
+#include "driver/gptimer_types.h"
 #include "esp_err.h"
 #include "esp_check.h"
-#include "esp_rom_sys.h"
 
 /**
  * @brief The handle used for representing the shift register
@@ -45,12 +46,13 @@ typedef struct {
     gpio_num_t sdata;
     gpio_num_t srclk;
     gpio_num_t rclk;
+    gptimer_handle_t timer;
 } shift_register_t;
 
 /**
  * @brief Initialises the GPIO Pins for the Shift Register Present on the SRA Board
  * @param conf: The handle to use and represent the shift registers.
- * @return Returns an error if there is an error during configuring the GPIOs or if memory for the handle cannot be allocated, otherwise ESP_OK
+ * @return Returns an error if NULL shift register is passed or if there is an error during configuring the GPIOs or timer, else returns ESP_OK
  **/
 esp_err_t shift_register_gpio_init(shift_register_t *conf);
 
@@ -59,6 +61,7 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf);
  * @param sreg: The handle to use and represent the shift registers.
  * @param data: The data to be sent to the shift register.
  * @param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
+ * @return Returns an error if a NULL shift register is passed, else returns ESP_OK
  **/
 esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t data, const bool instant);
 
@@ -67,7 +70,15 @@ esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t
  * @param sreg: The handle to use and represent the shift registers.
  * @param data: The data to be sent to the shift register.
  * @param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
+ * @return Returns an error if a NULL shift register is passed, else returns ESP_OK
  **/
 esp_err_t shift_register_write_uint32(const shift_register_t *sreg, const uint32_t data, const bool instant);
+
+/**
+ * @brief Performs cleanup on the shift register contents
+ * @param sreg: The handle to use and represent the shift register
+ * @return Returns an error if there is an error while cleaning up the general purpose timer, else returns ESP_OK
+ **/
+esp_err_t shift_register_cleanup(shift_register_t sreg);
 
 #endif

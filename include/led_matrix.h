@@ -159,4 +159,13 @@ esp_err_t led_matrix_write(const led_matrix *matrix, const led_matrix_output_mod
  **/
 esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, double wait_ms);
 
+/**
+ * @brief Performs cleanup on the LED Matrix contents
+
+ * @param
+
+ * @return Returns an error if there is an error while cleaning up the shift register, else returns ESP_OK
+ **/
+esp_err_t led_matrix_cleanup(led_matrix matrix);
+
 #endif

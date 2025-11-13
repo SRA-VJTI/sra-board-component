@@ -146,7 +146,7 @@ config SR_CLOCK_HIGH_TIME
     int "The amount of time \(in microseconds\) to maintain the value of the shift register clocks to HIGH"
     default 1
     help
-    Busy waits the corresponding thread for the specified amount of microseconds
+    sleeps the corresponding thread for the specified amount of microseconds
 
 menu "Matrix Dimensions"
 comment "These dimensions must always correspond to the actual number of LEDs on the SRA Board just defined in software for completeness."

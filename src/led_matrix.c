@@ -163,3 +163,14 @@ esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, dou
 
     return ESP_OK;
 }
+
+esp_err_t led_matrix_cleanup(led_matrix matrix)
+{
+    // Only cleaning is in shift_register_t
+    ESP_RETURN_ON_ERROR(
+        shift_register_cleanup(matrix.config),
+        TAG_LED_MATRIX,
+        "Failed to cleanup shift register"
+    ); 
+    return ESP_OK;
+}

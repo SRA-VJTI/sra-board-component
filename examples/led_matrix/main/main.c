@@ -80,4 +80,5 @@ void app_main(void)
     //     string[i] = i + ' ';  
 
     // led_matrix_display_string(&xMyLEDMatrix, string, 1000);
+    // led_matrix_cleanup(xMyLEDMatrix);
 }

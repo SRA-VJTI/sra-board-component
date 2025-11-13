@@ -26,6 +26,13 @@
 
 static const char *TAG_SHIFT_REGISTER = "shift_register";
 
+static bool shift_register_timer_on_alarm(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_data)
+{
+    // Don't do anything just stop the timer
+    gptimer_stop(timer);
+    return false;
+}
+
 esp_err_t shift_register_gpio_init(shift_register_t *conf)
 {
     // if (!conf) ...
@@ -36,6 +43,7 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf)
         "Handle is NULL!"
     );
 
+    // Configure GPIOs
     conf->sdata = SHIFT_REGISTER_SDATA;
     conf->srclk = SHIFT_REGISTER_SRCLK;
     conf->rclk  = SHIFT_REGISTER_RCLK;
@@ -56,14 +64,58 @@ esp_err_t shift_register_gpio_init(shift_register_t *conf)
         "Failed to configure shift register GPIOs"
     );
 
+    // Configure timer
+    conf->timer = NULL;
+    gptimer_config_t timer_config = {
+        .clk_src = GPTIMER_CLK_SRC_DEFAULT,
+        .direction = GPTIMER_COUNT_UP,
+        .resolution_hz = 1000000 // 1 MHz, 1 tick = 1 microsecond
+    };
+
+    ESP_RETURN_ON_ERROR(
+        gptimer_new_timer(&timer_config, &(conf->timer)),
+        TAG_SHIFT_REGISTER,
+        "Failed to configure shift register timer"
+    );
+
+    // Register timer callback
+    gptimer_event_callbacks_t cbs = {
+        .on_alarm = shift_register_timer_on_alarm
+    };
+
+    ESP_RETURN_ON_ERROR(
+        gptimer_register_event_callbacks(conf->timer, &cbs, NULL),
+        TAG_SHIFT_REGISTER,
+        "Failed to register timer callback"
+    );
+
+    // Enable the timer (will disable when we are done using it)
+    ESP_RETURN_ON_ERROR(
+        gptimer_enable(conf->timer),
+        TAG_SHIFT_REGISTER,
+        "Failed to enable timer"
+    );
+
+    // Configure the alarm (CONFIG_SR_CLOCK_HIGH_TIME us)
+    gptimer_alarm_config_t alarm_config = {
+        // number of ticks (microseconds here) to wait for alarm
+        .alarm_count = CONFIG_SR_CLOCK_HIGH_TIME
+    };
+    
+    ESP_RETURN_ON_ERROR(
+        gptimer_set_alarm_action(conf->timer, &alarm_config),
+        TAG_SHIFT_REGISTER,
+        "Failed to set configure alarm"
+    );
+
     return ESP_OK;
 }
 
-static inline void clock_toggle_rising(gpio_num_t clk, int32_t delay_us)
+static inline void clock_toggle_rising(gptimer_handle_t timer, gpio_num_t clk, int32_t delay_us)
 {
     gpio_set_level(clk, 0);     // ensure starts from low level
     gpio_set_level(clk, 1);     // initial edge (rising)
-    esp_rom_delay_us(delay_us); // clock delay (busy wait)
+    gptimer_start(timer);       // start the timer (configured for CONFIG_SR_CLOCK_HIGH_TIME)
     gpio_set_level(clk, 0);     // final edge (falling)
 }
 
@@ -81,14 +133,14 @@ esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t
     if (instant) {
         for (i = (BITS_IN_A_BYTE - 1); i >= 0; i--) {
             gpio_set_level(sreg->sdata, data & (1 << i));
-            clock_toggle_rising(sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
+            clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
         }
-        clock_toggle_rising(sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
+        clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
     } else {
         for (i = (BITS_IN_A_BYTE - 1); i >= 0; i--) {
             gpio_set_level(sreg->sdata, data & (1 << i));
-            clock_toggle_rising(sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
-            clock_toggle_rising(sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
+            clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
+            clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
         } 
     }
 
@@ -109,16 +161,23 @@ esp_err_t shift_register_write_uint32(const shift_register_t *sreg, const uint32
     if (instant) {
         for (i = (BITS_IN_4_BYTES - 1); i >= 0; i--) {
             gpio_set_level(sreg->sdata, data & (1 << i));
-            clock_toggle_rising(sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
+            clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
         }
-        clock_toggle_rising(sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
+        clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
     } else {
         for (i = (BITS_IN_4_BYTES - 1); i >= 0; i--) {
             gpio_set_level(sreg->sdata, data & (1 << i));
-            clock_toggle_rising(sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
-            clock_toggle_rising(sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
+            clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
+            clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
         } 
     }
 
+    return ESP_OK;
+}
+
+esp_err_t shift_register_cleanup(shift_register_t sreg)
+{
+    ESP_RETURN_ON_ERROR(gptimer_disable(sreg.timer), TAG_SHIFT_REGISTER, "Failed to disable timer"); 
+    ESP_RETURN_ON_ERROR(gptimer_del_timer(sreg.timer), TAG_SHIFT_REGISTER, "Failed to delete timer");
     return ESP_OK;
 }
