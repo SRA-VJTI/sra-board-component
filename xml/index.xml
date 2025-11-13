@@ -384,8 +384,8 @@
     <member refid="pin__defs_8h_1a763ffd798508592c5092ac77daa5a659" kind="define"><name>CHECK</name></member>
     <member refid="pin__defs_8h_1a2e97372e6d071fc2e88dbb48de906318" kind="define"><name>CHECK_LOGE</name></member>
     <member refid="pin__defs_8h_1ae4b5c81e3a4d9fe739bc10a3e3802207" kind="define"><name>MPU6050_INT</name></member>
-    <member refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" kind="define"><name>MPU6050_SDA</name></member>
     <member refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" kind="define"><name>MPU6050_SCL</name></member>
+    <member refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" kind="define"><name>MPU6050_SDA</name></member>
     <member refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kind="define"><name>BG_LED_1</name></member>
     <member refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kind="define"><name>BG_LED_2</name></member>
     <member refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kind="define"><name>BG_LED_3</name></member>

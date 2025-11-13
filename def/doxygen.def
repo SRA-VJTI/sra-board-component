@@ -7361,10 +7361,10 @@ _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1a439afff9b79599edab1529f62443ea5f';
+      define-mem-id   = 'pin__defs_8h_1ae4a616964509f7581d0d423bea83d657';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'MPU6050_SDA';
+      define-mem-name = 'MPU6050_SCL';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 22
 _EnD_oF_dEf_TeXt_;
@@ -7379,10 +7379,10 @@ _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'pin__defs_8h_1ae4a616964509f7581d0d423bea83d657';
+      define-mem-id   = 'pin__defs_8h_1a439afff9b79599edab1529f62443ea5f';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'MPU6050_SCL';
+      define-mem-name = 'MPU6050_SDA';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 21
 _EnD_oF_dEf_TeXt_;

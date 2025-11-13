@@ -194,8 +194,8 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="46" column="9" bodyfile="include/pin_defs.h" bodystart="46" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" prot="public" static="no">
-        <name>MPU6050_SDA</name>
+      <memberdef kind="define" id="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" prot="public" static="no">
+        <name>MPU6050_SCL</name>
         <initializer>22</initializer>
         <briefdescription>
         </briefdescription>
@@ -205,8 +205,8 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="47" column="9" bodyfile="include/pin_defs.h" bodystart="47" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" prot="public" static="no">
-        <name>MPU6050_SCL</name>
+      <memberdef kind="define" id="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" prot="public" static="no">
+        <name>MPU6050_SDA</name>
         <initializer>21</initializer>
         <briefdescription>
         </briefdescription>
@@ -575,13 +575,13 @@
 <codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46" refid="pin__defs_8h_1ae4b5c81e3a4d9fe739bc10a3e3802207" refkind="member"><highlight class="preprocessor">#define<sp/>MPU6050_INT<sp/>23</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SDA<sp/>22</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SCL<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SCL<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SDA<sp/>21</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_ENABLE_OLED</highlight></codeline>
-<codeline lineno="54"><highlight class="preprocessor">#define<sp/>OLED_SDA<sp/>22</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_SCL<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">#define<sp/>OLED_SCL<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_SDA<sp/>21</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59" refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" refkind="member"><highlight class="preprocessor">#define<sp/>BG_LED_1<sp/>12</highlight><highlight class="normal"></highlight></codeline>
