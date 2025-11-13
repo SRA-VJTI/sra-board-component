@@ -29,6 +29,7 @@
 #include <stdint.h>
 #include <ctype.h>
 #include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
 #include "esp_log.h"
 
 #include "shift_register.h"
