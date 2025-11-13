@@ -74,4 +74,10 @@ void app_main(void)
         // Wait for 1000 ms
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
+
+    // char string[128 + 1] = {0};
+    // for (int i = 0; i < 128; i++)
+    //     string[i] = i + ' ';  
+
+    // led_matrix_display_string(&xMyLEDMatrix, string, 1000);
 }

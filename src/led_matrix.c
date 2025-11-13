@@ -152,7 +152,7 @@ esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, dou
     for (i = 0; i < mlen; i++)
     {
         // If character is less than 0x20 (" ") or greater than 0x7F (DEL) in ASCII
-        if (message[i] < 0x20 || message[i] > 0x7F) {
+        if (iscntrl((uint8_t) message[i])) {
             matrix->data = bool_to_uint32(led_matrix_chars[0]); // Set it to a space
         } else {
             matrix->data = bool_to_uint32(led_matrix_chars[message[i] - 0x20]);

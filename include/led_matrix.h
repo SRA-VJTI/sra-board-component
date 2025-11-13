@@ -27,6 +27,7 @@
 
 #include <string.h>
 #include <stdint.h>
+#include <ctype.h>
 #include <freertos/FreeRTOS.h>
 #include "esp_log.h"
 
