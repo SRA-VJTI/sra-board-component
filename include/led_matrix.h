@@ -162,7 +162,7 @@ esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, dou
 /**
  * @brief Performs cleanup on the LED Matrix contents
 
- * @param
+ * @param matrix: The handle to represent and use the matrix of LEDs
 
  * @return Returns an error if there is an error while cleaning up the shift register, else returns ESP_OK
  **/
