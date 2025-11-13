@@ -262,6 +262,11 @@ esp_err_t init_oled()
   lv_display_set_flush_cb(oled_display, ssd1306_flush);
   lv_display_add_event_cb(oled_display, ssd1306_rounder_event_cb, LV_EVENT_INVALIDATE_AREA, NULL);
 
+  lv_obj_t *screen = lv_scr_act();
+  lv_obj_set_style_bg_color(screen, lv_color_black(), LV_PART_MAIN);
+  lv_obj_set_style_bg_opa(screen, LV_OPA_COVER, LV_PART_MAIN);
+  lv_obj_set_style_text_color(screen, lv_color_white(), LV_PART_MAIN);
+
   // Display SRA logo
   display_logo(SRA_LOGO);
   vTaskDelay(100);
@@ -337,8 +342,8 @@ esp_err_t display_lsa(line_sensor_array readings)
 
   lv_color32_t palette_white = lv_color_to_32(lv_color_white(), LV_OPA_COVER);
   lv_color32_t palette_black = lv_color_to_32(lv_color_black(), LV_OPA_COVER);
-  lv_canvas_set_palette(canvas, 0, palette_white);
-  lv_canvas_set_palette(canvas, 1, palette_black);
+  lv_canvas_set_palette(canvas, 0, palette_black);
+  lv_canvas_set_palette(canvas, 1, palette_white);
 
   lv_color_t c0 = lv_color_black();
   lv_color_t c1 = lv_color_white();
@@ -403,6 +408,50 @@ esp_err_t display_mpu(float pitch, float roll)
   lv_label_set_text(roll_reading, roll_str);
   lv_obj_set_pos(roll_reading, 0, 36);
   lv_obj_set_size(roll_reading, 96 , lv_obj_get_self_height(roll_reading));
+
+  // Create a scale-based meter for pitch readings (LVGL v9+)
+  lv_obj_t *scale = lv_scale_create(lv_scr_act());
+  if (scale)
+  {
+    lv_obj_set_pos(scale, 64, 0);
+    lv_obj_set_size(scale, 64, 64);
+    lv_scale_set_mode(scale, LV_SCALE_MODE_ROUND_INNER);
+    lv_scale_set_range(scale, -90, 90);
+    lv_scale_set_angle_range(scale, 180);
+    lv_scale_set_rotation(scale, 270);
+    lv_scale_set_total_tick_count(scale, 19);
+    lv_scale_set_major_tick_every(scale, 3);
+    lv_scale_set_label_show(scale, false);
+
+    lv_obj_set_style_bg_opa(scale, LV_OPA_TRANSP, LV_PART_MAIN);
+    lv_obj_set_style_border_width(scale, 0, LV_PART_MAIN);
+    lv_obj_set_style_pad_all(scale, 0, LV_PART_MAIN);
+    lv_obj_set_style_line_width(scale, 1, LV_PART_ITEMS);
+    lv_obj_set_style_line_color(scale, lv_color_white(), LV_PART_ITEMS);
+    lv_obj_set_style_text_color(scale, lv_color_white(), LV_PART_ITEMS);
+
+    lv_obj_t *needle = lv_line_create(scale);
+    if (needle)
+    {
+      lv_obj_remove_style_all(needle);
+      lv_obj_set_size(needle, 64, 64);
+      lv_obj_set_style_line_width(needle, 2, LV_PART_MAIN);
+      lv_obj_set_style_line_color(needle, lv_color_white(), LV_PART_MAIN);
+      lv_obj_set_style_line_rounded(needle, true, LV_PART_MAIN);
+
+      float clamped_pitch = pitch;
+      if (clamped_pitch > 90)
+      {
+        clamped_pitch = 90;
+      }
+      else if (clamped_pitch < -90)
+      {
+        clamped_pitch = -90;
+      }
+      int32_t rounded_pitch = (int32_t)((clamped_pitch >= 0.0f) ? (clamped_pitch + 0.5f) : (clamped_pitch - 0.5f));
+      lv_scale_set_line_needle_value(scale, needle, -10, rounded_pitch);
+    }
+  }
 
   // Refresh Display
   lv_refr_now(NULL);

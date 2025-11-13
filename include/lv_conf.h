@@ -538,6 +538,8 @@
 
 #define LV_USE_MENU       0
 
+#define LV_USE_SCALE      1
+
 #define LV_USE_METER      1
 
 #define LV_USE_MSGBOX     0
