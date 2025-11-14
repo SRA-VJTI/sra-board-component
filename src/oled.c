@@ -439,15 +439,7 @@ esp_err_t display_mpu(float pitch, float roll)
       lv_obj_set_style_line_color(needle, lv_color_white(), LV_PART_MAIN);
       lv_obj_set_style_line_rounded(needle, true, LV_PART_MAIN);
 
-      float clamped_pitch = pitch;
-      if (clamped_pitch > 90)
-      {
-        clamped_pitch = 90;
-      }
-      else if (clamped_pitch < -90)
-      {
-        clamped_pitch = -90;
-      }
+      float clamped_pitch = max(min(pitch, 90), -90);
       int32_t rounded_pitch = (int32_t)((clamped_pitch >= 0.0f) ? (clamped_pitch + 0.5f) : (clamped_pitch - 0.5f));
       lv_scale_set_line_needle_value(scale, needle, -10, rounded_pitch);
     }
