@@ -2,11 +2,40 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="utils_8h" kind="file" language="C++">
     <compoundname>utils.h</compoundname>
+    <includedby refid="shift__register_8h" local="yes">include/shift_register.h</includedby>
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="motor__driver_8c" local="yes">src/motor_driver.c</includedby>
     <includedby refid="utils_8c" local="yes">src/utils.c</includedby>
     <invincdepgraph>
+      <node id="3">
+        <label>include/led_matrix.h</label>
+        <link refid="led__matrix_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/led_matrix_font.h</label>
+        <link refid="led__matrix__font_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
       <node id="2">
+        <label>include/shift_register.h</label>
+        <link refid="shift__register_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
       </node>
@@ -15,20 +44,60 @@
         <link refid="utils_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="5">
+        <label>src/led_matrix.c</label>
+        <link refid="led__matrix_8c"/>
+      </node>
+      <node id="6">
+        <label>src/led_matrix_font.c</label>
+        <link refid="led__matrix__font_8c"/>
+      </node>
+      <node id="9">
         <label>src/motor_driver.c</label>
         <link refid="motor__driver_8c"/>
       </node>
-      <node id="4">
+      <node id="8">
+        <label>src/shift_register.c</label>
+        <link refid="shift__register_8c"/>
+      </node>
+      <node id="10">
         <label>src/utils.c</label>
         <link refid="utils_8c"/>
       </node>
     </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="utils_8h_1ae3710cdfde4705f0eafe00a2a67e2033" prot="public" static="no">
+        <name>BITS_IN_A_BYTE</name>
+        <initializer>sizeof(uint8_t)</initializer>
+        <briefdescription>
+<para>Number of bits in a byte. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.h" line="31" column="9" bodyfile="include/utils.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="utils_8h_1aef43aba04f9c671c4208f1c98bc25cb9" prot="public" static="no">
+        <name>BITS_IN_4_BYTES</name>
+        <initializer><ref refid="utils_8h_1ae3710cdfde4705f0eafe00a2a67e2033" kindref="member">BITS_IN_A_BYTE</ref> * sizeof(uint32_t)</initializer>
+        <briefdescription>
+<para>Number of bits in 4 bytes / int32_t / uint32_t. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/utils.h" line="36" column="9" bodyfile="include/utils.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="utils_8h_1a22fd7311bf5f09376f4c561febd38899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -80,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/utils.h" line="35" column="7" bodyfile="src/utils.c" bodystart="27" bodyend="34" declfile="include/utils.h" declline="35" declcolumn="7"/>
+        <location file="include/utils.h" line="45" column="7" bodyfile="src/utils.c" bodystart="27" bodyend="34" declfile="include/utils.h" declline="45" declcolumn="7"/>
       </memberdef>
       <memberdef kind="function" id="utils_8h_1a5dd929afde45581ef0588e30db9650f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -156,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/utils.h" line="46" column="7" bodyfile="src/utils.c" bodystart="36" bodyend="39" declfile="include/utils.h" declline="46" declcolumn="7"/>
+        <location file="include/utils.h" line="56" column="7" bodyfile="src/utils.c" bodystart="36" bodyend="39" declfile="include/utils.h" declline="56" declcolumn="7"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -191,11 +260,15 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a22fd7311bf5f09376f4c561febd38899" kindref="member">bound</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a5dd929afde45581ef0588e30db9650f8" kindref="member">map</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_higher_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_higher_limit);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="31" refid="utils_8h_1ae3710cdfde4705f0eafe00a2a67e2033" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITS_IN_A_BYTE<sp/>sizeof(uint8_t)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="utils_8h_1aef43aba04f9c671c4208f1c98bc25cb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITS_IN_4_BYTES<sp/>BITS_IN_A_BYTE<sp/>*<sp/>sizeof(uint32_t)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a22fd7311bf5f09376f4c561febd38899" kindref="member">bound</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="utils_8h_1a5dd929afde45581ef0588e30db9650f8" kindref="member">map</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>input_higher_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_lower_limit,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output_higher_limit);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/utils.h"/>
   </compounddef>

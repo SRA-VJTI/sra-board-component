@@ -12,6 +12,8 @@
     <includes refid="servo_8h" local="yes">servo.h</includes>
     <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
     <includes refid="utils_8h" local="yes">utils.h</includes>
+    <includes refid="shift__register_8h" local="yes">shift_register.h</includes>
+    <includes refid="led__matrix_8h" local="yes">led_matrix.h</includes>
     <incdepgraph>
       <node id="2">
         <label>adc.h</label>
@@ -57,6 +59,24 @@
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>led_matrix.h</label>
+        <link refid="led__matrix_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
         </childnode>
       </node>
       <node id="21">
@@ -141,6 +161,32 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
+      <node id="33">
+        <label>shift_register.h</label>
+        <link refid="shift__register_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
@@ -164,6 +210,10 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
       </node>
       <node id="20">
         <label>switches.h</label>
@@ -185,8 +235,17 @@
         <label>utils.h</label>
         <link refid="utils_8h"/>
       </node>
+      <node id="39">
+        <label>ctype.h</label>
+      </node>
       <node id="16">
         <label>driver/gpio.h</label>
+      </node>
+      <node id="35">
+        <label>driver/gptimer.h</label>
+      </node>
+      <node id="36">
+        <label>driver/gptimer_types.h</label>
       </node>
       <node id="27">
         <label>driver/i2c.h</label>
@@ -206,6 +265,9 @@
       <node id="26">
         <label>esp_attr.h</label>
       </node>
+      <node id="37">
+        <label>esp_check.h</label>
+      </node>
       <node id="12">
         <label>esp_err.h</label>
       </node>
@@ -223,6 +285,9 @@
       </node>
       <node id="9">
         <label>freertos/task.h</label>
+      </node>
+      <node id="34">
+        <label>hal/gpio_types.h</label>
       </node>
       <node id="24">
         <label>math.h</label>
@@ -291,12 +356,14 @@
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="servo_8h" kindref="compound">servo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_8h" kindref="compound">utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_ENABLE_OLED</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="oled_8h" kindref="compound">oled.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shift__register_8h" kindref="compound">shift_register.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led__matrix_8h" kindref="compound">led_matrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_ENABLE_OLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="oled_8h" kindref="compound">oled.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/sra_board.h"/>
   </compounddef>

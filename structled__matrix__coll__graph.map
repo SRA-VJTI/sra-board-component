@@ -1,0 +1,4 @@
+<map id="led_matrix" name="led_matrix">
+<area shape="rect" id="node1" title="Struct used as a handle for LED matrix." alt="" coords="19,95,100,121"/>
+<area shape="rect" id="node2" href="$structshift__register__t.html" title="The handle used for representing the shift register." alt="" coords="5,5,113,32"/>
+</map>
