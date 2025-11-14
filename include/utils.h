@@ -33,7 +33,7 @@
 /**
  * @brief Number of bits in 4 bytes / int32_t / uint32_t
  */
-#define BITS_IN_4_BYTES 32
+#define BITS_IN_4_BYTES BITS_IN_A_BYTE * sizeof(uint32_t)
 
 /**
  * @brief Bound a value in a range [min, max]
