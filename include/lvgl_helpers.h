@@ -99,6 +99,7 @@ extern "C" {
  * so the buffer size can be divided by 8, e.g. see SSD1306 display size. */
 
 #define DISP_BUF_SIZE   1024
+#define LVGL_MONO_PALETTE_BYTES (LV_COLOR_INDEXED_PALETTE_SIZE(LV_COLOR_FORMAT_I1) * sizeof(lv_color32_t))
 
 /**
  * @brief Initialize LVGL I2C Master
@@ -118,30 +119,17 @@ void ssd1306_init(void);
 
 /**
  * @brief Flush the buffer on the screen
- * @param drv pointer to the display driver structure
+ * @param disp pointer to the display instance
  * @param area represents an area on the screen
- * @param color_map represents the color map
+ * @param px_map pointer to the rendered color map (htiled I1 data)
  */
-void ssd1306_flush(lv_disp_drv_t *drv, const lv_area_t *area, lv_color_t *color_map);
+void ssd1306_flush(lv_display_t *disp, const lv_area_t *area, uint8_t *px_map);
 
 /**
- * @brief Round the area that needs to be updated
- * @param drv pointer to the display driver structure
- * @param area represents an area on the screen
+ * @brief Ensure LVGL always redraws the entire panel so the vtiled flush pipeline stays consistent
+ * @param e LVGL event carrying the invalidated area
  */
-void ssd1306_rounder(lv_disp_drv_t *disp_drv, lv_area_t *area);
-
-/**
- * @brief Draw a pixel into the buffer
- * @param disp_drv pointer to the display driver structure
- * @param buf pointer to the memory range where you want to update the data
- * @param buf_w width of the range where you want to update the data
- * @param x x co-ordinate of pixel to update
- * @param y y co-ordinate of pixel to update
- * @param color monochrome color setting, either full or clear
- * @param opa opacity value
- */
-void ssd1306_set_px_cb(lv_disp_drv_t *disp_drv, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa);
+void ssd1306_rounder_event_cb(lv_event_t *e);
 
 /**
  * @brief Turn off the display
@@ -161,5 +149,4 @@ void ssd1306_sleep_out(void);
 #endif
 
 #endif /* LVGL_HELPERS_H */
-
 
