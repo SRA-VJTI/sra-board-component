@@ -9,7 +9,6 @@
     <includedby refid="mpu6050_8h" local="yes">include/mpu6050.h</includedby>
     <includedby refid="oled_8h" local="yes">include/oled.h</includedby>
     <includedby refid="servo_8h" local="yes">include/servo.h</includedby>
-    <includedby refid="shift__register_8h" local="yes">include/shift_register.h</includedby>
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="switches_8h" local="yes">include/switches.h</includedby>
     <includedby refid="motor__driver_8c" local="yes">src/motor_driver.c</includedby>
@@ -30,24 +29,6 @@
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>include/led_matrix.h</label>
-        <link refid="led__matrix_8h"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>include/led_matrix_font.h</label>
-        <link refid="led__matrix__font_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -97,13 +78,11 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -114,26 +93,16 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>include/shift_register.h</label>
-        <link refid="shift__register_8h"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
       </node>
-      <node id="23">
+      <node id="17">
         <label>include/switches.h</label>
         <link refid="switches_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -144,14 +113,6 @@
         <label>src/bar_graph.c</label>
         <link refid="bar__graph_8c"/>
       </node>
-      <node id="20">
-        <label>src/led_matrix.c</label>
-        <link refid="led__matrix_8c"/>
-      </node>
-      <node id="21">
-        <label>src/led_matrix_font.c</label>
-        <link refid="led__matrix__font_8c"/>
-      </node>
       <node id="7">
         <label>src/lsa.c</label>
         <link refid="lsa_8c"/>
@@ -160,7 +121,7 @@
         <label>src/lvgl_helpers.c</label>
         <link refid="lvgl__helpers_8c"/>
       </node>
-      <node id="25">
+      <node id="19">
         <label>src/motor_driver.c</label>
         <link refid="motor__driver_8c"/>
       </node>
@@ -176,11 +137,7 @@
         <label>src/servo.c</label>
         <link refid="servo_8c"/>
       </node>
-      <node id="22">
-        <label>src/shift_register.c</label>
-        <link refid="shift__register_8c"/>
-      </node>
-      <node id="24">
+      <node id="18">
         <label>src/switches.c</label>
         <link refid="switches_8c"/>
       </node>
@@ -567,39 +524,6 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="102" column="9" bodyfile="include/pin_defs.h" bodystart="102" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" prot="public" static="no">
-        <name>SHIFT_REGISTER_SDATA</name>
-        <initializer>12</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="107" column="9" bodyfile="include/pin_defs.h" bodystart="107" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a08441397716647885b748c448b053d1b" prot="public" static="no">
-        <name>SHIFT_REGISTER_SRCLK</name>
-        <initializer>25</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="108" column="9" bodyfile="include/pin_defs.h" bodystart="108" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6" prot="public" static="no">
-        <name>SHIFT_REGISTER_RCLK</name>
-        <initializer>13</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="109" column="9" bodyfile="include/pin_defs.h" bodystart="109" bodyend="-1"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -696,13 +620,8 @@
 <codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>5</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>18</highlight></codeline>
-<codeline lineno="104"></codeline>
-<codeline lineno="106"><highlight class="comment">//******<sp/><sp/><sp/><sp/>SIPO<sp/><sp/><sp/><sp/>*******//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107" refid="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SDATA<sp/>12</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108" refid="pin__defs_8h_1a08441397716647885b748c448b053d1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SRCLK<sp/>25</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109" refid="pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_RCLK<sp/><sp/>13</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/pin_defs.h"/>
   </compounddef>

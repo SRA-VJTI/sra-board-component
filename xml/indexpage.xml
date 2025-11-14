@@ -112,8 +112,8 @@
 </entry><entry thead="yes"><para>Description    </para>
 </entry></row>
 <row>
-<entry thead="no" align='center'><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/led_matrix">LED Matrix</ulink>   </para>
-</entry><entry thead="no"><para>LED Matrix can be used for testing purposes and displaying simple patterns    </para>
+<entry thead="no" align='center'><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/bar_graph">Bar Graph</ulink>   </para>
+</entry><entry thead="no"><para>Bar graph led can be used for testing purposes    </para>
 </entry></row>
 <row>
 <entry thead="no" align='center'><para><ulink url="https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/lsa">Light sensing array</ulink>   </para>

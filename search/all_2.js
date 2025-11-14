@@ -9,6 +9,5 @@ var searchData=
   ['complementary_5ffilter_6',['complementary_filter',['../mpu6050_8h.html#a43b01d95c708717047b47d408a606323',1,'complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float *complementary_angle, float *mpu_offset):&#160;mpu6050.c'],['../mpu6050_8c.html#a43b01d95c708717047b47d408a606323',1,'complementary_filter(int16_t *acce_raw_value, int16_t *gyro_raw_value, float *complementary_angle, float *mpu_offset):&#160;mpu6050.c']]],
   ['compute_5facce_5fangle_7',['compute_acce_angle',['../mpu6050_8h.html#aca3594a71e8ba8621f3968ee93cc457e',1,'compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float *acce_angle):&#160;mpu6050.c'],['../mpu6050_8c.html#aca3594a71e8ba8621f3968ee93cc457e',1,'compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float *acce_angle):&#160;mpu6050.c']]],
   ['compute_5fgyro_5fangle_8',['compute_gyro_angle',['../mpu6050_8h.html#a4b805f4cb3c30a323969abe87414ea90',1,'compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float *gyro_angle):&#160;mpu6050.c'],['../mpu6050_8c.html#a4b805f4cb3c30a323969abe87414ea90',1,'compute_gyro_angle(int16_t gx, int16_t gy, int16_t gz, float dt, float *gyro_angle):&#160;mpu6050.c']]],
-  ['config_9',['config',['../structled__matrix.html#a75b08e08f90fb254df44e0f3c113e523',1,'led_matrix']]],
-  ['config_5fadc1_10',['config_adc1',['../adc_8c.html#ae719088fda3590b4ce5153c4ecffb859',1,'adc.c']]]
+  ['config_5fadc1_9',['config_adc1',['../adc_8c.html#ae719088fda3590b4ce5153c4ecffb859',1,'adc.c']]]
 ];

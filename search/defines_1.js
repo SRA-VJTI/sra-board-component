@@ -11,7 +11,5 @@ var searchData=
   ['bg_5fled_5f8_8',['BG_LED_8',['../pin__defs_8h.html#abb2349aa558034464942254c952b8a30',1,'pin_defs.h']]],
   ['bit_5fclear_9',['BIT_CLEAR',['../lvgl__helpers_8c.html#a77fc3a931d1ad5fa08201e5c544817a0',1,'lvgl_helpers.c']]],
   ['bit_5fset_10',['BIT_SET',['../lvgl__helpers_8c.html#ade3c083fa7b1178fcca5671e1830f2f9',1,'lvgl_helpers.c']]],
-  ['bits_5fin_5f4_5fbytes_11',['BITS_IN_4_BYTES',['../utils_8h.html#aef43aba04f9c671c4208f1c98bc25cb9',1,'utils.h']]],
-  ['bits_5fin_5fa_5fbyte_12',['BITS_IN_A_BYTE',['../utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033',1,'utils.h']]],
-  ['buff_5fsize_13',['BUFF_SIZE',['../mpu6050_8h.html#a6c7cd32e1bac137f05e4a752b4ad10af',1,'mpu6050.h']]]
+  ['buff_5fsize_11',['BUFF_SIZE',['../mpu6050_8h.html#a6c7cd32e1bac137f05e4a752b4ad10af',1,'mpu6050.h']]]
 ];

@@ -17,10 +17,6 @@
     <member refid="structi2c__port__state__t_1a6fe22e2744e1a2bdaa4961e6a2e9f636" kind="variable"><name>config</name></member>
     <member refid="structi2c__port__state__t_1a0dd2940bf6483b8a20a1e3841bfcacaa" kind="variable"><name>installed</name></member>
   </compound>
-  <compound refid="structled__matrix" kind="struct"><name>led_matrix</name>
-    <member refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kind="variable"><name>data</name></member>
-    <member refid="structled__matrix_1a75b08e08f90fb254df44e0f3c113e523" kind="variable"><name>config</name></member>
-  </compound>
   <compound refid="structline__sensor__array_1_1line__sensor" kind="struct"><name>line_sensor_array::line_sensor</name>
     <member refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" kind="variable"><name>A0</name></member>
     <member refid="structline__sensor__array_1_1line__sensor_1a28e6d4af41b90d53d6b34c139c5abe25" kind="variable"><name>A1</name></member>
@@ -69,12 +65,6 @@
     <member refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kind="variable"><name>timer_num</name></member>
     <member refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kind="variable"><name>gen</name></member>
   </compound>
-  <compound refid="structshift__register__t" kind="struct"><name>shift_register_t</name>
-    <member refid="structshift__register__t_1a6b81097c9da0c2bb5b7e40071eea67fe" kind="variable"><name>sdata</name></member>
-    <member refid="structshift__register__t_1ad5afc32a87b90bcdba0b84ec18993f57" kind="variable"><name>srclk</name></member>
-    <member refid="structshift__register__t_1a6ad746b1adc128568f303de158b33b57" kind="variable"><name>rclk</name></member>
-    <member refid="structshift__register__t_1a3a9986772948c1ec12a28c267a3c90da" kind="variable"><name>timer</name></member>
-  </compound>
   <compound refid="adc_8h" kind="file"><name>adc.h</name>
     <member refid="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" kind="define"><name>ADC_ATTEN</name></member>
     <member refid="adc_8h_1a6e20add5d75926f896f2602a1b839673" kind="define"><name>ADC_BITWIDTH_LEN</name></member>
@@ -108,27 +98,6 @@
     <member refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kind="function"><name>i2c_dev_write</name></member>
     <member refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kind="function"><name>i2c_dev_read_reg</name></member>
     <member refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kind="function"><name>i2c_dev_write_reg</name></member>
-  </compound>
-  <compound refid="led__matrix_8h" kind="file"><name>led_matrix.h</name>
-    <member refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4" kind="enum"><name>led_matrix_output_mode_t</name></member>
-    <member refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1717d7c36af196e2e389fc673db3a49" kind="enumvalue"><name>LED_MATRIX_OUTPUT_SEQ</name></member>
-    <member refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1d148226b446b031b8f13c2f694d571" kind="enumvalue"><name>LED_MATRIX_OUTPUT_PAR</name></member>
-    <member refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kind="typedef"><name>led_matrix_data_t</name></member>
-    <member refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kind="typedef"><name>led_matrix_data_arr_t</name></member>
-    <member refid="led__matrix_8h_1a819e39d90fe13e13a9c0a50521181c5c" kind="variable"><name>led_matrix_rows</name></member>
-    <member refid="led__matrix_8h_1acefc36170db8a0747019f36473c005bb" kind="variable"><name>led_matrix_columns</name></member>
-    <member refid="led__matrix_8h_1a5c45bbf0474ae91cbaf7fead1d21d8d2" kind="variable"><name>led_matrix_map</name></member>
-    <member refid="led__matrix_8h_1a51494a4c836ad8620e12721a961f1e2a" kind="function"><name>led_matrix_init</name></member>
-    <member refid="led__matrix_8h_1ada834f4446c7fc026aa6cc562a481a3d" kind="function"><name>bool_to_uint32</name></member>
-    <member refid="led__matrix_8h_1a63b271a13334f74f69433e2b11cbe62c" kind="function"><name>led_matrix_set_bit</name></member>
-    <member refid="led__matrix_8h_1aa625ed34859afeaaa77d45694c1fd439" kind="function"><name>led_matrix_set_data</name></member>
-    <member refid="led__matrix_8h_1a56863ce32cf449e8e5edc48589431be2" kind="function"><name>led_matrix_set_data_raw</name></member>
-    <member refid="led__matrix_8h_1aba2c0ed982c8c7c37d823c3f77e9efe2" kind="function"><name>led_matrix_write</name></member>
-    <member refid="led__matrix_8h_1a63027033e120823a7f178b3f144106c0" kind="function"><name>led_matrix_display_string</name></member>
-    <member refid="led__matrix_8h_1ae753ca43dab493d0103882f8a39d14ab" kind="function"><name>led_matrix_cleanup</name></member>
-  </compound>
-  <compound refid="led__matrix__font_8h" kind="file"><name>led_matrix_font.h</name>
-    <member refid="led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16" kind="variable"><name>led_matrix_chars</name></member>
   </compound>
   <compound refid="lsa_8h" kind="file"><name>lsa.h</name>
     <member refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" kind="define"><name>NUMBER_OF_SAMPLES</name></member>
@@ -445,20 +414,11 @@
     <member refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kind="define"><name>SERVO_B</name></member>
     <member refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kind="define"><name>SERVO_C</name></member>
     <member refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" kind="define"><name>SERVO_D</name></member>
-    <member refid="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" kind="define"><name>SHIFT_REGISTER_SDATA</name></member>
-    <member refid="pin__defs_8h_1a08441397716647885b748c448b053d1b" kind="define"><name>SHIFT_REGISTER_SRCLK</name></member>
-    <member refid="pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6" kind="define"><name>SHIFT_REGISTER_RCLK</name></member>
   </compound>
   <compound refid="servo_8h" kind="file"><name>servo.h</name>
     <member refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
     <member refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
     <member refid="servo_8h_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
-  </compound>
-  <compound refid="shift__register_8h" kind="file"><name>shift_register.h</name>
-    <member refid="shift__register_8h_1a735c71ec46365bacf81bf2e6abdb4d03" kind="function"><name>shift_register_gpio_init</name></member>
-    <member refid="shift__register_8h_1a1dee47a262c0fde83872e2e56b65c94a" kind="function"><name>shift_register_write_uint8</name></member>
-    <member refid="shift__register_8h_1aae7d08ef9224c051d263da04f9668a95" kind="function"><name>shift_register_write_uint32</name></member>
-    <member refid="shift__register_8h_1ad1bc60618a55d74eac5d2042421e1007" kind="function"><name>shift_register_cleanup</name></member>
   </compound>
   <compound refid="sra__board_8h" kind="file"><name>sra_board.h</name>
   </compound>
@@ -467,8 +427,6 @@
     <member refid="switches_8h_1aa394f2692a1f424f79d5c3dcfa0d7bc6" kind="function"><name>read_switch</name></member>
   </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
-    <member refid="utils_8h_1ae3710cdfde4705f0eafe00a2a67e2033" kind="define"><name>BITS_IN_A_BYTE</name></member>
-    <member refid="utils_8h_1aef43aba04f9c671c4208f1c98bc25cb9" kind="define"><name>BITS_IN_4_BYTES</name></member>
     <member refid="utils_8h_1a22fd7311bf5f09376f4c561febd38899" kind="function"><name>bound</name></member>
     <member refid="utils_8h_1a5dd929afde45581ef0588e30db9650f8" kind="function"><name>map</name></member>
   </compound>
@@ -510,20 +468,6 @@
     <member refid="group__i2cdev_1ga22856483acc1f539d29e07876fc0418a" kind="function"><name>i2c_dev_write</name></member>
     <member refid="group__i2cdev_1gae8b4a6110cdc2d2e47b2214285ce59fc" kind="function"><name>i2c_dev_read_reg</name></member>
     <member refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kind="function"><name>i2c_dev_write_reg</name></member>
-  </compound>
-  <compound refid="led__matrix_8c" kind="file"><name>led_matrix.c</name>
-    <member refid="led__matrix_8c_1ae52918c4d199161f202b8ef11adac9b8" kind="variable"><name>TAG_LED_MATRIX</name></member>
-    <member refid="led__matrix_8c_1a51494a4c836ad8620e12721a961f1e2a" kind="function"><name>led_matrix_init</name></member>
-    <member refid="led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d" kind="function"><name>bool_to_uint32</name></member>
-    <member refid="led__matrix_8c_1ab37555d72fd52533e686e233f1fd23e5" kind="function"><name>led_matrix_set_bit</name></member>
-    <member refid="led__matrix_8c_1aa625ed34859afeaaa77d45694c1fd439" kind="function"><name>led_matrix_set_data</name></member>
-    <member refid="led__matrix_8c_1a56863ce32cf449e8e5edc48589431be2" kind="function"><name>led_matrix_set_data_raw</name></member>
-    <member refid="led__matrix_8c_1aba2c0ed982c8c7c37d823c3f77e9efe2" kind="function"><name>led_matrix_write</name></member>
-    <member refid="led__matrix_8c_1a63027033e120823a7f178b3f144106c0" kind="function"><name>led_matrix_display_string</name></member>
-    <member refid="led__matrix_8c_1ae753ca43dab493d0103882f8a39d14ab" kind="function"><name>led_matrix_cleanup</name></member>
-  </compound>
-  <compound refid="led__matrix__font_8c" kind="file"><name>led_matrix_font.c</name>
-    <member refid="led__matrix__font_8c_1abc271b7e3b81780bb3711b1a678a2e16" kind="variable"><name>led_matrix_chars</name></member>
   </compound>
   <compound refid="lsa_8c" kind="file"><name>lsa.c</name>
     <member refid="lsa_8c_1aac1676855a0ef8b82f36998025182fbe" kind="variable"><name>line_sensor_pins</name></member>
@@ -615,15 +559,6 @@
     <member refid="servo_8c_1a5b22e5ca5be55df86b36cea8f542291b" kind="function"><name>set_angle_servo_helper</name></member>
     <member refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
     <member refid="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
-  </compound>
-  <compound refid="shift__register_8c" kind="file"><name>shift_register.c</name>
-    <member refid="shift__register_8c_1a948f8fe649f07b971330b0d5eb136df6" kind="variable"><name>TAG_SHIFT_REGISTER</name></member>
-    <member refid="shift__register_8c_1ad8c1ad214843b380c56645e02bf2e34c" kind="function"><name>shift_register_timer_on_alarm</name></member>
-    <member refid="shift__register_8c_1a735c71ec46365bacf81bf2e6abdb4d03" kind="function"><name>shift_register_gpio_init</name></member>
-    <member refid="shift__register_8c_1a4dd2c2ab639492b857e770304d0303d7" kind="function"><name>clock_toggle_rising</name></member>
-    <member refid="shift__register_8c_1a1dee47a262c0fde83872e2e56b65c94a" kind="function"><name>shift_register_write_uint8</name></member>
-    <member refid="shift__register_8c_1aae7d08ef9224c051d263da04f9668a95" kind="function"><name>shift_register_write_uint32</name></member>
-    <member refid="shift__register_8c_1ad1bc60618a55d74eac5d2042421e1007" kind="function"><name>shift_register_cleanup</name></member>
   </compound>
   <compound refid="switches_8c" kind="file"><name>switches.c</name>
     <member refid="switches_8c_1ac00d65aab541451923cc2fc80893786e" kind="variable"><name>TAG_SWITCHES</name></member>

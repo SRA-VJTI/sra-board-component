@@ -5,8 +5,6 @@
     <innerfile refid="adc_8c">adc.c</innerfile>
     <innerfile refid="bar__graph_8c">bar_graph.c</innerfile>
     <innerfile refid="i2cdev_8c">i2cdev.c</innerfile>
-    <innerfile refid="led__matrix_8c">led_matrix.c</innerfile>
-    <innerfile refid="led__matrix__font_8c">led_matrix_font.c</innerfile>
     <innerfile refid="lsa_8c">lsa.c</innerfile>
     <innerfile refid="lvgl__helpers_8c">lvgl_helpers.c</innerfile>
     <innerfile refid="mcpwm__interface_8c">mcpwm_interface.c</innerfile>
@@ -14,7 +12,6 @@
     <innerfile refid="mpu6050_8c">mpu6050.c</innerfile>
     <innerfile refid="oled_8c">oled.c</innerfile>
     <innerfile refid="servo_8c">servo.c</innerfile>
-    <innerfile refid="shift__register_8c">shift_register.c</innerfile>
     <innerfile refid="switches_8c">switches.c</innerfile>
     <innerfile refid="utils_8c">utils.c</innerfile>
     <briefdescription>

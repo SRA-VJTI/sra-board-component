@@ -6,8 +6,6 @@
     <innerfile refid="bar__graph_8h">bar_graph.h</innerfile>
     <innerfile refid="esp__idf__lib__helpers_8h">esp_idf_lib_helpers.h</innerfile>
     <innerfile refid="i2cdev_8h">i2cdev.h</innerfile>
-    <innerfile refid="led__matrix_8h">led_matrix.h</innerfile>
-    <innerfile refid="led__matrix__font_8h">led_matrix_font.h</innerfile>
     <innerfile refid="lsa_8h">lsa.h</innerfile>
     <innerfile refid="lv__conf_8h">lv_conf.h</innerfile>
     <innerfile refid="lvgl__helpers_8h">lvgl_helpers.h</innerfile>
@@ -17,7 +15,6 @@
     <innerfile refid="oled_8h">oled.h</innerfile>
     <innerfile refid="pin__defs_8h">pin_defs.h</innerfile>
     <innerfile refid="servo_8h">servo.h</innerfile>
-    <innerfile refid="shift__register_8h">shift_register.h</innerfile>
     <innerfile refid="sra__board_8h">sra_board.h</innerfile>
     <innerfile refid="switches_8h">switches.h</innerfile>
     <innerfile refid="utils_8h">utils.h</innerfile>
