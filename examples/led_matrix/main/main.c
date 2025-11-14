@@ -68,9 +68,7 @@ void app_main(void)
         // Turn on a single LED matrix corresponding to the integer (2^i)
         ESP_ERROR_CHECK(led_matrix_set_data(&xMyLEDMatrix, 0x1 << i));
         ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
-        if (++i == CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS)
-            i = 0;
-
+        i = (i + 1) % (CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS);
         // Wait for 1000 ms
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
