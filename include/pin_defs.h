@@ -44,15 +44,15 @@
 
 //////// mpu //////
 #define MPU6050_INT 23
-#define MPU6050_SCL 22
 #define MPU6050_SDA 21
+#define MPU6050_SCL 22
 
 /////////////////////////////
 
 #ifdef CONFIG_ENABLE_OLED
 //////// oled ////////
-#define OLED_SCL 22
 #define OLED_SDA 21
+#define OLED_SCL 22
 #endif
 
 //////// bar graph //////////
