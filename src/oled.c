@@ -23,6 +23,7 @@
  */
 
 #include "oled.h"
+#include <math.h>
 
 static const char *TAG_OLED = "oled";
 
@@ -439,16 +440,8 @@ esp_err_t display_mpu(float pitch, float roll)
       lv_obj_set_style_line_color(needle, lv_color_white(), LV_PART_MAIN);
       lv_obj_set_style_line_rounded(needle, true, LV_PART_MAIN);
 
-      float clamped_pitch = pitch;
-      if (clamped_pitch > 90.0f)
-      {
-        clamped_pitch = 90.0f;
-      }
-      else if (clamped_pitch < -90.0f)
-      {
-        clamped_pitch = -90.0f;
-      }
-      int32_t rounded_pitch = (int32_t)((clamped_pitch >= 0.0f) ? (clamped_pitch + 0.5f) : (clamped_pitch - 0.5f));
+      float clamped_pitch = fmaxf(fminf(pitch, 90.0f), -90.0f);
+      int32_t rounded_pitch = (int32_t)roundf(clamped_pitch);
       lv_scale_set_line_needle_value(scale, needle, -10, rounded_pitch);
     }
   }
