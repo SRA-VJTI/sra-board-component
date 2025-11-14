@@ -29,9 +29,9 @@
  *  STATIC PROTOTYPES
  **********************/
 
-static uint8_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes_len);
-static uint8_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, size_t buffer_len);
-static void convert_htiled_to_ssd1306(const uint8_t *src, uint32_t width, uint32_t height, uint8_t *dst);
+static esp_err_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes_len);
+static esp_err_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, size_t buffer_len);
+static void convert_htiled_to_ssd1306(const uint8_t *src, const uint32_t width, const uint32_t height, uint8_t *dst);
 
 /**********************
  *  STATIC VARIABLES
@@ -70,8 +70,8 @@ void ssd1306_init(void)
         0xFF,
         OLED_CMD_DISPLAY_ON};
 
-    uint8_t err = send_data(NULL, conf, sizeof(conf));
-    assert(0 == err);
+    esp_err_t err = send_data(NULL, conf, sizeof(conf));
+    LV_ASSERT(err == ESP_OK);
 }
 
 void ssd1306_flush(lv_display_t *disp_drv, const lv_area_t *area, uint8_t *px_map)
@@ -79,8 +79,8 @@ void ssd1306_flush(lv_display_t *disp_drv, const lv_area_t *area, uint8_t *px_ma
     /* Divide by 8 */
     uint8_t row1 = area->y1 >> 3;
     uint8_t row2 = area->y2 >> 3;
-    uint32_t width = (uint32_t)(area->x2 - area->x1 + 1);
-    uint32_t height = (uint32_t)(area->y2 - area->y1 + 1);
+    const uint32_t width = (uint32_t)(area->x2 - area->x1 + 1);
+    const uint32_t height = (uint32_t)(area->y2 - area->y1 + 1);
     LV_ASSERT((height % 8U) == 0U);
 
     uint8_t conf[] = {
@@ -98,13 +98,13 @@ void ssd1306_flush(lv_display_t *disp_drv, const lv_area_t *area, uint8_t *px_ma
     const uint8_t *htiled = px_map + LVGL_MONO_PALETTE_BYTES;
     convert_htiled_to_ssd1306(htiled, width, height, ssd1306_framebuffer);
 
-    uint8_t err = send_data(disp_drv, conf, sizeof(conf));
-    assert(0 == err);
+    esp_err_t err = send_data(disp_drv, conf, sizeof(conf));
+    LV_ASSERT(err == ESP_OK);
 
     size_t page_cnt = (size_t)(row2 - row1 + 1);
     size_t payload_len = width * page_cnt;
     err = send_pixels(disp_drv, ssd1306_framebuffer, payload_len);
-    assert(0 == err);
+    LV_ASSERT(err == ESP_OK);
 
     lv_display_flush_ready(disp_drv);
 }
@@ -113,10 +113,7 @@ void ssd1306_rounder_event_cb(lv_event_t *e)
 {
     lv_display_t *disp = lv_event_get_target(e);
     lv_area_t *area = lv_event_get_param(e);
-    if (!disp || !area)
-    {
-        return;
-    }
+    LV_ASSERT(disp != NULL && area != NULL);
 
     area->x1 = 0;
     area->y1 = 0;
@@ -130,8 +127,8 @@ void ssd1306_sleep_in(void)
         OLED_CONTROL_BYTE_CMD_STREAM,
         OLED_CMD_DISPLAY_OFF};
 
-    uint8_t err = send_data(NULL, conf, sizeof(conf));
-    assert(0 == err);
+    esp_err_t err = send_data(NULL, conf, sizeof(conf));
+    LV_ASSERT(err == ESP_OK);
 }
 
 void ssd1306_sleep_out(void)
@@ -140,8 +137,8 @@ void ssd1306_sleep_out(void)
         OLED_CONTROL_BYTE_CMD_STREAM,
         OLED_CMD_DISPLAY_ON};
 
-    uint8_t err = send_data(NULL, conf, sizeof(conf));
-    assert(0 == err);
+    esp_err_t err = send_data(NULL, conf, sizeof(conf));
+    LV_ASSERT(err == ESP_OK);
 }
 
 /* Config the i2c master */
@@ -164,7 +161,7 @@ bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed_hz)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-static uint8_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes_len)
+static esp_err_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes_len)
 {
     (void)disp_drv;
 
@@ -177,7 +174,7 @@ static uint8_t send_data(lv_display_t *disp_drv, const void *bytes, size_t bytes
     return ESP_OK;
 }
 
-static uint8_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, size_t buffer_len)
+static esp_err_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, size_t buffer_len)
 {
     (void)disp_drv;
     I2C_DEV_TAKE_MUTEX(&ssd1306_dev_t);
@@ -194,10 +191,9 @@ static uint8_t send_pixels(lv_display_t *disp_drv, const uint8_t *color_buffer, 
     return ESP_OK;
 }
 
-static void convert_htiled_to_ssd1306(const uint8_t *src, uint32_t width, uint32_t height, uint8_t *dst)
+static void convert_htiled_to_ssd1306(const uint8_t *src, const uint32_t width, const uint32_t height, uint8_t *dst)
 {
-    LV_ASSERT(src != NULL);
-    LV_ASSERT(dst != NULL);
+    LV_ASSERT(src != NULL && dst != NULL);
     LV_ASSERT((width * height / 8U) <= (uint32_t)sizeof(ssd1306_framebuffer));
     memset(dst, 0, width * height / 8U);
 
