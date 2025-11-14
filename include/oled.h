@@ -92,7 +92,6 @@ esp_err_t display_mpu(float pitch, float roll);
 
  * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
  **/
-
 esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_value);
 
 

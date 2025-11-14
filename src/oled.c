@@ -447,6 +447,7 @@ esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_va
     text[i] = lv_label_create(scr);
   }
 
+  // Printing kp value on oled
   snprintf(kp_str, sizeof(kp_str), "Kp: %0.2f", kp);
   lv_label_set_text(text[0], kp_str);
 
