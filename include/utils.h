@@ -28,7 +28,7 @@
 /**
  * @brief Number of bits in a byte
  */
-#define BITS_IN_A_BYTE 8
+#define BITS_IN_A_BYTE sizeof(uint8_t)
 
 /**
  * @brief Number of bits in 4 bytes / int32_t / uint32_t
