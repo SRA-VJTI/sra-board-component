@@ -102,11 +102,4 @@
 #define SERVO_D 18
 /////////////////////////////
 
-//////// led matrix /////////
-//******    SIPO    *******//
-#define SHIFT_REGISTER_SDATA 12
-#define SHIFT_REGISTER_SRCLK 25
-#define SHIFT_REGISTER_RCLK  13
-/////////////////////////////
-
 #endif
