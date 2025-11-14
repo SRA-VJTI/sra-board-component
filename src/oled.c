@@ -23,7 +23,6 @@
  */
 
 #include "oled.h"
-#include <math.h>
 
 static const char *TAG_OLED = "oled";
 
@@ -100,13 +99,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t s
 };
 
 const lv_img_dsc_t sra_logo = {
-  .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_COLOR_FORMAT_I1,
-  .header.flags = 0,
+  .header.cf = LV_IMG_CF_INDEXED_1BIT,
+  .header.always_zero = 0,
+  .header.reserved = 0,
   .header.w = 115,
   .header.h = 64,
-  .header.stride = 15,
-  .data_size = sizeof(sra_logo_map),
+  .data_size = 968,
   .data = sra_logo_map,
 };
 
@@ -165,13 +163,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t w
 };
 
 const lv_img_dsc_t walle = {
-  .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_COLOR_FORMAT_I1,
-  .header.flags = 0,
+  .header.cf = LV_IMG_CF_INDEXED_1BIT,
+  .header.always_zero = 0,
+  .header.reserved = 0,
   .header.w = 108,
   .header.h = 48,
-  .header.stride = 14,
-  .data_size = sizeof(walle_map),
+  .data_size = 680,
   .data = walle_map,
 };
 
@@ -230,13 +227,12 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t m
 };
 
 const lv_img_dsc_t mario = {
-  .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_COLOR_FORMAT_I1,
-  .header.flags = 0,
+  .header.cf = LV_IMG_CF_INDEXED_1BIT,
+  .header.always_zero = 0,
+  .header.reserved = 0,
   .header.w = 122,
   .header.h = 48,
-  .header.stride = 16,
-  .data_size = sizeof(mario_map),
+  .data_size = 776,
   .data = mario_map,
 };
 
@@ -244,8 +240,9 @@ LV_IMG_DECLARE(sra_logo);
 LV_IMG_DECLARE(walle);
 LV_IMG_DECLARE(mario);
 
-static uint8_t oled_draw_buffer[DISP_BUF_SIZE + LVGL_MONO_PALETTE_BYTES];
-static lv_display_t *oled_display = NULL;
+lv_color_t *buf_1[DISP_BUF_SIZE];
+lv_disp_draw_buf_t disp_buf;
+lv_disp_drv_t disp_drv;
 
 esp_err_t init_oled()
 {
@@ -256,17 +253,20 @@ esp_err_t init_oled()
   lvgl_i2c_driver_init(OLED_SDA, OLED_SCL, OLED_IIC_FREQ_HZ);
   ssd1306_init();
 
-  oled_display = lv_display_create(OLED_WIDTH, OLED_HEIGHT);
-  lv_display_set_default(oled_display);
-  lv_display_set_color_format(oled_display, LV_COLOR_FORMAT_I1);
-  lv_display_set_buffers(oled_display, oled_draw_buffer, NULL, sizeof(oled_draw_buffer), LV_DISPLAY_RENDER_MODE_FULL);
-  lv_display_set_flush_cb(oled_display, ssd1306_flush);
-  lv_display_add_event_cb(oled_display, ssd1306_rounder_event_cb, LV_EVENT_INVALIDATE_AREA, NULL);
+  uint32_t size_in_px = DISP_BUF_SIZE * 8; 
 
-  lv_obj_t *screen = lv_scr_act();
-  lv_obj_set_style_bg_color(screen, lv_color_black(), LV_PART_MAIN);
-  lv_obj_set_style_bg_opa(screen, LV_OPA_COVER, LV_PART_MAIN);
-  lv_obj_set_style_text_color(screen, lv_color_white(), LV_PART_MAIN);
+  // Initialize the working buffer depending on the selected display
+  lv_disp_draw_buf_init(&disp_buf, buf_1, NULL, size_in_px);
+
+  lv_disp_drv_init(&disp_drv);
+  disp_drv.hor_res = 128;
+  disp_drv.ver_res = 64;
+  disp_drv.flush_cb = ssd1306_flush;
+  disp_drv.rounder_cb = ssd1306_rounder;
+  disp_drv.set_px_cb = ssd1306_set_px_cb;
+  disp_drv.draw_buf = &disp_buf;
+
+  lv_disp_drv_register(&disp_drv);
 
   // Display SRA logo
   display_logo(SRA_LOGO);
@@ -337,31 +337,31 @@ esp_err_t display_lsa(line_sensor_array readings)
   // Clear the screen
   lv_obj_clean(lv_scr_act());
 
-  static uint8_t cbuf[LV_CANVAS_BUF_SIZE(128, 64, LV_COLOR_FORMAT_GET_BPP(LV_COLOR_FORMAT_I1), LV_DRAW_BUF_STRIDE_ALIGN)];
+  static lv_color_t cbuf[LV_CANVAS_BUF_SIZE_INDEXED_1BIT(128, 64)];
   lv_obj_t *canvas = lv_canvas_create(lv_scr_act());
-  lv_canvas_set_buffer(canvas, cbuf, 128, 64, LV_COLOR_FORMAT_I1);
+  lv_canvas_set_buffer(canvas, cbuf, 128, 64, LV_IMG_CF_INDEXED_1BIT);
+  lv_canvas_set_palette(canvas, 0, lv_color_white());
+  lv_canvas_set_palette(canvas, 1, lv_color_black());
 
-  lv_color32_t palette_white = lv_color_to_32(lv_color_white(), LV_OPA_COVER);
-  lv_color32_t palette_black = lv_color_to_32(lv_color_black(), LV_OPA_COVER);
-  lv_canvas_set_palette(canvas, 0, palette_black);
-  lv_canvas_set_palette(canvas, 1, palette_white);
+  lv_color_t c0;
+  lv_color_t c1;
 
-  lv_color_t c0 = lv_color_black();
-  lv_color_t c1 = lv_color_white();
+  c0.full = 0;
+  c1.full = 1;
 
   for (uint32_t i = 0; i < 5; i++)
   {
     // Horizontal Border of Bar
     for (uint32_t x = 18 + i * 20; x < 28 + i * 20; x++)
     {
-      lv_canvas_set_px(canvas, x, 2, c1, LV_OPA_COVER);
-      lv_canvas_set_px(canvas, x, 52, c1, LV_OPA_COVER);
+      lv_canvas_set_px_color(canvas, x, 2, c1);
+      lv_canvas_set_px_color(canvas, x, 52, c1);
     }
     // Vertical Border of Bar
     for (uint32_t y = 2; y < 53; y++)
     {
-      lv_canvas_set_px(canvas, 18 + i * 20, y, c1, LV_OPA_COVER);
-      lv_canvas_set_px(canvas, 28 + i * 20, y, c1, LV_OPA_COVER);
+      lv_canvas_set_px_color(canvas, 18 + i * 20, y, c1);
+      lv_canvas_set_px_color(canvas, 28 + i * 20, y, c1);
     }
 
     // Reset Bar to Black
@@ -369,7 +369,7 @@ esp_err_t display_lsa(line_sensor_array readings)
     {
       for (uint32_t b = 19 + i * 20; b < 28 + i * 20; b++)
       {
-        lv_canvas_set_px(canvas, b, a, c0, LV_OPA_COVER);
+        lv_canvas_set_px_color(canvas, b, a, c0);
       }
     }
 
@@ -378,7 +378,7 @@ esp_err_t display_lsa(line_sensor_array readings)
     {
       for (uint32_t b = 19 + i * 20; b < 28 + i * 20; b++)
       {
-        lv_canvas_set_px(canvas, b, a, c1, LV_OPA_COVER);
+        lv_canvas_set_px_color(canvas, b, a, c1);
       }
     }
   }
@@ -408,43 +408,23 @@ esp_err_t display_mpu(float pitch, float roll)
   sprintf(roll_str, "Roll : %0.2f", roll);
   lv_label_set_text(roll_reading, roll_str);
   lv_obj_set_pos(roll_reading, 0, 36);
-  lv_obj_set_size(roll_reading, 96 , lv_obj_get_self_height(roll_reading));
+  lv_obj_set_size(pitch_reading, 96 , lv_obj_get_self_height(pitch_reading));
 
-  // Create a scale-based meter for pitch readings (LVGL v9+)
-  lv_obj_t *scale = lv_scale_create(lv_scr_act());
-  if (scale)
-  {
-    lv_obj_set_pos(scale, 64, 0);
-    lv_obj_set_size(scale, 64, 64);
-    lv_scale_set_mode(scale, LV_SCALE_MODE_ROUND_INNER);
-    lv_scale_set_range(scale, -90, 90);
-    lv_scale_set_angle_range(scale, 180);
-    lv_scale_set_rotation(scale, 270);
-    lv_scale_set_total_tick_count(scale, 19);
-    lv_scale_set_major_tick_every(scale, 3);
-    lv_scale_set_label_show(scale, false);
+  // Create Meter for Pitch Readings
+  lv_obj_t * meter = lv_meter_create(lv_scr_act());
+  lv_obj_set_pos(meter, 64, 0);
+  lv_obj_set_size(meter, 64, 64);
 
-    lv_obj_set_style_bg_opa(scale, LV_OPA_TRANSP, LV_PART_MAIN);
-    lv_obj_set_style_border_width(scale, 0, LV_PART_MAIN);
-    lv_obj_set_style_pad_all(scale, 0, LV_PART_MAIN);
-    lv_obj_set_style_line_width(scale, 1, LV_PART_ITEMS);
-    lv_obj_set_style_line_color(scale, lv_color_white(), LV_PART_ITEMS);
-    lv_obj_set_style_text_color(scale, lv_color_white(), LV_PART_ITEMS);
+  // Set scale of meter and ticks
+  lv_meter_scale_t * scale = lv_meter_add_scale(meter);
+  lv_meter_set_scale_range(meter, scale, 40, -70, 180, 270);
+  lv_meter_set_scale_ticks(meter, scale, 19, 1, 4, lv_color_black());
+  lv_meter_set_scale_major_ticks(meter, scale, 9, 1, 4, lv_color_black(), 10);
 
-    lv_obj_t *needle = lv_line_create(scale);
-    if (needle)
-    {
-      lv_obj_remove_style_all(needle);
-      lv_obj_set_size(needle, 64, 64);
-      lv_obj_set_style_line_width(needle, 2, LV_PART_MAIN);
-      lv_obj_set_style_line_color(needle, lv_color_white(), LV_PART_MAIN);
-      lv_obj_set_style_line_rounded(needle, true, LV_PART_MAIN);
-
-      float clamped_pitch = fmaxf(fminf(pitch, 90.0f), -90.0f);
-      int32_t rounded_pitch = (int32_t)roundf(clamped_pitch);
-      lv_scale_set_line_needle_value(scale, needle, -10, rounded_pitch);
-    }
-  }
+  // Add Needle
+  lv_meter_indicator_t * indic;
+  indic = lv_meter_add_needle_line(meter, scale, 2, lv_color_black(), -10);
+  lv_meter_set_indicator_value(meter, indic, pitch);
 
   // Refresh Display
   lv_refr_now(NULL);
