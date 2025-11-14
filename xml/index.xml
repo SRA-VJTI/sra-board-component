@@ -230,7 +230,7 @@
     <member refid="lv__conf_8h_1a8f1b3daead5fdab89b96c6b53c1ec12e" kind="define"><name>LV_USE_LED</name></member>
     <member refid="lv__conf_8h_1a2d446163f0c6a19032a776e3d0c558da" kind="define"><name>LV_USE_LIST</name></member>
     <member refid="lv__conf_8h_1a90669f225c84ae3c96bfbe9ce33e9621" kind="define"><name>LV_USE_MENU</name></member>
-    <member refid="lv__conf_8h_1ae661cddd729aafc083104a7255a7834e" kind="define"><name>LV_USE_SCALE</name></member>
+    <member refid="lv__conf_8h_1a1e485e6fc2a1b99548fd399b00054fdf" kind="define"><name>LV_USE_METER</name></member>
     <member refid="lv__conf_8h_1ab0d2f4f61aa8674a34c8e41b8d47d8aa" kind="define"><name>LV_USE_MSGBOX</name></member>
     <member refid="lv__conf_8h_1a1d6045ad00b8d5db61819fa511312871" kind="define"><name>LV_USE_SPAN</name></member>
     <member refid="lv__conf_8h_1afb7291443c61a1c56c1f8ee1fad58856" kind="define"><name>LV_USE_SPINBOX</name></member>
@@ -303,11 +303,11 @@
     <member refid="lvgl__helpers_8h_1a2538d3123df13cd51f2de5823b66fb00" kind="define"><name>OLED_CMD_SET_CHARGE_PUMP</name></member>
     <member refid="lvgl__helpers_8h_1ac0e5e2f42117c387d5ed9b956505d82b" kind="define"><name>OLED_IIC_FREQ_HZ</name></member>
     <member refid="lvgl__helpers_8h_1a654a6892936b96d1d9563c5eabec9dab" kind="define"><name>DISP_BUF_SIZE</name></member>
-    <member refid="lvgl__helpers_8h_1ad34063e9a72cb6d59e3c8280ffb2b89b" kind="define"><name>LVGL_MONO_PALETTE_BYTES</name></member>
     <member refid="lvgl__helpers_8h_1a11c3b96751518cac93ea6bcfe1d4c254" kind="function"><name>lvgl_i2c_driver_init</name></member>
     <member refid="lvgl__helpers_8h_1a8c501b9eb4c6efb3f7d387a8d5390058" kind="function"><name>ssd1306_init</name></member>
-    <member refid="lvgl__helpers_8h_1aed5e8f426ba70a180153957c8818b28d" kind="function"><name>ssd1306_flush</name></member>
-    <member refid="lvgl__helpers_8h_1a95d6e7a748cf4d8c2420caccfec22eb3" kind="function"><name>ssd1306_rounder_event_cb</name></member>
+    <member refid="lvgl__helpers_8h_1a3aa379841186fc2d5916f5ab83283188" kind="function"><name>ssd1306_flush</name></member>
+    <member refid="lvgl__helpers_8h_1af9bdc642d67c0bd08dba4a89d5725ba0" kind="function"><name>ssd1306_rounder</name></member>
+    <member refid="lvgl__helpers_8h_1af580fb2d697f0ffca8491ebe2ed0d8b9" kind="function"><name>ssd1306_set_px_cb</name></member>
     <member refid="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" kind="function"><name>ssd1306_sleep_in</name></member>
     <member refid="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" kind="function"><name>ssd1306_sleep_out</name></member>
   </compound>
@@ -479,13 +479,12 @@
     <member refid="lvgl__helpers_8c_1ade3c083fa7b1178fcca5671e1830f2f9" kind="define"><name>BIT_SET</name></member>
     <member refid="lvgl__helpers_8c_1a77fc3a931d1ad5fa08201e5c544817a0" kind="define"><name>BIT_CLEAR</name></member>
     <member refid="lvgl__helpers_8c_1ad24fad10bb32cd13fccf4034f9bc30ce" kind="variable"><name>ssd1306_dev_t</name></member>
-    <member refid="lvgl__helpers_8c_1ac7f81077cab2abec963357fc8afd653e" kind="variable"><name>ssd1306_framebuffer</name></member>
-    <member refid="lvgl__helpers_8c_1aa39fda403dcee1f7991a0f11672e7f06" kind="function"><name>send_data</name></member>
-    <member refid="lvgl__helpers_8c_1a6314a00131ae59e20ad5cabdbe4fe648" kind="function"><name>send_pixels</name></member>
-    <member refid="lvgl__helpers_8c_1a53387baa35588e3ff5c0fd39edf76824" kind="function"><name>convert_htiled_to_ssd1306</name></member>
+    <member refid="lvgl__helpers_8c_1a695f4589be54722f6c8a85a4e244e959" kind="function"><name>send_data</name></member>
+    <member refid="lvgl__helpers_8c_1a54054274c6b5dfc98e2ba4318f801542" kind="function"><name>send_pixels</name></member>
     <member refid="lvgl__helpers_8c_1a8c501b9eb4c6efb3f7d387a8d5390058" kind="function"><name>ssd1306_init</name></member>
-    <member refid="lvgl__helpers_8c_1aea64b34f4e3fb6654845ad109907bcdc" kind="function"><name>ssd1306_flush</name></member>
-    <member refid="lvgl__helpers_8c_1a95d6e7a748cf4d8c2420caccfec22eb3" kind="function"><name>ssd1306_rounder_event_cb</name></member>
+    <member refid="lvgl__helpers_8c_1af580fb2d697f0ffca8491ebe2ed0d8b9" kind="function"><name>ssd1306_set_px_cb</name></member>
+    <member refid="lvgl__helpers_8c_1ab8806490eb3741caa8f03009cb1a16a2" kind="function"><name>ssd1306_flush</name></member>
+    <member refid="lvgl__helpers_8c_1af9bdc642d67c0bd08dba4a89d5725ba0" kind="function"><name>ssd1306_rounder</name></member>
     <member refid="lvgl__helpers_8c_1a2bc107fb5554a2dd684aa3987a367795" kind="function"><name>ssd1306_sleep_in</name></member>
     <member refid="lvgl__helpers_8c_1a37a965445288f68e66b229e6075bc72c" kind="function"><name>ssd1306_sleep_out</name></member>
     <member refid="lvgl__helpers_8c_1a11c3b96751518cac93ea6bcfe1d4c254" kind="function"><name>lvgl_i2c_driver_init</name></member>
@@ -539,8 +538,9 @@
     <member refid="oled_8c_1aea1b9b71ec9ad4f81ec19b23bdc11e71" kind="variable"><name>walle</name></member>
     <member refid="oled_8c_1a95ab6ff9227127295ca863e2091c7f51" kind="variable"><name>mario_map</name></member>
     <member refid="oled_8c_1a854e3003f905cc6bf110e3b838b02b53" kind="variable"><name>mario</name></member>
-    <member refid="oled_8c_1af0676f1fc0675d0b52a25ce8c385272c" kind="variable"><name>oled_draw_buffer</name></member>
-    <member refid="oled_8c_1a7afc3ef56980ea9844dae653067d5659" kind="variable"><name>oled_display</name></member>
+    <member refid="oled_8c_1a526c4564302c02d83a148c9184943179" kind="variable"><name>buf_1</name></member>
+    <member refid="oled_8c_1ab05d1354c5c0aeda8efaa1b1e2e59995" kind="variable"><name>disp_buf</name></member>
+    <member refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kind="variable"><name>disp_drv</name></member>
     <member refid="oled_8c_1a836313d2aee4a4efe19c0a8b8e014065" kind="function"><name>LV_IMG_DECLARE</name></member>
     <member refid="oled_8c_1a9b01a1b3fe056d7a93fb3182e6f98b49" kind="function"><name>LV_IMG_DECLARE</name></member>
     <member refid="oled_8c_1a23f30fd25e2d55a3ee7ed8bec82148b5" kind="function"><name>LV_IMG_DECLARE</name></member>

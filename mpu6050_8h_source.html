@@ -152,7 +152,7 @@ $(function() {
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>esp_err_t <a class="code hl_function" href="mpu6050_8h.html#a6a709a3acda468f8ec109f09a3148a3a">mpu6050_read_gyro</a>(uint8_t *data_rd, <span class="keywordtype">size_t</span> size);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">void</span> <a class="code hl_function" href="mpu6050_8h.html#abb35efd200ff172bedad87a7ec590c7a">combine_msb_lsb_raw_data</a>(uint8_t *buf_1, int16_t *buf_2);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">void</span> <a class="code hl_function" href="mpu6050_8h.html#abb35efd200ff172bedad87a7ec590c7a">combine_msb_lsb_raw_data</a>(uint8_t *<a class="code hl_variable" href="oled_8c.html#a526c4564302c02d83a148c9184943179">buf_1</a>, int16_t *buf_2);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keywordtype">void</span> <a class="code hl_function" href="mpu6050_8h.html#aca3594a71e8ba8621f3968ee93cc457e">compute_acce_angle</a>(int16_t ax, int16_t ay, int16_t az, <span class="keywordtype">float</span> *acce_angle);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
@@ -181,6 +181,7 @@ $(function() {
 <div class="ttc" id="ampu6050_8h_html_aca3594a71e8ba8621f3968ee93cc457e"><div class="ttname"><a href="mpu6050_8h.html#aca3594a71e8ba8621f3968ee93cc457e">compute_acce_angle</a></div><div class="ttdeci">void compute_acce_angle(int16_t ax, int16_t ay, int16_t az, float *acce_angle)</div><div class="ttdoc">Compute the Euler angle (Pitch and Roll) from the accelerometer raw values Axes and Angles - X: Roll,...</div><div class="ttdef"><b>Definition:</b> mpu6050.c:128</div></div>
 <div class="ttc" id="ampu6050_8h_html_afb2330f2330e6a13a16e271648954709"><div class="ttname"><a href="mpu6050_8h.html#afb2330f2330e6a13a16e271648954709">calibrate_mpu6050</a></div><div class="ttdeci">esp_err_t calibrate_mpu6050()</div><div class="ttdoc">Function to calculate the MPU offset for raw values.</div><div class="ttdef"><b>Definition:</b> mpu6050.c:232</div></div>
 <div class="ttc" id="ampu6050_8h_html_aff189f3f860a58ec5ad054d15d8db470"><div class="ttname"><a href="mpu6050_8h.html#aff189f3f860a58ec5ad054d15d8db470">i2c_master_init</a></div><div class="ttdeci">esp_err_t i2c_master_init()</div><div class="ttdoc">Initialise the ESP32 I2C Driver in Master Mode.</div><div class="ttdef"><b>Definition:</b> mpu6050.c:39</div></div>
+<div class="ttc" id="aoled_8c_html_a526c4564302c02d83a148c9184943179"><div class="ttname"><a href="oled_8c.html#a526c4564302c02d83a148c9184943179">buf_1</a></div><div class="ttdeci">lv_color_t * buf_1[DISP_BUF_SIZE]</div><div class="ttdef"><b>Definition:</b> oled.c:243</div></div>
 <div class="ttc" id="apin__defs_8h_html"><div class="ttname"><a href="pin__defs_8h.html">pin_defs.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

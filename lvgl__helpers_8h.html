@@ -179,8 +179,6 @@ Macros</h2></td></tr>
 <tr class="separator:ac0e5e2f42117c387d5ed9b956505d82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a654a6892936b96d1d9563c5eabec9dab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#a654a6892936b96d1d9563c5eabec9dab">DISP_BUF_SIZE</a>&#160;&#160;&#160;1024</td></tr>
 <tr class="separator:a654a6892936b96d1d9563c5eabec9dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34063e9a72cb6d59e3c8280ffb2b89b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#ad34063e9a72cb6d59e3c8280ffb2b89b">LVGL_MONO_PALETTE_BYTES</a>&#160;&#160;&#160;(LV_COLOR_INDEXED_PALETTE_SIZE(LV_COLOR_FORMAT_I1) * sizeof(lv_color32_t))</td></tr>
-<tr class="separator:ad34063e9a72cb6d59e3c8280ffb2b89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -190,12 +188,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a8c501b9eb4c6efb3f7d387a8d5390058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#a8c501b9eb4c6efb3f7d387a8d5390058">ssd1306_init</a> (void)</td></tr>
 <tr class="memdesc:a8c501b9eb4c6efb3f7d387a8d5390058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize ssd1306 device.  <a href="lvgl__helpers_8h.html#a8c501b9eb4c6efb3f7d387a8d5390058">More...</a><br /></td></tr>
 <tr class="separator:a8c501b9eb4c6efb3f7d387a8d5390058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5e8f426ba70a180153957c8818b28d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#aed5e8f426ba70a180153957c8818b28d">ssd1306_flush</a> (lv_display_t *disp, const lv_area_t *area, uint8_t *px_map)</td></tr>
-<tr class="memdesc:aed5e8f426ba70a180153957c8818b28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the buffer on the screen.  <a href="lvgl__helpers_8h.html#aed5e8f426ba70a180153957c8818b28d">More...</a><br /></td></tr>
-<tr class="separator:aed5e8f426ba70a180153957c8818b28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95d6e7a748cf4d8c2420caccfec22eb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#a95d6e7a748cf4d8c2420caccfec22eb3">ssd1306_rounder_event_cb</a> (lv_event_t *e)</td></tr>
-<tr class="memdesc:a95d6e7a748cf4d8c2420caccfec22eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure LVGL always redraws the entire panel so the vtiled flush pipeline stays consistent.  <a href="lvgl__helpers_8h.html#a95d6e7a748cf4d8c2420caccfec22eb3">More...</a><br /></td></tr>
-<tr class="separator:a95d6e7a748cf4d8c2420caccfec22eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa379841186fc2d5916f5ab83283188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#a3aa379841186fc2d5916f5ab83283188">ssd1306_flush</a> (lv_disp_drv_t *drv, const lv_area_t *area, lv_color_t *color_map)</td></tr>
+<tr class="memdesc:a3aa379841186fc2d5916f5ab83283188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the buffer on the screen.  <a href="lvgl__helpers_8h.html#a3aa379841186fc2d5916f5ab83283188">More...</a><br /></td></tr>
+<tr class="separator:a3aa379841186fc2d5916f5ab83283188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bdc642d67c0bd08dba4a89d5725ba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#af9bdc642d67c0bd08dba4a89d5725ba0">ssd1306_rounder</a> (lv_disp_drv_t *<a class="el" href="oled_8c.html#a3ae4a682aeb784530d1bf250fadbea59">disp_drv</a>, lv_area_t *area)</td></tr>
+<tr class="memdesc:af9bdc642d67c0bd08dba4a89d5725ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Round the area that needs to be updated.  <a href="lvgl__helpers_8h.html#af9bdc642d67c0bd08dba4a89d5725ba0">More...</a><br /></td></tr>
+<tr class="separator:af9bdc642d67c0bd08dba4a89d5725ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af580fb2d697f0ffca8491ebe2ed0d8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#af580fb2d697f0ffca8491ebe2ed0d8b9">ssd1306_set_px_cb</a> (lv_disp_drv_t *<a class="el" href="oled_8c.html#a3ae4a682aeb784530d1bf250fadbea59">disp_drv</a>, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa)</td></tr>
+<tr class="memdesc:af580fb2d697f0ffca8491ebe2ed0d8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a pixel into the buffer.  <a href="lvgl__helpers_8h.html#af580fb2d697f0ffca8491ebe2ed0d8b9">More...</a><br /></td></tr>
+<tr class="separator:af580fb2d697f0ffca8491ebe2ed0d8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc107fb5554a2dd684aa3987a367795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lvgl__helpers_8h.html#a2bc107fb5554a2dd684aa3987a367795">ssd1306_sleep_in</a> (void)</td></tr>
 <tr class="memdesc:a2bc107fb5554a2dd684aa3987a367795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off the display.  <a href="lvgl__helpers_8h.html#a2bc107fb5554a2dd684aa3987a367795">More...</a><br /></td></tr>
 <tr class="separator:a2bc107fb5554a2dd684aa3987a367795"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,20 +213,6 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define DISP_BUF_SIZE&#160;&#160;&#160;1024</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad34063e9a72cb6d59e3c8280ffb2b89b" name="ad34063e9a72cb6d59e3c8280ffb2b89b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34063e9a72cb6d59e3c8280ffb2b89b">&#9670;&nbsp;</a></span>LVGL_MONO_PALETTE_BYTES</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LVGL_MONO_PALETTE_BYTES&#160;&#160;&#160;(LV_COLOR_INDEXED_PALETTE_SIZE(LV_COLOR_FORMAT_I1) * sizeof(lv_color32_t))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -731,8 +718,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aed5e8f426ba70a180153957c8818b28d" name="aed5e8f426ba70a180153957c8818b28d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed5e8f426ba70a180153957c8818b28d">&#9670;&nbsp;</a></span>ssd1306_flush()</h2>
+<a id="a3aa379841186fc2d5916f5ab83283188" name="a3aa379841186fc2d5916f5ab83283188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa379841186fc2d5916f5ab83283188">&#9670;&nbsp;</a></span>ssd1306_flush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -740,8 +727,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void ssd1306_flush </td>
           <td>(</td>
-          <td class="paramtype">lv_display_t *&#160;</td>
-          <td class="paramname"><em>disp</em>, </td>
+          <td class="paramtype">lv_disp_drv_t *&#160;</td>
+          <td class="paramname"><em>drv</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -752,8 +739,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>px_map</em>&#160;</td>
+          <td class="paramtype">lv_color_t *&#160;</td>
+          <td class="paramname"><em>color_map</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -766,9 +753,9 @@ Functions</h2></td></tr>
 <p>Flush the buffer on the screen. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">disp</td><td>pointer to the display instance </td></tr>
+    <tr><td class="paramname">drv</td><td>pointer to the display driver structure </td></tr>
     <tr><td class="paramname">area</td><td>represents an area on the screen </td></tr>
-    <tr><td class="paramname">px_map</td><td>pointer to the rendered color map (htiled I1 data) </td></tr>
+    <tr><td class="paramname">color_map</td><td>represents the color map </td></tr>
   </table>
   </dd>
 </dl>
@@ -796,26 +783,109 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a95d6e7a748cf4d8c2420caccfec22eb3" name="a95d6e7a748cf4d8c2420caccfec22eb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95d6e7a748cf4d8c2420caccfec22eb3">&#9670;&nbsp;</a></span>ssd1306_rounder_event_cb()</h2>
+<a id="af9bdc642d67c0bd08dba4a89d5725ba0" name="af9bdc642d67c0bd08dba4a89d5725ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9bdc642d67c0bd08dba4a89d5725ba0">&#9670;&nbsp;</a></span>ssd1306_rounder()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ssd1306_rounder_event_cb </td>
+          <td class="memname">void ssd1306_rounder </td>
           <td>(</td>
-          <td class="paramtype">lv_event_t *&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
+          <td class="paramtype">lv_disp_drv_t *&#160;</td>
+          <td class="paramname"><em>disp_drv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">lv_area_t *&#160;</td>
+          <td class="paramname"><em>area</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ensure LVGL always redraws the entire panel so the vtiled flush pipeline stays consistent. </p>
+<p>Round the area that needs to be updated. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>LVGL event carrying the invalidated area </td></tr>
+    <tr><td class="paramname">drv</td><td>pointer to the display driver structure </td></tr>
+    <tr><td class="paramname">area</td><td>represents an area on the screen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af580fb2d697f0ffca8491ebe2ed0d8b9" name="af580fb2d697f0ffca8491ebe2ed0d8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af580fb2d697f0ffca8491ebe2ed0d8b9">&#9670;&nbsp;</a></span>ssd1306_set_px_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ssd1306_set_px_cb </td>
+          <td>(</td>
+          <td class="paramtype">lv_disp_drv_t *&#160;</td>
+          <td class="paramname"><em>disp_drv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_coord_t&#160;</td>
+          <td class="paramname"><em>buf_w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_coord_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_coord_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_color_t&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_opa_t&#160;</td>
+          <td class="paramname"><em>opa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a pixel into the buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disp_drv</td><td>pointer to the display driver structure </td></tr>
+    <tr><td class="paramname">buf</td><td>pointer to the memory range where you want to update the data </td></tr>
+    <tr><td class="paramname">buf_w</td><td>width of the range where you want to update the data </td></tr>
+    <tr><td class="paramname">x</td><td>x co-ordinate of pixel to update </td></tr>
+    <tr><td class="paramname">y</td><td>y co-ordinate of pixel to update </td></tr>
+    <tr><td class="paramname">color</td><td>monochrome color setting, either full or clear </td></tr>
+    <tr><td class="paramname">opa</td><td>opacity value </td></tr>
   </table>
   </dd>
 </dl>

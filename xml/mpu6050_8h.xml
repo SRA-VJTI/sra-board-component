@@ -1015,7 +1015,7 @@
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal">esp_err_t<sp/><ref refid="mpu6050_8h_1a6a709a3acda468f8ec109f09a3148a3a" kindref="member">mpu6050_read_gyro</ref>(uint8_t<sp/>*data_rd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*buf_1,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8h_1aca3594a71e8ba8621f3968ee93cc457e" kindref="member">compute_acce_angle</ref>(int16_t<sp/>ax,<sp/>int16_t<sp/>ay,<sp/>int16_t<sp/>az,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*acce_angle);</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>

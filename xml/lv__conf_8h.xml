@@ -1220,7 +1220,7 @@
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1af4690072288635b42fbf0c8829943518" prot="public" static="no">
         <name>LV_USE_LINE</name>
-        <initializer>1</initializer>
+        <initializer>0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1383,8 +1383,8 @@
         </inbodydescription>
         <location file="include/lv_conf.h" line="539" column="9" bodyfile="include/lv_conf.h" bodystart="539" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="lv__conf_8h_1ae661cddd729aafc083104a7255a7834e" prot="public" static="no">
-        <name>LV_USE_SCALE</name>
+      <memberdef kind="define" id="lv__conf_8h_1a1e485e6fc2a1b99548fd399b00054fdf" prot="public" static="no">
+        <name>LV_USE_METER</name>
         <initializer>1</initializer>
         <briefdescription>
         </briefdescription>
@@ -1403,7 +1403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="544" column="9" bodyfile="include/lv_conf.h" bodystart="544" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="543" column="9" bodyfile="include/lv_conf.h" bodystart="543" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a1d6045ad00b8d5db61819fa511312871" prot="public" static="no">
         <name>LV_USE_SPAN</name>
@@ -1414,7 +1414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="546" column="9" bodyfile="include/lv_conf.h" bodystart="546" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="545" column="9" bodyfile="include/lv_conf.h" bodystart="545" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1afb7291443c61a1c56c1f8ee1fad58856" prot="public" static="no">
         <name>LV_USE_SPINBOX</name>
@@ -1425,7 +1425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="552" column="9" bodyfile="include/lv_conf.h" bodystart="552" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="551" column="9" bodyfile="include/lv_conf.h" bodystart="551" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a4d893a8d05d91416cfb0e94139f9975f" prot="public" static="no">
         <name>LV_USE_SPINNER</name>
@@ -1436,7 +1436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="554" column="9" bodyfile="include/lv_conf.h" bodystart="554" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="553" column="9" bodyfile="include/lv_conf.h" bodystart="553" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a93727577a2845780880149217a435bac" prot="public" static="no">
         <name>LV_USE_TABVIEW</name>
@@ -1447,7 +1447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="556" column="9" bodyfile="include/lv_conf.h" bodystart="556" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="555" column="9" bodyfile="include/lv_conf.h" bodystart="555" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1ae722bef533e6c7319fced268cfd6f712" prot="public" static="no">
         <name>LV_USE_TILEVIEW</name>
@@ -1458,7 +1458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="558" column="9" bodyfile="include/lv_conf.h" bodystart="558" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="557" column="9" bodyfile="include/lv_conf.h" bodystart="557" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1ab0b3e246f4129a4679c2f50749002ba1" prot="public" static="no">
         <name>LV_USE_WIN</name>
@@ -1469,7 +1469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="560" column="9" bodyfile="include/lv_conf.h" bodystart="560" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="559" column="9" bodyfile="include/lv_conf.h" bodystart="559" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a1df57ee8809abc5d8c24bc95ea6293b7" prot="public" static="no">
         <name>LV_USE_THEME_DEFAULT</name>
@@ -1480,7 +1480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="567" column="9" bodyfile="include/lv_conf.h" bodystart="567" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="566" column="9" bodyfile="include/lv_conf.h" bodystart="566" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a98e05a1aa53e40f159c79b19d1c7f6b4" prot="public" static="no">
         <name>LV_USE_THEME_BASIC</name>
@@ -1491,7 +1491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="581" column="9" bodyfile="include/lv_conf.h" bodystart="581" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="580" column="9" bodyfile="include/lv_conf.h" bodystart="580" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a27648a176c28e6adbcf6225d8ef79e56" prot="public" static="no">
         <name>LV_USE_THEME_MONO</name>
@@ -1502,7 +1502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="584" column="9" bodyfile="include/lv_conf.h" bodystart="584" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="583" column="9" bodyfile="include/lv_conf.h" bodystart="583" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1aed5e4669c5b03deae5e87c421f756cc0" prot="public" static="no">
         <name>LV_USE_FLEX</name>
@@ -1513,7 +1513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="591" column="9" bodyfile="include/lv_conf.h" bodystart="591" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="590" column="9" bodyfile="include/lv_conf.h" bodystart="590" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a448130ebbbaf9352f91c9161bed49862" prot="public" static="no">
         <name>LV_USE_GRID</name>
@@ -1524,7 +1524,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="594" column="9" bodyfile="include/lv_conf.h" bodystart="594" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="593" column="9" bodyfile="include/lv_conf.h" bodystart="593" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1ad229a30c5f679f8e608a491f098dec24" prot="public" static="no">
         <name>LV_USE_FS_STDIO</name>
@@ -1535,7 +1535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="603" column="9" bodyfile="include/lv_conf.h" bodystart="603" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="602" column="9" bodyfile="include/lv_conf.h" bodystart="602" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a60d22fc87afad0fd00fbb38a76889cfb" prot="public" static="no">
         <name>LV_USE_FS_POSIX</name>
@@ -1546,7 +1546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="611" column="9" bodyfile="include/lv_conf.h" bodystart="611" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="610" column="9" bodyfile="include/lv_conf.h" bodystart="610" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a83ade6ab62190bcf5adf2301bd56f01e" prot="public" static="no">
         <name>LV_USE_FS_WIN32</name>
@@ -1557,7 +1557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="619" column="9" bodyfile="include/lv_conf.h" bodystart="619" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="618" column="9" bodyfile="include/lv_conf.h" bodystart="618" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1aaf74151144e3f9249f77a7092d64a2ab" prot="public" static="no">
         <name>LV_USE_FS_FATFS</name>
@@ -1568,7 +1568,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="627" column="9" bodyfile="include/lv_conf.h" bodystart="627" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="626" column="9" bodyfile="include/lv_conf.h" bodystart="626" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1aa5ab5053c7c516c234f3af8cec87efac" prot="public" static="no">
         <name>LV_USE_PNG</name>
@@ -1579,7 +1579,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="634" column="9" bodyfile="include/lv_conf.h" bodystart="634" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="633" column="9" bodyfile="include/lv_conf.h" bodystart="633" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1aa204c68978c64a659c43618f9113fef8" prot="public" static="no">
         <name>LV_USE_BMP</name>
@@ -1590,7 +1590,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="637" column="9" bodyfile="include/lv_conf.h" bodystart="637" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="636" column="9" bodyfile="include/lv_conf.h" bodystart="636" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a1a7272048f176c8b87966194933cc2bd" prot="public" static="no">
         <name>LV_USE_SJPG</name>
@@ -1601,7 +1601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="641" column="9" bodyfile="include/lv_conf.h" bodystart="641" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="640" column="9" bodyfile="include/lv_conf.h" bodystart="640" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a40257e0390c96f7e9c604f6fef4f996c" prot="public" static="no">
         <name>LV_USE_GIF</name>
@@ -1612,7 +1612,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="644" column="9" bodyfile="include/lv_conf.h" bodystart="644" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="643" column="9" bodyfile="include/lv_conf.h" bodystart="643" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a23ad1b5ec39c469c9dda0cb4b8e3e858" prot="public" static="no">
         <name>LV_USE_QRCODE</name>
@@ -1623,7 +1623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="647" column="9" bodyfile="include/lv_conf.h" bodystart="647" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="646" column="9" bodyfile="include/lv_conf.h" bodystart="646" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1add2c97b28774c04c288091b589cf50c6" prot="public" static="no">
         <name>LV_USE_FREETYPE</name>
@@ -1634,7 +1634,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="650" column="9" bodyfile="include/lv_conf.h" bodystart="650" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="649" column="9" bodyfile="include/lv_conf.h" bodystart="649" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1af9a8b2a5334032d5e4e01fb32592a274" prot="public" static="no">
         <name>LV_USE_RLOTTIE</name>
@@ -1645,7 +1645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="667" column="9" bodyfile="include/lv_conf.h" bodystart="667" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="666" column="9" bodyfile="include/lv_conf.h" bodystart="666" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1abb21bfde5dc40dd802fcbefaf285ac64" prot="public" static="no">
         <name>LV_USE_FFMPEG</name>
@@ -1656,7 +1656,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="671" column="9" bodyfile="include/lv_conf.h" bodystart="671" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="670" column="9" bodyfile="include/lv_conf.h" bodystart="670" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a44cc4d61a2c09eb55907a3e56e4829f3" prot="public" static="no">
         <name>LV_USE_SNAPSHOT</name>
@@ -1667,7 +1667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="682" column="9" bodyfile="include/lv_conf.h" bodystart="682" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="681" column="9" bodyfile="include/lv_conf.h" bodystart="681" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a7d49a68be38305ca97ae9e1dc3ab90f4" prot="public" static="no">
         <name>LV_USE_MONKEY</name>
@@ -1678,7 +1678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="685" column="9" bodyfile="include/lv_conf.h" bodystart="685" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="684" column="9" bodyfile="include/lv_conf.h" bodystart="684" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a7feb72fb1f8a053c892392c5f36b6d19" prot="public" static="no">
         <name>LV_USE_GRIDNAV</name>
@@ -1689,7 +1689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="688" column="9" bodyfile="include/lv_conf.h" bodystart="688" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="687" column="9" bodyfile="include/lv_conf.h" bodystart="687" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a2556b0a446d9087fba960b105dfcaa4b" prot="public" static="no">
         <name>LV_USE_FRAGMENT</name>
@@ -1700,7 +1700,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="691" column="9" bodyfile="include/lv_conf.h" bodystart="691" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="690" column="9" bodyfile="include/lv_conf.h" bodystart="690" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a1e57f030217a79b9618d4eaa35edf79e" prot="public" static="no">
         <name>LV_USE_IMGFONT</name>
@@ -1711,7 +1711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="694" column="9" bodyfile="include/lv_conf.h" bodystart="694" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="693" column="9" bodyfile="include/lv_conf.h" bodystart="693" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1ada247ba2fac6276bd328c65803e67b2b" prot="public" static="no">
         <name>LV_USE_MSG</name>
@@ -1722,7 +1722,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="697" column="9" bodyfile="include/lv_conf.h" bodystart="697" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="696" column="9" bodyfile="include/lv_conf.h" bodystart="696" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1adfd613085a4881dc6f64b918c11b47da" prot="public" static="no">
         <name>LV_USE_IME_PINYIN</name>
@@ -1733,7 +1733,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="701" column="9" bodyfile="include/lv_conf.h" bodystart="701" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="700" column="9" bodyfile="include/lv_conf.h" bodystart="700" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a0e9851d66108d2d705713308ae332bb9" prot="public" static="no">
         <name>LV_BUILD_EXAMPLES</name>
@@ -1744,7 +1744,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="722" column="9" bodyfile="include/lv_conf.h" bodystart="722" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="721" column="9" bodyfile="include/lv_conf.h" bodystart="721" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a5a2e25637c9d93546539f093574eafc1" prot="public" static="no">
         <name>LV_USE_DEMO_WIDGETS</name>
@@ -1755,7 +1755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="729" column="9" bodyfile="include/lv_conf.h" bodystart="729" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="728" column="9" bodyfile="include/lv_conf.h" bodystart="728" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1aee011cceb4ac179f9bc720a016504d63" prot="public" static="no">
         <name>LV_USE_DEMO_KEYPAD_AND_ENCODER</name>
@@ -1766,7 +1766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="735" column="9" bodyfile="include/lv_conf.h" bodystart="735" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="734" column="9" bodyfile="include/lv_conf.h" bodystart="734" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1ae87e263515f66803e0283382636296fe" prot="public" static="no">
         <name>LV_USE_DEMO_BENCHMARK</name>
@@ -1777,7 +1777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="738" column="9" bodyfile="include/lv_conf.h" bodystart="738" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="737" column="9" bodyfile="include/lv_conf.h" bodystart="737" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1aaee5ebebad32924c65aede58c4391a09" prot="public" static="no">
         <name>LV_USE_DEMO_STRESS</name>
@@ -1788,7 +1788,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="745" column="9" bodyfile="include/lv_conf.h" bodystart="745" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="744" column="9" bodyfile="include/lv_conf.h" bodystart="744" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="lv__conf_8h_1a291831ee05115d17571a371d3cbf18f7" prot="public" static="no">
         <name>LV_USE_DEMO_MUSIC</name>
@@ -1799,13 +1799,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lv_conf.h" line="748" column="9" bodyfile="include/lv_conf.h" bodystart="748" bodyend="-1"/>
+        <location file="include/lv_conf.h" line="747" column="9" bodyfile="include/lv_conf.h" bodystart="747" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Configuration file for v9.4.0 </para>
+<para>Configuration file for v8.3.3 </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
@@ -2270,7 +2270,7 @@
 <codeline lineno="483" refid="lv__conf_8h_1a5c49073d980131304fa76635eee15f3a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_LABEL_LONG_TXT_HINT<sp/>1<sp/><sp/></highlight><highlight class="comment">/*Store<sp/>some<sp/>extra<sp/>info<sp/>in<sp/>labels<sp/>to<sp/>speed<sp/>up<sp/>drawing<sp/>of<sp/>very<sp/>long<sp/>texts*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="484"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="485"><highlight class="normal"></highlight></codeline>
-<codeline lineno="486" refid="lv__conf_8h_1af4690072288635b42fbf0c8829943518" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_LINE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486" refid="lv__conf_8h_1af4690072288635b42fbf0c8829943518" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_LINE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="487"><highlight class="normal"></highlight></codeline>
 <codeline lineno="488" refid="lv__conf_8h_1a612924ae19721e7d06c7a1640ce2097b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_ROLLER<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/></highlight><highlight class="comment">/*Requires:<sp/>lv_label*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="489"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_ROLLER</highlight><highlight class="normal"></highlight></codeline>
@@ -2325,227 +2325,226 @@
 <codeline lineno="538"><highlight class="normal"></highlight></codeline>
 <codeline lineno="539" refid="lv__conf_8h_1a90669f225c84ae3c96bfbe9ce33e9621" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MENU<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="540"><highlight class="normal"></highlight></codeline>
-<codeline lineno="541" refid="lv__conf_8h_1ae661cddd729aafc083104a7255a7834e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SCALE<sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541" refid="lv__conf_8h_1a1e485e6fc2a1b99548fd399b00054fdf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_METER<sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="542"><highlight class="normal"></highlight></codeline>
-<codeline lineno="543"><highlight class="normal"></highlight></codeline>
-<codeline lineno="544" refid="lv__conf_8h_1ab0d2f4f61aa8674a34c8e41b8d47d8aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MSGBOX<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="545"><highlight class="normal"></highlight></codeline>
-<codeline lineno="546" refid="lv__conf_8h_1a1d6045ad00b8d5db61819fa511312871" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SPAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="547"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_SPAN</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*A<sp/>line<sp/>text<sp/>can<sp/>contain<sp/>maximum<sp/>num<sp/>of<sp/>span<sp/>descriptor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="549"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_SPAN_SNIPPET_STACK_SIZE<sp/>64</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="550"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="551"><highlight class="normal"></highlight></codeline>
-<codeline lineno="552" refid="lv__conf_8h_1afb7291443c61a1c56c1f8ee1fad58856" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SPINBOX<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="553"><highlight class="normal"></highlight></codeline>
-<codeline lineno="554" refid="lv__conf_8h_1a4d893a8d05d91416cfb0e94139f9975f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SPINNER<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="555"><highlight class="normal"></highlight></codeline>
-<codeline lineno="556" refid="lv__conf_8h_1a93727577a2845780880149217a435bac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_TABVIEW<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="557"><highlight class="normal"></highlight></codeline>
-<codeline lineno="558" refid="lv__conf_8h_1ae722bef533e6c7319fced268cfd6f712" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_TILEVIEW<sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="559"><highlight class="normal"></highlight></codeline>
-<codeline lineno="560" refid="lv__conf_8h_1ab0b3e246f4129a4679c2f50749002ba1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_WIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="561"><highlight class="normal"></highlight></codeline>
-<codeline lineno="562"><highlight class="normal"></highlight><highlight class="comment">/*-----------</highlight></codeline>
-<codeline lineno="563"><highlight class="comment"><sp/>*<sp/>Themes</highlight></codeline>
-<codeline lineno="564"><highlight class="comment"><sp/>*----------*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="565"><highlight class="normal"></highlight></codeline>
-<codeline lineno="566"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>simple,<sp/>impressive<sp/>and<sp/>very<sp/>complete<sp/>theme*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="567" refid="lv__conf_8h_1a1df57ee8809abc5d8c24bc95ea6293b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_THEME_DEFAULT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="568"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_THEME_DEFAULT</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="569"><highlight class="normal"></highlight></codeline>
-<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*0:<sp/>Light<sp/>mode;<sp/>1:<sp/>Dark<sp/>mode*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="571"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_THEME_DEFAULT_DARK<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="572"><highlight class="normal"></highlight></codeline>
-<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>grow<sp/>on<sp/>press*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="574"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_THEME_DEFAULT_GROW<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="575"><highlight class="normal"></highlight></codeline>
-<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Default<sp/>transition<sp/>time<sp/>in<sp/>[ms]*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="577"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_THEME_DEFAULT_TRANSITION_TIME<sp/>80</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="578"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*LV_USE_THEME_DEFAULT*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="579"><highlight class="normal"></highlight></codeline>
-<codeline lineno="580"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>very<sp/>simple<sp/>theme<sp/>that<sp/>is<sp/>a<sp/>good<sp/>starting<sp/>point<sp/>for<sp/>a<sp/>custom<sp/>theme*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="581" refid="lv__conf_8h_1a98e05a1aa53e40f159c79b19d1c7f6b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_THEME_BASIC<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="582"><highlight class="normal"></highlight></codeline>
-<codeline lineno="583"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>theme<sp/>designed<sp/>for<sp/>monochrome<sp/>displays*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="584" refid="lv__conf_8h_1a27648a176c28e6adbcf6225d8ef79e56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_THEME_MONO<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="585"><highlight class="normal"></highlight></codeline>
-<codeline lineno="586"><highlight class="normal"></highlight><highlight class="comment">/*-----------</highlight></codeline>
-<codeline lineno="587"><highlight class="comment"><sp/>*<sp/>Layouts</highlight></codeline>
-<codeline lineno="588"><highlight class="comment"><sp/>*----------*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="589"><highlight class="normal"></highlight></codeline>
-<codeline lineno="590"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>layout<sp/>similar<sp/>to<sp/>Flexbox<sp/>in<sp/>CSS.*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="591" refid="lv__conf_8h_1aed5e4669c5b03deae5e87c421f756cc0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FLEX<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="592"><highlight class="normal"></highlight></codeline>
-<codeline lineno="593"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>layout<sp/>similar<sp/>to<sp/>Grid<sp/>in<sp/>CSS.*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="594" refid="lv__conf_8h_1a448130ebbbaf9352f91c9161bed49862" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_GRID<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="595"><highlight class="normal"></highlight></codeline>
-<codeline lineno="596"><highlight class="normal"></highlight><highlight class="comment">/*---------------------</highlight></codeline>
-<codeline lineno="597"><highlight class="comment"><sp/>*<sp/>3rd<sp/>party<sp/>libraries</highlight></codeline>
-<codeline lineno="598"><highlight class="comment"><sp/>*--------------------*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="599"><highlight class="normal"></highlight></codeline>
-<codeline lineno="600"><highlight class="normal"></highlight><highlight class="comment">/*File<sp/>system<sp/>interfaces<sp/>for<sp/>common<sp/>APIs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="601"><highlight class="normal"></highlight></codeline>
-<codeline lineno="602"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>fopen,<sp/>fread,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="603" refid="lv__conf_8h_1ad229a30c5f679f8e608a491f098dec24" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_STDIO<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="604"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_STDIO</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="605"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_STDIO_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="606"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_STDIO_PATH<sp/>&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>working<sp/>directory.<sp/>File/directory<sp/>paths<sp/>will<sp/>be<sp/>appended<sp/>to<sp/>it.*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="607"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_STDIO_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="608"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="609"><highlight class="normal"></highlight></codeline>
-<codeline lineno="610"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>open,<sp/>read,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="611" refid="lv__conf_8h_1a60d22fc87afad0fd00fbb38a76889cfb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_POSIX<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="612"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_POSIX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="613"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_POSIX_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="614"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_POSIX_PATH<sp/>&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>working<sp/>directory.<sp/>File/directory<sp/>paths<sp/>will<sp/>be<sp/>appended<sp/>to<sp/>it.*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="615"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_POSIX_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="616"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="617"><highlight class="normal"></highlight></codeline>
-<codeline lineno="618"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>CreateFile,<sp/>ReadFile,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="619" refid="lv__conf_8h_1a83ade6ab62190bcf5adf2301bd56f01e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_WIN32<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="620"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="621"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_WIN32_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="622"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_WIN32_PATH<sp/>&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>working<sp/>directory.<sp/>File/directory<sp/>paths<sp/>will<sp/>be<sp/>appended<sp/>to<sp/>it.*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="623"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_WIN32_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="624"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="625"><highlight class="normal"></highlight></codeline>
-<codeline lineno="626"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>FATFS<sp/>(needs<sp/>to<sp/>be<sp/>added<sp/>separately).<sp/>Uses<sp/>f_open,<sp/>f_read,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="627" refid="lv__conf_8h_1aaf74151144e3f9249f77a7092d64a2ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_FATFS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="628"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_FATFS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="629"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_FATFS_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="630"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_FATFS_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="631"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="632"><highlight class="normal"></highlight></codeline>
-<codeline lineno="633"><highlight class="normal"></highlight><highlight class="comment">/*PNG<sp/>decoder<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="634" refid="lv__conf_8h_1aa5ab5053c7c516c234f3af8cec87efac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_PNG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="635"><highlight class="normal"></highlight></codeline>
-<codeline lineno="636"><highlight class="normal"></highlight><highlight class="comment">/*BMP<sp/>decoder<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="637" refid="lv__conf_8h_1aa204c68978c64a659c43618f9113fef8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_BMP<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="638"><highlight class="normal"></highlight></codeline>
-<codeline lineno="639"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>JPG<sp/>+<sp/>split<sp/>JPG<sp/>decoder<sp/>library.</highlight></codeline>
-<codeline lineno="640"><highlight class="comment"><sp/>*<sp/>Split<sp/>JPG<sp/>is<sp/>a<sp/>custom<sp/>format<sp/>optimized<sp/>for<sp/>embedded<sp/>systems.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="641" refid="lv__conf_8h_1a1a7272048f176c8b87966194933cc2bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SJPG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="642"><highlight class="normal"></highlight></codeline>
-<codeline lineno="643"><highlight class="normal"></highlight><highlight class="comment">/*GIF<sp/>decoder<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="644" refid="lv__conf_8h_1a40257e0390c96f7e9c604f6fef4f996c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_GIF<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="645"><highlight class="normal"></highlight></codeline>
-<codeline lineno="646"><highlight class="normal"></highlight><highlight class="comment">/*QR<sp/>code<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="647" refid="lv__conf_8h_1a23ad1b5ec39c469c9dda0cb4b8e3e858" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_QRCODE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="648"><highlight class="normal"></highlight></codeline>
-<codeline lineno="649"><highlight class="normal"></highlight><highlight class="comment">/*FreeType<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="650" refid="lv__conf_8h_1add2c97b28774c04c288091b589cf50c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FREETYPE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="651"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FREETYPE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Memory<sp/>used<sp/>by<sp/>FreeType<sp/>to<sp/>cache<sp/>characters<sp/>[bytes]<sp/>(-1:<sp/>no<sp/>caching)*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="653"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_CACHE_SIZE<sp/>(16<sp/>*<sp/>1024)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="654"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LV_FREETYPE_CACHE_SIZE<sp/>&gt;=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>bitmap<sp/>cache<sp/>use<sp/>the<sp/>sbit<sp/>cache,<sp/>0:bitmap<sp/>cache<sp/>use<sp/>the<sp/>image<sp/>cache.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sbit<sp/>cache:it<sp/>is<sp/>much<sp/>more<sp/>memory<sp/>efficient<sp/>for<sp/>small<sp/>bitmaps(font<sp/>size<sp/>&lt;<sp/>256)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>font<sp/>size<sp/>&gt;=<sp/>256,<sp/>must<sp/>be<sp/>configured<sp/>as<sp/>image<sp/>cache<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="658"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_SBIT_CACHE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Maximum<sp/>number<sp/>of<sp/>opened<sp/>FT_Face/FT_Size<sp/>objects<sp/>managed<sp/>by<sp/>this<sp/>cache<sp/>instance.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>(0:use<sp/>system<sp/>defaults)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="661"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_CACHE_FT_FACES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="662"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_CACHE_FT_SIZES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="663"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="664"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="665"><highlight class="normal"></highlight></codeline>
-<codeline lineno="666"><highlight class="normal"></highlight><highlight class="comment">/*Rlottie<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="667" refid="lv__conf_8h_1af9a8b2a5334032d5e4e01fb32592a274" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_RLOTTIE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="668"><highlight class="normal"></highlight></codeline>
-<codeline lineno="669"><highlight class="normal"></highlight><highlight class="comment">/*FFmpeg<sp/>library<sp/>for<sp/>image<sp/>decoding<sp/>and<sp/>playing<sp/>videos</highlight></codeline>
-<codeline lineno="670"><highlight class="comment"><sp/>*Supports<sp/>all<sp/>major<sp/>image<sp/>formats<sp/>so<sp/>do<sp/>not<sp/>enable<sp/>other<sp/>image<sp/>decoder<sp/>with<sp/>it*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="671" refid="lv__conf_8h_1abb21bfde5dc40dd802fcbefaf285ac64" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FFMPEG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="672"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FFMPEG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Dump<sp/>input<sp/>information<sp/>to<sp/>stderr*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="674"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FFMPEG_DUMP_FORMAT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="675"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="676"><highlight class="normal"></highlight></codeline>
-<codeline lineno="677"><highlight class="normal"></highlight><highlight class="comment">/*-----------</highlight></codeline>
-<codeline lineno="678"><highlight class="comment"><sp/>*<sp/>Others</highlight></codeline>
-<codeline lineno="679"><highlight class="comment"><sp/>*----------*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="680"><highlight class="normal"></highlight></codeline>
-<codeline lineno="681"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>API<sp/>to<sp/>take<sp/>snapshot<sp/>for<sp/>object*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="682" refid="lv__conf_8h_1a44cc4d61a2c09eb55907a3e56e4829f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SNAPSHOT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="683"><highlight class="normal"></highlight></codeline>
-<codeline lineno="684"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>Monkey<sp/>test*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="685" refid="lv__conf_8h_1a7d49a68be38305ca97ae9e1dc3ab90f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MONKEY<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="686"><highlight class="normal"></highlight></codeline>
-<codeline lineno="687"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>grid<sp/>navigation*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="688" refid="lv__conf_8h_1a7feb72fb1f8a053c892392c5f36b6d19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_GRIDNAV<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="689"><highlight class="normal"></highlight></codeline>
-<codeline lineno="690"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>lv_obj<sp/>fragment*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="691" refid="lv__conf_8h_1a2556b0a446d9087fba960b105dfcaa4b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FRAGMENT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal"></highlight></codeline>
-<codeline lineno="693"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Support<sp/>using<sp/>images<sp/>as<sp/>font<sp/>in<sp/>label<sp/>or<sp/>span<sp/>widgets<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="694" refid="lv__conf_8h_1a1e57f030217a79b9618d4eaa35edf79e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_IMGFONT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="695"><highlight class="normal"></highlight></codeline>
-<codeline lineno="696"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>a<sp/>published<sp/>subscriber<sp/>based<sp/>messaging<sp/>system<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="697" refid="lv__conf_8h_1ada247ba2fac6276bd328c65803e67b2b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MSG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="698"><highlight class="normal"></highlight></codeline>
-<codeline lineno="699"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>Pinyin<sp/>input<sp/>method*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="700"><highlight class="normal"></highlight><highlight class="comment">/*Requires:<sp/>lv_keyboard*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="701" refid="lv__conf_8h_1adfd613085a4881dc6f64b918c11b47da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_IME_PINYIN<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="702"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_IME_PINYIN</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*1:<sp/>Use<sp/>default<sp/>thesaurus*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*If<sp/>you<sp/>do<sp/>not<sp/>use<sp/>the<sp/>default<sp/>thesaurus,<sp/>be<sp/>sure<sp/>to<sp/>use<sp/>`lv_ime_pinyin`<sp/>after<sp/>setting<sp/>the<sp/>thesauruss*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="705"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_USE_DEFAULT_DICT<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>maximum<sp/>number<sp/>of<sp/>candidate<sp/>panels<sp/>that<sp/>can<sp/>be<sp/>displayed*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*This<sp/>needs<sp/>to<sp/>be<sp/>adjusted<sp/>according<sp/>to<sp/>the<sp/>size<sp/>of<sp/>the<sp/>screen*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="708"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_CAND_TEXT_NUM<sp/>6</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="709"><highlight class="normal"></highlight></codeline>
-<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Use<sp/>9<sp/>key<sp/>input(k9)*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="711"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_USE_K9_MODE<sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="712"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LV_IME_PINYIN_USE_K9_MODE<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="713"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_K9_CAND_TEXT_NUM<sp/>3</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="714"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>LV_IME_PINYIN_USE_K9_MODE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="715"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="716"><highlight class="normal"></highlight></codeline>
-<codeline lineno="717"><highlight class="normal"></highlight><highlight class="comment">/*==================</highlight></codeline>
-<codeline lineno="718"><highlight class="comment">*<sp/>EXAMPLES</highlight></codeline>
-<codeline lineno="719"><highlight class="comment">*==================*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="720"><highlight class="normal"></highlight></codeline>
-<codeline lineno="721"><highlight class="normal"></highlight><highlight class="comment">/*Enable<sp/>the<sp/>examples<sp/>to<sp/>be<sp/>built<sp/>with<sp/>the<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="722" refid="lv__conf_8h_1a0e9851d66108d2d705713308ae332bb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_BUILD_EXAMPLES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="723"><highlight class="normal"></highlight></codeline>
-<codeline lineno="724"><highlight class="normal"></highlight><highlight class="comment">/*===================</highlight></codeline>
-<codeline lineno="725"><highlight class="comment"><sp/>*<sp/>DEMO<sp/>USAGE</highlight></codeline>
-<codeline lineno="726"><highlight class="comment"><sp/>====================*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="727"><highlight class="normal"></highlight></codeline>
-<codeline lineno="728"><highlight class="normal"></highlight><highlight class="comment">/*Show<sp/>some<sp/>widget.<sp/>It<sp/>might<sp/>be<sp/>required<sp/>to<sp/>increase<sp/>`LV_MEM_SIZE`<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="729" refid="lv__conf_8h_1a5a2e25637c9d93546539f093574eafc1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_WIDGETS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="730"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_DEMO_WIDGETS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="731"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_DEMO_WIDGETS_SLIDESHOW<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="732"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="733"><highlight class="normal"></highlight></codeline>
-<codeline lineno="734"><highlight class="normal"></highlight><highlight class="comment">/*Demonstrate<sp/>the<sp/>usage<sp/>of<sp/>encoder<sp/>and<sp/>keyboard*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="735" refid="lv__conf_8h_1aee011cceb4ac179f9bc720a016504d63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_KEYPAD_AND_ENCODER<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="736"><highlight class="normal"></highlight></codeline>
-<codeline lineno="737"><highlight class="normal"></highlight><highlight class="comment">/*Benchmark<sp/>your<sp/>system*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="738" refid="lv__conf_8h_1ae87e263515f66803e0283382636296fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_BENCHMARK<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="739"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_DEMO_BENCHMARK</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="740"><highlight class="normal"></highlight><highlight class="comment">/*Use<sp/>RGB565A8<sp/>images<sp/>with<sp/>16<sp/>bit<sp/>color<sp/>depth<sp/>instead<sp/>of<sp/>ARGB8565*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="741"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_DEMO_BENCHMARK_RGB565A8<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="742"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="743"><highlight class="normal"></highlight></codeline>
-<codeline lineno="744"><highlight class="normal"></highlight><highlight class="comment">/*Stress<sp/>test<sp/>for<sp/>LVGL*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="745" refid="lv__conf_8h_1aaee5ebebad32924c65aede58c4391a09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_STRESS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="746"><highlight class="normal"></highlight></codeline>
-<codeline lineno="747"><highlight class="normal"></highlight><highlight class="comment">/*Music<sp/>player<sp/>demo*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="748" refid="lv__conf_8h_1a291831ee05115d17571a371d3cbf18f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_MUSIC<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="749"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_DEMO_MUSIC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="750"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_SQUARE<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="751"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_LANDSCAPE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="752"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_ROUND<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="753"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_LARGE<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="754"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_AUTO_PLAY<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="755"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="756"><highlight class="normal"></highlight></codeline>
-<codeline lineno="757"><highlight class="normal"></highlight><highlight class="comment">/*--END<sp/>OF<sp/>LV_CONF_H--*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="758"><highlight class="normal"></highlight></codeline>
-<codeline lineno="759"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*LV_CONF_H*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="760"><highlight class="normal"></highlight></codeline>
-<codeline lineno="761"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*End<sp/>of<sp/>&quot;Content<sp/>enable&quot;*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="543" refid="lv__conf_8h_1ab0d2f4f61aa8674a34c8e41b8d47d8aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MSGBOX<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545" refid="lv__conf_8h_1a1d6045ad00b8d5db61819fa511312871" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SPAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_SPAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*A<sp/>line<sp/>text<sp/>can<sp/>contain<sp/>maximum<sp/>num<sp/>of<sp/>span<sp/>descriptor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_SPAN_SNIPPET_STACK_SIZE<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551" refid="lv__conf_8h_1afb7291443c61a1c56c1f8ee1fad58856" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SPINBOX<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553" refid="lv__conf_8h_1a4d893a8d05d91416cfb0e94139f9975f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SPINNER<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555" refid="lv__conf_8h_1a93727577a2845780880149217a435bac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_TABVIEW<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="lv__conf_8h_1ae722bef533e6c7319fced268cfd6f712" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_TILEVIEW<sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="559" refid="lv__conf_8h_1ab0b3e246f4129a4679c2f50749002ba1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_WIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight><highlight class="comment">/*-----------</highlight></codeline>
+<codeline lineno="562"><highlight class="comment"><sp/>*<sp/>Themes</highlight></codeline>
+<codeline lineno="563"><highlight class="comment"><sp/>*----------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>simple,<sp/>impressive<sp/>and<sp/>very<sp/>complete<sp/>theme*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="566" refid="lv__conf_8h_1a1df57ee8809abc5d8c24bc95ea6293b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_THEME_DEFAULT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_THEME_DEFAULT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*0:<sp/>Light<sp/>mode;<sp/>1:<sp/>Dark<sp/>mode*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_THEME_DEFAULT_DARK<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="normal"></highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>grow<sp/>on<sp/>press*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_THEME_DEFAULT_GROW<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="574"><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Default<sp/>transition<sp/>time<sp/>in<sp/>[ms]*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_THEME_DEFAULT_TRANSITION_TIME<sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*LV_USE_THEME_DEFAULT*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>very<sp/>simple<sp/>theme<sp/>that<sp/>is<sp/>a<sp/>good<sp/>starting<sp/>point<sp/>for<sp/>a<sp/>custom<sp/>theme*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="580" refid="lv__conf_8h_1a98e05a1aa53e40f159c79b19d1c7f6b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_THEME_BASIC<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>theme<sp/>designed<sp/>for<sp/>monochrome<sp/>displays*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="583" refid="lv__conf_8h_1a27648a176c28e6adbcf6225d8ef79e56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_THEME_MONO<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight><highlight class="comment">/*-----------</highlight></codeline>
+<codeline lineno="586"><highlight class="comment"><sp/>*<sp/>Layouts</highlight></codeline>
+<codeline lineno="587"><highlight class="comment"><sp/>*----------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>layout<sp/>similar<sp/>to<sp/>Flexbox<sp/>in<sp/>CSS.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="590" refid="lv__conf_8h_1aed5e4669c5b03deae5e87c421f756cc0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FLEX<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight><highlight class="comment">/*A<sp/>layout<sp/>similar<sp/>to<sp/>Grid<sp/>in<sp/>CSS.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="593" refid="lv__conf_8h_1a448130ebbbaf9352f91c9161bed49862" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_GRID<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight><highlight class="comment">/*---------------------</highlight></codeline>
+<codeline lineno="596"><highlight class="comment"><sp/>*<sp/>3rd<sp/>party<sp/>libraries</highlight></codeline>
+<codeline lineno="597"><highlight class="comment"><sp/>*--------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="598"><highlight class="normal"></highlight></codeline>
+<codeline lineno="599"><highlight class="normal"></highlight><highlight class="comment">/*File<sp/>system<sp/>interfaces<sp/>for<sp/>common<sp/>APIs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="600"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>fopen,<sp/>fread,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="602" refid="lv__conf_8h_1ad229a30c5f679f8e608a491f098dec24" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_STDIO<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_STDIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_STDIO_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="605"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_STDIO_PATH<sp/>&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>working<sp/>directory.<sp/>File/directory<sp/>paths<sp/>will<sp/>be<sp/>appended<sp/>to<sp/>it.*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_STDIO_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>open,<sp/>read,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="610" refid="lv__conf_8h_1a60d22fc87afad0fd00fbb38a76889cfb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_POSIX<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_POSIX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_POSIX_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_POSIX_PATH<sp/>&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>working<sp/>directory.<sp/>File/directory<sp/>paths<sp/>will<sp/>be<sp/>appended<sp/>to<sp/>it.*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_POSIX_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>CreateFile,<sp/>ReadFile,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="618" refid="lv__conf_8h_1a83ade6ab62190bcf5adf2301bd56f01e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_WIN32<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_WIN32_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_WIN32_PATH<sp/>&quot;&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>working<sp/>directory.<sp/>File/directory<sp/>paths<sp/>will<sp/>be<sp/>appended<sp/>to<sp/>it.*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_WIN32_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"></highlight><highlight class="comment">/*API<sp/>for<sp/>FATFS<sp/>(needs<sp/>to<sp/>be<sp/>added<sp/>separately).<sp/>Uses<sp/>f_open,<sp/>f_read,<sp/>etc*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="626" refid="lv__conf_8h_1aaf74151144e3f9249f77a7092d64a2ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FS_FATFS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FS_FATFS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_FATFS_LETTER<sp/>&apos;\0&apos;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>an<sp/>upper<sp/>cased<sp/>letter<sp/>on<sp/>which<sp/>the<sp/>drive<sp/>will<sp/>accessible<sp/>(e.g.<sp/>&apos;A&apos;)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FS_FATFS_CACHE_SIZE<sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&gt;0<sp/>to<sp/>cache<sp/>this<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>lv_fs_read()*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="631"><highlight class="normal"></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight><highlight class="comment">/*PNG<sp/>decoder<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="633" refid="lv__conf_8h_1aa5ab5053c7c516c234f3af8cec87efac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_PNG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"></highlight><highlight class="comment">/*BMP<sp/>decoder<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="636" refid="lv__conf_8h_1aa204c68978c64a659c43618f9113fef8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_BMP<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>JPG<sp/>+<sp/>split<sp/>JPG<sp/>decoder<sp/>library.</highlight></codeline>
+<codeline lineno="639"><highlight class="comment"><sp/>*<sp/>Split<sp/>JPG<sp/>is<sp/>a<sp/>custom<sp/>format<sp/>optimized<sp/>for<sp/>embedded<sp/>systems.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="640" refid="lv__conf_8h_1a1a7272048f176c8b87966194933cc2bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SJPG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="641"><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight><highlight class="comment">/*GIF<sp/>decoder<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="643" refid="lv__conf_8h_1a40257e0390c96f7e9c604f6fef4f996c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_GIF<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="645"><highlight class="normal"></highlight><highlight class="comment">/*QR<sp/>code<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="646" refid="lv__conf_8h_1a23ad1b5ec39c469c9dda0cb4b8e3e858" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_QRCODE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal"></highlight><highlight class="comment">/*FreeType<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="649" refid="lv__conf_8h_1add2c97b28774c04c288091b589cf50c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FREETYPE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FREETYPE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Memory<sp/>used<sp/>by<sp/>FreeType<sp/>to<sp/>cache<sp/>characters<sp/>[bytes]<sp/>(-1:<sp/>no<sp/>caching)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_CACHE_SIZE<sp/>(16<sp/>*<sp/>1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LV_FREETYPE_CACHE_SIZE<sp/>&gt;=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>bitmap<sp/>cache<sp/>use<sp/>the<sp/>sbit<sp/>cache,<sp/>0:bitmap<sp/>cache<sp/>use<sp/>the<sp/>image<sp/>cache.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sbit<sp/>cache:it<sp/>is<sp/>much<sp/>more<sp/>memory<sp/>efficient<sp/>for<sp/>small<sp/>bitmaps(font<sp/>size<sp/>&lt;<sp/>256)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>font<sp/>size<sp/>&gt;=<sp/>256,<sp/>must<sp/>be<sp/>configured<sp/>as<sp/>image<sp/>cache<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_SBIT_CACHE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Maximum<sp/>number<sp/>of<sp/>opened<sp/>FT_Face/FT_Size<sp/>objects<sp/>managed<sp/>by<sp/>this<sp/>cache<sp/>instance.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>(0:use<sp/>system<sp/>defaults)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_CACHE_FT_FACES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_FREETYPE_CACHE_FT_SIZES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight><highlight class="comment">/*Rlottie<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666" refid="lv__conf_8h_1af9a8b2a5334032d5e4e01fb32592a274" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_RLOTTIE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight><highlight class="comment">/*FFmpeg<sp/>library<sp/>for<sp/>image<sp/>decoding<sp/>and<sp/>playing<sp/>videos</highlight></codeline>
+<codeline lineno="669"><highlight class="comment"><sp/>*Supports<sp/>all<sp/>major<sp/>image<sp/>formats<sp/>so<sp/>do<sp/>not<sp/>enable<sp/>other<sp/>image<sp/>decoder<sp/>with<sp/>it*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="670" refid="lv__conf_8h_1abb21bfde5dc40dd802fcbefaf285ac64" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FFMPEG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_FFMPEG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Dump<sp/>input<sp/>information<sp/>to<sp/>stderr*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_FFMPEG_DUMP_FORMAT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="674"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="675"><highlight class="normal"></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight><highlight class="comment">/*-----------</highlight></codeline>
+<codeline lineno="677"><highlight class="comment"><sp/>*<sp/>Others</highlight></codeline>
+<codeline lineno="678"><highlight class="comment"><sp/>*----------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>API<sp/>to<sp/>take<sp/>snapshot<sp/>for<sp/>object*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="681" refid="lv__conf_8h_1a44cc4d61a2c09eb55907a3e56e4829f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_SNAPSHOT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>Monkey<sp/>test*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="684" refid="lv__conf_8h_1a7d49a68be38305ca97ae9e1dc3ab90f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MONKEY<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>grid<sp/>navigation*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="687" refid="lv__conf_8h_1a7feb72fb1f8a053c892392c5f36b6d19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_GRIDNAV<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>lv_obj<sp/>fragment*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="690" refid="lv__conf_8h_1a2556b0a446d9087fba960b105dfcaa4b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_FRAGMENT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="692"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Support<sp/>using<sp/>images<sp/>as<sp/>font<sp/>in<sp/>label<sp/>or<sp/>span<sp/>widgets<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="693" refid="lv__conf_8h_1a1e57f030217a79b9618d4eaa35edf79e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_IMGFONT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="695"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>a<sp/>published<sp/>subscriber<sp/>based<sp/>messaging<sp/>system<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="696" refid="lv__conf_8h_1ada247ba2fac6276bd328c65803e67b2b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_MSG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight><highlight class="comment">/*1:<sp/>Enable<sp/>Pinyin<sp/>input<sp/>method*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight><highlight class="comment">/*Requires:<sp/>lv_keyboard*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="700" refid="lv__conf_8h_1adfd613085a4881dc6f64b918c11b47da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_IME_PINYIN<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_IME_PINYIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*1:<sp/>Use<sp/>default<sp/>thesaurus*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*If<sp/>you<sp/>do<sp/>not<sp/>use<sp/>the<sp/>default<sp/>thesaurus,<sp/>be<sp/>sure<sp/>to<sp/>use<sp/>`lv_ime_pinyin`<sp/>after<sp/>setting<sp/>the<sp/>thesauruss*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_USE_DEFAULT_DICT<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Set<sp/>the<sp/>maximum<sp/>number<sp/>of<sp/>candidate<sp/>panels<sp/>that<sp/>can<sp/>be<sp/>displayed*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*This<sp/>needs<sp/>to<sp/>be<sp/>adjusted<sp/>according<sp/>to<sp/>the<sp/>size<sp/>of<sp/>the<sp/>screen*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_CAND_TEXT_NUM<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Use<sp/>9<sp/>key<sp/>input(k9)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_USE_K9_MODE<sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LV_IME_PINYIN_USE_K9_MODE<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="712"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LV_IME_PINYIN_K9_CAND_TEXT_NUM<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/></highlight><highlight class="comment">//<sp/>LV_IME_PINYIN_USE_K9_MODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="714"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"></highlight><highlight class="comment">/*==================</highlight></codeline>
+<codeline lineno="717"><highlight class="comment">*<sp/>EXAMPLES</highlight></codeline>
+<codeline lineno="718"><highlight class="comment">*==================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight><highlight class="comment">/*Enable<sp/>the<sp/>examples<sp/>to<sp/>be<sp/>built<sp/>with<sp/>the<sp/>library*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="721" refid="lv__conf_8h_1a0e9851d66108d2d705713308ae332bb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_BUILD_EXAMPLES<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="722"><highlight class="normal"></highlight></codeline>
+<codeline lineno="723"><highlight class="normal"></highlight><highlight class="comment">/*===================</highlight></codeline>
+<codeline lineno="724"><highlight class="comment"><sp/>*<sp/>DEMO<sp/>USAGE</highlight></codeline>
+<codeline lineno="725"><highlight class="comment"><sp/>====================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight><highlight class="comment">/*Show<sp/>some<sp/>widget.<sp/>It<sp/>might<sp/>be<sp/>required<sp/>to<sp/>increase<sp/>`LV_MEM_SIZE`<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="728" refid="lv__conf_8h_1a5a2e25637c9d93546539f093574eafc1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_WIDGETS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_DEMO_WIDGETS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="730"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_DEMO_WIDGETS_SLIDESHOW<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight><highlight class="comment">/*Demonstrate<sp/>the<sp/>usage<sp/>of<sp/>encoder<sp/>and<sp/>keyboard*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="734" refid="lv__conf_8h_1aee011cceb4ac179f9bc720a016504d63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_KEYPAD_AND_ENCODER<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight><highlight class="comment">/*Benchmark<sp/>your<sp/>system*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="737" refid="lv__conf_8h_1ae87e263515f66803e0283382636296fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_BENCHMARK<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_DEMO_BENCHMARK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight><highlight class="comment">/*Use<sp/>RGB565A8<sp/>images<sp/>with<sp/>16<sp/>bit<sp/>color<sp/>depth<sp/>instead<sp/>of<sp/>ARGB8565*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_DEMO_BENCHMARK_RGB565A8<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"></highlight><highlight class="comment">/*Stress<sp/>test<sp/>for<sp/>LVGL*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="744" refid="lv__conf_8h_1aaee5ebebad32924c65aede58c4391a09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_STRESS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight><highlight class="comment">/*Music<sp/>player<sp/>demo*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="747" refid="lv__conf_8h_1a291831ee05115d17571a371d3cbf18f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LV_USE_DEMO_MUSIC<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LV_USE_DEMO_MUSIC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_SQUARE<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_LANDSCAPE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="751"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_ROUND<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="752"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_LARGE<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LV_DEMO_MUSIC_AUTO_PLAY<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756"><highlight class="normal"></highlight><highlight class="comment">/*--END<sp/>OF<sp/>LV_CONF_H--*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="757"><highlight class="normal"></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*LV_CONF_H*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="759"><highlight class="normal"></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*End<sp/>of<sp/>&quot;Content<sp/>enable&quot;*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="include/lv_conf.h"/>
   </compounddef>

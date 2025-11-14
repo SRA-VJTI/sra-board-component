@@ -75,15 +75,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="oled_8h_source.html">oled.h</a>&quot;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for oled.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="oled_8c__incl.png" border="0" usemap="#asrc_2oled_8c" alt=""/></div>
 <map name="asrc_2oled_8c" id="asrc_2oled_8c">
-<area shape="rect" title=" " alt="" coords="325,5,404,32"/>
+<area shape="rect" title=" " alt="" coords="284,5,363,32"/>
 <area shape="rect" href="oled_8h.html" title=" " alt="" coords="295,80,351,107"/>
-<area shape="rect" title=" " alt="" coords="375,80,437,107"/>
 <area shape="rect" title=" " alt="" coords="5,304,65,331"/>
 <area shape="rect" title=" " alt="" coords="79,155,143,181"/>
 <area shape="rect" title=" " alt="" coords="168,155,260,181"/>
@@ -149,6 +147,12 @@ Variables</h2></td></tr>
 <tr class="separator:a95ab6ff9227127295ca863e2091c7f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854e3003f905cc6bf110e3b838b02b53"><td class="memItemLeft" align="right" valign="top">const lv_img_dsc_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a854e3003f905cc6bf110e3b838b02b53">mario</a></td></tr>
 <tr class="separator:a854e3003f905cc6bf110e3b838b02b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526c4564302c02d83a148c9184943179"><td class="memItemLeft" align="right" valign="top">lv_color_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a526c4564302c02d83a148c9184943179">buf_1</a> [<a class="el" href="lvgl__helpers_8h.html#a654a6892936b96d1d9563c5eabec9dab">DISP_BUF_SIZE</a>]</td></tr>
+<tr class="separator:a526c4564302c02d83a148c9184943179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05d1354c5c0aeda8efaa1b1e2e59995"><td class="memItemLeft" align="right" valign="top">lv_disp_draw_buf_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#ab05d1354c5c0aeda8efaa1b1e2e59995">disp_buf</a></td></tr>
+<tr class="separator:ab05d1354c5c0aeda8efaa1b1e2e59995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae4a682aeb784530d1bf250fadbea59"><td class="memItemLeft" align="right" valign="top">lv_disp_drv_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8c.html#a3ae4a682aeb784530d1bf250fadbea59">disp_drv</a></td></tr>
+<tr class="separator:a3ae4a682aeb784530d1bf250fadbea59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad60424588c0fc1ccd29f85bbc6d56615" name="ad60424588c0fc1ccd29f85bbc6d56615"></a>
@@ -436,6 +440,48 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a526c4564302c02d83a148c9184943179" name="a526c4564302c02d83a148c9184943179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526c4564302c02d83a148c9184943179">&#9670;&nbsp;</a></span>buf_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_color_t* buf_1[<a class="el" href="lvgl__helpers_8h.html#a654a6892936b96d1d9563c5eabec9dab">DISP_BUF_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab05d1354c5c0aeda8efaa1b1e2e59995" name="ab05d1354c5c0aeda8efaa1b1e2e59995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05d1354c5c0aeda8efaa1b1e2e59995">&#9670;&nbsp;</a></span>disp_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_disp_draw_buf_t disp_buf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ae4a682aeb784530d1bf250fadbea59" name="a3ae4a682aeb784530d1bf250fadbea59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae4a682aeb784530d1bf250fadbea59">&#9670;&nbsp;</a></span>disp_drv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lv_disp_drv_t disp_drv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a854e3003f905cc6bf110e3b838b02b53" name="a854e3003f905cc6bf110e3b838b02b53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a854e3003f905cc6bf110e3b838b02b53">&#9670;&nbsp;</a></span>mario</h2>
 
@@ -448,16 +494,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">  .header.magic = LV_IMAGE_HEADER_MAGIC,</div>
-<div class="line">  .header.cf = LV_COLOR_FORMAT_I1,</div>
-<div class="line">  .header.flags = 0,</div>
+<div class="line">  .header.cf = LV_IMG_CF_INDEXED_1BIT,</div>
+<div class="line">  .header.always_zero = 0,</div>
+<div class="line">  .header.reserved = 0,</div>
 <div class="line">  .header.w = 122,</div>
 <div class="line">  .header.h = 48,</div>
-<div class="line">  .header.stride = 16,</div>
-<div class="line">  .data_size = <span class="keyword">sizeof</span>(<a class="code hl_variable" href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a>),</div>
+<div class="line">  .data_size = 776,</div>
 <div class="line">  .data = <a class="code hl_variable" href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aoled_8c_html_a95ab6ff9227127295ca863e2091c7f51"><div class="ttname"><a href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t mario_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:178</div></div>
+<div class="ttc" id="aoled_8c_html_a95ab6ff9227127295ca863e2091c7f51"><div class="ttname"><a href="oled_8c.html#a95ab6ff9227127295ca863e2091c7f51">mario_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t mario_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:175</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -487,16 +532,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">  .header.magic = LV_IMAGE_HEADER_MAGIC,</div>
-<div class="line">  .header.cf = LV_COLOR_FORMAT_I1,</div>
-<div class="line">  .header.flags = 0,</div>
+<div class="line">  .header.cf = LV_IMG_CF_INDEXED_1BIT,</div>
+<div class="line">  .header.always_zero = 0,</div>
+<div class="line">  .header.reserved = 0,</div>
 <div class="line">  .header.w = 115,</div>
 <div class="line">  .header.h = 64,</div>
-<div class="line">  .header.stride = 15,</div>
-<div class="line">  .data_size = <span class="keyword">sizeof</span>(<a class="code hl_variable" href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a>),</div>
+<div class="line">  .data_size = 968,</div>
 <div class="line">  .data = <a class="code hl_variable" href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aoled_8c_html_ae652719e9e6fd5015a2801e5967de999"><div class="ttname"><a href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t sra_logo_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:32</div></div>
+<div class="ttc" id="aoled_8c_html_ae652719e9e6fd5015a2801e5967de999"><div class="ttname"><a href="oled_8c.html#ae652719e9e6fd5015a2801e5967de999">sra_logo_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t sra_logo_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:31</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -526,16 +570,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">  .header.magic = LV_IMAGE_HEADER_MAGIC,</div>
-<div class="line">  .header.cf = LV_COLOR_FORMAT_I1,</div>
-<div class="line">  .header.flags = 0,</div>
+<div class="line">  .header.cf = LV_IMG_CF_INDEXED_1BIT,</div>
+<div class="line">  .header.always_zero = 0,</div>
+<div class="line">  .header.reserved = 0,</div>
 <div class="line">  .header.w = 108,</div>
 <div class="line">  .header.h = 48,</div>
-<div class="line">  .header.stride = 14,</div>
-<div class="line">  .data_size = <span class="keyword">sizeof</span>(<a class="code hl_variable" href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a>),</div>
+<div class="line">  .data_size = 680,</div>
 <div class="line">  .data = <a class="code hl_variable" href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aoled_8c_html_a6ba1dc8ea39201f95759d4186054cc65"><div class="ttname"><a href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t walle_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:113</div></div>
+<div class="ttc" id="aoled_8c_html_a6ba1dc8ea39201f95759d4186054cc65"><div class="ttname"><a href="oled_8c.html#a6ba1dc8ea39201f95759d4186054cc65">walle_map</a></div><div class="ttdeci">const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG uint8_t walle_map[]</div><div class="ttdef"><b>Definition:</b> oled.c:111</div></div>
 </div><!-- fragment -->
 </div>
 </div>

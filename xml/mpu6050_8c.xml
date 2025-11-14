@@ -871,11 +871,11 @@
 <codeline lineno="115"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Combine<sp/>the<sp/>MSB<sp/>and<sp/>LSB<sp/>values<sp/>(8-bit)<sp/>to<sp/>a<sp/>single<sp/>value<sp/>(16-bit)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*buf_1,<sp/>int16_t<sp/>*buf_2)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpu6050_8c_1abb35efd200ff172bedad87a7ec590c7a" kindref="member">combine_msb_lsb_raw_data</ref>(uint8_t<sp/>*<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>,<sp/>int16_t<sp/>*buf_2)</highlight></codeline>
 <codeline lineno="119"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[0]<sp/>=<sp/>((buf_1[0]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/>buf_1[1]);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[1]<sp/>=<sp/>((buf_1[2]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/>buf_1[3]);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[2]<sp/>=<sp/>((buf_1[4]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/>buf_1[5]);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[0]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[0]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[1]);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[1]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[2]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[3]);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_2[2]<sp/>=<sp/>((<ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[4]<sp/>&lt;&lt;<sp/>8)<sp/>+<sp/><ref refid="oled_8c_1a526c4564302c02d83a148c9184943179" kindref="member">buf_1</ref>[5]);</highlight></codeline>
 <codeline lineno="123"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notations<sp/>in<sp/>the<sp/>following<sp/>functions:<sp/>Index<sp/>0<sp/>-<sp/>Roll<sp/>angle;<sp/>Index<sp/>1<sp/>-<sp/>Pitch<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
