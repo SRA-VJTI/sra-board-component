@@ -14,9 +14,12 @@ var searchData=
   ['bg_5fled_5f8_11',['BG_LED_8',['../pin__defs_8h.html#abb2349aa558034464942254c952b8a30',1,'pin_defs.h']]],
   ['bit_5fclear_12',['BIT_CLEAR',['../lvgl__helpers_8c.html#a77fc3a931d1ad5fa08201e5c544817a0',1,'lvgl_helpers.c']]],
   ['bit_5fset_13',['BIT_SET',['../lvgl__helpers_8c.html#ade3c083fa7b1178fcca5671e1830f2f9',1,'lvgl_helpers.c']]],
-  ['bool_5fto_5fuint8_14',['bool_to_uint8',['../bar__graph_8h.html#aedf9bcb0b39fed044eb70e63fc74c496',1,'bool_to_uint8(bool *input_array):&#160;bar_graph.c'],['../bar__graph_8c.html#aedf9bcb0b39fed044eb70e63fc74c496',1,'bool_to_uint8(bool *input_array):&#160;bar_graph.c']]],
-  ['bound_15',['bound',['../utils_8h.html#a22fd7311bf5f09376f4c561febd38899',1,'bound(float val, float min, float max):&#160;utils.c'],['../utils_8c.html#a22fd7311bf5f09376f4c561febd38899',1,'bound(float val, float min, float max):&#160;utils.c']]],
-  ['brake_16',['brake',['../structmotor__t.html#a16c896b9e76bdbba9d47767c613dd2dd',1,'motor_t']]],
-  ['buf_5f1_17',['buf_1',['../oled_8c.html#a526c4564302c02d83a148c9184943179',1,'oled.c']]],
-  ['buff_5fsize_18',['BUFF_SIZE',['../mpu6050_8h.html#a6c7cd32e1bac137f05e4a752b4ad10af',1,'mpu6050.h']]]
+  ['bits_5fin_5f4_5fbytes_14',['BITS_IN_4_BYTES',['../utils_8h.html#aef43aba04f9c671c4208f1c98bc25cb9',1,'utils.h']]],
+  ['bits_5fin_5fa_5fbyte_15',['BITS_IN_A_BYTE',['../utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033',1,'utils.h']]],
+  ['bool_5fto_5fuint32_16',['bool_to_uint32',['../led__matrix_8h.html#ada834f4446c7fc026aa6cc562a481a3d',1,'bool_to_uint32(const led_matrix_data_arr_t input_arr):&#160;led_matrix.c'],['../led__matrix_8c.html#ada834f4446c7fc026aa6cc562a481a3d',1,'bool_to_uint32(const led_matrix_data_arr_t input_arr):&#160;led_matrix.c']]],
+  ['bool_5fto_5fuint8_17',['bool_to_uint8',['../bar__graph_8h.html#aedf9bcb0b39fed044eb70e63fc74c496',1,'bool_to_uint8(bool *input_array):&#160;bar_graph.c'],['../bar__graph_8c.html#aedf9bcb0b39fed044eb70e63fc74c496',1,'bool_to_uint8(bool *input_array):&#160;bar_graph.c']]],
+  ['bound_18',['bound',['../utils_8h.html#a22fd7311bf5f09376f4c561febd38899',1,'bound(float val, float min, float max):&#160;utils.c'],['../utils_8c.html#a22fd7311bf5f09376f4c561febd38899',1,'bound(float val, float min, float max):&#160;utils.c']]],
+  ['brake_19',['brake',['../structmotor__t.html#a16c896b9e76bdbba9d47767c613dd2dd',1,'motor_t']]],
+  ['buf_5f1_20',['buf_1',['../oled_8c.html#a526c4564302c02d83a148c9184943179',1,'oled.c']]],
+  ['buff_5fsize_21',['BUFF_SIZE',['../mpu6050_8h.html#a6c7cd32e1bac137f05e4a752b4ad10af',1,'mpu6050.h']]]
 ];

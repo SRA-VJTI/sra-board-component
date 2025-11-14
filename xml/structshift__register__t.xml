@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structshift__register__t" kind="struct" language="C++" prot="public">
+    <compoundname>shift_register_t</compoundname>
+    <includes refid="shift__register_8h" local="no">shift_register.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structshift__register__t_1a6b81097c9da0c2bb5b7e40071eea67fe" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t shift_register_t::sdata</definition>
+        <argsstring></argsstring>
+        <name>sdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/shift_register.h" line="46" column="16" bodyfile="include/shift_register.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshift__register__t_1ad5afc32a87b90bcdba0b84ec18993f57" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t shift_register_t::srclk</definition>
+        <argsstring></argsstring>
+        <name>srclk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/shift_register.h" line="47" column="16" bodyfile="include/shift_register.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshift__register__t_1a6ad746b1adc128568f303de158b33b57" prot="public" static="no" mutable="no">
+        <type>gpio_num_t</type>
+        <definition>gpio_num_t shift_register_t::rclk</definition>
+        <argsstring></argsstring>
+        <name>rclk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/shift_register.h" line="48" column="16" bodyfile="include/shift_register.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshift__register__t_1a3a9986772948c1ec12a28c267a3c90da" prot="public" static="no" mutable="no">
+        <type>gptimer_handle_t</type>
+        <definition>gptimer_handle_t shift_register_t::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/shift_register.h" line="49" column="22" bodyfile="include/shift_register.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The handle used for representing the shift register. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/shift_register.h" line="45" column="1" bodyfile="include/shift_register.h" bodystart="45" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structshift__register__t_1a6ad746b1adc128568f303de158b33b57" prot="public" virt="non-virtual"><scope>shift_register_t</scope><name>rclk</name></member>
+      <member refid="structshift__register__t_1a6b81097c9da0c2bb5b7e40071eea67fe" prot="public" virt="non-virtual"><scope>shift_register_t</scope><name>sdata</name></member>
+      <member refid="structshift__register__t_1ad5afc32a87b90bcdba0b84ec18993f57" prot="public" virt="non-virtual"><scope>shift_register_t</scope><name>srclk</name></member>
+      <member refid="structshift__register__t_1a3a9986772948c1ec12a28c267a3c90da" prot="public" virt="non-virtual"><scope>shift_register_t</scope><name>timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

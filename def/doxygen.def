@@ -245,6 +245,81 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* struct */
 struct = {
+  cp-id     = 'structled__matrix';
+  cp-name   = 'led_matrix';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'data';
+      sec-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      sec-mem-desc-line = '53';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structled__matrix_1a75b08e08f90fb254df44e0f3c113e523';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+shift_register_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'config';
+      sec-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      sec-mem-desc-line = '54';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/include/led_matrix.h';
+  cp-fileline  = '52';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Struct used as a handle for LED matrix.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'led_matrix';
+        node-link = {
+          node-link-id = 'structled__matrix';
+        };
+        node-child = {
+          child-id = '2';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+config
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'shift_register_t';
+        node-link = {
+          node-link-id = 'structshift__register__t';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
   cp-id     = 'structline__sensor__array_1_1line__sensor';
   cp-name   = 'line_sensor_array::line_sensor';
   cp-section = {
@@ -1030,6 +1105,93 @@ _EnD_oF_dEf_TeXt_;
   cp-fileline  = '39';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 This structure contains the configuration of servos.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+struct = {
+  cp-id     = 'structshift__register__t';
+  cp-name   = 'shift_register_t';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structshift__register__t_1a6b81097c9da0c2bb5b7e40071eea67fe';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+gpio_num_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'sdata';
+      sec-mem-desc-file = '/github/workspace/include/shift_register.h';
+      sec-mem-desc-line = '46';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structshift__register__t_1ad5afc32a87b90bcdba0b84ec18993f57';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+gpio_num_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'srclk';
+      sec-mem-desc-file = '/github/workspace/include/shift_register.h';
+      sec-mem-desc-line = '47';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structshift__register__t_1a6ad746b1adc128568f303de158b33b57';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+gpio_num_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'rclk';
+      sec-mem-desc-file = '/github/workspace/include/shift_register.h';
+      sec-mem-desc-line = '48';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structshift__register__t_1a3a9986772948c1ec12a28c267a3c90da';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+gptimer_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'timer';
+      sec-mem-desc-file = '/github/workspace/include/shift_register.h';
+      sec-mem-desc-line = '49';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/github/workspace/include/shift_register.h';
+  cp-fileline  = '45';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+The handle used for representing the shift register.
 _EnD_oF_dEf_TeXt_;
   cp-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1865,6 +2027,440 @@ _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
 
 
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'led__matrix_8h';
+  file-name = 'led_matrix.h';
+    typedef = {
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = 'led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+uint32_t
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'led_matrix_data_t';
+      typedef-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      typedef-mem-desc-line = '40';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+An integer used as a bitarray to represent the LED matrix data type.
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    typedef-member = {
+      typedef-mem-kind = 'typedef';
+      typedef-mem-id   = 'led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478';
+      typedef-mem-virt = normal;
+      typedef-mem-prot = public;
+      typedef-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-name = 'led_matrix_data_arr_t';
+      typedef-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      typedef-mem-desc-line = '47';
+      typedef-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+An array of booleans used to represent the LED matrix data instead of the uint32_t.
+_EnD_oF_dEf_TeXt_;
+      typedef-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@note Valid when the SRA Board is in its upright orientation (text and logo upright).
+_EnD_oF_dEf_TeXt_;
+    }; /* typedef-member */
+    };
+    enum = {
+    enum-member = {
+      enum-mem-kind = 'enum';
+      enum-mem-id   = 'led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4';
+      enum-mem-virt = normal;
+      enum-mem-prot = public;
+      enum-mem-name = 'led_matrix_output_mode_t';
+      enum-mem-enum = { enum-name = LED_MATRIX_OUTPUT_SEQ; };
+      enum-mem-enum = { enum-name = LED_MATRIX_OUTPUT_PAR; };
+      enum-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      enum-mem-desc-line = '60';
+      enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Enum used for the output mode of the LED matrix.
+_EnD_oF_dEf_TeXt_;
+      enum-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* enum-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1a51494a4c836ad8620e12721a961f1e2a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+led_matrix
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '99';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Enables and configures the LED Matrix and corresponding shift registers.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+
+@return Returns an error if the could not allocate enough memory or if shift register configuration failed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1ada834f4446c7fc026aa6cc562a481a3d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'bool_to_uint32';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_arr_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'input_arr';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '108';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Converts a boolean array of size CONFIG_LED_MATRIX_ROWSxCONFIG_LED_MATRIX_COLUMNS to a 32-bit unsigned integer.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param input_arr: Boolean input array of dimensions (CONFIG_LED_MATRIX_ROWS, CONFIG_LED_MATRIX_COLUMNS)
+
+@return A 32-bit value representing the LED states, where each bit corresponds to one physical LED as defined by @ref led_matrix_map.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1a63b271a13334f74f69433e2b11cbe62c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_set_bit';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'led_number';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'led_value';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '119';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Sets a single bit of the "data" field of the passed in matrix.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param led_number: The logical index of the pin (varies from [0, led_matrix_rows * led_matrix_columns - 1])
+@param led_value: The value to set the LED (can be 0 - LOW or 1 - HIGH)
+
+@return Returns an error if a NULL matrix is passed or if the led number exceeds (led_matrix_rows * led_matrix_columns - 1), else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1aa625ed34859afeaaa77d45694c1fd439';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_set_data';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '129';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Sets all the bits of the "data" field of the passed in matrix using led_matrix_set_bit().
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param data: The data to write to the LED matrix.
+
+@return Returns an error if a NULL matrix is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1a56863ce32cf449e8e5edc48589431be2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_set_data_raw';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '139';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Sets all the bits of the "data" field.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param data: The bitfield used to set the values of the LED matrix.
+
+@return Returns an error if a NULL matrix is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1aba2c0ed982c8c7c37d823c3f77e9efe2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_write';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_output_mode_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'mode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '149';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Performs the write from the led_matrix structure to the actual LEDs on board.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param mode: The way in which to display the values from the shift register.
+
+@return Returns an error if a NULL matrix is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1a63027033e120823a7f178b3f144106c0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_display_string';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'message';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+double
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'wait_ms';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '160';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Displays the entered string character by character on the LED Matrix with a delay of "wait_ms" ms between characters.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param message: The message to be displayed on the screen.
+@param wait_ms: The time to wait between two characters (in ms)
+
+@return Returns an error if a NULL matrix or message is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8h_1ae753ca43dab493d0103882f8a39d14ab';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_cleanup';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      func-mem-desc-line = '169';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Performs cleanup on the LED Matrix contents.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs
+
+@return Returns an error if there is an error while cleaning up the shift register, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'led__matrix_8h_1a819e39d90fe13e13a9c0a50521181c5c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'led_matrix_rows';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= CONFIG_LED_MATRIX_ROWS
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      var-mem-desc-line = '68';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Software constant for defining the number of rows in the LED matrix.
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'led__matrix_8h_1acefc36170db8a0747019f36473c005bb';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'led_matrix_columns';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= CONFIG_LED_MATRIX_COLUMNS
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      var-mem-desc-line = '73';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Software constant for defining the number of columns in the LED matrix.
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'led__matrix_8h_1a5c45bbf0474ae91cbaf7fead1d21d8d2';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'led_matrix_map';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {
+     0,  1,  2,  3,  4,  5,
+    10, 11, 12, 13, 14, 15,
+    20, 21, 22, 23,  8,  9,
+    30, 31, 16, 17, 18, 19,
+    24, 25, 26, 27, 28, 29
+}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/include/led_matrix.h';
+      var-mem-desc-line = '84';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+A mapping of the logical indexes of the LED matrix to the actual physical configuration of the LEDs, start from the bottom left.
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ This mapping starts from the bottom left of the matrix and defines how each logical LED index corresponds to the physical wiring of the LED matrix
+\ilinebr\ilinebr Default SRA Board LED matrix mappings (change for future versions, current version : v2.7)
+
+@note This mapping starts from the bottom left of the matrix and the next logical index corresponds to the LED to the right in the same row. If the LED happens to be the last one in the row then the index corresponds to the first LED in the next (upper) row
+@note For the v2.7 mapping pins outputs 6 and 7 are not connected to any LEDs and do not have any effect on the final pattern of the LEDs. (Remove or update this note in later versions)
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/github/workspace/include/led_matrix.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'led__matrix__font_8h';
+  file-name = 'led_matrix_font.h';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_arr_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'led_matrix_chars';
+      var-mem-desc-file = '/github/workspace/include/led_matrix_font.h';
+      var-mem-desc-line = '33';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+An array of LED matrix booleans (.
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ @see led_matrix_data_arr_t ) representing the ASCII printable characters in a predefined font
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/github/workspace/include/led_matrix_font.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
 }; /* file */
@@ -7899,6 +8495,60 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'pin__defs_8h_1a0051dca24ef692857826e4917e9b6759';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SHIFT_REGISTER_SDATA';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+12
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
+      define-mem-desc-line = '107';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'pin__defs_8h_1a08441397716647885b748c448b053d1b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SHIFT_REGISTER_SRCLK';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+25
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
+      define-mem-desc-line = '108';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SHIFT_REGISTER_RCLK';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+13
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/pin_defs.h';
+      define-mem-desc-line = '109';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
     };
   file-full-name  = '/github/workspace/include/pin_defs.h';
   file-first-line = '1';
@@ -7998,6 +8648,148 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
+  file-id   = 'shift__register_8h';
+  file-name = 'shift_register.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8h_1a735c71ec46365bacf81bf2e6abdb4d03';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_gpio_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+shift_register_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'conf';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/shift_register.h';
+      func-mem-desc-line = '57';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Initialises the GPIO Pins for the Shift Register Present on the SRA Board.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param conf: The handle to use and represent the shift registers.
+@return Returns an error if NULL shift register is passed or if there is an error during configuring the GPIOs or timer, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8h_1a1dee47a262c0fde83872e2e56b65c94a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_write_uint8';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const shift_register_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'sreg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const bool
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'instant';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/shift_register.h';
+      func-mem-desc-line = '66';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Writes a single byte to the shift register and latches it (single shift register)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param sreg: The handle to use and represent the shift registers.
+@param data: The data to be sent to the shift register.
+@param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
+@return Returns an error if a NULL shift register is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8h_1aae7d08ef9224c051d263da04f9668a95';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_write_uint32';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const shift_register_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'sreg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint32_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const bool
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'instant';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/shift_register.h';
+      func-mem-desc-line = '75';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Writes a four bytes to the shift register and latches it (four cascaded shift registers)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param sreg: The handle to use and represent the shift registers.
+@param data: The data to be sent to the shift register.
+@param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
+@return Returns an error if a NULL shift register is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8h_1ad1bc60618a55d74eac5d2042421e1007';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_cleanup';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+shift_register_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'sreg';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/include/shift_register.h';
+      func-mem-desc-line = '82';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Performs cleanup on the shift register contents.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param sreg: The handle to use and represent the shift register
+@return Returns an error if there is an error while cleaning up the general purpose timer, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = '/github/workspace/include/shift_register.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
   file-id   = 'sra__board_8h';
   file-name = 'sra_board.h';
   file-full-name  = '/github/workspace/include/sra_board.h';
@@ -8069,6 +8861,44 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = 'utils_8h';
   file-name = 'utils.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'utils_8h_1ae3710cdfde4705f0eafe00a2a67e2033';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BITS_IN_A_BYTE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+sizeof(uint8_t)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/utils.h';
+      define-mem-desc-line = '31';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Number of bits in a byte.
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'utils_8h_1aef43aba04f9c671c4208f1c98bc25cb9';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BITS_IN_4_BYTES';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+BITS_IN_A_BYTE * sizeof(uint32_t)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/utils.h';
+      define-mem-desc-line = '36';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Number of bits in 4 bytes / int32_t / uint32_t.
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
     func = {
     func-member = {
       func-mem-kind = 'function';
@@ -8098,7 +8928,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'max';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/utils.h';
-      func-mem-desc-line = '35';
+      func-mem-desc-line = '45';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Bound a value in a range [min, max].
 _EnD_oF_dEf_TeXt_;
@@ -8148,7 +8978,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'output_higher_limit';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/utils.h';
-      func-mem-desc-line = '46';
+      func-mem-desc-line = '56';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Maps a value in range [input_lower_limit, input_higher_limit] to [output_lower_limit, output_higher_limit].
 _EnD_oF_dEf_TeXt_;
@@ -9144,6 +9974,1009 @@ ESP-IDF I2C master thread-safe functions for communication with I2C slave
 Copyright (c) 2018 Ruslan V. Uss <unclerus@gmail.com>
 
 MIT Licensed as described in the file LICENSE
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'led__matrix_8c';
+  file-name = 'led_matrix.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1a51494a4c836ad8620e12721a961f1e2a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+led_matrix
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '31';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Enables and configures the LED Matrix and corresponding shift registers.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+
+@return Returns an error if the could not allocate enough memory or if shift register configuration failed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'bool_to_uint32';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_arr_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'input_arr';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '41';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Converts a boolean array of size CONFIG_LED_MATRIX_ROWSxCONFIG_LED_MATRIX_COLUMNS to a 32-bit unsigned integer.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param input_arr: Boolean input array of dimensions (CONFIG_LED_MATRIX_ROWS, CONFIG_LED_MATRIX_COLUMNS)
+
+@return A 32-bit value representing the LED states, where each bit corresponds to one physical LED as defined by @ref led_matrix_map.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1ab37555d72fd52533e686e233f1fd23e5';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_set_bit';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'logical_pin';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'led_value';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '56';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Sets a single bit of the "data" field of the passed in matrix.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param led_number: The logical index of the pin (varies from [0, led_matrix_rows * led_matrix_columns - 1])
+@param led_value: The value to set the LED (can be 0 - LOW or 1 - HIGH)
+
+@return Returns an error if a NULL matrix is passed or if the led number exceeds (led_matrix_rows * led_matrix_columns - 1), else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1aa625ed34859afeaaa77d45694c1fd439';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_set_data';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '85';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Sets all the bits of the "data" field of the passed in matrix using led_matrix_set_bit().
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param data: The data to write to the LED matrix.
+
+@return Returns an error if a NULL matrix is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1a56863ce32cf449e8e5edc48589431be2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_set_data_raw';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '102';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Sets all the bits of the "data" field.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param data: The bitfield used to set the values of the LED matrix.
+
+@return Returns an error if a NULL matrix is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1aba2c0ed982c8c7c37d823c3f77e9efe2';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_write';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_output_mode_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'mode';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '115';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Performs the write from the led_matrix structure to the actual LEDs on board.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param mode: The way in which to display the values from the shift register.
+
+@return Returns an error if a NULL matrix is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1a63027033e120823a7f178b3f144106c0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_display_string';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'message';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+double
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'wait_ms';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '134';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Displays the entered string character by character on the LED Matrix with a delay of "wait_ms" ms between characters.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs.
+@param message: The message to be displayed on the screen.
+@param wait_ms: The time to wait between two characters (in ms)
+
+@return Returns an error if a NULL matrix or message is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'led__matrix_8c_1ae753ca43dab493d0103882f8a39d14ab';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'led_matrix_cleanup';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+led_matrix
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'matrix';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      func-mem-desc-line = '167';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Performs cleanup on the LED Matrix contents.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param matrix: The handle to represent and use the matrix of LEDs
+
+@return Returns an error if there is an error while cleaning up the shift register, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'led__matrix_8c_1ae52918c4d199161f202b8ef11adac9b8';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const char *
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'TAG_LED_MATRIX';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= "led_matrix"
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/led_matrix.c';
+      var-mem-desc-line = '29';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/github/workspace/src/led_matrix.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'led__matrix__font_8c';
+  file-name = 'led_matrix_font.c';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'led__matrix__font_8c_1abc271b7e3b81780bb3711b1a678a2e16';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+const led_matrix_data_arr_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'led_matrix_chars';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= {
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 0, 0, 0, 0},
+     {1, 1, 1, 1, 0, 1},
+     {1, 1, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 0, 1, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 1, 0, 1, 0, 0},
+     {1, 1, 1, 1, 1, 1},
+     {0, 1, 0, 1, 0, 0}},
+
+    
+    {{0, 1, 0, 1, 1, 0},
+     {0, 1, 0, 1, 0, 1},
+     {1, 1, 1, 1, 1, 1},
+     {0, 1, 0, 1, 0, 1},
+     {0, 0, 1, 1, 0, 1}},
+
+    
+    {{1, 0, 0, 1, 1, 0},
+     {0, 1, 0, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 0, 1, 0, 0},
+     {1, 1, 0, 0, 1, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 1},
+     {0, 0, 1, 0, 1, 0},
+     {1, 0, 0, 1, 0, 1},
+     {1, 0, 1, 1, 0, 1},
+     {0, 1, 0, 0, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 0, 1, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 1, 0, 0}},
+
+    
+    {{0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 1, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    
+    {{0, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 1, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {0, 1, 1, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 1, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {0, 1, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 0, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 0, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 1, 1, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 1, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 1, 0, 0, 0},
+     {1, 0, 1, 1, 0, 1},
+     {1, 0, 1, 1, 0, 1},
+     {1, 0, 0, 0, 0, 1},
+     {0, 1, 1, 1, 1, 1}},
+
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+    
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 1, 1, 1, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 1, 0, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 1, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{1, 1, 1, 1, 1, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 1},
+     {0, 1, 1, 1, 1, 0},
+     {1, 0, 0, 1, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 0, 1, 0},
+     {1, 0, 1, 1, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 1, 0, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {0, 1, 1, 0, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{1, 1, 0, 0, 0, 0},
+     {0, 0, 1, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 1, 1, 0, 0},
+     {1, 1, 0, 0, 0, 0}},
+
+    
+    {{1, 1, 1, 1, 1, 0},
+     {0, 0, 0, 1, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 0, 1, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 0, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 0, 1, 1, 0}},
+
+    
+    {{1, 1, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 0, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 1, 0, 1, 0},
+     {1, 0, 0, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 1, 1, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    
+    {{0, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 0, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 1, 0, 0},
+     {0, 0, 1, 0, 1, 0},
+     {0, 0, 1, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 0, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 1, 0},
+     {0, 0, 1, 0, 1, 0},
+     {0, 0, 0, 1, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 0, 1, 1, 0},
+     {0, 0, 1, 1, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 0, 0},
+     {1, 0, 1, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {0, 1, 0, 1, 0, 1},
+     {0, 1, 0, 1, 0, 1},
+     {0, 0, 1, 1, 0, 1}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {1, 0, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 1},
+     {0, 0, 0, 0, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 1, 1, 1, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 1, 1, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 1, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 1, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 1, 1, 1, 1, 1}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 1, 1, 1},
+     {0, 1, 0, 1, 0, 0},
+     {0, 1, 0, 1, 0, 0},
+     {0, 1, 1, 1, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 1, 0, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 1, 1, 0, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 0, 1, 1, 1, 0},
+     {0, 0, 0, 0, 1, 0},
+     {0, 1, 1, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 0, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 1, 1, 1, 1, 0},
+     {0, 0, 0, 1, 0, 1},
+     {0, 0, 0, 1, 0, 1},
+     {0, 1, 1, 1, 0, 1}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 1, 0},
+     {0, 1, 0, 0, 1, 0},
+     {0, 1, 0, 1, 1, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {1, 0, 0, 0, 1, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {0, 0, 0, 0, 0, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 0, 0, 0, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {1, 1, 1, 1, 1, 0},
+     {1, 0, 0, 0, 1, 0},
+     {0, 0, 0, 0, 0, 0}},
+
+    
+    {{0, 1, 1, 0, 0, 0},
+     {0, 0, 0, 1, 0, 0},
+     {0, 0, 1, 0, 0, 0},
+     {0, 1, 0, 0, 0, 0},
+     {0, 0, 1, 1, 0, 0}},
+
+    
+    {{0, 0, 1, 0, 0, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 0, 1, 1, 1, 0},
+     {0, 1, 1, 1, 0, 0},
+     {0, 0, 1, 0, 0, 0}},
+}
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/led_matrix_font.c';
+      var-mem-desc-line = '27';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+An array of LED matrix booleans (.
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ @see led_matrix_data_arr_t ) representing the ASCII printable characters in a predefined font
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/github/workspace/src/led_matrix_font.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -11556,6 +13389,243 @@ _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
   file-full-name  = '/github/workspace/src/servo.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'shift__register_8c';
+  file-name = 'shift_register.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8c_1ad8c1ad214843b380c56645e02bf2e34c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static bool
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_timer_on_alarm';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gptimer_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'timer';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const gptimer_alarm_event_data_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'edata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'user_data';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/shift_register.c';
+      func-mem-desc-line = '29';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8c_1a735c71ec46365bacf81bf2e6abdb4d03';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_gpio_init';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+shift_register_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'conf';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/shift_register.c';
+      func-mem-desc-line = '36';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Initialises the GPIO Pins for the Shift Register Present on the SRA Board.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param conf: The handle to use and represent the shift registers.
+@return Returns an error if NULL shift register is passed or if there is an error during configuring the GPIOs or timer, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8c_1a4dd2c2ab639492b857e770304d0303d7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'clock_toggle_rising';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gptimer_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'timer';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gpio_num_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'clk';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int32_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'delay_us';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/shift_register.c';
+      func-mem-desc-line = '114';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8c_1a1dee47a262c0fde83872e2e56b65c94a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_write_uint8';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const shift_register_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'sreg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const bool
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'instant';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/shift_register.c';
+      func-mem-desc-line = '122';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Writes a single byte to the shift register and latches it (single shift register)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param sreg: The handle to use and represent the shift registers.
+@param data: The data to be sent to the shift register.
+@param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
+@return Returns an error if a NULL shift register is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8c_1aae7d08ef9224c051d263da04f9668a95';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_write_uint32';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const shift_register_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'sreg';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint32_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'data';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const bool
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'instant';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/shift_register.c';
+      func-mem-desc-line = '150';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Writes a four bytes to the shift register and latches it (four cascaded shift registers)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param sreg: The handle to use and represent the shift registers.
+@param data: The data to be sent to the shift register.
+@param instant: This parameter defines the way in which the data is latched to the output register, all 8 bits at once or one-by-one.
+@return Returns an error if a NULL shift register is passed, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'shift__register_8c_1ad1bc60618a55d74eac5d2042421e1007';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'shift_register_cleanup';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+shift_register_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'sreg';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/shift_register.c';
+      func-mem-desc-line = '178';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Performs cleanup on the shift register contents.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param sreg: The handle to use and represent the shift register
+@return Returns an error if there is an error while cleaning up the general purpose timer, else returns ESP_OK
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'shift__register_8c_1a948f8fe649f07b971330b0d5eb136df6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const char *
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'TAG_SHIFT_REGISTER';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= "shift_register"
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = '/github/workspace/src/shift_register.c';
+      var-mem-desc-line = '27';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = '/github/workspace/src/shift_register.c';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
