@@ -47,7 +47,7 @@ void app_main(void)
 
     for (int i = 0; i < 3; i++) {
         // Set the initial pattern and send the data
-        ESP_ERROR_CHECK(led_matrix_set_data_raw(&xMyLEDMatrix, UINT32_MAX));
+        ESP_ERROR_CHECK(led_matrix_set_data_raw(&xMyLEDMatrix, 0xffffffff));
         ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
         ESP_LOGI(TAG, "All LEDs turned ON");
 
