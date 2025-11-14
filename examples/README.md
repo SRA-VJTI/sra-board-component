@@ -10,11 +10,11 @@ Example Codes for SRA Board
 ---------------------------     
 ## Examples
 
-### LED Matrix
+### Bar Graph
 
-LED Matrix can be used for testing purposes and displaying simple patterns
+Bar graph led can be used for testing purposes
 
-- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/led_matrix) for using the LED Matrix
+- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/bar_graph) for using the bar graph LED present on the SRA Board
 
 ### Light sensing array
 

@@ -35,8 +35,6 @@
 #include "servo.h"
 #include "pin_defs.h"
 #include "utils.h"
-#include "shift_register.h"
-#include "led_matrix.h"
 
 #ifdef CONFIG_ENABLE_OLED
 #include "oled.h"
