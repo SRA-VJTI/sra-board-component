@@ -33,7 +33,7 @@
 
 #include "led_matrix.h"
 
-static const char *TAG = "LED Matrix demo";
+static const char *TAG = "led_matrix_demo";
 
 void app_main(void)
 {
