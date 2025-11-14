@@ -1,6 +1,7 @@
 <map id="src/oled.c" name="src/oled.c">
-<area shape="rect" id="node1" title=" " alt="" coords="284,5,363,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="325,5,404,32"/>
 <area shape="rect" id="node2" href="$oled_8h.html" title=" " alt="" coords="295,80,351,107"/>
+<area shape="rect" id="node19" title=" " alt="" coords="375,80,437,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,304,65,331"/>
 <area shape="rect" id="node4" title=" " alt="" coords="79,155,143,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="168,155,260,181"/>

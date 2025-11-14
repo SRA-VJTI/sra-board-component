@@ -3937,7 +3937,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'LV_USE_LINE';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-0
+1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
       define-mem-desc-line = '486';
@@ -4202,10 +4202,10 @@ _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'lv__conf_8h_1a1e485e6fc2a1b99548fd399b00054fdf';
+      define-mem-id   = 'lv__conf_8h_1ae661cddd729aafc083104a7255a7834e';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'LV_USE_METER';
+      define-mem-name = 'LV_USE_SCALE';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 1
 _EnD_oF_dEf_TeXt_;
@@ -4228,7 +4228,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '543';
+      define-mem-desc-line = '544';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4246,7 +4246,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '545';
+      define-mem-desc-line = '546';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4264,7 +4264,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '551';
+      define-mem-desc-line = '552';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4282,7 +4282,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '553';
+      define-mem-desc-line = '554';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4300,7 +4300,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '555';
+      define-mem-desc-line = '556';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4318,7 +4318,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '557';
+      define-mem-desc-line = '558';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4336,7 +4336,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '559';
+      define-mem-desc-line = '560';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4354,7 +4354,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '566';
+      define-mem-desc-line = '567';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4372,7 +4372,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '580';
+      define-mem-desc-line = '581';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4390,7 +4390,7 @@ _EnD_oF_dEf_TeXt_;
 1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '583';
+      define-mem-desc-line = '584';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4408,7 +4408,7 @@ _EnD_oF_dEf_TeXt_;
 1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '590';
+      define-mem-desc-line = '591';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4426,7 +4426,7 @@ _EnD_oF_dEf_TeXt_;
 1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '593';
+      define-mem-desc-line = '594';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4444,7 +4444,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '602';
+      define-mem-desc-line = '603';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4462,7 +4462,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '610';
+      define-mem-desc-line = '611';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4480,7 +4480,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '618';
+      define-mem-desc-line = '619';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4498,7 +4498,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '626';
+      define-mem-desc-line = '627';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4516,7 +4516,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '633';
+      define-mem-desc-line = '634';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4534,7 +4534,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '636';
+      define-mem-desc-line = '637';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4552,7 +4552,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '640';
+      define-mem-desc-line = '641';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4570,7 +4570,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '643';
+      define-mem-desc-line = '644';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4588,7 +4588,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '646';
+      define-mem-desc-line = '647';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4606,7 +4606,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '649';
+      define-mem-desc-line = '650';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4624,7 +4624,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '666';
+      define-mem-desc-line = '667';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4642,7 +4642,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '670';
+      define-mem-desc-line = '671';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4660,7 +4660,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '681';
+      define-mem-desc-line = '682';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4678,7 +4678,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '684';
+      define-mem-desc-line = '685';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4696,7 +4696,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '687';
+      define-mem-desc-line = '688';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4714,7 +4714,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '690';
+      define-mem-desc-line = '691';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4732,7 +4732,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '693';
+      define-mem-desc-line = '694';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4750,7 +4750,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '696';
+      define-mem-desc-line = '697';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4768,7 +4768,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '700';
+      define-mem-desc-line = '701';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4786,7 +4786,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '721';
+      define-mem-desc-line = '722';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4804,7 +4804,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '728';
+      define-mem-desc-line = '729';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4822,7 +4822,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '734';
+      define-mem-desc-line = '735';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4840,7 +4840,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '737';
+      define-mem-desc-line = '738';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4858,7 +4858,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '744';
+      define-mem-desc-line = '745';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4876,7 +4876,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/lv_conf.h';
-      define-mem-desc-line = '747';
+      define-mem-desc-line = '748';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -4891,7 +4891,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-Configuration file for v8.3.3
+Configuration file for v9.4.0
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -5510,6 +5510,24 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'lvgl__helpers_8h_1ad34063e9a72cb6d59e3c8280ffb2b89b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'LVGL_MONO_PALETTE_BYTES';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(LV_COLOR_INDEXED_PALETTE_SIZE(LV_COLOR_FORMAT_I1) * sizeof(lv_color32_t))
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
+      define-mem-desc-line = '102';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
     };
     func = {
     func-member = {
@@ -5540,7 +5558,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'speed_hz';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
-      func-mem-desc-line = '110';
+      func-mem-desc-line = '111';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialize LVGL I2C Master.
 _EnD_oF_dEf_TeXt_;
@@ -5566,7 +5584,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
-      func-mem-desc-line = '117';
+      func-mem-desc-line = '118';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialize ssd1306 device.
 _EnD_oF_dEf_TeXt_;
@@ -5576,7 +5594,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8h_1a3aa379841186fc2d5916f5ab83283188';
+      func-mem-id   = 'lvgl__helpers_8h_1aed5e8f426ba70a180153957c8818b28d';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -5585,9 +5603,9 @@ _EnD_oF_dEf_TeXt_;
       func-mem-name = 'ssd1306_flush';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
+lv_display_t *
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'drv';
+        func-mem-param-declname = 'disp';
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
@@ -5597,116 +5615,43 @@ _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_color_t *
+uint8_t *
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'color_map';
+        func-mem-param-declname = 'px_map';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
-      func-mem-desc-line = '125';
+      func-mem-desc-line = '126';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Flush the buffer on the screen.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param drv pointer to the display driver structure
+@param disp pointer to the display instance
 @param area represents an area on the screen
-@param color_map represents the color map
+@param px_map pointer to the rendered color map (htiled I1 data)
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8h_1af9bdc642d67c0bd08dba4a89d5725ba0';
+      func-mem-id   = 'lvgl__helpers_8h_1a95d6e7a748cf4d8c2420caccfec22eb3';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 void
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'ssd1306_rounder';
+      func-mem-name = 'ssd1306_rounder_event_cb';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
+lv_event_t *
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'disp_drv';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_area_t *
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'area';
+        func-mem-param-declname = 'e';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
       func-mem-desc-line = '132';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Round the area that needs to be updated.
+Ensure LVGL always redraws the entire panel so the vtiled flush pipeline stays consistent.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param drv pointer to the display driver structure
-@param area represents an area on the screen
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8h_1af580fb2d697f0ffca8491ebe2ed0d8b9';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-void
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'ssd1306_set_px_cb';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'disp_drv';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-uint8_t *
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'buf';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_coord_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'buf_w';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_coord_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'x';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_coord_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'y';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_color_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'color';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_opa_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'opa';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
-      func-mem-desc-line = '144';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Draw a pixel into the buffer.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param disp_drv pointer to the display driver structure
-@param buf pointer to the memory range where you want to update the data
-@param buf_w width of the range where you want to update the data
-@param x x co-ordinate of pixel to update
-@param y y co-ordinate of pixel to update
-@param color monochrome color setting, either full or clear
-@param opa opacity value
+@param e LVGL event carrying the invalidated area
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -5724,7 +5669,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
-      func-mem-desc-line = '149';
+      func-mem-desc-line = '137';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Turn off the display.
 _EnD_oF_dEf_TeXt_;
@@ -5747,7 +5692,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/lvgl_helpers.h';
-      func-mem-desc-line = '154';
+      func-mem-desc-line = '142';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Turn on the display.
 _EnD_oF_dEf_TeXt_;
@@ -9250,7 +9195,7 @@ file = {
 "lvgl_helpers_ssd1306"
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      define-mem-desc-line = '21';
+      define-mem-desc-line = '22';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9280,7 +9225,7 @@ _EnD_oF_dEf_TeXt_;
 ((a) |= (1U << (b)))
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      define-mem-desc-line = '44';
+      define-mem-desc-line = '47';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9304,7 +9249,7 @@ _EnD_oF_dEf_TeXt_;
 ((a) &= ~(1U << (b)))
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      define-mem-desc-line = '45';
+      define-mem-desc-line = '48';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9316,22 +9261,22 @@ _EnD_oF_dEf_TeXt_;
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8c_1a695f4589be54722f6c8a85a4e244e959';
+      func-mem-id   = 'lvgl__helpers_8c_1aa39fda403dcee1f7991a0f11672e7f06';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
-static uint8_t
+static esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'send_data';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
+lv_display_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'disp_drv';
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-void *
+const void *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'bytes';
       }; /*        func-mem-param--param */
@@ -9342,7 +9287,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'bytes_len';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '167';
+      func-mem-desc-line = '164';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9352,22 +9297,22 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8c_1a54054274c6b5dfc98e2ba4318f801542';
+      func-mem-id   = 'lvgl__helpers_8c_1a6314a00131ae59e20ad5cabdbe4fe648';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
-static uint8_t
+static esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'send_pixels';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
+lv_display_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'disp_drv';
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-void *
+const uint8_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'color_buffer';
       }; /*        func-mem-param--param */
@@ -9378,7 +9323,49 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'buffer_len';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '180';
+      func-mem-desc-line = '177';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'lvgl__helpers_8c_1a53387baa35588e3ff5c0fd39edf76824';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'convert_htiled_to_ssd1306';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'src';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint32_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'width';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const uint32_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'height';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'dst';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
+      func-mem-desc-line = '194';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9401,7 +9388,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '47';
+      func-mem-desc-line = '50';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialize ssd1306 device.
 _EnD_oF_dEf_TeXt_;
@@ -9411,73 +9398,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8c_1af580fb2d697f0ffca8491ebe2ed0d8b9';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-void
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'ssd1306_set_px_cb';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'disp_drv';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-uint8_t *
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'buf';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_coord_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'buf_w';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_coord_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'x';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_coord_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'y';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_color_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'color';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_opa_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'opa';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '74';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Draw a pixel into the buffer.
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param disp_drv pointer to the display driver structure
-@param buf pointer to the memory range where you want to update the data
-@param buf_w width of the range where you want to update the data
-@param x x co-ordinate of pixel to update
-@param y y co-ordinate of pixel to update
-@param color monochrome color setting, either full or clear
-@param opa opacity value
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8c_1ab8806490eb3741caa8f03009cb1a16a2';
+      func-mem-id   = 'lvgl__helpers_8c_1aea64b34f4e3fb6654845ad109907bcdc';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -9486,7 +9407,7 @@ _EnD_oF_dEf_TeXt_;
       func-mem-name = 'ssd1306_flush';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
+lv_display_t *
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'disp_drv';
       }; /*        func-mem-param--param */
@@ -9498,50 +9419,43 @@ _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_color_t *
+uint8_t *
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'color_p';
+        func-mem-param-declname = 'px_map';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '90';
+      func-mem-desc-line = '77';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Flush the buffer on the screen.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param drv pointer to the display driver structure
+@param disp pointer to the display instance
 @param area represents an area on the screen
-@param color_map represents the color map
+@param px_map pointer to the rendered color map (htiled I1 data)
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'lvgl__helpers_8c_1af9bdc642d67c0bd08dba4a89d5725ba0';
+      func-mem-id   = 'lvgl__helpers_8c_1a95d6e7a748cf4d8c2420caccfec22eb3';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
 void
 _EnD_oF_dEf_TeXt_;
-      func-mem-name = 'ssd1306_rounder';
+      func-mem-name = 'ssd1306_rounder_event_cb';
       func-mem-param = {
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t *
+lv_event_t *
 _EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'disp_drv';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-lv_area_t *
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'area';
+        func-mem-param-declname = 'e';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '116';
+      func-mem-desc-line = '112';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Round the area that needs to be updated.
+Ensure LVGL always redraws the entire panel so the vtiled flush pipeline stays consistent.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-@param drv pointer to the display driver structure
-@param area represents an area on the screen
+@param e LVGL event carrying the invalidated area
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -9559,7 +9473,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '127';
+      func-mem-desc-line = '124';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Turn off the display.
 _EnD_oF_dEf_TeXt_;
@@ -9582,7 +9496,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '137';
+      func-mem-desc-line = '134';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Turn on the display.
 _EnD_oF_dEf_TeXt_;
@@ -9618,7 +9532,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'speed_hz';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      func-mem-desc-line = '148';
+      func-mem-desc-line = '145';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Initialize LVGL I2C Master.
 _EnD_oF_dEf_TeXt_;
@@ -9641,7 +9555,25 @@ static i2c_dev_t
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'ssd1306_dev_t';
       var-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
-      var-mem-desc-line = '38';
+      var-mem-desc-line = '40';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'lvgl__helpers_8c_1ac7f81077cab2abec963357fc8afd653e';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ssd1306_framebuffer';
+      var-mem-desc-file = '/github/workspace/src/lvgl_helpers.c';
+      var-mem-desc-line = '41';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -10663,7 +10595,7 @@ file = {
       define-mem-prot = public;
       define-mem-name = 'LV_ATTRIBUTE_IMG';
       define-mem-desc-file = '/github/workspace/src/oled.c';
-      define-mem-desc-line = '29';
+      define-mem-desc-line = '30';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -10688,7 +10620,7 @@ sra_logo
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '239';
+      func-mem-desc-line = '243';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -10711,7 +10643,7 @@ walle
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '240';
+      func-mem-desc-line = '244';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -10734,7 +10666,7 @@ mario
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '241';
+      func-mem-desc-line = '245';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -10752,7 +10684,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'init_oled';
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '247';
+      func-mem-desc-line = '250';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 enables and configures OLED display
 _EnD_oF_dEf_TeXt_;
@@ -10875,7 +10807,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kd';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '435';
+      func-mem-desc-line = '455';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays kp, ki and kd reading on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -10921,7 +10853,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 's4';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '474';
+      func-mem-desc-line = '494';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays Servo angles on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -10949,7 +10881,7 @@ _EnD_oF_dEf_TeXt_;
 = "oled"
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '27';
+      var-mem-desc-line = '28';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11038,7 +10970,7 @@ _EnD_oF_dEf_TeXt_;
 }
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '31';
+      var-mem-desc-line = '32';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11057,17 +10989,18 @@ _EnD_oF_dEf_TeXt_;
       var-mem-name = 'sra_logo';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+  .header.magic = LV_IMAGE_HEADER_MAGIC,
+  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.flags = 0,
   .header.w = 115,
   .header.h = 64,
-  .data_size = 968,
+  .header.stride = 15,
+  .data_size = sizeof(sra_logo_map),
   .data = sra_logo_map,
 }
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '101';
+      var-mem-desc-line = '102';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11140,7 +11073,7 @@ _EnD_oF_dEf_TeXt_;
 }
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '111';
+      var-mem-desc-line = '113';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11159,17 +11092,18 @@ _EnD_oF_dEf_TeXt_;
       var-mem-name = 'walle';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+  .header.magic = LV_IMAGE_HEADER_MAGIC,
+  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.flags = 0,
   .header.w = 108,
   .header.h = 48,
-  .data_size = 680,
+  .header.stride = 14,
+  .data_size = sizeof(walle_map),
   .data = walle_map,
 }
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '165';
+      var-mem-desc-line = '167';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11242,7 +11176,7 @@ _EnD_oF_dEf_TeXt_;
 }
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '175';
+      var-mem-desc-line = '178';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11261,17 +11195,18 @@ _EnD_oF_dEf_TeXt_;
       var-mem-name = 'mario';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
+  .header.magic = LV_IMAGE_HEADER_MAGIC,
+  .header.cf = LV_COLOR_FORMAT_I1,
+  .header.flags = 0,
   .header.w = 122,
   .header.h = 48,
-  .data_size = 776,
+  .header.stride = 16,
+  .data_size = sizeof(mario_map),
   .data = mario_map,
 }
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '229';
+      var-mem-desc-line = '232';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11281,15 +11216,15 @@ _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'oled_8c_1a526c4564302c02d83a148c9184943179';
+      var-mem-id   = 'oled_8c_1af0676f1fc0675d0b52a25ce8c385272c';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
-lv_color_t *
+static uint8_t
 _EnD_oF_dEf_TeXt_;
-      var-mem-name = 'buf_1';
+      var-mem-name = 'oled_draw_buffer';
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '243';
+      var-mem-desc-line = '247';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -11299,33 +11234,18 @@ _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
-      var-mem-id   = 'oled_8c_1ab05d1354c5c0aeda8efaa1b1e2e59995';
+      var-mem-id   = 'oled_8c_1a7afc3ef56980ea9844dae653067d5659';
       var-mem-virt = normal;
       var-mem-prot = public;
       var-mem-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_draw_buf_t
+static lv_display_t *
 _EnD_oF_dEf_TeXt_;
-      var-mem-name = 'disp_buf';
+      var-mem-name = 'oled_display';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= NULL
+_EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '244';
-      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* var-member */
-    var-member = {
-      var-mem-kind = 'variable';
-      var-mem-id   = 'oled_8c_1a3ae4a682aeb784530d1bf250fadbea59';
-      var-mem-virt = normal;
-      var-mem-prot = public;
-      var-mem-type = <<_EnD_oF_dEf_TeXt_
-lv_disp_drv_t
-_EnD_oF_dEf_TeXt_;
-      var-mem-name = 'disp_drv';
-      var-mem-desc-file = '/github/workspace/src/oled.c';
-      var-mem-desc-line = '245';
+      var-mem-desc-line = '248';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;

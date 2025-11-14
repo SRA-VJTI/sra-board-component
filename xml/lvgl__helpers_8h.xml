@@ -464,6 +464,17 @@
         </inbodydescription>
         <location file="include/lvgl_helpers.h" line="101" column="9" bodyfile="include/lvgl_helpers.h" bodystart="101" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="lvgl__helpers_8h_1ad34063e9a72cb6d59e3c8280ffb2b89b" prot="public" static="no">
+        <name>LVGL_MONO_PALETTE_BYTES</name>
+        <initializer>(LV_COLOR_INDEXED_PALETTE_SIZE(LV_COLOR_FORMAT_I1) * sizeof(lv_color32_t))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/lvgl_helpers.h" line="102" column="9" bodyfile="include/lvgl_helpers.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="lvgl__helpers_8h_1a11c3b96751518cac93ea6bcfe1d4c254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -518,7 +529,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="110" column="6" bodyfile="src/lvgl_helpers.c" bodystart="148" bodyend="162" declfile="include/lvgl_helpers.h" declline="110" declcolumn="6"/>
+        <location file="include/lvgl_helpers.h" line="111" column="6" bodyfile="src/lvgl_helpers.c" bodystart="145" bodyend="159" declfile="include/lvgl_helpers.h" declline="111" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="lvgl__helpers_8h_1a8c501b9eb4c6efb3f7d387a8d5390058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -538,24 +549,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="117" column="6" bodyfile="src/lvgl_helpers.c" bodystart="47" bodyend="72" declfile="include/lvgl_helpers.h" declline="117" declcolumn="6"/>
+        <location file="include/lvgl_helpers.h" line="118" column="6" bodyfile="src/lvgl_helpers.c" bodystart="50" bodyend="75" declfile="include/lvgl_helpers.h" declline="118" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="lvgl__helpers_8h_1a3aa379841186fc2d5916f5ab83283188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="lvgl__helpers_8h_1aed5e8f426ba70a180153957c8818b28d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void ssd1306_flush</definition>
-        <argsstring>(lv_disp_drv_t *drv, const lv_area_t *area, lv_color_t *color_map)</argsstring>
+        <argsstring>(lv_display_t *disp, const lv_area_t *area, uint8_t *px_map)</argsstring>
         <name>ssd1306_flush</name>
         <param>
-          <type>lv_disp_drv_t *</type>
-          <declname>drv</declname>
+          <type>lv_display_t *</type>
+          <declname>disp</declname>
         </param>
         <param>
           <type>const lv_area_t *</type>
           <declname>area</declname>
         </param>
         <param>
-          <type>lv_color_t *</type>
-          <declname>color_map</declname>
+          <type>uint8_t *</type>
+          <declname>px_map</declname>
         </param>
         <briefdescription>
 <para>Flush the buffer on the screen. </para>
@@ -563,10 +574,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>drv</parametername>
+<parametername>disp</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to the display driver structure </para>
+<para>pointer to the display instance </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -579,10 +590,10 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>color_map</parametername>
+<parametername>px_map</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>represents the color map </para>
+<para>pointer to the rendered color map (htiled I1 data) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -590,39 +601,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="125" column="6" bodyfile="src/lvgl_helpers.c" bodystart="90" bodyend="114" declfile="include/lvgl_helpers.h" declline="125" declcolumn="6"/>
+        <location file="include/lvgl_helpers.h" line="126" column="6" bodyfile="src/lvgl_helpers.c" bodystart="77" bodyend="110" declfile="include/lvgl_helpers.h" declline="126" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="lvgl__helpers_8h_1af9bdc642d67c0bd08dba4a89d5725ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="lvgl__helpers_8h_1a95d6e7a748cf4d8c2420caccfec22eb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void ssd1306_rounder</definition>
-        <argsstring>(lv_disp_drv_t *disp_drv, lv_area_t *area)</argsstring>
-        <name>ssd1306_rounder</name>
+        <definition>void ssd1306_rounder_event_cb</definition>
+        <argsstring>(lv_event_t *e)</argsstring>
+        <name>ssd1306_rounder_event_cb</name>
         <param>
-          <type>lv_disp_drv_t *</type>
-          <declname>disp_drv</declname>
-        </param>
-        <param>
-          <type>lv_area_t *</type>
-          <declname>area</declname>
+          <type>lv_event_t *</type>
+          <declname>e</declname>
         </param>
         <briefdescription>
-<para>Round the area that needs to be updated. </para>
+<para>Ensure LVGL always redraws the entire panel so the vtiled flush pipeline stays consistent. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>drv</parametername>
+<parametername>e</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>pointer to the display driver structure </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>area</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>represents an area on the screen </para>
+<para>LVGL event carrying the invalidated area </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -630,107 +629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="132" column="6" bodyfile="src/lvgl_helpers.c" bodystart="116" bodyend="125" declfile="include/lvgl_helpers.h" declline="132" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="lvgl__helpers_8h_1af580fb2d697f0ffca8491ebe2ed0d8b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void ssd1306_set_px_cb</definition>
-        <argsstring>(lv_disp_drv_t *disp_drv, uint8_t *buf, lv_coord_t buf_w, lv_coord_t x, lv_coord_t y, lv_color_t color, lv_opa_t opa)</argsstring>
-        <name>ssd1306_set_px_cb</name>
-        <param>
-          <type>lv_disp_drv_t *</type>
-          <declname>disp_drv</declname>
-        </param>
-        <param>
-          <type>uint8_t *</type>
-          <declname>buf</declname>
-        </param>
-        <param>
-          <type>lv_coord_t</type>
-          <declname>buf_w</declname>
-        </param>
-        <param>
-          <type>lv_coord_t</type>
-          <declname>x</declname>
-        </param>
-        <param>
-          <type>lv_coord_t</type>
-          <declname>y</declname>
-        </param>
-        <param>
-          <type>lv_color_t</type>
-          <declname>color</declname>
-        </param>
-        <param>
-          <type>lv_opa_t</type>
-          <declname>opa</declname>
-        </param>
-        <briefdescription>
-<para>Draw a pixel into the buffer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>disp_drv</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>pointer to the display driver structure </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>buf</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>pointer to the memory range where you want to update the data </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>buf_w</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>width of the range where you want to update the data </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>x</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>x co-ordinate of pixel to update </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>y</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>y co-ordinate of pixel to update </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>color</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>monochrome color setting, either full or clear </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>opa</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>opacity value </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="144" column="6" bodyfile="src/lvgl_helpers.c" bodystart="74" bodyend="88" declfile="include/lvgl_helpers.h" declline="144" declcolumn="6"/>
+        <location file="include/lvgl_helpers.h" line="132" column="6" bodyfile="src/lvgl_helpers.c" bodystart="112" bodyend="122" declfile="include/lvgl_helpers.h" declline="132" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -747,7 +646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="149" column="6" bodyfile="src/lvgl_helpers.c" bodystart="127" bodyend="135" declfile="include/lvgl_helpers.h" declline="149" declcolumn="6"/>
+        <location file="include/lvgl_helpers.h" line="137" column="6" bodyfile="src/lvgl_helpers.c" bodystart="124" bodyend="132" declfile="include/lvgl_helpers.h" declline="137" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -764,7 +663,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/lvgl_helpers.h" line="154" column="6" bodyfile="src/lvgl_helpers.c" bodystart="137" bodyend="145" declfile="include/lvgl_helpers.h" declline="154" declcolumn="6"/>
+        <location file="include/lvgl_helpers.h" line="142" column="6" bodyfile="src/lvgl_helpers.c" bodystart="134" bodyend="142" declfile="include/lvgl_helpers.h" declline="142" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -853,31 +752,29 @@
 <codeline lineno="99"><highlight class="comment"><sp/>*<sp/>so<sp/>the<sp/>buffer<sp/>size<sp/>can<sp/>be<sp/>divided<sp/>by<sp/>8,<sp/>e.g.<sp/>see<sp/>SSD1306<sp/>display<sp/>size.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
 <codeline lineno="101" refid="lvgl__helpers_8h_1a654a6892936b96d1d9563c5eabec9dab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DISP_BUF_SIZE<sp/><sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a11c3b96751518cac93ea6bcfe1d4c254" kindref="member">lvgl_i2c_driver_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sda_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scl_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed_hz);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a8c501b9eb4c6efb3f7d387a8d5390058" kindref="member">ssd1306_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a3aa379841186fc2d5916f5ab83283188" kindref="member">ssd1306_flush</ref>(lv_disp_drv_t<sp/>*drv,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>lv_area_t<sp/>*area,<sp/>lv_color_t<sp/>*color_map);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1af9bdc642d67c0bd08dba4a89d5725ba0" kindref="member">ssd1306_rounder</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>lv_area_t<sp/>*area);</highlight></codeline>
+<codeline lineno="102" refid="lvgl__helpers_8h_1ad34063e9a72cb6d59e3c8280ffb2b89b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LVGL_MONO_PALETTE_BYTES<sp/>(LV_COLOR_INDEXED_PALETTE_SIZE(LV_COLOR_FORMAT_I1)<sp/>*<sp/>sizeof(lv_color32_t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a11c3b96751518cac93ea6bcfe1d4c254" kindref="member">lvgl_i2c_driver_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sda_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scl_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>speed_hz);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a8c501b9eb4c6efb3f7d387a8d5390058" kindref="member">ssd1306_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1aed5e8f426ba70a180153957c8818b28d" kindref="member">ssd1306_flush</ref>(lv_display_t<sp/>*disp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>lv_area_t<sp/>*area,<sp/>uint8_t<sp/>*px_map);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a95d6e7a748cf4d8c2420caccfec22eb3" kindref="member">ssd1306_rounder_event_cb</ref>(lv_event_t<sp/>*e);</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1af580fb2d697f0ffca8491ebe2ed0d8b9" kindref="member">ssd1306_set_px_cb</ref>(lv_disp_drv_t<sp/>*<ref refid="oled_8c_1a3ae4a682aeb784530d1bf250fadbea59" kindref="member">disp_drv</ref>,<sp/>uint8_t<sp/>*buf,<sp/>lv_coord_t<sp/>buf_w,<sp/>lv_coord_t<sp/>x,<sp/>lv_coord_t<sp/>y,<sp/>lv_color_t<sp/>color,<sp/>lv_opa_t<sp/>opa);</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" kindref="member">ssd1306_sleep_in</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a2bc107fb5554a2dd684aa3987a367795" kindref="member">ssd1306_sleep_in</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" kindref="member">ssd1306_sleep_out</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MACROS</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>extern<sp/>&quot;C&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lvgl__helpers_8h_1a37a965445288f68e66b229e6075bc72c" kindref="member">ssd1306_sleep_out</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">/**********************</highlight></codeline>
-<codeline lineno="157"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>MACROS</highlight></codeline>
-<codeline lineno="158"><highlight class="comment"><sp/>**********************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>extern<sp/>&quot;C&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LVGL_HELPERS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight></codeline>
-<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LVGL_HELPERS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/lvgl_helpers.h"/>
   </compounddef>
