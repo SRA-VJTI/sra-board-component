@@ -408,7 +408,7 @@
     <member refid="oled_8h_1a895f3fc97245c493b7414566815f3b48" kind="function"><name>display_logo</name></member>
     <member refid="oled_8h_1a98433da15e8207817e3ffd4e42b626a0" kind="function"><name>display_lsa</name></member>
     <member refid="oled_8h_1a1258c05bcda38123f6b825ae1abfcd54" kind="function"><name>display_mpu</name></member>
-    <member refid="oled_8h_1ac588665be0f2f8fb00787ef97a32e03d" kind="function"><name>display_pid_values</name></member>
+    <member refid="oled_8h_1a206cff3e08c28bab9d96f779409781c7" kind="function"><name>display_pid_values</name></member>
     <member refid="oled_8h_1a479e088b824336912654e8c146885e1e" kind="function"><name>display_servo_values</name></member>
   </compound>
   <compound refid="pin__defs_8h" kind="file"><name>pin_defs.h</name>
@@ -604,7 +604,7 @@
     <member refid="oled_8c_1a895f3fc97245c493b7414566815f3b48" kind="function"><name>display_logo</name></member>
     <member refid="oled_8c_1a98433da15e8207817e3ffd4e42b626a0" kind="function"><name>display_lsa</name></member>
     <member refid="oled_8c_1a1258c05bcda38123f6b825ae1abfcd54" kind="function"><name>display_mpu</name></member>
-    <member refid="oled_8c_1ac588665be0f2f8fb00787ef97a32e03d" kind="function"><name>display_pid_values</name></member>
+    <member refid="oled_8c_1a206cff3e08c28bab9d96f779409781c7" kind="function"><name>display_pid_values</name></member>
     <member refid="oled_8c_1a479e088b824336912654e8c146885e1e" kind="function"><name>display_servo_values</name></member>
   </compound>
   <compound refid="servo_8c" kind="file"><name>servo.c</name>

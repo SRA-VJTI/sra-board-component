@@ -144,9 +144,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1258c05bcda38123f6b825ae1abfcd54"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8h.html#a1258c05bcda38123f6b825ae1abfcd54">display_mpu</a> (float pitch, float roll)</td></tr>
 <tr class="memdesc:a1258c05bcda38123f6b825ae1abfcd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays pitch and roll readings on OLED screen  <a href="oled_8h.html#a1258c05bcda38123f6b825ae1abfcd54">More...</a><br /></td></tr>
 <tr class="separator:a1258c05bcda38123f6b825ae1abfcd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac588665be0f2f8fb00787ef97a32e03d"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8h.html#ac588665be0f2f8fb00787ef97a32e03d">display_pid_values</a> (float kp, float ki, float kd)</td></tr>
-<tr class="memdesc:ac588665be0f2f8fb00787ef97a32e03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays kp, ki and kd reading on the OLED screen  <a href="oled_8h.html#ac588665be0f2f8fb00787ef97a32e03d">More...</a><br /></td></tr>
-<tr class="separator:ac588665be0f2f8fb00787ef97a32e03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206cff3e08c28bab9d96f779409781c7"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8h.html#a206cff3e08c28bab9d96f779409781c7">display_pid_values</a> (float kp, float ki, float kd, const char *ip_str_value)</td></tr>
+<tr class="memdesc:a206cff3e08c28bab9d96f779409781c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays kp, ki and kd reading on the OLED screen  <a href="oled_8h.html#a206cff3e08c28bab9d96f779409781c7">More...</a><br /></td></tr>
+<tr class="separator:a206cff3e08c28bab9d96f779409781c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a479e088b824336912654e8c146885e1e"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oled_8h.html#a479e088b824336912654e8c146885e1e">display_servo_values</a> (int s1, int s2, int s3, int s4)</td></tr>
 <tr class="memdesc:a479e088b824336912654e8c146885e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">displays Servo angles on the OLED screen  <a href="oled_8h.html#a479e088b824336912654e8c146885e1e">More...</a><br /></td></tr>
 <tr class="separator:a479e088b824336912654e8c146885e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,8 +315,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac588665be0f2f8fb00787ef97a32e03d" name="ac588665be0f2f8fb00787ef97a32e03d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac588665be0f2f8fb00787ef97a32e03d">&#9670;&nbsp;</a></span>display_pid_values()</h2>
+<a id="a206cff3e08c28bab9d96f779409781c7" name="a206cff3e08c28bab9d96f779409781c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206cff3e08c28bab9d96f779409781c7">&#9670;&nbsp;</a></span>display_pid_values()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +337,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>kd</em>&#160;</td>
+          <td class="paramname"><em>kd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ip_str_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -352,11 +358,12 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">kp</td><td>value of kp in float </td></tr>
     <tr><td class="paramname">ki</td><td>value of ki in float </td></tr>
-    <tr><td class="paramname">kd</td><td>value of kd in float</td></tr>
+    <tr><td class="paramname">kd</td><td>value of kd in float </td></tr>
+    <tr><td class="paramname">ip_str_val</td><td>value of ip address in char</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>esp_err_t i.e it shows if Kp, Ki, Kd values and ip address are displayed successfully or not </dd></dl>
 
 </div>
 </div>

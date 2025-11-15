@@ -7772,7 +7772,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'oled_8h_1ac588665be0f2f8fb00787ef97a32e03d';
+      func-mem-id   = 'oled_8h_1a206cff3e08c28bab9d96f779409781c7';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -7797,8 +7797,14 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kd';
       }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'ip_str_value';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '95';
+      func-mem-desc-line = '96';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays kp, ki and kd reading on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -7806,8 +7812,9 @@ _EnD_oF_dEf_TeXt_;
 @param kp value of kp in float
 @param ki value of ki in float
 @param kd value of kd in float
+@param ip_str_val value of ip address in char
 
-@return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+@return esp_err_t i.e it shows if Kp, Ki, Kd values and ip address are displayed successfully or not
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -7844,7 +7851,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 's4';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/oled.h';
-      func-mem-desc-line = '107';
+      func-mem-desc-line = '108';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays Servo angles on the OLED screen
 _EnD_oF_dEf_TeXt_;
@@ -12682,7 +12689,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'oled_8c_1ac588665be0f2f8fb00787ef97a32e03d';
+      func-mem-id   = 'oled_8c_1a206cff3e08c28bab9d96f779409781c7';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -12707,6 +12714,12 @@ float
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'kd';
       }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+const char *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'ip_str_value';
+      }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
       func-mem-desc-line = '435';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
@@ -12716,8 +12729,9 @@ _EnD_oF_dEf_TeXt_;
 @param kp value of kp in float
 @param ki value of ki in float
 @param kd value of kd in float
+@param ip_str_val value of ip address in char
 
-@return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+@return esp_err_t i.e it shows if Kp, Ki, Kd values and ip address are displayed successfully or not
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -12754,7 +12768,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 's4';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/oled.c';
-      func-mem-desc-line = '474';
+      func-mem-desc-line = '477';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 displays Servo angles on the OLED screen
 _EnD_oF_dEf_TeXt_;

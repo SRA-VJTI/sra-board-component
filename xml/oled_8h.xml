@@ -309,10 +309,10 @@
         </inbodydescription>
         <location file="include/oled.h" line="84" column="11" bodyfile="src/oled.c" bodystart="392" bodyend="433" declfile="include/oled.h" declline="84" declcolumn="11"/>
       </memberdef>
-      <memberdef kind="function" id="oled_8h_1ac588665be0f2f8fb00787ef97a32e03d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="oled_8h_1a206cff3e08c28bab9d96f779409781c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
         <definition>esp_err_t display_pid_values</definition>
-        <argsstring>(float kp, float ki, float kd)</argsstring>
+        <argsstring>(float kp, float ki, float kd, const char *ip_str_value)</argsstring>
         <name>display_pid_values</name>
         <param>
           <type>float</type>
@@ -325,6 +325,10 @@
         <param>
           <type>float</type>
           <declname>kd</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ip_str_value</declname>
         </param>
         <briefdescription>
 <para>displays kp, ki and kd reading on the OLED screen </para>
@@ -351,17 +355,25 @@
 <parametername>kd</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>value of kd in float</para>
+<para>value of kd in float </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ip_str_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of ip address in char</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not </para>
+<simplesect kind="return"><para>esp_err_t i.e it shows if Kp, Ki, Kd values and ip address are displayed successfully or not </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="95" column="11" bodyfile="src/oled.c" bodystart="435" bodyend="472" declfile="include/oled.h" declline="95" declcolumn="11"/>
+        <location file="include/oled.h" line="96" column="11" bodyfile="src/oled.c" bodystart="435" bodyend="475" declfile="include/oled.h" declline="96" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="oled_8h_1a479e088b824336912654e8c146885e1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
@@ -427,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/oled.h" line="107" column="11" bodyfile="src/oled.c" bodystart="474" bodyend="514" declfile="include/oled.h" declline="107" declcolumn="11"/>
+        <location file="include/oled.h" line="108" column="11" bodyfile="src/oled.c" bodystart="477" bodyend="517" declfile="include/oled.h" declline="108" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -491,11 +503,11 @@
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a1258c05bcda38123f6b825ae1abfcd54" kindref="member">display_mpu</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>roll);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1ac588665be0f2f8fb00787ef97a32e03d" kindref="member">display_pid_values</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ki,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kd);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a479e088b824336912654e8c146885e1e" kindref="member">display_servo_values</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s3,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s4);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a206cff3e08c28bab9d96f779409781c7" kindref="member">display_pid_values</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ki,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>kd,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ip_str_value);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">esp_err_t<sp/><ref refid="oled_8h_1a479e088b824336912654e8c146885e1e" kindref="member">display_servo_values</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s3,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s4);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/oled.h"/>
   </compounddef>
