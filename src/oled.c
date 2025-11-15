@@ -451,12 +451,15 @@ esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_va
   snprintf(kp_str, sizeof(kp_str), "Kp: %0.2f", kp);
   lv_label_set_text(text[0], kp_str);
 
+  // Printing ki value on oled
   snprintf(ki_str, sizeof(ki_str), "Ki: %0.2f", ki);
   lv_label_set_text(text[1], ki_str);
 
+  // Printing kd value on oled
   snprintf(kd_str, sizeof(kd_str), "Kd: %0.2f", kd);
   lv_label_set_text(text[2], kd_str);
 
+  // Printing ip address value on oled
   snprintf(ip_str, sizeof(ip_str), "IP: %s", ip_str_value);
   lv_label_set_text(text[3], ip_str);
 
