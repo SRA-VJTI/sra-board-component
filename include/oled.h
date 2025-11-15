@@ -95,7 +95,6 @@ esp_err_t display_mpu(float pitch, float roll);
  **/
 esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_value);
 
-
 /**
  * @brief displays Servo angles on the OLED screen
 
