@@ -83,3 +83,6 @@ dkms.conf
 ### vscode ###
 .vscode/
 *.code-workspace
+
+### macOS ###
+.DS_Store

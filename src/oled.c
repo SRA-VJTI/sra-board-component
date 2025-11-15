@@ -432,17 +432,17 @@ esp_err_t display_mpu(float pitch, float roll)
   return ESP_OK;
 }
 
-esp_err_t display_pid_values(float kp, float ki, float kd)
+esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_value)
 {
   // Clear the screen
   lv_obj_clean(lv_scr_act());
 
-  char kp_str[10], ki_str[10], kd_str[10];
+  char kp_str[10], ki_str[10], kd_str[10], ip_str[32];
 
   lv_obj_t *scr = lv_disp_get_scr_act(NULL);
-  lv_obj_t* text[3];
+  lv_obj_t* text[4];
 
-  for (int i = 0; i < 3; ++i)
+  for (int i = 0; i < 4; ++i)
   {
     text[i] = lv_label_create(scr);
   }
@@ -459,10 +459,13 @@ esp_err_t display_pid_values(float kp, float ki, float kd)
   snprintf(kd_str, sizeof(kd_str), "Kd: %0.2f", kd);
   lv_label_set_text(text[2], kd_str);
 
-  for (int i = 0; i < 3; ++i)
+  // Printing ip address value on oled
+  snprintf(ip_str, sizeof(ip_str), "IP: %s", ip_str_value);
+  lv_label_set_text(text[3], ip_str);
+
+  for (int i = 0; i < 4; ++i)
   {
-    lv_obj_set_size(text[i], lv_obj_get_self_width(text[i]), 16);
-    lv_obj_set_pos(text[i], 30 * i, 16 * (i + 1));
+    lv_obj_set_pos(text[i], 0, 16 * i);
   }
 
   // Refresh Display
