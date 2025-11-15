@@ -89,8 +89,9 @@ esp_err_t display_mpu(float pitch, float roll);
  * @param kp value of kp in float
  * @param ki value of ki in float
  * @param kd value of kd in float
+ * @param ip_str_val value of ip address in char
 
- * @return esp_err_t i.e it shows if Pitch and Roll values are displayed successfully or not
+ * @return esp_err_t i.e it shows if Kp, Ki, Kd values and ip address are displayed successfully or not
  **/
 esp_err_t display_pid_values(float kp, float ki, float kd, const char *ip_str_value);
 
