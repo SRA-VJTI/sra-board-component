@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c)  2021 Society of Robotics and Automation
+ * Copyright (c)  2025 Society of Robotics and Automation
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,24 +22,14 @@
  * SOFTWARE.
  */
 
-#ifndef SRA_BOARD_H
-#define SRA_BOARD_H
+#ifndef LED_MATRIX_FONT_H
+#define LED_MATRIX_FONT_H
 
-#include "adc.h"
-#include "bar_graph.h"
-#include "switches.h"
-#include "lsa.h"
-#include "mcpwm_interface.h"
-#include "motor_driver.h"
-#include "mpu6050.h"
-#include "servo.h"
-#include "pin_defs.h"
-#include "utils.h"
-#include "shift_register.h"
 #include "led_matrix.h"
 
-#ifdef CONFIG_ENABLE_OLED
-#include "oled.h"
-#endif
+/**
+ * @brief An array of LED matrix booleans ( @see led_matrix_data_arr_t ) representing the ASCII printable characters in a predefined font
+ **/
+extern const led_matrix_data_arr_t led_matrix_chars[128];
 
 #endif

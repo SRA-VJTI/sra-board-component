@@ -44,15 +44,15 @@
 
 //////// mpu //////
 #define MPU6050_INT 23
-#define MPU6050_SDA 22
-#define MPU6050_SCL 21
+#define MPU6050_SCL 22
+#define MPU6050_SDA 21
 
 /////////////////////////////
 
 #ifdef CONFIG_ENABLE_OLED
 //////// oled ////////
-#define OLED_SDA 22
-#define OLED_SCL 21
+#define OLED_SCL 22
+#define OLED_SDA 21
 #endif
 
 //////// bar graph //////////
@@ -100,6 +100,13 @@
 #define SERVO_B 5
 #define SERVO_C 18
 #define SERVO_D 19
+/////////////////////////////
+
+//////// led matrix /////////
+//******    SIPO    *******//
+#define SHIFT_REGISTER_SDATA 12
+#define SHIFT_REGISTER_SRCLK 25
+#define SHIFT_REGISTER_RCLK  13
 /////////////////////////////
 
 #endif
