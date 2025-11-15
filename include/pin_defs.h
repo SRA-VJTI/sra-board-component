@@ -98,8 +98,8 @@
 /////////// servos //////////
 #define SERVO_A 15
 #define SERVO_B 5
-#define SERVO_C 19
-#define SERVO_D 18
+#define SERVO_C 18
+#define SERVO_D 19
 /////////////////////////////
 
 //////// led matrix /////////
