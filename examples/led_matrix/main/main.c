@@ -76,11 +76,11 @@ void app_main(void)
             ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
 
             // Wait for 1000 ms between LEDs
-            vTaskDelay(pdMS_TO_TICKS(1000));
+            vTaskDelay(pdMS_TO_TICKS(100));
         }
 
         // After one full LED sweep, show "SRA"
         ESP_LOGI(TAG, "Displaying text: SRA");
-        ESP_ERROR_CHECK(led_matrix_display_string(&xMyLEDMatrix, "SRA", 1000));
+        ESP_ERROR_CHECK(led_matrix_display_string(&xMyLEDMatrix, "ABCDEFGH", 1000));
     }
 }
