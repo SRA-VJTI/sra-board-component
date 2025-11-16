@@ -132,13 +132,13 @@ esp_err_t shift_register_write_uint8(const shift_register_t *sreg, const uint8_t
 
     if (instant) {
         for (i = (BITS_IN_A_BYTE - 1); i >= 0; i--) {
-            gpio_set_level(sreg->sdata, data & (1 << i));
+            gpio_set_level(sreg->sdata, data & (1u << i));
             clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
         }
         clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
     } else {
         for (i = (BITS_IN_A_BYTE - 1); i >= 0; i--) {
-            gpio_set_level(sreg->sdata, data & (1 << i));
+            gpio_set_level(sreg->sdata, data & (1u << i));
             clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
             clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
         } 
@@ -160,13 +160,13 @@ esp_err_t shift_register_write_uint32(const shift_register_t *sreg, const uint32
 
     if (instant) {
         for (i = (BITS_IN_4_BYTES - 1); i >= 0; i--) {
-            gpio_set_level(sreg->sdata, data & (1 << i));
+            gpio_set_level(sreg->sdata, data & (1u << i));
             clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
         }
         clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
     } else {
         for (i = (BITS_IN_4_BYTES - 1); i >= 0; i--) {
-            gpio_set_level(sreg->sdata, data & (1 << i));
+            gpio_set_level(sreg->sdata, data & (1u << i));
             clock_toggle_rising(sreg->timer, sreg->srclk, CONFIG_SR_CLOCK_HIGH_TIME);
             clock_toggle_rising(sreg->timer, sreg->rclk, CONFIG_SR_CLOCK_HIGH_TIME);
         } 
