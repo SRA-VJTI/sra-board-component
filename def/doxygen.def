@@ -8876,7 +8876,7 @@ file = {
       define-mem-prot = public;
       define-mem-name = 'BITS_IN_A_BYTE';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-sizeof(uint8_t)
+(8 * sizeof(uint8_t))
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/utils.h';
       define-mem-desc-line = '31';
@@ -8894,7 +8894,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'BITS_IN_4_BYTES';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-BITS_IN_A_BYTE * sizeof(uint32_t)
+(8 * sizeof(uint32_t))
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/utils.h';
       define-mem-desc-line = '36';

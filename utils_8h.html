@@ -95,10 +95,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae3710cdfde4705f0eafe00a2a67e2033"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033">BITS_IN_A_BYTE</a>&#160;&#160;&#160;sizeof(uint8_t)</td></tr>
+<tr class="memitem:ae3710cdfde4705f0eafe00a2a67e2033"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033">BITS_IN_A_BYTE</a>&#160;&#160;&#160;(8 * sizeof(uint8_t))</td></tr>
 <tr class="memdesc:ae3710cdfde4705f0eafe00a2a67e2033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bits in a byte.  <a href="utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033">More...</a><br /></td></tr>
 <tr class="separator:ae3710cdfde4705f0eafe00a2a67e2033"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef43aba04f9c671c4208f1c98bc25cb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aef43aba04f9c671c4208f1c98bc25cb9">BITS_IN_4_BYTES</a>&#160;&#160;&#160;<a class="el" href="utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033">BITS_IN_A_BYTE</a> * sizeof(uint32_t)</td></tr>
+<tr class="memitem:aef43aba04f9c671c4208f1c98bc25cb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aef43aba04f9c671c4208f1c98bc25cb9">BITS_IN_4_BYTES</a>&#160;&#160;&#160;(8 * sizeof(uint32_t))</td></tr>
 <tr class="memdesc:aef43aba04f9c671c4208f1c98bc25cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bits in 4 bytes / int32_t / uint32_t.  <a href="utils_8h.html#aef43aba04f9c671c4208f1c98bc25cb9">More...</a><br /></td></tr>
 <tr class="separator:aef43aba04f9c671c4208f1c98bc25cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -119,7 +119,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BITS_IN_4_BYTES&#160;&#160;&#160;<a class="el" href="utils_8h.html#ae3710cdfde4705f0eafe00a2a67e2033">BITS_IN_A_BYTE</a> * sizeof(uint32_t)</td>
+          <td class="memname">#define BITS_IN_4_BYTES&#160;&#160;&#160;(8 * sizeof(uint32_t))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -135,7 +135,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BITS_IN_A_BYTE&#160;&#160;&#160;sizeof(uint8_t)</td>
+          <td class="memname">#define BITS_IN_A_BYTE&#160;&#160;&#160;(8 * sizeof(uint8_t))</td>
         </tr>
       </table>
 </div><div class="memdoc">
