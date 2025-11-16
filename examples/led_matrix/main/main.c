@@ -63,13 +63,24 @@ void app_main(void)
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
-    int i = 0;
     while (1) {
-        // Turn on a single LED matrix corresponding to the integer (2^i)
-        ESP_ERROR_CHECK(led_matrix_set_data(&xMyLEDMatrix, 0x1 << i));
-        ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
-        i = (i + 1) % (CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS);
-        // Wait for 1000 ms
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        // Sweep one LED across the entire matrix
+        for (int logical = 0;
+             logical < CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS;
+             logical++) {
+            led_matrix_data_t pattern = 0x1u << logical;
+
+            ESP_LOGI(TAG, "Lighting logical index %d", logical);
+
+            ESP_ERROR_CHECK(led_matrix_set_data(&xMyLEDMatrix, pattern));
+            ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
+
+            // Wait for 1000 ms between LEDs
+            vTaskDelay(pdMS_TO_TICKS(1000));
+        }
+
+        // After one full LED sweep, show "SRA"
+        ESP_LOGI(TAG, "Displaying text: SRA");
+        ESP_ERROR_CHECK(led_matrix_display_string(&xMyLEDMatrix, "SRA", 1000));
     }
 }
