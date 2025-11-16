@@ -81,6 +81,6 @@ void app_main(void)
 
         // After one full LED sweep, show "SRA"
         ESP_LOGI(TAG, "Displaying text: SRA");
-        ESP_ERROR_CHECK(led_matrix_display_string(&xMyLEDMatrix, "ABCDEFGH", 1000));
+        ESP_ERROR_CHECK(led_matrix_display_string(&xMyLEDMatrix, "SRA", 1000));
     }
 }
