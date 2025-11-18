@@ -85,10 +85,10 @@
 
 /////// motor driver ////////
 //****** normal mode ******//
-#define MDA_NORMAL_IN_1 12 //MCPWM_UNIT_1 MCPWM0A
-#define MDA_NORMAL_IN_2 13 //MCPWM_UNIT_1 MCPWM0B
-#define MDA_NORMAL_IN_3 25 //MCPWM_UNIT_1 MCPWM1A
-#define MDA_NORMAL_IN_4 26 //MCPWM_UNIT_1 MCPWM1B
+#define MDA_NORMAL_IN_1 13 //MCPWM_UNIT_1 MCPWM0A
+#define MDA_NORMAL_IN_2 12 //MCPWM_UNIT_1 MCPWM0B
+#define MDA_NORMAL_IN_3 26 //MCPWM_UNIT_1 MCPWM1A
+#define MDA_NORMAL_IN_4 25 //MCPWM_UNIT_1 MCPWM1B
 
 //***** parallel mode *****//
 #define MDA_PARALLEL_IN_1_2 25 //MCPWM_UNIT_1 MCPWM0A
