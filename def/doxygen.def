@@ -8329,7 +8329,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'MDA_NORMAL_IN_1';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-12
+13
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '88';
@@ -8347,7 +8347,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'MDA_NORMAL_IN_2';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-13
+12
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '89';
@@ -8365,7 +8365,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'MDA_NORMAL_IN_3';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-25
+26
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '90';
@@ -8383,7 +8383,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'MDA_NORMAL_IN_4';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-26
+25
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '91';

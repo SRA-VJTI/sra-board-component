@@ -459,7 +459,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" prot="public" static="no">
         <name>MDA_NORMAL_IN_1</name>
-        <initializer>12</initializer>
+        <initializer>13</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -470,7 +470,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" prot="public" static="no">
         <name>MDA_NORMAL_IN_2</name>
-        <initializer>13</initializer>
+        <initializer>12</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -481,7 +481,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" prot="public" static="no">
         <name>MDA_NORMAL_IN_3</name>
-        <initializer>25</initializer>
+        <initializer>26</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -492,7 +492,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" prot="public" static="no">
         <name>MDA_NORMAL_IN_4</name>
-        <initializer>26</initializer>
+        <initializer>25</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -683,10 +683,10 @@
 <codeline lineno="83" refid="pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BATTERY<sp/>33</highlight></codeline>
 <codeline lineno="85"></codeline>
 <codeline lineno="87"><highlight class="comment">//******<sp/>normal<sp/>mode<sp/>******//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//*****<sp/>parallel<sp/>mode<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="94" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
