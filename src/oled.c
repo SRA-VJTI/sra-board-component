@@ -374,7 +374,7 @@ esp_err_t display_lsa(line_sensor_array readings)
     }
 
     // Set Bar value according to LSA
-    for (uint32_t a = 52; a > 100 - (int)(readings.adc_reading[i] * 0.1); a--)
+    for (uint32_t a = 52; a > 100 - (int)(readings.adc_reading[4-i] * 0.1); a--)
     {
       for (uint32_t b = 19 + i * 20; b < 28 + i * 20; b++)
       {
