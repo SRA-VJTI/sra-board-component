@@ -972,7 +972,7 @@
 <codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="375"><highlight class="normal"></highlight></codeline>
 <codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Bar<sp/>value<sp/>according<sp/>to<sp/>LSA</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>a<sp/>=<sp/>52;<sp/>a<sp/>&gt;<sp/>100<sp/>-<sp/>(int)(readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[i]<sp/>*<sp/>0.1);<sp/>a--)</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>a<sp/>=<sp/>52;<sp/>a<sp/>&gt;<sp/>100<sp/>-<sp/>(int)(readings.<ref refid="unionline__sensor__array_1adc5d41a5820d2fe86445854659bcd4f9" kindref="member">adc_reading</ref>[4-i]<sp/>*<sp/>0.1);<sp/>a--)</highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>b<sp/>=<sp/>19<sp/>+<sp/>i<sp/>*<sp/>20;<sp/>b<sp/>&lt;<sp/>28<sp/>+<sp/>i<sp/>*<sp/>20;<sp/>b++)</highlight></codeline>
 <codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
