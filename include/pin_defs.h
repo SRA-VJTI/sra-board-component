@@ -96,10 +96,10 @@
 /////////////////////////////
 
 /////////// servos //////////
-#define SERVO_A 15
-#define SERVO_B 5
-#define SERVO_C 19
-#define SERVO_D 18
+#define SERVO_A 15 //GRIPPER
+#define SERVO_B 5  //ELBOW
+#define SERVO_C 18 //ARM
+#define SERVO_D 19 //BASE
 /////////////////////////////
 
 //////// led matrix /////////
