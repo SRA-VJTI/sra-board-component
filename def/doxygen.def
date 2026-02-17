@@ -8473,7 +8473,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'SERVO_C';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-19
+18
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '101';
@@ -8491,7 +8491,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-prot = public;
       define-mem-name = 'SERVO_D';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-18
+19
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/pin_defs.h';
       define-mem-desc-line = '102';

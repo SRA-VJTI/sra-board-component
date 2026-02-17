@@ -547,7 +547,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" prot="public" static="no">
         <name>SERVO_C</name>
-        <initializer>19</initializer>
+        <initializer>18</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -558,7 +558,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1abed942b161f2db9f855f196e22459066" prot="public" static="no">
         <name>SERVO_D</name>
-        <initializer>18</initializer>
+        <initializer>19</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -692,11 +692,11 @@
 <codeline lineno="94" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="95" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight></codeline>
 <codeline lineno="97"><highlight class="comment"></highlight></codeline>
-<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>15</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>18</highlight></codeline>
-<codeline lineno="104"></codeline>
+<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>15<sp/></highlight><highlight class="comment">//GRIPPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>5<sp/><sp/></highlight><highlight class="comment">//ELBOW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>18<sp/></highlight><highlight class="comment">//ARM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>19<sp/></highlight><highlight class="comment">//BASE</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"></highlight></codeline>
 <codeline lineno="106"><highlight class="comment">//******<sp/><sp/><sp/><sp/>SIPO<sp/><sp/><sp/><sp/>*******//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="107" refid="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SDATA<sp/>12</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108" refid="pin__defs_8h_1a08441397716647885b748c448b053d1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SRCLK<sp/>25</highlight><highlight class="normal"></highlight></codeline>
