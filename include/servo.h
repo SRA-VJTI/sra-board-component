@@ -27,8 +27,7 @@
 
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
-#include "driver/mcpwm.h"
-#include "soc/mcpwm_periph.h"
+#include "driver/mcpwm_prelude.h"
 #include "esp_attr.h"
 
 #include "sdkconfig.h"
@@ -43,9 +42,8 @@ typedef struct
     int max_pulse_width;
     int max_degree;
     int angle;
-    mcpwm_unit_t mcpwm_num;
-    mcpwm_timer_t timer_num;
-    mcpwm_generator_t gen;
+    mcpwm_cmpr_handle_t comparator;
+    mcpwm_gen_handle_t generator;
 } servo_config;
 
 /** @struct servo_config
@@ -58,12 +56,10 @@ typedef struct
  *  Member 'max_pulse_width' contains the maximum pulse width of servo motor
  *  @var servo_config::max_degree
  *  Member 'max_degree' contains the maximum degree servo motor can rotate
- *  @var servo_config::mcpwm_num
- *  Member 'mcpwm_num' contains MCPWM unit to use
- *  @var servo_config::timer_num
- *  Member 'timer_num' contains MCPWM timer to use
- *  @var servo_config::gen
- *  Member 'gen' contains MCPWM operator to use
+ *  @var servo_config::comparator
+ *  Member 'comparator' is responsible for firing a compare event that generator listens
+ *  @var servo_config::generator
+ *  Member 'generator' is responsible for driving gpio pin high or low
  */
 
 /**
