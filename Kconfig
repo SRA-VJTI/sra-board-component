@@ -48,7 +48,7 @@ config SERVO_A_MIN_PULSEWIDTH
 
 config SERVO_A_MAX_PULSEWIDTH
     int "servo-A maximum pulsewidth"
-    default 3000
+    default 2500
     help 
         sets the servo-A maximum pulsewidth
 
@@ -70,7 +70,7 @@ config SERVO_B_MIN_PULSEWIDTH
 
 config SERVO_B_MAX_PULSEWIDTH
     int "servo-B maximum pulsewidth"
-    default 3000
+    default 2500
     help 
         sets the servo-B maximum pulsewidth
 
@@ -92,7 +92,7 @@ config SERVO_C_MIN_PULSEWIDTH
 
 config SERVO_C_MAX_PULSEWIDTH
     int "servo-C maximum pulsewidth"
-    default 3000
+    default 2500
     help 
         sets the servo-C maximum pulsewidth
 
@@ -114,7 +114,7 @@ menu "Servo D"
     
     config SERVO_D_MAX_PULSEWIDTH
     int "servo-D maximum pulsewidth"
-    default 3000
+    default 2500
     help 
         sets the servo-D maximum pulsewidth
     
