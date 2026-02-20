@@ -28,7 +28,7 @@
 #include "sra_board.h"
 
 // Configuration for Servo A
-static servo_config servo_a = {
+servo_config servo_a = {
 	.servo_pin = SERVO_A,
 	.min_pulse_width = CONFIG_SERVO_A_MIN_PULSEWIDTH,
 	.max_pulse_width = CONFIG_SERVO_A_MAX_PULSEWIDTH,
@@ -36,7 +36,7 @@ static servo_config servo_a = {
 };
 
 // Configuration for Servo B
-static servo_config servo_b = {
+servo_config servo_b = {
 	.servo_pin = SERVO_B,
 	.min_pulse_width = CONFIG_SERVO_B_MIN_PULSEWIDTH,
 	.max_pulse_width = CONFIG_SERVO_B_MAX_PULSEWIDTH,
@@ -44,14 +44,14 @@ static servo_config servo_b = {
 };
 
 // Configuration for Servo C
-static servo_config servo_c = {
+servo_config servo_c = {
 	.servo_pin = SERVO_C,
 	.min_pulse_width = CONFIG_SERVO_C_MIN_PULSEWIDTH,
 	.max_pulse_width = CONFIG_SERVO_C_MAX_PULSEWIDTH,
 	.max_degree = CONFIG_SERVO_C_MAX_DEGREE,
 };
 
-static servo_config servo_d = {
+servo_config servo_d = {
 	.servo_pin = SERVO_D,
 	.min_pulse_width = CONFIG_SERVO_D_MIN_PULSEWIDTH,
 	.max_pulse_width = CONFIG_SERVO_D_MAX_PULSEWIDTH,
@@ -65,26 +65,26 @@ void app_main(void)
 
 	while (1)
 	{
-		// For loop to sweep all servos from 0 degree to 180 degree
-		for (int i = 0; i < 180; i++)
+		// For loop to sweep all servos from 0 degree to 90 degree
+		for (int i = 0; i < 90; i++)
 		{
 			// Passing servo configuration and angle to set_angle_servo function
 			set_angle_servo(&servo_a, i);
 			set_angle_servo(&servo_b, i);
 			set_angle_servo(&servo_c, i);
 			set_angle_servo(&servo_d, i);
-			vTaskDelay(3 / portTICK_PERIOD_MS);
+			vTaskDelay(50 / portTICK_PERIOD_MS);
 		}
 
-		// For loop to sweep all servos from 180 degree to 0 degree
-		for (int i = 180; i > 0; i--)
+		// For loop to sweep all servos from 90 degree to 0 degree
+		for (int i = 90; i > 0; i--)
 		{
 			// Passing servo configuration and angle to set_angle_servo function
 			set_angle_servo(&servo_a, i);
 			set_angle_servo(&servo_b, i);
 			set_angle_servo(&servo_c, i);
 			set_angle_servo(&servo_d, i);
-			vTaskDelay(3 / portTICK_PERIOD_MS);
+			vTaskDelay(50 / portTICK_PERIOD_MS);
 		}
 		// Delay of one second
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
