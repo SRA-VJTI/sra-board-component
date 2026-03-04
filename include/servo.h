@@ -21,21 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
+ 
 #ifndef SERVO_H
 #define SERVO_H
-
+ 
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
-#include "driver/mcpwm.h"
-#include "soc/mcpwm_periph.h"
 #include "esp_attr.h"
-
+#include "driver/mcpwm_prelude.h"
+ 
+ 
 #include "sdkconfig.h"
 #include "esp_log.h"
 #include "esp_err.h"
 #include "pin_defs.h"
-
+ 
 typedef struct
 {
     int servo_pin;
@@ -43,11 +43,11 @@ typedef struct
     int max_pulse_width;
     int max_degree;
     int angle;
-    mcpwm_unit_t mcpwm_num;
-    mcpwm_timer_t timer_num;
-    mcpwm_generator_t gen;
 } servo_config;
-
+ 
+ 
+ 
+ 
 /** @struct servo_config
  *  @brief This structure contains the configuration of servos
  *  @var servo_config::servo_pin
@@ -65,14 +65,14 @@ typedef struct
  *  @var servo_config::gen
  *  Member 'gen' contains MCPWM operator to use
  */
-
+ 
 /**
  * @brief Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
  *
  * @return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG
  **/
 esp_err_t enable_servo();
-
+ 
 /**
  * @brief Set the angle of the servos attached to the servo port of SRA Board
  *
@@ -81,11 +81,11 @@ esp_err_t enable_servo();
  * @return esp_err_t
  */
 esp_err_t set_angle_servo(servo_config *config, unsigned int degree_of_rotation);
-
+ 
 /**
  * @brief Get the angle of the servos
  * @return esp_err_t
  */
 int read_servo(servo_config *config);
-
+ 
 #endif
