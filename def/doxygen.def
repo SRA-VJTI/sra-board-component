@@ -1208,7 +1208,7 @@ file = {
       define-mem-prot = public;
       define-mem-name = 'ADC_ATTEN';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-ADC_ATTEN_DB_11
+ADC_ATTEN_DB_12
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/adc.h';
       define-mem-desc-line = '43';

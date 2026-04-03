@@ -126,7 +126,7 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" prot="public" static="no">
         <name>ADC_ATTEN</name>
-        <initializer>ADC_ATTEN_DB_11</initializer>
+        <initializer>ADC_ATTEN_DB_12</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -275,7 +275,7 @@
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_ATTEN<sp/>ADC_ATTEN_DB_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_ATTEN<sp/>ADC_ATTEN_DB_12</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44" refid="adc_8h_1a6e20add5d75926f896f2602a1b839673" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_BITWIDTH_LEN<sp/>ADC_BITWIDTH_12</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51" refid="structadc__obj__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
