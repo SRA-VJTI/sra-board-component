@@ -43,7 +43,7 @@ esp_err_t enable_servo_helper(servo_config *config , mcpwm_timer_handle_t timer,
     ESP_RETURN_ON_ERROR(mcpwm_new_generator(operator,&gen_config,&config->generator),TAG_SERVO,"failed to create new generator for seervo %d",config->servo_pin);
     ESP_RETURN_ON_ERROR(mcpwm_generator_set_action_on_timer_event(config->generator,MCPWM_GEN_TIMER_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP,MCPWM_TIMER_EVENT_EMPTY,MCPWM_GEN_ACTION_HIGH)),TAG_SERVO,"failed to set high action for servo %d",config->servo_pin);
     ESP_RETURN_ON_ERROR(mcpwm_generator_set_action_on_compare_event(config->generator,MCPWM_GEN_COMPARE_EVENT_ACTION(MCPWM_TIMER_DIRECTION_UP,config->comparator,MCPWM_GEN_ACTION_LOW)),TAG_SERVO,"failedd to set low action for servo %d",config->servo_pin);
-    uint32_t init_pulse = (uint32_t)(config->min_pulse_width);
+    uint32_t init_pulse = (uint32_t)((config->min_pulse_width + config->max_pulse_width)/2);
     ESP_RETURN_ON_ERROR(mcpwm_comparator_set_compare_value(config->comparator,init_pulse),TAG_SERVO,"failed to set initial comparator value for servo %d ",config->servo_pin);
     return ESP_OK;
 }
