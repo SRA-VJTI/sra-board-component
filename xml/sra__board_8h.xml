@@ -61,14 +61,14 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="38">
+      <node id="37">
         <label>led_matrix.h</label>
         <link refid="led__matrix_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
@@ -76,7 +76,7 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="21">
@@ -148,8 +148,6 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
@@ -161,7 +159,7 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="32">
         <label>shift_register.h</label>
         <link refid="shift__register_8h"/>
         <childnode refid="19" relation="include">
@@ -172,19 +170,19 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -208,11 +206,11 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="20">
@@ -231,27 +229,27 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="31">
         <label>utils.h</label>
         <link refid="utils_8h"/>
       </node>
-      <node id="39">
+      <node id="38">
         <label>ctype.h</label>
       </node>
       <node id="16">
         <label>driver/gpio.h</label>
       </node>
-      <node id="35">
+      <node id="34">
         <label>driver/gptimer.h</label>
       </node>
-      <node id="36">
+      <node id="35">
         <label>driver/gptimer_types.h</label>
       </node>
       <node id="27">
         <label>driver/i2c.h</label>
       </node>
       <node id="30">
-        <label>driver/mcpwm.h</label>
+        <label>driver/mcpwm_prelude.h</label>
       </node>
       <node id="6">
         <label>esp_adc/adc_cali.h</label>
@@ -265,7 +263,7 @@
       <node id="26">
         <label>esp_attr.h</label>
       </node>
-      <node id="37">
+      <node id="36">
         <label>esp_check.h</label>
       </node>
       <node id="12">
@@ -286,7 +284,7 @@
       <node id="9">
         <label>freertos/task.h</label>
       </node>
-      <node id="34">
+      <node id="33">
         <label>hal/gpio_types.h</label>
       </node>
       <node id="24">
@@ -294,9 +292,6 @@
       </node>
       <node id="22">
         <label>sdkconfig.h</label>
-      </node>
-      <node id="31">
-        <label>soc/mcpwm_periph.h</label>
       </node>
       <node id="15">
         <label>stdbool.h</label>

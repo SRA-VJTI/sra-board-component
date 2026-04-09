@@ -966,7 +966,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'servo_pin';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '41';
+      sec-mem-desc-line = '40';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -984,7 +984,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'min_pulse_width';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '42';
+      sec-mem-desc-line = '41';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1002,7 +1002,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'max_pulse_width';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '43';
+      sec-mem-desc-line = '42';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1020,7 +1020,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'max_degree';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '44';
+      sec-mem-desc-line = '43';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1038,7 +1038,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'angle';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '45';
+      sec-mem-desc-line = '44';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1048,61 +1048,43 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'structservo__config_1ac007a1ae7772ebc90684c111b404e720';
+      sec-mem-id   = 'structservo__config_1a9bc55aeeec33b38b1920ac5c254965b6';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_unit_t
+mcpwm_cmpr_handle_t
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'mcpwm_num';
+      sec-mem-name = 'comparator';
+      sec-mem-desc-file = '/github/workspace/include/servo.h';
+      sec-mem-desc-line = '45';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Member 'comparator' is responsible for firing a compare event that generator listens
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structservo__config_1a6c0a0b723af32f329c263f23e93fb8e9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_gen_handle_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'generator';
       sec-mem-desc-file = '/github/workspace/include/servo.h';
       sec-mem-desc-line = '46';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-Member 'mcpwm_num' contains MCPWM unit to use
-_EnD_oF_dEf_TeXt_;
-    }; /* sec-member */
-    sec-member = {
-      sec-mem-kind = 'variable';
-      sec-mem-id   = 'structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8';
-      sec-mem-virt = normal;
-      sec-mem-prot = public;
-      sec-mem-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_timer_t
-_EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'timer_num';
-      sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '47';
-      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-Member 'timer_num' contains MCPWM timer to use
-_EnD_oF_dEf_TeXt_;
-    }; /* sec-member */
-    sec-member = {
-      sec-mem-kind = 'variable';
-      sec-mem-id   = 'structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92';
-      sec-mem-virt = normal;
-      sec-mem-prot = public;
-      sec-mem-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_generator_t
-_EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'gen';
-      sec-mem-desc-file = '/github/workspace/include/servo.h';
-      sec-mem-desc-line = '48';
-      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-Member 'gen' contains MCPWM operator to use
+Member 'generator' is responsible for driving gpio pin high or low
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = '/github/workspace/include/servo.h';
-  cp-fileline  = '39';
+  cp-fileline  = '38';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 This structure contains the configuration of servos.
 _EnD_oF_dEf_TeXt_;
@@ -8580,7 +8562,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_servo';
       func-mem-desc-file = '/github/workspace/include/servo.h';
-      func-mem-desc-line = '74';
+      func-mem-desc-line = '70';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
 _EnD_oF_dEf_TeXt_;
@@ -8610,7 +8592,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'degree_of_rotation';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/servo.h';
-      func-mem-desc-line = '83';
+      func-mem-desc-line = '79';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the angle of the servos attached to the servo port of SRA Board.
 _EnD_oF_dEf_TeXt_;
@@ -8636,7 +8618,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'config';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/servo.h';
-      func-mem-desc-line = '89';
+      func-mem-desc-line = '85';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Get the angle of the servos.
 _EnD_oF_dEf_TeXt_;
@@ -13196,18 +13178,33 @@ file = {
     define = {
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'servo_8c_1a70fb9b3e7d410312baf880c1292f43ba';
+      define-mem-id   = 'servo_8c_1a2ad1d9947a8df87e140cfc88f27af8a5';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'STR';
-      define-mem-param  = {
-        define-mem-def-name = 'A';
-      }; /*        define-mem-def--param */
+      define-mem-name = 'SERVO_TIMEBASE_RESOLUTION_HZ';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-#A
+1000000
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/src/servo.c';
-      define-mem-desc-line = '29';
+      define-mem-desc-line = '31';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'servo_8c_1a7c23bc0b108ba9df44f21a88c891e0cf';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SERVO_TIMEBASE_PERIOD';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+20000
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = '/github/workspace/src/servo.c';
+      define-mem-desc-line = '32';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -13219,6 +13216,42 @@ _EnD_oF_dEf_TeXt_;
     func = {
     func-member = {
       func-mem-kind = 'function';
+      func-mem-id   = 'servo_8c_1a5518bea292c5771fdec9033cadc05f50';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+esp_err_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'enable_servo_helper';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+servo_config *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'config';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_timer_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'timer';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+mcpwm_oper_handle_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'operator';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = '/github/workspace/src/servo.c';
+      func-mem-desc-line = '34';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
       func-mem-id   = 'servo_8c_1af4079acff4a8c5a298d79d841fe96b80';
       func-mem-virt = normal;
       func-mem-prot = public;
@@ -13227,78 +13260,12 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'enable_servo';
       func-mem-desc-file = '/github/workspace/src/servo.c';
-      func-mem-desc-line = '31';
+      func-mem-desc-line = '50';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Enables Servo port on the sra board, sets up PWM for the three pins in servo port.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 @return esp_err_t - returns ESP_OK if servo pins initialised, else it returns ESP_ERR_INVALID_ARG
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'servo_8c_1a5b22e5ca5be55df86b36cea8f542291b';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-static esp_err_t
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = 'set_angle_servo_helper';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'servo_pin';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'servo_max';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'servo_min_pulsewidth';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'servo_max_pulsewidth';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-unsigned int
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'degree_of_rotation';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_unit_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'mcpwm_num';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_timer_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'timer_num';
-      }; /*        func-mem-param--param */
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-mcpwm_generator_t
-_EnD_oF_dEf_TeXt_;
-        func-mem-param-declname = 'gen';
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = '/github/workspace/src/servo.c';
-      func-mem-desc-line = '70';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
@@ -13323,7 +13290,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'degree_of_rotation';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/servo.c';
-      func-mem-desc-line = '90';
+      func-mem-desc-line = '93';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Set the angle of the servos attached to the servo port of SRA Board.
 _EnD_oF_dEf_TeXt_;
@@ -13372,7 +13339,7 @@ _EnD_oF_dEf_TeXt_;
 = "servo"
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/servo.c';
-      var-mem-desc-line = '27';
+      var-mem-desc-line = '28';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -13393,7 +13360,7 @@ _EnD_oF_dEf_TeXt_;
 = 0
 _EnD_oF_dEf_TeXt_;
       var-mem-desc-file = '/github/workspace/src/servo.c';
-      var-mem-desc-line = '28';
+      var-mem-desc-line = '29';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;

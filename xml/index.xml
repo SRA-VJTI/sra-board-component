@@ -65,9 +65,8 @@
     <member refid="structservo__config_1a060926d062cfe3f26a5c424b3bed1dbf" kind="variable"><name>max_pulse_width</name></member>
     <member refid="structservo__config_1a982f4d5f00c3941bb9ed8cd2d66fe3b9" kind="variable"><name>max_degree</name></member>
     <member refid="structservo__config_1a0404b532c9903812101610fb245540e8" kind="variable"><name>angle</name></member>
-    <member refid="structservo__config_1ac007a1ae7772ebc90684c111b404e720" kind="variable"><name>mcpwm_num</name></member>
-    <member refid="structservo__config_1a20f0e138ce47ab49602a35c9cdac45a8" kind="variable"><name>timer_num</name></member>
-    <member refid="structservo__config_1a2c1c36c96b6fecf0f285f25f7a395c92" kind="variable"><name>gen</name></member>
+    <member refid="structservo__config_1a9bc55aeeec33b38b1920ac5c254965b6" kind="variable"><name>comparator</name></member>
+    <member refid="structservo__config_1a6c0a0b723af32f329c263f23e93fb8e9" kind="variable"><name>generator</name></member>
   </compound>
   <compound refid="structshift__register__t" kind="struct"><name>shift_register_t</name>
     <member refid="structshift__register__t_1a6b81097c9da0c2bb5b7e40071eea67fe" kind="variable"><name>sdata</name></member>
@@ -608,11 +607,12 @@
     <member refid="oled_8c_1a479e088b824336912654e8c146885e1e" kind="function"><name>display_servo_values</name></member>
   </compound>
   <compound refid="servo_8c" kind="file"><name>servo.c</name>
-    <member refid="servo_8c_1a70fb9b3e7d410312baf880c1292f43ba" kind="define"><name>STR</name></member>
+    <member refid="servo_8c_1a2ad1d9947a8df87e140cfc88f27af8a5" kind="define"><name>SERVO_TIMEBASE_RESOLUTION_HZ</name></member>
+    <member refid="servo_8c_1a7c23bc0b108ba9df44f21a88c891e0cf" kind="define"><name>SERVO_TIMEBASE_PERIOD</name></member>
     <member refid="servo_8c_1a782ddd6cf38e2f841ac4daaf9604319c" kind="variable"><name>TAG_SERVO</name></member>
     <member refid="servo_8c_1a23cd83a8e8989910cf696b9226d0a495" kind="variable"><name>enabled_servo_flag</name></member>
+    <member refid="servo_8c_1a5518bea292c5771fdec9033cadc05f50" kind="function"><name>enable_servo_helper</name></member>
     <member refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
-    <member refid="servo_8c_1a5b22e5ca5be55df86b36cea8f542291b" kind="function"><name>set_angle_servo_helper</name></member>
     <member refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
     <member refid="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
   </compound>

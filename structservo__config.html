@@ -87,12 +87,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a982f4d5f00c3941bb9ed8cd2d66fe3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0404b532c9903812101610fb245540e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structservo__config.html#a0404b532c9903812101610fb245540e8">angle</a></td></tr>
 <tr class="separator:a0404b532c9903812101610fb245540e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac007a1ae7772ebc90684c111b404e720"><td class="memItemLeft" align="right" valign="top">mcpwm_unit_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structservo__config.html#ac007a1ae7772ebc90684c111b404e720">mcpwm_num</a></td></tr>
-<tr class="separator:ac007a1ae7772ebc90684c111b404e720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20f0e138ce47ab49602a35c9cdac45a8"><td class="memItemLeft" align="right" valign="top">mcpwm_timer_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structservo__config.html#a20f0e138ce47ab49602a35c9cdac45a8">timer_num</a></td></tr>
-<tr class="separator:a20f0e138ce47ab49602a35c9cdac45a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c1c36c96b6fecf0f285f25f7a395c92"><td class="memItemLeft" align="right" valign="top">mcpwm_generator_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structservo__config.html#a2c1c36c96b6fecf0f285f25f7a395c92">gen</a></td></tr>
-<tr class="separator:a2c1c36c96b6fecf0f285f25f7a395c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc55aeeec33b38b1920ac5c254965b6"><td class="memItemLeft" align="right" valign="top">mcpwm_cmpr_handle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structservo__config.html#a9bc55aeeec33b38b1920ac5c254965b6">comparator</a></td></tr>
+<tr class="separator:a9bc55aeeec33b38b1920ac5c254965b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0a0b723af32f329c263f23e93fb8e9"><td class="memItemLeft" align="right" valign="top">mcpwm_gen_handle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structservo__config.html#a6c0a0b723af32f329c263f23e93fb8e9">generator</a></td></tr>
+<tr class="separator:a6c0a0b723af32f329c263f23e93fb8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This structure contains the configuration of servos. </p>
@@ -111,18 +109,33 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c1c36c96b6fecf0f285f25f7a395c92" name="a2c1c36c96b6fecf0f285f25f7a395c92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c1c36c96b6fecf0f285f25f7a395c92">&#9670;&nbsp;</a></span>gen</h2>
+<a id="a9bc55aeeec33b38b1920ac5c254965b6" name="a9bc55aeeec33b38b1920ac5c254965b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc55aeeec33b38b1920ac5c254965b6">&#9670;&nbsp;</a></span>comparator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">servo_config::gen</td>
+          <td class="memname">servo_config::comparator</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Member 'gen' contains MCPWM operator to use </p>
+<p >Member 'comparator' is responsible for firing a compare event that generator listens </p>
+
+</div>
+</div>
+<a id="a6c0a0b723af32f329c263f23e93fb8e9" name="a6c0a0b723af32f329c263f23e93fb8e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0a0b723af32f329c263f23e93fb8e9">&#9670;&nbsp;</a></span>generator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">servo_config::generator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Member 'generator' is responsible for driving gpio pin high or low </p>
 
 </div>
 </div>
@@ -156,21 +169,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac007a1ae7772ebc90684c111b404e720" name="ac007a1ae7772ebc90684c111b404e720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac007a1ae7772ebc90684c111b404e720">&#9670;&nbsp;</a></span>mcpwm_num</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">servo_config::mcpwm_num</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Member 'mcpwm_num' contains MCPWM unit to use </p>
-
-</div>
-</div>
 <a id="a0814099ee19c534c5562d80c2a538c48" name="a0814099ee19c534c5562d80c2a538c48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0814099ee19c534c5562d80c2a538c48">&#9670;&nbsp;</a></span>min_pulse_width</h2>
 
@@ -198,21 +196,6 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Member 'servo_pin' contains the gpio pin number to which servo is connected </p>
-
-</div>
-</div>
-<a id="a20f0e138ce47ab49602a35c9cdac45a8" name="a20f0e138ce47ab49602a35c9cdac45a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20f0e138ce47ab49602a35c9cdac45a8">&#9670;&nbsp;</a></span>timer_num</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">servo_config::timer_num</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Member 'timer_num' contains MCPWM timer to use </p>
 
 </div>
 </div>
