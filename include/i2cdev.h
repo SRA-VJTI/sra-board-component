@@ -49,10 +49,13 @@ extern "C" {
 #define I2CDEV_MAX_STRETCH_TIME 0xffffffff
 #else
 #include <soc/i2c_reg.h>
-#ifdef I2C_TIME_OUT_REG_V
+#if defined(I2C_TIME_OUT_VALUE_V)
+#define I2CDEV_MAX_STRETCH_TIME I2C_TIME_OUT_VALUE_V
+#elif defined(I2C_TIME_OUT_REG_V)
 #define I2CDEV_MAX_STRETCH_TIME I2C_TIME_OUT_REG_V
 #else
-#define I2CDEV_MAX_STRETCH_TIME 0x00ffffff
+// Fall back to default value for ESP32-S3
+#define I2CDEV_MAX_STRETCH_TIME 0x1f
 #endif
 #endif
 
@@ -67,9 +70,12 @@ typedef struct
     i2c_config_t cfg;        //!< I2C driver configuration
     uint8_t addr;            //!< Unshifted address
     SemaphoreHandle_t mutex; //!< Device mutex
-    uint32_t timeout_ticks;  /*!< HW I2C bus timeout (stretch time), in ticks. 80MHz APB clock
-                                  ticks for ESP-IDF, CPU ticks for ESP8266.
-                                  When this value is 0, I2CDEV_MAX_STRETCH_TIME will be used */
+    uint32_t timeout_ticks;  /*!< Hardware I2C bus timeout. On ESP-IDF, this is
+                                  passed to i2c_set_timeout() in target-specific
+                                  register units, not APB ticks. On ESP32-S3,
+                                  values 1-31 select 2^value I2C_SCLK cycles.
+                                  On ESP8266, this is in CPU ticks. Zero uses
+                                  I2CDEV_MAX_STRETCH_TIME. */
 } i2c_dev_t;
 
 /**

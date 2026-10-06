@@ -229,10 +229,12 @@ static esp_err_t i2c_setup_port(const i2c_dev_t *dev)
     if ((res = i2c_get_timeout(dev->port, &t)) != ESP_OK)
         return res;
     // Timeout cannot be 0
+    // This is a target-specific hardware value. On ESP32-S3 the timeout
+    // register stores an exponent, not a count of APB or CPU ticks.
     uint32_t ticks = dev->timeout_ticks ? dev->timeout_ticks : I2CDEV_MAX_STRETCH_TIME;
     if ((ticks != t) && (res = i2c_set_timeout(dev->port, ticks)) != ESP_OK)
         return res;
-    ESP_LOGD(TAG, "Timeout: ticks = %lu (%lu usec) on port %d", dev->timeout_ticks, dev->timeout_ticks / 80, dev->port);
+    ESP_LOGD(TAG, "Timeout: hardware value %u on port %d", (unsigned)ticks, dev->port);
 #endif
 
     return ESP_OK;
