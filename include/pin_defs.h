@@ -102,11 +102,11 @@
 #define SERVO_D 18
 /////////////////////////////
 
-//////// LED matrix /////////
-//******    SPI    *******//
-#define MAX7219_MATRIX_CLK   18
-#define MAX7219_MATRIX_DIN   16
-#define MAX7219_MATRIX_LOAD  17
+//////// led matrix /////////
+//******    SIPO    *******//
+#define SHIFT_REGISTER_SDATA 12
+#define SHIFT_REGISTER_SRCLK 25
+#define SHIFT_REGISTER_RCLK  13
 /////////////////////////////
 
 #endif
