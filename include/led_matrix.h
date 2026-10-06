@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c)  2025 Society of Robotics and Automation
+ * Copyright (c) 2026 Society of Robotics and Automation
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,150 +22,66 @@
  * SOFTWARE.
  */
 
+
 #ifndef LED_MATRIX_H
 #define LED_MATRIX_H
 
-#include <string.h>
+#include <stdbool.h>
 #include <stdint.h>
-#include <ctype.h>
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include "esp_log.h"
 
-#include "shift_register.h"
+#include "esp_err.h"
+#include "driver/spi_master.h"
+
+#define LED_MATRIX_WIDTH  8
+#define LED_MATRIX_HEIGHT 8
 
 /**
- * @brief An integer used as a bitarray to represent the LED matrix data type.
+ * @brief Handle and framebuffer for one MAX7219-driven 8x8 LED matrix.
+ *
+ * The framebuffer uses logical bitmap orientation: rows are ordered top to
+ * bottom, and in each row bit 7 is the leftmost pixel while bit 0 is the
+ * rightmost. On the SRA board, MAX7219 digit registers 0..7 address columns
+ * from left to right, with bit 7 at the top and bit 0 at the bottom.
+ * led_matrix_show() transposes the framebuffer rows into these columns,
+ * so callers should not transpose bitmaps before drawing them.
  */
-typedef uint32_t led_matrix_data_t;
-
-/**
- * @brief An array of booleans used to represent the LED matrix data instead of the uint32_t.
-
- * @note Valid when the SRA Board is in its upright orientation (text and logo upright).
- */
-typedef bool led_matrix_data_arr_t[CONFIG_LED_MATRIX_ROWS][CONFIG_LED_MATRIX_COLUMNS];
-
-/**
- * @brief Struct used as a handle for LED matrix
- **/
 typedef struct {
-    led_matrix_data_t data;
-    shift_register_t config;
-} led_matrix;
+    uint8_t framebuffer[LED_MATRIX_HEIGHT];
+    uint8_t configured_brightness;
+    spi_device_handle_t spi_device;
+    bool initialized;
+} led_matrix_t;
 
-/**
- * @brief Enum used for the output mode of the LED matrix
- **/
-typedef enum {
-    LED_MATRIX_OUTPUT_SEQ,
-    LED_MATRIX_OUTPUT_PAR
-} led_matrix_output_mode_t;
+/** Initialize using the SRA board MAX7219 pins and default brightness 4. */
+esp_err_t led_matrix_init(led_matrix_t *matrix);
 
-/**
- * @brief Software constant for defining the number of rows in the LED matrix
- **/
-static const uint8_t led_matrix_rows = CONFIG_LED_MATRIX_ROWS;
+/** Set one buffered pixel; x and y are in the range 0..7. Call show to update. */
+esp_err_t led_matrix_set_pixel(led_matrix_t *matrix,
+                                  uint8_t x, uint8_t y, bool on);
 
-/**
- * @brief Software constant for defining the number of columns in the LED matrix
- **/
-static const uint8_t led_matrix_columns = CONFIG_LED_MATRIX_COLUMNS;
+/** Set one buffered logical row. Bit 7 is the leftmost pixel; call show to update. */
+esp_err_t led_matrix_set_row(led_matrix_t *matrix,
+                                 uint8_t row, uint8_t pixels);
 
-/**
- * @brief A mapping of the logical indexes of the LED matrix to the actual physical configuration of the LEDs, start from the bottom left
+/** Copy a top-to-bottom logical bitmap to the framebuffer. Call show to update. */
+esp_err_t led_matrix_draw_bitmap(led_matrix_t *matrix,
+                                     const uint8_t rows[LED_MATRIX_HEIGHT]);
 
- * @details This mapping starts from the bottom left of the matrix and defines how each logical LED index corresponds to the physical wiring of the LED matrix
- * @details Default SRA Board LED matrix mappings (change for future versions, current version : v2.7)
+/** Map the logical framebuffer and update the display. */
+esp_err_t led_matrix_show(const led_matrix_t *matrix);
 
- * @note This mapping starts from the bottom left of the matrix and the next logical index corresponds to the LED to the right in the same row. If the LED happens to be the last one in the row then the index corresponds to the first LED in the next (upper) row
- * @note For the v2.7 mapping pins outputs 6 and 7 are not connected to any LEDs and do not have any effect on the final pattern of the LEDs. (Remove or update this note in later versions)
- **/
-static const uint8_t led_matrix_map[CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS] = {
-     0,  1,  2,  3,  4,  5,
-    10, 11, 12, 13, 14, 15,
-    20, 21, 22, 23,  8,  9,
-    30, 31, 16, 17, 18, 19,
-    24, 25, 26, 27, 28, 29
-};
+/** Clear the framebuffer and immediately blank the physical display. */
+esp_err_t led_matrix_clear(led_matrix_t *matrix);
 
-/**
- * @brief Enables and configures the LED Matrix and corresponding shift registers.
+/** Set intensity from 0 (dim) through 15 (bright). */
+esp_err_t led_matrix_set_brightness(led_matrix_t *matrix,
+                                        uint8_t brightness);
 
- * @param matrix: The handle to represent and use the matrix of LEDs.
+/** Enable or shut down display scanning while retaining framebuffer contents. */
+esp_err_t led_matrix_set_enabled(const led_matrix_t *matrix,
+                                     bool enabled);
 
- * @return Returns an error if the could not allocate enough memory or if shift register configuration failed, else returns ESP_OK
- **/
-led_matrix led_matrix_init(void);
+/** Release the SPI device and pins from driver use. */
+esp_err_t led_matrix_deinit(led_matrix_t *matrix);
 
-/**
- * @brief Converts a boolean array of size CONFIG_LED_MATRIX_ROWSxCONFIG_LED_MATRIX_COLUMNS to a 32-bit unsigned integer
-
- * @param input_arr: Boolean input array of dimensions (CONFIG_LED_MATRIX_ROWS, CONFIG_LED_MATRIX_COLUMNS)
-
- * @return A 32-bit value representing the LED states, where each bit corresponds to one physical LED as defined by @ref led_matrix_map.
- */
-led_matrix_data_t bool_to_uint32(const led_matrix_data_arr_t input_arr);
-
-/**
- * @brief Sets a single bit of the "data" field of the passed in matrix.
-
- * @param matrix: The handle to represent and use the matrix of LEDs.
- * @param led_number: The logical index of the pin (varies from [0, led_matrix_rows * led_matrix_columns - 1])
- * @param led_value: The value to set the LED (can be 0 - LOW or 1 - HIGH)
-
- * @return Returns an error if a NULL matrix is passed or if the led number exceeds (led_matrix_rows * led_matrix_columns - 1), else returns ESP_OK
- **/
-esp_err_t led_matrix_set_bit(led_matrix *matrix, const uint8_t led_number, const uint8_t led_value);
-
-/**
- * @brief Sets all the bits of the "data" field of the passed in matrix using led_matrix_set_bit().
-
- * @param matrix: The handle to represent and use the matrix of LEDs.
- * @param data: The data to write to the LED matrix.
-
- * @return Returns an error if a NULL matrix is passed, else returns ESP_OK
- **/
-esp_err_t led_matrix_set_data(led_matrix *matrix, const led_matrix_data_t data);
-
-/**
- * @brief Sets all the bits of the "data" field.
-
- * @param matrix: The handle to represent and use the matrix of LEDs.
- * @param data: The bitfield used to set the values of the LED matrix.
-
- * @return Returns an error if a NULL matrix is passed, else returns ESP_OK
- **/
-esp_err_t led_matrix_set_data_raw(led_matrix *matrix, const led_matrix_data_t data);
-
-/**
- * @brief Performs the write from the led_matrix structure to the actual LEDs on board
-
- * @param matrix: The handle to represent and use the matrix of LEDs.
- * @param mode: The way in which to display the values from the shift register.
-
- * @return Returns an error if a NULL matrix is passed, else returns ESP_OK
- **/
-esp_err_t led_matrix_write(const led_matrix *matrix, const led_matrix_output_mode_t mode);
-
-/** 
- * @brief Displays the entered string character by character on the LED Matrix with a delay of "wait_ms" ms between characters
-
- * @param matrix: The handle to represent and use the matrix of LEDs.
- * @param message: The message to be displayed on the screen.
- * @param wait_ms: The time to wait between two characters (in ms)
-
- * @return Returns an error if a NULL matrix or message is passed, else returns ESP_OK
- **/
-esp_err_t led_matrix_display_string(led_matrix *matrix, const char *message, double wait_ms);
-
-/**
- * @brief Performs cleanup on the LED Matrix contents
-
- * @param matrix: The handle to represent and use the matrix of LEDs
-
- * @return Returns an error if there is an error while cleaning up the shift register, else returns ESP_OK
- **/
-esp_err_t led_matrix_cleanup(led_matrix matrix);
-
-#endif
+#endif /* LED_MATRIX_H */

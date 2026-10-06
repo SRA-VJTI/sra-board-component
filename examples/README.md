@@ -12,9 +12,10 @@ Example Codes for SRA Board
 
 ### LED Matrix
 
-LED Matrix can be used for testing purposes and displaying simple patterns
+The SRA Board's 8x8 LED matrix can display characters, bitmaps, and pixel
+patterns through the board component API.
 
-- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/led_matrix) for using the LED Matrix
+- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/led_matrix) for initializing the display and using its drawing and font APIs
 
 ### Light sensing array
 

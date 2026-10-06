@@ -22,65 +22,44 @@
  * SOFTWARE.
  */
 
-#include <limits.h>
-
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include <freertos/portable.h>
-#include <driver/gpio.h>
-#include <esp_err.h>
-#include <esp_log.h>
-
-#include "led_matrix.h"
-
-static const char *TAG = "led_matrix_demo";
+#include "esp_random.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "sra_board.h"
 
 void app_main(void)
 {
-    // Initialise the LED Matrix and Shift Register Pins
-    led_matrix xMyLEDMatrix = led_matrix_init();
+    led_matrix_t matrix;
+    ESP_ERROR_CHECK(led_matrix_init(&matrix));
+    ESP_ERROR_CHECK(led_matrix_set_brightness(&matrix, 4));
 
-    ESP_LOGI(TAG, "Shift register pins -> SDATA: %d, SRCLK: %d, RCLK: %d",
-             xMyLEDMatrix.config.sdata,
-             xMyLEDMatrix.config.srclk,
-             xMyLEDMatrix.config.rclk);
-
-    for (int i = 0; i < 3; i++) {
-        // Set the initial pattern and send the data
-        ESP_ERROR_CHECK(led_matrix_set_data_raw(&xMyLEDMatrix, 0xffffffff));
-        ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
-        ESP_LOGI(TAG, "All LEDs turned ON");
-
-        // Wait for 1000 ms
-        vTaskDelay(pdMS_TO_TICKS(1000));
-
-        // Clear the LED Matrix
-        ESP_ERROR_CHECK(led_matrix_set_data_raw(&xMyLEDMatrix, 0));
-        ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
-        ESP_LOGI(TAG, "All LEDs turned OFF");
-        
-        // Wait for 1000 ms
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
+    uint8_t rows[LED_MATRIX_HEIGHT];
 
     while (1) {
-        // Sweep one LED across the entire matrix
-        for (int logical = 0;
-             logical < CONFIG_LED_MATRIX_ROWS * CONFIG_LED_MATRIX_COLUMNS;
-             logical++) {
-            led_matrix_data_t pattern = 0x1u << logical;
+        // Blink all 64 LEDs to check that every pixel turns on and off.
+        for (int blink = 0; blink < 3; blink++) {
+            for (int row = 0; row < LED_MATRIX_HEIGHT; row++) {
+                rows[row] = 0xFF;
+            }
+            ESP_ERROR_CHECK(led_matrix_draw_bitmap(&matrix, rows));
+            ESP_ERROR_CHECK(led_matrix_show(&matrix));
+            vTaskDelay(pdMS_TO_TICKS(1000));
 
-            ESP_LOGI(TAG, "Lighting logical index %d", logical);
-
-            ESP_ERROR_CHECK(led_matrix_set_data(&xMyLEDMatrix, pattern));
-            ESP_ERROR_CHECK(led_matrix_write(&xMyLEDMatrix, LED_MATRIX_OUTPUT_PAR));
-
-            // Wait for 1000 ms between LEDs
-            vTaskDelay(pdMS_TO_TICKS(100));
+            ESP_ERROR_CHECK(led_matrix_clear(&matrix));
+            vTaskDelay(pdMS_TO_TICKS(500));
         }
 
-        // After one full LED sweep, show "SRA"
-        ESP_LOGI(TAG, "Displaying text: SRA");
-        ESP_ERROR_CHECK(led_matrix_display_string(&xMyLEDMatrix, "SRA", 1000));
+        // Random bitmaps exercise different combinations of rows and columns.
+        for (int frame = 0; frame < 24; frame++) {
+            for (int row = 0; row < LED_MATRIX_HEIGHT; row++) {
+                rows[row] = (uint8_t)esp_random();
+            }
+            ESP_ERROR_CHECK(led_matrix_draw_bitmap(&matrix, rows));
+            ESP_ERROR_CHECK(led_matrix_show(&matrix));
+            vTaskDelay(pdMS_TO_TICKS(150));
+        }
+
+        ESP_ERROR_CHECK(led_matrix_clear(&matrix));
+        vTaskDelay(pdMS_TO_TICKS(800));
     }
 }

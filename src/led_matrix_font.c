@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c)  2025 Society of Robotics and Automation
+ * Copyright (c) 2026 Society of Robotics and Automation
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -15,688 +15,298 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
  */
 
 #include "led_matrix_font.h"
 
-const led_matrix_data_arr_t led_matrix_chars[128] = {
-    //
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // !
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 0, 0, 0, 0},
-     {1, 1, 1, 1, 0, 1},
-     {1, 1, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // " (quotes)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // #
-    {{0, 1, 0, 1, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 1, 0, 1, 0, 0},
-     {1, 1, 1, 1, 1, 1},
-     {0, 1, 0, 1, 0, 0}},
-
-    // $
-    {{0, 1, 0, 1, 1, 0},
-     {0, 1, 0, 1, 0, 1},
-     {1, 1, 1, 1, 1, 1},
-     {0, 1, 0, 1, 0, 1},
-     {0, 0, 1, 1, 0, 1}},
-
-    // %
-    {{1, 0, 0, 1, 1, 0},
-     {0, 1, 0, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 0, 1, 0, 0},
-     {1, 1, 0, 0, 1, 0}},
-    
-    // &
-    {{0, 0, 0, 0, 0, 1},
-     {0, 0, 1, 0, 1, 0},
-     {1, 0, 0, 1, 0, 1},
-     {1, 0, 1, 1, 0, 1},
-     {0, 1, 0, 0, 1, 0}},
-
-    // ' (quote)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // (
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // )
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // *
-    {{0, 1, 0, 1, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 1, 0, 0}},
-
-    // +
-    {{0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0}},
-
-    // , (comma)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // - (hyphen)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // . (fullstop)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // / (forward-slash)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 1, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // Digits
-    // 0
-    {{0, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // 1
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // 2
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // 3
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-    
-    // 4
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-    
-    // 5
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 1, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {0, 1, 1, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-    
-    // 6
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 1, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {0, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // 7
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // 8
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 0, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // 9
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 0, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 1, 1, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // : (colon)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // ; (semicolon)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-    
-    // <
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // =
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // >
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // ?
-    {{0, 1, 1, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // @
-    {{0, 1, 1, 0, 0, 0},
-     {1, 0, 1, 1, 0, 1},
-     {1, 0, 1, 1, 0, 1},
-     {1, 0, 0, 0, 0, 1},
-     {0, 1, 1, 1, 1, 1}},
-
-    // Upper-case alphabets
-    // A
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-    
-    // B
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // C
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // D
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-    
-    // E
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 1, 1, 1, 0, 0}},
-
-    // F
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // G
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 1, 0, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // H
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // I
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // J
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 1, 0, 0}},
-
-    // K
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // L
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // M
-    {{1, 1, 1, 1, 1, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // N
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // O
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // P
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // Q
-    {{0, 0, 0, 0, 0, 1},
-     {0, 1, 1, 1, 1, 0},
-     {1, 0, 0, 1, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // R
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 0, 1, 0},
-     {1, 0, 1, 1, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // S
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 1, 0, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {0, 1, 1, 0, 1, 0}},
-
-    // T
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // U
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // V
-    {{1, 1, 0, 0, 0, 0},
-     {0, 0, 1, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 1, 1, 0, 0},
-     {1, 1, 0, 0, 0, 0}},
-
-    // W
-    {{1, 1, 1, 1, 1, 0},
-     {0, 0, 0, 1, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 0, 1, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // X
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 0, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 0, 1, 1, 0}},
-
-    // Y
-    {{1, 1, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 0, 0, 0, 0}},
-
-    // Z
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 0, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 1, 0, 1, 0},
-     {1, 0, 0, 1, 1, 0}},
-
-    // [
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // \ (back-slash)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 1, 1, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // ]
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // ^
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // _
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // ` (backtick)
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // Lower-case alphabets
-    // a
-    {{0, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 0, 1, 1, 1, 0}},
-
-    // b
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 1, 0, 0},
-     {0, 0, 1, 0, 1, 0},
-     {0, 0, 1, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // c
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 0, 1, 1, 1, 0}},
-
-    // d
-    {{0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 1, 0},
-     {0, 0, 1, 0, 1, 0},
-     {0, 0, 0, 1, 0, 0}},
-
-    // e
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 0, 1, 1, 0},
-     {0, 0, 1, 1, 0, 0}},
-
-    // f
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 0, 0},
-     {1, 0, 1, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // g
-    {{0, 1, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {0, 1, 0, 1, 0, 1},
-     {0, 1, 0, 1, 0, 1},
-     {0, 0, 1, 1, 0, 1}},
-
-    // h
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // i
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // j
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {1, 0, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 1},
-     {0, 0, 0, 0, 1, 0}},
-
-    // k
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0}},
-
-    // l
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // m
-    {{0, 0, 1, 1, 1, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // n
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 1, 1, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // o
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 1, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // p
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 1, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 1, 1, 1, 1, 1}},
-
-    // q
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 1, 1, 1},
-     {0, 1, 0, 1, 0, 0},
-     {0, 1, 0, 1, 0, 0},
-     {0, 1, 1, 1, 0, 0}},
-
-    // r
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // s
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 1, 0, 1, 0}},
-
-    // t
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // u
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // v
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // w
-    {{0, 1, 1, 1, 0, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 0, 1, 1, 1, 0},
-     {0, 0, 0, 0, 1, 0},
-     {0, 1, 1, 1, 1, 0}},
-
-    // x
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 0, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 1, 1, 0}},
-
-    // y
-    {{0, 0, 0, 0, 0, 0},
-     {0, 1, 1, 1, 1, 0},
-     {0, 0, 0, 1, 0, 1},
-     {0, 0, 0, 1, 0, 1},
-     {0, 1, 1, 1, 0, 1}},
-
-    // z
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 1, 0},
-     {0, 1, 0, 0, 1, 0},
-     {0, 1, 0, 1, 1, 0}},
-
-    // {
-    {{0, 0, 0, 0, 0, 0},
-     {1, 0, 0, 0, 1, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // |
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {0, 0, 0, 0, 0, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // }
-    {{0, 0, 0, 0, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {1, 1, 1, 1, 1, 0},
-     {1, 0, 0, 0, 1, 0},
-     {0, 0, 0, 0, 0, 0}},
-
-    // ~ (tilde)
-    {{0, 1, 1, 0, 0, 0},
-     {0, 0, 0, 1, 0, 0},
-     {0, 0, 1, 0, 0, 0},
-     {0, 1, 0, 0, 0, 0},
-     {0, 0, 1, 1, 0, 0}},
-
-    // DEL => special character (heart)
-    {{0, 0, 1, 0, 0, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 0, 1, 1, 1, 0},
-     {0, 1, 1, 1, 0, 0},
-     {0, 0, 1, 0, 0, 0}},
+#include <string.h>
+
+#include "esp_check.h"
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
+static const char *TAG = "led_matrix_font";
+
+/* S/R/A keep their display-specific bitmaps. The other printable ASCII glyphs
+ * use the same bold font family. All glyphs are stored in logical orientation. */
+const uint8_t led_matrix_chars[LED_MATRIX_FONT_GLYPH_COUNT]
+                                  [LED_MATRIX_HEIGHT] = {
+    [0x20] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },
+    [0x21] = { 0x38, 0x7C, 0x7C, 0x38, 0x38, 0x00, 0x38, 0x00 },
+    [0x22] = { 0x00, 0x00, 0x00, 0x7E, 0x7E, 0x00, 0x00, 0x00 },
+    [0x23] = { 0x7E, 0x7E, 0xFF, 0x7E, 0xFF, 0x7E, 0x7E, 0x00 },
+    [0x24] = { 0x38, 0x7E, 0xE0, 0x7C, 0x0E, 0xFC, 0x38, 0x00 },
+    [0x25] = { 0x00, 0xE7, 0xEE, 0x1C, 0x38, 0x77, 0xE7, 0x00 },
+    [0x26] = { 0x3C, 0x7E, 0x3C, 0x7F, 0xFE, 0xEE, 0x7F, 0x00 },
+    [0x27] = { 0x00, 0x00, 0x1C, 0x1C, 0x38, 0x00, 0x00, 0x00 },
+    [0x28] = { 0x1C, 0x38, 0x70, 0x70, 0x70, 0x38, 0x1C, 0x00 },
+    [0x29] = { 0x70, 0x38, 0x1C, 0x1C, 0x1C, 0x38, 0x70, 0x00 },
+    [0x2A] = { 0x00, 0x77, 0x3E, 0xFF, 0x3E, 0x77, 0x00, 0x00 },
+    [0x2B] = { 0x00, 0x38, 0x38, 0xFE, 0x38, 0x38, 0x00, 0x00 },
+    [0x2C] = { 0x00, 0x00, 0x1C, 0x1C, 0x38, 0x00, 0x00, 0x00 },
+    [0x2D] = { 0x00, 0x00, 0x00, 0xFE, 0x00, 0x00, 0x00, 0x00 },
+    [0x2E] = { 0x00, 0x00, 0x00, 0x38, 0x38, 0x00, 0x00, 0x00 },
+    [0x2F] = { 0x07, 0x0E, 0x1C, 0x38, 0x70, 0xE0, 0xC0, 0x00 },
+    [0x30] = { 0x7E, 0xE7, 0xEF, 0xFF, 0xFF, 0xF7, 0x7E, 0x00 },
+    [0x31] = { 0x38, 0x78, 0x38, 0x38, 0x38, 0x38, 0xFE, 0x00 },
+    [0x32] = { 0x7C, 0xEE, 0x0E, 0x3C, 0x70, 0xEE, 0xFE, 0x00 },
+    [0x33] = { 0x7C, 0xEE, 0x0E, 0x3C, 0x0E, 0xEE, 0x7C, 0x00 },
+    [0x34] = { 0x1E, 0x3E, 0x7E, 0xEE, 0xFF, 0x0E, 0x1F, 0x00 },
+    [0x35] = { 0xFE, 0xE0, 0xFC, 0x0E, 0x0E, 0xEE, 0x7C, 0x00 },
+    [0x36] = { 0x3C, 0x70, 0xE0, 0xFC, 0xEE, 0xEE, 0x7C, 0x00 },
+    [0x37] = { 0xFE, 0xEE, 0x0E, 0x1C, 0x38, 0x38, 0x38, 0x00 },
+    [0x38] = { 0x7C, 0xEE, 0xEE, 0x7C, 0xEE, 0xEE, 0x7C, 0x00 },
+    [0x39] = { 0x7C, 0xEE, 0xEE, 0x7E, 0x0E, 0x1C, 0x78, 0x00 },
+    [0x3A] = { 0x00, 0x38, 0x38, 0x00, 0x00, 0x38, 0x38, 0x00 },
+    [0x3B] = { 0x1C, 0x1C, 0x00, 0x00, 0x1C, 0x1C, 0x38, 0x00 },
+    [0x3C] = { 0x0E, 0x1C, 0x38, 0x70, 0x38, 0x1C, 0x0E, 0x00 },
+    [0x3D] = { 0x00, 0x00, 0xFE, 0x00, 0x00, 0xFE, 0x00, 0x00 },
+    [0x3E] = { 0x70, 0x38, 0x1C, 0x0E, 0x1C, 0x38, 0x70, 0x00 },
+    [0x3F] = { 0x7C, 0xEE, 0x0E, 0x1C, 0x38, 0x00, 0x38, 0x00 },
+    [0x40] = { 0x7E, 0xE7, 0xFF, 0xFF, 0xFF, 0xE0, 0x7C, 0x00 },
+    [0x41] = { 0x18, 0x3C, 0x66, 0x66, 0x7E, 0x66, 0x66, 0x66 },
+    [0x42] = { 0xFE, 0x77, 0x77, 0x7E, 0x77, 0x77, 0xFE, 0x00 },
+    [0x43] = { 0x3E, 0x77, 0xE0, 0xE0, 0xE0, 0x77, 0x3E, 0x00 },
+    [0x44] = { 0xFC, 0x7E, 0x77, 0x77, 0x77, 0x7E, 0xFC, 0x00 },
+    [0x45] = { 0xFF, 0x73, 0x7C, 0x7C, 0x7C, 0x73, 0xFF, 0x00 },
+    [0x46] = { 0xFF, 0x73, 0x7C, 0x7C, 0x7C, 0x70, 0xF8, 0x00 },
+    [0x47] = { 0x3E, 0x77, 0xE0, 0xE0, 0xEF, 0x77, 0x3F, 0x00 },
+    [0x48] = { 0xEE, 0xEE, 0xEE, 0xFE, 0xEE, 0xEE, 0xEE, 0x00 },
+    [0x49] = { 0x7C, 0x38, 0x38, 0x38, 0x38, 0x38, 0x7C, 0x00 },
+    [0x4A] = { 0x1F, 0x0E, 0x0E, 0x0E, 0xEE, 0xEE, 0x7C, 0x00 },
+    [0x4B] = { 0xF7, 0x77, 0x7E, 0x7C, 0x7E, 0x77, 0xF7, 0x00 },
+    [0x4C] = { 0xF8, 0x70, 0x70, 0x70, 0x73, 0x77, 0xFF, 0x00 },
+    [0x4D] = { 0xE7, 0xFF, 0xFF, 0xFF, 0xFF, 0xE7, 0xE7, 0x00 },
+    [0x4E] = { 0xE7, 0xF7, 0xFF, 0xFF, 0xEF, 0xE7, 0xE7, 0x00 },
+    [0x4F] = { 0x3C, 0x7E, 0xE7, 0xE7, 0xE7, 0x7E, 0x3C, 0x00 },
+    [0x50] = { 0xFE, 0x77, 0x77, 0x7E, 0x70, 0x70, 0xF8, 0x00 },
+    [0x51] = { 0x7C, 0xEE, 0xEE, 0xEE, 0xFE, 0x7C, 0x1E, 0x00 },
+    [0x52] = { 0xF8, 0xCC, 0xCC, 0xF8, 0xF0, 0xD8, 0xCC, 0xC6 },
+    [0x53] = { 0x3C, 0x66, 0x60, 0x3C, 0x06, 0x06, 0x66, 0x3C },
+    [0x54] = { 0xFE, 0xFE, 0x38, 0x38, 0x38, 0x38, 0x7C, 0x00 },
+    [0x55] = { 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0xFE, 0x00 },
+    [0x56] = { 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0x7C, 0x38, 0x00 },
+    [0x57] = { 0xE7, 0xE7, 0xE7, 0xFF, 0xFF, 0xFF, 0xE7, 0x00 },
+    [0x58] = { 0xE7, 0xE7, 0x7E, 0x3C, 0x3C, 0x7E, 0xE7, 0x00 },
+    [0x59] = { 0xEE, 0xEE, 0xEE, 0x7C, 0x38, 0x38, 0x7C, 0x00 },
+    [0x5A] = { 0xFF, 0xE7, 0xCE, 0x1C, 0x3B, 0x77, 0xFF, 0x00 },
+    [0x5B] = { 0x7C, 0x70, 0x70, 0x70, 0x70, 0x70, 0x7C, 0x00 },
+    [0x5C] = { 0xE0, 0x70, 0x38, 0x1C, 0x0E, 0x07, 0x03, 0x00 },
+    [0x5D] = { 0x7C, 0x1C, 0x1C, 0x1C, 0x1C, 0x1C, 0x7C, 0x00 },
+    [0x5E] = { 0x00, 0x00, 0x18, 0x3C, 0x7E, 0xE7, 0x00, 0x00 },
+    [0x5F] = { 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00 },
+    [0x60] = { 0x00, 0x00, 0x38, 0x38, 0x1C, 0x00, 0x00, 0x00 },
+    [0x61] = { 0x00, 0x7C, 0x0E, 0x7E, 0xEE, 0x7F, 0x00, 0x00 },
+    [0x62] = { 0xF0, 0x70, 0x70, 0x7E, 0x77, 0x77, 0xFE, 0x00 },
+    [0x63] = { 0x00, 0x7C, 0xEE, 0xE0, 0xEE, 0x7C, 0x00, 0x00 },
+    [0x64] = { 0x1E, 0x0E, 0x0E, 0x7E, 0xEE, 0xEE, 0x7F, 0x00 },
+    [0x65] = { 0x00, 0x7C, 0xEE, 0xFE, 0xE0, 0x7C, 0x00, 0x00 },
+    [0x66] = { 0x3C, 0x7E, 0x70, 0xF8, 0x70, 0x70, 0xF8, 0x00 },
+    [0x67] = { 0x00, 0x7F, 0xEE, 0xEE, 0x7E, 0x0E, 0xFC, 0x00 },
+    [0x68] = { 0xF0, 0x70, 0x7E, 0x7F, 0x77, 0x77, 0xF7, 0x00 },
+    [0x69] = { 0x38, 0x00, 0x78, 0x38, 0x38, 0x38, 0x7C, 0x00 },
+    [0x6A] = { 0x0E, 0x00, 0x0E, 0x0E, 0x0E, 0xEE, 0xEE, 0x7C },
+    [0x6B] = { 0xF0, 0x70, 0x77, 0x7E, 0x7C, 0x7E, 0xF7, 0x00 },
+    [0x6C] = { 0x78, 0x38, 0x38, 0x38, 0x38, 0x38, 0x7C, 0x00 },
+    [0x6D] = { 0x00, 0xEE, 0xFF, 0xFF, 0xFF, 0xE7, 0x00, 0x00 },
+    [0x6E] = { 0x00, 0xFC, 0xEE, 0xEE, 0xEE, 0xEE, 0x00, 0x00 },
+    [0x6F] = { 0x00, 0x7C, 0xEE, 0xEE, 0xEE, 0x7C, 0x00, 0x00 },
+    [0x70] = { 0x00, 0xFE, 0x77, 0x77, 0x7E, 0x70, 0xF8, 0x00 },
+    [0x71] = { 0x00, 0x7F, 0xEE, 0xEE, 0x7E, 0x0E, 0x1F, 0x00 },
+    [0x72] = { 0x00, 0xFE, 0x7F, 0x77, 0x70, 0xF8, 0x00, 0x00 },
+    [0x73] = { 0x00, 0x7E, 0xE0, 0x7C, 0x0E, 0xFC, 0x00, 0x00 },
+    [0x74] = { 0x18, 0x38, 0x7E, 0x38, 0x38, 0x3E, 0x1C, 0x00 },
+    [0x75] = { 0x00, 0xEE, 0xEE, 0xEE, 0xEE, 0x7F, 0x00, 0x00 },
+    [0x76] = { 0x00, 0xEE, 0xEE, 0xEE, 0x7C, 0x38, 0x00, 0x00 },
+    [0x77] = { 0x00, 0xE7, 0xFF, 0xFF, 0xFF, 0x7E, 0x00, 0x00 },
+    [0x78] = { 0x00, 0xE7, 0x7E, 0x3C, 0x7E, 0xE7, 0x00, 0x00 },
+    [0x79] = { 0x00, 0xEE, 0xEE, 0xEE, 0x7E, 0x0E, 0xFC, 0x00 },
+    [0x7A] = { 0x00, 0xFE, 0xDC, 0x38, 0x76, 0xFE, 0x00, 0x00 },
+    [0x7B] = { 0x1E, 0x38, 0x38, 0xF0, 0x38, 0x38, 0x1E, 0x00 },
+    [0x7C] = { 0x38, 0x38, 0x38, 0x00, 0x38, 0x38, 0x38, 0x00 },
+    [0x7D] = { 0xF0, 0x38, 0x38, 0x1E, 0x38, 0x38, 0xF0, 0x00 },
+    [0x7E] = { 0x00, 0x00, 0x00, 0x7F, 0xFE, 0x00, 0x00, 0x00 },
+    [0x7F] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
 };
+
+esp_err_t led_matrix_font_draw_char(led_matrix_t *matrix,
+                                        uint8_t character)
+{
+    if (character < 0x20 || character >= LED_MATRIX_FONT_GLYPH_COUNT) {
+        character = '?';
+    }
+    return led_matrix_draw_bitmap(matrix, led_matrix_chars[character]);
+}
+
+esp_err_t led_matrix_font_display_char(led_matrix_t *matrix,
+                                           uint8_t character)
+{
+    ESP_RETURN_ON_ERROR(led_matrix_font_draw_char(matrix, character), TAG,
+                        "Failed to draw character");
+    return led_matrix_show(matrix);
+}
+
+esp_err_t led_matrix_font_display_string(led_matrix_t *matrix,
+                                              const char *text,
+                                              uint32_t wait_ms)
+{
+    ESP_RETURN_ON_FALSE(matrix != NULL, ESP_ERR_INVALID_ARG, TAG, "Matrix handle is NULL");
+    ESP_RETURN_ON_FALSE(text != NULL, ESP_ERR_INVALID_ARG, TAG, "Text pointer is NULL");
+
+    const size_t length = strlen(text);
+    for (size_t index = 0; index < length; ++index) {
+        uint8_t character = (uint8_t)text[index];
+        if (character < 0x20 || character > 0x7E) {
+            character = '?';
+        }
+        ESP_RETURN_ON_ERROR(led_matrix_font_display_char(matrix, character), TAG,
+                            "Failed to display character");
+        if (wait_ms > 0) {
+            vTaskDelay(pdMS_TO_TICKS(wait_ms));
+        }
+    }
+    return ESP_OK;
+}
+
+
+esp_err_t led_matrix_font_slide_text(led_matrix_t *matrix,
+                                         const char *text,
+                                         uint32_t step_delay_ms)
+{
+    ESP_RETURN_ON_FALSE(matrix != NULL, ESP_ERR_INVALID_ARG, TAG, "Matrix handle is NULL");
+    ESP_RETURN_ON_FALSE(text != NULL, ESP_ERR_INVALID_ARG, TAG, "Text pointer is NULL");
+
+    const size_t char_count = strlen(text);
+    if (char_count == 0) {
+        return led_matrix_clear(matrix);
+    }
+
+    const size_t text_width = char_count * 9U;
+    const size_t scroll_width = LED_MATRIX_WIDTH + text_width + LED_MATRIX_WIDTH;
+
+    for (size_t frame_start = 0;
+         frame_start <= scroll_width - LED_MATRIX_WIDTH;
+         ++frame_start) {
+        uint8_t rows[LED_MATRIX_HEIGHT] = {0};
+
+        for (uint8_t screen_x = 0; screen_x < LED_MATRIX_WIDTH; ++screen_x) {
+            const size_t stream_x = frame_start + screen_x;
+            if (stream_x < LED_MATRIX_WIDTH ||
+                stream_x >= LED_MATRIX_WIDTH + text_width) {
+                continue;
+            }
+
+            const size_t text_x = stream_x - LED_MATRIX_WIDTH;
+            const size_t char_index = text_x / 9U;
+            const uint8_t glyph_column = (uint8_t)(text_x % 9U);
+            if (glyph_column >= LED_MATRIX_WIDTH) {
+                continue;
+            }
+
+            uint8_t character = (uint8_t)text[char_index];
+            if (character < 0x20 || character > 0x7E) {
+                character = '?';
+            }
+            const uint8_t *glyph = led_matrix_chars[character];
+            const uint8_t glyph_mask = (uint8_t)(1U << (7U - glyph_column));
+            for (uint8_t row = 0; row < LED_MATRIX_HEIGHT; ++row) {
+                if (glyph[row] & glyph_mask) {
+                    rows[row] |= (uint8_t)(1U << (7U - screen_x));
+                }
+            }
+        }
+
+        ESP_RETURN_ON_ERROR(led_matrix_draw_bitmap(matrix, rows), TAG,
+                            "Failed to draw sliding text frame");
+        ESP_RETURN_ON_ERROR(led_matrix_show(matrix), TAG,
+                            "Failed to show sliding text frame");
+        if (step_delay_ms > 0) {
+            vTaskDelay(pdMS_TO_TICKS(step_delay_ms));
+        }
+    }
+    return ESP_OK;
+}
+
+
+static esp_err_t animate_character(led_matrix_t *matrix,
+                                   uint8_t character,
+                                   uint8_t configured_brightness)
+{
+    const uint8_t *glyph = led_matrix_chars[character];
+    uint8_t frame[LED_MATRIX_HEIGHT] = {0};
+    for (uint8_t row = 0; row < LED_MATRIX_HEIGHT; ++row) {
+        frame[row] = glyph[row];
+        ESP_RETURN_ON_ERROR(led_matrix_draw_bitmap(matrix, frame), TAG,
+                            "Failed to add animated character row");
+        ESP_RETURN_ON_ERROR(led_matrix_show(matrix), TAG,
+                            "Failed to show animated character row");
+        esp_err_t result = led_matrix_set_brightness(matrix, 15);
+        /* The pulse is temporary. */
+        matrix->configured_brightness = configured_brightness;
+        ESP_RETURN_ON_ERROR(result, TAG,
+                            "Failed to brighten animated character");
+        vTaskDelay(pdMS_TO_TICKS(40));
+        ESP_RETURN_ON_ERROR(led_matrix_set_brightness(
+                                matrix, matrix->configured_brightness), TAG,
+                            "Failed to restore display brightness pulse");
+        vTaskDelay(pdMS_TO_TICKS(70));
+    }
+    vTaskDelay(pdMS_TO_TICKS(200));
+
+    for (uint8_t column = 0; column < LED_MATRIX_WIDTH; ++column) {
+        for (uint8_t row = 0; row < LED_MATRIX_HEIGHT; ++row) {
+            frame[row] &= (uint8_t)~(1U << column);
+        }
+        ESP_RETURN_ON_ERROR(led_matrix_draw_bitmap(matrix, frame), TAG,
+                            "Failed to wipe animated character column");
+        ESP_RETURN_ON_ERROR(led_matrix_show(matrix), TAG,
+                            "Failed to show character wipe");
+        vTaskDelay(pdMS_TO_TICKS(30));
+    }
+    return led_matrix_clear(matrix);
+}
+
+esp_err_t led_matrix_font_animate_text(led_matrix_t *matrix,
+                                           const char *text,
+                                           uint32_t character_delay_ms)
+{
+    ESP_RETURN_ON_FALSE(matrix != NULL, ESP_ERR_INVALID_ARG, TAG, "Matrix handle is NULL");
+    ESP_RETURN_ON_FALSE(text != NULL, ESP_ERR_INVALID_ARG, TAG, "Text pointer is NULL");
+
+    const size_t length = strlen(text);
+    if (length == 0) {
+        vTaskDelay(pdMS_TO_TICKS(1000));
+        return ESP_OK;
+    }
+
+    esp_err_t result = led_matrix_clear(matrix);
+    if (result != ESP_OK) {
+        return result;
+    }
+    const uint8_t configured_brightness = matrix->configured_brightness;
+    for (size_t index = 0; index < length; ++index) {
+        uint8_t character = (uint8_t)text[index];
+        if (character < 0x20 || character > 0x7E) {
+            character = '?';
+        }
+
+        result = animate_character(matrix, character, configured_brightness);
+        if (result != ESP_OK) {
+            /* Restore after any animation failure, then return the original error. */
+            esp_err_t restore_result = led_matrix_set_brightness(
+                matrix, configured_brightness);
+            if (restore_result != ESP_OK) {
+                ESP_LOGE(TAG, "Failed to restore configured brightness: %s",
+                         esp_err_to_name(restore_result));
+            }
+            return result;
+        }
+        if (index + 1 < length && character_delay_ms > 0) {
+            vTaskDelay(pdMS_TO_TICKS(character_delay_ms));
+        }
+    }
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    return ESP_OK;
+}
