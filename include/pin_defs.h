@@ -44,15 +44,15 @@
 
 //////// mpu //////
 #define MPU6050_INT 23
-#define MPU6050_SCL 22
-#define MPU6050_SDA 21
+#define MPU6050_SCL 21
+#define MPU6050_SDA 14
 
 /////////////////////////////
 
 #ifdef CONFIG_ENABLE_OLED
 //////// oled ////////
-#define OLED_SCL 22
-#define OLED_SDA 21
+#define OLED_SCL 21
+#define OLED_SDA 14
 #endif
 
 //////// bar graph //////////
@@ -74,11 +74,11 @@
 /////////////////////////////
 
 /////////// lsa /////////////
-#define LSA_A0 32
-#define LSA_A1 35
-#define LSA_A2 34
-#define LSA_A3 39
-#define LSA_A4 36
+#define LSA_A0 4
+#define LSA_A1 5
+#define LSA_A2 6
+#define LSA_A3 7
+#define LSA_A4 8
 //******* battery ********//
 #define BATTERY 33
 /////////////////////////////
@@ -87,8 +87,8 @@
 //****** normal mode ******//
 #define MDA_NORMAL_IN_1 13 //MCPWM_UNIT_1 MCPWM0A
 #define MDA_NORMAL_IN_2 12 //MCPWM_UNIT_1 MCPWM0B
-#define MDA_NORMAL_IN_3 26 //MCPWM_UNIT_1 MCPWM1A
-#define MDA_NORMAL_IN_4 25 //MCPWM_UNIT_1 MCPWM1B
+#define MDA_NORMAL_IN_3 11 //MCPWM_UNIT_1 MCPWM1A
+#define MDA_NORMAL_IN_4 10 //MCPWM_UNIT_1 MCPWM1B
 
 //***** parallel mode *****//
 #define MDA_PARALLEL_IN_1_2 25 //MCPWM_UNIT_1 MCPWM0A
@@ -96,17 +96,17 @@
 /////////////////////////////
 
 /////////// servos //////////
-#define SERVO_A 15 //GRIPPER
-#define SERVO_B 5  //ELBOW
-#define SERVO_C 18 //ARM
-#define SERVO_D 19 //BASE
+#define SERVO_A 15
+#define SERVO_B 5
+#define SERVO_C 19
+#define SERVO_D 18
 /////////////////////////////
 
-//////// led matrix /////////
-//******    SIPO    *******//
-#define SHIFT_REGISTER_SDATA 12
-#define SHIFT_REGISTER_SRCLK 25
-#define SHIFT_REGISTER_RCLK  13
+//////// LED matrix /////////
+//******    SPI    *******//
+#define MAX7219_MATRIX_CLK   18
+#define MAX7219_MATRIX_DIN   16
+#define MAX7219_MATRIX_LOAD  17
 /////////////////////////////
 
 #endif
