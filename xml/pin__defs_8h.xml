@@ -239,7 +239,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" prot="public" static="no">
         <name>MPU6050_SCL</name>
-        <initializer>22</initializer>
+        <initializer>21</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -250,7 +250,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" prot="public" static="no">
         <name>MPU6050_SDA</name>
-        <initializer>21</initializer>
+        <initializer>14</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -393,7 +393,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" prot="public" static="no">
         <name>LSA_A0</name>
-        <initializer>32</initializer>
+        <initializer>4</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -404,7 +404,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" prot="public" static="no">
         <name>LSA_A1</name>
-        <initializer>35</initializer>
+        <initializer>5</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -415,7 +415,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" prot="public" static="no">
         <name>LSA_A2</name>
-        <initializer>34</initializer>
+        <initializer>6</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -426,7 +426,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" prot="public" static="no">
         <name>LSA_A3</name>
-        <initializer>39</initializer>
+        <initializer>7</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -437,7 +437,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" prot="public" static="no">
         <name>LSA_A4</name>
-        <initializer>36</initializer>
+        <initializer>8</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -481,7 +481,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" prot="public" static="no">
         <name>MDA_NORMAL_IN_3</name>
-        <initializer>26</initializer>
+        <initializer>11</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -492,7 +492,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" prot="public" static="no">
         <name>MDA_NORMAL_IN_4</name>
-        <initializer>25</initializer>
+        <initializer>10</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -547,7 +547,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" prot="public" static="no">
         <name>SERVO_C</name>
-        <initializer>18</initializer>
+        <initializer>19</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -558,7 +558,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1abed942b161f2db9f855f196e22459066" prot="public" static="no">
         <name>SERVO_D</name>
-        <initializer>19</initializer>
+        <initializer>18</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -651,13 +651,13 @@
 <codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46" refid="pin__defs_8h_1ae4b5c81e3a4d9fe739bc10a3e3802207" refkind="member"><highlight class="preprocessor">#define<sp/>MPU6050_INT<sp/>23</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SCL<sp/>22</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SDA<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SCL<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU6050_SDA<sp/>14</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_ENABLE_OLED</highlight></codeline>
-<codeline lineno="54"><highlight class="preprocessor">#define<sp/>OLED_SCL<sp/>22</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_SDA<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">#define<sp/>OLED_SCL<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_SDA<sp/>14</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59" refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" refkind="member"><highlight class="preprocessor">#define<sp/>BG_LED_1<sp/>12</highlight><highlight class="normal"></highlight></codeline>
@@ -674,29 +674,29 @@
 <codeline lineno="72" refid="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_3<sp/>27</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="73" refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_4<sp/>14</highlight></codeline>
 <codeline lineno="75"></codeline>
-<codeline lineno="77" refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" refkind="member"><highlight class="preprocessor">#define<sp/>LSA_A0<sp/>32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A1<sp/>35</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A2<sp/>34</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A3<sp/>39</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A4<sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" refkind="member"><highlight class="preprocessor">#define<sp/>LSA_A0<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A1<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A2<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A3<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A4<sp/>8</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//*******<sp/>battery<sp/>********//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="83" refid="pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BATTERY<sp/>33</highlight></codeline>
 <codeline lineno="85"></codeline>
 <codeline lineno="87"><highlight class="comment">//******<sp/>normal<sp/>mode<sp/>******//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="88" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>11<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>10<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//*****<sp/>parallel<sp/>mode<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="94" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="95" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight></codeline>
 <codeline lineno="97"><highlight class="comment"></highlight></codeline>
-<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>15<sp/></highlight><highlight class="comment">//GRIPPER</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>5<sp/><sp/></highlight><highlight class="comment">//ELBOW</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>18<sp/></highlight><highlight class="comment">//ARM</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>19<sp/></highlight><highlight class="comment">//BASE</highlight></codeline>
-<codeline lineno="104"><highlight class="comment"></highlight></codeline>
+<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>18</highlight></codeline>
+<codeline lineno="104"></codeline>
 <codeline lineno="106"><highlight class="comment">//******<sp/><sp/><sp/><sp/>SIPO<sp/><sp/><sp/><sp/>*******//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="107" refid="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SDATA<sp/>12</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108" refid="pin__defs_8h_1a08441397716647885b748c448b053d1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SRCLK<sp/>25</highlight><highlight class="normal"></highlight></codeline>
