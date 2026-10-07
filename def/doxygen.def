@@ -83,7 +83,7 @@ i2c_port_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'port';
       sec-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      sec-mem-desc-line = '66';
+      sec-mem-desc-line = '69';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 I2C port number.
 _EnD_oF_dEf_TeXt_;
@@ -101,7 +101,7 @@ i2c_config_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'cfg';
       sec-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      sec-mem-desc-line = '67';
+      sec-mem-desc-line = '70';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 I2C driver configuration.
 _EnD_oF_dEf_TeXt_;
@@ -119,7 +119,7 @@ uint8_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'addr';
       sec-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      sec-mem-desc-line = '68';
+      sec-mem-desc-line = '71';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Unshifted address.
 _EnD_oF_dEf_TeXt_;
@@ -137,7 +137,7 @@ SemaphoreHandle_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mutex';
       sec-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      sec-mem-desc-line = '69';
+      sec-mem-desc-line = '72';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Device mutex.
 _EnD_oF_dEf_TeXt_;
@@ -155,19 +155,22 @@ uint32_t
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'timeout_ticks';
       sec-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      sec-mem-desc-line = '70';
+      sec-mem-desc-line = '73';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-HW I2C bus timeout (stretch time), in ticks. 80MHz APB clock
-ticks for ESP-IDF, CPU ticks for ESP8266.
-When this value is 0, I2CDEV_MAX_STRETCH_TIME will be used 
+Hardware I2C bus timeout. On ESP-IDF, this is
+passed to i2c_set_timeout() in target-specific
+register units, not APB ticks. On ESP32-S3,
+values 1-31 select 2^value I2C_SCLK cycles.
+On ESP8266, this is in CPU ticks. Zero uses
+I2CDEV_MAX_STRETCH_TIME. 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = '/github/workspace/include/i2cdev.h';
-  cp-fileline  = '64';
+  cp-fileline  = '67';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1494,10 +1497,10 @@ file = {
       define-mem-prot = public;
       define-mem-name = 'I2CDEV_MAX_STRETCH_TIME';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
-0x00ffffff
+0x1f
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      define-mem-desc-line = '55';
+      define-mem-desc-line = '58';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1521,7 +1524,7 @@ _EnD_oF_dEf_TeXt_;
     } while (0)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      define-mem-desc-line = '195';
+      define-mem-desc-line = '201';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1545,7 +1548,7 @@ _EnD_oF_dEf_TeXt_;
     } while (0)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      define-mem-desc-line = '200';
+      define-mem-desc-line = '206';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1575,7 +1578,7 @@ _EnD_oF_dEf_TeXt_;
     } while (0)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      define-mem-desc-line = '205';
+      define-mem-desc-line = '211';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1612,7 +1615,7 @@ _EnD_oF_dEf_TeXt_;
     } while (0)
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      define-mem-desc-line = '213';
+      define-mem-desc-line = '219';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1632,7 +1635,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'i2cdev_init';
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '83';
+      func-mem-desc-line = '89';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Init library.
 _EnD_oF_dEf_TeXt_;
@@ -1653,7 +1656,7 @@ esp_err_t
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'i2cdev_done';
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '92';
+      func-mem-desc-line = '98';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Finish work with library.
 _EnD_oF_dEf_TeXt_;
@@ -1679,7 +1682,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '102';
+      func-mem-desc-line = '108';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Create mutex for device descriptor.
 _EnD_oF_dEf_TeXt_;
@@ -1706,7 +1709,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '112';
+      func-mem-desc-line = '118';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Delete mutex for device descriptor.
 _EnD_oF_dEf_TeXt_;
@@ -1733,7 +1736,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '122';
+      func-mem-desc-line = '128';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Take device mutex.
 _EnD_oF_dEf_TeXt_;
@@ -1760,7 +1763,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'dev';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '132';
+      func-mem-desc-line = '138';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Give device mutex.
 _EnD_oF_dEf_TeXt_;
@@ -1811,7 +1814,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'in_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '148';
+      func-mem-desc-line = '154';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read from slave device.
 _EnD_oF_dEf_TeXt_;
@@ -1868,7 +1871,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'out_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '164';
+      func-mem-desc-line = '170';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Write to slave device.
 _EnD_oF_dEf_TeXt_;
@@ -1918,7 +1921,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'in_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '178';
+      func-mem-desc-line = '184';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read from register with an 8-bit address.
 _EnD_oF_dEf_TeXt_;
@@ -1966,7 +1969,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'out_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      func-mem-desc-line = '192';
+      func-mem-desc-line = '198';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Write to register with an 8-bit address.
 _EnD_oF_dEf_TeXt_;
@@ -1992,7 +1995,7 @@ SemaphoreHandle_t
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'mutex';
       var-mem-desc-file = '/github/workspace/include/i2cdev.h';
-      var-mem-desc-line = '59';
+      var-mem-desc-line = '62';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -9720,7 +9723,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'in_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '241';
+      func-mem-desc-line = '243';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read from slave device.
 _EnD_oF_dEf_TeXt_;
@@ -9777,7 +9780,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'out_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '273';
+      func-mem-desc-line = '275';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Write to slave device.
 _EnD_oF_dEf_TeXt_;
@@ -9827,7 +9830,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'in_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '299';
+      func-mem-desc-line = '301';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Read from register with an 8-bit address.
 _EnD_oF_dEf_TeXt_;
@@ -9875,7 +9878,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'out_size';
       }; /*        func-mem-param--param */
       func-mem-desc-file = '/github/workspace/src/i2cdev.c';
-      func-mem-desc-line = '305';
+      func-mem-desc-line = '307';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Write to register with an 8-bit address.
 _EnD_oF_dEf_TeXt_;

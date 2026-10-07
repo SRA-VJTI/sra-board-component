@@ -167,7 +167,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >HW I2C bus timeout (stretch time), in ticks. 80MHz APB clock ticks for ESP-IDF, CPU ticks for ESP8266. When this value is 0, I2CDEV_MAX_STRETCH_TIME will be used </p>
+<p >Hardware I2C bus timeout. On ESP-IDF, this is passed to i2c_set_timeout() in target-specific register units, not APB ticks. On ESP32-S3, values 1-31 select 2^value I2C_SCLK cycles. On ESP8266, this is in CPU ticks. Zero uses I2CDEV_MAX_STRETCH_TIME. </p>
 
 </div>
 </div>
