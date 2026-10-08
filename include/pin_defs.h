@@ -96,17 +96,17 @@
 /////////////////////////////
 
 /////////// servos //////////
-#define SERVO_A 15
-#define SERVO_B 5
-#define SERVO_C 19
-#define SERVO_D 18
+#define SERVO_A 1 //Gripper
+#define SERVO_B 2 //Elbow
+#define SERVO_C 42 //Arm
+#define SERVO_D 41 //Base
 /////////////////////////////
 
-//////// led matrix /////////
-//******    SIPO    *******//
-#define SHIFT_REGISTER_SDATA 12
-#define SHIFT_REGISTER_SRCLK 25
-#define SHIFT_REGISTER_RCLK  13
+//////// LED matrix /////////
+//***** 8x8 LED matrix driven by MAX7219 using SPI *****//
+#define LED_MATRIX_CLK   18
+#define LED_MATRIX_DIN   16
+#define LED_MATRIX_LOAD  17
 /////////////////////////////
 
 #endif
