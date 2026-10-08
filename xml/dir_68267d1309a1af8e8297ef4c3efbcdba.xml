@@ -14,7 +14,6 @@
     <innerfile refid="mpu6050_8c">mpu6050.c</innerfile>
     <innerfile refid="oled_8c">oled.c</innerfile>
     <innerfile refid="servo_8c">servo.c</innerfile>
-    <innerfile refid="shift__register_8c">shift_register.c</innerfile>
     <innerfile refid="switches_8c">switches.c</innerfile>
     <innerfile refid="utils_8c">utils.c</innerfile>
     <briefdescription>

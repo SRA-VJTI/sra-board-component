@@ -2,26 +2,22 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="led__matrix__font_8h" kind="file" language="C++">
     <compoundname>led_matrix_font.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">esp_err.h</includes>
     <includes refid="led__matrix_8h" local="yes">led_matrix.h</includes>
-    <includedby refid="led__matrix_8c" local="yes">src/led_matrix.c</includedby>
+    <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="led__matrix__font_8c" local="yes">src/led_matrix_font.c</includedby>
     <incdepgraph>
-      <node id="2">
+      <node id="4">
         <label>led_matrix.h</label>
         <link refid="led__matrix_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -29,82 +25,22 @@
         <link refid="led__matrix__font_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="12">
-        <label>pin_defs.h</label>
-        <link refid="pin__defs_8h"/>
-      </node>
-      <node id="9">
-        <label>shift_register.h</label>
-        <link refid="shift__register_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>utils.h</label>
-        <link refid="utils_8h"/>
-      </node>
-      <node id="5">
-        <label>ctype.h</label>
-      </node>
-      <node id="14">
-        <label>driver/gpio.h</label>
-      </node>
-      <node id="16">
-        <label>driver/gptimer.h</label>
-      </node>
-      <node id="17">
-        <label>driver/gptimer_types.h</label>
-      </node>
-      <node id="19">
-        <label>esp_check.h</label>
-      </node>
-      <node id="18">
-        <label>esp_err.h</label>
-      </node>
-      <node id="8">
-        <label>esp_log.h</label>
       </node>
       <node id="6">
-        <label>freertos/FreeRTOS.h</label>
-      </node>
-      <node id="7">
-        <label>freertos/task.h</label>
-      </node>
-      <node id="15">
-        <label>hal/gpio_types.h</label>
-      </node>
-      <node id="10">
-        <label>stdbool.h</label>
-      </node>
-      <node id="4">
-        <label>stdint.h</label>
-      </node>
-      <node id="11">
-        <label>stdlib.h</label>
+        <label>driver/spi_master.h</label>
       </node>
       <node id="3">
-        <label>string.h</label>
+        <label>esp_err.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -117,31 +53,166 @@
         </childnode>
       </node>
       <node id="2">
-        <label>src/led_matrix.c</label>
-        <link refid="led__matrix_8c"/>
+        <label>include/sra_board.h</label>
+        <link refid="sra__board_8h"/>
       </node>
       <node id="3">
         <label>src/led_matrix_font.c</label>
         <link refid="led__matrix__font_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16" prot="public" static="no" mutable="no">
-        <type>const <ref refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kindref="member">led_matrix_data_arr_t</ref></type>
-        <definition>const led_matrix_data_arr_t led_matrix_chars[128]</definition>
-        <argsstring>[128]</argsstring>
-        <name>led_matrix_chars</name>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="led__matrix__font_8h_1a8ce86b14ff0d0f11be4537a084dc688a" prot="public" static="no">
+        <name>LED_MATRIX_FONT_GLYPH_COUNT</name>
+        <initializer>128</initializer>
         <briefdescription>
-<para>An array of LED matrix booleans (. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kindref="member">led_matrix_data_arr_t</ref> ) representing the ASCII printable characters in a predefined font </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/led_matrix_font.h" line="33" column="36" bodyfile="src/led_matrix_font.c" bodystart="27" bodyend="-1" declfile="include/led_matrix_font.h" declline="33" declcolumn="36"/>
+        <location file="include/led_matrix_font.h" line="29" column="9" bodyfile="include/led_matrix_font.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="led__matrix__font_8h_1aaed0953c1ab557946f40ebf1a294f901" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t led_matrix_chars[LED_MATRIX_FONT_GLYPH_COUNT][LED_MATRIX_HEIGHT]</definition>
+        <argsstring>[LED_MATRIX_FONT_GLYPH_COUNT][LED_MATRIX_HEIGHT]</argsstring>
+        <name>led_matrix_chars</name>
+        <briefdescription>
+<para>8x8 glyph bitmaps indexed by ASCII value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Printable ASCII (indices 32..126) uses a bold style; S, R, and A retain their existing display-specific designs. Glyph rows run top to bottom, with bit 7 as the leftmost pixel. Index 127 is blank. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix_font.h" line="38" column="22" bodyfile="src/led_matrix_font.c" bodystart="35" bodyend="-1" declfile="include/led_matrix_font.h" declline="38" declcolumn="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="led__matrix__font_8h_1a444dcd393eaa4f8cdcde5b8613f12c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_font_draw_char</definition>
+        <argsstring>(led_matrix_t *matrix, uint8_t character)</argsstring>
+        <name>led_matrix_font_draw_char</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>character</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy one glyph into the framebuffer; call <ref refid="led__matrix_8h_1a6f4ad0f5d0ec643436837b2d93bdc7ad" kindref="member">led_matrix_show()</ref> to display it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix_font.h" line="42" column="11" bodyfile="src/led_matrix_font.c" bodystart="134" bodyend="141" declfile="include/led_matrix_font.h" declline="42" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix__font_8h_1a9b6c860675ad23ae5869e772f4527395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_font_display_char</definition>
+        <argsstring>(led_matrix_t *matrix, uint8_t character)</argsstring>
+        <name>led_matrix_font_display_char</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>character</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw and immediately display one glyph. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix_font.h" line="46" column="11" bodyfile="src/led_matrix_font.c" bodystart="143" bodyend="149" declfile="include/led_matrix_font.h" declline="46" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix__font_8h_1ad20aef81c6c0b1ca918791daffd69b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_font_display_string</definition>
+        <argsstring>(led_matrix_t *matrix, const char *text, uint32_t wait_ms)</argsstring>
+        <name>led_matrix_font_display_string</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>wait_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Display a string one character at a time, waiting wait_ms after each glyph. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix_font.h" line="50" column="11" bodyfile="src/led_matrix_font.c" bodystart="151" bodyend="171" declfile="include/led_matrix_font.h" declline="50" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix__font_8h_1a7f4567c2b305964491f1c58699b405f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_font_slide_text</definition>
+        <argsstring>(led_matrix_t *matrix, const char *text, uint32_t step_delay_ms)</argsstring>
+        <name>led_matrix_font_slide_text</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>step_delay_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Slide a string from right to left one pixel column at a time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix_font.h" line="55" column="11" bodyfile="src/led_matrix_font.c" bodystart="174" bodyend="230" declfile="include/led_matrix_font.h" declline="55" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix__font_8h_1a4929db2efaeefc7846fd20a0f23ac69f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_font_animate_text</definition>
+        <argsstring>(led_matrix_t *matrix, const char *text, uint32_t character_delay_ms)</argsstring>
+        <name>led_matrix_font_animate_text</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>character_delay_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reveal each character row by row, pulsing at intensity 15 for 40 ms and returning to the saved brightness for 70 ms after each row. Hold the character, then wipe it column by column. Wait character_delay_ms between characters and one second after the string. On failure, attempt to restore brightness and return the original error. Restoration failures are logged; the saved brightness is always preserved. Serialize access to the matrix while this blocking animation runs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix_font.h" line="68" column="11" bodyfile="src/led_matrix_font.c" bodystart="271" bodyend="312" declfile="include/led_matrix_font.h" declline="68" declcolumn="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -152,7 +223,7 @@
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2025<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2026<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
@@ -166,21 +237,41 @@
 <codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
 <codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
-<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
-<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
-<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
-<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
-<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
-<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LED_MATRIX_FONT_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_FONT_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led__matrix_8h" kindref="compound">led_matrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kindref="member">led_matrix_data_arr_t</ref><sp/><ref refid="led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16" kindref="member">led_matrix_chars</ref>[128];</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LED_MATRIX_FONT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_FONT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_err.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led__matrix_8h" kindref="compound">led_matrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="led__matrix__font_8h_1a8ce86b14ff0d0f11be4537a084dc688a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_FONT_GLYPH_COUNT<sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="led__matrix__font_8h_1aaed0953c1ab557946f40ebf1a294f901" kindref="member">led_matrix_chars</ref>[<ref refid="led__matrix__font_8h_1a8ce86b14ff0d0f11be4537a084dc688a" kindref="member">LED_MATRIX_FONT_GLYPH_COUNT</ref>]</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix__font_8h_1a444dcd393eaa4f8cdcde5b8613f12c00" kindref="member">led_matrix_font_draw_char</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>character);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix__font_8h_1a9b6c860675ad23ae5869e772f4527395" kindref="member">led_matrix_font_display_char</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>character);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix__font_8h_1ad20aef81c6c0b1ca918791daffd69b83" kindref="member">led_matrix_font_display_string</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>wait_ms);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix__font_8h_1a7f4567c2b305964491f1c58699b405f8" kindref="member">led_matrix_font_slide_text</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>step_delay_ms);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix__font_8h_1a4929db2efaeefc7846fd20a0f23ac69f" kindref="member">led_matrix_font_animate_text</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>character_delay_ms);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LED_MATRIX_FONT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="include/led_matrix_font.h"/>
   </compounddef>

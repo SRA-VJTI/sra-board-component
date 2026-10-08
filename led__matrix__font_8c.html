@@ -68,60 +68,235 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">led_matrix_font.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="led__matrix__font_8h_source.html">led_matrix_font.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;esp_check.h&quot;</code><br />
+<code>#include &quot;esp_log.h&quot;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for led_matrix_font.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="led__matrix__font_8c__incl.png" border="0" usemap="#asrc_2led__matrix__font_8c" alt=""/></div>
 <map name="asrc_2led__matrix__font_8c" id="asrc_2led__matrix__font_8c">
-<area shape="rect" title=" " alt="" coords="231,5,374,32"/>
-<area shape="rect" href="led__matrix__font_8h.html" title=" " alt="" coords="243,80,363,107"/>
-<area shape="rect" href="led__matrix_8h.html" title=" " alt="" coords="257,155,348,181"/>
+<area shape="rect" title=" " alt="" coords="323,5,466,32"/>
+<area shape="rect" href="led__matrix__font_8h.html" title=" " alt="" coords="60,80,180,107"/>
+<area shape="rect" title=" " alt="" coords="204,80,268,107"/>
+<area shape="rect" title=" " alt="" coords="293,80,387,107"/>
+<area shape="rect" title=" " alt="" coords="412,80,489,107"/>
+<area shape="rect" title=" " alt="" coords="513,80,655,107"/>
+<area shape="rect" title=" " alt="" coords="679,80,785,107"/>
 <area shape="rect" title=" " alt="" coords="5,229,69,256"/>
-<area shape="rect" title=" " alt="" coords="124,304,188,331"/>
-<area shape="rect" title=" " alt="" coords="145,229,207,256"/>
-<area shape="rect" title=" " alt="" coords="231,229,374,256"/>
-<area shape="rect" title=" " alt="" coords="398,229,503,256"/>
-<area shape="rect" title=" " alt="" coords="527,229,604,256"/>
-<area shape="rect" href="shift__register_8h.html" title=" " alt="" coords="628,229,735,256"/>
-<area shape="rect" title=" " alt="" coords="237,304,312,331"/>
-<area shape="rect" title=" " alt="" coords="337,304,399,331"/>
-<area shape="rect" href="pin__defs_8h.html" title=" " alt="" coords="423,304,505,331"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="529,304,585,331"/>
-<area shape="rect" title=" " alt="" coords="610,304,702,331"/>
-<area shape="rect" title=" " alt="" coords="727,304,841,331"/>
-<area shape="rect" title=" " alt="" coords="866,304,977,331"/>
-<area shape="rect" title=" " alt="" coords="1001,304,1151,331"/>
-<area shape="rect" title=" " alt="" coords="1175,304,1249,331"/>
-<area shape="rect" title=" " alt="" coords="1274,304,1369,331"/>
+<area shape="rect" title=" " alt="" coords="93,229,168,256"/>
+<area shape="rect" href="led__matrix_8h.html" title=" " alt="" coords="157,155,248,181"/>
+<area shape="rect" title=" " alt="" coords="192,229,267,256"/>
+<area shape="rect" title=" " alt="" coords="291,229,423,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a444dcd393eaa4f8cdcde5b8613f12c00"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#a444dcd393eaa4f8cdcde5b8613f12c00">led_matrix_font_draw_char</a> (<a class="el" href="structled__matrix__t.html">led_matrix_t</a> *matrix, uint8_t character)</td></tr>
+<tr class="separator:a444dcd393eaa4f8cdcde5b8613f12c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6c860675ad23ae5869e772f4527395"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#a9b6c860675ad23ae5869e772f4527395">led_matrix_font_display_char</a> (<a class="el" href="structled__matrix__t.html">led_matrix_t</a> *matrix, uint8_t character)</td></tr>
+<tr class="separator:a9b6c860675ad23ae5869e772f4527395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20aef81c6c0b1ca918791daffd69b83"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#ad20aef81c6c0b1ca918791daffd69b83">led_matrix_font_display_string</a> (<a class="el" href="structled__matrix__t.html">led_matrix_t</a> *matrix, const char *text, uint32_t wait_ms)</td></tr>
+<tr class="separator:ad20aef81c6c0b1ca918791daffd69b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f4567c2b305964491f1c58699b405f8"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#a7f4567c2b305964491f1c58699b405f8">led_matrix_font_slide_text</a> (<a class="el" href="structled__matrix__t.html">led_matrix_t</a> *matrix, const char *text, uint32_t step_delay_ms)</td></tr>
+<tr class="separator:a7f4567c2b305964491f1c58699b405f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4929db2efaeefc7846fd20a0f23ac69f"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#a4929db2efaeefc7846fd20a0f23ac69f">led_matrix_font_animate_text</a> (<a class="el" href="structled__matrix__t.html">led_matrix_t</a> *matrix, const char *text, uint32_t character_delay_ms)</td></tr>
+<tr class="separator:a4929db2efaeefc7846fd20a0f23ac69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abc271b7e3b81780bb3711b1a678a2e16"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="led__matrix_8h.html#a1007f2550d021db5b853d36db2f7e478">led_matrix_data_arr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#abc271b7e3b81780bb3711b1a678a2e16">led_matrix_chars</a> [128]</td></tr>
-<tr class="memdesc:abc271b7e3b81780bb3711b1a678a2e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of LED matrix booleans (.  <a href="led__matrix__font_8c.html#abc271b7e3b81780bb3711b1a678a2e16">More...</a><br /></td></tr>
-<tr class="separator:abc271b7e3b81780bb3711b1a678a2e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed0953c1ab557946f40ebf1a294f901"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led__matrix__font_8c.html#aaed0953c1ab557946f40ebf1a294f901">led_matrix_chars</a> [<a class="el" href="led__matrix__font_8h.html#a8ce86b14ff0d0f11be4537a084dc688a">LED_MATRIX_FONT_GLYPH_COUNT</a>][<a class="el" href="led__matrix_8h.html#ad73833b88ed8a6f698beb0d47f974a67">LED_MATRIX_HEIGHT</a>]</td></tr>
+<tr class="memdesc:aaed0953c1ab557946f40ebf1a294f901"><td class="mdescLeft">&#160;</td><td class="mdescRight">8x8 glyph bitmaps indexed by ASCII value.  <a href="led__matrix__font_8c.html#aaed0953c1ab557946f40ebf1a294f901">More...</a><br /></td></tr>
+<tr class="separator:aaed0953c1ab557946f40ebf1a294f901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="abc271b7e3b81780bb3711b1a678a2e16" name="abc271b7e3b81780bb3711b1a678a2e16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc271b7e3b81780bb3711b1a678a2e16">&#9670;&nbsp;</a></span>led_matrix_chars</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a4929db2efaeefc7846fd20a0f23ac69f" name="a4929db2efaeefc7846fd20a0f23ac69f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4929db2efaeefc7846fd20a0f23ac69f">&#9670;&nbsp;</a></span>led_matrix_font_animate_text()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="led__matrix_8h.html#a1007f2550d021db5b853d36db2f7e478">led_matrix_data_arr_t</a> led_matrix_chars[128]</td>
+          <td class="memname">esp_err_t led_matrix_font_animate_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structled__matrix__t.html">led_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>character_delay_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Reveal each character row by row, pulsing at intensity 15 for 40 ms and returning to the saved brightness for 70 ms after each row. Hold the character, then wipe it column by column. Wait character_delay_ms between characters and one second after the string. On failure, attempt to restore brightness and return the original error. Restoration failures are logged; the saved brightness is always preserved. Serialize access to the matrix while this blocking animation runs. </p>
+
+</div>
+</div>
+<a id="a9b6c860675ad23ae5869e772f4527395" name="a9b6c860675ad23ae5869e772f4527395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6c860675ad23ae5869e772f4527395">&#9670;&nbsp;</a></span>led_matrix_font_display_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t led_matrix_font_display_char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structled__matrix__t.html">led_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>character</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Draw and immediately display one glyph. </p>
+
+</div>
+</div>
+<a id="ad20aef81c6c0b1ca918791daffd69b83" name="ad20aef81c6c0b1ca918791daffd69b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20aef81c6c0b1ca918791daffd69b83">&#9670;&nbsp;</a></span>led_matrix_font_display_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t led_matrix_font_display_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structled__matrix__t.html">led_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>wait_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Display a string one character at a time, waiting wait_ms after each glyph. </p>
+
+</div>
+</div>
+<a id="a444dcd393eaa4f8cdcde5b8613f12c00" name="a444dcd393eaa4f8cdcde5b8613f12c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444dcd393eaa4f8cdcde5b8613f12c00">&#9670;&nbsp;</a></span>led_matrix_font_draw_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t led_matrix_font_draw_char </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structled__matrix__t.html">led_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>character</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Copy one glyph into the framebuffer; call <a class="el" href="led__matrix_8h.html#a6f4ad0f5d0ec643436837b2d93bdc7ad">led_matrix_show()</a> to display it. </p>
+
+</div>
+</div>
+<a id="a7f4567c2b305964491f1c58699b405f8" name="a7f4567c2b305964491f1c58699b405f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f4567c2b305964491f1c58699b405f8">&#9670;&nbsp;</a></span>led_matrix_font_slide_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t led_matrix_font_slide_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structled__matrix__t.html">led_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>step_delay_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Slide a string from right to left one pixel column at a time. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aaed0953c1ab557946f40ebf1a294f901" name="aaed0953c1ab557946f40ebf1a294f901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed0953c1ab557946f40ebf1a294f901">&#9670;&nbsp;</a></span>led_matrix_chars</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t led_matrix_chars[<a class="el" href="led__matrix__font_8h.html#a8ce86b14ff0d0f11be4537a084dc688a">LED_MATRIX_FONT_GLYPH_COUNT</a>][<a class="el" href="led__matrix_8h.html#ad73833b88ed8a6f698beb0d47f974a67">LED_MATRIX_HEIGHT</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>An array of LED matrix booleans (. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="led__matrix_8h.html#a1007f2550d021db5b853d36db2f7e478" title="An array of booleans used to represent the LED matrix data instead of the uint32_t.">led_matrix_data_arr_t</a> ) representing the ASCII printable characters in a predefined font </dd></dl>
+<p>8x8 glyph bitmaps indexed by ASCII value. </p>
+<p >Printable ASCII (indices 32..126) uses a bold style; S, R, and A retain their existing display-specific designs. Glyph rows run top to bottom, with bit 7 as the leftmost pixel. Index 127 is blank. </p>
 
 </div>
 </div>

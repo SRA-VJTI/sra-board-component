@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['mario_0',['mario',['../oled_8c.html#a854e3003f905cc6bf110e3b838b02b53',1,'oled.c']]],
-  ['mario_5fmap_1',['mario_map',['../oled_8c.html#a95ab6ff9227127295ca863e2091c7f51',1,'oled.c']]],
-  ['max_5fdegree_2',['max_degree',['../structservo__config.html#a982f4d5f00c3941bb9ed8cd2d66fe3b9',1,'servo_config']]],
-  ['max_5fpulse_5fwidth_3',['max_pulse_width',['../structservo__config.html#a060926d062cfe3f26a5c424b3bed1dbf',1,'servo_config']]],
-  ['min_5fpulse_5fwidth_4',['min_pulse_width',['../structservo__config.html#a0814099ee19c534c5562d80c2a538c48',1,'servo_config']]],
-  ['mutex_5',['mutex',['../structi2c__dev__t.html#afb073a307ab7fb8817fb967107a958cd',1,'i2c_dev_t::mutex()'],['../group__i2cdev.html#gafc659d089f5608a17e8650e59a7e26fc',1,'mutex():&#160;i2cdev.h']]]
+  ['led_5fmatrix_5fchars_0',['led_matrix_chars',['../led__matrix__font_8h.html#aaed0953c1ab557946f40ebf1a294f901',1,'led_matrix_chars():&#160;led_matrix_font.c'],['../led__matrix__font_8c.html#aaed0953c1ab557946f40ebf1a294f901',1,'led_matrix_chars():&#160;led_matrix_font.c']]],
+  ['lsa_1',['lsa',['../unionline__sensor__array.html#a21a53a7659df2db5b988bfe19f4069d5',1,'line_sensor_array']]]
 ];

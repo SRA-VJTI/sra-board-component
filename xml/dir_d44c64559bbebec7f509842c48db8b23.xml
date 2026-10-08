@@ -17,7 +17,6 @@
     <innerfile refid="oled_8h">oled.h</innerfile>
     <innerfile refid="pin__defs_8h">pin_defs.h</innerfile>
     <innerfile refid="servo_8h">servo.h</innerfile>
-    <innerfile refid="shift__register_8h">shift_register.h</innerfile>
     <innerfile refid="sra__board_8h">sra_board.h</innerfile>
     <innerfile refid="switches_8h">switches.h</innerfile>
     <innerfile refid="utils_8h">utils.h</innerfile>

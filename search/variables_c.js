@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['timeout_5fticks_0',['timeout_ticks',['../structi2c__dev__t.html#ad177c30687f89873cc6a6437f08f7fe0',1,'i2c_dev_t']]],
-  ['timer_1',['timer',['../structshift__register__t.html#a3a9986772948c1ec12a28c267a3c90da',1,'shift_register_t']]]
+  ['servo_5fpin_0',['servo_pin',['../structservo__config.html#ae18a1d7cfaeb5c16cf4717d54b264954',1,'servo_config']]],
+  ['set_5fspeed_1',['set_speed',['../structmotor__t.html#aa2bf878e84240b295d22be4ebe7070c6',1,'motor_t']]],
+  ['spi_5fdevice_2',['spi_device',['../structled__matrix__t.html#a27d3744aa480cba16f784507e139c5d6',1,'led_matrix_t']]],
+  ['sra_5flogo_3',['sra_logo',['../oled_8c.html#af2b0070c0ea9adaf693fb4a21463ccce',1,'oled.c']]],
+  ['sra_5flogo_5fmap_4',['sra_logo_map',['../oled_8c.html#ae652719e9e6fd5015a2801e5967de999',1,'oled.c']]]
 ];

@@ -73,7 +73,7 @@ $(function() {
 <a href="led__matrix__font_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * MIT License</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c)  2025 Society of Robotics and Automation</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2026 Society of Robotics and Automation</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
@@ -87,24 +87,51 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * SOFTWARE.</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef LED_MATRIX_FONT_H</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define LED_MATRIX_FONT_H</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="led__matrix_8h.html">led_matrix.h</a>&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">extern</span> <span class="keyword">const</span> <a class="code hl_typedef" href="led__matrix_8h.html#a1007f2550d021db5b853d36db2f7e478">led_matrix_data_arr_t</a> <a class="code hl_variable" href="led__matrix__font_8h.html#abc271b7e3b81780bb3711b1a678a2e16">led_matrix_chars</a>[128];</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifndef LED_MATRIX_FONT_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define LED_MATRIX_FONT_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;esp_err.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="led__matrix_8h.html">led_matrix.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="led__matrix__font_8h.html#a8ce86b14ff0d0f11be4537a084dc688a">   29</a></span><span class="preprocessor">#define LED_MATRIX_FONT_GLYPH_COUNT 128</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">extern</span> <span class="keyword">const</span> uint8_t <a class="code hl_variable" href="led__matrix__font_8h.html#aaed0953c1ab557946f40ebf1a294f901">led_matrix_chars</a>[<a class="code hl_define" href="led__matrix__font_8h.html#a8ce86b14ff0d0f11be4537a084dc688a">LED_MATRIX_FONT_GLYPH_COUNT</a>]</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                         [<a class="code hl_define" href="led__matrix_8h.html#ad73833b88ed8a6f698beb0d47f974a67">LED_MATRIX_HEIGHT</a>];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>esp_err_t <a class="code hl_function" href="led__matrix__font_8h.html#a444dcd393eaa4f8cdcde5b8613f12c00">led_matrix_font_draw_char</a>(<a class="code hl_struct" href="structled__matrix__t.html">led_matrix_t</a> *matrix,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                                        uint8_t character);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>esp_err_t <a class="code hl_function" href="led__matrix__font_8h.html#a9b6c860675ad23ae5869e772f4527395">led_matrix_font_display_char</a>(<a class="code hl_struct" href="structled__matrix__t.html">led_matrix_t</a> *matrix,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                           uint8_t character);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>esp_err_t <a class="code hl_function" href="led__matrix__font_8h.html#ad20aef81c6c0b1ca918791daffd69b83">led_matrix_font_display_string</a>(<a class="code hl_struct" href="structled__matrix__t.html">led_matrix_t</a> *matrix,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                              <span class="keyword">const</span> <span class="keywordtype">char</span> *text,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                              uint32_t wait_ms);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>esp_err_t <a class="code hl_function" href="led__matrix__font_8h.html#a7f4567c2b305964491f1c58699b405f8">led_matrix_font_slide_text</a>(<a class="code hl_struct" href="structled__matrix__t.html">led_matrix_t</a> *matrix,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                         <span class="keyword">const</span> <span class="keywordtype">char</span> *text,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                         uint32_t step_delay_ms);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>esp_err_t <a class="code hl_function" href="led__matrix__font_8h.html#a4929db2efaeefc7846fd20a0f23ac69f">led_matrix_font_animate_text</a>(<a class="code hl_struct" href="structled__matrix__t.html">led_matrix_t</a> *matrix,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                           <span class="keyword">const</span> <span class="keywordtype">char</span> *text,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                           uint32_t character_delay_ms);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif </span><span class="comment">/* LED_MATRIX_FONT_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aled__matrix_8h_html"><div class="ttname"><a href="led__matrix_8h.html">led_matrix.h</a></div></div>
-<div class="ttc" id="aled__matrix_8h_html_a1007f2550d021db5b853d36db2f7e478"><div class="ttname"><a href="led__matrix_8h.html#a1007f2550d021db5b853d36db2f7e478">led_matrix_data_arr_t</a></div><div class="ttdeci">bool led_matrix_data_arr_t[CONFIG_LED_MATRIX_ROWS][CONFIG_LED_MATRIX_COLUMNS]</div><div class="ttdoc">An array of booleans used to represent the LED matrix data instead of the uint32_t.</div><div class="ttdef"><b>Definition:</b> led_matrix.h:47</div></div>
-<div class="ttc" id="aled__matrix__font_8h_html_abc271b7e3b81780bb3711b1a678a2e16"><div class="ttname"><a href="led__matrix__font_8h.html#abc271b7e3b81780bb3711b1a678a2e16">led_matrix_chars</a></div><div class="ttdeci">const led_matrix_data_arr_t led_matrix_chars[128]</div><div class="ttdoc">An array of LED matrix booleans (.</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:27</div></div>
+<div class="ttc" id="aled__matrix_8h_html_ad73833b88ed8a6f698beb0d47f974a67"><div class="ttname"><a href="led__matrix_8h.html#ad73833b88ed8a6f698beb0d47f974a67">LED_MATRIX_HEIGHT</a></div><div class="ttdeci">#define LED_MATRIX_HEIGHT</div><div class="ttdef"><b>Definition:</b> led_matrix.h:36</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_a444dcd393eaa4f8cdcde5b8613f12c00"><div class="ttname"><a href="led__matrix__font_8h.html#a444dcd393eaa4f8cdcde5b8613f12c00">led_matrix_font_draw_char</a></div><div class="ttdeci">esp_err_t led_matrix_font_draw_char(led_matrix_t *matrix, uint8_t character)</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:134</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_a4929db2efaeefc7846fd20a0f23ac69f"><div class="ttname"><a href="led__matrix__font_8h.html#a4929db2efaeefc7846fd20a0f23ac69f">led_matrix_font_animate_text</a></div><div class="ttdeci">esp_err_t led_matrix_font_animate_text(led_matrix_t *matrix, const char *text, uint32_t character_delay_ms)</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:271</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_a7f4567c2b305964491f1c58699b405f8"><div class="ttname"><a href="led__matrix__font_8h.html#a7f4567c2b305964491f1c58699b405f8">led_matrix_font_slide_text</a></div><div class="ttdeci">esp_err_t led_matrix_font_slide_text(led_matrix_t *matrix, const char *text, uint32_t step_delay_ms)</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:174</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_a8ce86b14ff0d0f11be4537a084dc688a"><div class="ttname"><a href="led__matrix__font_8h.html#a8ce86b14ff0d0f11be4537a084dc688a">LED_MATRIX_FONT_GLYPH_COUNT</a></div><div class="ttdeci">#define LED_MATRIX_FONT_GLYPH_COUNT</div><div class="ttdef"><b>Definition:</b> led_matrix_font.h:29</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_a9b6c860675ad23ae5869e772f4527395"><div class="ttname"><a href="led__matrix__font_8h.html#a9b6c860675ad23ae5869e772f4527395">led_matrix_font_display_char</a></div><div class="ttdeci">esp_err_t led_matrix_font_display_char(led_matrix_t *matrix, uint8_t character)</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:143</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_aaed0953c1ab557946f40ebf1a294f901"><div class="ttname"><a href="led__matrix__font_8h.html#aaed0953c1ab557946f40ebf1a294f901">led_matrix_chars</a></div><div class="ttdeci">const uint8_t led_matrix_chars[LED_MATRIX_FONT_GLYPH_COUNT][LED_MATRIX_HEIGHT]</div><div class="ttdoc">8x8 glyph bitmaps indexed by ASCII value.</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:35</div></div>
+<div class="ttc" id="aled__matrix__font_8h_html_ad20aef81c6c0b1ca918791daffd69b83"><div class="ttname"><a href="led__matrix__font_8h.html#ad20aef81c6c0b1ca918791daffd69b83">led_matrix_font_display_string</a></div><div class="ttdeci">esp_err_t led_matrix_font_display_string(led_matrix_t *matrix, const char *text, uint32_t wait_ms)</div><div class="ttdef"><b>Definition:</b> led_matrix_font.c:151</div></div>
+<div class="ttc" id="astructled__matrix__t_html"><div class="ttname"><a href="structled__matrix__t.html">led_matrix_t</a></div><div class="ttdoc">Handle and framebuffer for one MAX7219-driven 8x8 LED matrix.</div><div class="ttdef"><b>Definition:</b> led_matrix.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

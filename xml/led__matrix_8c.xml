@@ -3,7 +3,11 @@
   <compounddef id="led__matrix_8c" kind="file" language="C++">
     <compoundname>led_matrix.c</compoundname>
     <includes refid="led__matrix_8h" local="yes">led_matrix.h</includes>
-    <includes refid="led__matrix__font_8h" local="yes">led_matrix_font.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="yes">driver/gpio.h</includes>
+    <includes local="yes">driver/spi_master.h</includes>
+    <includes local="yes">esp_check.h</includes>
+    <includes refid="pin__defs_8h" local="yes">pin_defs.h</includes>
     <incdepgraph>
       <node id="2">
         <label>led_matrix.h</label>
@@ -16,110 +20,151 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
       </node>
-      <node id="20">
-        <label>led_matrix_font.h</label>
-        <link refid="led__matrix__font_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
+      <node id="10">
         <label>pin_defs.h</label>
         <link refid="pin__defs_8h"/>
-      </node>
-      <node id="9">
-        <label>shift_register.h</label>
-        <link refid="shift__register_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>utils.h</label>
-        <link refid="utils_8h"/>
       </node>
       <node id="1">
         <label>src/led_matrix.c</label>
         <link refid="led__matrix_8c"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>ctype.h</label>
-      </node>
-      <node id="14">
+      <node id="8">
         <label>driver/gpio.h</label>
       </node>
-      <node id="16">
-        <label>driver/gptimer.h</label>
+      <node id="6">
+        <label>driver/spi_master.h</label>
       </node>
-      <node id="17">
-        <label>driver/gptimer_types.h</label>
-      </node>
-      <node id="19">
+      <node id="9">
         <label>esp_check.h</label>
       </node>
-      <node id="18">
+      <node id="5">
         <label>esp_err.h</label>
       </node>
-      <node id="8">
-        <label>esp_log.h</label>
-      </node>
-      <node id="6">
-        <label>freertos/FreeRTOS.h</label>
-      </node>
-      <node id="7">
-        <label>freertos/task.h</label>
-      </node>
-      <node id="15">
-        <label>hal/gpio_types.h</label>
-      </node>
-      <node id="10">
+      <node id="3">
         <label>stdbool.h</label>
       </node>
       <node id="4">
         <label>stdint.h</label>
       </node>
-      <node id="11">
-        <label>stdlib.h</label>
-      </node>
-      <node id="3">
+      <node id="7">
         <label>string.h</label>
       </node>
     </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" prot="public" static="no">
+        <name>LED_MATRIX_SPI_HOST</name>
+        <initializer>SPI2_HOST</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="45" column="9" bodyfile="src/led_matrix.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="led__matrix_8c_1a18f0bdb21c0606bb7d6bdbe2cbe2ecee" prot="public" static="no">
+        <name>LED_MATRIX_SPI_CLOCK_HZ</name>
+        <initializer>(1 * 1000 * 1000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="46" column="9" bodyfile="src/led_matrix.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="led__matrix_8c_1a5c250981f3c0cd8b54ece9192c279f2a" prot="public" static="no">
+        <name>LED_MATRIX_DEFAULT_BRIGHTNESS</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="47" column="9" bodyfile="src/led_matrix.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@0</name>
+        <enumvalue id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba7b67b5c9623e4d183e3a7f01b1513924" prot="public">
+          <name>MAX7219_REG_DIGIT0</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baa717b134c1514f0ce155b72ca432eaec" prot="public">
+          <name>MAX7219_REG_DECODE_MODE</name>
+          <initializer>= 0x09</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baf0e5baeec01f2c7baa4e88b2601de130" prot="public">
+          <name>MAX7219_REG_INTENSITY</name>
+          <initializer>= 0x0A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba161c773a42510bf3abe4d7c0315d1588" prot="public">
+          <name>MAX7219_REG_SCAN_LIMIT</name>
+          <initializer>= 0x0B</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba99023233dda7de011a155f004ba8c469" prot="public">
+          <name>MAX7219_REG_SHUTDOWN</name>
+          <initializer>= 0x0C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba982c3b9facbf2deb242bc7139c1450d1" prot="public">
+          <name>MAX7219_REG_DISPLAY_TEST</name>
+          <initializer>= 0x0F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="36" column="1" bodyfile="src/led_matrix.c" bodystart="36" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="led__matrix_8c_1ae52918c4d199161f202b8ef11adac9b8" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="led__matrix_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" prot="public" static="yes" mutable="no">
         <type>const char *</type>
-        <definition>const char* TAG_LED_MATRIX</definition>
+        <definition>const char* TAG</definition>
         <argsstring></argsstring>
-        <name>TAG_LED_MATRIX</name>
+        <name>TAG</name>
         <initializer>= &quot;led_matrix&quot;</initializer>
         <briefdescription>
         </briefdescription>
@@ -127,333 +172,303 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/led_matrix.c" line="29" column="19" bodyfile="src/led_matrix.c" bodystart="29" bodyend="-1"/>
+        <location file="src/led_matrix.c" line="34" column="19" bodyfile="src/led_matrix.c" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="led__matrix_8c_1a51494a4c836ad8620e12721a961f1e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structled__matrix" kindref="compound">led_matrix</ref></type>
-        <definition>led_matrix led_matrix_init</definition>
-        <argsstring>(void)</argsstring>
+      <memberdef kind="function" id="led__matrix_8c_1a110f96d7cea46269483108c841243919" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void logical_to_board_rows</definition>
+        <argsstring>(const uint8_t logical_rows[LED_MATRIX_HEIGHT], uint8_t board_rows[LED_MATRIX_HEIGHT])</argsstring>
+        <name>logical_to_board_rows</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>logical_rows</declname>
+          <array>[LED_MATRIX_HEIGHT]</array>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>board_rows</declname>
+          <array>[LED_MATRIX_HEIGHT]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="53" column="13" bodyfile="src/led_matrix.c" bodystart="53" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1aa4bc96b2d31a4eb96dafd56bd9f15d0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t check_initialized</definition>
+        <argsstring>(const led_matrix_t *matrix)</argsstring>
+        <name>check_initialized</name>
+        <param>
+          <type>const <ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="66" column="18" bodyfile="src/led_matrix.c" bodystart="66" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1a38d20e2dc1c19a1e541202cc2da66daf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t write_register</definition>
+        <argsstring>(const led_matrix_t *matrix, uint8_t reg, uint8_t value)</argsstring>
+        <name>write_register</name>
+        <param>
+          <type>const <ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="74" column="18" bodyfile="src/led_matrix.c" bodystart="74" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1a92025d2b988fae073c862c91d7b08ad8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>static esp_err_t initialize_display</definition>
+        <argsstring>(led_matrix_t *matrix)</argsstring>
+        <name>initialize_display</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="98" column="18" bodyfile="src/led_matrix.c" bodystart="98" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1af555e741f1694434702b54b2432ff675" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void release_spi_resources</definition>
+        <argsstring>(led_matrix_t *matrix)</argsstring>
+        <name>release_spi_resources</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="118" column="13" bodyfile="src/led_matrix.c" bodystart="118" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1a2275d9aa658bd88094e40191cec130c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_init</definition>
+        <argsstring>(led_matrix_t *matrix)</argsstring>
         <name>led_matrix_init</name>
         <param>
-          <type>void</type>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
         </param>
         <briefdescription>
-<para>Enables and configures the LED Matrix and corresponding shift registers. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if the could not allocate enough memory or if shift register configuration failed, else returns ESP_OK </para>
-</simplesect>
-</para>
+<para>Initialize using the SRA board MAX7219 pins and default brightness 4. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/led_matrix.c" line="31" column="12" bodyfile="src/led_matrix.c" bodystart="31" bodyend="39"/>
+        <location file="src/led_matrix.c" line="128" column="11" bodyfile="src/led_matrix.c" bodystart="128" bodyend="190"/>
       </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref></type>
-        <definition>led_matrix_data_t bool_to_uint32</definition>
-        <argsstring>(const led_matrix_data_arr_t input_arr)</argsstring>
-        <name>bool_to_uint32</name>
-        <param>
-          <type>const <ref refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kindref="member">led_matrix_data_arr_t</ref></type>
-          <declname>input_arr</declname>
-        </param>
-        <briefdescription>
-<para>Converts a boolean array of size CONFIG_LED_MATRIX_ROWSxCONFIG_LED_MATRIX_COLUMNS to a 32-bit unsigned integer. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>input_arr</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Boolean input array of dimensions (CONFIG_LED_MATRIX_ROWS, CONFIG_LED_MATRIX_COLUMNS)</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A 32-bit value representing the LED states, where each bit corresponds to one physical LED as defined by led_matrix_map. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/led_matrix.c" line="41" column="19" bodyfile="src/led_matrix.c" bodystart="41" bodyend="54"/>
-      </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1ab37555d72fd52533e686e233f1fd23e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="led__matrix_8c_1a7b2c90f75e918bf3634b4b4e15849aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
-        <definition>esp_err_t led_matrix_set_bit</definition>
-        <argsstring>(led_matrix *matrix, const uint8_t logical_pin, const uint8_t led_value)</argsstring>
-        <name>led_matrix_set_bit</name>
+        <definition>esp_err_t led_matrix_set_pixel</definition>
+        <argsstring>(led_matrix_t *matrix, uint8_t x, uint8_t y, bool on)</argsstring>
+        <name>led_matrix_set_pixel</name>
         <param>
-          <type><ref refid="structled__matrix" kindref="compound">led_matrix</ref> *</type>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set one buffered pixel; x and y are in the range 0..7. Call show to update. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="192" column="11" bodyfile="src/led_matrix.c" bodystart="192" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1ad56d1e666bb005eef550257b6d72d13d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_set_row</definition>
+        <argsstring>(led_matrix_t *matrix, uint8_t row, uint8_t pixels)</argsstring>
+        <name>led_matrix_set_row</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>pixels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set one buffered logical row. Bit 7 is the leftmost pixel; call show to update. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="208" column="11" bodyfile="src/led_matrix.c" bodystart="208" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1a6a23a40853ca37ef6908f2c90d3b64ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_draw_bitmap</definition>
+        <argsstring>(led_matrix_t *matrix, const uint8_t rows[LED_MATRIX_HEIGHT])</argsstring>
+        <name>led_matrix_draw_bitmap</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
           <declname>matrix</declname>
         </param>
         <param>
           <type>const uint8_t</type>
-          <declname>led_number</declname>
-          <defname>logical_pin</defname>
-        </param>
-        <param>
-          <type>const uint8_t</type>
-          <declname>led_value</declname>
+          <declname>rows</declname>
+          <array>[LED_MATRIX_HEIGHT]</array>
         </param>
         <briefdescription>
-<para>Sets a single bit of the &quot;data&quot; field of the passed in matrix. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>led_number</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The logical index of the pin (varies from [0, led_matrix_rows * led_matrix_columns - 1]) </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>led_value</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The value to set the LED (can be 0 - LOW or 1 - HIGH)</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if a NULL matrix is passed or if the led number exceeds (led_matrix_rows * led_matrix_columns - 1), else returns ESP_OK </para>
-</simplesect>
-</para>
+<para>Copy a top-to-bottom logical bitmap to the framebuffer. Call show to update. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/led_matrix.c" line="56" column="11" bodyfile="src/led_matrix.c" bodystart="56" bodyend="83"/>
+        <location file="src/led_matrix.c" line="219" column="11" bodyfile="src/led_matrix.c" bodystart="219" bodyend="227"/>
       </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1aa625ed34859afeaaa77d45694c1fd439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="led__matrix_8c_1a6f4ad0f5d0ec643436837b2d93bdc7ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>esp_err_t</type>
-        <definition>esp_err_t led_matrix_set_data</definition>
-        <argsstring>(led_matrix *matrix, const led_matrix_data_t data)</argsstring>
-        <name>led_matrix_set_data</name>
+        <definition>esp_err_t led_matrix_show</definition>
+        <argsstring>(const led_matrix_t *matrix)</argsstring>
+        <name>led_matrix_show</name>
         <param>
-          <type><ref refid="structled__matrix" kindref="compound">led_matrix</ref> *</type>
-          <declname>matrix</declname>
-        </param>
-        <param>
-          <type>const <ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref></type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>Sets all the bits of the &quot;data&quot; field of the passed in matrix using <ref refid="led__matrix_8h_1a63b271a13334f74f69433e2b11cbe62c" kindref="member">led_matrix_set_bit()</ref>. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The data to write to the LED matrix.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if a NULL matrix is passed, else returns ESP_OK </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/led_matrix.c" line="85" column="11" bodyfile="src/led_matrix.c" bodystart="85" bodyend="100"/>
-      </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1a56863ce32cf449e8e5edc48589431be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>esp_err_t</type>
-        <definition>esp_err_t led_matrix_set_data_raw</definition>
-        <argsstring>(led_matrix *matrix, const led_matrix_data_t data)</argsstring>
-        <name>led_matrix_set_data_raw</name>
-        <param>
-          <type><ref refid="structled__matrix" kindref="compound">led_matrix</ref> *</type>
-          <declname>matrix</declname>
-        </param>
-        <param>
-          <type>const <ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref></type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-<para>Sets all the bits of the &quot;data&quot; field. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The bitfield used to set the values of the LED matrix.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if a NULL matrix is passed, else returns ESP_OK </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/led_matrix.c" line="102" column="11" bodyfile="src/led_matrix.c" bodystart="102" bodyend="113"/>
-      </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1aba2c0ed982c8c7c37d823c3f77e9efe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>esp_err_t</type>
-        <definition>esp_err_t led_matrix_write</definition>
-        <argsstring>(const led_matrix *matrix, const led_matrix_output_mode_t mode)</argsstring>
-        <name>led_matrix_write</name>
-        <param>
-          <type>const <ref refid="structled__matrix" kindref="compound">led_matrix</ref> *</type>
-          <declname>matrix</declname>
-        </param>
-        <param>
-          <type>const <ref refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4" kindref="member">led_matrix_output_mode_t</ref></type>
-          <declname>mode</declname>
-        </param>
-        <briefdescription>
-<para>Performs the write from the <ref refid="structled__matrix" kindref="compound">led_matrix</ref> structure to the actual LEDs on board. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>mode</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The way in which to display the values from the shift register.</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if a NULL matrix is passed, else returns ESP_OK </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/led_matrix.c" line="115" column="11" bodyfile="src/led_matrix.c" bodystart="115" bodyend="132"/>
-      </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1a63027033e120823a7f178b3f144106c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>esp_err_t</type>
-        <definition>esp_err_t led_matrix_display_string</definition>
-        <argsstring>(led_matrix *matrix, const char *message, double wait_ms)</argsstring>
-        <name>led_matrix_display_string</name>
-        <param>
-          <type><ref refid="structled__matrix" kindref="compound">led_matrix</ref> *</type>
-          <declname>matrix</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>message</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>wait_ms</declname>
-        </param>
-        <briefdescription>
-<para>Displays the entered string character by character on the LED Matrix with a delay of &quot;wait_ms&quot; ms between characters. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The message to be displayed on the screen. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>wait_ms</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The time to wait between two characters (in ms)</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if a NULL matrix or message is passed, else returns ESP_OK </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/led_matrix.c" line="134" column="11" bodyfile="src/led_matrix.c" bodystart="134" bodyend="165"/>
-      </memberdef>
-      <memberdef kind="function" id="led__matrix_8c_1ae753ca43dab493d0103882f8a39d14ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>esp_err_t</type>
-        <definition>esp_err_t led_matrix_cleanup</definition>
-        <argsstring>(led_matrix matrix)</argsstring>
-        <name>led_matrix_cleanup</name>
-        <param>
-          <type><ref refid="structled__matrix" kindref="compound">led_matrix</ref></type>
+          <type>const <ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
           <declname>matrix</declname>
         </param>
         <briefdescription>
-<para>Performs cleanup on the LED Matrix contents. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>matrix</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The handle to represent and use the matrix of LEDs</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>Returns an error if there is an error while cleaning up the shift register, else returns ESP_OK </para>
-</simplesect>
-</para>
+<para>Map the logical framebuffer and update the display. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/led_matrix.c" line="167" column="11" bodyfile="src/led_matrix.c" bodystart="167" bodyend="176"/>
+        <location file="src/led_matrix.c" line="229" column="11" bodyfile="src/led_matrix.c" bodystart="229" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1a2d99e4bbc7fd3e490deae23c7750fe84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_clear</definition>
+        <argsstring>(led_matrix_t *matrix)</argsstring>
+        <name>led_matrix_clear</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the framebuffer and immediately blank the physical display. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="243" column="11" bodyfile="src/led_matrix.c" bodystart="243" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1ae92c6b7eea687bda832b852ed9ce477e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_set_brightness</definition>
+        <argsstring>(led_matrix_t *matrix, uint8_t brightness)</argsstring>
+        <name>led_matrix_set_brightness</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>brightness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set intensity from 0 (dim) through 15 (bright). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="251" column="11" bodyfile="src/led_matrix.c" bodystart="251" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1af8243137c2247e63d5f83714eaee405a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_set_enabled</definition>
+        <argsstring>(const led_matrix_t *matrix, bool enabled)</argsstring>
+        <name>led_matrix_set_enabled</name>
+        <param>
+          <type>const <ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable or shut down display scanning while retaining framebuffer contents. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="265" column="11" bodyfile="src/led_matrix.c" bodystart="265" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="led__matrix_8c_1a84de22b2c378c23354c7bc0e0b8590b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t led_matrix_deinit</definition>
+        <argsstring>(led_matrix_t *matrix)</argsstring>
+        <name>led_matrix_deinit</name>
+        <param>
+          <type><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release the SPI device and pins from driver use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/led_matrix.c" line="272" column="11" bodyfile="src/led_matrix.c" bodystart="272" bodyend="288"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -464,7 +479,7 @@
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>MIT<sp/>License</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/><sp/>2025<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2026<sp/>Society<sp/>of<sp/>Robotics<sp/>and<sp/>Automation</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
@@ -485,158 +500,270 @@
 <codeline lineno="22"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
 <codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led__matrix_8h" kindref="compound">led_matrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led__matrix__font_8h" kindref="compound">led_matrix_font.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="led__matrix_8h" kindref="compound">led_matrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TAG_LED_MATRIX<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;led_matrix&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/><ref refid="led__matrix_8c_1a51494a4c836ad8620e12721a961f1e2a" kindref="member">led_matrix_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structshift__register__t" kindref="compound">shift_register_t</ref><sp/>conf;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_ERROR_CHECK(<ref refid="shift__register_8h_1a735c71ec46365bacf81bf2e6abdb4d03" kindref="member">shift_register_gpio_init</ref>(&amp;conf));</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structled__matrix" kindref="compound">led_matrix</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.data<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.config<sp/>=<sp/>conf</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref><sp/><ref refid="led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d" kindref="member">bool_to_uint32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kindref="member">led_matrix_data_arr_t</ref><sp/>input_arr)</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>logical_pin;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>led_matrix_rows;<sp/>r++)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;<sp/>c<sp/>&lt;<sp/>led_matrix_columns;<sp/>c++)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input_arr[r][c])<sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logical_pin<sp/>=<sp/>(led_matrix_rows<sp/>-<sp/>(r<sp/>+<sp/>1))<sp/>*<sp/>led_matrix_columns<sp/>+<sp/>c;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>|<sp/>(0x1<sp/>&lt;&lt;<sp/>led_matrix_map[logical_pin]);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1ab37555d72fd52533e686e233f1fd23e5" kindref="member">led_matrix_set_bit</ref>(<ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>logical_pin,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>led_value)</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(matrix<sp/>!=<sp/>NULL),</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(logical_pin<sp/>&lt;<sp/>(led_matrix_rows<sp/>*<sp/>led_matrix_columns)),</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;LED<sp/>index<sp/>greater<sp/>than<sp/>%d!&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>led_matrix_rows<sp/>*<sp/>led_matrix_columns<sp/>-<sp/>1</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>the<sp/>physical<sp/>pin<sp/>from<sp/>the<sp/>logical<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>physical_pin<sp/>=<sp/>led_matrix_map[logical_pin];</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>the<sp/>corresponding<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>current_bit<sp/>=<sp/>(matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref><sp/>&gt;&gt;<sp/>physical_pin)<sp/>&amp;<sp/>0x1;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>bits<sp/>don&apos;t<sp/>match<sp/>then<sp/>flip<sp/>the<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((!current_bit<sp/>&amp;&amp;<sp/>led_value)<sp/>||<sp/>(current_bit<sp/>&amp;&amp;<sp/>!led_value))</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref><sp/>^=<sp/>(0x1<sp/>&lt;&lt;<sp/>physical_pin);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/gpio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/spi_master.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_check.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pin__defs_8h" kindref="compound">pin_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;led_matrix&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba7b67b5c9623e4d183e3a7f01b1513924" kindref="member">MAX7219_REG_DIGIT0</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baa717b134c1514f0ce155b72ca432eaec" kindref="member">MAX7219_REG_DECODE_MODE</ref><sp/>=<sp/>0x09,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baf0e5baeec01f2c7baa4e88b2601de130" kindref="member">MAX7219_REG_INTENSITY</ref><sp/>=<sp/>0x0A,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba161c773a42510bf3abe4d7c0315d1588" kindref="member">MAX7219_REG_SCAN_LIMIT</ref><sp/>=<sp/>0x0B,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba99023233dda7de011a155f004ba8c469" kindref="member">MAX7219_REG_SHUTDOWN</ref><sp/>=<sp/>0x0C,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba982c3b9facbf2deb242bc7139c1450d1" kindref="member">MAX7219_REG_DISPLAY_TEST</ref><sp/>=<sp/>0x0F,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_SPI_HOST<sp/>SPI2_HOST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_SPI_CLOCK_HZ<sp/>(1<sp/>*<sp/>1000<sp/>*<sp/>1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_DEFAULT_BRIGHTNESS<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>On<sp/>the<sp/>SRA<sp/>board,<sp/>MAX7219<sp/>digit<sp/>registers<sp/>0..7<sp/>address<sp/>columns<sp/>from<sp/>left</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>to<sp/>right;<sp/>bit<sp/>7<sp/>is<sp/>the<sp/>top<sp/>LED<sp/>and<sp/>bit<sp/>0<sp/>is<sp/>the<sp/>bottom<sp/>LED<sp/>in<sp/>each<sp/>column.</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>Transpose<sp/>the<sp/>framebuffer&apos;s<sp/>top-to-bottom<sp/>rows<sp/>into<sp/>these<sp/>columns<sp/>before</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>sending<sp/>them<sp/>to<sp/>the<sp/>display,<sp/>so<sp/>bitmaps<sp/>and<sp/>fonts<sp/>use<sp/>the<sp/>same<sp/>orientation.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>logical_to_board_rows(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>logical_rows[<ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>],</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>board_rows[<ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>])</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(board_rows,<sp/>0,<sp/><ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/><ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>;<sp/>++y)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/><ref refid="led__matrix_8h_1a99d69ec2e7c1f8abba1c35cb38394273" kindref="member">LED_MATRIX_WIDTH</ref>;<sp/>++x)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(logical_rows[y]<sp/>&amp;<sp/>(uint8_t)(1U<sp/>&lt;&lt;<sp/>(<ref refid="led__matrix_8h_1a99d69ec2e7c1f8abba1c35cb38394273" kindref="member">LED_MATRIX_WIDTH</ref><sp/>-<sp/>1U<sp/>-<sp/>x)))<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board_rows[x]<sp/>|=<sp/>(uint8_t)(1U<sp/>&lt;&lt;<sp/>(<ref refid="led__matrix_8h_1a99d69ec2e7c1f8abba1c35cb38394273" kindref="member">LED_MATRIX_WIDTH</ref><sp/>-<sp/>1U<sp/>-<sp/>y));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>check_initialized(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(matrix<sp/>!=<sp/>NULL,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(matrix-&gt;<ref refid="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" kindref="member">initialized</ref>,<sp/>ESP_ERR_INVALID_STATE,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>not<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref><sp/>!=<sp/>NULL,<sp/>ESP_ERR_INVALID_STATE,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;SPI<sp/>device<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>write_register(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,<sp/>uint8_t<sp/>reg,<sp/>uint8_t<sp/>value)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>tx_data[2]<sp/>=<sp/>{<sp/>reg,<sp/>value<sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>spi_transaction_t<sp/>transaction<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.length<sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.tx_buffer<sp/>=<sp/>tx_data,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(spi_device_acquire_bus(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref>,<sp/>portMAX_DELAY),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>acquire<sp/>SPI<sp/>bus&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1aa625ed34859afeaaa77d45694c1fd439" kindref="member">led_matrix_set_data</ref>(<ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref><sp/>data)</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(matrix<sp/>!=<sp/>NULL),</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>ret<sp/>=<sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>led_matrix_rows<sp/>*<sp/>led_matrix_columns;<sp/>i++)</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ret<sp/>=<sp/><ref refid="led__matrix_8c_1ab37555d72fd52533e686e233f1fd23e5" kindref="member">led_matrix_set_bit</ref>(matrix,<sp/>i,<sp/>(data<sp/>&gt;&gt;<sp/>i)<sp/>&amp;<sp/>0x1))<sp/>!=<sp/>ESP_OK)</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a56863ce32cf449e8e5edc48589431be2" kindref="member">led_matrix_set_data_raw</ref>(<ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kindref="member">led_matrix_data_t</ref><sp/>data)</highlight></codeline>
-<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(matrix<sp/>!=<sp/>NULL),</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref><sp/>=<sp/>data;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1aba2c0ed982c8c7c37d823c3f77e9efe2" kindref="member">led_matrix_write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4" kindref="member">led_matrix_output_mode_t</ref><sp/>mode)</highlight></codeline>
-<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(matrix<sp/>!=<sp/>NULL),</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1717d7c36af196e2e389fc673db3a49" kindref="member">LED_MATRIX_OUTPUT_SEQ</ref>)</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="shift__register_8h_1aae7d08ef9224c051d263da04f9668a95" kindref="member">shift_register_write_uint32</ref>(&amp;(matrix-&gt;<ref refid="structled__matrix_1a75b08e08f90fb254df44e0f3c113e523" kindref="member">config</ref>),<sp/>matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref>,<sp/>0);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>==<sp/><ref refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1d148226b446b031b8f13c2f694d571" kindref="member">LED_MATRIX_OUTPUT_PAR</ref>)</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="shift__register_8h_1aae7d08ef9224c051d263da04f9668a95" kindref="member">shift_register_write_uint32</ref>(&amp;(matrix-&gt;<ref refid="structled__matrix_1a75b08e08f90fb254df44e0f3c113e523" kindref="member">config</ref>),<sp/>matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref>,<sp/>1);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_ERR_INVALID_ARG;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a63027033e120823a7f178b3f144106c0" kindref="member">led_matrix_display_string</ref>(<ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>wait_ms)</highlight></codeline>
-<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(matrix<sp/>!=<sp/>NULL),</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(message<sp/>!=<sp/>NULL),</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>mlen<sp/>=<sp/>strlen(message);</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mlen;<sp/>i++)</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>character<sp/>is<sp/>less<sp/>than<sp/>0x20<sp/>(&quot;<sp/>&quot;)<sp/>or<sp/>greater<sp/>than<sp/>0x7F<sp/>(DEL)<sp/>in<sp/>ASCII</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iscntrl((uint8_t)<sp/>message[i])<sp/>||<sp/>message[i]<sp/>==<sp/>127)<sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref><sp/>=<sp/><ref refid="led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d" kindref="member">bool_to_uint32</ref>(<ref refid="led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16" kindref="member">led_matrix_chars</ref>[0]);<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>it<sp/>to<sp/>a<sp/>space</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kindref="member">data</ref><sp/>=<sp/><ref refid="led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d" kindref="member">bool_to_uint32</ref>(<ref refid="led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16" kindref="member">led_matrix_chars</ref>[message[i]<sp/>-<sp/>0x20]);</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="led__matrix_8c_1aba2c0ed982c8c7c37d823c3f77e9efe2" kindref="member">led_matrix_write</ref>(matrix,<sp/><ref refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1d148226b446b031b8f13c2f694d571" kindref="member">LED_MATRIX_OUTPUT_PAR</ref>);</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(pdMS_TO_TICKS(wait_ms));</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1ae753ca43dab493d0103882f8a39d14ab" kindref="member">led_matrix_cleanup</ref>(<ref refid="structled__matrix" kindref="compound">led_matrix</ref><sp/>matrix)</highlight></codeline>
-<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>cleaning<sp/>is<sp/>in<sp/>shift_register_t</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="shift__register_8h_1ad1bc60618a55d74eac5d2042421e1007" kindref="member">shift_register_cleanup</ref>(matrix.<ref refid="structled__matrix_1a75b08e08f90fb254df44e0f3c113e523" kindref="member">config</ref>),</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAG_LED_MATRIX,</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>cleanup<sp/>shift<sp/>register&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>);<sp/></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>result<sp/>=<sp/>gpio_set_level(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>spi_device_polling_transmit(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref>,<sp/>&amp;transaction);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>load_result<sp/>=<sp/>gpio_set_level(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>spi_device_release_bus(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>load_result;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>initialize_display(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba982c3b9facbf2deb242bc7139c1450d1" kindref="member">MAX7219_REG_DISPLAY_TEST</ref>,<sp/>0x00),</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>disable<sp/>display<sp/>test<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba161c773a42510bf3abe4d7c0315d1588" kindref="member">MAX7219_REG_SCAN_LIMIT</ref>,<sp/>0x07),</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>configure<sp/>scan<sp/>limit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baa717b134c1514f0ce155b72ca432eaec" kindref="member">MAX7219_REG_DECODE_MODE</ref>,<sp/>0x00),</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>disable<sp/>BCD<sp/>decoding&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baf0e5baeec01f2c7baa4e88b2601de130" kindref="member">MAX7219_REG_INTENSITY</ref>,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1abc49071310f80dd42b085c8da9b4ea50" kindref="member">configured_brightness</ref>),</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>configure<sp/>brightness&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba99023233dda7de011a155f004ba8c469" kindref="member">MAX7219_REG_SHUTDOWN</ref>,<sp/>0x01),</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>enable<sp/>display<sp/>scanning&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/><ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>;<sp/>++row)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba7b67b5c9623e4d183e3a7f01b1513924" kindref="member">MAX7219_REG_DIGIT0</ref><sp/>+<sp/>row,<sp/>0x00),</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>clear<sp/>display<sp/>row&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>release_spi_resources(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spi_bus_remove_device(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spi_bus_free(<ref refid="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" kindref="member">LED_MATRIX_SPI_HOST</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_reset_pin(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a2275d9aa658bd88094e40191cec130c6" kindref="member">led_matrix_init</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(matrix<sp/>!=<sp/>NULL,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>handle<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(GPIO_IS_VALID_OUTPUT_GPIO(<ref refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" kindref="member">LED_MATRIX_CLK</ref>)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_IS_VALID_OUTPUT_GPIO(<ref refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" kindref="member">LED_MATRIX_DIN</ref>)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GPIO_IS_VALID_OUTPUT_GPIO(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>),</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;CLK,<sp/>DIN,<sp/>and<sp/>LOAD<sp/>must<sp/>be<sp/>output-capable<sp/>GPIOs&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(<ref refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" kindref="member">LED_MATRIX_CLK</ref><sp/>!=<sp/><ref refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" kindref="member">LED_MATRIX_DIN</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" kindref="member">LED_MATRIX_CLK</ref><sp/>!=<sp/><ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" kindref="member">LED_MATRIX_DIN</ref><sp/>!=<sp/><ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;CLK,<sp/>DIN,<sp/>and<sp/>LOAD<sp/>pins<sp/>must<sp/>be<sp/>distinct&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" kindref="member">initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1abc49071310f80dd42b085c8da9b4ea50" kindref="member">configured_brightness</ref><sp/>=<sp/><ref refid="led__matrix_8c_1a5c250981f3c0cd8b54ece9192c279f2a" kindref="member">LED_MATRIX_DEFAULT_BRIGHTNESS</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_config_t<sp/>config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pin_bit_mask<sp/>=<sp/>(1ULL<sp/>&lt;&lt;<sp/><ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>),</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.mode<sp/>=<sp/>GPIO_MODE_OUTPUT,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pull_up_en<sp/>=<sp/>GPIO_PULLUP_DISABLE,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pull_down_en<sp/>=<sp/>GPIO_PULLDOWN_DISABLE,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.intr_type<sp/>=<sp/>GPIO_INTR_DISABLE,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(gpio_config(&amp;config),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>configure<sp/>MAX7219<sp/>LOAD<sp/>GPIO&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(gpio_set_level(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>,<sp/>1),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>LOAD<sp/>high&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>spi_bus_config_t<sp/>bus_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.mosi_io_num<sp/>=<sp/><ref refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" kindref="member">LED_MATRIX_DIN</ref>,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.miso_io_num<sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sclk_io_num<sp/>=<sp/><ref refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" kindref="member">LED_MATRIX_CLK</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.quadwp_io_num<sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.quadhd_io_num<sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.max_transfer_sz<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>spi_bus_initialize(<ref refid="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" kindref="member">LED_MATRIX_SPI_HOST</ref>,<sp/>&amp;bus_config,<sp/>SPI_DMA_DISABLED);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_reset_pin(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>spi_device_interface_config_t<sp/>device_config<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.clock_speed_hz<sp/>=<sp/><ref refid="led__matrix_8c_1a18f0bdb21c0606bb7d6bdbe2cbe2ecee" kindref="member">LED_MATRIX_SPI_CLOCK_HZ</ref>,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.mode<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.spics_io_num<sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.queue_size<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>spi_bus_add_device(<ref refid="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" kindref="member">LED_MATRIX_SPI_HOST</ref>,<sp/>&amp;device_config,<sp/>&amp;matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spi_bus_free(<ref refid="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" kindref="member">LED_MATRIX_SPI_HOST</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_reset_pin(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>initialize_display(matrix);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>release_spi_resources(matrix);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" kindref="member">initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a7b2c90f75e918bf3634b4b4e15849aed" kindref="member">led_matrix_set_pixel</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x,<sp/>uint8_t<sp/>y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>on)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(x<sp/>&lt;<sp/><ref refid="led__matrix_8h_1a99d69ec2e7c1f8abba1c35cb38394273" kindref="member">LED_MATRIX_WIDTH</ref><sp/>&amp;&amp;<sp/>y<sp/>&lt;<sp/><ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Pixel<sp/>coordinate<sp/>is<sp/>outside<sp/>the<sp/>8x8<sp/>matrix&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>mask<sp/>=<sp/>(uint8_t)(1U<sp/>&lt;&lt;<sp/>(<ref refid="led__matrix_8h_1a99d69ec2e7c1f8abba1c35cb38394273" kindref="member">LED_MATRIX_WIDTH</ref><sp/>-<sp/>1<sp/>-<sp/>x));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(on)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>[y]<sp/>|=<sp/>mask;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>[y]<sp/>&amp;=<sp/>(uint8_t)~mask;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1ad56d1e666bb005eef550257b6d72d13d" kindref="member">led_matrix_set_row</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>row,<sp/>uint8_t<sp/>pixels)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(row<sp/>&lt;<sp/><ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Row<sp/>index<sp/>is<sp/>outside<sp/>the<sp/>8x8<sp/>matrix&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>[row]<sp/>=<sp/>pixels;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a6a23a40853ca37ef6908f2c90d3b64ad" kindref="member">led_matrix_draw_bitmap</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>rows[<ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>])</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(rows<sp/>!=<sp/>NULL,<sp/>ESP_ERR_INVALID_ARG,<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Bitmap<sp/>pointer<sp/>is<sp/>NULL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>,<sp/>rows,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a6f4ad0f5d0ec643436837b2d93bdc7ad" kindref="member">led_matrix_show</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>board_rows[<ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>];</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>logical_to_board_rows(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>,<sp/>board_rows);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/><ref refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kindref="member">LED_MATRIX_HEIGHT</ref>;<sp/>++row)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba7b67b5c9623e4d183e3a7f01b1513924" kindref="member">MAX7219_REG_DIGIT0</ref><sp/>+<sp/>row,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board_rows[row]),</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>update<sp/>display<sp/>row&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ESP_OK;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a2d99e4bbc7fd3e490deae23c7750fe84" kindref="member">led_matrix_clear</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(matrix-&gt;<ref refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kindref="member">framebuffer</ref>));</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="led__matrix_8c_1a6f4ad0f5d0ec643436837b2d93bdc7ad" kindref="member">led_matrix_show</ref>(matrix);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1ae92c6b7eea687bda832b852ed9ce477e" kindref="member">led_matrix_set_brightness</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>brightness)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_FALSE(brightness<sp/>&lt;=<sp/>0x0F,<sp/>ESP_ERR_INVALID_ARG,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Brightness<sp/>must<sp/>be<sp/>between<sp/>0<sp/>and<sp/>15&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>result<sp/>=<sp/>write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baf0e5baeec01f2c7baa4e88b2601de130" kindref="member">MAX7219_REG_INTENSITY</ref>,<sp/>brightness);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1abc49071310f80dd42b085c8da9b4ea50" kindref="member">configured_brightness</ref><sp/>=<sp/>brightness;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1af8243137c2247e63d5f83714eaee405a" kindref="member">led_matrix_set_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enabled)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>write_register(matrix,<sp/><ref refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba99023233dda7de011a155f004ba8c469" kindref="member">MAX7219_REG_SHUTDOWN</ref>,<sp/>enabled<sp/>?<sp/>0x01<sp/>:<sp/>0x00);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal">esp_err_t<sp/><ref refid="led__matrix_8c_1a84de22b2c378c23354c7bc0e0b8590b0" kindref="member">led_matrix_deinit</ref>(<ref refid="structled__matrix__t" kindref="compound">led_matrix_t</ref><sp/>*matrix)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RETURN_ON_ERROR(check_initialized(matrix),<sp/><ref refid="lvgl__helpers_8c_1afc3d101f633a076cc1ca84b85b6224b2" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Matrix<sp/>is<sp/>unavailable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>result<sp/>=<sp/>spi_bus_remove_device(matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref>);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kindref="member">spi_device</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_err_t<sp/>err<sp/>=<sp/>spi_bus_free(<ref refid="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" kindref="member">LED_MATRIX_SPI_HOST</ref>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>err;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>gpio_reset_pin(<ref refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kindref="member">LED_MATRIX_LOAD</ref>);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>==<sp/>ESP_OK<sp/>&amp;&amp;<sp/>err<sp/>!=<sp/>ESP_OK)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>err;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>matrix-&gt;<ref refid="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" kindref="member">initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/led_matrix.c"/>
   </compounddef>

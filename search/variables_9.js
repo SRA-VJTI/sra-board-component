@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['port_0',['port',['../structi2c__dev__t.html#a4b469f10acfaf5675d77fbe218c2ebe2',1,'i2c_dev_t']]],
-  ['pwm_5ffreq_5fhz_1',['pwm_freq_hz',['../structmotor__config__t.html#a6e272360273a3c788501b34828df8fd6',1,'motor_config_t']]],
-  ['pwma_5fgpio_5fnum_2',['pwma_gpio_num',['../structmotor__config__t.html#aaaf19a606b77fac6d97be5b1790971f9',1,'motor_config_t']]],
-  ['pwmb_5fgpio_5fnum_3',['pwmb_gpio_num',['../structmotor__config__t.html#ae766ceb0d56dea9bda56f5c27b38ab81',1,'motor_config_t']]]
+  ['mario_0',['mario',['../oled_8c.html#a854e3003f905cc6bf110e3b838b02b53',1,'oled.c']]],
+  ['mario_5fmap_1',['mario_map',['../oled_8c.html#a95ab6ff9227127295ca863e2091c7f51',1,'oled.c']]],
+  ['max_5fdegree_2',['max_degree',['../structservo__config.html#a982f4d5f00c3941bb9ed8cd2d66fe3b9',1,'servo_config']]],
+  ['max_5fpulse_5fwidth_3',['max_pulse_width',['../structservo__config.html#a060926d062cfe3f26a5c424b3bed1dbf',1,'servo_config']]],
+  ['min_5fpulse_5fwidth_4',['min_pulse_width',['../structservo__config.html#a0814099ee19c534c5562d80c2a538c48',1,'servo_config']]],
+  ['mutex_5',['mutex',['../structi2c__dev__t.html#afb073a307ab7fb8817fb967107a958cd',1,'i2c_dev_t::mutex()'],['../group__i2cdev.html#gafc659d089f5608a17e8650e59a7e26fc',1,'mutex():&#160;i2cdev.h']]]
 ];

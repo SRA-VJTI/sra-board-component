@@ -9,9 +9,9 @@
     <includedby refid="mpu6050_8h" local="yes">include/mpu6050.h</includedby>
     <includedby refid="oled_8h" local="yes">include/oled.h</includedby>
     <includedby refid="servo_8h" local="yes">include/servo.h</includedby>
-    <includedby refid="shift__register_8h" local="yes">include/shift_register.h</includedby>
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
     <includedby refid="switches_8h" local="yes">include/switches.h</includedby>
+    <includedby refid="led__matrix_8c" local="yes">src/led_matrix.c</includedby>
     <includedby refid="motor__driver_8c" local="yes">src/motor_driver.c</includedby>
     <invincdepgraph>
       <node id="2">
@@ -30,24 +30,6 @@
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>include/led_matrix.h</label>
-        <link refid="led__matrix_8h"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>include/led_matrix_font.h</label>
-        <link refid="led__matrix__font_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -97,13 +79,13 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -114,26 +96,16 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>include/shift_register.h</label>
-        <link refid="shift__register_8h"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
       </node>
-      <node id="23">
+      <node id="17">
         <label>include/switches.h</label>
         <link refid="switches_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -144,13 +116,9 @@
         <label>src/bar_graph.c</label>
         <link refid="bar__graph_8c"/>
       </node>
-      <node id="20">
+      <node id="19">
         <label>src/led_matrix.c</label>
         <link refid="led__matrix_8c"/>
-      </node>
-      <node id="21">
-        <label>src/led_matrix_font.c</label>
-        <link refid="led__matrix__font_8c"/>
       </node>
       <node id="7">
         <label>src/lsa.c</label>
@@ -160,7 +128,7 @@
         <label>src/lvgl_helpers.c</label>
         <link refid="lvgl__helpers_8c"/>
       </node>
-      <node id="25">
+      <node id="20">
         <label>src/motor_driver.c</label>
         <link refid="motor__driver_8c"/>
       </node>
@@ -176,11 +144,7 @@
         <label>src/servo.c</label>
         <link refid="servo_8c"/>
       </node>
-      <node id="22">
-        <label>src/shift_register.c</label>
-        <link refid="shift__register_8c"/>
-      </node>
-      <node id="24">
+      <node id="18">
         <label>src/switches.c</label>
         <link refid="switches_8c"/>
       </node>
@@ -525,7 +489,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" prot="public" static="no">
         <name>SERVO_A</name>
-        <initializer>15</initializer>
+        <initializer>1</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -536,7 +500,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" prot="public" static="no">
         <name>SERVO_B</name>
-        <initializer>5</initializer>
+        <initializer>2</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -547,7 +511,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" prot="public" static="no">
         <name>SERVO_C</name>
-        <initializer>19</initializer>
+        <initializer>42</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -558,7 +522,7 @@
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1abed942b161f2db9f855f196e22459066" prot="public" static="no">
         <name>SERVO_D</name>
-        <initializer>18</initializer>
+        <initializer>41</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -567,9 +531,9 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="102" column="9" bodyfile="include/pin_defs.h" bodystart="102" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" prot="public" static="no">
-        <name>SHIFT_REGISTER_SDATA</name>
-        <initializer>12</initializer>
+      <memberdef kind="define" id="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" prot="public" static="no">
+        <name>LED_MATRIX_CLK</name>
+        <initializer>18</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -578,9 +542,9 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="107" column="9" bodyfile="include/pin_defs.h" bodystart="107" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a08441397716647885b748c448b053d1b" prot="public" static="no">
-        <name>SHIFT_REGISTER_SRCLK</name>
-        <initializer>25</initializer>
+      <memberdef kind="define" id="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" prot="public" static="no">
+        <name>LED_MATRIX_DIN</name>
+        <initializer>16</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -589,9 +553,9 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="108" column="9" bodyfile="include/pin_defs.h" bodystart="108" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6" prot="public" static="no">
-        <name>SHIFT_REGISTER_RCLK</name>
-        <initializer>13</initializer>
+      <memberdef kind="define" id="pin__defs_8h_1a89206de29cd940851806859257fa0662" prot="public" static="no">
+        <name>LED_MATRIX_LOAD</name>
+        <initializer>17</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -692,15 +656,15 @@
 <codeline lineno="94" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="95" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight></codeline>
 <codeline lineno="97"><highlight class="comment"></highlight></codeline>
-<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>15</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>19</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>18</highlight></codeline>
-<codeline lineno="104"></codeline>
-<codeline lineno="106"><highlight class="comment">//******<sp/><sp/><sp/><sp/>SIPO<sp/><sp/><sp/><sp/>*******//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107" refid="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SDATA<sp/>12</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108" refid="pin__defs_8h_1a08441397716647885b748c448b053d1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_SRCLK<sp/>25</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109" refid="pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHIFT_REGISTER_RCLK<sp/><sp/>13</highlight></codeline>
+<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>1<sp/></highlight><highlight class="comment">//Gripper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>2<sp/></highlight><highlight class="comment">//Elbow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>42<sp/></highlight><highlight class="comment">//Arm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>41<sp/></highlight><highlight class="comment">//Base</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"></highlight></codeline>
+<codeline lineno="106"><highlight class="comment">//*****<sp/>8x8<sp/>LED<sp/>matrix<sp/>driven<sp/>by<sp/>MAX7219<sp/>using<sp/>SPI<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_CLK<sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_DIN<sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_LOAD<sp/><sp/>17</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>

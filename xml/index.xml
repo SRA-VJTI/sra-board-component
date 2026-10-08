@@ -17,9 +17,11 @@
     <member refid="structi2c__port__state__t_1a6fe22e2744e1a2bdaa4961e6a2e9f636" kind="variable"><name>config</name></member>
     <member refid="structi2c__port__state__t_1a0dd2940bf6483b8a20a1e3841bfcacaa" kind="variable"><name>installed</name></member>
   </compound>
-  <compound refid="structled__matrix" kind="struct"><name>led_matrix</name>
-    <member refid="structled__matrix_1a6836ea048a6d70ecf4b8af68892d06ea" kind="variable"><name>data</name></member>
-    <member refid="structled__matrix_1a75b08e08f90fb254df44e0f3c113e523" kind="variable"><name>config</name></member>
+  <compound refid="structled__matrix__t" kind="struct"><name>led_matrix_t</name>
+    <member refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" kind="variable"><name>framebuffer</name></member>
+    <member refid="structled__matrix__t_1abc49071310f80dd42b085c8da9b4ea50" kind="variable"><name>configured_brightness</name></member>
+    <member refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" kind="variable"><name>spi_device</name></member>
+    <member refid="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" kind="variable"><name>initialized</name></member>
   </compound>
   <compound refid="structline__sensor__array_1_1line__sensor" kind="struct"><name>line_sensor_array::line_sensor</name>
     <member refid="structline__sensor__array_1_1line__sensor_1a7f5fc9359791ab279957af886e69ca5a" kind="variable"><name>A0</name></member>
@@ -68,12 +70,6 @@
     <member refid="structservo__config_1a9bc55aeeec33b38b1920ac5c254965b6" kind="variable"><name>comparator</name></member>
     <member refid="structservo__config_1a6c0a0b723af32f329c263f23e93fb8e9" kind="variable"><name>generator</name></member>
   </compound>
-  <compound refid="structshift__register__t" kind="struct"><name>shift_register_t</name>
-    <member refid="structshift__register__t_1a6b81097c9da0c2bb5b7e40071eea67fe" kind="variable"><name>sdata</name></member>
-    <member refid="structshift__register__t_1ad5afc32a87b90bcdba0b84ec18993f57" kind="variable"><name>srclk</name></member>
-    <member refid="structshift__register__t_1a6ad746b1adc128568f303de158b33b57" kind="variable"><name>rclk</name></member>
-    <member refid="structshift__register__t_1a3a9986772948c1ec12a28c267a3c90da" kind="variable"><name>timer</name></member>
-  </compound>
   <compound refid="adc_8h" kind="file"><name>adc.h</name>
     <member refid="adc_8h_1a9851d7403086e8d8ce491625b0f8863d" kind="define"><name>ADC_ATTEN</name></member>
     <member refid="adc_8h_1a6e20add5d75926f896f2602a1b839673" kind="define"><name>ADC_BITWIDTH_LEN</name></member>
@@ -109,25 +105,26 @@
     <member refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kind="function"><name>i2c_dev_write_reg</name></member>
   </compound>
   <compound refid="led__matrix_8h" kind="file"><name>led_matrix.h</name>
-    <member refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4" kind="enum"><name>led_matrix_output_mode_t</name></member>
-    <member refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1717d7c36af196e2e389fc673db3a49" kind="enumvalue"><name>LED_MATRIX_OUTPUT_SEQ</name></member>
-    <member refid="led__matrix_8h_1a7c9676c5aa64664a86d992ab903340b4ae1d148226b446b031b8f13c2f694d571" kind="enumvalue"><name>LED_MATRIX_OUTPUT_PAR</name></member>
-    <member refid="led__matrix_8h_1a10d4c354ba62a326b6453390dd77dad0" kind="typedef"><name>led_matrix_data_t</name></member>
-    <member refid="led__matrix_8h_1a1007f2550d021db5b853d36db2f7e478" kind="typedef"><name>led_matrix_data_arr_t</name></member>
-    <member refid="led__matrix_8h_1a819e39d90fe13e13a9c0a50521181c5c" kind="variable"><name>led_matrix_rows</name></member>
-    <member refid="led__matrix_8h_1acefc36170db8a0747019f36473c005bb" kind="variable"><name>led_matrix_columns</name></member>
-    <member refid="led__matrix_8h_1a5c45bbf0474ae91cbaf7fead1d21d8d2" kind="variable"><name>led_matrix_map</name></member>
-    <member refid="led__matrix_8h_1a51494a4c836ad8620e12721a961f1e2a" kind="function"><name>led_matrix_init</name></member>
-    <member refid="led__matrix_8h_1ada834f4446c7fc026aa6cc562a481a3d" kind="function"><name>bool_to_uint32</name></member>
-    <member refid="led__matrix_8h_1a63b271a13334f74f69433e2b11cbe62c" kind="function"><name>led_matrix_set_bit</name></member>
-    <member refid="led__matrix_8h_1aa625ed34859afeaaa77d45694c1fd439" kind="function"><name>led_matrix_set_data</name></member>
-    <member refid="led__matrix_8h_1a56863ce32cf449e8e5edc48589431be2" kind="function"><name>led_matrix_set_data_raw</name></member>
-    <member refid="led__matrix_8h_1aba2c0ed982c8c7c37d823c3f77e9efe2" kind="function"><name>led_matrix_write</name></member>
-    <member refid="led__matrix_8h_1a63027033e120823a7f178b3f144106c0" kind="function"><name>led_matrix_display_string</name></member>
-    <member refid="led__matrix_8h_1ae753ca43dab493d0103882f8a39d14ab" kind="function"><name>led_matrix_cleanup</name></member>
+    <member refid="led__matrix_8h_1a99d69ec2e7c1f8abba1c35cb38394273" kind="define"><name>LED_MATRIX_WIDTH</name></member>
+    <member refid="led__matrix_8h_1ad73833b88ed8a6f698beb0d47f974a67" kind="define"><name>LED_MATRIX_HEIGHT</name></member>
+    <member refid="led__matrix_8h_1a2275d9aa658bd88094e40191cec130c6" kind="function"><name>led_matrix_init</name></member>
+    <member refid="led__matrix_8h_1a7b2c90f75e918bf3634b4b4e15849aed" kind="function"><name>led_matrix_set_pixel</name></member>
+    <member refid="led__matrix_8h_1ad56d1e666bb005eef550257b6d72d13d" kind="function"><name>led_matrix_set_row</name></member>
+    <member refid="led__matrix_8h_1a6a23a40853ca37ef6908f2c90d3b64ad" kind="function"><name>led_matrix_draw_bitmap</name></member>
+    <member refid="led__matrix_8h_1a6f4ad0f5d0ec643436837b2d93bdc7ad" kind="function"><name>led_matrix_show</name></member>
+    <member refid="led__matrix_8h_1a2d99e4bbc7fd3e490deae23c7750fe84" kind="function"><name>led_matrix_clear</name></member>
+    <member refid="led__matrix_8h_1ae92c6b7eea687bda832b852ed9ce477e" kind="function"><name>led_matrix_set_brightness</name></member>
+    <member refid="led__matrix_8h_1af8243137c2247e63d5f83714eaee405a" kind="function"><name>led_matrix_set_enabled</name></member>
+    <member refid="led__matrix_8h_1a84de22b2c378c23354c7bc0e0b8590b0" kind="function"><name>led_matrix_deinit</name></member>
   </compound>
   <compound refid="led__matrix__font_8h" kind="file"><name>led_matrix_font.h</name>
-    <member refid="led__matrix__font_8h_1abc271b7e3b81780bb3711b1a678a2e16" kind="variable"><name>led_matrix_chars</name></member>
+    <member refid="led__matrix__font_8h_1a8ce86b14ff0d0f11be4537a084dc688a" kind="define"><name>LED_MATRIX_FONT_GLYPH_COUNT</name></member>
+    <member refid="led__matrix__font_8h_1aaed0953c1ab557946f40ebf1a294f901" kind="variable"><name>led_matrix_chars</name></member>
+    <member refid="led__matrix__font_8h_1a444dcd393eaa4f8cdcde5b8613f12c00" kind="function"><name>led_matrix_font_draw_char</name></member>
+    <member refid="led__matrix__font_8h_1a9b6c860675ad23ae5869e772f4527395" kind="function"><name>led_matrix_font_display_char</name></member>
+    <member refid="led__matrix__font_8h_1ad20aef81c6c0b1ca918791daffd69b83" kind="function"><name>led_matrix_font_display_string</name></member>
+    <member refid="led__matrix__font_8h_1a7f4567c2b305964491f1c58699b405f8" kind="function"><name>led_matrix_font_slide_text</name></member>
+    <member refid="led__matrix__font_8h_1a4929db2efaeefc7846fd20a0f23ac69f" kind="function"><name>led_matrix_font_animate_text</name></member>
   </compound>
   <compound refid="lsa_8h" kind="file"><name>lsa.h</name>
     <member refid="lsa_8h_1a3992a43fac1d452edf605ff497a25030" kind="define"><name>NUMBER_OF_SAMPLES</name></member>
@@ -444,20 +441,14 @@
     <member refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" kind="define"><name>SERVO_B</name></member>
     <member refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" kind="define"><name>SERVO_C</name></member>
     <member refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" kind="define"><name>SERVO_D</name></member>
-    <member refid="pin__defs_8h_1a0051dca24ef692857826e4917e9b6759" kind="define"><name>SHIFT_REGISTER_SDATA</name></member>
-    <member refid="pin__defs_8h_1a08441397716647885b748c448b053d1b" kind="define"><name>SHIFT_REGISTER_SRCLK</name></member>
-    <member refid="pin__defs_8h_1a8255f317c7e6867eca29ce13b4f55ee6" kind="define"><name>SHIFT_REGISTER_RCLK</name></member>
+    <member refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" kind="define"><name>LED_MATRIX_CLK</name></member>
+    <member refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" kind="define"><name>LED_MATRIX_DIN</name></member>
+    <member refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" kind="define"><name>LED_MATRIX_LOAD</name></member>
   </compound>
   <compound refid="servo_8h" kind="file"><name>servo.h</name>
     <member refid="servo_8h_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
     <member refid="servo_8h_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
     <member refid="servo_8h_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
-  </compound>
-  <compound refid="shift__register_8h" kind="file"><name>shift_register.h</name>
-    <member refid="shift__register_8h_1a735c71ec46365bacf81bf2e6abdb4d03" kind="function"><name>shift_register_gpio_init</name></member>
-    <member refid="shift__register_8h_1a1dee47a262c0fde83872e2e56b65c94a" kind="function"><name>shift_register_write_uint8</name></member>
-    <member refid="shift__register_8h_1aae7d08ef9224c051d263da04f9668a95" kind="function"><name>shift_register_write_uint32</name></member>
-    <member refid="shift__register_8h_1ad1bc60618a55d74eac5d2042421e1007" kind="function"><name>shift_register_cleanup</name></member>
   </compound>
   <compound refid="sra__board_8h" kind="file"><name>sra_board.h</name>
   </compound>
@@ -511,18 +502,41 @@
     <member refid="group__i2cdev_1gad9827abf64603201a084148c0de097ec" kind="function"><name>i2c_dev_write_reg</name></member>
   </compound>
   <compound refid="led__matrix_8c" kind="file"><name>led_matrix.c</name>
-    <member refid="led__matrix_8c_1ae52918c4d199161f202b8ef11adac9b8" kind="variable"><name>TAG_LED_MATRIX</name></member>
-    <member refid="led__matrix_8c_1a51494a4c836ad8620e12721a961f1e2a" kind="function"><name>led_matrix_init</name></member>
-    <member refid="led__matrix_8c_1ada834f4446c7fc026aa6cc562a481a3d" kind="function"><name>bool_to_uint32</name></member>
-    <member refid="led__matrix_8c_1ab37555d72fd52533e686e233f1fd23e5" kind="function"><name>led_matrix_set_bit</name></member>
-    <member refid="led__matrix_8c_1aa625ed34859afeaaa77d45694c1fd439" kind="function"><name>led_matrix_set_data</name></member>
-    <member refid="led__matrix_8c_1a56863ce32cf449e8e5edc48589431be2" kind="function"><name>led_matrix_set_data_raw</name></member>
-    <member refid="led__matrix_8c_1aba2c0ed982c8c7c37d823c3f77e9efe2" kind="function"><name>led_matrix_write</name></member>
-    <member refid="led__matrix_8c_1a63027033e120823a7f178b3f144106c0" kind="function"><name>led_matrix_display_string</name></member>
-    <member refid="led__matrix_8c_1ae753ca43dab493d0103882f8a39d14ab" kind="function"><name>led_matrix_cleanup</name></member>
+    <member refid="led__matrix_8c_1a8234490dc1a5707cde70f53fd6e84089" kind="define"><name>LED_MATRIX_SPI_HOST</name></member>
+    <member refid="led__matrix_8c_1a18f0bdb21c0606bb7d6bdbe2cbe2ecee" kind="define"><name>LED_MATRIX_SPI_CLOCK_HZ</name></member>
+    <member refid="led__matrix_8c_1a5c250981f3c0cd8b54ece9192c279f2a" kind="define"><name>LED_MATRIX_DEFAULT_BRIGHTNESS</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name>@0</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba7b67b5c9623e4d183e3a7f01b1513924" kind="enumvalue"><name>MAX7219_REG_DIGIT0</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baa717b134c1514f0ce155b72ca432eaec" kind="enumvalue"><name>MAX7219_REG_DECODE_MODE</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55baf0e5baeec01f2c7baa4e88b2601de130" kind="enumvalue"><name>MAX7219_REG_INTENSITY</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba161c773a42510bf3abe4d7c0315d1588" kind="enumvalue"><name>MAX7219_REG_SCAN_LIMIT</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba99023233dda7de011a155f004ba8c469" kind="enumvalue"><name>MAX7219_REG_SHUTDOWN</name></member>
+    <member refid="led__matrix_8c_1a06fc87d81c62e9abb8790b6e5713c55ba982c3b9facbf2deb242bc7139c1450d1" kind="enumvalue"><name>MAX7219_REG_DISPLAY_TEST</name></member>
+    <member refid="led__matrix_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" kind="variable"><name>TAG</name></member>
+    <member refid="led__matrix_8c_1a110f96d7cea46269483108c841243919" kind="function"><name>logical_to_board_rows</name></member>
+    <member refid="led__matrix_8c_1aa4bc96b2d31a4eb96dafd56bd9f15d0b" kind="function"><name>check_initialized</name></member>
+    <member refid="led__matrix_8c_1a38d20e2dc1c19a1e541202cc2da66daf" kind="function"><name>write_register</name></member>
+    <member refid="led__matrix_8c_1a92025d2b988fae073c862c91d7b08ad8" kind="function"><name>initialize_display</name></member>
+    <member refid="led__matrix_8c_1af555e741f1694434702b54b2432ff675" kind="function"><name>release_spi_resources</name></member>
+    <member refid="led__matrix_8c_1a2275d9aa658bd88094e40191cec130c6" kind="function"><name>led_matrix_init</name></member>
+    <member refid="led__matrix_8c_1a7b2c90f75e918bf3634b4b4e15849aed" kind="function"><name>led_matrix_set_pixel</name></member>
+    <member refid="led__matrix_8c_1ad56d1e666bb005eef550257b6d72d13d" kind="function"><name>led_matrix_set_row</name></member>
+    <member refid="led__matrix_8c_1a6a23a40853ca37ef6908f2c90d3b64ad" kind="function"><name>led_matrix_draw_bitmap</name></member>
+    <member refid="led__matrix_8c_1a6f4ad0f5d0ec643436837b2d93bdc7ad" kind="function"><name>led_matrix_show</name></member>
+    <member refid="led__matrix_8c_1a2d99e4bbc7fd3e490deae23c7750fe84" kind="function"><name>led_matrix_clear</name></member>
+    <member refid="led__matrix_8c_1ae92c6b7eea687bda832b852ed9ce477e" kind="function"><name>led_matrix_set_brightness</name></member>
+    <member refid="led__matrix_8c_1af8243137c2247e63d5f83714eaee405a" kind="function"><name>led_matrix_set_enabled</name></member>
+    <member refid="led__matrix_8c_1a84de22b2c378c23354c7bc0e0b8590b0" kind="function"><name>led_matrix_deinit</name></member>
   </compound>
   <compound refid="led__matrix__font_8c" kind="file"><name>led_matrix_font.c</name>
-    <member refid="led__matrix__font_8c_1abc271b7e3b81780bb3711b1a678a2e16" kind="variable"><name>led_matrix_chars</name></member>
+    <member refid="led__matrix__font_8c_1a5a85b9c772bbeb480b209a3e6ea92b4c" kind="variable"><name>TAG</name></member>
+    <member refid="led__matrix__font_8c_1aaed0953c1ab557946f40ebf1a294f901" kind="variable"><name>led_matrix_chars</name></member>
+    <member refid="led__matrix__font_8c_1a444dcd393eaa4f8cdcde5b8613f12c00" kind="function"><name>led_matrix_font_draw_char</name></member>
+    <member refid="led__matrix__font_8c_1a9b6c860675ad23ae5869e772f4527395" kind="function"><name>led_matrix_font_display_char</name></member>
+    <member refid="led__matrix__font_8c_1ad20aef81c6c0b1ca918791daffd69b83" kind="function"><name>led_matrix_font_display_string</name></member>
+    <member refid="led__matrix__font_8c_1a7f4567c2b305964491f1c58699b405f8" kind="function"><name>led_matrix_font_slide_text</name></member>
+    <member refid="led__matrix__font_8c_1ad1eafc193f8ab69c603fb9204977bed6" kind="function"><name>animate_character</name></member>
+    <member refid="led__matrix__font_8c_1a4929db2efaeefc7846fd20a0f23ac69f" kind="function"><name>led_matrix_font_animate_text</name></member>
   </compound>
   <compound refid="lsa_8c" kind="file"><name>lsa.c</name>
     <member refid="lsa_8c_1aac1676855a0ef8b82f36998025182fbe" kind="variable"><name>line_sensor_pins</name></member>
@@ -615,15 +629,6 @@
     <member refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
     <member refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
     <member refid="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
-  </compound>
-  <compound refid="shift__register_8c" kind="file"><name>shift_register.c</name>
-    <member refid="shift__register_8c_1a948f8fe649f07b971330b0d5eb136df6" kind="variable"><name>TAG_SHIFT_REGISTER</name></member>
-    <member refid="shift__register_8c_1ad8c1ad214843b380c56645e02bf2e34c" kind="function"><name>shift_register_timer_on_alarm</name></member>
-    <member refid="shift__register_8c_1a735c71ec46365bacf81bf2e6abdb4d03" kind="function"><name>shift_register_gpio_init</name></member>
-    <member refid="shift__register_8c_1a4dd2c2ab639492b857e770304d0303d7" kind="function"><name>clock_toggle_rising</name></member>
-    <member refid="shift__register_8c_1a1dee47a262c0fde83872e2e56b65c94a" kind="function"><name>shift_register_write_uint8</name></member>
-    <member refid="shift__register_8c_1aae7d08ef9224c051d263da04f9668a95" kind="function"><name>shift_register_write_uint32</name></member>
-    <member refid="shift__register_8c_1ad1bc60618a55d74eac5d2042421e1007" kind="function"><name>shift_register_cleanup</name></member>
   </compound>
   <compound refid="switches_8c" kind="file"><name>switches.c</name>
     <member refid="switches_8c_1ac00d65aab541451923cc2fc80893786e" kind="variable"><name>TAG_SWITCHES</name></member>

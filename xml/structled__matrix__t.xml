@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structled__matrix__t" kind="struct" language="C++" prot="public">
+    <compoundname>led_matrix_t</compoundname>
+    <includes refid="led__matrix_8h" local="no">led_matrix.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t led_matrix_t::framebuffer[LED_MATRIX_HEIGHT]</definition>
+        <argsstring>[LED_MATRIX_HEIGHT]</argsstring>
+        <name>framebuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix.h" line="49" column="13" bodyfile="include/led_matrix.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structled__matrix__t_1abc49071310f80dd42b085c8da9b4ea50" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t led_matrix_t::configured_brightness</definition>
+        <argsstring></argsstring>
+        <name>configured_brightness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix.h" line="50" column="13" bodyfile="include/led_matrix.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" prot="public" static="no" mutable="no">
+        <type>spi_device_handle_t</type>
+        <definition>spi_device_handle_t led_matrix_t::spi_device</definition>
+        <argsstring></argsstring>
+        <name>spi_device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix.h" line="51" column="25" bodyfile="include/led_matrix.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool led_matrix_t::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/led_matrix.h" line="52" column="10" bodyfile="include/led_matrix.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handle and framebuffer for one MAX7219-driven 8x8 LED matrix. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The framebuffer uses logical bitmap orientation: rows are ordered top to bottom, and in each row bit 7 is the leftmost pixel while bit 0 is the rightmost. On the SRA board, MAX7219 digit registers 0..7 address columns from left to right, with bit 7 at the top and bit 0 at the bottom. <ref refid="led__matrix_8h_1a6f4ad0f5d0ec643436837b2d93bdc7ad" kindref="member">led_matrix_show()</ref> transposes the framebuffer rows into these columns, so callers should not transpose bitmaps before drawing them. </para>
+    </detaileddescription>
+    <location file="include/led_matrix.h" line="48" column="1" bodyfile="include/led_matrix.h" bodystart="48" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structled__matrix__t_1abc49071310f80dd42b085c8da9b4ea50" prot="public" virt="non-virtual"><scope>led_matrix_t</scope><name>configured_brightness</name></member>
+      <member refid="structled__matrix__t_1ac15d548e6f2765079625aef9cad8c22d" prot="public" virt="non-virtual"><scope>led_matrix_t</scope><name>framebuffer</name></member>
+      <member refid="structled__matrix__t_1a21416dc77edd557210b8fdd6a5d1c08b" prot="public" virt="non-virtual"><scope>led_matrix_t</scope><name>initialized</name></member>
+      <member refid="structled__matrix__t_1a27d3744aa480cba16f784507e139c5d6" prot="public" virt="non-virtual"><scope>led_matrix_t</scope><name>spi_device</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
