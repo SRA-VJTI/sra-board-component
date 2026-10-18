@@ -37,10 +37,7 @@
 static const char *TAG = "mpu_example";
 
 void app_main()
-{
-    // Enable swtiches for switching between the different graphs we need to plot
-    enable_switches();
-    
+{    
     // Enable the MPU-6050 Sensor
     enable_mpu6050();
 
@@ -66,14 +63,7 @@ void app_main()
         complementary_filter(acce_raw_value, gyro_raw_value, complementary_angle, mpu_offset);
 
         // Plotting the different output plots
-        if (read_switch(SWITCH_1))
-            printf("%f \n", acce_angle[1]);
-        else if (read_switch(SWITCH_2))
-            printf("%f \n", gyro_angle[1]);
-        else if (read_switch(SWITCH_3))
-            printf("%f \n", complementary_angle[1]);
-        else
-            printf("%f \t  %f \t  %f \n ", acce_angle[1], gyro_angle[1], complementary_angle[1]);
+        printf("%f \t  %f \t  %f \n ", acce_angle[1], gyro_angle[1], complementary_angle[1]);
     }
 
     ESP_LOGE(TAG, "%s", "Error reading values!");

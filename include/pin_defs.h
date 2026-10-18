@@ -55,24 +55,6 @@
 #define OLED_SDA 14
 #endif
 
-//////// bar graph //////////
-#define BG_LED_1 12
-#define BG_LED_2 13
-#define BG_LED_3 25
-#define BG_LED_4 26
-#define BG_LED_5 15
-#define BG_LED_6 5
-#define BG_LED_7 18
-#define BG_LED_8 19
-/////////////////////////////
-
-////////// switches //////////
-#define SWITCH_1 4
-#define SWITCH_2 2
-#define SWITCH_3 27
-#define SWITCH_4 14
-/////////////////////////////
-
 /////////// lsa /////////////
 #define LSA_A0 4
 #define LSA_A1 5
