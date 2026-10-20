@@ -26,8 +26,6 @@
 #define SRA_BOARD_H
 
 #include "adc.h"
-#include "bar_graph.h"
-#include "switches.h"
 #include "lsa.h"
 #include "mcpwm_interface.h"
 #include "motor_driver.h"
