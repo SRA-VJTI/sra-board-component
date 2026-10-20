@@ -3,7 +3,6 @@
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
     <innerfile refid="adc_8c">adc.c</innerfile>
-    <innerfile refid="bar__graph_8c">bar_graph.c</innerfile>
     <innerfile refid="i2cdev_8c">i2cdev.c</innerfile>
     <innerfile refid="led__matrix_8c">led_matrix.c</innerfile>
     <innerfile refid="led__matrix__font_8c">led_matrix_font.c</innerfile>
@@ -14,7 +13,6 @@
     <innerfile refid="mpu6050_8c">mpu6050.c</innerfile>
     <innerfile refid="oled_8c">oled.c</innerfile>
     <innerfile refid="servo_8c">servo.c</innerfile>
-    <innerfile refid="switches_8c">switches.c</innerfile>
     <innerfile refid="utils_8c">utils.c</innerfile>
     <briefdescription>
     </briefdescription>

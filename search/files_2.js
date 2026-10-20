@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['esp_5fidf_5flib_5fhelpers_2eh_0',['esp_idf_lib_helpers.h',['../esp__idf__lib__helpers_8h.html',1,'']]]
+  ['i2cdev_2ec_0',['i2cdev.c',['../i2cdev_8c.html',1,'']]],
+  ['i2cdev_2eh_1',['i2cdev.h',['../i2cdev_8h.html',1,'']]]
 ];

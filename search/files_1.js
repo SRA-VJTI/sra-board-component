@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bar_5fgraph_2ec_0',['bar_graph.c',['../bar__graph_8c.html',1,'']]],
-  ['bar_5fgraph_2eh_1',['bar_graph.h',['../bar__graph_8h.html',1,'']]]
+  ['esp_5fidf_5flib_5fhelpers_2eh_0',['esp_idf_lib_helpers.h',['../esp__idf__lib__helpers_8h.html',1,'']]]
 ];

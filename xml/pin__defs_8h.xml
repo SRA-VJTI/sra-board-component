@@ -3,14 +3,12 @@
   <compounddef id="pin__defs_8h" kind="file" language="C++">
     <compoundname>pin_defs.h</compoundname>
     <includedby refid="adc_8h" local="yes">include/adc.h</includedby>
-    <includedby refid="bar__graph_8h" local="yes">include/bar_graph.h</includedby>
     <includedby refid="lsa_8h" local="yes">include/lsa.h</includedby>
     <includedby refid="lvgl__helpers_8h" local="yes">include/lvgl_helpers.h</includedby>
     <includedby refid="mpu6050_8h" local="yes">include/mpu6050.h</includedby>
     <includedby refid="oled_8h" local="yes">include/oled.h</includedby>
     <includedby refid="servo_8h" local="yes">include/servo.h</includedby>
     <includedby refid="sra__board_8h" local="yes">include/sra_board.h</includedby>
-    <includedby refid="switches_8h" local="yes">include/switches.h</includedby>
     <includedby refid="led__matrix_8c" local="yes">src/led_matrix.c</includedby>
     <includedby refid="motor__driver_8c" local="yes">src/motor_driver.c</includedby>
     <invincdepgraph>
@@ -24,14 +22,6 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>include/bar_graph.h</label>
-        <link refid="bar__graph_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>include/lsa.h</label>
         <link refid="lsa_8h"/>
@@ -42,18 +32,18 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="9">
         <label>include/lvgl_helpers.h</label>
         <link refid="lvgl__helpers_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="11">
         <label>include/mpu6050.h</label>
         <link refid="mpu6050_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -67,56 +57,40 @@
         <link refid="pin__defs_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="13">
         <label>include/servo.h</label>
         <link refid="servo_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="6">
         <label>include/sra_board.h</label>
         <link refid="sra__board_8h"/>
       </node>
-      <node id="17">
-        <label>include/switches.h</label>
-        <link refid="switches_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
       <node id="8">
         <label>src/adc.c</label>
         <link refid="adc_8c"/>
       </node>
-      <node id="10">
-        <label>src/bar_graph.c</label>
-        <link refid="bar__graph_8c"/>
-      </node>
-      <node id="19">
+      <node id="15">
         <label>src/led_matrix.c</label>
         <link refid="led__matrix_8c"/>
       </node>
@@ -124,15 +98,15 @@
         <label>src/lsa.c</label>
         <link refid="lsa_8c"/>
       </node>
-      <node id="12">
+      <node id="10">
         <label>src/lvgl_helpers.c</label>
         <link refid="lvgl__helpers_8c"/>
       </node>
-      <node id="20">
+      <node id="16">
         <label>src/motor_driver.c</label>
         <link refid="motor__driver_8c"/>
       </node>
-      <node id="14">
+      <node id="12">
         <label>src/mpu6050.c</label>
         <link refid="mpu6050_8c"/>
       </node>
@@ -140,13 +114,9 @@
         <label>src/oled.c</label>
         <link refid="oled_8c"/>
       </node>
-      <node id="16">
+      <node id="14">
         <label>src/servo.c</label>
         <link refid="servo_8c"/>
-      </node>
-      <node id="18">
-        <label>src/switches.c</label>
-        <link refid="switches_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -223,138 +193,6 @@
         </inbodydescription>
         <location file="include/pin_defs.h" line="48" column="9" bodyfile="include/pin_defs.h" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" prot="public" static="no">
-        <name>BG_LED_1</name>
-        <initializer>12</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="59" column="9" bodyfile="include/pin_defs.h" bodystart="59" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" prot="public" static="no">
-        <name>BG_LED_2</name>
-        <initializer>13</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="60" column="9" bodyfile="include/pin_defs.h" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" prot="public" static="no">
-        <name>BG_LED_3</name>
-        <initializer>25</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="61" column="9" bodyfile="include/pin_defs.h" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" prot="public" static="no">
-        <name>BG_LED_4</name>
-        <initializer>26</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="62" column="9" bodyfile="include/pin_defs.h" bodystart="62" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" prot="public" static="no">
-        <name>BG_LED_5</name>
-        <initializer>15</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="63" column="9" bodyfile="include/pin_defs.h" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" prot="public" static="no">
-        <name>BG_LED_6</name>
-        <initializer>5</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="64" column="9" bodyfile="include/pin_defs.h" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" prot="public" static="no">
-        <name>BG_LED_7</name>
-        <initializer>18</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="65" column="9" bodyfile="include/pin_defs.h" bodystart="65" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1abb2349aa558034464942254c952b8a30" prot="public" static="no">
-        <name>BG_LED_8</name>
-        <initializer>19</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="66" column="9" bodyfile="include/pin_defs.h" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1afc718c1fcfcf5d762545260289674333" prot="public" static="no">
-        <name>SWITCH_1</name>
-        <initializer>4</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="70" column="9" bodyfile="include/pin_defs.h" bodystart="70" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a62b9d54211060aac86c0ca9b02f7331e" prot="public" static="no">
-        <name>SWITCH_2</name>
-        <initializer>2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="71" column="9" bodyfile="include/pin_defs.h" bodystart="71" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" prot="public" static="no">
-        <name>SWITCH_3</name>
-        <initializer>27</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="72" column="9" bodyfile="include/pin_defs.h" bodystart="72" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" prot="public" static="no">
-        <name>SWITCH_4</name>
-        <initializer>14</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/pin_defs.h" line="73" column="9" bodyfile="include/pin_defs.h" bodystart="73" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" prot="public" static="no">
         <name>LSA_A0</name>
         <initializer>4</initializer>
@@ -364,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="77" column="9" bodyfile="include/pin_defs.h" bodystart="77" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="59" column="9" bodyfile="include/pin_defs.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" prot="public" static="no">
         <name>LSA_A1</name>
@@ -375,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="78" column="9" bodyfile="include/pin_defs.h" bodystart="78" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="60" column="9" bodyfile="include/pin_defs.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" prot="public" static="no">
         <name>LSA_A2</name>
@@ -386,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="79" column="9" bodyfile="include/pin_defs.h" bodystart="79" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="61" column="9" bodyfile="include/pin_defs.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" prot="public" static="no">
         <name>LSA_A3</name>
@@ -397,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="80" column="9" bodyfile="include/pin_defs.h" bodystart="80" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="62" column="9" bodyfile="include/pin_defs.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" prot="public" static="no">
         <name>LSA_A4</name>
@@ -408,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="81" column="9" bodyfile="include/pin_defs.h" bodystart="81" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="63" column="9" bodyfile="include/pin_defs.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a" prot="public" static="no">
         <name>BATTERY</name>
@@ -419,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="83" column="9" bodyfile="include/pin_defs.h" bodystart="83" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="65" column="9" bodyfile="include/pin_defs.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" prot="public" static="no">
         <name>MDA_NORMAL_IN_1</name>
@@ -430,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="88" column="9" bodyfile="include/pin_defs.h" bodystart="88" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="70" column="9" bodyfile="include/pin_defs.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" prot="public" static="no">
         <name>MDA_NORMAL_IN_2</name>
@@ -441,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="89" column="9" bodyfile="include/pin_defs.h" bodystart="89" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="71" column="9" bodyfile="include/pin_defs.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" prot="public" static="no">
         <name>MDA_NORMAL_IN_3</name>
@@ -452,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="90" column="9" bodyfile="include/pin_defs.h" bodystart="90" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="72" column="9" bodyfile="include/pin_defs.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" prot="public" static="no">
         <name>MDA_NORMAL_IN_4</name>
@@ -463,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="91" column="9" bodyfile="include/pin_defs.h" bodystart="91" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="73" column="9" bodyfile="include/pin_defs.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" prot="public" static="no">
         <name>MDA_PARALLEL_IN_1_2</name>
@@ -474,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="94" column="9" bodyfile="include/pin_defs.h" bodystart="94" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="76" column="9" bodyfile="include/pin_defs.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" prot="public" static="no">
         <name>MDA_PARALLEL_IN_3_4</name>
@@ -485,7 +323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="95" column="9" bodyfile="include/pin_defs.h" bodystart="95" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="77" column="9" bodyfile="include/pin_defs.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" prot="public" static="no">
         <name>SERVO_A</name>
@@ -496,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="99" column="9" bodyfile="include/pin_defs.h" bodystart="99" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="81" column="9" bodyfile="include/pin_defs.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" prot="public" static="no">
         <name>SERVO_B</name>
@@ -507,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="100" column="9" bodyfile="include/pin_defs.h" bodystart="100" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="82" column="9" bodyfile="include/pin_defs.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" prot="public" static="no">
         <name>SERVO_C</name>
@@ -518,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="101" column="9" bodyfile="include/pin_defs.h" bodystart="101" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="83" column="9" bodyfile="include/pin_defs.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1abed942b161f2db9f855f196e22459066" prot="public" static="no">
         <name>SERVO_D</name>
@@ -529,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="102" column="9" bodyfile="include/pin_defs.h" bodystart="102" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="84" column="9" bodyfile="include/pin_defs.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" prot="public" static="no">
         <name>LED_MATRIX_CLK</name>
@@ -540,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="107" column="9" bodyfile="include/pin_defs.h" bodystart="107" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="89" column="9" bodyfile="include/pin_defs.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" prot="public" static="no">
         <name>LED_MATRIX_DIN</name>
@@ -551,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="108" column="9" bodyfile="include/pin_defs.h" bodystart="108" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="90" column="9" bodyfile="include/pin_defs.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="pin__defs_8h_1a89206de29cd940851806859257fa0662" prot="public" static="no">
         <name>LED_MATRIX_LOAD</name>
@@ -562,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pin_defs.h" line="109" column="9" bodyfile="include/pin_defs.h" bodystart="109" bodyend="-1"/>
+        <location file="include/pin_defs.h" line="91" column="9" bodyfile="include/pin_defs.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -624,49 +462,35 @@
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OLED_SDA<sp/>14</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" refkind="member"><highlight class="preprocessor">#define<sp/>BG_LED_1<sp/>12</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60" refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_2<sp/>13</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_3<sp/>25</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_4<sp/>26</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_5<sp/>15</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_6<sp/>5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_7<sp/>18</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BG_LED_8<sp/>19</highlight></codeline>
-<codeline lineno="68"></codeline>
-<codeline lineno="70" refid="pin__defs_8h_1afc718c1fcfcf5d762545260289674333" refkind="member"><highlight class="preprocessor">#define<sp/>SWITCH_1<sp/>4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="pin__defs_8h_1a62b9d54211060aac86c0ca9b02f7331e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_2<sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_3<sp/>27</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWITCH_4<sp/>14</highlight></codeline>
-<codeline lineno="75"></codeline>
-<codeline lineno="77" refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" refkind="member"><highlight class="preprocessor">#define<sp/>LSA_A0<sp/>4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A1<sp/>5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A2<sp/>6</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A3<sp/>7</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A4<sp/>8</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//*******<sp/>battery<sp/>********//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83" refid="pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BATTERY<sp/>33</highlight></codeline>
-<codeline lineno="85"></codeline>
-<codeline lineno="87"><highlight class="comment">//******<sp/>normal<sp/>mode<sp/>******//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>11<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>10<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//*****<sp/>parallel<sp/>mode<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="95" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight></codeline>
-<codeline lineno="97"><highlight class="comment"></highlight></codeline>
-<codeline lineno="99" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>1<sp/></highlight><highlight class="comment">//Gripper</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>2<sp/></highlight><highlight class="comment">//Elbow</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>42<sp/></highlight><highlight class="comment">//Arm</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>41<sp/></highlight><highlight class="comment">//Base</highlight></codeline>
-<codeline lineno="104"><highlight class="comment"></highlight></codeline>
-<codeline lineno="106"><highlight class="comment">//*****<sp/>8x8<sp/>LED<sp/>matrix<sp/>driven<sp/>by<sp/>MAX7219<sp/>using<sp/>SPI<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107" refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_CLK<sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108" refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_DIN<sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109" refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_LOAD<sp/><sp/>17</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="59" refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" refkind="member"><highlight class="preprocessor">#define<sp/>LSA_A0<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A1<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A2<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="pin__defs_8h_1a92c4b60df97bd16a34274f666b3f1d31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A3<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="pin__defs_8h_1af42678ce44b95ec1eb35ae6628adf84f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LSA_A4<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//*******<sp/>battery<sp/>********//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="pin__defs_8h_1a5a6e96a880419ec31bc1e904250b651a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BATTERY<sp/>33</highlight></codeline>
+<codeline lineno="67"></codeline>
+<codeline lineno="69"><highlight class="comment">//******<sp/>normal<sp/>mode<sp/>******//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="pin__defs_8h_1ac593ad1d39cd26582a43e2bad09e1f16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_1<sp/>13<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="pin__defs_8h_1a8db1e560298f9cf45bf9359865670faa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_2<sp/>12<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="pin__defs_8h_1a633480893ea2707e25a429eea0bbe34a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_3<sp/>11<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="pin__defs_8h_1a840ffe2f76fb68cf25a61bee430c8477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_NORMAL_IN_4<sp/>10<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM1B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//*****<sp/>parallel<sp/>mode<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="pin__defs_8h_1a201c4b4373616691292af16f3e6e4a58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_1_2<sp/>25<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="pin__defs_8h_1a00a8a7e71c9180276dd2e96c9150d8d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MDA_PARALLEL_IN_3_4<sp/>26<sp/></highlight><highlight class="comment">//MCPWM_UNIT_1<sp/>MCPWM0B</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"></highlight></codeline>
+<codeline lineno="81" refid="pin__defs_8h_1ad02b2d3f0a65ea90c450ced08da9a4d9" refkind="member"><highlight class="preprocessor">#define<sp/>SERVO_A<sp/>1<sp/></highlight><highlight class="comment">//Gripper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="pin__defs_8h_1a30b46add9f5cd7b5abf873dc9f1009e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_B<sp/>2<sp/></highlight><highlight class="comment">//Elbow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="pin__defs_8h_1a20be66e38dbb25b3000081eecb9b4cb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_C<sp/>42<sp/></highlight><highlight class="comment">//Arm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="pin__defs_8h_1abed942b161f2db9f855f196e22459066" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_D<sp/>41<sp/></highlight><highlight class="comment">//Base</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"></highlight></codeline>
+<codeline lineno="88"><highlight class="comment">//*****<sp/>8x8<sp/>LED<sp/>matrix<sp/>driven<sp/>by<sp/>MAX7219<sp/>using<sp/>SPI<sp/>*****//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="pin__defs_8h_1a143416573a553356a99874ab8c7a1422" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_CLK<sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="pin__defs_8h_1acad056a094ee921c214e8b3b1b32a02b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_DIN<sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="pin__defs_8h_1a89206de29cd940851806859257fa0662" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_MATRIX_LOAD<sp/><sp/>17</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/pin_defs.h"/>
   </compounddef>

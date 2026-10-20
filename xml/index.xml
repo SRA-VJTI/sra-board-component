@@ -77,11 +77,6 @@
     <member refid="adc_8h_1a60adcc2279d178d4876c9f8f63525067" kind="function"><name>enable_adc1</name></member>
     <member refid="adc_8h_1a6535e5936468e64673af814623694d98" kind="function"><name>read_adc</name></member>
   </compound>
-  <compound refid="bar__graph_8h" kind="file"><name>bar_graph.h</name>
-    <member refid="bar__graph_8h_1ab10cdc6b54d4e647335eebb25dabd2f7" kind="function"><name>enable_bar_graph</name></member>
-    <member refid="bar__graph_8h_1ae3c6552600f6d84335edd8bb6095fe3a" kind="function"><name>set_bar_graph</name></member>
-    <member refid="bar__graph_8h_1aedf9bcb0b39fed044eb70e63fc74c496" kind="function"><name>bool_to_uint8</name></member>
-  </compound>
   <compound refid="esp__idf__lib__helpers_8h" kind="file"><name>esp_idf_lib_helpers.h</name>
     <member refid="esp__idf__lib__helpers_8h_1a8b1e5b2dda0bd16c89c0ecc7cb2b5352" kind="define"><name>HELPER_ESP32_MIN_VER</name></member>
     <member refid="esp__idf__lib__helpers_8h_1a92c3c8a6e1995378c5be5990fe6b3f1b" kind="define"><name>HELPER_ESP8266_MIN_VER</name></member>
@@ -413,18 +408,6 @@
     <member refid="pin__defs_8h_1ae4b5c81e3a4d9fe739bc10a3e3802207" kind="define"><name>MPU6050_INT</name></member>
     <member refid="pin__defs_8h_1ae4a616964509f7581d0d423bea83d657" kind="define"><name>MPU6050_SCL</name></member>
     <member refid="pin__defs_8h_1a439afff9b79599edab1529f62443ea5f" kind="define"><name>MPU6050_SDA</name></member>
-    <member refid="pin__defs_8h_1a59d54556a3e0d1c8355a5081e7dea062" kind="define"><name>BG_LED_1</name></member>
-    <member refid="pin__defs_8h_1a5f14e6a05c430e90512ca80bee65c488" kind="define"><name>BG_LED_2</name></member>
-    <member refid="pin__defs_8h_1ad251a2ea22a0ea638f24f939b5b72ae2" kind="define"><name>BG_LED_3</name></member>
-    <member refid="pin__defs_8h_1a3e8246c47bfdfb111fb3d9d1fd1226a0" kind="define"><name>BG_LED_4</name></member>
-    <member refid="pin__defs_8h_1a32539f8b7e2f747a3c8d9b21d7bfe085" kind="define"><name>BG_LED_5</name></member>
-    <member refid="pin__defs_8h_1a0f04e876e1cd7dd1238a44c8a82bfe94" kind="define"><name>BG_LED_6</name></member>
-    <member refid="pin__defs_8h_1a27bb705f7644d10c17186baeac2ae1a3" kind="define"><name>BG_LED_7</name></member>
-    <member refid="pin__defs_8h_1abb2349aa558034464942254c952b8a30" kind="define"><name>BG_LED_8</name></member>
-    <member refid="pin__defs_8h_1afc718c1fcfcf5d762545260289674333" kind="define"><name>SWITCH_1</name></member>
-    <member refid="pin__defs_8h_1a62b9d54211060aac86c0ca9b02f7331e" kind="define"><name>SWITCH_2</name></member>
-    <member refid="pin__defs_8h_1a760f4fa2340ec8b807fea30119915efa" kind="define"><name>SWITCH_3</name></member>
-    <member refid="pin__defs_8h_1a083e2bd040ccdbc6514e13b876ff20f7" kind="define"><name>SWITCH_4</name></member>
     <member refid="pin__defs_8h_1aec5ffd0b7acdb6c0f106f49665ab85de" kind="define"><name>LSA_A0</name></member>
     <member refid="pin__defs_8h_1abab7bd3ef2f641b3bb09e5c743875baf" kind="define"><name>LSA_A1</name></member>
     <member refid="pin__defs_8h_1a53c1a1cb500354d517852152e8efa4d4" kind="define"><name>LSA_A2</name></member>
@@ -452,10 +435,6 @@
   </compound>
   <compound refid="sra__board_8h" kind="file"><name>sra_board.h</name>
   </compound>
-  <compound refid="switches_8h" kind="file"><name>switches.h</name>
-    <member refid="switches_8h_1a70de1897315528e8b85d34aa23341f39" kind="function"><name>enable_switches</name></member>
-    <member refid="switches_8h_1aa394f2692a1f424f79d5c3dcfa0d7bc6" kind="function"><name>read_switch</name></member>
-  </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
     <member refid="utils_8h_1ae3710cdfde4705f0eafe00a2a67e2033" kind="define"><name>BITS_IN_A_BYTE</name></member>
     <member refid="utils_8h_1aef43aba04f9c671c4208f1c98bc25cb9" kind="define"><name>BITS_IN_4_BYTES</name></member>
@@ -472,15 +451,6 @@
     <member refid="adc_8c_1a92b279061f360ef912815e8b0c0a1982" kind="function"><name>calib_init</name></member>
     <member refid="adc_8c_1a60adcc2279d178d4876c9f8f63525067" kind="function"><name>enable_adc1</name></member>
     <member refid="adc_8c_1a6535e5936468e64673af814623694d98" kind="function"><name>read_adc</name></member>
-  </compound>
-  <compound refid="bar__graph_8c" kind="file"><name>bar_graph.c</name>
-    <member refid="bar__graph_8c_1a20e93b67ced1c6f3e3799b413b75daff" kind="variable"><name>TAG_BAR_GRAPH</name></member>
-    <member refid="bar__graph_8c_1a425348a406dd9fcdf5baed9fad5c4edc" kind="variable"><name>enabled_bar_graph_flag</name></member>
-    <member refid="bar__graph_8c_1a759142241715f6d36b801742aabffbeb" kind="variable"><name>bitmask</name></member>
-    <member refid="bar__graph_8c_1a9941740159d6edc34ca8c4c17d3c45e4" kind="variable"><name>pin_out</name></member>
-    <member refid="bar__graph_8c_1ab10cdc6b54d4e647335eebb25dabd2f7" kind="function"><name>enable_bar_graph</name></member>
-    <member refid="bar__graph_8c_1ae3c6552600f6d84335edd8bb6095fe3a" kind="function"><name>set_bar_graph</name></member>
-    <member refid="bar__graph_8c_1aedf9bcb0b39fed044eb70e63fc74c496" kind="function"><name>bool_to_uint8</name></member>
   </compound>
   <compound refid="i2cdev_8c" kind="file"><name>i2cdev.c</name>
     <member refid="i2cdev_8c_1a423c4afe004688f73eebf7426cbfb9eb" kind="define"><name>SEMAPHORE_TAKE</name></member>
@@ -629,12 +599,6 @@
     <member refid="servo_8c_1af4079acff4a8c5a298d79d841fe96b80" kind="function"><name>enable_servo</name></member>
     <member refid="servo_8c_1a203e9c05f59cfc6420e735d86f763301" kind="function"><name>set_angle_servo</name></member>
     <member refid="servo_8c_1a1089a49dd3762a303cd3d9572249d48d" kind="function"><name>read_servo</name></member>
-  </compound>
-  <compound refid="switches_8c" kind="file"><name>switches.c</name>
-    <member refid="switches_8c_1ac00d65aab541451923cc2fc80893786e" kind="variable"><name>TAG_SWITCHES</name></member>
-    <member refid="switches_8c_1afaf2bf69f5d546816dbfe97da4b74e48" kind="variable"><name>enabled_switches_flag</name></member>
-    <member refid="switches_8c_1a70de1897315528e8b85d34aa23341f39" kind="function"><name>enable_switches</name></member>
-    <member refid="switches_8c_1aa394f2692a1f424f79d5c3dcfa0d7bc6" kind="function"><name>read_switch</name></member>
   </compound>
   <compound refid="utils_8c" kind="file"><name>utils.c</name>
     <member refid="utils_8c_1a22fd7311bf5f09376f4c561febd38899" kind="function"><name>bound</name></member>

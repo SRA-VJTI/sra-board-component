@@ -3,7 +3,6 @@
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
     <compoundname>include</compoundname>
     <innerfile refid="adc_8h">adc.h</innerfile>
-    <innerfile refid="bar__graph_8h">bar_graph.h</innerfile>
     <innerfile refid="esp__idf__lib__helpers_8h">esp_idf_lib_helpers.h</innerfile>
     <innerfile refid="i2cdev_8h">i2cdev.h</innerfile>
     <innerfile refid="led__matrix_8h">led_matrix.h</innerfile>
@@ -18,7 +17,6 @@
     <innerfile refid="pin__defs_8h">pin_defs.h</innerfile>
     <innerfile refid="servo_8h">servo.h</innerfile>
     <innerfile refid="sra__board_8h">sra_board.h</innerfile>
-    <innerfile refid="switches_8h">switches.h</innerfile>
     <innerfile refid="utils_8h">utils.h</innerfile>
     <briefdescription>
     </briefdescription>
