@@ -26,7 +26,7 @@ config ENABLE_OLED
 
 config WALL_E_LOGO_TEXT
     string "Wall-E Logo Text on OLED"
-    default "Wall-E 2025"
+    default "Wall-E 2026"
     help
         Change Text displayed along with logo
 
@@ -35,6 +35,12 @@ config MARIO_LOGO_TEXT
     default "MARIO 2025"
     help
         Change Text displayed along with logo
+
+config ENABLE_LED_MATRIX
+    bool "Enable LED Matrix"
+    default y
+    help
+        Enables the LED Matrix on the SRA Board
 
 menu "Servo motor configuration"
 
