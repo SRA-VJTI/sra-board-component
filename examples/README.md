@@ -44,6 +44,12 @@ Example for using two motor drivers present on SRA Board in both parallel and no
 
 - [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/servos) for using the servo port on SRA Board to run servos
 
+### Test All
+
+- Runs the OLED, LSA, motor driver, servos, MPU6050 and LED matrix together to check a whole board in one flash
+
+- [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/test_all) showing LSA readings on the OLED, running the motors in both directions, sweeping the servos, blinking every LED of the matrix and logging the MPU6050 accelerometer
+
 ### Switches
 
 - Manual Switches provide the traditional comfort to toggle the input variables
