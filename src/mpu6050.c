@@ -42,7 +42,6 @@ esp_err_t i2c_master_init(void)
 
     mpu6050_dev_t.port = I2C_MASTER_NUM;
     mpu6050_dev_t.addr = MPU6050_ADDR;
-    mpu6050_dev_t.cfg.mode = I2C_MODE_MASTER;
     mpu6050_dev_t.cfg.sda_io_num = I2C_MASTER_SDA_IO;
     mpu6050_dev_t.cfg.scl_io_num = I2C_MASTER_SCL_IO;
     mpu6050_dev_t.cfg.master.clk_speed = I2C_MASTER_FREQ_HZ;

@@ -12,5 +12,5 @@ endif()
 
 idf_component_register(SRCS "${srcs}"
                        INCLUDE_DIRS "${include_dirs}"
-                       REQUIRES driver efuse esp_adc esp_common esp_event
+                       REQUIRES driver efuse esp_driver_gpio esp_driver_spi esp_driver_mcpwm esp_driver_i2c esp_adc esp_common esp_event
                                 esp_timer freertos heap log soc spiffs)

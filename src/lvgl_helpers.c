@@ -151,7 +151,6 @@ bool lvgl_i2c_driver_init(int sda_pin, int scl_pin, int speed_hz)
 
     ssd1306_dev_t.port = I2C_NUM_1;
     ssd1306_dev_t.addr = OLED_I2C_ADDRESS;
-    ssd1306_dev_t.cfg.mode = I2C_MODE_MASTER;
     ssd1306_dev_t.cfg.sda_io_num = sda_pin;
     ssd1306_dev_t.cfg.scl_io_num = scl_pin;
     ssd1306_dev_t.cfg.sda_pullup_en = GPIO_PULLUP_ENABLE;
