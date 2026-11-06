@@ -7,7 +7,7 @@ build/
 
 #sdkconfig files
 sdkconfig*
-
+!sdkconfig.defaults
 # Prerequisites
 *.d
 
