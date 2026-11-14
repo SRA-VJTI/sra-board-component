@@ -83,9 +83,4 @@ then repeats this sequence:
 The random patterns use `esp_random()`. This debugging example uses the bitmap
 API directly; it does not display text.
 
-Build and flash this example from its directory with ESP-IDF:
-
-```sh
-idf.py build
-idf.py -p <PORT> flash monitor
-```
+See [Build and flash](../README.md#build-and-flash) in the examples README.

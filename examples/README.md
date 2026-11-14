@@ -55,3 +55,26 @@ Example for using two motor drivers present on SRA Board in both parallel and no
 - Manual Switches provide the traditional comfort to toggle the input variables
 
 - [Example](https://github.com/SRA-VJTI/sra-board-component/tree/main/examples/switches) for using four user switches present on SRA Board
+
+## Build and flash
+
+Build and flash an example from its directory with ESP-IDF:
+
+```sh
+idf.py build
+idf.py -p <PORT> flash monitor
+```
+
+The [Test All](test_all) example has a `sdkconfig.defaults` that sets the
+target to the ESP32-S3 used on the SRA Board (`CONFIG_IDF_TARGET="esp32s3"`),
+so `idf.py set-target` is not needed for it. It also enables the OLED
+(`CONFIG_ENABLE_OLED=y`); if you disable it in `idf.py menuconfig`, the LSA
+readings are still logged on the serial monitor.
+
+These defaults only apply when there is no `sdkconfig` yet. If you built the
+example for another target before, delete `sdkconfig` and the `build` folder
+first (or run `idf.py fullclean` and delete `sdkconfig`).
+
+To keep the build fast, its [CMakeLists.txt](test_all/CMakeLists.txt) sets
+`COMPONENTS main`, so only the ESP-IDF components the example needs are
+built instead of all of them (Wi-Fi, Bluetooth, HTTP and so on).

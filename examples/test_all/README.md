@@ -102,25 +102,7 @@ at the top of [main.c](main/main.c) and can be changed as needed.
 
 ## Build and flash
 
-`sdkconfig.defaults` sets the target to the ESP32-S3 used on the SRA Board
-(`CONFIG_IDF_TARGET="esp32s3"`), so `idf.py set-target` is not needed. It also
-enables the OLED (`CONFIG_ENABLE_OLED=y`); if you disable it in
-`idf.py menuconfig`, the LSA readings are still logged on the serial monitor.
-
-Build and flash this example from its directory with ESP-IDF:
-
-```sh
-idf.py build
-idf.py -p <PORT> flash monitor
-```
-
-These defaults only apply when there is no `sdkconfig` yet. If you built this
-example for another target before, delete `sdkconfig` and the `build` folder
-first (or run `idf.py fullclean` and delete `sdkconfig`).
-
-To keep the build fast, [CMakeLists.txt](CMakeLists.txt) sets
-`COMPONENTS main`, so only the ESP-IDF components this example needs are
-built instead of all of them (Wi-Fi, Bluetooth, HTTP and so on).
+See [Build and flash](../README.md#build-and-flash) in the examples README.
 
 ## Troubleshooting
 
