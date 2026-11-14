@@ -4,8 +4,6 @@ cmake_minimum_required(VERSION 3.16)
 
 set(EXTRA_COMPONENT_DIRS ../../.)
 
-# Build only main and the components it depends on instead of every ESP-IDF
-# component (Wi-Fi, Bluetooth, HTTP, MQTT, ...), which makes the build much faster
 set(COMPONENTS main)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
