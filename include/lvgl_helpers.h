@@ -31,7 +31,7 @@ extern "C" {
  *********************/
 #include <stdbool.h>
 #include "i2cdev.h"
-#include "driver/i2c.h"
+#include "driver/i2c_master.h"
 #include "assert.h"
 #include "lvgl.h"
 #include "pin_defs.h"
